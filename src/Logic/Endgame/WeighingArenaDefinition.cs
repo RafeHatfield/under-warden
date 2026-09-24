@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Endgame;
+namespace UnderWarden.Logic.Endgame;
 
 /// <summary>
 /// The Tribunal Hall — the authored layout for the Weighing (floor 25). Chosen 2026-06-01; see

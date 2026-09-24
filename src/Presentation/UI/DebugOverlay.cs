@@ -1,7 +1,7 @@
 using Godot;
 using System.Diagnostics;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Lightweight debug overlay. Polls every 1 second and renders an 8-line
@@ -26,10 +26,10 @@ public sealed partial class DebugOverlay : Control
 
     // Weak references to game objects — set each floor via SetGameState().
     // Kept nullable so the overlay renders a reduced view before wiring is complete.
-    private CatacombsOfYarl.Presentation.GameController? _controller;
-    private CatacombsOfYarl.Logic.Core.GameState? _gameState;
-    private CatacombsOfYarl.Presentation.Entities.EntitySpriteManager? _entitySprites;
-    private CatacombsOfYarl.Presentation.Entities.ItemSpriteManager? _itemSprites;
+    private UnderWarden.Presentation.GameController? _controller;
+    private UnderWarden.Logic.Core.GameState? _gameState;
+    private UnderWarden.Presentation.Entities.EntitySpriteManager? _entitySprites;
+    private UnderWarden.Presentation.Entities.ItemSpriteManager? _itemSprites;
     private ToastLog? _toastLog;
 
     // Cached summary of the last completed turn, updated via the TurnCompleted event.
@@ -70,10 +70,10 @@ public sealed partial class DebugOverlay : Control
     /// Safe to call multiple times — unsubscribes from the previous controller first.
     /// </summary>
     public void SetGameState(
-        CatacombsOfYarl.Presentation.GameController? controller,
-        CatacombsOfYarl.Logic.Core.GameState? state,
-        CatacombsOfYarl.Presentation.Entities.EntitySpriteManager? entitySprites,
-        CatacombsOfYarl.Presentation.Entities.ItemSpriteManager? itemSprites,
+        UnderWarden.Presentation.GameController? controller,
+        UnderWarden.Logic.Core.GameState? state,
+        UnderWarden.Presentation.Entities.EntitySpriteManager? entitySprites,
+        UnderWarden.Presentation.Entities.ItemSpriteManager? itemSprites,
         ToastLog? toastLog)
     {
         // Unsubscribe from previous controller to avoid double-firing or stale callbacks.
@@ -107,7 +107,7 @@ public sealed partial class DebugOverlay : Control
         int toasts       = _toastLog?.ToastCount ?? 0;
         int invCount     = _gameState?.PlayerInventory?.Count ?? 0;
         // Capacity is a static const on Inventory — cannot be accessed via instance reference.
-        int invCap       = CatacombsOfYarl.Logic.ECS.Inventory.Capacity;
+        int invCap       = UnderWarden.Logic.ECS.Inventory.Capacity;
         long gcHeapMb    = GC.GetTotalMemory(false) / (1024 * 1024);
 
         if (_label != null)
@@ -120,7 +120,7 @@ public sealed partial class DebugOverlay : Control
 
     // -------------------------------------------------------------------------
 
-    private void OnTurnCompleted(CatacombsOfYarl.Logic.Core.TurnResult result)
+    private void OnTurnCompleted(UnderWarden.Logic.Core.TurnResult result)
     {
         // Summarise the turn in a single short string — no allocations at poll time.
         // Example: "Attack → 3 evts"

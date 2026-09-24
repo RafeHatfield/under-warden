@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Identifies a monster entity's species type — the YAML key it was spawned from (e.g. "orc", "zombie").

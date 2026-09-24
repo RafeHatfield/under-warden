@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.AI;
+namespace UnderWarden.Logic.AI;
 
 /// <summary>
 /// Represents a monster's chosen action for the current turn.

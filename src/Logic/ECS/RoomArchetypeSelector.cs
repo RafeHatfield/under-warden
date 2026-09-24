@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Assigns a semantic <see cref="RoomArchetype"/> to a room during dungeon generation.

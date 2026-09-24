@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.Persistence.Namespaces;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Selects a catalog entry template for a past-Sasha record and fills its slots.

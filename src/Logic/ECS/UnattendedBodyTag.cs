@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Marker tag applied to the home body when possession enters Active state.

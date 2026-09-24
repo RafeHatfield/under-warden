@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>
 /// Source-generated JSON context for the full mid-run save (NativeAOT-safe, reflection-free hot path).

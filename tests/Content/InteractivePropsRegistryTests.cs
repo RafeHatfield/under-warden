@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 /// <summary>
 /// Phase 2 tests: YAML round-trip deserialization for interactive_props.yaml and floor_traps.yaml.

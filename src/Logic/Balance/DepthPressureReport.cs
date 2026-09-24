@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Depth pressure curve reporting and analysis.

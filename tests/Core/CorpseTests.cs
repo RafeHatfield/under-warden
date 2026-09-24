@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Core;
+namespace UnderWarden.Tests.Core;
 
 /// <summary>
 /// Tests for Phase 1 of the corpse system:

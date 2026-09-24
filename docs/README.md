@@ -1,4 +1,4 @@
-# Catacombs of YARL — Documentation Index
+# The Under-Warden — Documentation Index
 
 _Last verified: 2026-07-12 against commit 86b6f10_
 

@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Legacy ETP facade — thin wrapper over Balance.Etp.EtpCalculator.
 /// Preserved for backward compatibility with EntityPlacer and existing callers.
-/// New code should use CatacombsOfYarl.Logic.Balance.Etp.EtpCalculator directly.
+/// New code should use UnderWarden.Logic.Balance.Etp.EtpCalculator directly.
 /// </summary>
 public static class EtpCalculator
 {

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Marks an entity as AI-controlled and specifies its behavior type.

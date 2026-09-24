@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Logic.Voice;
+namespace UnderWarden.Logic.Voice;
 
 /// <summary>
 /// Per-trigger-family delivery metadata for the voice scheduler (docs/systems/voice_delivery.md

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Grants a skeleton bonus AC for each adjacent (4-way) skeleton ally.

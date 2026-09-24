@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Stable, deterministic per-scenario seed derivation.

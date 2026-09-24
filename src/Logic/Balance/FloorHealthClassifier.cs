@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// The threat role a monster plays, per docs/balance/threat_archetypes.md §2.

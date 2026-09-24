@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.ECS;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Contextual action sheet shown when the player long-presses an inventory or equipment slot.

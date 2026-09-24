@@ -1,14 +1,14 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Presentation.Map;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Presentation.Map;
 using Godot;
 
-using CatacombsOfYarl.Presentation;
+using UnderWarden.Presentation;
 
 
-namespace CatacombsOfYarl.Presentation.Entities;
+namespace UnderWarden.Presentation.Entities;
 
 /// <summary>
 /// Manages Sprite2D nodes for game entities. Creates sprites on game start,

@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// COUNTS WHAT WAS ACTUALLY DRAWN. Floor session two, precondition 1.

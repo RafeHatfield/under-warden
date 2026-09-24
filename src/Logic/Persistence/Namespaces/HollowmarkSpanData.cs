@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Logic.Persistence.Namespaces;
+namespace UnderWarden.Logic.Persistence.Namespaces;
 
 // Reserved for the Hollowmark binding span mechanic — see spec §6.14 and v3 §C-prime.
 // Do NOT implement in v1. The namespace is reserved so v1.x can fill it without a migration.

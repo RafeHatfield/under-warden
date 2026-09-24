@@ -95,7 +95,7 @@ CastSpell routing would work for potions (they already have ThrowSpellId), but w
   - `src/Logic/Core/TurnController.cs` -- add `case ActionKind.ThrowItem` dispatching to ThrowResolver
 - Implementation details:
   - `ThrowResolver.Resolve(Entity thrower, Entity item, int targetX, int targetY, GameState state)` returns `List<TurnEvent>`
-  - **Projectile path**: Bresenham line from thrower position to target, stopping at walls or max range (10). Use `CatacombsOfYarl.Logic.Map.GameMap.IsWalkable()` for wall detection. Implement Bresenham in a static utility method `ThrowResolver.CalculatePath()` (no tcod dependency in C#).
+  - **Projectile path**: Bresenham line from thrower position to target, stopping at walls or max range (10). Use `UnderWarden.Logic.Map.GameMap.IsWalkable()` for wall detection. Implement Bresenham in a static utility method `ThrowResolver.CalculatePath()` (no tcod dependency in C#).
   - **Target detection**: Check if an alive monster occupies the final path tile.
   - **Three resolution paths**:
     1. **Potion** (item has `SpellEffect` with `ThrowSpellId`): Delegate to `SpellResolver.Resolve()` with `overrideSpellId = spell.ThrowSpellId` and `targetEntityId`. Consume the potion (decrement Consumable.StackSize, remove if depleted). On miss (no monster at target), still consume but emit ThrowEvent with Hit=false. Do NOT call SpellResolver on miss -- potion shatters on ground with no effect.

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Semantic tile type for dungeon generation. Determines walkability and rendering hints.

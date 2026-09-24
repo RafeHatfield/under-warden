@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.AI;
+namespace UnderWarden.Logic.AI;
 
 /// <summary>
 /// Skeleton AI: Shield Wall formation + standard melee.

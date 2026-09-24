@@ -2,13 +2,13 @@ using GdUnit4;
 using Godot;
 using static GdUnit4.Assertions;
 
-namespace CatacombsOfYarl.Integration;
+namespace UnderWarden.Integration;
 
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Presentation;
-using CatacombsOfYarl.Presentation.Entities;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Presentation;
+using UnderWarden.Presentation.Entities;
 
 /// <summary>
 /// Integration tests for the SetupPresentation teardown/rebuild contract.
@@ -97,7 +97,7 @@ public class FloorTransitionTests
         var state1 = BuildMinimalGameState(playerId: 0);
         var entityLayer1 = new Node2D();
         root.AddChild(entityLayer1);
-        var sprites1 = new EntitySpriteManager(entityLayer1, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var sprites1 = new EntitySpriteManager(entityLayer1, new UnderWarden.Presentation.Map.IsometricRenderer());
 
         // Controller #1 — first floor.
         var gc1 = new GameController();
@@ -118,7 +118,7 @@ public class FloorTransitionTests
         var state2 = BuildMinimalGameState(playerId: 0);
         var entityLayer2 = new Node2D();
         root.AddChild(entityLayer2);
-        var sprites2 = new EntitySpriteManager(entityLayer2, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var sprites2 = new EntitySpriteManager(entityLayer2, new UnderWarden.Presentation.Map.IsometricRenderer());
 
         var gc2 = new GameController();
         root.AddChild(gc2);
@@ -172,7 +172,7 @@ public class FloorTransitionTests
 
         var entityLayer = new Node2D();
         root.AddChild(entityLayer);
-        var sprites = new EntitySpriteManager(entityLayer, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var sprites = new EntitySpriteManager(entityLayer, new UnderWarden.Presentation.Map.IsometricRenderer());
 
         // --- Controller #1 (floor 1) ---
         var gc1 = new GameController();
@@ -185,7 +185,7 @@ public class FloorTransitionTests
         // Drive one turn: tap the monster's tile (adjacent attack).
         // IsometricMapper converts screen pos → grid; we need the screen pos that
         // maps to (5,6). GridToScreenCenter gives us that position directly.
-        var tapPos = new CatacombsOfYarl.Presentation.Map.IsometricRenderer().GridToScreenCenter(5, 6);
+        var tapPos = new UnderWarden.Presentation.Map.IsometricRenderer().GridToScreenCenter(5, 6);
         gc1.HandleTap(tapPos);
 
         // Simulate frames so _Process can poll TurnAnimator.CheckComplete().
@@ -205,7 +205,7 @@ public class FloorTransitionTests
         var state2 = BuildMinimalGameState(playerId: 0);
         var entityLayer2 = new Node2D();
         root.AddChild(entityLayer2);
-        var sprites2 = new EntitySpriteManager(entityLayer2, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var sprites2 = new EntitySpriteManager(entityLayer2, new UnderWarden.Presentation.Map.IsometricRenderer());
 
         var gc2 = new GameController();
         root.AddChild(gc2);
@@ -253,7 +253,7 @@ public class FloorTransitionTests
         // logs an error and skips the Add — SpriteCount stays 0.
         // We verify the contract: after SafeFree-ing the parent's children and
         // creating a brand-new manager on the same parent, SpriteCount is 0.
-        var sprites1 = new EntitySpriteManager(root, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var sprites1 = new EntitySpriteManager(root, new UnderWarden.Presentation.Map.IsometricRenderer());
         var state1 = BuildMinimalGameState(playerId: 0);
         sprites1.Initialize(state1); // textures null in test — no sprites added
 
@@ -267,7 +267,7 @@ public class FloorTransitionTests
         AssertInt(root.GetChildCount()).IsEqual(0);
 
         // --- Floor 2: brand-new manager on the same parent node ---
-        var sprites2 = new EntitySpriteManager(root, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var sprites2 = new EntitySpriteManager(root, new UnderWarden.Presentation.Map.IsometricRenderer());
         var state2 = BuildMinimalGameState(playerId: 0);
         sprites2.Initialize(state2);
 

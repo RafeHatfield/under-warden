@@ -1,7 +1,7 @@
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// One entry in the mural pool.

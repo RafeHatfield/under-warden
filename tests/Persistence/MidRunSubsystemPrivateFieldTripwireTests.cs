@@ -1,12 +1,12 @@
 using System.Reflection;
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Knowledge;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Knowledge;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 /// <summary>
 /// Parallel tripwire for the mid-run SUBSYSTEMS (the component audit did not cover these). Each
@@ -23,10 +23,10 @@ public class MidRunSubsystemPrivateFieldTripwireTests
         typeof(GameMap), typeof(MonsterKnowledgeSystem), typeof(GroundHazardManager),
         typeof(IdentificationRegistry), typeof(AppearancePool), typeof(MuralTracker),
         typeof(PityTracker), typeof(BoonTracker),
-        typeof(CatacombsOfYarl.Logic.Endgame.WeighingState),
-        typeof(CatacombsOfYarl.Logic.Endgame.WeighingArena),
+        typeof(UnderWarden.Logic.Endgame.WeighingState),
+        typeof(UnderWarden.Logic.Endgame.WeighingArena),
         typeof(WeighingAuditRegistry),
-        typeof(CatacombsOfYarl.Logic.Voice.VoiceScheduler),
+        typeof(UnderWarden.Logic.Voice.VoiceScheduler),
     };
 
     // Every private instance field of the above, "Type.field" — all COVERED by the serializer.

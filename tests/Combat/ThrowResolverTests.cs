@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Combat;
+namespace UnderWarden.Tests.Combat;
 
 /// <summary>
 /// Unit tests for ThrowResolver. Covers all three resolution paths (weapon, potion, junk),

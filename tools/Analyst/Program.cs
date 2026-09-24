@@ -15,7 +15,7 @@
 ///   # --model is accepted but UNUSED in v1 (no LLM pass until Phase 3).
 /// </summary>
 
-using CatacombsOfYarl.Analyst;
+using UnderWarden.Analyst;
 
 string? transcriptPath = null;
 string? batchDir = null;

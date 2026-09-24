@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// One region's balance targets: the death-rate band (THE balance verdict) plus the per-archetype

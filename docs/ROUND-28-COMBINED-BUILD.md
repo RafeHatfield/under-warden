@@ -377,7 +377,7 @@ and it holds; what it is waiting on is #174's walk.**
 
 ```bash
 tools/tier1_floors/rebuild_ashlar.sh
-dotnet build CatacombsOfYarl.Presentation.csproj
+dotnet build UnderWarden.Presentation.csproj
 /Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --import
 
 # the room

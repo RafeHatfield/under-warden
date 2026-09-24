@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat.StatusEffects;
+namespace UnderWarden.Logic.Combat.StatusEffects;
 
 /// <summary>
 /// Entity is aggravated against a specific faction — will attack all members of that faction

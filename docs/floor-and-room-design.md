@@ -1,4 +1,4 @@
-# Procedural room generation spec for Catacombs of Yarl
+# Procedural room generation spec for The Under-Warden
 
 _Last verified: 2026-07-12 against commit 86b6f10_
 

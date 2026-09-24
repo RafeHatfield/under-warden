@@ -1,6 +1,6 @@
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Full-screen panel listing available test scenarios grouped by category.

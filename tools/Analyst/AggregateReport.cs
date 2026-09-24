@@ -2,7 +2,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>One transcript's evaluation, as fed to the aggregator.</summary>
 public sealed class RunEvaluation

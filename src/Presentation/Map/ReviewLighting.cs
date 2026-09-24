@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// The Tier 0 light rig: ambient darkness plus one carried warm point light.

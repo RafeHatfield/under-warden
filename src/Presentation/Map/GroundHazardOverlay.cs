@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// Renders active ground hazards as sprite overlays that cycle through animation frames

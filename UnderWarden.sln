@@ -5,11 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF9BA561-AC97-44C9-863F-90B50A447FA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatacombsOfYarl.Logic", "src\Logic\CatacombsOfYarl.Logic.csproj", "{14AE02A1-5B50-421C-82B2-D5B3D9329D8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderWarden.Logic", "src\Logic\UnderWarden.Logic.csproj", "{14AE02A1-5B50-421C-82B2-D5B3D9329D8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatacombsOfYarl.Presentation", "src\Presentation\CatacombsOfYarl.Presentation.csproj", "{7ED6BB2C-2925-453B-A138-B77FE3C8318A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderWarden.Presentation", "src\Presentation\UnderWarden.Presentation.csproj", "{7ED6BB2C-2925-453B-A138-B77FE3C8318A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatacombsOfYarl.Tests", "tests\CatacombsOfYarl.Tests.csproj", "{03A948EA-8B92-47E7-B905-AD3D612E132E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderWarden.Tests", "tests\UnderWarden.Tests.csproj", "{03A948EA-8B92-47E7-B905-AD3D612E132E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{AD793D0B-AB52-4794-A613-299894E0EFEC}"
 EndProject

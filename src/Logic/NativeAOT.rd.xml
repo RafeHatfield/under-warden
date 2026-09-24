@@ -7,34 +7,34 @@
        Required for iOS export (NativeAOT is mandatory on iOS — no JIT allowed). -->
 
   <!-- Content layer: entities.yaml -->
-  <assembly fullname="CatacombsOfYarl.Logic">
-    <type fullname="CatacombsOfYarl.Logic.Content.EntitiesFile" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Content.MonsterDefinition" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Content.MonsterStats" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Content.MonsterEquipmentConfig" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Content.WeightedItem" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Content.ItemDefinition" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Content.ConsumableDefinition" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Content.ContentBundle" preserve="all" />
+  <assembly fullname="UnderWarden.Logic">
+    <type fullname="UnderWarden.Logic.Content.EntitiesFile" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.MonsterDefinition" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.MonsterStats" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.MonsterEquipmentConfig" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.WeightedItem" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.ItemDefinition" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.ConsumableDefinition" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.ContentBundle" preserve="all" />
 
     <!-- Content layer: level_templates.yaml -->
-    <type fullname="CatacombsOfYarl.Logic.Content.LevelTemplatesFile" preserve="all" />
+    <type fullname="UnderWarden.Logic.Content.LevelTemplatesFile" preserve="all" />
 
     <!-- Balance layer: level overrides -->
-    <type fullname="CatacombsOfYarl.Logic.Balance.LevelOverride" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.GenerationParameters" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.GuaranteedSpawns" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.SpawnEntry" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.StairRules" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.SpawnRules" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.EncounterBudget" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.SpecialRoomDef" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.SpawnEntryConverter" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.LevelOverride" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.GenerationParameters" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.GuaranteedSpawns" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.SpawnEntry" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.StairRules" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.SpawnRules" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.EncounterBudget" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.SpecialRoomDef" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.SpawnEntryConverter" preserve="all" />
 
     <!-- Balance layer: scenario definitions -->
-    <type fullname="CatacombsOfYarl.Logic.Balance.ScenarioDefinition" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.ScenarioPlayer" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.ScenarioMonster" preserve="all" />
-    <type fullname="CatacombsOfYarl.Logic.Balance.ScenarioItem" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.ScenarioDefinition" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.ScenarioPlayer" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.ScenarioMonster" preserve="all" />
+    <type fullname="UnderWarden.Logic.Balance.ScenarioItem" preserve="all" />
   </assembly>
 </linker>

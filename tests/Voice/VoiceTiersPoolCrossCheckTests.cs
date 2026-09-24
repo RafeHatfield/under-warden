@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Voice;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Voice;
+namespace UnderWarden.Tests.Voice;
 
 /// <summary>
 /// Cross-validation of the real ribbon content (scheme Option A). The reader emits SPECIFIC authored

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Presentation;
+namespace UnderWarden.Presentation;
 
 /// <summary>
 /// Instance-based sprite mapping backed by a loaded TilesetConfig.

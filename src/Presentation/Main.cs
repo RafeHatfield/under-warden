@@ -1,19 +1,19 @@
 using System.Linq;
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
-using CatacombsOfYarl.Presentation.Animation;
-using CatacombsOfYarl.Presentation.Entities;
-using CatacombsOfYarl.Presentation.Map;
-using CatacombsOfYarl.Presentation.Persistence;
-using CatacombsOfYarl.Presentation.UI;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Logic.Persistence.Namespaces;
+using UnderWarden.Presentation.Animation;
+using UnderWarden.Presentation.Entities;
+using UnderWarden.Presentation.Map;
+using UnderWarden.Presentation.Persistence;
+using UnderWarden.Presentation.UI;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation;
+namespace UnderWarden.Presentation;
 
 /// <summary>
 /// Root scene node. Loads content, creates GameState, initialises all
@@ -87,8 +87,8 @@ public partial class Main : Node
     private Vector2 _cameraPositionAtDragStart;
 
     // Bot mode (debug builds only) — never instantiated in release builds.
-    private CatacombsOfYarl.Presentation.Bot.BotPlayerDriver? _botDriver;
-    private CatacombsOfYarl.Presentation.Bot.BotModeHud? _botHud;
+    private UnderWarden.Presentation.Bot.BotPlayerDriver? _botDriver;
+    private UnderWarden.Presentation.Bot.BotModeHud? _botHud;
     private static readonly string[] BotPersonaCycle = ["balanced", "cautious", "aggressive", "greedy", "speedrunner"];
     private static readonly float[] BotSpeedCycle = [1.0f, 0.5f, 0.25f, 0.1f, 0.0f];
     private int _botPersonaIdx;
@@ -152,7 +152,7 @@ public partial class Main : Node
     private string? _captureOutputPath;
     // Floor session two, precondition 2: the points a floor scene declares it must be able to
     // see, and the points it declares must stay dark. See ProbeFloorLegibility.
-    private IReadOnlyList<CatacombsOfYarl.Logic.Core.CorridorReviewSceneBuilder.LegibilityPoint>?
+    private IReadOnlyList<UnderWarden.Logic.Core.CorridorReviewSceneBuilder.LegibilityPoint>?
         _legibility;
 
     // Tier 0 junction-lit probe state. See ProbeJunctionLuminance.
@@ -219,7 +219,7 @@ public partial class Main : Node
         if (ReadArtSceneCaptureResolution(out var captureWidth, out var captureHeight))
             GetTree().Root.ContentScaleSize = new Vector2I(captureWidth, captureHeight);
 
-        GD.Print("Catacombs of YARL — loading...");
+        GD.Print("The Under-Warden — loading...");
         Diag.Init();
 
         // Load cross-run persistence. Missing file → fresh defaults (no write until first dirty flush).
@@ -703,7 +703,7 @@ public partial class Main : Node
             throw;
         }
         // Load depth boons (optional — missing file means no boons, not a crash)
-        Dictionary<int, CatacombsOfYarl.Logic.Balance.BoonDefinition>? boonTable = null;
+        Dictionary<int, UnderWarden.Logic.Balance.BoonDefinition>? boonTable = null;
         try
         {
             var boonYaml = ReadGodotResource("res://config/depth_boons.yaml");
@@ -736,7 +736,7 @@ public partial class Main : Node
         try
         {
             var interactivePropsYaml = ReadGodotResource("res://config/interactive_props.yaml");
-            CatacombsOfYarl.Logic.Content.PropDescriptionRegistry.Load(
+            UnderWarden.Logic.Content.PropDescriptionRegistry.Load(
                 propsYamlForDescriptions ?? "",
                 interactivePropsYaml);
             GD.Print("[Main] PropDescriptionRegistry loaded");
@@ -746,11 +746,11 @@ public partial class Main : Node
             GD.PrintErr($"PropDescriptionRegistry load failed (non-fatal): {ex.Message}");
         }
 
-        CatacombsOfYarl.Logic.Content.SignpostMessageRegistry? signpostRegistry = null;
+        UnderWarden.Logic.Content.SignpostMessageRegistry? signpostRegistry = null;
         try
         {
             var signYaml = ReadGodotResource("res://config/signpost_messages.yaml");
-            signpostRegistry = CatacombsOfYarl.Logic.Content.SignpostMessageRegistry.FromYaml(signYaml);
+            signpostRegistry = UnderWarden.Logic.Content.SignpostMessageRegistry.FromYaml(signYaml);
             GD.Print($"Signpost registry loaded");
         }
         catch (System.Exception ex)
@@ -758,11 +758,11 @@ public partial class Main : Node
             GD.PrintErr($"Signpost registry load failed (non-fatal — no signs will appear): {ex.Message}");
         }
 
-        CatacombsOfYarl.Logic.Content.MuralRegistry? muralRegistry = null;
+        UnderWarden.Logic.Content.MuralRegistry? muralRegistry = null;
         try
         {
             var muralYaml = ReadGodotResource("res://config/murals_inscriptions.yaml");
-            muralRegistry = CatacombsOfYarl.Logic.Content.MuralRegistry.FromYaml(muralYaml);
+            muralRegistry = UnderWarden.Logic.Content.MuralRegistry.FromYaml(muralYaml);
             GD.Print($"Mural registry loaded: {muralRegistry.Count} entries");
         }
         catch (System.Exception ex)
@@ -770,11 +770,11 @@ public partial class Main : Node
             GD.PrintErr($"Mural registry load failed (non-fatal — no murals will appear): {ex.Message}");
         }
 
-        CatacombsOfYarl.Logic.Content.LootTagRegistry? lootTagRegistry = null;
+        UnderWarden.Logic.Content.LootTagRegistry? lootTagRegistry = null;
         try
         {
             var lootTagsYaml = ReadGodotResource("res://config/loot_tags.yaml");
-            lootTagRegistry = CatacombsOfYarl.Logic.Content.LootTagRegistry.FromYaml(lootTagsYaml);
+            lootTagRegistry = UnderWarden.Logic.Content.LootTagRegistry.FromYaml(lootTagsYaml);
             GD.Print($"Loot tag registry loaded: {lootTagRegistry.Count} entries");
         }
         catch (System.Exception ex)
@@ -782,11 +782,11 @@ public partial class Main : Node
             GD.PrintErr($"Loot tag registry load failed (non-fatal — falling back to flat pool): {ex.Message}");
         }
 
-        CatacombsOfYarl.Logic.Content.LootPolicyConfig? lootPolicy = null;
+        UnderWarden.Logic.Content.LootPolicyConfig? lootPolicy = null;
         try
         {
             var lootPolicyYaml = ReadGodotResource("res://config/loot_policy.yaml");
-            lootPolicy = CatacombsOfYarl.Logic.Content.LootPolicyConfig.FromYaml(lootPolicyYaml);
+            lootPolicy = UnderWarden.Logic.Content.LootPolicyConfig.FromYaml(lootPolicyYaml);
             GD.Print($"Loot policy loaded");
         }
         catch (System.Exception ex)
@@ -1100,7 +1100,7 @@ public partial class Main : Node
         // placed at floor build time before the first turn, so we seed sprites here instead.
         foreach (var portal in state.Portals)
         {
-            var comp = portal.Get<CatacombsOfYarl.Logic.Combat.PortalComponent>();
+            var comp = portal.Get<UnderWarden.Logic.Combat.PortalComponent>();
             if (comp != null)
                 SpawnPortalSprite(portal.Id, portal.X, portal.Y, comp.Type);
         }
@@ -1146,10 +1146,10 @@ public partial class Main : Node
         {
             if (_botDriver == null)
             {
-                _botDriver = new CatacombsOfYarl.Presentation.Bot.BotPlayerDriver();
+                _botDriver = new UnderWarden.Presentation.Bot.BotPlayerDriver();
                 AddChild(_botDriver);
 
-                _botHud = new CatacombsOfYarl.Presentation.Bot.BotModeHud();
+                _botHud = new UnderWarden.Presentation.Bot.BotModeHud();
                 GetNode<CanvasLayer>("UILayer").AddChild(_botHud);
                 _botHud.Initialize(_botDriver);
             }

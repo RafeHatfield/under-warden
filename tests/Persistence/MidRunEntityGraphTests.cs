@@ -1,11 +1,11 @@
 using System.Text.Json;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Persistence.MidRun;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Persistence.MidRun;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 /// <summary>
 /// Graph-shape guarantees for the entity-table serializer (M1.4 §Entity-table serialization):

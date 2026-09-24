@@ -2,9 +2,9 @@ using GdUnit4;
 using Godot;
 using static GdUnit4.Assertions;
 
-namespace CatacombsOfYarl.Integration;
+namespace UnderWarden.Integration;
 
-using CatacombsOfYarl.Presentation;
+using UnderWarden.Presentation;
 
 /// <summary>
 /// Verifies SafeFree vs bare QueueFree behavior.

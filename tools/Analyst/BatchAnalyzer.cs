@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using System.Text.Json.Nodes;
 
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>
 /// Evaluates a directory of enriched transcripts in parallel against the predicate pipeline and

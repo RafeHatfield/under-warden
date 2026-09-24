@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 [TestFixture]
 public class MonsterFactoryTests

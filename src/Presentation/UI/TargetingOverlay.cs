@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Presentation.Input;
+using UnderWarden.Presentation.Input;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Full-screen overlay shown during targeting mode.

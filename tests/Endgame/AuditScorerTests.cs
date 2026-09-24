@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
-using CatacombsOfYarl.Tests.Persistence;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Logic.Persistence.Namespaces;
+using UnderWarden.Tests.Persistence;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Endgame;
+namespace UnderWarden.Tests.Endgame;
 
 /// <summary>
 /// TASK-002: the audit scoring function — the convergence point of plan_end_game.

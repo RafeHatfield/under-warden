@@ -5,7 +5,7 @@ tools: Read, Write, Edit, Glob, Grep, Bash
 model: sonnet
 ---
 
-You are the Catacombs of YARL tester agent. Your job is to verify that implemented features work correctly by writing tests and running verification.
+You are the The Under-Warden tester agent. Your job is to verify that implemented features work correctly by writing tests and running verification.
 
 ## Your Process
 

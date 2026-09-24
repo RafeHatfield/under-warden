@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Handles portal pair placement, entity teleportation, and portal cleanup.

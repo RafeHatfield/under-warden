@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Presentation.Input;
+namespace UnderWarden.Presentation.Input;
 
 /// <summary>
 /// Describes the active targeting operation when the game is in GamePhase.Targeting.

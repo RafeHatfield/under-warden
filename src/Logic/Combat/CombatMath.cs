@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Static helpers for combat calculations. Pure math, no state.

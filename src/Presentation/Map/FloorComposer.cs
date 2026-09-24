@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// The tile type assigned to each walkable floor cell by FloorComposer.

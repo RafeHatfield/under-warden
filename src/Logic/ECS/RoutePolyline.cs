@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// A ROUTE, AS A LINE.

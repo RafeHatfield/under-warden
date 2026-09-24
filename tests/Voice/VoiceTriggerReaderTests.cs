@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Voice;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Voice;
+namespace UnderWarden.Tests.Voice;
 
 /// <summary>
 /// The M1.5 trigger bus derivation (pure logic — the Presentation glue just calls this each

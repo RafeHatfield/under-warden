@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Balance.LlmPlayer;
+namespace UnderWarden.Logic.Balance.LlmPlayer;
 
 /// <summary>Which significant event hook fired, and what prompt text to inject.</summary>
 public sealed record HookFired(string HookName, string PromptBlock);

@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Marks an entity as one half of a portal pair.

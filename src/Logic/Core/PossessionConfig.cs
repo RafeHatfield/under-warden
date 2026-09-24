@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Tunable knobs for the possession system. All values in one place.

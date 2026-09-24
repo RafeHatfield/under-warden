@@ -1,11 +1,11 @@
 using System.Text;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 
-namespace CatacombsOfYarl.Logic.Balance.LlmPlayer;
+namespace UnderWarden.Logic.Balance.LlmPlayer;
 
 public sealed record AvailableAction(string Label, PlayerAction Action);
 

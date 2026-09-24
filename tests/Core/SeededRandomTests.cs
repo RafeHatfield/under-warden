@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Core;
+namespace UnderWarden.Tests.Core;
 
 [TestFixture]
 public class SeededRandomTests

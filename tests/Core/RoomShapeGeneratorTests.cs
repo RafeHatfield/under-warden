@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Core;
+namespace UnderWarden.Tests.Core;
 
 /// <summary>
 /// Tests for RoomShapeGenerator covering all shape carvers, shape selection,

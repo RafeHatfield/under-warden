@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.AI;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.AI;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Handles possession state transitions, visibility constraint enforcement, drain clock,

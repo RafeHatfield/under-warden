@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Combat;
+using UnderWarden.Logic.Combat;
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Deserialized consumable item definition from YAML.

@@ -1,4 +1,4 @@
-# Balance Strategy — Catacombs of YARL
+# Balance Strategy — The Under-Warden
 
 _Last verified: 2026-07-12 against commit 86b6f10_
 

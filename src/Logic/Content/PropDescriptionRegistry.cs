@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Provides human-readable names and atmospheric descriptions for inspectable world features.

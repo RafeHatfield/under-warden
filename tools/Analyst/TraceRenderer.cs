@@ -2,7 +2,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>
 /// Renders an enriched JSONL transcript as a compact human-readable turn-by-turn trace.

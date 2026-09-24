@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Classifies the outcome of a single dungeon run into a structured triple:

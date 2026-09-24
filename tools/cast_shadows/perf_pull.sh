@@ -5,7 +5,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"; cd "$ROOT"
 v="$1"; WAIT="${2:-30}"
 DEV="${DEVICE_ID:-5DB969FF-269C-5A8A-86EB-99EC9FF22397}"
-B="com.rafehatfield.catacombsofyarl.perf$v"
+B="com.rafehatfield.underwarden.perf$v"
 EV=tools/cast_shadows/evidence
 xcrun devicectl device process launch --device "$DEV" --terminate-existing "$B" > /dev/null 2>&1
 sleep "$WAIT"

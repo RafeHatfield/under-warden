@@ -1,6 +1,6 @@
 ---
 name: create-issue
-description: Use when creating, filing, or opening a GitHub issue or ticket for Catacombs of YARL — covers the required thread label and milestone, the optional type:bug label, sub-issue structure, and body discipline. Also use when correcting an existing issue's labels or milestone.
+description: Use when creating, filing, or opening a GitHub issue or ticket for The Under-Warden — covers the required thread label and milestone, the optional type:bug label, sub-issue structure, and body discipline. Also use when correcting an existing issue's labels or milestone.
 ---
 
 # Issue / ticket creation contract
@@ -12,7 +12,7 @@ reintroduce the taxonomy this replaces.
 **Type — one optional label, `type:bug`.**
 
 ```bash
-gh issue create --repo RafeHatfield/catacombs-of-yarl \
+gh issue create --repo RafeHatfield/under-warden \
   --title "…" --body "…" --milestone "…" --label "thread:<name>"
 # add --label "type:bug" when the issue is a defect
 ```

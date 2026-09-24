@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Voice;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Voice;
+namespace UnderWarden.Tests.Voice;
 
 /// <summary>
 /// Scheduler behaviour (docs/systems/voice_delivery.md §Scheduler), pure-logic — no GameState. Covers

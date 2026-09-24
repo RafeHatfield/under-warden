@@ -15,12 +15,12 @@
 
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CatacombsOfYarl.Harness.LlmPlayer;
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Balance.LlmPlayer;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Harness.LlmPlayer;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Balance.LlmPlayer;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
 const string EntitiesFile        = "config/entities.yaml";
 const string LevelsDir           = "config/levels";
@@ -271,7 +271,7 @@ if (depthReportMode)
         return 1;
     }
 
-    IReadOnlyList<CatacombsOfYarl.Logic.Balance.DepthPressureReport.DepthCurvePoint> points;
+    IReadOnlyList<UnderWarden.Logic.Balance.DepthPressureReport.DepthCurvePoint> points;
     try
     {
         points = DepthReportLoader.Load(depthReportIn);
@@ -288,7 +288,7 @@ if (depthReportMode)
         return 1;
     }
 
-    var report = CatacombsOfYarl.Logic.Balance.DepthPressureReport.FormatFullReport(points);
+    var report = UnderWarden.Logic.Balance.DepthPressureReport.FormatFullReport(points);
 
     if (!string.IsNullOrEmpty(depthReportOut))
     {
@@ -367,7 +367,7 @@ if (etpSanityMode)
         return 1;
     }
 
-    var etpCfg = CatacombsOfYarl.Logic.Balance.Etp.EtpConfigLoader.FromFile(EtpConfigFile);
+    var etpCfg = UnderWarden.Logic.Balance.Etp.EtpConfigLoader.FromFile(EtpConfigFile);
     DungeonFloorBuilder etpBuilder;
     try
     {
@@ -377,10 +377,10 @@ if (etpSanityMode)
 
     int[] depths = etpSanityDepth.HasValue
         ? [etpSanityDepth.Value]
-        : CatacombsOfYarl.Logic.Balance.Etp.EtpSanityHarness.DefaultDepths;
+        : UnderWarden.Logic.Balance.Etp.EtpSanityHarness.DefaultDepths;
 
     // RunSanity writes the CSV header itself; pass Console.Out as the CSV output stream
-    int exitCode = CatacombsOfYarl.Logic.Balance.Etp.EtpSanityHarness.RunSanity(
+    int exitCode = UnderWarden.Logic.Balance.Etp.EtpSanityHarness.RunSanity(
         etpBuilder, etpCfg,
         depths:        depths,
         strict:        etpSanityStrict,
@@ -869,7 +869,7 @@ void PrintBotVerbose(DungeonSoakSummary soakSummary)
     }
 
     // Count runs that ended in death (for context on DeathsWithUnusedPotions)
-    deathCount = soakSummary.Runs.Count(r => r.Outcome == CatacombsOfYarl.Logic.Balance.OutcomeClassifier.Died);
+    deathCount = soakSummary.Runs.Count(r => r.Outcome == UnderWarden.Logic.Balance.OutcomeClassifier.Died);
 
     Console.WriteLine("Bot Action Distribution (across all runs):");
     foreach (var (action, count) in totalActionCounts.OrderByDescending(kv => kv.Value))
@@ -917,13 +917,13 @@ DungeonFloorBuilder BuildDungeonFloorBuilder(string entitiesPath, string templat
 
     var floorItemPool = content.FloorItemPool;
 
-    CatacombsOfYarl.Logic.Content.LootTagRegistry? lootTagRegistry = null;
+    UnderWarden.Logic.Content.LootTagRegistry? lootTagRegistry = null;
     if (File.Exists(LootTagsFile))
-        lootTagRegistry = CatacombsOfYarl.Logic.Content.LootTagRegistry.FromFile(LootTagsFile);
+        lootTagRegistry = UnderWarden.Logic.Content.LootTagRegistry.FromFile(LootTagsFile);
 
-    CatacombsOfYarl.Logic.Content.LootPolicyConfig? lootPolicy = null;
+    UnderWarden.Logic.Content.LootPolicyConfig? lootPolicy = null;
     if (File.Exists(LootPolicyFile))
-        lootPolicy = CatacombsOfYarl.Logic.Content.LootPolicyConfig.FromFile(LootPolicyFile);
+        lootPolicy = UnderWarden.Logic.Content.LootPolicyConfig.FromFile(LootPolicyFile);
 
     return new DungeonFloorBuilder(
         templates,

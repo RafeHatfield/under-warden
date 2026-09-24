@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Logic.Features;
+namespace UnderWarden.Tests.Logic.Features;
 
 /// <summary>
 /// Tests for chest, signpost, and mural bump-interaction via TurnController.
@@ -492,7 +492,7 @@ murals:
     min_depth: 1
     max_depth: 10
 ";
-        var registry = CatacombsOfYarl.Logic.Content.MuralRegistry.FromYaml(yaml);
+        var registry = UnderWarden.Logic.Content.MuralRegistry.FromYaml(yaml);
         var tracker = new MuralTracker();
         var rng = new SeededRandom(1337);
 
@@ -522,7 +522,7 @@ murals:
     min_depth: 1
     max_depth: 10
 ";
-        var registry = CatacombsOfYarl.Logic.Content.MuralRegistry.FromYaml(yaml);
+        var registry = UnderWarden.Logic.Content.MuralRegistry.FromYaml(yaml);
         var tracker = new MuralTracker();
         var rng = new SeededRandom(1337);
 
@@ -547,7 +547,7 @@ murals:
     min_depth: 5
     max_depth: 10
 ";
-        var registry = CatacombsOfYarl.Logic.Content.MuralRegistry.FromYaml(yaml);
+        var registry = UnderWarden.Logic.Content.MuralRegistry.FromYaml(yaml);
         var tracker = new MuralTracker();
         var rng = new SeededRandom(1337);
 

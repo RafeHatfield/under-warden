@@ -1,7 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Full-screen overlay that displays the complete message history as a scrollable log.

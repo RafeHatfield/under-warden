@@ -1,6 +1,6 @@
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// Converts between grid coordinates and screen positions.

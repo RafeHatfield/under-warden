@@ -5,8 +5,8 @@
     <LangVersion>12</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>CatacombsOfYarl.Logic</RootNamespace>
-    <AssemblyName>CatacombsOfYarl.Logic</AssemblyName>
+    <RootNamespace>UnderWarden.Logic</RootNamespace>
+    <AssemblyName>UnderWarden.Logic</AssemblyName>
     <!-- Disable NativeAOT trimming for the Logic assembly.
          YamlDotNet uses reflection (PropertyInfo.SetValue) to populate deserialized objects.
          NativeAOT's trimmer strips property setter metadata, causing all YAML-mapped properties

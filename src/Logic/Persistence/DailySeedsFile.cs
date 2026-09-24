@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Logic.Persistence;
+namespace UnderWarden.Logic.Persistence;
 
 /// <summary>
 /// Sibling file for daily-seed challenge records. Kept separate from the main

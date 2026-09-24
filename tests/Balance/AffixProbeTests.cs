@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Runs affix weapon variants at depth 2 and 5 to isolate each affix's

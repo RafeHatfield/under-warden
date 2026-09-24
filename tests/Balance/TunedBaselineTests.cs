@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Measures tuned scenarios to establish provisional C# target bands.

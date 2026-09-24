@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Logic.Persistence.Namespaces;
+namespace UnderWarden.Logic.Persistence.Namespaces;
 
 /// <summary>
 /// A formatted memo queued for display in the inbox UI after a run ends.

@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Presentation.Map;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Presentation.Map;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Entities;
+namespace UnderWarden.Presentation.Entities;
 
 /// <summary>
 /// Manages small red HP bar nodes above damaged enemy sprites.

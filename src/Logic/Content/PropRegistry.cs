@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// In-memory registry of all prop definitions loaded from config/props.yaml.

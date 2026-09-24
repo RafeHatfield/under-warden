@@ -8,7 +8,7 @@ _Last verified: 2026-07-12 against commit 86b6f10_
 
 ## Executive Summary
 
-This document outlines 35+ beloved features from classic roguelikes (NetHack, DCSS, Brogue, Caves of Qud, ADOM) that would elevate Catacombs of Yarl from a solid roguelike to one of the best traditional roguelikes ever made.
+This document outlines 35+ beloved features from classic roguelikes (NetHack, DCSS, Brogue, Caves of Qud, ADOM) that would elevate The Under-Warden from a solid roguelike to one of the best traditional roguelikes ever made.
 
 **Current Strengths:**
 - Excellent D&D-style combat system (d20, AC, dice notation)
@@ -447,7 +447,7 @@ Rats, bats, insects. Groups of 5-15, individually weak, dangerous in numbers.
 
 ## Conclusion
 
-These 35+ features represent what makes traditional roguelikes beloved by players worldwide. Implementing them in order of Impact vs Effort will transform Catacombs of Yarl from a solid roguelike into one of the best traditional roguelikes ever made.
+These 35+ features represent what makes traditional roguelikes beloved by players worldwide. Implementing them in order of Impact vs Effort will transform The Under-Warden from a solid roguelike into one of the best traditional roguelikes ever made.
 
 **Next Immediate Action:** Start with Item Identification System
 

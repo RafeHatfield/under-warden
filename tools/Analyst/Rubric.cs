@@ -1,7 +1,7 @@
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>Raised when the rubric is malformed or violates the Analyst's interface contract.</summary>
 public sealed class RubricLoadException(string message) : Exception(message);

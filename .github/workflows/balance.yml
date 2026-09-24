@@ -18,9 +18,9 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        # The repo root has two solution files (CatacombsOfYarl.sln + the Godot editor's
-        # CatacombsOfYarl.Presentation.sln), so a bare `dotnet restore` fails with MSB1011.
-        run: dotnet restore CatacombsOfYarl.sln
+        # The repo root has two solution files (UnderWarden.sln + the Godot editor's
+        # UnderWarden.Presentation.sln), so a bare `dotnet restore` fails with MSB1011.
+        run: dotnet restore UnderWarden.sln
 
       - name: Fast tests
         # Includes the M1.4 mid-run determinism soak as a PERMANENT gate: S1 (round-trip byte-identity —

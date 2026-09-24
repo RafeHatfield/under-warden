@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Why a quick-slot item cannot be used right now. One value per source of unavailability,

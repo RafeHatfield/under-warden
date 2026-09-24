@@ -1,9 +1,9 @@
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// FIND-005 rename guard: the hits-based family was renamed

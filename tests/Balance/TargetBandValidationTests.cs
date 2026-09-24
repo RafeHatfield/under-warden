@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Full depth 1-6 validation suite. Runs all baseline scenarios, computes

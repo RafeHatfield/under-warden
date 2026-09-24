@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace CatacombsOfYarl.Analyzers
+namespace UnderWarden.Analyzers
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public sealed class QueueFreeAnalyzerRule : DiagnosticAnalyzer

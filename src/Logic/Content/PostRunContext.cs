@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Endgame;
+using UnderWarden.Logic.Endgame;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Thin DTO capturing what happened in one game run.

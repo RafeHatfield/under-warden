@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// YAML deserialization class for config/depth_boons.yaml.

@@ -1,12 +1,12 @@
 using System.Threading;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Persistence.MidRun;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Persistence.MidRun;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 /// <summary>
 /// Resume-correctness for the M1.4 4b device path — exercised headlessly through the REAL file layer

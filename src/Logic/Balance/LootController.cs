@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Band-aware loot generation system.

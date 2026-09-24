@@ -39,7 +39,7 @@ python3 tools/tier1_walls/plant_walls.py \
         --src src/Presentation/assets/tier1_walls_compensated \
         --out src/Presentation/assets/tier1_walls_plant
 
-dotnet build CatacombsOfYarl.Presentation.csproj        # ⚠ THE ROOT ONE
+dotnet build UnderWarden.Presentation.csproj        # ⚠ THE ROOT ONE
 /Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --import   # ⚠ ROOT PATH
 
 # --- in scene, lit, at device pixel size (LOOP-PROCESS §2.1). Every flag is load-bearing. ---

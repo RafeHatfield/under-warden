@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Balance.Transcript;
+namespace UnderWarden.Logic.Balance.Transcript;
 
 /// <summary>
 /// Flattens a resolved <see cref="PlayerAction"/> into a serializable

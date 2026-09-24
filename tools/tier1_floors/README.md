@@ -50,7 +50,7 @@ TIER1_OVERLAYS=res://src/Presentation/assets/tier1_floors/MANIFEST.json \
 tools/tier0_harness/build_review_app.sh
 ```
 
-A fresh worktree needs `dotnet build CatacombsOfYarl.Presentation.csproj` and
+A fresh worktree needs `dotnet build UnderWarden.Presentation.csproj` and
 `Godot --headless --path . --import` before any capture renders, and **the import must be re-run
 after any PNG is rewritten** — otherwise the engine draws the previous bytes and nothing says so.
 

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Game difficulty level, primarily affecting the identification system's pre-identification rates.

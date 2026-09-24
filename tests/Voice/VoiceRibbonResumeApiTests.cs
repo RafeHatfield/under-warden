@@ -1,13 +1,13 @@
 using System.Linq;
 using System.Text.Json;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Persistence.MidRun;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Persistence.MidRun;
+using UnderWarden.Logic.Voice;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Voice;
+namespace UnderWarden.Tests.Voice;
 
 /// <summary>
 /// The M1.5b resume contract exactly as Main drives it: a voice-bearing save reloaded through the

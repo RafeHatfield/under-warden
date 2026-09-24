@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Per-run result from a dungeon soak session. Captures everything needed for

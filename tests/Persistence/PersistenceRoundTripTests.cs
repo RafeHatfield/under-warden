@@ -1,9 +1,9 @@
 using System.Text.Json;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Logic.Persistence.Namespaces;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 /// <summary>
 /// Phase 1 smoke tests: round-trip serialization, atomic write mechanics, and missing-file

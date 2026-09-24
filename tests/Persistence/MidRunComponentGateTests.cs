@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Reflection;
 using System.Text.Json;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Persistence.MidRun;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Persistence.MidRun;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 /// <summary>
 /// The completeness gate (M1.4 §Component registry). It ENUMERATES via reflection every concrete

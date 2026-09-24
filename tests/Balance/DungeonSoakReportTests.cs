@@ -1,10 +1,10 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Tests for Phase 3 infrastructure: DungeonSoakReport generation and SoakJsonlReader.

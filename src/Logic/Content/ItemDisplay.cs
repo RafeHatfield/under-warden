@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Presentation-layer helpers for displaying item names and sprites correctly based on

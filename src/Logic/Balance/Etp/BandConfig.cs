@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Balance.Etp;
+namespace UnderWarden.Logic.Balance.Etp;
 
 /// <summary>
 /// ETP budget values for a single room encounter.

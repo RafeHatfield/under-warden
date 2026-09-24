@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Presentation.Bot;
+using UnderWarden.Presentation.Bot;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Bot;
+namespace UnderWarden.Presentation.Bot;
 
 /// <summary>
 /// HUD overlay showing bot mode state. Displays at top-center when active.

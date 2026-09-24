@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Voice;
+namespace UnderWarden.Logic.Voice;
 
 /// <summary>Ribbon display duration (docs/systems/voice_delivery.md §Ribbon contract).</summary>
 public enum VoiceDuration { Short, Normal, Long }

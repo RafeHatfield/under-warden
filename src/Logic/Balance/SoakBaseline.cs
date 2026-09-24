@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>Per-depth snapshot of the balance-relevant soak metrics a tuning change moves.</summary>
 public sealed record SoakFloorMetrics(

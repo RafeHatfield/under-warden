@@ -25,7 +25,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 DEVICE="${TIER0_DEVICE:-}"
-BUNDLE="${TIER0_BUNDLE_ID:-com.rafehatfield.catacombsofyarl.tier0}"
+BUNDLE="${TIER0_BUNDLE_ID:-com.rafehatfield.underwarden.tier0}"
 OUT="$ROOT/tools/tier1_floors/evidence"
 CHECK_ONLY=""
 

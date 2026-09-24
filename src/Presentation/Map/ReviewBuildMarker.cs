@@ -1,7 +1,7 @@
 using Godot;
 using System.Text.Json;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// Tier 0 review-build marker (ART-BIBLE-v0 §13.1).

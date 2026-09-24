@@ -5,8 +5,8 @@
     <LangVersion>12</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>CatacombsOfYarl.Presentation</RootNamespace>
-    <AssemblyName>CatacombsOfYarl.Presentation</AssemblyName>
+    <RootNamespace>UnderWarden.Presentation</RootNamespace>
+    <AssemblyName>UnderWarden.Presentation</AssemblyName>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
@@ -30,7 +30,7 @@
       <Private>true</Private>
       <TrimmerRootAssembly>true</TrimmerRootAssembly>
     </PackageReference>
-    <ProjectReference Include="src/Logic/CatacombsOfYarl.Logic.csproj">
+    <ProjectReference Include="src/Logic/UnderWarden.Logic.csproj">
       <TrimmerRootAssembly>true</TrimmerRootAssembly>
     </ProjectReference>
   </ItemGroup>

@@ -1,4 +1,4 @@
-# Catacombs of YARL
+# The Under-Warden
 
 Turn-based roguelike — Godot 4 + C#, deterministic ECS, data-driven YAML content, mobile-first (iOS/Android).
 
@@ -106,7 +106,7 @@ For **batch runs with analysis** (headless, fast), use the bot-analysis pipeline
 
 ### Godot (visual game)
 
-Open `CatacombsOfYarl.Presentation.sln` in the Godot editor, or export via the Godot CLI.
+Open `UnderWarden.Presentation.sln` in the Godot editor, or export via the Godot CLI.
 
 ---
 

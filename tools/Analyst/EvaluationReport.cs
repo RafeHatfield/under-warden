@@ -2,7 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>
 /// The per-run evaluation report (plan-analyst §2). v1 is predicate-only: `coherence` is empty

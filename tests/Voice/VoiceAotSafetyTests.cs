@@ -1,9 +1,9 @@
 using System.Linq;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Voice;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Voice;
+namespace UnderWarden.Tests.Voice;
 
 /// <summary>
 /// NativeAOT (iOS) safety for the voice YAML loaders. `AotObjectFactory(strict: true)` throws on any

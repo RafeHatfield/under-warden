@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Constraint-based prop placement engine. Reads a room's archetype, applies a recipe of

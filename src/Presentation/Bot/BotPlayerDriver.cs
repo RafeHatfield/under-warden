@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Bot;
+namespace UnderWarden.Presentation.Bot;
 
 /// <summary>
 /// Godot Node that drives the player's turns autonomously via BotBrain.

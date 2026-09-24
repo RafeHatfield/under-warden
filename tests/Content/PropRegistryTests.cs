@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 /// <summary>
 /// Tests for PropRegistry and PropDefinition YAML loading from config/props.yaml.

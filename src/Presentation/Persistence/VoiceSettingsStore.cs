@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Voice;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Persistence;
+namespace UnderWarden.Presentation.Persistence;
 
 /// <summary>
 /// DEVICE-settings store for voice delivery (silence mode + ribbon duration). Persisted to

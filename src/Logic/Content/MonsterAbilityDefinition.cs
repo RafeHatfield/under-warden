@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Data-driven definition of a species-specific ability usable during possession.

@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// YAML-deserialized scenario definition. Defines a controlled combat encounter

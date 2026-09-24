@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// One entry in the floor_item_pool YAML section.

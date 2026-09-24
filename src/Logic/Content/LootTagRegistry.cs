@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Loads and indexes config/loot_tags.yaml.

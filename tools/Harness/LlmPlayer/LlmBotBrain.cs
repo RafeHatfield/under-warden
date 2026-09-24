@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Balance.LlmPlayer;
-using CatacombsOfYarl.Logic.Balance.Transcript;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Balance.LlmPlayer;
+using UnderWarden.Logic.Balance.Transcript;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 
-namespace CatacombsOfYarl.Harness.LlmPlayer;
+namespace UnderWarden.Harness.LlmPlayer;
 
 /// <summary>
 /// LLM-driven player brain. Implements IPlayerBrain using the Anthropic API for turn
@@ -430,12 +430,12 @@ public sealed class LlmBotBrain : IPlayerBrain, IDisposable
     private static int Chebyshev(int ax, int ay, int bx, int by)
         => Math.Max(Math.Abs(ax - bx), Math.Abs(ay - by));
 
-    private static bool HasHealingPotion(CatacombsOfYarl.Logic.ECS.Inventory? inventory)
+    private static bool HasHealingPotion(UnderWarden.Logic.ECS.Inventory? inventory)
     {
         if (inventory == null) return false;
         foreach (var item in inventory.Items)
         {
-            var consumable = item.Get<CatacombsOfYarl.Logic.Combat.Consumable>();
+            var consumable = item.Get<UnderWarden.Logic.Combat.Consumable>();
             if (consumable?.IsHealing == true) return true;
         }
         return false;

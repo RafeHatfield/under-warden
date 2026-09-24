@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.ECS;
+namespace UnderWarden.Tests.ECS;
 
 // Minimal test components
 public class HealthComponent : IComponent

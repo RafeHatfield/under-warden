@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Loads voice line YAML pool files and resolves trigger IDs to individual lines.

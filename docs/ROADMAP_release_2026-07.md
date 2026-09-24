@@ -1,4 +1,4 @@
-# Catacombs of Yarl / The Under-Warden — Release Roadmap
+# The Under-Warden — Release Roadmap
 
 **Date:** July 2026
 **Supersedes:** `REVIEW_launch_readiness_2026-07.md` (v1) and `_v2.md` — the review findings are folded in here as work items; this document is the plan of record for completing the game for release.

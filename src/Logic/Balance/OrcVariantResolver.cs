@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Resolves a generic "orc" spawn request to a specific variant based on dungeon depth.

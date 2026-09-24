@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Multipliers applied to monster stats at spawn time based on dungeon depth.

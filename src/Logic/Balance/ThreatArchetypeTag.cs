@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Tags a monster entity with its <see cref="ThreatArchetype"/> for role-aware balance health.

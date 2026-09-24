@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Slim status bar — Phase 1 layout. Shows HP fill bar + depth label only.

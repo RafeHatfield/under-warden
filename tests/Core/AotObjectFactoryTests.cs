@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Core;
+namespace UnderWarden.Tests.Core;
 
 /// <summary>
 /// Validates that AotObjectFactory can create all YAML-mapped types.
@@ -27,32 +27,32 @@ public class AotObjectFactoryTests
     [TestCase(typeof(LevelTemplatesFile))]
 
     // Balance types
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.LevelOverride))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.GenerationParameters))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.GuaranteedSpawns))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.SpawnEntry))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.StairRules))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.SpawnRules))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.EncounterBudget))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.SpecialRoomDef))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.ScenarioDefinition))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.ScenarioPlayer))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.ScenarioMonster))]
-    [TestCase(typeof(CatacombsOfYarl.Logic.Balance.ScenarioItem))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.LevelOverride))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.GenerationParameters))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.GuaranteedSpawns))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.SpawnEntry))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.StairRules))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.SpawnRules))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.EncounterBudget))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.SpecialRoomDef))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.ScenarioDefinition))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.ScenarioPlayer))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.ScenarioMonster))]
+    [TestCase(typeof(UnderWarden.Logic.Balance.ScenarioItem))]
 
     // Collection types used in YAML deserialization
     [TestCase(typeof(Dictionary<string, MonsterDefinition>))]
     [TestCase(typeof(Dictionary<string, ItemDefinition>))]
     [TestCase(typeof(Dictionary<string, ConsumableDefinition>))]
-    [TestCase(typeof(Dictionary<string, CatacombsOfYarl.Logic.Balance.LevelOverride>))]
+    [TestCase(typeof(Dictionary<string, UnderWarden.Logic.Balance.LevelOverride>))]
     [TestCase(typeof(Dictionary<string, Dictionary<string, MonsterDefinition>>))]
     [TestCase(typeof(Dictionary<string, Dictionary<string, ItemDefinition>>))]
     [TestCase(typeof(Dictionary<string, Dictionary<string, ConsumableDefinition>>))]
     [TestCase(typeof(Dictionary<string, List<WeightedItem>>))]
-    [TestCase(typeof(List<CatacombsOfYarl.Logic.Balance.SpawnEntry>))]
-    [TestCase(typeof(List<CatacombsOfYarl.Logic.Balance.SpecialRoomDef>))]
-    [TestCase(typeof(List<CatacombsOfYarl.Logic.Balance.ScenarioMonster>))]
-    [TestCase(typeof(List<CatacombsOfYarl.Logic.Balance.ScenarioItem>))]
+    [TestCase(typeof(List<UnderWarden.Logic.Balance.SpawnEntry>))]
+    [TestCase(typeof(List<UnderWarden.Logic.Balance.SpecialRoomDef>))]
+    [TestCase(typeof(List<UnderWarden.Logic.Balance.ScenarioMonster>))]
+    [TestCase(typeof(List<UnderWarden.Logic.Balance.ScenarioItem>))]
     [TestCase(typeof(List<WeightedItem>))]
     [TestCase(typeof(List<string>))]
     [Description("AotObjectFactory can create all registered YAML-mapped types")]

@@ -114,7 +114,7 @@ Changes made during the hardening review — read these before building:
 
 **IPlayerBrain interface (REVISED — see Hardening Notes 1–3):**
 ```csharp
-namespace CatacombsOfYarl.Logic.Balance.LlmPlayer;
+namespace UnderWarden.Logic.Balance.LlmPlayer;
 
 /// <summary>One turn's decision plus the LLM metadata the transcript captures.</summary>
 public sealed record PlayerDecision(
@@ -657,7 +657,7 @@ Prompt texts verbatim from plan-player.md §5.
 - Touch the rubric (config/rubric/v1.yaml) — it's locked
 - Implement trigger_consequence evaluator
 - Add NativeAOT annotations (Harness project has PublishTrimmed=false)
-- Add Anthropic SDK to `src/Logic/CatacombsOfYarl.Logic.csproj` — Harness project only.
+- Add Anthropic SDK to `src/Logic/UnderWarden.Logic.csproj` — Harness project only.
   The Logic layer must build and test with zero network/SDK dependencies.
 - Add a tools/Harness ProjectReference to the test project — parsing/detection logic
   that needs tests belongs in `src/Logic/Balance/LlmPlayer/`

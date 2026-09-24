@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Endgame;
+namespace UnderWarden.Logic.Endgame;
 
 /// <summary>
 /// A loaded Weighing arena: the fixed-layout map plus the named anchor positions the orchestration

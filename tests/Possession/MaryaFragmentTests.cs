@@ -1,11 +1,11 @@
 using System.IO;
 using System.Text.RegularExpressions;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Persistence.Namespaces;
 using NUnit.Framework;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Tests.Possession;
+namespace UnderWarden.Tests.Possession;
 
 /// <summary>
 /// Hollowmark voice batch 1f: Marya memory fragments. These are NOT ribbon voice

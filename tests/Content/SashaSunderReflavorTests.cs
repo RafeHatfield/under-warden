@@ -1,12 +1,12 @@
 using System.IO;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Knowledge;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Knowledge;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 /// <summary>
 /// Ruling execution (Rafe, 2026-07-21): the spell-break wand is reflavored to "Sasha's Sunder", an
