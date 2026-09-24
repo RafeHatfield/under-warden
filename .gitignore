@@ -20,3 +20,8 @@ obj/
 # removed on exit; committing it would turn every subsequent build into a review build that boots
 # the art corridor instead of the game. Only the .template is tracked.
 /src/Presentation/assets/tier0_harness/REVIEW_BUILD.json
+
+# Python bytecode. A committed .pyc is rewritten on every fresh checkout (source mtime changes),
+# which dirties the tree and moves the frame-critic build id before any art has changed.
+__pycache__/
+*.pyc
