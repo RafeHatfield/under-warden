@@ -1,0 +1,44 @@
+RANK: 4 > 1 > 2 > 3
+
+BEST: 4
+BEST_WHY: The pale floor blocks in the lit zone around the figure (roughly x 300–700, y 460–640) vary in width and stagger their courses, and the values step down cleanly from the figure outward, so the falloff reads as one light on cut stone rather than a vignette. The wall face band directly under the rock (y ≈ 420–450) is a distinct warmer value from both the rock top above it and the floor below it, so wall-top / face / floor separate at a glance. The four props (crate at ~245,495; pale slab at ~280,590; roped log bundle at ~440,615; brazier at ~600,545) all sit on floor tiles and all sit inside the lit area, so nothing contradicts the lighting model. It is the only one of the three lit frames where prop placement doesn't argue with the geometry.
+
+WORST: 3
+WORST_WHY: Every wall tile (left column x 0–50, bottom band y 200–288, top-left corner) is the same grey block stamp repeated verbatim with no joint variation; the mud floor (x 50–250, y 0–200) is a single noise tile whose repeat is visible across the room; the green pool (x 250–384, y 0–195) is a flat fill with five or six identical blob sprites. There is no light falloff at all — the frame is uniformly lit edge to edge — so the brief's one stated visual rule isn't in the picture. Prop perspective is mixed: the two chests at top-left (~80,10 and ~80,55) and the furnace at (~30,140) are drawn side-on, while the two barrels at (~130,205 / ~175,205) are drawn from directly above. It reads as a tile-editor prototype, not an art pass.
+
+FLAGGED: 1, 2, 3
+
+SHIP: NONE
+
+FLIP 1:
+- The three crossed-timber props sit at the same y (≈612) at x 215 / 405 / 535, evenly spaced, in three colour variants of the same silhouette; it reads as a prop test row. Break the line: move at least one onto a different course and turn one 90°.
+- The campfire at (~405,612) has lit flames but the floor around it is exactly the value of the floor two tiles away; a fire either emits light or is unlit embers. Add a local falloff or kill the flames.
+- The bright white ring on the brazier at (~600,550) is the highest value in the frame, higher than the figure's own light source; drop it to the lit-floor value so the figure remains the brightest point.
+- The floor in the lit zone shows circular/spiral stamp rings at roughly (580,490) and (640,510) — brush-stamp artefacts, not stone. Paint them out.
+- The long single-pixel crack running unbroken from (~200,470) through (~340,530) to (~250,590) crosses block joints without deflecting; cracks in cut stone follow or terminate at joints. Break it at each joint it crosses.
+- The rock-top masses (x 0–180 y 400–900; x 570–750 y 70–390; x 180–440 y 70–390) are unresolved blurred noise with a single pale hairline each; give them readable surface (edge chipping, one or two distinct fracture planes) so they read as rock rather than a smudge layer.
+
+FLIP 2:
+- The wooden A-frame at (~585–680, 360–415) is standing on the rock top and overlaps the wall face band; it is a floor prop on an impassable surface. Move it down onto floor, below y ≈ 455.
+- The crossed barricade at (~220–300, 650–700) straddles the dark wall band at the bottom-left (y 655–720); half of it is on wall. Move it fully onto lit floor.
+- The pale slab at (~270–300, 535–635) has its top face at the same value as the lit floor beside it, so it flattens into the floor at its top edge; darken the top face one step or add a cast shadow on its lower-right side.
+- The brazier at (~600,545) has red flame pixels at full saturation while nothing else in the frame is; either desaturate to match the warm palette or give it a local light pool.
+- Same crack-overlay fix as 1: the unbroken 1px cracks at (~200,470→250,590) and (~580,650→720,700) cross joints without deflecting.
+- Same rock-top fix as 1: the three dark masses are blurred noise with no surface.
+
+FLIP 3:
+- Add the light falloff the brief specifies: the orc at (~225,10) carries the only light, so values must drop with distance from it. Currently the bottom-right corner is as bright as the tile under the figure.
+- Wall tiles: every block in the left column and bottom band is the identical stamp. Author at least three joint/block variants and mix them, and put a visible top/face split on the bottom wall (y ≈ 250–288) so it reads as height, not a stripe.
+- Mud floor: the noise tile repeats visibly across (50–250, 0–200). Either author 4+ variants or overlay a larger non-tiling variation layer.
+- Green pool: flat fill with repeated blob sprite at (~320,25), (~330,110), (~275,160) etc.; add an edge treatment where water meets floor (currently a hard 1px boundary at x ≈ 250) and vary the blobs.
+- Resolve prop perspective to one convention: the barrels (~130,205 / ~175,205) are top-down, the chests (~80,10 / ~80,55) and the furnace (~30,140) are side-on. Pick one and redraw the others.
+- The white specks at (~220,120) read as a stray particle or debug marker; remove or make deliberate.
+
+FLIP 4:
+- The roped log bundle at (~380–500, 590–640) and the crate at (~190–300, 475–520) are at noticeably higher saturation and harder edge than the floor they sit on, so they read pasted rather than lit by the same source; pull their saturation toward the floor's and let the light falloff dim their far sides.
+- The pale slab at (~270–300, 535–635): top face is the same value as the adjacent lit floor; separate them.
+- The brazier at (~600,545) burns without lighting its own tile; add a local pool or unlight it.
+- The single-pixel crack overlay (~200,470→250,590 and ~580,650→720,700) crosses block joints without deflecting; break at joints.
+- The three rock-top masses are blurred noise with no resolved surface; give them fracture planes and edge chipping so they read as rock at the size the game is played.
+
+Model: Claude Opus 5 (1M context).

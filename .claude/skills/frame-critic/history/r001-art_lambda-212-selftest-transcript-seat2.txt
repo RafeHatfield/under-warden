@@ -1,0 +1,45 @@
+RANK: 2 > 1 > 4 > 3
+
+BEST: 2
+BEST_WHY: The wall face band (y≈420–455) carries one continuous dark rope line with driven pins at irregular spacing (x≈300, 355, 425, 480) and a hanging strap at x≈300 — a repair detail that is drawn, not stamped, and it is the only fiction-specific thing in any of the four frames. Floor cracks cross tile joints (the long one running from ≈(240,560) up to ≈(520,480)), so the floor reads as one cut surface rather than a grid of tiles. The X-brace at bottom-left (≈215–300, 650–700) is the one prop in the whole deck that has taken the scene's light: it sits dim brown at the same value as the tiles under it. The brazier at (≈580–620, 525–565) throws a warm wash onto the floor to its right that differs in hue from the figure's light, so two light sources read as two.
+
+WORST: 3
+WORST_WHY: Every grey floor tile carries a hard 1-px dark grout line on all four sides — the bottom band (y≈205–260) and left column (x≈25–55) are uninterrupted graph paper; no joint varies in width, depth or alignment. The dirt floor (x≈55–250) repeats its crack pattern on a fixed 24-px period with a faint seam grid visible, and the blue splat pixels (≈100,35; ≈190,155) read as noise. The water (x≈250–345, y≈0–190) shows a uniform hexagonal mesh through the green fill — a procedural texture — and meets the dirt on a razor rectangle with no bank or darkening. The teal moss blobs (≈30,70 and ≈365,160) are the same semi-transparent shape pasted at reduced alpha. Two identical table+slat props sit stacked at (65–95, 0–90). The bottom wall face repeats the same lighter brick chunk every tile (y≈270). There is no carried light: the frame is one uniform exposure and nothing darkens away from the figure at (215–235, 0–25), which contradicts the premise outright.
+
+FLAGGED: 4, 1, 3
+
+SHIP: NONE
+
+FLIP 1:
+- The timber stack at (190–300, 480–520) and the lashed logs at (380–500, 590–640) are at full saturation while the floor under them has dropped to cool grey-blue; multiply the sprites by the same per-tile light value the floor gets.
+- Pull the timber palette toward the wall band's ochre (reference: wall face at y≈420–455); the pure orange used on the props appears nowhere in the environment.
+- The timber stack reads as two stacked flat slabs with a notch, not as anything; give it end grain on cut ends and one overhanging plank, or replace it with the lashed-log sprite.
+- The pale post at (265–300, 540–635) has a flat lighter rectangle for a top and no side shading; darken the faces away from the figure and drop its value ~15–20% so it stops being the brightest floor object outside the halo.
+- The falloff around the figure shows tile-sized bright rectangles with sharp edges (right of the figure at ≈430–500, 470–520); interpolate the per-tile light values or dither the step boundaries.
+
+FLIP 2:
+- The A-frame at (580–680, 360–410) stands in the corridor where the floor is near-black yet reads mid-value orange; apply the tile light value to it or move it into the lit room.
+- The two stray orange fragments at the A-frame's feet (≈585,385 and ≈665,385) read as broken sprite pieces at game scale; draw them as full stakes with a shadow or remove them.
+- The pale post (265–300, 540–635): same fix as frame 1 — drop value, shade the sides away from the figure.
+- The X-brace's left arm at x≈215 disappears into the door-notch pillar's shadow with no draw order; move the brace one tile right or draw the pillar over it.
+- Interpolate the per-tile light steps around the figure as in frame 1.
+
+FLIP 4:
+- The barrel at (585–615, 590–630) is full-saturation orange on near-black floor; light it by the tile value (it should be almost invisible at that distance) or move it into the halo.
+- The chest (640–685, 465–505) and shelf (705–750, 465–505) use 1-px black outlines and high-contrast metal bands at a different pixel density from everything else in the frame; redraw them in the frame's soft, outline-free style and light them.
+- The orange post at (265–300, 550–625) has an angled isometric top cap; the scene is straight top-down with south wall faces only — redraw the top as a flat square.
+- The bench at (395–490, 595–630) shows dark red legs along its bottom edge under a flat full-saturation top; drop saturation to the wall band's ochre and shade the top by the light value.
+- Every prop in the frame is the same pure orange; nothing in the floor or wall exceeds muted ochre. Establish one prop palette derived from the environment ramp.
+- Interpolate the per-tile light steps around the figure.
+
+FLIP 3:
+- Break the grout grid: vary joint width and darkness per tile, offset alternate rows, and remove the uniform 1-px dark line from every seam.
+- Dirt floor: author 3–4 variant tiles and randomise placement so the crack pattern doesn't repeat on a 24-px period; remove the blue splat pixels or make them a consistent, named material.
+- Water: remove the hexagonal mesh fill; draw a shoreline (darker rim, wet stone edge) where water meets dirt at x≈250 and y≈190 instead of a hard rectangle.
+- Moss: draw it opaque and integrated with the tile, with at least three distinct shapes; stop reusing the blob at (≈30,70) and (≈365,160).
+- Add the carried light: treat the figure at (215–235, 0–25) as the source and darken the frame with distance from it.
+- The two stacked props at (65–95, 0–90) are identical and unreadable; make them distinguishable objects with variation.
+- Bottom wall face: the same lighter brick chunk repeats every tile at y≈270; vary or remove it.
+- Door at left (25–40, 120–160): the door sits on a north-facing brick strip cut into a west wall column; rebuild the wall run so the door sits in a face that matches the wall's orientation.
+
+Model: Opus 5 (1M context)

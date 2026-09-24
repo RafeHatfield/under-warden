@@ -1,0 +1,42 @@
+RANK: 1 > 2 > 4 > 3
+
+BEST: 1
+BEST_WHY: The lit floor around the figure is genuinely cut stone: block widths vary along each course (compare the long slab at roughly x 400–500, y 500 with the two short blocks immediately right of it), joint lines wobble in thickness, and the hatch-scratch texture is denser in the trafficked centre than at the edges. The wall face across the top (y ≈ 420–455) is timber shoring with driven pins at uneven spacing, which is exactly the fiction's orc-repair language without saying so. The bound log at (380–500, 590–640) is drawn at the same pixel pitch as the tiles and its rope wraps sit correctly on the cylinder. The two props (crate, log) and the brazier are placed on floor, in front of the wall, and the shadow direction under the crate agrees with the figure's light.
+
+WORST: 3
+WORST_WHY: The props are at the wrong pixel pitch and the wrong saturation for the scene. The red sawhorse at (195–235, 600–630), the red bundle at (390–425, 595–635), the plank stack at (515–555, 600–630) and the tiny chest at (330–355, 535–565) are all drawn at roughly half the pixel size of the floor and figure — the chest is smaller than the player's head. They are also the only pure red-orange in the frame, so they read as map markers, not objects. The brazier at (598, 548) has been replaced by a white ring of rounded teeth around a small fire — it reads as a cog or a daisy, not a fire pit, and looks like a placeholder icon. The chest sits directly on top of the floor crack line rather than beside it.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The cream standing stone at (265–300, 540–640) has no surface at all — a flat fill with one darker side. Give it the same joint/chip texture as the floor blocks, or a visible tool-mark pass, so it doesn't read as an untextured block.
+- The crate at (190–305, 475–515) is a saturated orange no other surface in the frame reaches; desaturate the plank fill toward the timber of the wall shoring above it.
+- The floor crack running from (230, 560) to (770, 480) is a 1–2 px line while the tile pixels are ~3–4 px; redraw it at the tile pixel pitch so it isn't visibly a different resolution.
+- There is a stray faint disc drawn into the floor at about (595, 485), above and offset from the brazier's own halo; remove it or centre it on the brazier.
+- The dark rock top-left (0–450, 80–400) shows faceted polygon cells with faint straight edges and a soft blotchy noise overlay; replace with a hand-drawn rock face at the tile pixel pitch so it doesn't read as Voronoi plus Perlin.
+- The bound log's top highlight (420–470, 600–615) is a smooth gradient; step it to two or three flat bands like the rest of the pixel work.
+
+FLIP 2:
+- The A-frame at (585–670, 410–465) is drawn over the wall face — a vertical surface — and hangs down into the floor. Move it fully onto floor tiles below y ≈ 460.
+- The two small tan hook shapes flanking the A-frame at (580–600, 430–445) and (655–675, 430–445) are unreadable fragments; either draw them as full rope coils / pins, or delete them.
+- The X sawhorse at (215–305, 650–700) sits on the dark wall-top band, not on floor; move it onto lit floor.
+- Same base fixes as 1: crack line at tile pixel pitch, remove stray disc at (595, 485), redraw the rock face without the polygon/noise look.
+
+FLIP 3:
+- Redraw all four floor props (sawhorse, bundle, plank stack, chest) at the floor's pixel pitch, at a size where the chest is at least as tall as the figure's torso.
+- Desaturate the prop wood to match the shoring timber; only the fire should be saturated.
+- Replace the brazier at (598, 548) with a pit whose rim is stone, not a ring of white lobes, and reuse the fire sprite from the other set.
+- Move the chest off the crack line, or make the crack visibly pass beneath it.
+- Same base fixes as 1: crack line at tile pixel pitch, remove stray disc at (595, 485), redraw the rock face without the polygon/noise look.
+
+FLIP 4:
+- The water at (248–343, 0–190) is a hard-edged rectangle with a visible honeycomb repeat in the fill; draw a bank/edge tile set (at least edge, corner) between water and dirt, and replace the honeycomb with a hand-drawn ripple pass that doesn't tile at a glance.
+- The dirt floor (58–248, 0–215) is a single noise fill of red and blue single-pixel specks; remove the blue specks, and give the ground some readable structure (packed-earth patches, a worn path toward the door) at the tile pitch.
+- The moss stamp on the grey stone is the same shape at top-left (15–50, 55–85), bottom-left (15–50, 205–235) and right (355–384, 150–175); draw at least three variants and rotate them.
+- The bottom wall band (0–384, 265–288) has one lighter block at about (165–190, 272–282) that doesn't match its neighbours; fix the tile.
+- There is no light falloff from the figure at all — the frame is flat-lit corner to corner. Add the carried-light gradient the fiction calls for so the far stone reads as unlit.
+- The two plank objects under the gold crates at (65–95, 25–45) and (65–95, 70–90) read as a different object from the crate above them; if they are the crate's lower face, draw them as one prop with a shared outline.
+
+Model: Claude Opus 5 (1M context)

@@ -1,0 +1,43 @@
+RANK: 1 > 2 > 3 > 4
+
+BEST: 1
+BEST_WHY: The floor in the lit area (right of the figure, around the brazier) is the strongest single piece of work in the deck: bricks vary in width and height along each course, the mortar joints step in value so some read deep and some flush, and the scratch-hatching sits inside individual stones rather than across them, so the paving reads as laid stone rather than a stamped tile. The long thin crack that starts under the north wall left of the figure, runs under the figure's tile and continues to the right, crosses brick boundaries without breaking, which is how a real crack behaves. The north wall's face (the band with the horizontal beam and the vertical driven pins at irregular spacing, one with a bracket at the right) sells the "repaired with pins and salvaged timber" fiction without a caption. The two timber props — the crossed brace at bottom-left and the collapsed A-frame at top-right — sit in the same muted wood palette as the wall beam and are shaded on their top faces, so they belong to the room. The light: the figure's tile is brightest, the fall-off to the unlit rock on the left and the dark corridor at the top is smooth, and the unlit rock still carries slab edges and a crack, so the dark is drawn, not just black.
+
+WORST: 4
+WORST_WHY: Nothing in it has been lit. There is no fall-off from the figure at all — the grey stone at the far left, the water and the bottom wall are all at full value — so the premise the frame exists to show is absent. The grey stone tiles (left column and bottom band) are flat mid-grey squares with a one-pixel grid and a few speckles; the teal "moss" on them is a semi-transparent soft-brush blob and the grid line runs straight through it (left column, third and fourth tiles down), so it reads as a decal laid over a placeholder. The brown floor is a noise-speckle fill with a faint regular grid showing through it at tile intervals, plus a handful of saturated blue splats that nothing motivates. The water is a rectangle of a regular hexagonal pattern fill with a hard straight edge against the dirt and no bank. The two barrels at the bottom are the same sprite twice, side by side, drawn in side elevation on a top-down floor; the two crates at top-left are the same stack twice. The ladder at the left is the most saturated orange in the frame on the darkest wall. This is the free one.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The A-frame at top-right is drawn over the north wall's face band (its top spans the beam row, y≈410–465 at x≈580–680); move it down one tile so it sits on the floor, or redraw it as a brace leaning into the wall with its feet on the floor row and its top overlapping the beam.
+- A cool blue-grey shadow band runs from the tile just right of the pale pillar's base down-left to the small wall stub at bottom-centre; the pillar itself casts nothing. Either cast the pillar's shadow on its far side from the figure (down-left of the pillar, not between the pillar and the light) or remove the band.
+- The pale pillar has no contact shadow at its base; add a one- or two-pixel dark line under its south edge so it stands on the floor instead of floating on it.
+- The north wall's top surface (the mottled band above the beam, x≈180–500) is a soft-brushed blotch texture at a lower frequency than the floor's pixel work; repaint it at the floor's pixel density with drawn slab edges.
+- The dark patch where the north corridor meets the wall (x≈500–560, y≈380–460) is a soft blurred rectangle; replace it with a drawn opening — cut the beam, show the corridor floor meeting the room floor.
+
+FLIP 2:
+- The tied log bundle (centre-bottom, ~2×1 tiles) and the timber crate (top-left) are at full saturation and full value at two to three tiles from the only light; run them through the same fall-off as the floor under them, so their far edges go as dark as the bricks they sit on.
+- Both props are flat-shaded with hard-edged colour blocks and no contact shadow; give each a dark underline on its south edge and a darker side face consistent with the top-face shading on the wall beam.
+- The log bundle is drawn in side elevation (visible rope loop around the middle, cylindrical ends); redraw it for the top-down camera — ends as circles, rope as a band crossing the top.
+- Same three base-scene fixes as FLIP 1: cast shadow band to the pillar's far side or remove it; contact shadow under the pillar; repaint the wall-top blotch and the blurred corridor patch at pixel density.
+
+FLIP 3:
+- Every prop is at roughly half the tile scale of the room — the crate left of the figure is ~24px on a ~64px tile, the crossed sticks at left and bottom-right and the orange sticks near the brazier are a third of a tile; redraw them at the tile's pixel density so they match the bricks and the figure.
+- The brazier has a ring of pale white scallops around it that is the brightest white in the frame at three tiles from the light and reads as a flower; replace the ring with the stone rim used in 1 and 2, or drop it.
+- The red crossed timber at bottom-centre carries a diamond hatch pattern and reads as a placeholder marker; redraw it in the muted wood palette of the wall beam with plain grain.
+- Every prop ignores the light fall-off (the crossed sticks at far left are at full saturation in a region the floor draws as dim); apply the same fall-off to props as to the floor.
+- Same base-scene fixes as FLIP 1: repaint the wall-top blotch and the blurred corridor patch at pixel density.
+
+FLIP 4:
+- Light the frame from the figure: full value only on the figure's tile, fall-off to near-black at the far edges; nothing at the left column, the bottom band or the pool should be at full value.
+- Replace the grey stone tiles with drawn slabs — varied block widths, mortar joints that step in value, edges where the wall meets the floor — instead of one flat grey square repeated with a one-pixel grid.
+- Remove the semi-transparent teal moss blobs; if moss is wanted, draw it as opaque pixels that sit on top of the joints rather than letting the grid line pass through them.
+- Replace the noise-speckle dirt with a drawn ground texture and break the tile repeat so the faint 48px grid no longer shows through; delete the unmotivated blue splats.
+- Give the pool a bank: draw an edge tile where water meets dirt, and replace the regular hexagonal pattern fill with a hand-drawn water surface.
+- Redraw the barrels and crates for the top-down camera (barrel tops as circles, crates as squares with a lid seam), and make the two barrels and the two crates different from each other.
+- Desaturate the ladder to sit with the wall it is on, and give the bottom brick band varied bricks instead of the same block repeated every tile.
+- The bone scatter at centre-right is five white pixels; draw it or remove it.
+
+Model: Opus 5 (1M context).

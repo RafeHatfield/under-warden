@@ -1,0 +1,53 @@
+RANK: 4 > 1 > 2 > 3
+
+BEST: 4
+BEST_WHY: The roped timber bundle at roughly (440,615) is the best-made object in the deck: two beams crossing at different angles, the rope wraps darken where they pass over the beam's shaded side and lighten where they cross the lit top, and the beam ends carry a distinct lighter end-grain face. It sits on the floor plane in the same projection as the bricks, which the A-frame in 1 and 2 does not. The light falloff across the floor is also handled with real craft (shared by 1/2/4): bricks right under the figure at (400,520) blow out and lose their hatching, bricks at (650,720) still carry hatching and joints at lower value, and bricks at (200,800) go to near-silhouette. That reads as a lamp, not a vignette.
+
+WORST: 3
+WORST_WHY: There is no light source at all. The brief says a figure carries the only light and the picture darkens away from it; this frame is flat, uniformly lit corner to corner, so the one defining thing about the place is missing. The floor is a single brown speckle-noise fill with the same red-brown blotches repeating on a visible period (compare the blotch cluster at (200,60) with (200,190) in the original 384px image). The pool at (250,0)-(345,190) is a flat green honeycomb fill with a hard rectangular edge against the floor — no bank, no depth, no shore. The two chests at (65,10) and (65,55) show a top-down lid plus a side-view plank front; the barrels at (125,205) and (175,205) are side-view cylinders with a lid ellipse; the wall tiles are pure top-down; three projections in one frame. The moss splats at (30,65), (30,215), (370,160) are the same translucent blob stamped at different rotations. This is asset-pack placeholder grade.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The orange A-frame at (600,400)-(670,465) is sitting on the wall face band, not on the floor. Move it onto the floor plane below the band, or remove it. A prop cannot stand on a vertical wall face.
+- The A-frame and its two flanking orange lugs at (585,440) and (665,440) are three overlapping sprite fragments; the lugs read as a second prop poking out from behind the A. Draw it as one object with one silhouette.
+- The A-frame is drawn side-on (an "A" with legs) in a top-down scene. Redraw it from above: a horizontal beam with two leg pairs foreshortened under it.
+- Its colour is fully saturated orange with clean flat shading, while every stone around it is desaturated and textured. Knock its saturation down to match the sawhorse at (260,675), which sits in the palette correctly.
+- The brazier at (600,545) emits no light: its halo is ~30px and the wall band directly above it at (600,430) shows no warm bounce. Either give it a real light radius or extinguish it.
+- The wall band from (185,400) to (750,455) is a soft, blurred painterly smear next to crisp 1:1 pixel bricks and props. Re-render the band at the same pixel resolution as the floor — hard pixel edges, no sub-pixel gradients.
+- The band is the same value at (720,430) as at (250,430) despite the lamp being at (400,490). Apply the same distance falloff to the wall face as to the floor.
+- The floor cracks (e.g. the single-pixel line from (240,520) curving to (520,510)) run straight across mortar joints without deflecting or breaking. Either stop cracks at joints or make them wider, with chipped edges, so they read as fractures in individual stones rather than a scratch overlay.
+- The dark wall mass in the upper-left (0,70)-(440,390) and upper-right (560,70)-(750,390) has 100-150px polygonal cells (visible when brightened; the diagonal facet edge from (630,390) to (750,240) is one of them) against 40px floor bricks. That is a Voronoi noise fill at the wrong scale. Replace with a rubble/rock texture whose feature size is at or below brick size.
+- The standing stone at (280,590) has its lit face on its top-left edge and its shadow on the right, but the lamp is to its upper-right. Re-shade the prop to the scene light, or flip it.
+- The wall segment at (315,655)-(380,705) is a different tile from the band to its left (different colour, a miniature plank/shelf pattern below it) with a hard vertical seam on both sides, and the corner wedge at (380,650)-(410,720) is a grey/black diagonal stripe. Fix the tile set so the band continues through the corner with one texture.
+- The bricks at (630,520), (700,520) and (650,590) carry the same hatch-scribble mark. Add more variants or rotate/flip them so no two adjacent bricks share a mark.
+
+FLIP 2:
+- Same list as FLIP 1, and in addition:
+- The A-frame has been moved up ~15px relative to 1 so its lugs at (585,425) and (665,425) now sit on the band's dark rail line and the legs no longer reach the floor edge at y=455. It is now unambiguously floating on the wall. Put it on the floor.
+
+FLIP 3:
+- Add the light. The figure at (215,15) must be the source; darken the frame radially from that point so the far corner at (0,280) is near-black, matching the brief. Without this the frame is off-spec regardless of anything else.
+- Replace the floor noise fill with a drawn surface: flagstones, packed earth with visible tool marks, anything with structure at brick scale. The speckle repeats on a visible period and reads as a Photoshop noise filter.
+- Give the pool an edge: a darker rim tile, a lip, or a stone kerb, and break the rectangle at least at the corners. Replace the honeycomb fill; still water seen from above needs a value gradient toward the middle, not a tiled cell pattern.
+- Pick one projection. Redraw the chests at (65,10)/(65,55) and the barrels at (125,205)/(175,205) as true top-down (lid only, with a rim highlight), or redraw the walls with a consistent visible front face everywhere, not just the bottom band.
+- The moss blobs at (30,65), (30,215), (370,160), (320,10) are one stamp. Draw three or four distinct shapes and vary their opacity.
+- The orange plank at (30,130)-(38,165) in the left doorway is a side-view door in a top-down slot. Redraw it as a lintel or threshold seen from above.
+- The grey wall tiles have perfectly straight, even, single-pixel mortar lines; the mortar in a place "no one has cared for" should vary in width and break. Vary the joint thickness and add chipped corners.
+- The green orc figure has a cast shadow at (215,45) but nothing else in the frame casts one. Either everything gets a shadow or nothing does.
+
+FLIP 4:
+- There is a faint circular ring drawn on the wall block at roughly (575,470)-(615,510), directly above the brazier, that is not present in 1 or 2. It is a leftover radius or a mis-blended decal. Remove it.
+- The orange crate at (200,480)-(300,515) has no contact shadow and its saturation is well above everything around it. Add a one-to-two pixel dark contact line along its lower edge and desaturate it toward the timber bundle's tones.
+- The brazier at (600,545) emits no light: its halo is ~30px and the wall band directly above it at (600,430) shows no warm bounce. Either give it a real light radius or extinguish it.
+- The wall band from (185,400) to (750,455) is a soft, blurred painterly smear next to crisp 1:1 pixel bricks and props. Re-render the band at the same pixel resolution as the floor.
+- The band is the same value at (720,430) as at (250,430) despite the lamp being at (400,490). Apply the same distance falloff to the wall face as to the floor.
+- The floor cracks (single-pixel line from (240,520) to (520,510), and the one passing under the timber bundle at (330,600)) run straight across mortar joints without deflecting. Stop cracks at joints or draw them as chipped fractures within single stones.
+- The dark wall mass in the upper-left and upper-right has 100-150px polygonal cells against 40px floor bricks (the facet edge from (630,390) to (750,240) is visible when brightened). Replace the fill with a rock texture at or below brick scale.
+- The standing stone at (280,590) has its lit face on its top-left edge and its shadow on the right, but the lamp is to its upper-right. Re-shade to the scene light.
+- The wall segment at (315,655)-(380,705) is a different tile from the band to its left with hard vertical seams both sides, and the corner wedge at (380,650)-(410,720) is a diagonal grey/black stripe. Fix the tile set so the band runs through the corner with one texture.
+- The bricks at (630,520), (700,520) and (650,590) carry the same hatch-scribble mark. Add variants or flip them so adjacent bricks differ.
+
+Model: Claude Opus 5 (1M context)

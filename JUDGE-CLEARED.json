@@ -31,5 +31,18 @@
    1,
    4
   ]
+ },
+ {
+  "lane": "art/lambda-212",
+  "guard": "broken-judge",
+  "rounds_covered": [
+   1
+  ],
+  "ruled_by": "Rafe, JUDGE RULING — lane art/lambda-212, round 1, PR #216 (2026-09-13)",
+  "ruling": "Judge cleared. Three seats missed a plant no seat should have been asked to see. That's the plant's fault; re-draw nothing. Re-run the five-seat round on the built law with the plant set above, same frozen bar.",
+  "ruling_plant": "Retired as a control. It stays in the morgue as the walked record. A 12-px placement is my eye's fact on the phone, not a deck-scale plant.",
+  "ruling_new_plant": "The morgue lacks a grounding cull the seats can see. Draw one: lambda-in-the-face — the same Λ with its feet 16 px up the face, no foot line between the legs. That is the failure at a scale a seat catches. It is the round's grounding plant alongside the construction plants. Ruling 47 applies: the plant proves it can be caught before its round counts.",
+  "standing": "a plant whose distance from the build is below what a seat can resolve at deck scale is not a control. When a failure is caught by eye at a scale the seats can't see, the deck gets a coarse version of the same failure, and the fine fact becomes a derived assertion.",
+  "written": "2026-09-13"
  }
 ]

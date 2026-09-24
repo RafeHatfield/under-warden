@@ -49,11 +49,6 @@ public sealed class TileLayer
     /// </summary>
     public Dictionary<int, float> PropShift { get; } = new();
 
-    /// <summary>The wall cells whose CAP BAND is re-drawn over an against-wall prop's top, with
-    /// the z it must draw at (the prop's own, added later so it wins the tie). Consumed by
-    /// Tier1BoundaryWall when it lays the cap.</summary>
-    public Dictionary<(int X, int Y), int> CapBandCells { get; } = new();
-
     /// <summary>
     /// Feature overlay sprites keyed by grid position (X, Y).
     /// Covers chests (closed/open), signposts, and murals placed by EntityPlacer.PlaceFloorFeatures.
@@ -455,17 +450,24 @@ public sealed class DungeonRenderer
             }
         }
 
-        // ── #212: A PROP AGAINST A WALL SITS AT THE WALL'S FOOT, UNDER THE TOP BAND ──────────
+        // ── #212: A PROP AGAINST A WALL STANDS ON THE FLOOR AT THE REVEAL'S FOOT ─────────────
         //
-        // RULED-SHAPED by the cast-shadows walk (Rafe, 2026-09-13: "props sit against walls under
-        // the top band"). Before this, a prop one cell south of a wall stood a full cell away from
-        // the reveal — its base at its own cell's bottom edge, the wall's face beginning a cell
-        // north — and read as placed in the room rather than against anything. The face's foot
-        // IS the shared edge (§3: the reveal is the wall's south surface, rising from the cell
-        // boundary), so a prop against the wall has its base there. The shift is measured off the
-        // sprite's own bottom transparent rows, not typed. The wall's cap band is re-laid over the
-        // prop's top by Tier1BoundaryWall (CapBandCells) so the top surface stays in front:
-        // face < prop < cap band. Floor props only; a wall-top prop already sorts above its wall.
+        // LAW (Rafe, props walk, 2026-09-13): "a prop placed against a wall stands on the floor at
+        // the reveal's foot, in front of the face, and is never overdrawn by the cap."
+        //
+        // The first build of this put the SPRITE'S bottom row on the foot line and re-laid the
+        // cap's upper half over the prop's top. Walked, it failed: "feet land on the cap band, not
+        // below it; no reveal foot visible under it." Measured, the reason is §3.2's own geometry:
+        // a box prop's base is a parallelogram rising ½·depth up-right from the sprite's bottom
+        // edge (the occluder draws exactly that), so with the bottom row ON the foot the whole
+        // footprint lay over the FACE — the prop's feet were inside the wall, and the eye put the
+        // prop on top of it. The base lies on the FLOOR: its far edge meets the foot line and its
+        // near edge — the sprite's bottom — sits ½·depth south of it, on the floor cell, so the
+        // wall's foot shows between the legs. The depth is ReviewLighting.PropBaseDepth, the one
+        // number the occluder also uses. The shift is measured off the sprite's own bottom
+        // transparent rows, not typed. Nothing is laid over the prop: it draws in front of the
+        // face and in front of the cap, as a thing standing before a wall does. Floor props only;
+        // a wall-top prop already sorts above its wall.
         if (props != null)
         {
             for (int propIdx = 0; propIdx < props.Count; propIdx++)
@@ -494,7 +496,7 @@ public sealed class DungeonRenderer
                     if (last >= 0) margin = Mathf.Min(margin, (th - 1 - last) * (tileH / (float)th));
                 }
                 if (margin == float.MaxValue) margin = 0f;
-                float shift = tileH - margin;
+                float shift = tileH - margin - ReviewLighting.PropBaseRun(tileH);
                 foreach (var key in tileLayer.PropSprites.Keys)
                 {
                     if (key.PropIndex != propIdx) continue;
@@ -502,8 +504,6 @@ public sealed class DungeonRenderer
                     e.Sprite.Position += new Vector2(0, -shift);
                 }
                 tileLayer.PropShift[propIdx] = shift;
-                for (int dx = 0; dx < prop.FootprintW; dx++)
-                    tileLayer.CapBandCells[(prop.X + dx, prop.Y - 1)] = renderer.GetTileSortOrder(prop.X, prop.Y) + 2;
             }
         }
 

@@ -193,6 +193,36 @@ one edit, and it **loosens** the gate, so it is Rafe's to make.
 bar found wanting mid-run is held frozen, cleared honestly, and impeached in the same report —
 never re-tuned once the answer is visible. This section is that impeachment.
 
+### A plant must be resolvable at DECK SCALE — LAW (Rafe, 2026-09-13)
+
+> *"A plant whose distance from the build is below what a seat can resolve at deck scale is not
+> a control. When a failure is caught by eye at a scale the seats can't see, the deck gets a
+> coarse version of the same failure, and the fine fact becomes a derived assertion."*
+
+**The occasion.** Lane `art/lambda-212` r001: the deck's one grounding plant was the walked
+frame itself, culled by Rafe for a Λ-frame whose base parallelogram lay 11 px over the wall's
+face. The built law moved the sprite 12 px. Three of five seats neither flagged nor ranked last
+a frame that differed from the build by 12 px in a 750-px deck, and the round voided on the
+judge. The same trap had been named one round earlier for `jamb-hard-edge` (a 30-px defect,
+recorded and deliberately not dealt) and then walked into anyway because one seat had once
+flagged the Λ as a flip item — a flip is a seat's finding about a build; it is not evidence the
+seat would catch the same frame as a control against that build.
+
+**What the law does.** Two things, and both are required:
+
+1. **The deck gets a coarse version.** `lambda-on-the-cap` is retired as a control (it stays in
+   the morgue as the walked record) and `lambda-in-the-face` is DRAWN to Rafe's words — the same
+   Λ with its feet ~16 px up the face, no foot line between the legs — the same failure at a
+   scale a seat catches. Ruling 47 applies: it proves it can be caught before its round counts.
+2. **The fine fact becomes a derived assertion.** The 12 px do not disappear from the gate; they
+   move to the item exit (`docs/FRAME-CRITIC.json`): *the sprite's bottom row at foot + 12; zero
+   cap pixels over the lower half* — derived from the capture, never copied (bible §13.12). The
+   walk carries the rest.
+
+A drawn plant is a picture with a recorded provenance, not a generator: the frame is the built
+law's own, captured at the regime, with one placement edit that did not land, and the edit is
+in the entry's `source`.
+
 ### Plants are drawn PER AXIS
 
 **LAW (Rafe, 2026-09-03).** *"Per-axis morgue plants — tag entries by axis, assemble the plant to

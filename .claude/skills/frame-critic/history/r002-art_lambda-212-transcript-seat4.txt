@@ -1,0 +1,45 @@
+RANK: 2 > 4 > 3 > 1
+
+BEST: 2
+BEST_WHY: The floor is cut, not stamped. Blocks in the lit zone (roughly x 330–560, y 460–700) vary in width and height, each carries its own chisel hatching at a different angle and density, and seam weight changes along a single course — light mortar in the lit centre, dark in the periphery. The north wall face band (y 400–455) carries a salvaged timber lintel with driven pins at irregular spacing, which is the fiction drawn rather than described. The standing stone at (265–295, 540–630) has a strap and rivet at its base; the log bundle at (400–500, 590–640) has a rope binding that overlaps the timber correctly. The falloff goes cold blue-grey at the left edge (x 190–330) rather than just darker, so the periphery reads as stone under no light, not as a vignette.
+
+WORST: 1
+WORST_WHY: Every surface is a stamped tile with no per-instance variation. The wall-top slabs (left column x 0–55, right column x 340–384, bottom band y 215–265) are identical 48px rectangles with one mortar weight, differentiated only by the same moss decal stamped four times. The pool at (248–345, 0–192) is a flat green rectangle butted directly against the mud with a straight hard edge and no bank, lip or wet margin on any side. The floor is one mottle tile repeating. The wall tops are the brightest value in the frame, so the walls pull the eye and the play area recedes. It is clean and consistent, and looks like a tileset assembled in an editor.
+
+FLAGGED: 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The pool/floor boundary at x≈248 and y≈192 is a hard straight cut, green against brown; add a bank tile (dark wet mud or stone rim) on all three exposed sides.
+- Wall-top slabs are identical 48px rectangles at one seam weight; vary slab widths and seam depth along each run so a course doesn't read as a grid.
+- Wall tops (~150 luminance) are brighter than the floor; drop them below floor value or add the carried-light model so the play area is the brightest thing in the frame.
+- The moss decal at (25–50, 55–85), (350–380, 145–175), (15–40, 205–230) and (120–140, 215–235) is one shape; draw two more variants and let at least one break across a seam.
+- The floor mottle repeats as a single tile; add two variant tiles and more scatter than the one bone pile at (210,120).
+- There is no light falloff from the figure at (215,10) at all; if the game has one, it isn't in this frame.
+
+FLIP 2:
+- The fire pit at (575–625, 525–565) burns and lights nothing: floor 40px to its left measures brighter than 40px to its right, i.e. it only follows the figure's falloff. Give it a local light or put it out.
+- Wall-top surfaces (190–500 × 70–390, 570–750 × 70–390, 60–185 × 700–900) are a soft cloud-noise mottle at sub-pixel blur with straight polygon seams, sitting under a crisp per-pixel floor; redraw the wall-top texture at the floor's pixel density.
+- The room's west edge at x≈185 is a hard vertical cut from floor straight into wall-top mottle with no edge, shadow or corner; give it the same treatment the north face band gets.
+- The floor crack from (200,540) to (560,700) is a continuous 1px line that crosses block seams without deviating; step it at joints or terminate it inside blocks.
+- The bloom under the figure (380–460, 470–530) pushes the floor to near-white and loses the seams; clamp the peak.
+
+FLIP 3:
+- The pillar at (265–295, 550–620) is a three-tone orange box with no grain, edge wear or fixing; replace with a drawn prop at the level of the crate in the sibling frame.
+- The bench at (395–490, 595–625) is a flat orange slab with two legs and no plank lines or end grain; same fix.
+- Wall-top surfaces are soft cloud-noise at sub-pixel blur under a crisp floor; redraw at the floor's pixel density.
+- West edge at x≈185 is a hard cut from floor into wall-top mottle; add an edge treatment.
+- Floor crack crosses block seams as a continuous line; step it at joints.
+- Bloom under the figure washes out the seams at (380–460, 470–530); clamp the peak.
+
+FLIP 4:
+- The A-frame at (590–680, 405–460) sits across the north wall's top surface and its face band; a top-down prop cannot occupy the wall. Move it onto floor at y ≥ 455.
+- The X-frame at (215–300, 650–700) sits on the south wall line at the same y as the pillar stub at (310–370, 650–710), in the dark strip; confirm that strip is floor or move the prop up.
+- The fire pit at (575–625, 525–565) burns and casts no light; give it a local light or put it out.
+- Wall-top surfaces are soft cloud-noise at sub-pixel blur under a crisp floor; redraw at the floor's pixel density.
+- West edge at x≈185 is a hard cut from floor into wall-top mottle; add an edge treatment.
+- Floor crack crosses block seams as a continuous line; step it at joints.
+- Bloom under the figure washes out the seams at (380–460, 470–530); clamp the peak.
+
+Model: Claude Opus 5 (1M context)

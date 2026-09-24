@@ -1,0 +1,54 @@
+RANK: 2 > 1 > 3 > 4
+
+BEST: 2
+BEST_WHY: The A-frame brace at top-right (approx x 590–670, y 400–460) is the only large prop in any of the four frames that is actually seated on the surface it occupies: its feet stop at the lower edge of the wall band, and the two iron pins either side of it sit on the top rail of the band rather than mid-face, so it reads as pinned to the wall-top, not laid over the picture. The corner wedge at the wall turn (x ~510–535, y ~395–440) is a diagonal timber jammed into an inside corner — a repair nobody dressed, which is exactly the fiction, and it sits inside the corner rather than across it. The wall band itself along y ~405–455 has a dark timber rail, driven pins of unequal spacing (at x ~300, 390, 460, 585, 665, 720) and pale stone between, so the band reads as a repaired coping and not a stamped strip. Away from the hotspot (right third, x 550–750, y 480–800) the flagstones have per-stone hatching and joints of differing width, and the darkness falloff keeps the joints legible down to the bottom edge.
+
+WORST: 4
+WORST_WHY: There is no light falloff anywhere: the top-left wall tile and the bottom-right wall tile are the same value, the orc at (215, 5) carries nothing, and the frame reads as a full-bright tile map. The pool at x 250–345, y 0–190 is a hard-edged rectangle of a hexagonal water tile with no bank, no edge darkening and no shoreline — the water simply stops on a straight line against dirt. The dirt floor (x 55–345, y 0–215) is one speckle tile repeated; the same red-brown blotch cluster recurs on a 32 px period and is countable by eye. Wall tops and floor sit on the same plane: the gray tiles are flat squares with a 1 px joint and no face or drop shadow, so the wall at the bottom (y 215–265) has no height relative to the dirt above it. The green moss blobs at (30, 63), (20, 80), (30, 215), (363, 157), (363, 173) are the same semi-transparent stamp, some mirrored, laid over wall tops as if they were floor. The two barrels at (128, 200) and (175, 200) and the two chests at (60–95, 0–30 / 50–80) are drawn three-quarter with visible sides, on a strict top-down floor.
+
+FLAGGED: 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The A-frame at top-right (x 590–670, y 400–465): its two legs extend ~8 px below the bottom edge of the wall band onto the flagstone floor, and the two pins either side (x ~585 and ~665, y ~430) sit mid-band instead of on the top rail; raise the prop so its feet stop at the band edge and the pins land on the rail, or move it fully onto the floor with a contact shadow.
+- The X-brace at bottom-left (x 215–300, y 650–705) straddles the last row of lit flagstones and the dark hatched step below it; its right-hand board hangs over the drop. Place it wholly on one surface and give it a contact shadow.
+- The hatched dark strip at x 310–400, y 650–700 reads as neither wall face nor floor; give it a face (darker top edge, lighter lower edge) or make it floor.
+- The 1 px black crack polylines (the long one from ~(230, 520) to ~(520, 470), the branching one at ~(330, 560–640)) cross six or more stones without deflecting or stopping at any joint, so they read as a vector overlay on top of the floor; terminate cracks at joints, let them follow joints for a stone or two, and add a 1 px lighter edge on one side so they read as cut.
+- The standing pillar at x 265–295, y 535–640 is a tall side-elevation shaft with a cap shadow, in a top-down frame; replace with a top-down cap (square, ~32 px) plus a short cast shadow, or if it is meant as a fallen/leaning stone, draw its footprint under it.
+- The brazier at (598, 545): the fire is coarse pixel art sitting on a smooth radial-gradient disc; draw the dish on the same pixel grid as the fire and give it a rim.
+- Under and around the figure (x 380–470, y 480–570) the flagstones go to flat cream and the joints vanish; cap the light's peak so joint lines survive at maximum intensity.
+- The figure sprite is saturated cyan/orange at a coarser pixel scale than the floor, on a desaturated ochre environment; either regrade its palette toward the scene or run the scene lighting tint over the sprite.
+
+FLIP 2:
+- The X-brace at bottom-left (x 215–300, y 650–705) straddles the last lit flagstone row and the dark hatched step; its right board overhangs the drop. Put it on one surface with a contact shadow.
+- The A-frame (x 590–670, y 400–455) and the corner wedge (x 510–535, y 395–440) are flat orange with no shadow cast onto the band they sit on; add a 1–2 px contact shadow along their lower edges.
+- The hatched dark strip at x 310–400, y 650–700 is an undefined surface; give it a face or make it floor.
+- The 1 px black crack polylines (from ~(230, 520) to ~(520, 470); the branch at ~(330, 560–640)) cross stones without stopping at joints; terminate at joints and add a lighter edge on one side.
+- The standing pillar at x 265–295, y 535–640 is drawn side-on in a top-down frame; replace with a top-down cap plus cast shadow.
+- The brazier at (598, 545): pixelate the gradient dish to the fire's grid and give it a rim.
+- Hotspot at x 380–470, y 480–570 blows out to flat cream; cap peak intensity so joints remain visible.
+- The figure sprite's palette and pixel scale do not match the environment; regrade it or tint it with scene lighting.
+
+FLIP 3:
+- Remove the ghost ring on the floor at x 560–620, y 455–505 (directly above the brazier, just below the wall band): a faint, low-alpha circular outline with brick hatching showing through it, where frame 1 has a solid stone at the same spot. It reads as a mis-composited or unlit second brazier dish.
+- The crate at x 195–300, y 470–520 shows a front face (three-quarter view) and has no contact shadow on the floor; either draw its top only or add the shadow so it sits down.
+- The rope-tied timber bundle at x 390–500, y 590–640 has no contact shadow; add one along its lower edge.
+- The hatched dark strip at x 310–400, y 650–700 is an undefined surface; give it a face or make it floor.
+- The 1 px black crack polylines (from ~(230, 520) to ~(520, 470); the branch at ~(330, 560–640)) cross stones without stopping at joints; terminate at joints and add a lighter edge on one side.
+- The standing pillar at x 265–295, y 535–640 is drawn side-on in a top-down frame; replace with a top-down cap plus cast shadow.
+- The brazier at (598, 545): pixelate the gradient dish to the fire's grid and give it a rim.
+- Hotspot at x 380–470, y 480–570 blows out to flat cream; cap peak intensity so joints remain visible.
+- The figure sprite's palette and pixel scale do not match the environment; regrade it or tint it with scene lighting.
+
+FLIP 4:
+- Add the light: radial falloff from the orc at (215, 5) so the far corners (bottom-left wall at (0, 280), bottom-right at (384, 280)) go to near-black; currently every tile is the same value edge to edge.
+- Give walls height: add a face row (darker, 8–12 px) under every wall-top tile that borders floor, plus a 2–3 px drop shadow on the floor; currently the wall at y 215–265 and the dirt above it sit on the same plane.
+- Break the dirt tile repeat: the red-brown blotch cluster on the floor (x 55–345, y 0–215) recurs every 32 px; author at least four variants and rotate them.
+- The pool (x 250–345, y 0–190) is a hard-edged rectangle with no bank; add an edge tile (dark wet rim, 4–6 px) and a lighter shoreline on the dirt side, and stop the hex water pattern from tiling in a visible grid.
+- The moss decals at (30, 63), (20, 80), (30, 215), (363, 157), (363, 173) are one semi-transparent stamp, some mirrored, laid over wall tops; bake moss into tile variants that respect the joint lines instead of floating over them.
+- The barrels at (128, 200) and (175, 200) show rim and staves in three-quarter view; the chests at x 60–95 (y 0–30 and 50–80) show a front face and a separate wooden base drawn under them. Redraw as top-down (circular barrel tops, chest lids) to match the floor projection.
+- The left recess at x 10–55, y 120–165 with the orange plank at (30, 135): the plank reads as a fence post in a black hole; define it as a doorway with a threshold and a face.
+- The 1 px gray joint grid on the stone tiles is uniform across every tile; vary joint width and add per-stone value variation so the walls read as laid, not gridded.
+
+Model: Opus 5 (1M context)

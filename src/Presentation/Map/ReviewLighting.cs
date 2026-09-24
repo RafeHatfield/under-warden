@@ -169,6 +169,13 @@ public sealed class ReviewLighting
 
     /// <summary>Canvas light-mask bit for props: lit by every lamp, shadowed by none.</summary>
     public const int PropLightMask = 2;
+
+    /// <summary>A box prop's PLAN DEPTH as a fraction of the cell (§3.2 footprint). One number,
+    /// two consumers: the footprint occluder's base parallelogram, and the against-wall placement
+    /// that puts that parallelogram's FAR edge on the reveal's foot (#212, Rafe 2026-09-13). The
+    /// screen rise of the base is ½ of it (k = ½ per §3.2).</summary>
+    public const float PropBaseDepth = 0.35f;
+    public static float PropBaseRun(float cellH) => 0.5f * PropBaseDepth * cellH;
     private const int GroundLightMask = 1;
 
     private readonly List<PointLight2D> _lights = new();
@@ -312,8 +319,7 @@ public sealed class ReviewLighting
                 float left = x0 * scaleX;
                 float right = (p.FootprintW - 1) * cellW + (x1 + 1) * scaleX;
                 float bottom = (p.FootprintH - 1) * cellH + (yb + 1) * scaleY;
-                float depth = 0.35f * cellH;                  // plan depth; k = ½ per §3.2
-                float run = 0.5f * depth;
+                float run = PropBaseRun(cellH);               // plan depth 0.35 cell; k = ½ per §3.2
                 pts = new[]
                 {
                     new Vector2(left, bottom), new Vector2(right, bottom),

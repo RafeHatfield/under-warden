@@ -1,0 +1,40 @@
+RANK: 2 > 3 > 1 > 4
+
+BEST: 2
+BEST_WHY: The props are the only ones in the set that are built rather than placed. The sawhorse at top-right (~620,390) has a lit top face, a darker underside on each leg and a cross-brace that reads as timber; the crossed-timber pile at bottom-left (~260,670) has the same two-value shading and its shadow falls on the floor in the direction away from the figure; the standing stone at (~280,585) has a distinct darker base so it stands on the floor rather than sitting in it. Under that, the stone floor rows in the lit band (~200–500, 460–640) have joints that shift horizontally row to row, so the courses read as laid rather than stamped, and the light falloff from the figure into the lower-left corridor (~60–200, 650–780) fades in steps that follow the stone courses, not a smooth radial gradient.
+
+WORST: 4
+WORST_WHY: There is no light model at all. The brief says the picture gets darker away from the figure; here the figure at top (~225,10) is at the frame edge and the far corner (~0,280) is exactly as bright as the tile next to him. The pool at right (~250–330, 0–190) is a flat green rectangle with a one-pixel bevel edge and four identical pale blobs on it — a filled shape, not water. The dirt floor (~60–250, 0–190) is uniform random speckle with no direction, no wear paths, no relation to where the crates and barrels stand. The walls are one repeated brick tile with a uniform light edge and no variation across the entire top and left runs. It looks like a tileset demo laid out in an editor, not a room.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The two orange props — the upright block at (~280,585) and the bench at (~440,610) — are flat saturated orange fills with no grain, no edge shading and no cast shadow; they read as placeholder geometry. Replace with props at the shading level of the sawhorse in frame 2 (two-value faces, darker underside, floor shadow).
+- The chest (~660,480) and shelf (~725,485) sit at full saturation in a zone the light falloff says should be at roughly half value; darken them with the floor they sit on.
+- The crack line that starts on the wall band at (~170,540), crosses the floor and continues through the doorway at (~340,680) is a single unbroken line over three different surfaces; break it at every surface change and offset the segments so it stops reading as a decal laid over the whole map.
+- The upper-left wall mass (~190–440, 70–390) and the upper-right mass (~570–750, 70–400) are large flat fills with two or three cracks each and no course structure; either give them the same block courses as the visible walls at reduced value, or darken them fully so they read as unlit rather than unfinished.
+
+FLIP 2:
+- The lit floor right of the brazier (~560–750, 560–700) climbs to near-white; the joints between blocks at (~650,620) almost vanish. Cap the combined light so the brightest floor value stays clearly below the brightest highlight on the figure.
+- The brazier at (~600,545) is a second light source; the brief says the figure carries the only light. Either remove the brazier's emission and let it be an unlit prop, or make it a dim ember that lights no more than the tile it sits on.
+- Same crack-decal problem as frame 1: the crack from (~170,540) to (~400,700) crosses wall band, floor and doorway as one line; break and offset it per surface.
+- Same flat upper wall masses as frame 1 (~190–440, 70–390 and ~570–750, 70–400); give them course structure at low value or push them fully dark.
+
+FLIP 3:
+- The brazier's glow renders as a distinct pale disc centred at (~590,485) that sits on top of the wall band — the circular edge of the light sprite is visible against the rail and posts. Clip the glow to the floor, or bake it into the floor tiles under the brazier so no sprite edge is visible.
+- The crate at (~245,495) is a flat orange slab with three parallel lines for planks and no shading on its sides; bring it up to the two-value shading of the log bundle at (~440,620), which is the correct standard in this frame.
+- Same second-light-source issue as frame 2: the brazier at (~600,545) lights the whole right half; reduce it to an ember or remove its emission.
+- Same crack-decal problem: the unbroken crack from (~170,540) through the doorway at (~340,680); break and offset per surface.
+- Same flat upper wall masses (~190–440, 70–390 and ~570–750, 70–400).
+
+FLIP 4:
+- Add the light model: a falloff from the figure at (~225,10) so the far corner at (~0,280) is meaningfully darker than the tile beside him. Without it the frame contradicts the stated contract of every other frame.
+- Replace the pool (~250–330, 0–190): it needs an edge that is not a straight bevel — a stone lip or a broken ground edge — and a surface with at least two values so it reads as liquid rather than a filled rectangle. Remove the four identical pale blobs or vary their size and value.
+- Replace the dirt floor noise (~60–250, 0–190) with directional wear: a darker worn path from the doorway at (~30,140) toward the barrels at (~130,200) and (~175,200), and a clean margin along the walls.
+- The wall tile repeats identically along the full top run (~0–250, 0–20) and the bottom run (~0–384, 210–288); introduce at least two brick variants and one damaged/repaired variant so a run of six tiles does not repeat verbatim.
+- The figure at (~225,10) is cut by the frame edge and is the only thing with saturated green; either pull the camera so he is inside the frame, or accept that a paying player never sees the light-bearer half off-screen.
+- The small item at (~225,120) — a scatter of white pixels — reads as noise, not an object; give it a silhouette (bones, an arrow) with one dark outline value.
+
+Model used: Claude Opus 5.

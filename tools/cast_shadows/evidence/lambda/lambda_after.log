@@ -1,4 +1,4 @@
-/Applications/Godot_mono.app/Contents/MacOS/Godot --path /Users/rafehatfield/development/c-yarl/.claude/worktrees/queue --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/combined.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 1
+/Applications/Godot_mono.app/Contents/MacOS/Godot --path /Users/rafehatfield/development/c-yarl/.claude/worktrees/queue --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/lambda_after.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 0
 
 Godot Engine v4.7.stable.mono.official.5b4e0cb0f - https://godotengine.org
 Metal 4.0 - Forward Mobile - Using Device #0: Apple - Apple M1 (Apple7)
@@ -6,7 +6,7 @@ Metal 4.0 - Forward Mobile - Using Device #0: Apple - Apple M1 (Apple7)
 Catacombs of YARL — loading...
 [DIAG] Logging to: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/Catacombs of YARL/diag.log
 [DIAG] Structured log: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/Catacombs of YARL/diag_structured.jsonl
-[DIAG 00000 F0 T0.779] === Session started ===
+[DIAG 00000 F0 T0.809] === Session started ===
 [Main] Persistence loaded — 6 runs ever.
 [Main] Loading tileset: 16bit_fantasy
 [Main] Tileset loaded: Oryx 16-Bit Fantasy (48px, 2 frames)
@@ -113,23 +113,23 @@ empt
 # Substituted 
 [Main] Memo registry loaded.
 [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
-[DIAG 00001 F0 T1.297] [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
+[DIAG 00001 F0 T1.505] [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
 [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
-[DIAG 00002 F0 T1.300] [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
+[DIAG 00002 F0 T1.514] [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
 [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
-[DIAG 00003 F0 T1.300] [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
+[DIAG 00003 F0 T1.514] [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
 [Tier0] map=17x21 player=(6,12) carve_rects=7
-[DIAG 00004 F0 T1.300] [Tier0] map=17x21 player=(6,12) carve_rects=7
+[DIAG 00004 F0 T1.514] [Tier0] map=17x21 player=(6,12) carve_rects=7
 [Tier0] junction=NO
-[DIAG 00005 F0 T1.300] [Tier0] junction=NO
+[DIAG 00005 F0 T1.514] [Tier0] junction=NO
 [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
-[DIAG 00006 F0 T1.300] [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
+[DIAG 00006 F0 T1.514] [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
 [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
-[DIAG 00007 F0 T1.300] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
+[DIAG 00007 F0 T1.515] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
 [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
-[DIAG 00008 F0 T1.301] [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
+[DIAG 00008 F0 T1.515] [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
 [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
-[DIAG 00009 F0 T1.303] [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
+[DIAG 00009 F0 T1.518] [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
 [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
 [Tier1] channel map (L/M/R channel, F trodden chokepoint, x neglected, . floor, # solid)
 [Tier1]   #################
@@ -153,7 +153,7 @@ empt
 [Tier1]   ###xxx.......x###
 [Tier1]   ###xxxxxxxxxxx###
 [Tier1]   #################
-[DIAG 00010 F0 T1.317] [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
+[DIAG 00010 F0 T1.534] [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
 [Tier1] channel map (L/M/R channel, F trodden chokepoint, x neglected, . floor, # solid)
 [Tier1]   #################
 [Tier1]   #################
@@ -177,7 +177,7 @@ empt
 [Tier1]   ###xxxxxxxxxxx###
 [Tier1]   #################
 [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
-[DIAG 00011 F0 T1.317] [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
+[DIAG 00011 F0 T1.534] [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
 [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
 [Tier1] traffic field (space=unwalked .. @=busiest)
 [Tier1]   #################
@@ -246,7 +246,7 @@ empt
 [Tier1]   ###           ###
 [Tier1]   #################
 [Tier1] axis coherence: 42 of 50 adjacent on-route pairs agree (84%) - round 21 measured 34% on the per-tile field
-[DIAG 00012 F0 T2.893] [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
+[DIAG 00012 F0 T3.111] [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
 [Tier1] traffic field (space=unwalked .. @=busiest)
 [Tier1]   #################
 [Tier1]   #################
@@ -336,7 +336,7 @@ empt
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
-[DIAG 00013 F0 T2.992] [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
+[DIAG 00013 F0 T3.226] [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
 [Tier1]   .................
 [Tier1]   ...11111111100...
 [Tier1]   .................
@@ -359,28 +359,28 @@ empt
 [Tier1]   .................
 [Tier1]   .................
 [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) east_faces=5(ground-mask) age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
-[DIAG 00014 F0 T2.994] [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) east_faces=5(ground-mask) age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
-[Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
-[DIAG 00015 F0 T3.004] [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
+[DIAG 00014 F0 T3.227] [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) east_faces=5(ground-mask) age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
+[Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=off (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
+[DIAG 00015 F0 T3.238] [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=off (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
 [Tier0] review_build_marker=none (CLI flags)
-[DIAG 00016 F0 T3.006] [Tier0] review_build_marker=none (CLI flags)
+[DIAG 00016 F0 T3.240] [Tier0] review_build_marker=none (CLI flags)
 [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
-[DIAG 00017 F0 T3.007] [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
+[DIAG 00017 F0 T3.241] [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
 [Main] Visible tile rect: (0,4)-(11,19)
 [Main] floor_worn (3001) tiles: 1 rendered in the authored room, 1 in frame: (11,15)
-[Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7561, informational)  - floor beside the station, well inside the radius
-[DIAG 00018 F5 T3.094] [Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7561, informational)  - floor beside the station, well inside the radius
-[Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2822, informational)  - the near corner of the room, still lit — and clear of every prop footprint
-[DIAG 00019 F5 T3.094] [Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2822, informational)  - the near corner of the room, still lit — and clear of every prop footprint
-[Tier1] legibility(9,15) expect=lit  lum=0.3728 at px(599,770) bound=0.1004 OK  (ratio=0.4354, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
-[DIAG 00020 F5 T3.095] [Tier1] legibility(9,15) expect=lit  lum=0.3728 at px(599,770) bound=0.1004 OK  (ratio=0.4354, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
-[Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0685, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
-[DIAG 00021 F5 T3.095] [Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0685, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
-[Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0831, informational)  - up the corridor, beyond the radius
-[DIAG 00022 F5 T3.095] [Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0831, informational)  - up the corridor, beyond the radius
-[Tier1] floor-legibility probe: 5 declared points, reference lum=0.8562 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
-[DIAG 00023 F5 T3.095] [Tier1] floor-legibility probe: 5 declared points, reference lum=0.8562 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
-[Main] Capture written: tools/tier1_floors/evidence/combined.png
+[Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7573, informational)  - floor beside the station, well inside the radius
+[DIAG 00018 F5 T3.341] [Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7573, informational)  - floor beside the station, well inside the radius
+[Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2827, informational)  - the near corner of the room, still lit — and clear of every prop footprint
+[DIAG 00019 F5 T3.341] [Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2827, informational)  - the near corner of the room, still lit — and clear of every prop footprint
+[Tier1] legibility(9,15) expect=lit  lum=0.3679 at px(599,770) bound=0.1004 OK  (ratio=0.4304, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
+[DIAG 00020 F5 T3.341] [Tier1] legibility(9,15) expect=lit  lum=0.3679 at px(599,770) bound=0.1004 OK  (ratio=0.4304, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
+[Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0686, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
+[DIAG 00021 F5 T3.341] [Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0686, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
+[Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0833, informational)  - up the corridor, beyond the radius
+[DIAG 00022 F5 T3.341] [Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0833, informational)  - up the corridor, beyond the radius
+[Tier1] floor-legibility probe: 5 declared points, reference lum=0.8548 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
+[DIAG 00023 F5 T3.341] [Tier1] floor-legibility probe: 5 declared points, reference lum=0.8548 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
+[Main] Capture written: tools/tier1_floors/evidence/lambda_after.png
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.

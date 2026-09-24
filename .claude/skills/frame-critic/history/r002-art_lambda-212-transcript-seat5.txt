@@ -1,0 +1,44 @@
+RANK: 1 > 4 > 3 > 2
+
+BEST: 1
+BEST_WHY: The wall run across the top of the room (y≈385–455) is built, not stamped: a cap course of worn ochre stone, then a driven-timber lintel with separate vertical posts at x≈390, 460, 585, 690 whose ends sit at slightly different heights, then a dark underside before the floor begins — three planes with their own value each. The freestanding pillar at (265–300, 535–630) has a lit top face, a shadowed flank, and a rope band with a pin at y≈600 that reads as a repair, which is exactly the fiction. The brazier at (600,545) throws its own halo that sits on top of the figure's falloff rather than replacing it, so the two light sources add. The floor blocks at the light's edge (x≈190–260) drop cleanly from warm to blue-grey without banding. Of the three near-identical frames, this is the one where the misplaced prop is on a single plane and the palest.
+
+WORST: 2
+WORST_WHY: Everything is at one light level — there is no falloff from the orc at (218,15), so the frame has no depth and no reason for the figure to exist. The pool at (250–345, 0–190) is a flat rectangle of honeycomb hex tiling with a hard straight border against dirt; no bank, no darkening at the edge, no shore — it reads as a chainmail texture painted into a box. The moss decal is the same translucent blob stamped at (25–45, 55–80), (15–45, 200–230) and (350–380, 150–175). The two barrels at (115–145, 195–215) and (160–190, 195–215) are pixel-identical copies side by side, as are the two chest stacks at (60–95, 5–40) and (60–95, 45–80). The dirt floor is one red-brown speckle noise at uniform density from wall to wall, with no wear at the door or around the barrels. It is coherent and nothing is broken, but it is the free tileset.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The A-frame sawhorse at (585–690, 375–420) is sitting on the wall's top surface, above the timber lintel. Move it down onto the floor (e.g. left of the brazier at y≈560) or remove it.
+- The crossed timbers at (215–305, 650–700) straddle the bevelled edge of the raised slab at bottom-left — half on the slab top, half hanging over the bevel. Shift them ~40px right or up so both pieces sit on one plane.
+- Both timber props are pure saturated orange in three flat tones with a 1px outline; nothing else in the frame is that saturated, and neither is affected by the falloff. Pull them to the muted ochre of the lintel timber at (200–750, 430–455) and multiply them by the light so the sawhorse in the dim upper-right sits at the same value as the wall cap beneath it.
+- The scratch hatching on the floor blocks — e.g. the block right of the brazier at (620–700, 470–530) and the block under the figure at (300–360, 470–530) — is dense random scribble at uniform density and reads as a scratches-overlay filter. Replace with fewer deliberate marks: corner chips, one or two tool strokes, most blocks left plain.
+- The pale block at (215–260, 480–515) carries a smeared horizontal streak pattern that looks like a blurred glyph; clean it to plain stone.
+- The figure at (390–430, 465–515) — cyan hair, clean JRPG line, round shield — is the only saturated cyan in the frame and is rendered at a brighter, cleaner register than anything around it. Bring its palette down to the scene's range or replace with a sprite drawn in the same worn, low-saturation language as the pillar.
+
+FLIP 3:
+- The A-frame at (580–680, 400–465) spans three planes: its top is on the wall cap, its middle crosses the timber lintel, and its legs come down onto the floor edge. Move it wholly onto the floor.
+- This version of the prop is darker and more saturated than the one in the sibling frame, with a heavier outline, and is fully lit in a zone that is otherwise in shadow. Desaturate to the lintel's ochre and apply the falloff.
+- The crossed timbers at (215–305, 650–700) straddle the slab bevel at bottom-left; shift them onto one plane.
+- Same floor hatching, smeared block at (215–260, 480–515), and figure-palette issues as frame 1.
+
+FLIP 4:
+- There is a ghost ring in the floor at (565–625, 460–520), directly above the brazier — a faint circular outline where the sibling frames have a solid stone block. It looks like a removed brazier or an unerased decal. Restore the block.
+- The plank crate at (185–305, 470–520) is full-brightness saturated orange sitting at the shadow edge of the room; the floor beneath it is blue-grey. Multiply it by the falloff so its left end matches the value of the block under it, and desaturate toward the lintel timber.
+- The roped bundle at (380–500, 590–640) is in the right place and the rope lashing is on-fiction, but it is the same flat three-tone orange; bring it into the scene palette and give it the same grain as the lintel timber so it reads as salvaged rather than fresh-sawn.
+- The bevels on the bottom-left recess at (300–420, 640–720) that exist in the sibling frames are gone here, leaving a dark rectangle in the wall with no edge treatment on either side; either restore the bevels or give the opening a lintel/sill.
+- Same floor hatching and figure-palette issues as frame 1.
+
+FLIP 2:
+- Render the figure's light: everything from the orc at (218,15) outward is at one value. The far corners at (0,280) and (384,280) should be several stops darker than the dirt beside the orc.
+- Replace the pool at (250–345, 0–190): the honeycomb hex tiling reads as a grid overlay, not water. Give it a darker band along the dirt edge, break the straight border with a bank tile, and use a surface pattern that doesn't repeat at 8px.
+- The moss blob is one decal stamped three times at (25–45, 55–80), (15–45, 200–230), (350–380, 150–175); draw at least two more variants and never place the same one twice in view.
+- The barrels at (115–145, 195–215) and (160–190, 195–215) are identical; vary one (rotate the seam, open the lid, tip it).
+- The chest-on-crate stacks at (60–95, 5–40) and (60–95, 45–80) are identical; vary one or remove it.
+- The dirt floor is one speckle noise at uniform density; add wear lanes from the west door at (25–40, 130–160) to the barrels and a clean strip along the wall bases.
+- The wall face row at (0–384, 265–288) is a flat repeated brick tile with no shadow line where it meets the wall top at y≈265; add a 1–2px dark edge and a broken highlight on the top course.
+- The bone scatter at (210–235, 115–130) is a single tiny sprite; either scale it to the barrel's pixel density or remove it.
+
+Model: Claude Opus 5 (1M context)

@@ -1,0 +1,51 @@
+RANK: 3 > 2 > 4 > 1
+
+BEST: 3
+BEST_WHY: The floor in 3 (the room, roughly x 180–750, y 455–720) is the best-made surface in the deck: the block joints are irregular in width and darkness, individual blocks carry their own scratch/pit marks that differ block to block, and the long crack running from the left wall down under the figure to the right crosses joints without repeating, so the floor reads as laid stone rather than a stamped tile. The lower wall face (the beam band at y ≈ 425–455) carries driven pins and a rope run with uneven spacing, which is the one place the "orcs repair with pins and rope" fiction actually shows up in the art. Of the three frames sharing this base, 3 is the only one where every prop (crate top-left, pillar, roped log bundle, fire) actually sits on floor, and the log bundle's rope binding is the one prop in the deck with a specific, drawn detail rather than a flat fill.
+
+WORST: 1
+WORST_WHY: Nothing on the floor of 1 is finished. The tall block at x 265–300, y 550–620 and the bench at x 395–490, y 595–630 are single-hue orange prisms with one lighter top face and no grain, joint, wear or shading from the figure's light — they look like untextured 3D primitives dropped in as placeholders. Worse, the chest at x 640–690, y 465–505 and the shelf at x 705–750, y 470–510 are drawn at full saturation and full brightness while the floor around them is near-black: the props are not going through the same lighting pass as the floor, so they float on top of the darkness. The barrel at x 585–615, y 590–630 is a third pixel style again (outlined, chunky) at a different density from both the floor and the chest.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Put the chest (x 640–690, y 465–505) and shelf (x 705–750, y 470–510) through the same light-falloff multiply as the floor; at their distance from the figure they should sit at the floor's dark-grey value, not full orange.
+- Replace the orange block (x 265–300, y 550–620) and bench (x 395–490, y 595–630) with textured props: visible wood grain or stone joints, a darker side face, and a lit-side/shadow-side split that points toward the figure.
+- Pick one pixel density and outline convention for all props; the chest/shelf are outlined and chunky, the barrel is outlined at a different scale, the orange blocks have no outline and are smooth. Redraw to match the floor's density.
+- The top wall band (y ≈ 390–455) is lit warm all the way to x 750 while the floor directly below it at x 700 is dark; apply the figure's falloff to the wall so both surfaces darken at the same rate.
+- The upper-left darkness (x 100–340, y 150–390) shows a straight diagonal edge and hard rectangular corners from the visibility polygon; feather or dither those edges so the shadow mask does not read as geometry.
+- The wall-top fill (the mottled brown at y 390–425 and the lower band at y 650–700) is a noise texture with no structure; draw it as rubble/packed earth with discernible pieces so it does not read as a generated fill.
+- Draw the vertical corridor floor (x 440–500, y 70–400) in the same block-and-joint language as the room floor; currently it is a plain grey band with one crack, a different material with no explanation.
+
+FLIP 2:
+- Move the sawhorse (x 580–680, y 360–410) off the wall top; it currently rests on the mottled wall-cap band, not on any floor.
+- Move the X-frame (x 220–300, y 650–705) onto floor; it is drawn entirely on the lower wall's cap surface.
+- Replace the cream pillar (x 265–300, y 535–630) with a textured prop: it is a flat pale prism whose only detail is the strap at the base, and its front face is taller than the top-down view would show — either draw it top-down (mostly cap) or give it stone joints and a shadow side.
+- The fire at x 578–625, y 525–565 is drawn at roughly twice the pixel size of the floor beneath it; redraw at the floor's density.
+- The fire's light is a flat pale disc with a hard edge (visible ring at r ≈ 30 px); give it a falloff gradient that matches the figure's light.
+- The warm wash on the right half (x 450–750, y 460–720) has no falloff at all — floor value at x 720 equals floor value at x 500; restore the darkening with distance so the right side does not read as bleached.
+- Same shared-base items as 1: wall band lit independently of the figure; hard visibility-polygon edges in the upper-left dark; noise-fill wall tops; corridor floor in a different material.
+
+FLIP 4:
+- Implement the light falloff: the frame has no darkening with distance from the orc (top centre, x 210–235, y 0–25); the far bottom-left corner is the same value as the tile under the figure. This contradicts the stated premise of the picture.
+- Give the pool (x 248–343, y 0–192) edge tiles: it is a green rectangle cut hard along the tile grid with no bank, lip, or transition against the dirt on its left and bottom, and the top edge simply runs off frame.
+- The pool fill is a hexagonal pattern on a square grid, and the lily pads (bright green, e.g. x 320–330, y 15–25) are the most saturated thing in the frame; desaturate and darken to sit in the same value range as the dirt and walls.
+- The dirt floor (x 55–248, y 0–215) is a single repeating red-speckle noise texture; add joints, packed-earth structure, or wear paths so it does not read as a generated fill.
+- The two yellow rectangles at x 65–97, y 0–22 and y 48–70 with brown slatted bases do not read as anything specific at play size; redraw as an identifiable object (crate, cot, or chest) with a distinct top face.
+- The grey wall tops are one identical tile repeated (e.g. x 0–55, y 0–110 and x 343–384, y 0–192) with only slime splats for variation; add joint variation, chipped corners, or repair marks so the walls show the four hundred years of use the fiction describes.
+- The door at x 27–36, y 128–160 is a bright orange plank in a dark slot with no frame, hinge, or wear; draw it in the same value range as the wall it sits in.
+- The white scatter at x 208–235, y 115–130 (bone fragments or debris) is a handful of single pixels with no shape; either draw identifiable pieces or remove it.
+
+FLIP 3:
+- The crate at x 190–300, y 475–520 is a flat orange box with a lighter top and no grain, nails, or shadow side; texture it and light it from the figure.
+- The pillar at x 265–300, y 535–630 is the same pale prism as in 2; draw it top-down (mostly cap) or give it stone joints and a shadow side, and vary it from the crate's material.
+- The log bundle at x 380–500, y 590–640 is drawn in 3/4 view (visible log ends and side faces) on a straight-down floor; redraw it from above so the perspective matches the floor and walls.
+- The fire at x 578–625, y 525–565 is at roughly twice the pixel density of the floor; redraw at the floor's density and replace the hard-edged pale disc with a gradient.
+- The right half of the room (x 450–750, y 460–720) has no falloff; darken with distance from the figure so the fire does not bleach the whole east side.
+- The top wall band (y ≈ 390–455) is lit uniformly to x 750 while the corridor and floor around it are dark; apply the figure's falloff to the wall.
+- Feather or dither the visibility-polygon edges in the upper-left dark (x 100–340, y 150–390).
+- Replace the noise-fill wall-top texture with drawn rubble/packed earth, and draw the vertical corridor floor (x 440–500, y 70–400) in the same block-joint language as the room.
+
+Model: Opus 5 (1M context)

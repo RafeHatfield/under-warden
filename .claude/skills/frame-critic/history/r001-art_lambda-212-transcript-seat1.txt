@@ -1,0 +1,60 @@
+RANK: 4 > 2 > 3 > 1
+
+BEST: 4
+BEST_WHY: The floor masonry is the strongest thing in the deck and 4 carries it without the placement fault that 3 has. Under and right of the figure (x≈430–700, y≈480–640) the blocks run in courses of unequal length — a long block at (600–700, 590–630) sits over two short ones — and the joints are drawn as dark 2px stubs that stop and restart rather than a continuous grid, so the floor reads as laid, not stamped. The pillar at (265–300, 540–640) has a pale top face, a darker front face, and a rope band at its foot that sits on the front face, not floating over it. The A-frame brace at (580–680, 400–455) has its feet on the wall base line and both pairs of flanking pins sit on the rail at the same height. The corridor-corner wedge at (505–540, 390–440) is a lit timber board with a bright top edge that continues the rail, so it reads as a leaning plank instead of a blank diagonal.
+
+WORST: 1
+WORST_WHY: Nothing in it is lit. The figure at (205–245, 0–30) carries no light; the dirt at the top-left and the dirt at the bottom-right are the same value. The grey wall-top tiles (e.g. the column at x 0–70, y 0–150 and the run along y 190–240) are identical 24px stamps with a 1px seam grid and no bevel, shadow or edge against the water or dirt beside them, so they read as floor, not as the top of something with height. The water at (250–380, 0–190) is a flat teal fill with a hexagon-lattice pattern repeated edge to edge at constant value — a screen-fill, not a surface. The moss at (25–60, 65–100) and (200–235, 75–105) is flat teal blobs with a 1px outline. The dirt tile repeats visibly at 48px (the dark blotch cluster at (100–140, 30–60) recurs at (100–140, 80–110)). The orc's sword blade is clipped by the top edge of the frame.
+
+FLAGGED: 1, 3
+
+SHIP: NONE
+
+FLIP 1:
+- Add a light falloff from the figure at (205–245, 0–30): the dirt at (0–250, 200–290) and the grey run along the bottom should be at least two values darker than the dirt beside the figure.
+- Give the grey wall tops a visible south face: the row at y 190–240 has a dark brick face below it at y 240–288 but the columns at x 0–70 and x 300–384 meet dirt/water with nothing between; add the same face, or a 2–3px drop shadow, on every south edge.
+- Break the wall-top stamp: vary the seam depth and add at least one displaced or chipped block per 4–5 tiles so the 24px repeat is not readable at a glance.
+- Replace the hexagon-lattice water fill at (250–380, 0–190) with a surface that has a value change toward the bank and a broken edge where it meets the grey; the current fill has the same value at its centre and at its edge.
+- Re-draw the moss blobs at (25–60, 65–100), (200–235, 75–105), (270–300, 150–170) without the 1px teal outline and with an interior value change; currently they are flat shapes.
+- Retile the dirt so the dark blotch cluster does not recur at a 48px period; offset or hand-place the blotches.
+- Move the figure down one tile or shorten the sword sprite so the blade is not cut by the frame edge.
+- Sort the barrels at (110–140, 195–215) and (160–190, 195–215): they are sitting on the seam between dirt and grey wall-top with the wall top visible under their base.
+
+FLIP 2:
+- Reduce the light core: the blocks at (340–470, 450–540) are blown to a single cream value and the joints vanish; clamp the peak so the joint stubs stay one value darker than the block face under the figure.
+- Quantise the light falloff to the 2px pixel pitch; currently it is a smooth gradient over pixel art and reads as a bloom filter, most visibly along the edge of the lit floor at (170–190, 460–620).
+- Replace the pencil-scribble hatching on the floor at (560–720, 440–530) and (300–360, 490–540) with chisel marks or chips that follow block edges; the current strokes are loose diagonal scribbles drawn at 1px pitch over 2px pixel art.
+- Re-draw the wall tops at (185–440, 70–395) and (565–750, 70–395): they are large polygons with ruler-straight seams (e.g. the vertex at ~(200,175) with edges to (100,130), (370,90) and (215,400)) over a cloud-noise fill; replace with cut slabs whose seams break and stagger.
+- The lit wall top at (440–505, 70–395) shows the same cloud noise in orange; give it the same slab treatment so the lit and dark wall tops are the same material.
+- Give the wall face at (185–750, 395–455) courses or at least horizontal structure; it is currently the same noise fill as the wall top with a rail laid over it.
+- Fill or texture the corridor-corner wedges at (505–540, 390–440) and (380–420, 650–700); they are blank dark diagonal slabs with no surface.
+- Light the crate at (190–300, 475–520) from the figure's side: the figure is to its right, but the bright face is the south face and there is no east face.
+- Desaturate the timber bundle at (385–500, 590–640) toward the floor key and darken it with distance; the top log is the most saturated thing in the frame and is brighter than the floor it sits on.
+- Break the rail-post repeat at x≈240, 300, 385, 450, 515 along y 425–450; the posts are evenly spaced stamps.
+
+FLIP 3:
+- Raise the A-frame at (580–680, 400–465) so its feet end at the wall base line (y≈455); the feet currently overhang onto the floor blocks below.
+- Align the pin blocks: the left pair at (585–620, 425–445) sits below the rail while the right pair at (650–680, 415–435) sits on it.
+- Desaturate the A-frame and the pins toward the wall key and put the highlight on the edges facing the figure (below-left) and the brazier (below); the bright rim is currently on the upper-left edges, away from both lights.
+- Fill or texture the corridor-corner wedges at (505–540, 390–440) and (380–420, 650–700); they are blank dark diagonal slabs with no surface.
+- Light the X-brace at (220–300, 655–700) with distance: it sits in the darkest part of the floor but its top faces are mid-value orange, brighter than the floor beside it.
+- Reduce the light core: the blocks at (340–470, 450–540) are blown to a single cream value and the joints vanish; clamp the peak so the joint stubs stay one value darker than the block face.
+- Quantise the light falloff to the 2px pixel pitch; the smooth gradient reads as a bloom filter over pixel art.
+- Replace the pencil-scribble hatching on the floor at (560–720, 440–530) and (300–360, 490–540) with chisel marks or chips that follow block edges.
+- Re-draw the wall tops at (185–440, 70–395) and (565–750, 70–395): ruler-straight polygon seams over cloud-noise fill; replace with staggered cut slabs, and match the lit strip at (440–505, 70–395) to it.
+- Give the wall face at (185–750, 395–455) courses; it is the same noise as the wall top.
+- Break the rail-post repeat at x≈240, 300, 385, 450, 515.
+
+FLIP 4:
+- Desaturate the A-frame at (580–680, 400–455) and the flanking pins toward the wall key; it is the most saturated object in the frame and pops like an interface element.
+- Move the A-frame's highlight to the edges facing the figure (below-left) and the brazier (below); the bright rim is on the upper-left edges, away from both lights.
+- Re-draw the pins at (585–620, 415–440) and (650–680, 415–440): they are stacked orange cubes with a lit top face, and read as floating blocks, not driven pins; make them flush wedges or iron dogs in the rail.
+- Light the X-brace at (220–300, 655–700) with distance; its top faces are mid-value orange in the darkest region of the floor.
+- Reduce the light core: the blocks at (340–470, 450–540) are blown to a single cream value and the joints vanish; clamp the peak so the joint stubs stay one value darker than the block face.
+- Quantise the light falloff to the 2px pixel pitch; the smooth gradient reads as a bloom filter over pixel art.
+- Replace the pencil-scribble hatching on the floor at (560–720, 440–530) and (300–360, 490–540) with chisel marks or chips that follow block edges.
+- Re-draw the wall tops at (185–440, 70–395) and (565–750, 70–395): ruler-straight polygon seams over cloud-noise fill; replace with staggered cut slabs, and match the lit strip at (440–505, 70–395).
+- Give the wall face at (185–750, 395–455) courses; it is the same noise fill as the wall top with a rail laid over it.
+- Break the rail-post repeat at x≈240, 300, 385, 450, 515.
+
+Model: Opus 5 (1M context).

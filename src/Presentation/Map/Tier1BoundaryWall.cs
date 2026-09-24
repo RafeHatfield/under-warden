@@ -190,7 +190,6 @@ public static class Tier1BoundaryWall
 
     private const string BindNode = "Tier1Binding";
     private const string FaceNode = "Tier1Face";
-    private const string CapBandNode = "Tier1CapBand";   // #212: the cap re-laid over an against-wall prop
     private const string EastFaceNode = "Tier1EastFace"; // #211: the wall end's east face (§3.2)
 
     /// <summary>
@@ -226,7 +225,7 @@ public static class Tier1BoundaryWall
     /// <summary>Drop any overlay this class put on a cell, so a re-lay never stacks two.</summary>
     private static void ClearOverlays(Sprite2D s)
     {
-        foreach (var n in new[] { FaceNode, BindNode, CapBandNode, EastFaceNode })
+        foreach (var n in new[] { FaceNode, BindNode, EastFaceNode })
         {
             var old = s.GetNodeOrNull<Sprite2D>(n);
             if (old != null) { s.RemoveChild(old); old.QueueFree(); }
@@ -377,7 +376,6 @@ public static class Tier1BoundaryWall
 
         int face = 0, top = 0, voidCells = 0, missing = 0, faceSuppressed = 0;
         int firstSurface = 0, occludedMass = 0;   // the light-mask split, reported
-        int capBands = 0;                          // #212: cap bands re-laid over against-wall props
         int eastFaces = 0;                         // #211: east faces on wall ends, corners, pillars
         int bound = 0, capLaid = 0, capVoid = 0;
         var ageHist = new int[System.Math.Max(1, 8)];
@@ -731,25 +729,8 @@ public static class Tier1BoundaryWall
                     eastFaces++;
                 }
 
-                // ── #212: THE CAP BAND OVER AN AGAINST-WALL PROP ─────────────────────────────
-                // The prop's base is on this cell's south edge (DungeonRenderer shifted it there)
-                // and it draws over the face. The top surface must stay in front of the prop's
-                // top: the cap's upper half is re-laid as a child at the prop's own z, added after
-                // the prop so it wins the tie. face < prop < cap band.
-                if (capBase && tileLayer.CapBandCells.TryGetValue((x, y), out int bandZ)
-                    && s.Texture != null)
-                {
-                    int th = s.Texture.GetHeight(), tw = s.Texture.GetWidth();
-                    var band = new Sprite2D
-                    {
-                        Name = CapBandNode, Texture = s.Texture, Centered = s.Centered,
-                        RegionEnabled = true, RegionRect = new Rect2(0, 0, tw, th / 2f),
-                        TextureFilter = CanvasItem.TextureFilterEnum.Nearest,
-                        ZAsRelative = false, ZIndex = bandZ,
-                    };
-                    s.AddChild(band);
-                    capBands++;
-                }
+                // #212's cap-band re-lay over an against-wall prop lived here and is GONE — LAW
+                // (Rafe, 2026-09-13): a prop against a wall "is never overdrawn by the cap".
 
                 // ── THE LAMP STOPS AT THE FACE — BY MASK (cast-shadows round, §12.1a) ──────
                 //
@@ -807,7 +788,7 @@ public static class Tier1BoundaryWall
              + $"edge_check={cfg.EdgeCheck.Count}/OK bindings={bound}({kinds}) "
              + $"cap={capLaid}+{capVoid}void "
              + $"lightmask(first_surface={firstSurface},occluded_mass={occludedMass}) "
-             + $"cap_bands_over_props={capBands} east_faces={eastFaces}(ground-mask) "
+             + $"east_faces={eastFaces}(ground-mask) "
              + $"age0..3={ages} traffic=spine:{tf.SpineLength:F0}/routes:{tf.Routes} "
              + $"manifest={manifestResPath}";
     }

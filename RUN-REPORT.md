@@ -330,3 +330,75 @@ taller than wide, gap edge to edge; a third recorded with why. All three miss �
   seat); marker texture → #204 (it casts already, from its footprint); cracks across joints →
   #194; "cut the brazier by half" → CLOSED, fire RULED today; "pixel-step the shadow edges" →
   CLOSED, softness 12.0 ratified and the plant ruling names edge width as the axis.
+
+### Round 2 — built and measured after (`tools/cast_shadows/evidence/lambda/`)
+| term | declared | measured | |
+|---|---|---|---|
+| 1 base far edge on the foot; sprite bottom at foot + 11 (±1) | 11.2 | bottom wood row 544 → 556 (+12, the run on the pixel grid) | met |
+| 2 zero cap pixels over the prop | 0 | no `Tier1CapBand` node; counter removed; apex over the cap's near half, visible | met |
+| 3 one wood albedo, flat-lit ±10/channel | ±10 | (84,62,42) vs (91,66,44) — no sprite pixel changed | met |
+The occluder follows the shift (PropShift), so the Λ's cast shadow moved with its feet. In the
+frame: the feet stand on the floor, the wall's foot line runs behind the legs, the apex stops
+below the cap's top. Deck: axis `grounding` + `wood-value`, subject objects, plant
+`lambda-on-the-cap` (one plant, five seats — correlated by construction, as the ruling asked).
+
+### ⛔ STOP — broken-judge (lane `art/lambda-212`, round 1). `STALL-REPORT.md`. Rafe's own clause: *"If a second round trips the guard, stop and bring me the plants, not the seats."*
+- Five seats, one plant (`lambda-on-the-cap`, the walked frame). **Seats 1, 2, 3 missed it** —
+  neither flagged nor ranked it last; seats 4 and 5 caught it. Rank data (not read, VOID): the
+  build was above the reference in 3 of 5 and not below in 5 of 5.
+- **The plant, not the seats.** `lambda-on-the-cap` is the walked frame: it differs from this
+  build by the Λ's 12-px shift, the removed cap band and the jamb's mask, and from the approved
+  reference by less. A control must be wrong at deck scale; a 12-px placement in a 750-px deck is
+  a fact two seats can see and three cannot, which is the definition of a plant that voids the
+  judge rather than the art (§1.2.1, the wall lane's round 5 — the same trap I named for
+  `jamb-hard-edge` and then walked into with this one because one queue seat had flagged the
+  Λ as a flip). The morgue holds no other grounding cull.
+- **What Rafe rules:** re-tag `lambda-on-the-cap` off the deck (`retired_as_control`, his words —
+  it stays as the record of the cull) and let the Λ round be judged on the objects' construction
+  axis with the two shadowed object plants that exist (`objects-isometric-shadowed`,
+  `props-unrecognizable-shadowed`), the grounding question going to his eye on the walk where a
+  12-px fact belongs; OR name a grounding cull the morgue lacks. Then `JUDGE-CLEARED.json` for
+  lane `art/lambda-212` round 1.
+- Round 3 (#207) is prepared and NOT run: candidate templates as a pending patch
+  (`tools/cast_shadows/evidence/lambda/patch_207_mesh_pending.py`), the driver
+  `tools/tier2_props/barricade_round3.py` (generate → land → restore), the judge
+  `cold_name_object.py` unproven. No seat of any judge runs past this STOP.
+
+### ▶ JUDGE RULING (Rafe, 2026-09-13, lane art/lambda-212 r001) — cleared; plant set rebuilt
+- `lambda-on-the-cap` **retired as a control** by his word (stays as the walked record).
+- `lambda-in-the-face` **drawn to his words**: the built law's frame at the regime with the Λ
+  raised 27 px from the law's placement (one temporary edit, reverted, recorded in the entry's
+  `source`) — feet ~18 px up the face, no foot line between the legs. Axis `grounding`, subject
+  objects, regime shadowed. Ruling 47: self-test before its round counts.
+- `JUDGE-CLEARED.json` entry for lane art/lambda-212 r001; guards clear (`--check-guards`).
+- Deck: axis `grounding` + `construction`, subject objects → draws `objects-isometric-shadowed`,
+  `props-unrecognizable-shadowed`, `lambda-in-the-face`. The fine fact (bottom row at foot + 12,
+  zero cap pixels over the lower half) is the item exit's derived assertion.
+- LAW recorded: SKILL.md §4 "A plant must be resolvable at DECK SCALE"; bible §13.12 corollary.
+
+### Ruling 47 — `lambda-in-the-face` in the BUILD slot, five seats (lane `art/lambda-212-selftest` r001)
+Caught by **3 of 5** (seats 1, 3, 5 flagged it; seat 5 in the exact words — *"the wooden A-frame
+is standing on the rock top and overlaps the wall face band; it is a floor prop on an impassable
+surface"*). **Missed by 2**: seat 4 ranked it first and praised the "sawhorse at top-right"; seat 2
+ranked it first, saw the Λ "in the corridor where the floor is near-black" and wrote it as a
+lighting flip, not a flag. It can be caught, and it is flagged when it is; its catch rate (60 %)
+sits below the morgue's measured 89.5 %. Proceeding as ruled; if the round trips the guard on it,
+that is the plant and it comes back here.
+
+### Round 2 — r002, five seats: **INSTALL-LATEST** (build `1ac9ad46bd15` at 47dd7e8f)
+- Plants dealt: objects-isometric ×2, props-unrecognizable ×1, lambda-in-the-face ×2. **Seat 2
+  missed `lambda-in-the-face`** — ballot discarded, slot re-drawn once (props-unrecognizable,
+  caught); seat 5 caught it. The guard did not trip; the grounding plant's live record is now
+  1 catch / 1 miss on top of the self-test's 3 / 2. Above the reference 1/5, not below 5/5.
+- Five flips disposed (`check_dispositions: none`). Flip 0 — a seat still reads the Λ as *"on top
+  of the wall cap … draw it overlapping the wall's face, not its top"* — is **PARKED** to the walk
+  with today's rulings quoted: the built law is measured (foot line between the legs, 12 px onto
+  the floor, nothing laid over it); a 64-px prop before a 32-px face overlaps the cap's near half
+  by geometry, and whether that reads as standing before the wall is Rafe's eye. Others: X-frame
+  placement → #207 (round 3), marker → #204, flat timber → #204, wall mass/beam → #202.
+- ⚠ Bookkeeping wart, recorded: the round's build id (`1ac9ad46bd15`) was computed before the
+  X-frame judge's control file (`tools/cast_shadows/evidence/xframe/judge_control_walked.json`)
+  was written into the tree during the panel — the tree id is now `9e28c87135237d`. The judged
+  pixels are unchanged (frame sha in the verdict == `combined.png` on disk); no install rides on
+  this verdict — the deliverable build gets its own round on the final frozen tree. Lesson kept:
+  nothing is written into the tree while a panel sits, not even an instrument's output.

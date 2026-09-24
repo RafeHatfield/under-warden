@@ -1,0 +1,45 @@
+RANK: 2 > 3 > 4 > 1
+
+BEST: 2
+BEST_WHY: The floor in the lit region (roughly x 200–720, y 460–720) is built from stones of unequal size — a large slab under the figure's feet at (330–400, 520–570) sits next to half-width stones to its right — and the joints are single dark lines that thicken and thin along one run rather than a uniform grid. Two long cracks (one from (200,470) sweeping down through (330,590) to (400,720); the arc at (560–750, 640–720)) cross several stones without breaking at joints, so the floor reads as one cracked surface, not tiles. The wall cap along y 395–450 is a timber beam with driven pins at (290,430), (400,430), (490,430), (580,430), (660,430), (740,430), and the pins are not evenly spaced — that is the orcs' repair, drawn straight, no joke in it. The crossed timbers at (440,615) are lashed with rope at the crossing, again matching the fiction. Light falloff is smooth with no visible band edges, and the corridor at (505–540, 60–430) is lit from the bottom up as it should be.
+
+WORST: 1
+WORST_WHY: The grey wall is a single stamped block repeated — the bottom band (0–384, 190–288) is six rows of the identical brick, the left column (0–48, 0–190) the same brick again, with the same dark outline on every one; the repetition is visible at a glance. There is no top-surface/face distinction anywhere, so the grey reads as a second floor material rather than a wall, and the room has no enclosure. The dirt floor (50–248, 0–190) is uniform speckle noise with a few random blue specks at (150,180) and (200,60) that belong to nothing. The pool (248–345, 0–190) is a flat green rectangle with a 1px hard edge against both dirt and stone — no bank, no depth, and the pale blobs in it at (320,25), (330,120), (265,160) are soft-edged in a hard-pixel image. The scatter of white pixels at (210–235, 110–130) reads as a glitch. And there is no light falloff at all: the figure at (222,10) carries no light, the whole map is one flat value.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Replace the single wall stamp with at least four brick variants of differing joint depth and crack placement, and stop the outline being identical on every block.
+- Give the wall a top surface and a face at a distinct value, so the grey band at (0–384, 190–288) reads as a wall with height, not a floor of grey bricks.
+- Attach a light source to the figure and darken the map by distance; at present every tile is at full value regardless of position.
+- Give the pool an edge: a 2–3px bank or wet-stone transition along x=248 and x=345, and darken the pool's interior away from the edge so it has depth.
+- Remove the soft-edged blobs in the pool or redraw them hard-edged at the same pixel size as everything else.
+- Remove the stray white pixel cluster at (210–235, 110–130) or make it a legible object (bones, web) with an outline.
+- Remove the random blue specks on the dirt or make them consistent objects.
+- Break the identical-chest duplication at (72,12)/(78,55): vary one.
+
+FLIP 2:
+- The pale slab at (280,590) is an untextured off-white gradient with no edge detail; draw it as stone or timber with joints and pixel-level surface, or remove it.
+- The crate at (245,495) and the crossed timbers at (440,615) are flat saturated orange with a single pale highlight and no grain, no end-grain, no weathering; desaturate toward the wall-cap timber's brown and add grain and wear so they read as salvaged, not freshly bought.
+- Scale the crate down: at ~105px wide it is more than twice the figure's width and reads as a different asset scale.
+- The wall masses at (185–440, 70–395) and (560–750, 70–400) are large smoothed-noise facets with ~300px diagonal seams; replace the blurred mottle with hard-edged stone texture at the floor's pixel scale, and break the giant facets into courses.
+- The wall cap beam is at the same lit brown at x=185 as at x=500 despite being far from the figure; apply the light falloff to it.
+- The lit region's right edge (700–750, 460–720) is as bright as at x=550; let it fall off before the frame edge.
+
+FLIP 3:
+- The A-frame prop at (590–680, 405–465) sits on top of the wall cap (y 395–455), not on the floor; move it onto floor tiles, and if it was meant to lean against the wall, draw it overlapping the wall's face, not its top.
+- The crossed timbers at (255,680) straddle the room floor and the darker corridor boundary at x≈310; snap them to one surface.
+- Same pale untextured slab at (280,590) as image 2; texture it or remove it.
+- Same flat-orange, no-grain, no-wear treatment on the timbers and A-frame; desaturate toward the beam brown and add grain.
+- Same wall-mass and beam-lighting items as FLIP 2.
+
+FLIP 4:
+- The standing block at (280,585) is a plain orange rectangle with a gradient and nothing else; it is a placeholder. Replace with a finished asset or remove.
+- The bench at (395–490, 600–625) is the same flat-orange-with-pale-top treatment with no grain and no legs visible; either finish it to the level of the barrel and chest or remove it.
+- Two prop languages in one frame: the barrel (600,610), chest (660,485) and shelf (720,485) are pixel-detailed with straps, bands and shading; the bench and block are flat gradients. Bring every prop to the barrel/chest standard.
+- The shelf at (700–750, 470–500) is cut off by the frame edge with its right side missing; either that's scrolling and fine, or nudge it in — as a still it reads clipped.
+- Same wall-mass, beam-lighting and right-edge falloff items as FLIP 2.
+
+Model: Opus 5 (1M context).

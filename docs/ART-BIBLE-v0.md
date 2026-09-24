@@ -3064,6 +3064,15 @@ The two laws are therefore a pair and are read together: §13.12 says *measure t
 build*, §13.11 says *against a reference that cannot move with it*. Either one alone is a way to
 build a check that always agrees with whoever wrote it.
 
+**Deck-scale corollary — LAW (Rafe, 2026-09-13, lane `art/lambda-212`).** *"A plant whose
+distance from the build is below what a seat can resolve at deck scale is not a control. When a
+failure is caught by eye at a scale the seats can't see, the deck gets a coarse version of the
+same failure, and the fine fact becomes a derived assertion."* The eye on the handset resolves a
+12-px placement; a blind seat over a 750-px deck does not, and a control the seat cannot see
+voids the judge rather than the art. So the morgue carries the coarse cull (`lambda-in-the-face`,
+drawn to his words) and the item exit carries the fine fact as an assertion derived from the
+capture — never as a plant. Law and history: `.claude/skills/frame-critic/SKILL.md` §4.
+
 ### 13.13 A gate's binding term must have a MEASURED NOISE FLOOR, and must never be a single sample — LAW (Rafe, 2026-09-08)
 
 **The occasion, and it is one frame.** On the morning of 2026-09-08 `PASS-INSTALL` was ratified:

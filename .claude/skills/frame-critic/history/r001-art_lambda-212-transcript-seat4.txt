@@ -1,0 +1,51 @@
+RANK: 4 > 1 > 2 > 3
+
+BEST: 4
+BEST_WHY: The wall face band along y≈400–450 is the strongest single element in the deck: a horizontal rope/iron rail with driven pins at irregular spacing (x≈245, 300, 390, 465, 610, 700) sitting in front of a plaster-and-rubble face, and the rail's pins are stubby dark verticals of different heights rather than a repeated stamp — that is the orc repair fiction rendered without comment. The floor's ashlar in the light pool (x≈330–480, y≈450–560) has joints that vary in width and the blocks step out of course, so it reads as laid stone, not a tiled pattern. The light falloff is real: sampled luminance up the top-right corridor at x=700 drops 94→45→23→8 from y=600 to y=200, and the pool's cool white core against the brazier's warm wash gives two distinguishable sources. Frame 4 edges out 1 because the chamfered corner face at the corridor mouth (x≈500–540, y≈390–450) is lit tan to match the wall face on either side of it; in 1 the same face is a dark slate-blue triangle that matches neither neighbour.
+
+WORST: 3
+WORST_WHY: The pool at (250–345, 0–190) is a hard-edged rectangle of teal hex-scale pattern butted directly against the dirt on the left and the grey wall top on the right — no bank, no shoreline tile, no darkening at the edge. The hex-scale fill reads as upholstery, not water. The entire frame is lit uniformly: the grey wall top at (0,20) is the same value as at (370,270); there is no source, no occlusion where floor meets wall, no shadow under the barrels at (125,200)/(170,200). The moss at (30,60), (35,205), (365,155), (400,235) is soft-edged, semi-transparent airbrush blobs laid over a hard-pixel tileset — a different rendering technique on the same surface. The two chests at (65–95, 0–20) and (65–95, 48–70) and the two barrels are pixel-identical stamps. The dirt floor's red speckle texture repeats visibly on the 32px grid. It looks like a stock tileset placed in an editor.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The player sprite at (385–425, 465–510) has 1px pure-black outlines, fully saturated cyan/orange, and crisp pixel edges; the environment has no outlines, sits at ~40% saturation, and is soft-edged. Redraw the sprite in the environment's palette and edge treatment, or drop the black outline and desaturate to match.
+- The timber props (X-brace at (225–300, 655–700), A-frame at (585–685, 400–455)) are smooth-shaded with a specular rim on the top edge and anti-aliased silhouettes; the floor under them is pixel-crisp. Re-render them at the floor's pixel density, kill the rim highlight, add grain, and pull saturation down to the wall-face range (~167,117,64).
+- The props ignore the light falloff. The standing stone at (265–290, 540–640) samples at (160,114,77) on its lit face while the floor beside it at (320,590) is (76,56,39). Multiply props by the same light map as the floor.
+- The chamfered corner face at (500–540, 390–450) is a dark slate-blue triangle with a hard diagonal edge between the tan wall face and the tan corridor wall. Light it to match its neighbours (as in frame 4) or remove the chamfer.
+- The bottom-left chamfer at (365–400, 645–700) is the same problem: a hard diagonal slab that a straight-down camera would not produce. Either commit to showing wall thickness on every corner or none.
+- The crack overlays — the line from (230,470) to (280,520), the line from (460,590) to (350,640), and the smooth arc from (560,700) to (750,655) — are uniform-width vector strokes that cross mortar joints without deflecting. Cracks in cut stone follow or terminate at joints; redraw them joint-aware with varying width, and break the arc into segments.
+- The X-brace at (225–300, 655–700) straddles the wall-top/floor boundary at y≈690 and overlaps the chamfer. Place it fully on one surface.
+- The wall face texture between the pins (e.g. x≈300–380, y≈405–445) is a blurred tan smear with no stone, plaster or timber read at the scale the floor is drawn. Give it the same resolution of detail as the floor.
+
+FLIP 2:
+- Same sprite fix as FLIP 1 (sprite at (385–425, 465–510)).
+- The bound-timber bundle at (380–500, 590–640) is the most saturated object in the frame (sampled (143,64,20) at the rope) and sits at the centre of the light pool at floor pixel scale ~2× coarser than the floor under it. Re-render at floor density, desaturate, apply the light map, and move it off the crack overlay it currently occludes.
+- The bundle's rope band at (430–450, 600–625) is a flat yellow-ochre strip with a specular highlight; make it hemp — dull, fibrous, no highlight.
+- The plank pallet at (195–305, 475–515) has the same smooth, rim-lit, saturated treatment; same fix as the bundle.
+- The corridor-mouth corner at (500–540, 390–450) has no chamfer face at all here, while the bottom-left corner at (365–400, 645–700) has one. Make the corner treatment consistent across the frame.
+- The standing stone at (265–290, 540–640) ignores the light falloff — same fix as FLIP 1.
+- Same crack-overlay and wall-face-texture fixes as FLIP 1.
+
+FLIP 3:
+- The pool at (250–345, 0–190) needs an edge: a bank/shoreline tile set (inner corners, straight runs) with a darker water rim, and the dirt on the left should not meet the water on a single straight pixel column.
+- Replace the hex-scale water fill with a surface that reads as still water at this scale: broken, non-tiling value variation with occasional highlights, not a regular lattice.
+- Add a lighting pass. Nothing in the frame darkens with distance from the figure at (222,10); the wall top at (0,20) equals the wall top at (370,270). Apply the falloff and drop ambient occlusion where floor meets wall (along y≈200 on the bottom wall and x≈55 on the left wall).
+- The moss blobs at (30,60), (35,205), (365,155), (400,235) are soft airbrush over hard pixels; redraw as pixel-crisp clusters with a hard edge and a one-value shadow.
+- The two chests and two barrels are pixel-identical; vary one of each (lid angle, damage, orientation) or remove the duplicate.
+- The dirt floor's red speckle repeats on the 32px grid (visible from (100,100) rightward); break the repeat with at least three variant tiles.
+- The barrels at (125,200)/(170,200) show a full front face with no shadow and no contact with the floor. Add a ground shadow and a darker contact edge.
+- The bone scatter at (215,120) is white pixel noise with no shape; either draw identifiable bones or remove it.
+
+FLIP 4:
+- Same sprite fix as FLIP 1 (sprite at (385–425, 465–510)).
+- Same timber-prop fixes as FLIP 1: X-brace at (225–300, 655–700) and A-frame at (585–685, 400–455) are smooth-shaded, rim-lit, oversaturated, and ignore the light map.
+- The standing stone at (265–290, 540–640) ignores the light falloff — same fix as FLIP 1.
+- The bottom-left chamfer at (365–400, 645–700) is still a hard diagonal slab; either match it to the now-lit top-right chamfer treatment or remove both.
+- Same crack-overlay fix as FLIP 1 (lines at (230,470)→(280,520), (460,590)→(350,640), arc (560,700)→(750,655)).
+- Same wall-face-texture fix as FLIP 1 (x≈300–380, y≈405–445).
+- The X-brace straddles the wall-top/floor boundary at y≈690; place it on one surface.
+
+Model: Opus 5 (1M context).

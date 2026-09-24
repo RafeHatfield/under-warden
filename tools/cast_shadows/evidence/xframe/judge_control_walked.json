@@ -1,0 +1,47 @@
+{
+ "subject": "barricade",
+ "box": [
+  170.0,
+  720.0,
+  330.0,
+  820.0
+ ],
+ "seats": 5,
+ "named": 2,
+ "verdict": "FAIL",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "REFUSED",
+   "phrase": "a wooden cross-shaped object — crossed planks, likely a broken wooden barricade or debris"
+  },
+  {
+   "seat": 2,
+   "verdict": "NAMED",
+   "phrase": "a wooden cross-braced barricade (crossed planks)"
+  },
+  {
+   "seat": 3,
+   "verdict": "NAMED",
+   "phrase": "crossed wooden planks / broken wooden barricade (x shape)"
+  },
+  {
+   "seat": 4,
+   "verdict": "REFUSED",
+   "phrase": "crossed wooden planks — broken wooden barricade / debris"
+  },
+  {
+   "seat": 5,
+   "verdict": "REFUSED",
+   "phrase": "crossed broken wooden planks (wooden debris or a broken barricade)"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: a pale stone pillar or upright stone marker (possibly a statue base or gravestone)\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a wooden cross-shaped object — crossed planks, likely a broken wooden barricade or debris\nWHERE: 255,770\nSURE: PROBABLY\n\nOBJECT: an A-frame of wooden beams, likely a wooden barricade or sawhorse-style prop against the wall\nWHERE: 630,510\nSURE: PROBABLY\n\nOBJECT: a round red-and-orange disc with a fiery emblem — likely a glowing rune, magic sigil, or fire trap on the floor\nWHERE: 597,635\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: a burning fire / brazier (flames on a round base)\nWHERE: 597,637\nSURE: PROBABLY\n\nOBJECT: a tall stone pillar or standing stone with a wooden band at its base\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a wooden cross-braced barricade (crossed planks)\nWHERE: 258,770\nSURE: PROBABLY\n\nOBJECT: a wooden barricade / A-frame of crossed planks blocking a doorway in the wall\nWHERE: 630,515\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: campfire (burning fire)\nWHERE: 597,635\nSURE: CERTAIN\n\nOBJECT: pale stone pillar or standing slab with a wooden band near its base\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: crossed wooden planks / broken wooden barricade (X shape)\nWHERE: 255,770\nSURE: PROBABLY\n\nOBJECT: leaning wooden planks / broken wooden frame (A shape)\nWHERE: 630,510\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: a wooden A-frame barricade / broken wooden beams leaning on the wall\nWHERE: 630,510\nSURE: PROBABLY\n\nOBJECT: a burning fire glyph on the floor — looks like a fire trap or magical flame sigil\nWHERE: 598,635\nSURE: PROBABLY\n\nOBJECT: a tall pale upright block bound with a leather strap and buckle — possibly a rolled scroll or bundle; an object I cannot confidently identify\nWHERE: 277,675\nSURE: GUESSING\n\nOBJECT: crossed wooden planks — broken wooden barricade / debris\nWHERE: 255,770\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: a campfire (burning fire on the floor)\nWHERE: 597,635\nSURE: CERTAIN\n\nOBJECT: a tall pale stone pillar or post with a band/rope around its lower part\nWHERE: 277,680\nSURE: PROBABLY\n\nOBJECT: crossed broken wooden planks (wooden debris or a broken barricade)\nWHERE: 255,770\nSURE: PROBABLY\n\nOBJECT: an A-frame of wooden beams (broken wooden barricade or debris) against the top wall\nWHERE: 630,510\nSURE: PROBABLY\n\nCOUNT: 4\n"
+ ]
+}

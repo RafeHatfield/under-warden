@@ -1,0 +1,47 @@
+RANK: 1 > 2 > 3 > 4
+
+BEST: 1
+BEST_WHY: The wall-top band (x 180–560, y 395–455) reads as a built surface: the brown top has a darker cap line at its bottom edge, and it is interrupted by three driven pins (a stacked-pin post at x≈300, a single post at x≈390, an L-bracket at x≈460) that break the run at uneven spacing, so the wall reads as something repaired rather than a repeated strip. The plastered post at (255–300, 535–640) has a bevelled top edge two values lighter than its face, a brown strap with a single highlight pin at y≈620, and its lit side faces the figure. The pit at (320–410, 650–720) has its far inner faces (right and bottom) lit and the near faces dark, which is correct for a recess under a light coming from the upper-left. Floor blocks vary in width along each course (e.g. the row at y≈560 runs 40/62/48/70 px), and joints step rather than align across courses.
+
+WORST: 4
+WORST_WHY: Nothing in it is lit. The figure at (215–235, 0–25) is supposed to be the only light, and the frame is the same value at every corner. The brown floor (x 55–250) is a single rust-noise fill — reddish blotches and dark specks with no block structure and no falloff — and it meets the water at x=250 and the grey tiles at x=55 along hard straight edges with no bank, lip or transition. The water (250–345, 0–190) is a flat teal with a honeycomb pattern stamped over it. The room has no top or right wall: floor runs straight into the frame edge at y=0 and x=384. Every grey tile is the same value with the same 1px grid, differentiated only by speckle.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The crossed sticks at (215–300, 650–700) sit at full mid-orange on floor that has dropped to dark grey-blue; run every prop through the same light falloff as the floor.
+- The sawhorse (580–680, 400–455) and the crossed sticks are drawn with 3–4px stair-steps while the floor joints and hatching are 1px; redraw both props at the floor's pixel density.
+- The crack arc from (230, 620) to (520, 470) is a uniform 1px stroke that crosses six block joints without a break or offset; break it at each joint, step it, and vary its width and value.
+- The blocks immediately right of the figure (390–450, 500–560) go to near-white and lose their hatching; clamp the light's peak so surface detail survives inside the hot spot.
+- Sawhorse legs end exactly on the wall cap line at y≈455; raise it 4–6px so it clearly sits on the top surface and give it a cast shadow on the wall top.
+
+FLIP 2:
+- Sawhorse legs (600–670) cross the wall cap line and extend to y≈470, hanging over the wall face onto the floor with no shadow; move it fully onto the wall-top surface or fully onto the floor.
+- Same as FLIP 1 for the crossed sticks: light them with the floor's falloff.
+- Same as FLIP 1 for prop pixel density: sawhorse and sticks are at 3–4px steps against 1px floor detail.
+- Same as FLIP 1 for the crack arc: break and step it at joints.
+- Same as FLIP 1 for the blown-out blocks at (390–450, 500–560).
+
+FLIP 3:
+- Crate at (190–300, 475–515) is at full orange brightness while the floor it sits on at x 190–260 is in the dark grey-blue zone; light it with the same falloff.
+- Lashed log bundle at (380–500, 590–640) is the most saturated object in the frame and sits in the centre of the lit floor, outcompeting the figure; pull its saturation toward the floor's warm tan and apply the light's falloff to it.
+- Bundle rope wraps are 4px-wide bands and the crate's plank lines are 3px; redraw both at the floor's 1px density.
+- Neither crate nor bundle casts a shadow on the floor; add one consistent with the light coming from the figure at (390–430, 470–510).
+- Same as FLIP 1 for the crack arc and the blown-out blocks right of the figure.
+
+FLIP 4:
+- Add the light falloff: darken the frame radially from the figure at (215–235, 0–25) so the bottom wall (y 255–288) and the far-left tiles are near-black.
+- Replace the brown floor fill (x 55–250) with tiled blocks that have joints and per-block value variation; the current rust-blotch texture has no structure and reads as a noise filter.
+- Give the water (250–345, 0–190) a bank: a dark lip or 2–3px depth shadow along its edges where it meets the brown floor; currently it is a hard straight rectangle.
+- Remove the honeycomb pattern overlay on the water and draw a surface (still, with a few offset highlight lines) that does not visibly tile.
+- Close the room: draw wall on the top edge above x 55–250 and on the right edge at x 345–384; floor currently runs straight into the frame.
+- Vary the grey floor tiles: at least three value variants and broken/missing joint lines; every tile is currently identical apart from speckle.
+- Moss blobs at (25–45, 55–80), (350–380, 150–170) and (15–35, 210–230) are flat teal shapes with a 1px lighter outline; give them a dark underside and let them cross tile joints.
+- Chests at (65–97, 0–20) and (65–97, 50–70) are a flat yellow rectangle with an inner rectangle; add a lid edge and a shadow, and the dark striped element under each (65–97, 22–45) needs to read as something — currently a striped rectangle.
+- The bone scatter at (205–235, 115–125) is loose white pixels; draw identifiable pieces.
+- The two barrels (115–145, 195–220) and (160–190, 195–220) are identical stamps; rotate the bung on one and vary the ring positions.
+- The bottom wall band (y 255–288) is a single value with one lighter bevel; add a top surface and a face with some variation.
+
+Model: Claude Opus 5 (1M context)

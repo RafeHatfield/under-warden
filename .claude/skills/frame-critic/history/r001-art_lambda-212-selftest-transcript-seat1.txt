@@ -1,0 +1,54 @@
+RANK: 4 > 2 > 3 > 1
+
+BEST: 4
+BEST_WHY: The upper wall's timber lintel (the band at y≈430–450 running the full width of the room) is the best-made element in the deck: a beam with driven pins at uneven spacing (≈x300, 380, 455, 590), a darker shadow band under it that cleanly separates wall top from floor, and a right-hand break where the beam stops and the corridor mouth opens. The flagstones under the figure vary in size and joint width (one large block at ≈540–620,480–540 next to half-blocks at ≈450,520), so they read as laid rather than stamped. The tied log bundle at ≈440,615 is a rope-bound stack of salvaged timber — it is the only prop in the deck that actually shows the fiction's repair method. Light from the figure and the brazier both fall onto the floor and mix warm-over-cool without a hard seam between them.
+
+WORST: 1
+WORST_WHY: Flat, unlit, and stamped. There is no light carrier falloff at all — every corner of the frame is at the same value, so the brief's one stated lighting rule is absent. The grey block walls (left column x<50, bottom band y>200) are one brick tile repeated with no top/face distinction and a hard tone change at ≈50,105 where two wall tiles of different grey meet mid-run. The dirt floor shows its repeat: the same small blue-grey speck cluster reappears on a grid (≈130,45 / 185,155 / 235,155). The pool is a flat green fill with one lily-pad sprite duplicated three times (≈320,25 / 330,115 / 270,165) and one blob sprite duplicated at ≈310,110 and 270,165. Two identical barrels at ≈130,200 / 175,200, two identical chests at ≈80,15 / 80,60. The bottom wall band is cut mid-brick at the frame edge with a lighter dash at ≈170,278 that doesn't belong to the pattern. It reads as an asset-pack placeholder.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Add the light-carrier falloff: the frame is uniform value edge to edge; darken with distance from the green figure at ≈225,12 so the far corners (bottom-left ≈20,250, bottom-right ≈360,250) sit at least 40% darker than the floor under the figure.
+- Give the wall a top surface and a face: the grey block tile is used for both; draw a distinct top-cap tile for the wall runs at x<50 and y>200 and keep the brick face only where the wall's side is actually visible from above.
+- Remove the hard tone seam at ≈50,105 where a lighter and a darker wall tile abut in the same run; use one tile set for the run.
+- Break the floor repeat: the speck cluster at ≈130,45 / 185,155 / 235,155 is the same tile; make 3–4 floor variants with the specks in different positions and scatter them.
+- Replace the flat green pool fill with a tile that has at least a shoreline edge where it meets floor (the boundary at x≈245 is a straight one-pixel colour change) and vary the lily-pad sprite so ≈320,25 / 330,115 / 270,165 are not identical.
+- Flip or recolour one of the two barrels (≈130,200 / 175,200) and one of the two chests (≈80,15 / 80,60) so identical pairs don't sit adjacent.
+- Fix the bottom edge: the wall band at y>265 ends in a half-brick with a stray light dash at ≈170,278; either finish the tile row or crop the viewport to a whole tile.
+- Identify or remove the white scatter sprite at ≈225,115; at this size it reads as a rendering glitch, not an object.
+
+FLIP 2:
+- Move the A-frame timber at ≈630,390: it sits on the top surface of the upper wall above the lintel, not on floor, and casts no contact shadow — place it on floor tiles and add a contact shadow.
+- Move or crop the crossed timber at ≈260,675: it straddles the boundary between lit floor and the dark tile below the standing slab, so half of it is at floor value and half is not.
+- The standing slab at ≈280,585 is a flat pale rectangle with a two-tone edge and a tiny dark base; give it a top face vs. side face and a cast shadow toward the side away from the figure.
+- Remove or explain the dark square at ≈315–370,650–710: it is a single tile of a different, darker floor texture with hard edges inside the lit area and reads as a mis-tiled cell.
+- The crack lines (e.g. the one running ≈230,520 → 330,560 → 400,640, and the long arc ≈560,690 → 750,640) are continuous 1px lines that cross flagstone joints and the wall/floor boundary without breaking; a crack in laid stone follows or stops at joints — break them at every joint and drop the ones crossing onto wall.
+- The flagstone hatching is at screen-pixel resolution while the figure is at ≈3× pixel scale; the floor reads as a brush texture under a pixel sprite. Redraw the floor hatch at the sprite's pixel density.
+- The dark corridor tops (≈100–400,100–350) are a soft cloudy blur with 1px crack lines over it; replace the blur with a drawn stone-top tile at the same pixel density as the wall face.
+- The brazier at ≈600,545 lights the floor but not the wall beside it: the wall face at ≈650–750,450 is at the same value as the unlit wall at ≈200,450 despite being closer to the fire.
+
+FLIP 3:
+- Replace the three identical orange crossed-timber sprites at ≈215,615 / 405,615 / 535,615: same sprite, same rotation, same row — vary orientation and size or remove two.
+- Desaturate the timber props: the orange-red at ≈405,615 is the most saturated colour in the frame and doesn't take the light; a prop under a warm light should not be brighter than the lit floor.
+- Replace the brazier at ≈600,548: the hard white ring around a black centre reads as a UI target marker, not an object; use the round-base fire from the other frames and keep the rim inside the scene's palette.
+- Remove the faint ghosted circles at ≈575–600,470–500: they are semi-transparent overlapping round shapes above the brazier that read as a leftover sprite.
+- The lit floor around ≈450–560,480–560 shows per-tile brightness steps (each square is a slightly different value with a hard edge); either blend the light across tiles or apply it per-pixel so the grid doesn't show through.
+- The chest at ≈340,545 sits on top of a crack line that continues underneath and out the other side; break the crack at the prop.
+- Same as frame 2: the dark square at ≈315–370,650–710, the continuous crack lines across joints, the floor hatch density mismatch with the sprite, and the blurred corridor tops all apply here.
+
+FLIP 4:
+- Replace the orange crate at ≈245,495: it is a saturated flat orange block with a two-tone top edge and does not respond to the light; it reads as a placeholder. Bring its colour under the scene's wood tone (match the lintel beam at ≈300,440) and darken the face away from the figure.
+- The standing slab at ≈280,590 is a flat pale rectangle with a tiny dark base; give it a top face vs. side face and a cast shadow.
+- The log bundle at ≈440,615 is the right idea but its wood is nearly as bright as the crate; drop its value so it sits in the light rather than on top of it.
+- Remove or explain the dark square at ≈315–370,650–710 inside the lit floor.
+- Break the crack lines at flagstone joints — the one running ≈230,520 → 330,560 → 400,640 crosses under the slab and continues unbroken; the long arc ≈560,690 → 750,640 runs across wall and floor.
+- Redraw the floor hatch at the sprite's pixel density; the 1px scribble under a 3× sprite reads as a filtered texture.
+- Replace the blurred corridor-top texture (≈100–400,100–350) with a drawn tile at the wall's pixel density.
+- The wall face beside the brazier (≈650–750,450) is at the same value as the wall far from it (≈200,450); a fire that close should lift it.
+
+Frames 2, 3 and 4 share one base and one set of problems — crack lines drawn as overlays, floor texture at the wrong pixel density, blurred corridor tops, and a rogue dark floor tile. Fix those once and all three move together; the per-frame prop faults are then a short list. Frame 1 is a different problem: it isn't lit at all and needs the lighting model before any of the tiling fixes matter.
+
+Model: Opus 5 (1M context)

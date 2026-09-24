@@ -202,8 +202,8 @@
     "PLAYER is not composed around the ROUTE'S VISIBLE PORTION once the lamp is carried."
   ],
   "axis": [
-    "construction",
-    "cast-edge"
+    "grounding",
+    "construction"
   ],
   "_axis": [
     "WHICH QUESTION THIS ROUND ASKS, and therefore which plant the deck draws.",
@@ -223,14 +223,14 @@
       "Declared here per item, recorded into the verdict, re-checked at the gate. The gate",
       "refuses a `met` with no measurement behind it."
     ],
-    "item": "#211 round 1 — the corridor jamb: 'reads as a hard diagonal edge, not a face; the lit wedge in the corridor above it has a straight edge that looks like the occluder's shadow mask, not a surface' (Rafe, props walk, 2026-09-13)",
-    "claim": "the jamb's east face is a face the lamp can turn: it is built like the pillar's, it takes the cell's own shadow when the lamp is behind it and the fire's light when the fire is beside it, and no rig value moved.",
-    "measured": "MEASURED BEFORE BUILDING (tools/cast_shadows/evidence/jamb/). (a) Not a flat quad: same code path as the pillar's face, each column one column of its own face; flat-lit (energy 0, ambient x8 — a measurement capture) the jamb's east face cv 0.35 against its own front's 0.34, the pillar's 0.53 against 0.36, run ends 0.30/0.18 — the family's per-tile range; hue r/b identical (0.99). (b) The hard edge was NOT a shadow edge: penumbrae beside the jamb 28-30 px, the pillar's 33-40 px (softness 12.0, all within one kernel). It was the EAST-FACE SPRITE'S OWN BOUNDARY: inheriting the first-surface mask exemption, the face sat at (59.7, r/b 2.89) with and without occluders while the corridor floor it hangs over went 141 -> 85 in the jamb's own shadow. FIX: the east face takes the ground mask (one bit, Tier1BoundaryWall.cs). AFTER, lamp-only: in the jamb's shadow the face reads (33,33,42) beside the shadowed floor's (40,41,53) — the same ambient-hued dark at its own albedo — and its hue flips with the shadow exactly as the floor's does (2.41 -> 0.80 vs 1.96 -> 0.82); at the regime the fire lights it from the east (r/b 1.19). The pillar's east face stays lit (factor 0.93; the lamp is on its side). BAR AS DECLARED, HELD FROZEN AND IMPEACHED (LOOP-PROCESS §8): term 1 'cv within 0.10 of the pillar' NOT MET on the number (0.35 vs 0.53) — the reference was wrong, the family's own tiles vary 0.13-0.53 and each east face tracks its own front; term 2 'ratio step <= 0.10' NOT MET as written (0.37) — a with/without luminance ratio is not material-independent under a hue-replacing shadow colour, so the instrument, not the fix, was mis-specified; the honest measure is the lamp-only RGB above. Penumbra-width and pillar-lit terms MET. No §6.2 value moved.",
-    "instrument": "tools/cast_shadows/evidence/jamb/step.py (with/without-occluder pair, outline from the pre-fix exempt region), face_stats.py, profile.py; lamp-only pairs (fire energy 0) and a flat-lit capture for structure — builder's measurements, none a gate",
+    "item": "#212 round 2 — the Λ-frame against the north wall: 'feet land on the cap band, not below it; no reveal foot visible under it. Also brighter and more saturated than the X-frame under the same fire' (Rafe, props walk, 2026-09-13)",
+    "claim": "a prop placed against a wall stands on the floor at the reveal's foot, in front of the face, and is never overdrawn by the cap; the barricade family is one wood, and every lit difference between its members is the rig's.",
+    "measured": "MEASURED BEFORE BUILDING (tools/cast_shadows/evidence/jamb/, m_flat + jamb_m_shadow). (a) The sprite's bottom wood row sat at frame y 544 against a reveal foot at 546/547 — the SPRITE was at the foot, as the report said; the EYE was right too, because §3.2's base parallelogram rises ½·0.35·cell = 11 px up-right from that row (ReviewLighting's occluder draws exactly it), so the whole footprint lay over the FACE: feet inside the wall. (b) The cap's upper half was re-laid over the prop (cap_bands_over_props=2) — the law says never. (c) Flat-lit wood albedo: Λ (84,62,42) vs X (91,66,44), same hue ratios (r/g 1.36/1.38, g/b 1.45/1.49) — one wood. At the regime Λ reads L 73 r/g 1.74 against X's 47/1.63 because Λ is 1.4 tiles from the fire (reach 4.0) and X 6.3 — not the same fire. FIX: shift = cell − margin − PropBaseRun (one constant, shared with the occluder), so the base's far edge meets the foot and its near edge sits 11 px onto the floor; the cap-band re-lay removed. MEASURED AFTER (tools/cast_shadows/evidence/lambda/): flat-lit, the sprite's bottom wood row moved from 544 to 556 — 12 px, the 11.2-px run rounded to the pixel grid — so the base's far edge sits on the foot and its near edge 11 px onto the floor cell; the wall's foot line shows between the legs. No Tier1CapBand node exists (the counter is gone from the boundary line); the apex draws over the cap's near half and stops 12 px short of the cap's top. east_faces=5(ground-mask) unchanged. Albedo unchanged (no pixel of either sprite moved). JUDGE (Rafe, 2026-09-13): the fine fact — bottom row at foot + 12, zero cap pixels over the lower half — is the DERIVED ASSERTION this exit carries; the deck's grounding plant is the coarse failure (lambda-in-the-face).",
+    "instrument": "wood-pixel rows and flat-lit albedo (tools/cast_shadows/evidence/jamb/face_stats.py family), the [Tier1] boundary summary line; builder's measurements, none a gate",
     "met": true
   },
   "subject": [
-    "walls"
+    "objects"
   ],
   "_subject": [
     "LAW (Rafe, 2026-09-12): a plant matches the deck's axis AND subject.",
