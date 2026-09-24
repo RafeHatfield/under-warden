@@ -1,0 +1,47 @@
+{
+ "subject": "barricade",
+ "box": [
+  170.0,
+  720.0,
+  330.0,
+  820.0
+ ],
+ "seats": 5,
+ "named": 4,
+ "verdict": "PASS",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "MISS",
+   "phrase": "two crossed wooden planks / broken timber in an x shape"
+  },
+  {
+   "seat": 2,
+   "verdict": "NAMED",
+   "phrase": "two crossed wooden planks (x-shaped barrier or broken boards)"
+  },
+  {
+   "seat": 3,
+   "verdict": "NAMED",
+   "phrase": "crossed wooden planks (x-shaped barricade)"
+  },
+  {
+   "seat": 4,
+   "verdict": "NAMED",
+   "phrase": "crossed wooden planks or logs (an x-shaped wooden barricade)"
+  },
+  {
+   "seat": 5,
+   "verdict": "NAMED",
+   "phrase": "two crossed wooden planks (an x-shaped barricade)"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: a burning campfire / brazier\nWHERE: 598,635\nSURE: CERTAIN\n\nOBJECT: a tall pale stone pillar or standing stone with a small wooden bar at its base\nWHERE: 276,680\nSURE: PROBABLY\n\nOBJECT: two crossed wooden planks / broken timber in an X shape\nWHERE: 246,768\nSURE: PROBABLY\n\nOBJECT: a broken orange wooden frame (A-shaped beams, possibly a collapsed sawhorse or scaffold) against the top wall\nWHERE: 630,525\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: a wooden A-frame barricade (sawhorse-like, orange planks)\nWHERE: 625, 525\nSURE: PROBABLY\n\nOBJECT: a small fire / burning brazier\nWHERE: 598, 635\nSURE: PROBABLY\n\nOBJECT: a tall pale stone pillar or post with a wooden band at its base\nWHERE: 275, 680\nSURE: GUESSING\n\nOBJECT: two crossed wooden planks (X-shaped barrier or broken boards)\nWHERE: 248, 768\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: campfire (burning fire)\nWHERE: 598,635\nSURE: CERTAIN\n\nOBJECT: wooden A-frame barrier / sawhorse\nWHERE: 630,525\nSURE: PROBABLY\n\nOBJECT: crossed wooden planks (X-shaped barricade)\nWHERE: 245,765\nSURE: PROBABLY\n\nOBJECT: an object I cannot identify (tall pale post-like block with a brown band near its base)\nWHERE: 275,680\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: a burning campfire / fire pit\nWHERE: 597,636\nSURE: CERTAIN\n\nOBJECT: a tall pale stone pillar or column stump with a wooden bracket at its base\nWHERE: 275,680\nSURE: PROBABLY\n\nOBJECT: crossed wooden planks or logs (an X-shaped wooden barricade)\nWHERE: 245,765\nSURE: PROBABLY\n\nOBJECT: a broken wooden A-frame structure (collapsed wooden beams / broken frame)\nWHERE: 630,520\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: a wooden A-frame barricade of propped planks leaning against the wall\nWHERE: 630,525\nSURE: PROBABLY\n\nOBJECT: a burning fire / brazier on the floor\nWHERE: 598,635\nSURE: PROBABLY\n\nOBJECT: a tall pale stone pillar / block with a wooden band around its base\nWHERE: 275,680\nSURE: PROBABLY\n\nOBJECT: two crossed wooden planks (an X-shaped barricade)\nWHERE: 245,765\nSURE: PROBABLY\n\nCOUNT: 4\n"
+ ]
+}

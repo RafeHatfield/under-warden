@@ -1,0 +1,24 @@
+{
+ "candidate": "c2",
+ "model": "barricade_c2",
+ "seed": 1338,
+ "hold": 0.9845,
+ "ordered": [
+  {
+   "seed": 1338,
+   "hold": 0.9845
+  },
+  {
+   "seed": 1339,
+   "hold": 0.9749
+  },
+  {
+   "seed": 1337,
+   "hold": 0.9716
+  }
+ ],
+ "ids": [
+  9810,
+  9811
+ ]
+}

@@ -1,0 +1,47 @@
+RANK: 4 > 2 > 3 > 1
+
+BEST: 4
+BEST_WHY: The room floor in 4 is the best-made surface in the set and 4 is the only frame where it survives the lighting. The slabs (e.g. the run from x≈430–750, y≈470–700) are individually marked — hairline hatching, chipped corners, small dark notches — and the long crack that starts near the crate at (250,520) and runs to (500,470) crosses slab joints as one continuous stroke, so the floor reads as one cut surface rather than a repeated stamp. The brazier at (598,545) is toned so its glow lifts the surrounding slabs without bleaching them: at (620–750, 480–600) the slab hatching is still legible in 4, whereas in 2 and 3 the same area is washed to flat cream. The wall face along the room's north edge (y≈415–455, timber rail with driven pegs at x≈350 and x≈510) is drawn with joint variation, not a repeating unit.
+
+WORST: 1
+WORST_WHY: The green pool at (245–345, 0–190) ends in a hard vertical line against the dirt floor with no bank, rim, or transition tile at all — the water is simply a rectangle stamped onto the floor. The dirt floor (x≈55–245) is a single uniform red-brown speckle across its whole area with no direction, wear, or variation, and the scattered blue-grey specks at (125,15), (185,80), (175,155), (235,175) read as noise rather than debris. The moss decal on the wall tops is one stamp reused four times unchanged — (20–45, 55–85), (20–45, 200–230), (350–380, 145–175), and on the bottom wall at (120–140, 218–228). Every value in the frame is the same flat, unlit brightness; there is no light source or falloff to sell the space. This is the free tileset.
+
+FLAGGED: 1, 2, 3, 4
+SHIP: NONE
+
+FLIP 1:
+- The pool at (245–345, 0–190) meets the dirt floor with a hard straight edge; add a shoreline/rim tile set (edges and corners) so the water sits in the floor rather than on it.
+- Replace the uniform speckle fill on the dirt floor (x 55–245) with slab or packed-earth tiles that carry a directional wear pattern and at least two variants, so the floor stops reading as noise.
+- The moss decal at (20–45,55–85), (20–45,200–230), (350–380,145–175) and (120–140,218–228) is the same sprite four times; draw three variants and mirror/rotate so no two are identical within a screen.
+- The scene has no light falloff; add a radial light attached to the figure at (225,15) so values drop away from it, with the wall tops and floor darkening on the same curve.
+- The torch at (30,130) is a side-view sprite (flame pointing up the screen) on a top-down wall face; redraw it as a wall-mounted bracket seen from above with a glow disc, or remove it.
+- The blue-grey specks on the floor at (125,15), (185,80), (175,155), (235,175) are unreadable at this size; either make them identifiable debris (bone, rope, timber offcuts) or delete them.
+- Wall-top slabs (x 0–55 and 345–384) are near-identical grey rectangles; vary crack placement per slab so the same crack does not repeat down a run.
+
+FLIP 2:
+- A warm light shaft runs up the wall-top column at x≈440–503 from y≈400 to y≈70 while the actual corridor column at x≈505–560 (the one with the gap in the wall face at y≈415–455) stays cold grey; fix the occluder grid so light travels up the opening, not the solid column beside it.
+- That same shaft has a hard vertical cut on its left edge at x=440 (value jumps from ~35 to ~85 in one pixel); light on wall tops must falloff smoothly like it does on the floor, not switch per tile column.
+- The wall-top surface (everything above y≈415, and the lit strip at 180–440 × 390–415) is a blurred cloud-noise fill with no pixel structure; it looks like a filter, not a drawn tile. Redraw it at the same pixel density as the floor slabs.
+- The brazier glow at (598,545) blows the floor out to flat cream at (620–750, 480–600) and the hatching disappears; cap the additive light so slab texture stays readable, as it does in 4.
+- The figure at (405,490) is drawn at 2× pixel scale (each sprite pixel = 2 screen px) while the floor cracks, brazier fire and slab hatching are at 1×; pick one pixel density for the whole frame.
+- The pale pillar at (265–300, 540–640) is a side-view obelisk with a smooth ungated gradient on its face and a base band with a rivet; from straight above only its cap should be visible. Redraw it top-down at the frame's pixel density, or replace it with a floor-level prop.
+- The crate at (190–305, 475–520) and the bound log bundle at (380–500, 590–640) show front faces and cast no shadow on the floor; in a straight-down view they should show tops only, plus a contact shadow so they sit on the slabs rather than float.
+
+FLIP 3:
+- Same light-shaft fault as 2: the lit column at x≈440–503 is a wall top with the wall face running unbroken beneath it, while the corridor at x≈505–560 stays dark; move the occlusion to match the drawn opening.
+- The leaning A-frame at (590–680, 405–465) sits on top of the north wall — its feet land on the wall face band at y≈455 and its apex is over the wall top; a prop cannot occupy a wall tile. Move it onto the floor or draw it as a wall-mounted item.
+- The flat near-black diagonal wedges at (183–215, 640–710), (380–405, 640–710) and at the corridor mouth (505–555, 385–455) are untextured perspective side-faces on an otherwise straight-down grid; they read as unfinished tiles. Either remove them or texture them and use them on every wall end consistently.
+- The X-sawhorse at (215–300, 650–700) is a side-view sprite (legs crossed in profile with a rail across the top); redraw it seen from above.
+- The brazier bloom at (620–750, 480–600) flattens the slab hatching to cream; cap it as in 4.
+- Same 2× figure over a 1× world and the same blurred cloud-noise wall-top fill as 2; fix both.
+- The pale pillar at (265–300, 540–640) is side-view with a rendered gradient; redraw top-down.
+
+FLIP 4:
+- The lit column at x≈440–503, y≈70–400 is a wall top (the wall face at y≈415–455 runs unbroken beneath it) while the real opening at x≈505–560 is unlit; move the light occlusion to the drawn opening.
+- The hard vertical cut at x=440 between unlit and lit wall top has no falloff; light on wall tops needs the same gradient the floor gets.
+- The wall-top fill above y≈415 (and the lit strip at 180–440 × 390–415) is blurred cloud noise with no pixel structure; redraw it at the floor's pixel density.
+- The figure at (405,490) is at 2× pixel scale over a 1× floor, brazier and crack line; unify the pixel density.
+- The pillar at (265–300, 540–640) is a side-view obelisk with a smooth gradient face; redraw it seen from above at the frame's pixel density.
+- The crate at (190–305, 475–520) and log bundle at (380–500, 590–640) show front faces and have no contact shadow; give them a top-down read and a shadow so they sit on the slabs.
+
+Model: Claude Opus 5 (1M context)

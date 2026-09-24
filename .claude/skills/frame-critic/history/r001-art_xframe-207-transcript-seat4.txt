@@ -1,0 +1,53 @@
+RANK: 1 > 4 > 3 > 2
+
+BEST: 1
+BEST_WHY: The floor stonework is the strongest craft in the set and 1 carries it with the least damage from props. Courses are staggered and the joints vary along a single run — the run at y≈600 from x≈520 to 750 has joints that fade to near-nothing and re-emerge darker, so the stones read as laid rather than stamped. Individual stones carry different scratch hatching, and the light shifts from warm near the figure to blue-grey at the bottom edge (x 200–750, y 780–911) rather than just getting darker. The wall band at y≈415–455 has driven posts at irregular spacing (x≈290, 385, 445, 585, 660), which is exactly the "repaired endlessly, never cared how it looks" fiction. The wall stub at (310–375, 645–710) has its own lit south face consistent with the main wall's band. The bound-logs prop at (380–500, 585–645) is the only fully-realised prop in the three lit frames: the rope binding has a shadow on the lower log and the log ends are drawn. Nothing in 1 sits on a wall or is a bare geometric placeholder.
+
+WORST: 2
+WORST_WHY: It is uniformly lit — there is no falloff at all from the figure at (215, 5–20), and the fiction says the figure carries the only light. The water at (248–343, 0–190) is a hard-edged rectangle of a honeycomb pattern fill butting straight against dirt with no bank, lip, or edge tile; that is a pattern-fill rectangle, not a pool. The dirt floor shows its tile seams — you can see the repeat grid at roughly 32px intervals (vertical seams at x≈200, 266, 333; horizontal at y≈100, 165), so the dirt is a noise tile that doesn't wrap. The dirt/stone boundary at x≈55 and at y≈216 is a ruler-straight line with no transition. The cyan speckles on the dirt (e.g. (180,153), (170,52)) read as stray pixels, and the white scatter at (210–235, 115–130) is illegible. The moss on the stone (e.g. (25–45, 55–85) and (355–375, 150–170)) is a soft semi-transparent blob, not pixel work at the stone's scale. It looks like a tilemap painted with a free asset pack.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The pale pillar at (265–300, 540–640) is the brightest surface in the frame apart from the floor hotspot under the figure, and its value is the same at its base as at its top; bring its albedo below the hotspot floor and grade it downward, or give it a cast shadow on the floor to its right.
+- The crate at (190–305, 475–520) sits on floor that is at roughly 40% value and is drawn at full saturation; multiply props by the same light falloff as the floor.
+- The crack is a 1-px dark line of uniform width running uninterrupted across about eight stones from (250, 640) to (530, 500); break it at joints or give it a 1-px light edge on one side so it reads as a fissure rather than a pen stroke.
+- The character sprite is built from 2–3px pixel clusters with a 2-px black outline while the floor detail is 1-px; render both at the same pixel density.
+- The shadow block at top-right has a hard vertical edge at x≈632 and a hard horizontal edge at y≈390 (x 632–750) while every other light transition in the frame is soft; feather those edges or snap them to the geometry they are supposed to be cast from.
+- The "///" scratch cluster repeats identically on several stones (e.g. (600–640, 600–620) and (700–740, 640–660)); add hatching variants.
+- The brazier at (575–625, 525–565) lights nothing beyond its own sprite's glow ring; add a local light that lifts the surrounding stones.
+
+FLIP 3:
+- The A-frame sawhorse at (595–680, 405–460) is drawn on top of the wall band — its apex at y≈405 is above the band's top at y≈415; move it onto the floor below y≈460.
+- The X-trestle at (215–300, 645–700) is full-saturation orange on floor that is near-black; darken it to the local light level.
+- The pale pillar at (265–300, 540–640) is brighter than the floor hotspot and does not grade with distance; reduce its albedo and add a cast shadow.
+- The crack from (250, 640) to (530, 500) is a uniform 1-px line crossing stone joints; break it at joints or edge it.
+- Sprite pixel density (2–3px clusters, 2-px outline) does not match the 1-px floor detail; unify.
+- Hard-edged shadow block at top-right (x≈632, y 70–390 and y≈390, x 632–750); feather or align to geometry.
+- Repeated hatching clusters on the floor stones; add variants.
+- Brazier at (575–625, 525–565) casts no light on the floor; add a local light.
+
+FLIP 4:
+- The orange block at (265–300, 550–620) is a two-tone untextured cuboid; replace with a prop that has grain, end caps, or strapping, and drop its saturation to the local light level.
+- The bench at (395–490, 595–630) is a flat orange slab with one thin dark stripe; same fix — texture, legs or trestle, and light-matched value.
+- The barrel at (585–615, 590–630) has a 1-px black outline; nothing else in the environment is outlined, so either remove it or outline props consistently.
+- The crack from (250, 640) to (530, 500) is a uniform 1-px line crossing stone joints; break it at joints or edge it.
+- Sprite pixel density does not match the floor's; unify.
+- Hard-edged shadow block at top-right (x≈632, y 70–390 and y≈390, x 632–750); feather or align to geometry.
+- Repeated hatching clusters on the floor stones; add variants.
+
+FLIP 2:
+- Add light falloff from the figure at (215, 5–20); the frame is currently uniformly lit corner to corner.
+- The water rectangle at (248–343, 0–190) meets the dirt at a hard straight edge; add bank or edge tiles on all three exposed sides.
+- The water is a honeycomb pattern fill; replace with a still surface and a few ripple or reflection marks.
+- The dirt tile shows its seams on a ~32px grid (x≈200, 266, 333; y≈100, 165); make the tile wrap or paint two to three variants and scatter them.
+- The stone/dirt boundaries at x≈55 and y≈216 are ruler-straight; add transition tiles or a worn edge.
+- The cyan speckles on the dirt (e.g. (180,153)) read as dead pixels; remove them or make them legible objects.
+- The white scatter at (210–235, 115–130) is illegible; redraw as readable debris or bones at the stone's pixel scale.
+- The moss blobs on the stone (e.g. (25–45, 55–85)) are soft translucent circles; redraw as hard-edged pixel clusters.
+- The barrels at (115–190, 195–235) straddle the dirt/stone boundary; place them fully on one surface.
+- The chest lids at (65–95, 5–30) and (65–95, 50–70) are flat with a single diamond; add a lid seam and hinges.
+
+Model: Claude Opus 5 (1M context).

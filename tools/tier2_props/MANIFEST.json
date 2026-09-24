@@ -254,14 +254,16 @@
    },
    {
     "prop": "barricade_a",
-    "model": "barricade_a",
+    "model": "barricade_c2",
     "ids": [
      9810,
      9811
     ],
     "seed": 1338,
-    "hold": 0.9777,
-    "opaque": 0.37
+    "hold": 0.984,
+    "opaque": 0.37,
+    "round": "#207 r3 (2026-09-13)",
+    "judge": "cold_name_object.py 5/5 named (sawhorse/trestle barricade); c1 4/5 (crossed planks, x-shaped barricade); walked X 2/5 with three refusals (debris/broken)"
    },
    {
     "prop": "barricade_b",

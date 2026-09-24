@@ -10,7 +10,7 @@ and generation supplies surface at init_image_strength 150 (§13.7: generation c
 projection). Materials are the identity cards' words; colouring stays in kind (§12.2 froze it).
 
     B-PROP-001  marker        9800/9801  1x2   dressed post, rope lashings, driven pins
-    B-PROP-002a barricade_a   9810/9811  2x1   crossed baulks — one lies ON the other (#207)
+    B-PROP-002a barricade_a   9810/9811  2x1   crossed STAKES standing across the line, low bar (#207 r3)
     B-PROP-002b barricade_b   9812/9813  2x1   bound stack
     B-PROP-003  fire          9820       1x1   THE ROUND EXCEPTION: the ring re-rendered as a
                                               true circle with a vertical body; the landed
@@ -48,9 +48,14 @@ PROPS = [
      "an old standing stone, a menhir: ONE single tall tapering block of pale weathered grey "
      "limestone, smooth worn faces, a dark rope lashing low around it held with driven iron "
      "pins, no ornament, no carving, matte, unlit"),
-    ("barricade_a", "barricade_a", (128, 64), [9810, 9811],
-     "a heap of thick rough-hewn timber baulks lying crossed over one another, weathered dark "
-     "wood, bark and splinters, a rope lashing at the join, no grass, matte, unlit"),
+    # #207 ROUND 3 (Rafe, 2026-09-13): the X had no height — it lay in the gap. Candidate c2 —
+    # crossed STAKES with planted feet, taller than wide, a low bar spanning the gap edge to edge,
+    # the crossing lashed wood-dark (#208-blocked binding slot) — named by 5 of 5 cold seats
+    # (barricade_round3.py, judge cold_name_object.py); c1 (no bar) by 4 of 5. Same ids.
+    ("barricade_a", "barricade_c2", (128, 64), [9810, 9811],
+     "a tall standing barricade: two thick rough-hewn timber stakes crossed high and lashed where "
+     "they cross with dark bindings, their feet planted on the ground, a low bar lashed between "
+     "the feet, weathered dark wood, bark and splinters, no grass, matte, unlit"),
     ("barricade_b", "barricade_b", (128, 64), [9812, 9813],
      "a standing A-frame barricade: two thick rough-hewn timber baulks stood on end and leaning "
      "together at the top, a bar lashed across low behind them, thick rope bindings wrapped "

@@ -1,0 +1,41 @@
+RANK: 2 > 3 > 1 > 4
+
+BEST: 2
+BEST_WHY: The floor flags under and around the figure (roughly x 200–750, y 460–720) are cut at three or four different widths per course, the mortar lines step in value from near-black at the joints nearest the light to a soft grey-brown three courses out, and the scratch marks are hand-placed per flag rather than tiled — no flag repeats its neighbour. The long hairline crack that runs from the wall band at ~(300,460) down through the flags to ~(420,700) crosses tile boundaries without breaking, which is what makes the floor read as one slab rather than a grid. The top wall band (y ~415–455) reads as salvaged planking pinned with driven pins: the pin heads are irregularly spaced (≈195, 300, 380, 460, 585, 690 px) and the plank seams don't align with the flag courses beneath. Of the props, the lashed crossed timber at (385–500, 590–640) is the one genuinely finished object across all four frames — the rope wrap sits over both logs, the log ends are cut faces with a lighter ring, and its colour is warmed by the light it sits in.
+
+WORST: 4
+WORST_WHY: The green pool at (245–345, 0–190) is a hard-edged rectangle with no bank, edge, or transition into the dirt — the water tile just stops on a straight line. The grey flags are a single stamped square with a uniform one-pixel grid line; every flag on the bottom row (y 215–265) is identical. The dirt floor (70–345, 0–215) repeats on a visible 48px period — the same red fleck cluster recurs at (105,45), (105,93), (105,141). The teal moss is a soft-alpha smear pasted on top of the flags at (25,60), (35,205), (365,160) with no interaction with the joints under it. The two chests at (65–95, 0–40) and (65–95, 48–88) show a full side-on plank front beneath a top-down lid, so they are drawn in two views at once. And there is no light falloff at all — the orc at (225,15) is the only thing carrying a shadow, and the corner of the map is as bright as the tile under him. The whole frame reads as a starter tileset, competent and clean and nobody's.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The brazier at (580–620, 530–565) is a pure cream scalloped ring at a higher value than any lit flag around it (ring ≈230 vs floor ≈190); knock the ring down to the surrounding flag value, give it a rim shadow on the side away from the light, and lose the black disc under the fire — replace with ash-grey.
+- The lantern/face sprite at (335–350, 530–560) is drawn side-on with a visible front face, at a finer pixel scale than the floor; redraw it top-down at floor pixel scale or remove it.
+- The three stick bundles at (200–235, 600–630), (390–425, 595–635), (515–550, 605–635) are full-saturation red/orange with heavy dark outlines and no contact shadow; desaturate to the wood tone used on the wall band, drop the outlines to one shade darker than the fill, and add a one-pixel shadow on the dark side.
+- The bundle at (200–235, 600–630) sits in the dim floor zone but keeps its full chroma; multiply prop colour by the same falloff the floor gets.
+
+FLIP 2:
+- The crate at (195–300, 480–515) shows its front face (plank rows below the lid) — it is a 3/4 sprite on a straight-down floor; redraw as a lid with edge bevel only, or lay it on its side so the visible face is the top.
+- The crate keeps its full orange chroma at (195–300, 480–515) where the floor around it is at ≈74 luminance; drop saturation with distance from the light, not just value.
+- The standing stone at (265–295, 535–635) is a tall side-on slab with a lit top face at the top edge — from above it should be a small footprint, not a 100px column; either redraw as a low fallen slab or shorten it to a footprint and give it a cast shadow.
+- Neither the crate nor the stone has a contact shadow; the crossed timber at (385–500, 590–640) does not either — add a one- to two-pixel dark line on the side away from the figure for all three.
+
+FLIP 3:
+- The A-frame sawhorse at (590–680, 405–460) is drawn in side view and sits on the wall band, its feet overlapping the plank row at y ≈ 440–455; move it onto floor tiles and redraw its footprint top-down (two rails and a crossbar, no "A").
+- The sawhorse at (215–305, 640–700) is also side-on, and sits in the dark zone (floor ≈24) while still reading as orange; redraw top-down and attenuate its chroma with the falloff.
+- The two small orange blocks flanking the A-frame at (585–605, 425–445) and (655–680, 425–445) read as loose fragments, not as beam ends — either draw the beam through the frame or remove them.
+- The leaning-plank wedges at (510–560, 390–450) and (375–405, 645–700) are drawn with a lit edge and a dark receding face like a ramp seen at an angle; from directly above a propped plank is a foreshortened rectangle — redraw them flat, or make them clearly rubble slabs lying on the floor.
+- Same standing-stone issue as frame 2 at (265–295, 535–635): shorten to a footprint and add a shadow.
+
+FLIP 4:
+- Give the pool at (245–345, 0–190) an edge: a one-tile bank or a dark shoreline row where the water meets the dirt, and break the straight rectangle at least at the corners.
+- Add distance-from-figure light falloff; as it stands there is no light source in the frame, and the corners are the same value as the tile under the orc.
+- Break the dirt floor's 48px repeat at (70–345, 0–215): vary the fleck clusters per tile, or add a second and third variant tile and scatter them.
+- The grey flags (all of (0–70, 0–215), (345–384, 0–215), (0–384, 215–265)) are one stamped square; add at least three variants with different joint depth and a chipped corner or two.
+- The chests at (65–95, 0–88) show a plank front under a top-down lid; drop the front rows so the chest is a lid only.
+- The moss smears at (25,60), (35,205), (365,160), (135,225) float over the joints; clip them to flag interiors or let the joint line pass through them.
+- The bone scatter at (215–235, 115–125) is four white pixels; either give it shape or remove it.
+
+Model used: Claude Opus 5 (1M context)

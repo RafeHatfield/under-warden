@@ -1,0 +1,47 @@
+{
+ "subject": "barricade",
+ "box": [
+  170.0,
+  720.0,
+  330.0,
+  820.0
+ ],
+ "seats": 5,
+ "named": 5,
+ "verdict": "PASS",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "NAMED",
+   "phrase": "a wooden sawhorse / trestle barricade (smaller, orange wood)"
+  },
+  {
+   "seat": 2,
+   "verdict": "NAMED",
+   "phrase": "wooden sawhorse / trestle barricade (x-frame of planks)"
+  },
+  {
+   "seat": 3,
+   "verdict": "NAMED",
+   "phrase": "a wooden x-frame barricade (crossed timbers on a plank, like a sawhorse)"
+  },
+  {
+   "seat": 4,
+   "verdict": "NAMED",
+   "phrase": "a wooden x-shaped sawhorse / cross-braced barrier"
+  },
+  {
+   "seat": 5,
+   "verdict": "NAMED",
+   "phrase": "a wooden sawhorse / x-shaped trestle barricade"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: a wooden sawhorse / trestle barricade (large, orange wood)\nWHERE: 630,525\nSURE: PROBABLY\n\nOBJECT: a wooden sawhorse / trestle barricade (smaller, orange wood)\nWHERE: 255,765\nSURE: PROBABLY\n\nOBJECT: a round emblem or sigil on the floor with a red-and-yellow starburst (possibly a trap, seal, or marker)\nWHERE: 598,635\nSURE: GUESSING\n\nOBJECT: a pale stone pillar or upright slab\nWHERE: 278,680\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: wooden sawhorse / trestle barricade (A-frame of planks)\nWHERE: 630,520\nSURE: PROBABLY\n\nOBJECT: fire trap / burning glyph on the floor (red disc with flames)\nWHERE: 597,636\nSURE: GUESSING\n\nOBJECT: tall pale stone block, likely a pillar or stele, with a wooden brace at its base\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: wooden sawhorse / trestle barricade (X-frame of planks)\nWHERE: 255,765\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: a wooden A-frame barricade (crossed timbers on a plank, like a sawhorse)\nWHERE: 630,520\nSURE: PROBABLY\n\nOBJECT: a fire trap or burning glyph on the floor (round red/orange flame emblem)\nWHERE: 598,635\nSURE: PROBABLY\n\nOBJECT: a tall pale stone block or pillar with a leather strap around its base — an object I cannot identify with confidence\nWHERE: 278,680\nSURE: GUESSING\n\nOBJECT: a wooden X-frame barricade (crossed timbers on a plank, like a sawhorse)\nWHERE: 245,760\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: a wooden A-frame sawhorse / cross-braced wooden barrier\nWHERE: 630,520\nSURE: PROBABLY\n\nOBJECT: a round red-and-yellow flaming object on the floor (a fire trap or a burning item) — an object I cannot identify with confidence\nWHERE: 598,635\nSURE: GUESSING\n\nOBJECT: a tall pale stone block / pillar standing on the floor\nWHERE: 275,680\nSURE: PROBABLY\n\nOBJECT: a wooden X-shaped sawhorse / cross-braced barrier\nWHERE: 250,765\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: a wooden sawhorse / A-frame barricade\nWHERE: 630,520\nSURE: PROBABLY\n\nOBJECT: a wooden sawhorse / X-shaped trestle barricade\nWHERE: 255,765\nSURE: PROBABLY\n\nOBJECT: a pale stone pillar or upright slab (stele)\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a round red disc with a yellow flame symbol on the floor — likely a fire trap or magic sigil\nWHERE: 598,636\nSURE: GUESSING\n\nCOUNT: 4\n"
+ ]
+}

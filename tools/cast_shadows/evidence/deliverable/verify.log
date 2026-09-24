@@ -1,0 +1,27 @@
+== device: 5DB969FF-269C-5A8A-86EB-99EC9FF22397
+== installed apps, as the DEVICE reports them
+Catacombs of YARL   com.rafehatfield.catacombsofyarl         1.0.0     1.0.0         
+YARL Tier0          com.rafehatfield.catacombsofyarl.tier0   1.0.0     1.0.0         
+
+== FOUND ON DEVICE: YARL Tier0          com.rafehatfield.catacombsofyarl.tier0   1.0.0     1.0.0         
+== launching com.rafehatfield.catacombsofyarl.tier0
+== pulling Documents/diag.log
+
+== the three identifiers, from the handset
+[DIAG 00002 F0 T6.385] [Tier1] BUILD IDENTITY: commit=7ef5d135f7ddaf95ab0ef7001f8d3f714b7450b2 built=2026-09-14T06:55:40Z review=GATED app=Catacombs of YARL
+  bundle (device): com.rafehatfield.catacombsofyarl.tier0
+
+== did it boot into the right scene, with the rig live?
+  OK    booted the review scene
+  OK    the build on the handset is this working copy's HEAD
+  OK    incident overlays attached
+  OK    rig panel constructed
+  OK    no losable state
+  OK    floor family laid, every cross-check green
+  OK    theme and floor family agree   (tier1_ashlar)
+
+  [DIAG 00010 F0 T6.395] [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
+  [DIAG 00007 F0 T6.385] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
+
+VERIFIED ON DEVICE — installed, launched, booted into tier1_props_review, rig live.
+log: /private/tmp/claude-501/-Users-rafehatfield-development-c-yarl/3ac84765-6905-4a1f-91d3-5255724f9444/scratchpad/deliverable/DEVICE-tier1-boot.log

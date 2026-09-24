@@ -1,0 +1,42 @@
+RANK: 2 > 3 > 4 > 1
+
+BEST: 2
+BEST_WHY: The repaired-wall band along the top of the room (y≈415–455, running from x≈185 to the right edge) is the one thing in the set that reads as made by hand and as belonging to the fiction: a salvaged timber lintel pinned at irregular intervals with dark driven pins, the pins stepping in and out of the light in quantised blocks so the rail visibly recedes toward the corridor mouth at x≈505. Below it, the floor bricks (x≈200–740, y≈460–720) carry individual scribbled hatch marks that differ brick to brick, and the mortar joints break and jog rather than running as a grid, so the floor reads as laid, not stamped. Light falloff from the figure at (405,490) is continuous across floor, wall band and the fire halo at (600,545), with no hard ring. And unlike 3 and 4, every prop in this frame — crate at (190–300, 470–520), stele at (265–295, 540–635), roped timber at (380–500, 585–640) — sits on the floor.
+
+WORST: 1
+WORST_WHY: Nothing in it has a light model. The whole frame is one flat value from the figure at (222,10) to the far corners; the orc at top carries no light, casts nothing, and the room is exactly as bright at the bottom-left doorway as under his feet. The fiction says the picture darkens away from the figure; this one doesn't darken at all. On top of that: the floor (x≈55–330, y≈0–215) is a brown fill with a red-brown speckle noise over it — visibly a noise filter, not drawn stone or earth. The same moss decal (a three-lobed teal blob with a diamond highlight) is reused at (25–70, 55–95), at (340–380, 145–180) mirrored, and at (15–45, 200–235); the same one-line crack decal sits at (5–35, 40–60) and (345–370, 155–165). The pool (x≈250–330, y≈0–190) is a flat teal with a visible hexagon-tile pattern and cheerful lily pads, butted against the floor with a dead-straight edge and no bank or lip. The two chests at (65–95, 0–20) and (65–95, 45–65) and the two barrels at (115–145 and 160–190, y 195–215) are exact duplicates side by side. The doorway at left (x≈25–45, y≈120–170) has an orange ladder-like strip crossing the brick wall face and continuing as a brown shaft down across the floor tile below it — a sprite bleeding out of its tile.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Add a light source at the figure and darken the frame by distance from it; the far corners should sit at roughly a third of the value under the figure.
+- Replace the speckle-noise floor with drawn tiles: a laid flagstone or packed-earth surface with joints or wear that vary along a run.
+- Draw at least three moss variants and three crack variants and stop mirroring them; the identical blob at (25–70,55–95), (340–380,145–180) and (15–45,200–235) has to go.
+- Give the pool an edge: a lip or bank tile between water and floor, and kill the hexagon pattern in the water fill; drop the lily pads — they are wrong for the place.
+- Break the duplicate pairs: chests at (65–95,0–20)/(65–95,45–65) and barrels at (115–145)/(160–190) need distinct sprites or at minimum distinct damage/rope wrap.
+- Fix the doorway sprite at (25–45,120–170) so the orange strip stops at the wall face and the brown shaft does not run across the floor tile below.
+- Separate wall top from wall face: the grey blocks are the same value on top as the dark brick strip at the bottom edge (y≈260–288); the top surface should be lighter and the face should carry the repair detail.
+
+FLIP 2:
+- Put the props through the light pass. Measured: the crate at (200–290,480–510) sits at ~94 luminance on floor that is ~52 beside it; the timber bundle at (400–480,595–630) is at ~106 on floor at ~143. The crate is being lit from nowhere; bring both to the floor's local value.
+- Redraw the rock mass above the wall band (y≈70–400, both sides of the corridor). It is currently two hard-edged rectangles of cloud-noise texture (mean ~12–17 luminance, no drawn detail) separated by straight black seams; it reads as a Photoshop clouds layer. It needs a drawn top surface with a fractured edge where it meets the band.
+- Make the crack lines follow the masonry. The single 1-px black line from (240,530) through (375,545) to (380,610), and the one at (560–740, 690–730), cross brick centres and joints alike; a crack in laid stone runs along joints and jogs. Either erase and re-draw along the joints or thicken it into a broken joint.
+- Give the stele at (265–295,540–635) a top and a side: it is a flat cream rectangle with a slightly darker lower half and one orange strap; from directly above it should be a shorter square-ish cap with a lit top face and a shaded ground shadow.
+- The fire at (575–625,525–570) throws light only in a ~40 px halo while the figure's torch lights the whole room; either the fire is a real light source and warms the bricks out to the right wall, or it is banked coals and its halo drops further.
+
+FLIP 3:
+- Move the A-frame trestle at (585–680,405–465) off the wall. It currently stands on the timber lintel band and covers the pins; it has to sit on floor tiles below y≈460.
+- Light the trestle. Measured: ~81 luminance where the rail beside it is ~34. Full-saturation orange in a dim zone is the same defect as 2's crate, but here it is the brightest object in the top half of the frame.
+- Remove or justify the hard black diagonal wedges at (505–535,395–450), (195–210,650–710) and (380–400,650–710). They exist in 3 and 4 and not in 2; they read as an unfinished corner-shadow pass, hard-edged where everything else is soft.
+- Everything in FLIP 2 also applies here (unlit props, cloud-noise rock mass, marker-pen cracks, flat stele, fire halo).
+
+FLIP 4:
+- Move the A-frame trestle at (580–680,360–420) off the wall top. It is standing on the solid rock mass above the lintel band; measured ~61 luminance against surrounding rock at ~12–26. Put it on floor.
+- Light it; same numbers, same fix as 3.
+- Pull the X-trestle at (215–300,650–705) back from the ledge edge; its lower-left leg hangs over the dark step at y≈690 and the orange rail crosses the ledge line, so it reads as floating rather than resting.
+- Remove or justify the hard black diagonal wedges at (505–535,395–450), (195–210,650–710) and (380–400,650–710), as in 3.
+- Everything in FLIP 2 also applies here.
+
+Model: Claude Opus 5 (1M context)

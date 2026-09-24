@@ -1,0 +1,49 @@
+RANK: 3 > 2 > 4 > 1
+
+BEST: 3
+BEST_WHY: The rope-bound timber bundle at roughly (380–500, 585–640) is the one prop in the whole deck that is actually drawn: two logs crossed, end-grain visible on the cut ends, the rope wraps around the crossing with individual turns and a knot, and the log tops take the light from the figure above while the undersides drop into the floor's blue shadow. It sells the "repaired with rope and salvage" fiction without a caption. The brazier at (598,548) is an iron bowl with a fire in it and a soft warm bloom around it, not an icon. The lintel run along the top wall (y≈420–450) is a row of separate timber slabs with dark driven pins at irregular spacing, so it reads as pinned planks rather than a repeated tile. The base lighting — warm falloff from the figure, cooler blue in the shadow — is the strongest thing in frames 1/3/4 and is doing real work here.
+
+WORST: 1
+WORST_WHY: The brazier at (600,550) is a dark disc ringed by ten white rounded petals around a red flame — at play size it reads as a daisy, not a fire. The three floor props — thin orange X at (215,615), red crossed-planks at (405,615), orange two-rail-and-rungs shape at (530,615) — are ~40px flat symmetric icons, all the same saturated orange, none with a contact shadow, and none receiving the scene's light: the X at (215,615) sits in the dark blue zone at the same brightness as the one in the light pool. The rung shape reads as a ladder or a biplane, not as anything an orc would have repaired. The small box at (345,545) is a tiny oblique-view chest with a lit front face in a straight-top-down world. Everything placed on this floor looks like placeholder markup dropped over a finished background.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Replace the brazier at (600,550): drop the white petal ring; draw an iron bowl/tripod with fire inside, as in frames 3/4.
+- Apply the scene's light falloff to every prop; the X at (215,615) must be as dark as the floor under it, and the props in the shadow wedge must drop into blue.
+- Scale the props to the tile: the three sticks/planks at y≈615 are ~40px in a ~60px tile; a broken crate or a bundle of planks should fill its tile and cast a contact shadow.
+- Redraw the rail-and-rungs shape at (530,615) as something readable — a stack of planks or a bound bundle — with visible end-grain.
+- Redraw the box at (345,545) as seen from straight above (lid only, no front face).
+- Remove or justify the diagonal dark wedge running from (300,560) to (420,720): nothing in this frame occludes the light there.
+- Separate the wall-top surface at (60–180, 400–700) from the lit floor beside it; they sit at nearly the same value and are divided only by a faint line — give the wall a visible face/drop or push the top down a full value step.
+- Make the hairline cracks (e.g. (230,590)→(560,500), (560,640)→(750,740)) stop or jog at mortar joints; they're drawn as continuous 1px anti-aliased curves across the tiling, which reads as an overlay.
+- Unify pixel density: the sprite is 2px-per-pixel with a black outline, the floor and cracks are 1px, the lighting is a smooth gradient. Pick one.
+- Remove the concentric swirl marks in the tile right of the figure at (520–600, 470–520); they read as a generated-texture artefact.
+
+FLIP 3:
+- Texture the pillar at (265–300, 540–640): it is a flat cream block with no stone, no wear, no joints — the brightest untextured surface in the frame — and it reads as a placeholder.
+- Give the pillar a top-down footprint: it is drawn side-on with a full vertical face and a lighter cap slab; in a straight-top-down world it should be a square top with at most a short drop, or at least a ground shadow on the floor side.
+- Light the pillar by the scene: it sits in the shadow wedge yet is brighter than the lit floor near the figure.
+- Desaturate the bench/crate at (190–300, 475–515) and put it under the falloff; it is a uniform saturated orange with a visible front face (oblique) in a top-down frame, and it is in the dim zone at full brightness.
+- Same base fixes as FLIP 1: the orphan shadow wedge, wall-top vs floor separation at x≈180, crack lines crossing joints, pixel-density mismatch between sprite and floor.
+
+FLIP 4:
+- Move the A-frame at (590–680, 405–465) off the wall: it is sitting on top of the lintel run and wall-top at the corridor junction, with its two small orange feet at y≈430 resting on the pinned timber row. It is on a non-walkable tile.
+- Desaturate the A-frame and light it; it is the same flat orange as the frame-1 icons and ignores the falloff.
+- Pull the trestle at (210–300, 640–700) fully onto the floor; its lower leg runs into the dark wall band below y≈690.
+- The pillar: same as FLIP 3 (texture, top-down footprint, falloff).
+- Same base fixes as FLIP 1.
+
+FLIP 2:
+- Add the light: the frame is uniformly lit edge to edge; there is no carrier falloff at all, so it does not do the one thing every frame in this set is supposed to do. Darken by distance from the figure at (215,5).
+- Add edge tiles for the pool at (245–330, 0–190): it is a hard rectangle of green cut straight into the dirt with no bank, no wet edge, no overlap.
+- Add transition tiles where the dirt floor meets the stone at x≈55 and x≈330; the dirt stops at a ruler-straight line.
+- Vary the moss decal: the same blob shape appears at (25–45, 55–75), (20–40, 205–225) and (350–370, 150–170), rotated. Three variants minimum.
+- Replace the dirt fill (x 55–245): a uniform noise mottle with dark-red speckles that reads as a filter fill; give it directional wear, scuffs, or a drain line, something with intent.
+- The white speckle scatter at (205–235, 110–125) reads as noise, not debris; either make it a legible object (bones, chips) or remove it.
+- Drop the chest-lid yellow at (62–97, 0–40) and (62–97, 48–88) by a full saturation step; it is the brightest colour in the frame and the lids are drawn oblique with a front slat face in a top-down frame.
+- The palette is warm brown, lush green and soft grey: the brief is cold and dry. Craft is passable, but the moss and the green pool make the place read as damp and lived-in rather than uncared-for.
+
+Model: Claude Opus 5 (1M context)
