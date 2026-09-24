@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
-using CatacombsOfYarl.Logic.Combat;
+using UnderWarden.Logic.Combat;
 
-namespace CatacombsOfYarl.Tests.Core;
+namespace UnderWarden.Tests.Core;
 
 /// <summary>
 /// Tests for EntityPlacer, EntityIdAllocator, EtpCalculator, and Stair component.
@@ -331,7 +331,7 @@ consumables:
         // We can't easily verify per-room here without more state, but we can check
         // that the total number of monsters fits the overall ETP envelope
         int totalMonsterEtp = placed
-            .Where(e => e.Has<CatacombsOfYarl.Logic.Combat.Fighter>())
+            .Where(e => e.Has<UnderWarden.Logic.Combat.Fighter>())
             .Count() * 20; // 20 ETP per orc_grunt
 
         int rooms = map.Rooms.Count - 1; // exclude player room
@@ -523,12 +523,12 @@ consumables:
         var portals = EntityPlacer.PlacePortalPairs(map, ids, rng, depth: 3, occupied);
 
         Assert.That(portals, Has.Count.EqualTo(2));
-        var entrance = portals.First(p => p.Get<CatacombsOfYarl.Logic.Combat.PortalComponent>()?.Type == CatacombsOfYarl.Logic.Combat.PortalType.Entrance);
-        var exit     = portals.First(p => p.Get<CatacombsOfYarl.Logic.Combat.PortalComponent>()?.Type == CatacombsOfYarl.Logic.Combat.PortalType.Exit);
+        var entrance = portals.First(p => p.Get<UnderWarden.Logic.Combat.PortalComponent>()?.Type == UnderWarden.Logic.Combat.PortalType.Entrance);
+        var exit     = portals.First(p => p.Get<UnderWarden.Logic.Combat.PortalComponent>()?.Type == UnderWarden.Logic.Combat.PortalType.Exit);
 
-        Assert.That(entrance.Get<CatacombsOfYarl.Logic.Combat.PortalComponent>()!.LinkedPortalId, Is.EqualTo(exit.Id),
+        Assert.That(entrance.Get<UnderWarden.Logic.Combat.PortalComponent>()!.LinkedPortalId, Is.EqualTo(exit.Id),
             "Entrance.LinkedPortalId should point to Exit");
-        Assert.That(exit.Get<CatacombsOfYarl.Logic.Combat.PortalComponent>()!.LinkedPortalId, Is.EqualTo(entrance.Id),
+        Assert.That(exit.Get<UnderWarden.Logic.Combat.PortalComponent>()!.LinkedPortalId, Is.EqualTo(entrance.Id),
             "Exit.LinkedPortalId should point to Entrance");
     }
 
@@ -602,12 +602,12 @@ consumables:
             state.Portals.Add(portal);
 
         // Put player on the entrance portal.
-        var entrance = portals.First(p => p.Get<CatacombsOfYarl.Logic.Combat.PortalComponent>()?.Type == CatacombsOfYarl.Logic.Combat.PortalType.Entrance);
-        var exit     = portals.First(p => p.Get<CatacombsOfYarl.Logic.Combat.PortalComponent>()?.Type == CatacombsOfYarl.Logic.Combat.PortalType.Exit);
+        var entrance = portals.First(p => p.Get<UnderWarden.Logic.Combat.PortalComponent>()?.Type == UnderWarden.Logic.Combat.PortalType.Entrance);
+        var exit     = portals.First(p => p.Get<UnderWarden.Logic.Combat.PortalComponent>()?.Type == UnderWarden.Logic.Combat.PortalType.Exit);
         player.X = entrance.X;
         player.Y = entrance.Y;
 
-        var evt = CatacombsOfYarl.Logic.Core.PortalSystem.CheckPortalCollision(player, state);
+        var evt = UnderWarden.Logic.Core.PortalSystem.CheckPortalCollision(player, state);
 
         Assert.That(evt, Is.Not.Null, "Walking onto static portal should trigger teleportation");
         Assert.That(player.X, Is.EqualTo(exit.X), "Player should teleport to exit X");

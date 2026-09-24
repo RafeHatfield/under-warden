@@ -69,7 +69,7 @@ depth_boons:
 
 #### 2. `src/Logic/Balance/BoonDefinition.cs`
 ```csharp
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Immutable definition of a single depth boon. Loaded from config/depth_boons.yaml.
@@ -91,7 +91,7 @@ public sealed record BoonDefinition(
 ```csharp
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// YAML deserialization class for config/depth_boons.yaml.
@@ -144,10 +144,10 @@ public sealed class DepthBoonYamlEntry
 
 #### 4. `src/Logic/Balance/BoonSystem.cs`
 ```csharp
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Applies depth boons to the player. Stateless utility class.
@@ -206,7 +206,7 @@ public static class BoonSystem
 
 #### 5. `src/Logic/ECS/BoonTracker.cs`
 ```csharp
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Tracks which depths the player has visited and which boons have been applied.
@@ -575,7 +575,7 @@ public sealed class LifeDrainEvent : TurnEvent
 
 #### `src/Logic/Combat/StatusEffects/ChargingSoulBoltEffect.cs`
 ```csharp
-namespace CatacombsOfYarl.Logic.Combat.StatusEffects;
+namespace UnderWarden.Logic.Combat.StatusEffects;
 
 /// <summary>
 /// Marker effect on lich: "charging Soul Bolt". Duration = 1 turn.
@@ -591,7 +591,7 @@ public sealed class ChargingSoulBoltEffect : IComponent
 
 #### `src/Logic/ECS/LichAiComponent.cs`
 ```csharp
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Lich-specific AI state. Extends necromancer behavior with Soul Bolt.
@@ -620,7 +620,7 @@ public sealed class LichAiComponent : IComponent
 
 #### `src/Logic/Combat/SoulBoltResolver.cs`
 ```csharp
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Resolves Soul Bolt damage. Called by LichAI when the bolt resolves.
@@ -779,7 +779,7 @@ LichAI extends NecromancerAI with Soul Bolt charge/resolve cycle. Priority order
 ### New File: `src/Logic/AI/LichAI.cs`
 
 ```csharp
-namespace CatacombsOfYarl.Logic.AI;
+namespace UnderWarden.Logic.AI;
 
 /// <summary>
 /// Lich AI: Soul Bolt (2-turn telegraph) + necromancer corpse economy.

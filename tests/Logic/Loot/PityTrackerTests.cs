@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Logic.Loot;
+namespace UnderWarden.Tests.Logic.Loot;
 
 /// <summary>
 /// Tests for PityTracker: soft bias activation, hard inject firing, counter resets,

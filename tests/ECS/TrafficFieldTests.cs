@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.ECS;
+namespace UnderWarden.Tests.ECS;
 
 /// <summary>
 /// Tests for the traffic field — the scalar that decides where a floor is worn.

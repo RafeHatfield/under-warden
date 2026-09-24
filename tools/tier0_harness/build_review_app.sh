@@ -68,7 +68,7 @@ if [ "${1:-}" != "--no-install" ]; then
 fi
 MARKER="$ROOT/src/Presentation/assets/tier0_harness/REVIEW_BUILD.json"
 TEMPLATE="$MARKER.template"
-BUNDLE_ID="${TIER0_BUNDLE_ID:-com.rafehatfield.catacombsofyarl.tier0}"
+BUNDLE_ID="${TIER0_BUNDLE_ID:-com.rafehatfield.underwarden.tier0}"
 NAME="${TIER0_APP_NAME:-YARL Tier0}"
 
 [ -f "$TEMPLATE" ] || { echo "missing $TEMPLATE" >&2; exit 1; }

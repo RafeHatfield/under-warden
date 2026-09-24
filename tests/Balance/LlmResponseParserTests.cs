@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Balance.LlmPlayer;
+using UnderWarden.Logic.Balance.LlmPlayer;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 [TestFixture]
 [Category("Balance")]

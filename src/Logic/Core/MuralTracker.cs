@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Per-run tracker that prevents the same mural from appearing twice on the same floor.

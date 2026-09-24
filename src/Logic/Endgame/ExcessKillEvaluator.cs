@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Endgame;
+namespace UnderWarden.Logic.Endgame;
 
 /// <summary>
 /// Decides whether a monster kill counts as dealt by Sasha for the excess metric (TASK-003).

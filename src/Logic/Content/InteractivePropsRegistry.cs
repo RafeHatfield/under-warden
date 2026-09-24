@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// In-memory registry of interactive prop definitions (barrel, bookshelf, bone_pile).

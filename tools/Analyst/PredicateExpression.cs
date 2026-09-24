@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>Raised when a predicate cannot be parsed, or cannot be evaluated against a record.</summary>
 public sealed class PredicateException(string message) : Exception(message);

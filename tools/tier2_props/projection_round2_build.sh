@@ -52,7 +52,7 @@ case "${1:-}" in
   install)
     c="$2"
     OUT="$ROOT/.ios-build-proj$c" YARL_SKIP_CRITIC=1 \
-    TIER0_BUNDLE_ID="com.rafehatfield.catacombsofyarl.proj$c" \
+    TIER0_BUNDLE_ID="com.rafehatfield.underwarden.proj$c" \
     TIER0_APP_NAME="YARL proj$c" \
     TIER0_SCENE="res://src/Presentation/assets/tier0_harness/scenes/tier1_projection2_$c.json" \
     tools/tier0_harness/build_review_app.sh
@@ -65,7 +65,7 @@ case "${1:-}" in
       echo "== $c: installing $(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$APP/Info.plist")"
       xcrun devicectl device install app --device "$DEV" "$APP" > $EV/proj2_push_$c.log 2>&1 \
         && echo "   installed" || { tail -3 $EV/proj2_push_$c.log; continue; }
-      TIER0_BUNDLE_ID="com.rafehatfield.catacombsofyarl.proj$c" \
+      TIER0_BUNDLE_ID="com.rafehatfield.underwarden.proj$c" \
       TIER0_SCENE="res://src/Presentation/assets/tier0_harness/scenes/tier1_projection2_$c.json" \
         tools/tier0_harness/verify_on_device.sh --out $EV > $EV/proj2_verify_$c.log 2>&1 \
         && echo "   verified" || { echo "   VERIFY FAILED:"; tail -5 $EV/proj2_verify_$c.log; }
@@ -74,7 +74,7 @@ case "${1:-}" in
   verify)
     # the verification alone — the expectation follows TIER0_SCENE, which `push` now passes
     for c in $CANDS; do
-      TIER0_BUNDLE_ID="com.rafehatfield.catacombsofyarl.proj$c" \
+      TIER0_BUNDLE_ID="com.rafehatfield.underwarden.proj$c" \
       TIER0_SCENE="res://src/Presentation/assets/tier0_harness/scenes/tier1_projection2_$c.json" \
         tools/tier0_harness/verify_on_device.sh --out $EV > $EV/proj2_verify_$c.log 2>&1 \
         && echo "== $c: verified" || { echo "== $c: VERIFY FAILED:"; grep "MISS\|FAIL" $EV/proj2_verify_$c.log | head -5; }

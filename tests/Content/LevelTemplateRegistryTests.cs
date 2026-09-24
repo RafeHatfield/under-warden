@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 /// <summary>
 /// Tests for LevelTemplateRegistry and the SpawnEntry YAML converter.

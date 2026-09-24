@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Type of ground hazard. Determines damage element, VFX colour, and toast wording.

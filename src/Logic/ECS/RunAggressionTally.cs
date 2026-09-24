@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Run-scoped tally of the player's unprovoked cross-faction kills, keyed by victim faction

@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Logic.Features;
+namespace UnderWarden.Tests.Logic.Features;
 
 /// <summary>
 /// TASK-026: BotBrain routes around detected floor traps using trap-aware A*.

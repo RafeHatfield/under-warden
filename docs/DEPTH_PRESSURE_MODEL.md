@@ -5,7 +5,7 @@ _Last verified: 2026-07-12 against commit 86b6f10_
 ## Purpose
 
 This document describes the **Formal Pressure Model Derivation Layer** for
-Catacombs of YARL. It explains why depth scaling needs mathematical grounding,
+The Under-Warden. It explains why depth scaling needs mathematical grounding,
 defines the invariants used, documents observed curves, and proposes target
 curves with derived multiplier adjustments.
 

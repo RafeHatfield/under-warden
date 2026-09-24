@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Persistence.MidRun;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Persistence.MidRun;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 /// <summary>
 /// Reachability closure (M1.4 §Entity-table): the table must contain every entity reachable BY ID

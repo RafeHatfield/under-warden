@@ -609,7 +609,7 @@ is a ratified value that can silently drift. The current §6.2.1 values are then
 ## 9. Reproducing
 
 ```bash
-dotnet build CatacombsOfYarl.Presentation.csproj
+dotnet build UnderWarden.Presentation.csproj
 /Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --import
 
 # the connection test — the sweep, then the measurement

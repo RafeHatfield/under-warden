@@ -2,12 +2,12 @@ using GdUnit4;
 using Godot;
 using static GdUnit4.Assertions;
 
-namespace CatacombsOfYarl.Integration;
+namespace UnderWarden.Integration;
 
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Presentation.UI;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Integration tests for ToastLog node lifecycle.

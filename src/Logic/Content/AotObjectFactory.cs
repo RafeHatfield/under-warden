@@ -1,9 +1,9 @@
 using System.Collections;
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.ECS;
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Custom YamlDotNet object factory for NativeAOT compatibility.

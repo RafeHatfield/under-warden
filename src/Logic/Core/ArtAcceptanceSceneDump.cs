@@ -1,7 +1,7 @@
 using System.Text;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Deterministic plain-text dump of a GameState's renderer-consumed floor model:
@@ -44,7 +44,7 @@ public static class ArtAcceptanceSceneDump
         foreach (var m in state.Monsters.OrderBy(e => e.X).ThenBy(e => e.Y))
         {
             var species = m.Get<SpeciesTag>()?.TypeId ?? m.Name;
-            var hp = m.Get<CatacombsOfYarl.Logic.Combat.Fighter>()?.Hp ?? -1;
+            var hp = m.Get<UnderWarden.Logic.Combat.Fighter>()?.Hp ?? -1;
             sb.AppendLine($"  {species} x={m.X} y={m.Y} hp={hp}");
         }
 

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Harness.LlmPlayer;
+namespace UnderWarden.Harness.LlmPlayer;
 
 /// <summary>
 /// Configuration for an LLM Player run. Loaded from YAML; defaults used when file is missing.

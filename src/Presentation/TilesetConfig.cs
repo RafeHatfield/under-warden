@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Presentation;
+namespace UnderWarden.Presentation;
 
 /// <summary>
 /// Data class representing one tileset definition loaded from config/tilesets/{id}.yaml.

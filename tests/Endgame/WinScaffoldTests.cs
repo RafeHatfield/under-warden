@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Endgame;
+namespace UnderWarden.Tests.Endgame;
 
 /// <summary>
 /// TASK-008 win scaffold (layout-independent parts): the dungeon-mode victory state, the

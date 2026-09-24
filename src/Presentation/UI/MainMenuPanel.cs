@@ -1,6 +1,6 @@
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Full-screen main menu shown at game startup and after game-over.
@@ -47,7 +47,7 @@ public sealed partial class MainMenuPanel : Control
         // Game title
         var titleLabel = new Label
         {
-            Text                = "Catacombs of YARL",
+            Text                = "The Under-Warden",
             HorizontalAlignment = HorizontalAlignment.Center,
             MouseFilter         = MouseFilterEnum.Ignore,
         };

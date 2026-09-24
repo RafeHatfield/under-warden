@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.AI;
+namespace UnderWarden.Logic.AI;
 
 /// <summary>
 /// Static hostility matrix between factions. Port of PoC components/faction.py.

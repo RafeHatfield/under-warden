@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Analyst;
+using UnderWarden.Analyst;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// RubricLoader validation tests. The loader is strict by design: a check that cannot run must

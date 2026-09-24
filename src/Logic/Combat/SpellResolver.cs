@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.AI;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.AI;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Executes spell effects. Single source of truth for spell logic.
@@ -541,7 +541,7 @@ public static class SpellResolver
         Entity caster, SpellEffect spell, GameState state,
         int? targetEntityId, string statusName, int duration,
         Action<Entity, int> applyEffect)
-        where TEffect : class, CatacombsOfYarl.Logic.ECS.IComponent
+        where TEffect : class, UnderWarden.Logic.ECS.IComponent
     {
         var events = new List<TurnEvent>();
         var target = FindTargetById(state, targetEntityId, spell.Range > 0 ? spell.Range : 8, caster);
@@ -703,7 +703,7 @@ public static class SpellResolver
         // Determine the target's faction from AiComponent; default to "" if unknown.
         // The aggravated monster attacks all members of its own faction (e.g., an orc
         // aggravated against "orc" faction will attack other orcs).
-        var ai = target.Get<CatacombsOfYarl.Logic.ECS.AiComponent>();
+        var ai = target.Get<UnderWarden.Logic.ECS.AiComponent>();
         string targetFaction = ai?.Faction ?? "";
 
         var effect = target.GetOrAdd<AggravatedEffect>();
@@ -1217,7 +1217,7 @@ public static class SpellResolver
     /// </summary>
     private static bool IsCorporeal(Entity target, GameState state)
     {
-        var ai = target.Get<CatacombsOfYarl.Logic.ECS.AiComponent>();
+        var ai = target.Get<UnderWarden.Logic.ECS.AiComponent>();
         if (ai?.Tags == null) return true; // no tags → assume corporeal
 
         // Non-corporeal creature types

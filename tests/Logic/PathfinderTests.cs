@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Logic;
+namespace UnderWarden.Tests.Logic;
 
 [TestFixture]
 public class PathfinderTests

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Sticky marker. Added to a monster the moment it attacks the player (hit or miss) — it chose

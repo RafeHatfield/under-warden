@@ -8,7 +8,7 @@
 # sharing one id means the last install silently wins. That happened: a wall session overwrote the
 # floor gate's build on this handset, and the only symptom was the floor's scene check going MISS
 # — which reads as *your build is wrong* when the truth is *your build is gone*. The default slot
-# `…catacombsofyarl.tier0` stays with the floor gate; the walls take their own, here, so it cannot
+# `…underwarden.tier0` stays with the floor gate; the walls take their own, here, so it cannot
 # be forgotten at three in the morning.
 #
 # EVERY MANIFEST BELOW IS LOAD-BEARING and the failure modes differ, which is the same reason
@@ -22,7 +22,7 @@
 set -e
 cd "$(dirname "$0")/../.."
 
-export TIER0_BUNDLE_ID="${TIER0_BUNDLE_ID:-com.rafehatfield.catacombsofyarl.tier1walls}"
+export TIER0_BUNDLE_ID="${TIER0_BUNDLE_ID:-com.rafehatfield.underwarden.tier1walls}"
 export TIER0_APP_NAME="${TIER0_APP_NAME:-YARL Tier1 Walls}"
 export TIER0_SCENE="${TIER0_SCENE:-res://src/Presentation/assets/tier0_harness/scenes/tier1_wall_review.json}"
 export TIER0_THEME="${TIER0_THEME:-res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml}"

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// In-memory registry of floor trap definitions (spike_trap, web_trap, etc.).

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Tracks state for the Orc Shaman's Crippling Hex, Chant of Dissonance, and hang-back behavior.

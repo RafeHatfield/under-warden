@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
-using static CatacombsOfYarl.Logic.Persistence.MidRun.MidRunComponentRegistry;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
+using static UnderWarden.Logic.Persistence.MidRun.MidRunComponentRegistry;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>
 /// The hand-written per-type registrations. Every concrete IComponent gets exactly one entry here;

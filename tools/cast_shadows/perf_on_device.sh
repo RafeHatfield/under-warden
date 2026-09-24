@@ -29,12 +29,12 @@ for v in none all; do
   else
   echo "== building perf$v"
   OUT="$ROOT/.ios-build-perf$v" \
-  TIER0_BUNDLE_ID="com.rafehatfield.catacombsofyarl.perf$v" TIER0_APP_NAME="YARL perf$v" \
+  TIER0_BUNDLE_ID="com.rafehatfield.underwarden.perf$v" TIER0_APP_NAME="YARL perf$v" \
   TIER0_SCENE="$SCENE" TIER1_OCCLUDERS="$v" TIER1_SHADOW_SOFTNESS=1.0 TIER1_FIRE_FLICKER=0 \
     tools/tier0_harness/build_review_app.sh > "$EV/perf_${v}_install.log" 2>&1 \
     || { tail -5 "$EV/perf_${v}_install.log"; echo "build/install perf$v FAILED"; continue; }
   fi
-  TIER0_BUNDLE_ID="com.rafehatfield.catacombsofyarl.perf$v" TIER0_SCENE="$SCENE" \
+  TIER0_BUNDLE_ID="com.rafehatfield.underwarden.perf$v" TIER0_SCENE="$SCENE" \
     tools/tier0_harness/verify_on_device.sh --out "$EV" > "$EV/perf_${v}_verify.log" 2>&1 || true
   cp "$EV/DEVICE-tier1-boot.log" "$EV/perf_${v}_boot.log"
   echo "== perf$v:"; grep "\[Perf\]" "$EV/perf_${v}_boot.log" | sed 's/^/   /' | cut -c1-140

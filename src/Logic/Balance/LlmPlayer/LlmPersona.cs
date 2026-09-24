@@ -1,3 +1,3 @@
-namespace CatacombsOfYarl.Logic.Balance.LlmPlayer;
+namespace UnderWarden.Logic.Balance.LlmPlayer;
 
 public enum LlmPersona { Reader, SystemExplorer }

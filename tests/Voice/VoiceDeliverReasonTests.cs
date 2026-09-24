@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Voice;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Voice;
+namespace UnderWarden.Tests.Voice;
 
 /// <summary>
 /// The diagnostic reason codes (Phase 1, symptom E). The out-reason overload must report exactly WHY a

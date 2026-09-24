@@ -1,4 +1,4 @@
-# Floor trap definitions for Catacombs of YARL
+# Floor trap definitions for The Under-Warden
 # 9 trap types: 8 PoC-canonical + acid trap (new, counter to troll regen).
 # Placement is managed by EntityPlacer.PlaceFloorFeatures.
 # tile_modulate: [r, g, b, a] presentation-only color tint for traps sharing a tile ID.

@@ -1,7 +1,7 @@
 using Anthropic.SDK;
 using Anthropic.SDK.Messaging;
 
-namespace CatacombsOfYarl.Harness.LlmPlayer;
+namespace UnderWarden.Harness.LlmPlayer;
 
 /// <summary>
 /// Thin wrapper around the Anthropic SDK for single-turn LLM calls.

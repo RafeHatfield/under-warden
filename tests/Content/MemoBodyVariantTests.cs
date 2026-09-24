@@ -1,8 +1,8 @@
 using System.Text.RegularExpressions;
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 /// <summary>
 /// Body-variant progressions for the four twice-fireable memo keys that previously had only

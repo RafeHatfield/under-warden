@@ -1,13 +1,13 @@
 using System.Collections.Generic;
-using CatacombsOfYarl.Logic.AI;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
+using UnderWarden.Logic.AI;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Endgame;
+namespace UnderWarden.Tests.Endgame;
 
 /// <summary>
 /// TASK-004 (player_ally faction matrix) + TASK-005 (ChooseTarget gate). A player-ally fights

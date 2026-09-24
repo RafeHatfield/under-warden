@@ -1,8 +1,8 @@
 using System.Reflection;
-using CatacombsOfYarl.Logic.Persistence.MidRun;
+using UnderWarden.Logic.Persistence.MidRun;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 /// <summary>
 /// Tripwire for the private-field audit (docs/systems/midrun_private_field_audit.md). The

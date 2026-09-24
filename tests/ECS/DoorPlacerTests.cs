@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.ECS;
+namespace UnderWarden.Tests.ECS;
 
 /// <summary>
 /// Tests for DoorPlacer — chokepoint detection and door placement at corridor-room boundaries.

@@ -4,7 +4,7 @@ _Last verified: 2026-07-12 against commit 86b6f10_
 
 ## Status: Design Specification (No Implementation)
 
-This document defines the player progression model for Catacombs of YARL.
+This document defines the player progression model for The Under-Warden.
 It is doctrine only. No code, YAML, or numeric tuning is included.
 
 ---

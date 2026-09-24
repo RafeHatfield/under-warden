@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Persistence;
+using UnderWarden.Logic.Persistence;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Persistence;
+namespace UnderWarden.Tests.Persistence;
 
 [TestFixture]
 public class DailySeedsTests

@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Metrics collected from a single scenario run.

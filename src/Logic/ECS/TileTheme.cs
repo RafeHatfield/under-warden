@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Visual theme assigned to a map tile. Set by DungeonFloorBuilder when carving rooms.

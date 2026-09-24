@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
-using PityTrackerType = CatacombsOfYarl.Logic.Balance.PityTracker;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
+using PityTrackerType = UnderWarden.Logic.Balance.PityTracker;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Places entities (monsters, items, stairs) onto a GeneratedMap.

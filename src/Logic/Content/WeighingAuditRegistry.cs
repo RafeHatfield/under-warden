@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.Endgame;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.Endgame;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Loads and resolves the Weighing audit dialogue from weighing_audit.yaml.

@@ -1,9 +1,9 @@
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Balance.Transcript;
+namespace UnderWarden.Logic.Balance.Transcript;
 
 /// <summary>
 /// Serializes any <see cref="TurnEvent"/> subtype generically: emits an

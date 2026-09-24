@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Endgame;
+using UnderWarden.Logic.Endgame;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 // DTOs for the floor-25 Weighing subsystems (M1.4 4a.3b-3). SERIALIZE-class per spec. The EXCLUDE-class
 // hooks (WeighingAuditOverride, WeighingHeadlessGatePolicy) are never touched.

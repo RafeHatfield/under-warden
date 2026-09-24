@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation;
+namespace UnderWarden.Presentation;
 
 /// <summary>
 /// Writes timestamped breadcrumbs to both GD.Print (Godot Output panel) and a

@@ -161,7 +161,7 @@ The UF iso_dungeon tiles (isometric perspective) and 16bf creature sprites (top-
 
 ### TASK-002: TilesetConfig data class and TilesetLoader
 - Status: complete
-- Files changed: `src/Presentation/TilesetConfig.cs` (created), `src/Presentation/TilesetLoader.cs` (created), `src/Presentation/CatacombsOfYarl.Presentation.csproj` (added YamlDotNet reference)
+- Files changed: `src/Presentation/TilesetConfig.cs` (created), `src/Presentation/TilesetLoader.cs` (created), `src/Presentation/UnderWarden.Presentation.csproj` (added YamlDotNet reference)
 - Notes: Required adding explicit YamlDotNet package reference to Presentation.csproj — the transitive reference from Logic isn't sufficient for compile-time [YamlMember] attribute usage. Fixed FileAccess ambiguity (Godot.FileAccess vs System.IO.FileAccess) with a using alias. LoadWithFallback added for safe boot path. Debug validation covers both entities and items.
 - Layer: presentation
 - Type: system

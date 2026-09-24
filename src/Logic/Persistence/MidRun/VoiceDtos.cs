@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>
 /// SERIALIZE-class run state for the Hollowmark voice scheduler (docs/systems/voice_delivery.md

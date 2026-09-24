@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using NUnit.Framework;
-using DPR = CatacombsOfYarl.Logic.Balance.DepthPressureReport;
+using DPR = UnderWarden.Logic.Balance.DepthPressureReport;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Tests for DepthPressureReport formatters and DeriveMultiplierRecommendation math.

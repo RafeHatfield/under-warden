@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Map;
+namespace UnderWarden.Logic.Map;
 
 /// <summary>
 /// Which wall tile a cardinal neighbour mask resolves to — and the one invariant that resolution

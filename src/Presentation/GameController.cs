@@ -1,18 +1,18 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Knowledge;
-using CatacombsOfYarl.Logic.Map;
-using CatacombsOfYarl.Presentation.Animation;
-using CatacombsOfYarl.Presentation.Entities;
-using CatacombsOfYarl.Presentation.Input;
-using CatacombsOfYarl.Presentation.Map;
-using CatacombsOfYarl.Presentation.UI;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Knowledge;
+using UnderWarden.Logic.Map;
+using UnderWarden.Presentation.Animation;
+using UnderWarden.Presentation.Entities;
+using UnderWarden.Presentation.Input;
+using UnderWarden.Presentation.Map;
+using UnderWarden.Presentation.UI;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation;
+namespace UnderWarden.Presentation;
 
 /// <summary>
 /// Orchestrates the full game loop. Owns GameState, drives TurnController,
@@ -938,7 +938,7 @@ public sealed partial class GameController : Node
                 var propId = ResolvePropInspectKey(feature);
                 if (propId != null)
                 {
-                    var entry = CatacombsOfYarl.Logic.Content.PropDescriptionRegistry.Get(propId);
+                    var entry = UnderWarden.Logic.Content.PropDescriptionRegistry.Get(propId);
                     if (entry.HasValue)
                     {
                         _inspectPanel?.ShowFeature(entry.Value.Name, entry.Value.Description, screenPos);
@@ -953,7 +953,7 @@ public sealed partial class GameController : Node
             var tileKey = TileKindToInspectKey(tileKind);
             if (tileKey != null)
             {
-                var entry = CatacombsOfYarl.Logic.Content.PropDescriptionRegistry.Get(tileKey);
+                var entry = UnderWarden.Logic.Content.PropDescriptionRegistry.Get(tileKey);
                 if (entry.HasValue)
                 {
                     _inspectPanel?.ShowFeature(entry.Value.Name, entry.Value.Description, screenPos);
@@ -1353,7 +1353,7 @@ public sealed partial class GameController : Node
             // scenario all-monsters-dead formula. A loss Ending forces a defeat regardless. Off the
             // Weighing (Ending == None), fall back to the scenario PlayerWon.
             bool won = _state.IsDungeonVictory
-                || (_state.Ending == CatacombsOfYarl.Logic.Endgame.EndingType.None && _state.PlayerWon);
+                || (_state.Ending == UnderWarden.Logic.Endgame.EndingType.None && _state.PlayerWon);
             GameEnded?.Invoke(won);
             return;
         }

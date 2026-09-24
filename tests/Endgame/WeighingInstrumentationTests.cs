@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CatacombsOfYarl.Logic.AI;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.AI;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Logic.Persistence.Namespaces;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Endgame;
+namespace UnderWarden.Tests.Endgame;
 
 /// <summary>
 /// Verify-don't-assume: each instrumentation event actually fires, and the captured inputs
@@ -371,7 +371,7 @@ public class WeighingInstrumentationTests
         orc.Add(new SpeciesTag("orc"));
         // No HasAttackedPlayerTag → the kill is unprovoked.
 
-        var map = CatacombsOfYarl.Logic.ECS.GameMap.CreateArena(20, 20);
+        var map = UnderWarden.Logic.ECS.GameMap.CreateArena(20, 20);
         map.RegisterEntity(player);
         map.RegisterEntity(orc);
 
@@ -385,7 +385,7 @@ public class WeighingInstrumentationTests
 }
 
 /// <summary>Helper used in multiple endgame test files — fresh temp-dir persistence provider.</summary>
-file class FakePersistencePathProvider : CatacombsOfYarl.Logic.Persistence.IPersistencePathProvider
+file class FakePersistencePathProvider : UnderWarden.Logic.Persistence.IPersistencePathProvider
 {
     private readonly string _dir;
     public FakePersistencePathProvider(string dir) { _dir = dir; Directory.CreateDirectory(dir); }

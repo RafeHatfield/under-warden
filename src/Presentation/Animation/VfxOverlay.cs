@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Presentation.Map;
+using UnderWarden.Logic.Core;
+using UnderWarden.Presentation.Map;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Animation;
+namespace UnderWarden.Presentation.Animation;
 
 /// <summary>
 /// Renders visual effects (area flashes, path trails, projectile travel, status indicators)

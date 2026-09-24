@@ -1,7 +1,7 @@
 using System.Text.Json;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Persistence.Namespaces;
 
-namespace CatacombsOfYarl.Logic.Persistence;
+namespace UnderWarden.Logic.Persistence;
 
 /// <summary>
 /// Runtime mirror of the persistence file. Loaded once at app start; never discarded.

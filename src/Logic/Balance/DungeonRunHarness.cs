@@ -1,15 +1,15 @@
 using System.Diagnostics;
 using System.Text;
-using CatacombsOfYarl.Logic.Balance.LlmPlayer;
-using CatacombsOfYarl.Logic.Balance.Transcript;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
-using CatacombsOfYarl.Logic.Persistence;
+using UnderWarden.Logic.Balance.LlmPlayer;
+using UnderWarden.Logic.Balance.Transcript;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
+using UnderWarden.Logic.Persistence;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Per-floor metrics collected during a DungeonRun.

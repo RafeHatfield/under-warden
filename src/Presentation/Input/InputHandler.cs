@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Presentation.Map;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Presentation.Map;
 using Godot;
-using CatacombsOfYarl.Presentation;
+using UnderWarden.Presentation;
 
-namespace CatacombsOfYarl.Presentation.Input;
+namespace UnderWarden.Presentation.Input;
 
 /// <summary>
 /// Translates touch/mouse input into PlayerActions.
@@ -258,6 +258,6 @@ public sealed class InputHandler
         if (_state == null) return null;
         return _state.Corpses.FirstOrDefault(
             c => c.X == gridX && c.Y == gridY
-                 && c.Has<CatacombsOfYarl.Logic.Combat.StatusEffects.PossessionEffect>());
+                 && c.Has<UnderWarden.Logic.Combat.StatusEffects.PossessionEffect>());
     }
 }

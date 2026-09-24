@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Step 7 baseline-delta: snapshot a soak (SoakBaseline.FromSummary), persist it (JSON round-trip),

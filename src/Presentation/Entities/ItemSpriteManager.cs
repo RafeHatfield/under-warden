@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Presentation.Map;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Content;
+using UnderWarden.Presentation.Map;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Entities;
+namespace UnderWarden.Presentation.Entities;
 
 /// <summary>
 /// Manages floor sprites for items sitting on dungeon tiles.

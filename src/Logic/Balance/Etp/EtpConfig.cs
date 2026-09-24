@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Balance.Etp;
+namespace UnderWarden.Logic.Balance.Etp;
 
 /// <summary>
 /// Spike allowance settings — rooms that can exceed normal ETP budgets.

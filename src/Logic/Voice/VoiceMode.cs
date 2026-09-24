@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Voice;
+namespace UnderWarden.Logic.Voice;
 
 /// <summary>
 /// Silence mode for voice delivery (docs/systems/voice_delivery.md §Silence rules). This is a DEVICE

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Voice;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// The Hollowmark ribbon (docs/systems/voice_delivery.md §Ribbon contract). Its OWN Control — NOT

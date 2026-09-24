@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Presentation.Entities;
-using CatacombsOfYarl.Presentation.Map;
-using CatacombsOfYarl.Presentation.UI;
+using UnderWarden.Logic.Core;
+using UnderWarden.Presentation.Entities;
+using UnderWarden.Presentation.Map;
+using UnderWarden.Presentation.UI;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Animation;
+namespace UnderWarden.Presentation.Animation;
 
 /// <summary>
 /// Plays turn events as sequential animations.

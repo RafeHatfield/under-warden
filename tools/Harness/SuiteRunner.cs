@@ -1,7 +1,7 @@
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Balance acceptance suite runner.

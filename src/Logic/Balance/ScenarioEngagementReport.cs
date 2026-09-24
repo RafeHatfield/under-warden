@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Renders the role-aware engagement-health section for a single controlled scenario. Soak analogue:

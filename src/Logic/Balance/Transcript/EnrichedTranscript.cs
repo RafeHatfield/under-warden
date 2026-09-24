@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance.Transcript;
+namespace UnderWarden.Logic.Balance.Transcript;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Enriched run transcript — the shared JSONL format consumed by the Analyst

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>How a system-trigger's fire rate should be READ (rubric coverage_semantics).</summary>
 public enum TriggerClass

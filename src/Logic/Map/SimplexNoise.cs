@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Map;
+namespace UnderWarden.Logic.Map;
 
 /// <summary>
 /// Minimal 2D simplex noise implementation for floor composition variation.

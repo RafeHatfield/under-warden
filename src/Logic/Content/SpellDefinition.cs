@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Combat;
+using UnderWarden.Logic.Combat;
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// YAML-deserialized definition for a scroll or wand.

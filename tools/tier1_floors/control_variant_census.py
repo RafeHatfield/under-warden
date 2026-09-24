@@ -77,7 +77,7 @@ def parse_census(log):
 
 
 def build_and_capture(tag):
-    r = subprocess.run(["dotnet", "build", os.path.join(REPO, "CatacombsOfYarl.Presentation.csproj")],
+    r = subprocess.run(["dotnet", "build", os.path.join(REPO, "UnderWarden.Presentation.csproj")],
                        capture_output=True, text=True, cwd=REPO)
     if r.returncode != 0:
         print(r.stdout[-2000:], file=sys.stderr)
@@ -129,7 +129,7 @@ def main():
         with open(TARGET, "w") as f:
             f.write(original)
         print("\n== source restored (a leftover linear hash would be the defect, silently)")
-        subprocess.run(["dotnet", "build", os.path.join(REPO, "CatacombsOfYarl.Presentation.csproj")],
+        subprocess.run(["dotnet", "build", os.path.join(REPO, "UnderWarden.Presentation.csproj")],
                        capture_output=True, text=True, cwd=REPO)
         subprocess.run([GODOT, "--headless", "--path", REPO, "--import"],
                        capture_output=True, text=True)

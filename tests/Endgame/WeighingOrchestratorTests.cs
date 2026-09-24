@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CatacombsOfYarl.Logic.AI;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Tests.Persistence;
+using UnderWarden.Logic.AI;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Tests.Persistence;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Endgame;
+namespace UnderWarden.Tests.Endgame;
 
 /// <summary>
 /// TASK-009: the Weighing gauntlet orchestration. Drives Begin/Advance over a hand-built arena

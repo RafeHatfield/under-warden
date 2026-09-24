@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Marker component. Entity is immune to slow (SlowedEffect) and paralysis (ImmobilizedEffect)

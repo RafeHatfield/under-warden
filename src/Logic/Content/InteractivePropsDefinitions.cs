@@ -1,6 +1,6 @@
 using YamlDotNet.Serialization;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // DTOs for config/interactive_props.yaml

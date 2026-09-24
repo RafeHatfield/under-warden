@@ -1,4 +1,4 @@
-# Catacombs of Yarl / The Under-Warden — ART-BIBLE v0
+# The Under-Warden — ART-BIBLE v0
 
 **Status: v0.15 — DRAFT. Two clauses have been derived from rendered assets on the device (§6.3)
 or ruled at the gate on them (§8.3); §6.5 and §3.1 are measured against the asset bar and ruled,

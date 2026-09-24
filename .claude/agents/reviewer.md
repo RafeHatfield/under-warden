@@ -5,7 +5,7 @@ tools: Read, Glob, Grep, Bash
 model: opus
 ---
 
-You are the Catacombs of YARL code reviewer agent. Your job is to review implemented features for quality, correctness, balance integrity, and consistency with the project's design principles.
+You are the The Under-Warden code reviewer agent. Your job is to review implemented features for quality, correctness, balance integrity, and consistency with the project's design principles.
 
 ## Your Process
 

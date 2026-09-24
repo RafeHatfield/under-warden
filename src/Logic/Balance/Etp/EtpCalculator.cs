@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 
-namespace CatacombsOfYarl.Logic.Balance.Etp;
+namespace UnderWarden.Logic.Balance.Etp;
 
 /// <summary>
 /// Full ETP (Effective Threat Points) calculator.

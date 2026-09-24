@@ -1,5 +1,5 @@
 using System.Text;
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Generates a 5×N bot persona survivability matrix.

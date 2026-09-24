@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.ECS;
+namespace UnderWarden.Tests.ECS;
 
 /// <summary>
 /// Tests for MapGenerator (Phase 3 of the dungeon generation milestone).
@@ -180,7 +180,7 @@ public class MapGeneratorTests
     [Test]
     public void Generate_StairsDown_False_NoStairDownPosition()
     {
-        var stairs = new CatacombsOfYarl.Logic.Balance.StairRules { Down = false, Up = false };
+        var stairs = new UnderWarden.Logic.Balance.StairRules { Down = false, Up = false };
         var result = MapGenerator.Generate(Width, Height, MaxRooms, MinSize, MaxSize,
             new SeededRandom(1337), stairs);
         Assert.That(result.StairDownPos, Is.Null);
@@ -203,7 +203,7 @@ public class MapGeneratorTests
     [Test]
     public void AllWallsMap_AllNonWalkable_BeforeCarving()
     {
-        var map = new CatacombsOfYarl.Logic.ECS.GameMap(Width, Height, allWalls: true);
+        var map = new UnderWarden.Logic.ECS.GameMap(Width, Height, allWalls: true);
         Assert.That(map.IsWalkable(5, 5), Is.False);
     }
 

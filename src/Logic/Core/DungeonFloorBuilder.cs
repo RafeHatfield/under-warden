@@ -1,15 +1,15 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
-using CatacombsOfYarl.Logic.Persistence;
-using BoonTable = System.Collections.Generic.IReadOnlyDictionary<int, CatacombsOfYarl.Logic.Balance.BoonDefinition>;
-using FloorItemPool = System.Collections.Generic.IReadOnlyList<CatacombsOfYarl.Logic.Content.FloorItemPoolEntry>;
-using IdentifiableItemDef = (string id, CatacombsOfYarl.Logic.Content.ItemCategory category);
-using PityTrackerType = CatacombsOfYarl.Logic.Balance.PityTracker;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
+using UnderWarden.Logic.Persistence;
+using BoonTable = System.Collections.Generic.IReadOnlyDictionary<int, UnderWarden.Logic.Balance.BoonDefinition>;
+using FloorItemPool = System.Collections.Generic.IReadOnlyList<UnderWarden.Logic.Content.FloorItemPoolEntry>;
+using IdentifiableItemDef = (string id, UnderWarden.Logic.Content.ItemCategory category);
+using PityTrackerType = UnderWarden.Logic.Balance.PityTracker;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Assembles a complete GameState for one dungeon floor.
@@ -438,7 +438,7 @@ public sealed class DungeonFloorBuilder
         // because they are non-blocking pickups, not interactive features.
         foreach (var feature in allFeatures)
         {
-            if (feature.Get<CatacombsOfYarl.Logic.ECS.KeyItemComponent>() != null)
+            if (feature.Get<UnderWarden.Logic.ECS.KeyItemComponent>() != null)
                 state.FloorItems.Add(feature);
             else
                 state.Features.Add(feature);

@@ -32,7 +32,7 @@ Port the PoC faction system (~/development/rlike/components/faction.py). Monster
 Static hostility matrix matching PoC `faction.py`. Uses string-based faction IDs (already in YAML).
 
 ```csharp
-namespace CatacombsOfYarl.Logic.AI;
+namespace UnderWarden.Logic.AI;
 
 /// <summary>
 /// Static hostility matrix between factions. Matches PoC components/faction.py.
