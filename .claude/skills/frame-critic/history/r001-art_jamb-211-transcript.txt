@@ -1,0 +1,47 @@
+RANK: 2 > 1 > 4 > 3
+
+BEST: 2
+BEST_WHY: The light falloff is doing real work: the far wall masses (top-left block, x≈0–180 / y≈70–400, and the top-right block) go to a near-black that still carries faint brick joints, so the dark reads as unlit stone rather than as empty canvas. The wall band at y≈415–455 has a dark top strip, a lit face with vertical dark studs, and a shadow drop onto the floor below it, so the wall has three readable surfaces and a height. The brazier (x≈575–625, y≈525–565) is drawn as a true top-down disc with its own warm spill on the bricks around it that is distinct in hue from the figure's cold-white spill — two light sources, two colours, both consistent with the fiction. The bound-timber bundle (x≈380–500, y≈585–640) has rope wraps that sit in the timber, and the orange is a plausible salvaged-wood colour rather than a decal. Bricks in the lit floor vary in width and the joints wander, so the run reads as laid, not tiled.
+
+WORST: 3
+WORST_WHY: Nothing in it has a surface. The grey wall blocks along the left (x≈0–50) and bottom (y≈205–288) are a single stamped tile with no top/face distinction and no cast shadow onto the floor, so the walls have zero height. The brown floor (x≈55–245, y≈0–205) is a uniform speckle-noise fill with the same blue and dark flecks repeating at the same density everywhere. The green pool (x≈245–335, y≈0–190) is a hard-edged rectangle with a one-pixel lighter border and no bank, no depth gradient, no reflection — a filled rect. There is no light falloff at all; the frame is evenly lit corner to corner, so the light-carrier premise is absent. The orc figure at the top edge (x≈215–235, y≈0–25) is clipped by the frame. The barrels (y≈195–215), crates (x≈60–95), and bones sprite (x≈210–240, y≈110–130) sit on the floor with no contact shadow. This is placeholder-tile art.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Remove the pale grey wedge at the corridor/wall junction (x≈505–545, y≈395–440); it is a corner-tile that is lit at a value the rest of the wall never reaches and reads as a rendering seam. Either draw a proper corner piece at the wall-face value or let the face run through.
+- The X-brace at bottom-left (x≈215–305, y≈645–705) straddles the floor edge and the dark wall top below it; snap it wholly onto the floor tile or wholly onto the wall face, and give it a contact shadow on whichever it sits on.
+- The A-brace on the right wall face (x≈575–680, y≈400–450) sits over the face band with no shadow and no pins where it meets the stone; add a dark shadow line under each leg and a driven pin at each foot so it is attached to the wall rather than pasted on.
+- The standing slab left of the figure (x≈265–295, y≈535–640) is drawn in elevation (tall face, wider base) while the brazier is drawn in plan; redraw it as a top-down footprint with a short cast shadow to the right, matching the brazier's projection.
+- The long crack from (≈240, 460) to (≈330, 620) crosses brick joints as one continuous overlaid line; break it at each joint and offset it a pixel so it is in the stones, not on them.
+- The hatched scratch texture on the lit floor bricks (x≈480–740, y≈470–720) is at the same stroke density and angle on every brick; vary it per brick and drop it entirely from bricks under the figure's brightest spill.
+
+FLIP 2:
+- The crate at left (x≈195–305, y≈470–515) is drawn in 3/4 view with a front face, while the brazier is in plan; redraw the crate as a top-down lid with a cast shadow, and bring the saturated orange down toward the wood of the timber bundle so it is not the brightest chroma in the frame.
+- The standing slab (x≈265–295, y≈535–640) is in elevation (tall face, wider base); redraw as a top-down footprint with a cast shadow to the right.
+- The long crack from (≈240, 470) to (≈330, 630) runs across brick joints as one continuous line; break it at each joint.
+- The hatched scratch texture on the lit floor bricks (x≈480–740, y≈470–720) is uniform in density and angle on every brick; vary per brick and clear it under the brightest spill.
+- The lit wall face band (x≈185–500, y≈415–455) repeats the same dark stud at a regular interval; vary the spacing and drop one or two so the run reads as repaired rather than stamped.
+- The figure's light bloom edge (x≈330–470, y≈450–540) is a smooth gradient over hard pixels; quantise the falloff to the sprite's pixel grid so it does not read as a soft-brush overlay on pixel art.
+
+FLIP 4:
+- The dark regions (top-left mass x≈0–180 / y≈0–400, top-right mass, and the far floor at bottom) are lifted to a mid blue-grey with a mottled, cloud-shaped noise across them; this is a fog/Perlin overlay and reads as a filter. Remove it and let the falloff go to the near-black of frame 2, keeping only faint brick joints.
+- The wall-top band above the lit face (x≈120–440, y≈390–440) shows large pale blotches from the same overlay; replace with the flat dark stone top surface.
+- Same crate projection fix as FLIP 2 (x≈195–305, y≈470–515): top-down lid, cast shadow, orange pulled toward the timber bundle.
+- Same standing-slab fix as FLIP 2 (x≈265–295, y≈535–640): redraw in plan.
+- Same crack fix as FLIP 2: break the (≈240, 470)–(≈330, 630) line at each joint.
+- Same floor-hatching fix as FLIP 2 (x≈480–740, y≈470–720).
+
+FLIP 3:
+- Give the wall tiles (left column x≈0–50, bottom rows y≈205–288) a top surface and a face at two different values, and cast a shadow from the wall onto the adjacent floor, so the walls have height.
+- Replace the floor fill (x≈55–245, y≈0–205) with drawn flagstones or packed earth that has joints and directional wear; the current uniform speckle noise with repeating blue/dark flecks is a procedural fill.
+- Give the pool (x≈245–335, y≈0–190) a bank: an irregular edge, a darker rim where the floor drops, and a depth gradient toward the centre; remove the one-pixel light border rectangle.
+- Add a light source at the figure and a falloff away from it; the frame is evenly lit and there is no light-carrier read at all.
+- Move the orc (x≈215–235, y≈0–25) fully inside the frame or scroll the camera; the sprite is clipped at the top edge.
+- Add contact shadows under the barrels (y≈195–215), crates (x≈60–95, y≈5–70) and bones (x≈210–240, y≈110–130) so they sit on the floor.
+- The wooden door with the orange element at (x≈25–40, y≈125–160) is flat against a flat wall; recess it into the wall face with a shadowed jamb.
+- Replace the identical repeated cracks on the stamped wall tiles (e.g. x≈0–50, y≈0–100 and again along the bottom row) with cracks unique to each block.
+
+Model: Claude Opus 5 (1M context).

@@ -1,0 +1,56 @@
+RANK: 2 > 4 > 1 > 3
+
+BEST: 2
+BEST_WHY: The floor masonry in the lit area (roughly x190–750, y460–700). The joints vary in width and darkness along a single course — the row under the hero has one joint that nearly closes and one that opens into a chip — and the brick faces carry short diagonal scratch strokes at different densities per brick, so the run reads as individually cut, worn stone rather than a stamped tile. The wall-top band at y395–455 is a different material (brown, coarser grain) with a continuous dark rope line and driven pins at irregular spacing (x~300, 390, 460, 580), which sells "repaired endlessly, don't care how it looks" without a label. The two light sources are different temperatures — cool-white on the hero, orange at the brazier — and in this frame the brazier's halo is tight enough that the brick joints on the right side (x600–750, y480–700) stay legible. The cool-blue cold falloff on the lower floor (y700+) is drawn at the same pixel density as the lit floor, so the dark reads as dark stone, not as a darkened copy.
+
+WORST: 3
+WORST_WHY: It is the free one. The dirt floor (x55–345, y0–215) is a flat brown fill with a red-brown speckle over it — the speckle has no direction, no wear paths, no relation to the barrels or the chests sitting on it, and looks like an add-noise filter. The grey stone tiles have a perfectly uniform 1px grid and every tile is identical apart from three or four scattered dots; the bottom brick band (y215–288) repeats one brick tile with no variation. The water (x250–345, y0–190) is a hex/scale pattern whose repeat is visible every ~16px, and it has bright green lily pads and semi-transparent teal moss blobs (at x15–45 y55–75, x350–380 y150–170) that are painted with a soft brush at a different resolution from everything else. The gold-framed chests at x60–95 with a white diamond glint are a treasure-box placeholder in a place that is supposed to be a filing system for souls. There is no light falloff at all. Nothing is broken; nothing is made.
+
+FLAGGED: 1, 2, 4
+SHIP: NONE
+
+FLIP 1:
+- The wall mass in the top ~40% of the frame (block x180–500, y70–390 and block x570–750, y70–390) is a smooth gradient-noise cloud at sub-pixel resolution next to a floor drawn on a 2px grid. Redraw it as rock/masonry on the same 2px grid so the wall and floor are the same material fidelity.
+- Inside those wall blocks there are hard straight facet edges (diagonal from about (360,70) to (180,130); the lighter wedge at x570–640 with a diagonal to (750,200)). These read as leaked shadow-caster polygons. Either snap them to tile edges or remove them.
+- The A-frame timber at x580–680, y400–450 is the most saturated object in the top half and reads as an orange letter "A". Desaturate to the wall band's timber tone, add grain, add a cast shadow on the band.
+- The brazier's orange wash (x600–750, y480–700) flattens the brick joints to near-invisible. Reduce its intensity or composite it multiply so the joints survive under it.
+- The brazier sprite at (600,545) is drawn at 1px density while the hero, floor and props are 2px. Redraw at 2px.
+- The vertical strip at x120–185, y390–700 is the floor texture washed to a smeared brown-grey with no brick structure; it does not read as wall face or wall top. Redraw it as one or the other, matching the horizontal band at y395–455.
+- The cracks are long smooth arcs that run over 6–8 bricks without acknowledging a joint (the arc from (240,520) to (560,470); the arc at x560–750, y640–700). Break them at joints and add jogs so they follow the masonry.
+- The hero's light halo blurs the floor under it (x400–520, y470–560) — the overlay is soft while the floor is crisp. Quantize the light overlay to the pixel grid or cut the blur radius.
+- The X-brace at x220–310, y650–700 sits at the corridor junction with no ground contact shadow; add one.
+
+FLIP 2:
+- Same wall-mass fix as FLIP 1: replace the gradient-noise cloud in the top-left block (x180–500, y70–390) and top-right block (x570–750, y70–390) with drawn stone on the 2px grid.
+- Remove or tile-snap the straight facet edges inside those blocks (diagonal at (360,70)→(180,130); wedge at x570–640).
+- The crate at x195–300, y475–515 is a flat saturated orange box with two lighter tabs, no grain, no nails, no wear, no floor shadow. It is placeholder quality next to the floor it sits on. Add plank lines and nail heads, desaturate to the wall band's timber, add a cast shadow.
+- The brazier's halo ends within ~40px of the sprite; a fire throws more than the hero's lantern does. Extend the falloff radius while keeping the intensity of this frame, not frame 4's.
+- Brazier sprite is at 1px density vs 2px everywhere else. Redraw at 2px.
+- The vertical strip at x120–185, y390–700 has no brick structure; redraw as wall face or wall top.
+- Cracks: break the long arcs (from (240,520) to (560,470); x560–750, y640–700) at brick joints.
+- The hero's light overlay blurs the floor under it (x400–520, y470–560); quantize or tighten.
+- The tied bundle at x380–500, y590–640 has no floor shadow; add one so it sits on the stone rather than floating.
+
+FLIP 4:
+- Same wall-mass fix: replace the gradient-noise cloud in blocks x180–500/y70–390 and x570–750/y70–390 with drawn stone on the 2px grid.
+- Remove or tile-snap the straight facet edges inside those blocks.
+- The brazier wash here is the wide version: the right floor (x600–750, y480–700) goes to a flat orange haze and the brick joints nearly disappear. Pull the intensity back to frame 2's level, then extend only the radius.
+- The crate at x195–300, y475–515: same fix as FLIP 2 — grain, nails, desaturate, cast shadow.
+- Brazier sprite at 1px density; redraw at 2px.
+- Vertical strip x120–185, y390–700: redraw as wall face or wall top.
+- Cracks: break at joints.
+- Hero light overlay: quantize or tighten so the floor under the hero stays crisp.
+- Tied bundle at x380–500, y590–640: add a floor shadow.
+
+FLIP 3:
+- Add the light falloff the fiction specifies: a light on the figure at (220,5) with the room darkening away from it. Right now the frame is uniformly lit.
+- Dirt floor (x55–345, y0–215): replace the red-brown speckle with drawn ground — wear paths between the door at (30,130) and the chests, debris, a drain, dry patches — at the tile pixel size.
+- Grey stone tiles: vary the joint width and darkness, chip corners, break two or three tiles, so they stop reading as one stamped tile.
+- Bottom brick band (y215–288): vary brick lengths and values; add the same wear as the floor.
+- Water (x250–345, y0–190): break the ~16px repeat, darken toward the edges, remove the lily pads.
+- Moss blobs at (15–45, 55–75), (350–380, 150–170), (15–40, 205–225) are soft-brush at a different resolution; redraw them hard-edged on the tile grid or remove.
+- Chests at x60–95 (y0–25 and y50–70): remove the gold frame and diamond glint; make them the same timber as the barrels.
+- The figure at (220,5) is clipped at the frame top and narrower than a barrel; check the sprite scale against the props.
+- The white scatter at x205–235, y115–125 is a handful of unstructured white pixels; draw it as a readable object or remove it.
+
+Model: Opus 5 (1M context)

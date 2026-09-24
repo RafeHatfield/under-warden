@@ -1,0 +1,124 @@
+{
+ "name": "tier1_props_review",
+ "_what": [
+  "THE TIER-TWO PROPS SCENE — the combined room's geometry, with orc work standing in it.",
+  "",
+  "§12.2 (Rafe, 2026-09-10) authors props at READABILITY SCALE: a prop fills most of its cell and a large object may span 1x2 or 2x2 cells. The marker is a standing stone TALLER THAN SASHA, so it is 1x2; the barricades are chest-high and wide, so they are 2x1. The previous version of this scene seated every prop in a single cell and the gate failed it on identifiability — 'small, unrecognizable except the fire'.",
+  "",
+  "TWO THINGS IN THIS FILE ARE FIXES FOR FINDINGS, NOT PREFERENCES:",
+  "",
+  "1. THE BARRICADES ARE NOT IN A ROW (#210). The previous scene put all three at y=14 on a two-cell pitch, and a seat measured it: 'three props at y 612, 613, 613, spaced 125px and 125px apart ... break the row'. That is §8.3.1's motif trap built by the SCENE rather than by a tile — a repeated element at constant pitch reads as pattern whether the repetition comes from a tilemap or a placement list. They now sit on different rows, at different pitches, and the two variants differ.",
+  "",
+  "2. NO LEGIBILITY POINT STANDS ON A PROP. The previous scene declared (4,14) as a LIT FLOOR reference and then put barricade 9810 on it, so ProbeFloorLegibility was measuring a sprite and reporting it as floor luminance — in every gated props build, including the one that installed. Found by review; the scene builder now refuses it outright.",
+  "",
+  "3. EVERY PROP IS INSIDE THE LIT RADIUS, AND THE GUARD PUT IT THERE. My first arrangement under §12.2 put the fire at 4.1 tiles and a barricade at 5.7, and `verify_props.py` refused the scene: 25.41 and 13.70 against §13.8's floor of 36.7. A prop in the dark cannot answer the criterion it was placed for. The check now reads the WORST cell of each footprint rather than the anchor — a 1x2's far cell is always the darker one, so anchor-only sampling would have passed a standing stone whose dressed face sits below the floor."
+ ],
+ "width": 17,
+ "height": 21,
+ "player": {
+  "x": 6,
+  "y": 12
+ },
+ "carve": [
+  {
+   "x0": 3,
+   "y0": 12,
+   "x1": 13,
+   "y1": 14
+  },
+  {
+   "x0": 3,
+   "y0": 16,
+   "x1": 13,
+   "y1": 19
+  },
+  {
+   "x0": 3,
+   "y0": 15,
+   "x1": 4,
+   "y1": 15
+  },
+  {
+   "x0": 6,
+   "y0": 15,
+   "x1": 13,
+   "y1": 15
+  },
+  {
+   "x0": 8,
+   "y0": 6,
+   "x1": 8,
+   "y1": 11
+  },
+  {
+   "x0": 3,
+   "y0": 2,
+   "x1": 13,
+   "y1": 5
+  },
+  {
+   "x0": 1,
+   "y0": 16,
+   "x1": 2,
+   "y1": 17
+  }
+ ],
+ "props": [
+  {
+   "tileId": 9800,
+   "x": 4,
+   "y": 13,
+   "w": 1,
+   "h": 2,
+   "layout": [
+    9800,
+    9801
+   ],
+   "blocks": true,
+   "why": "B-PROP-001 the boundary marker stone, 1x2 — §12.2's own example: a standing stone TALLER THAN SASHA. Content is 20x49 native where the failed version was 10x15. Worst cell 2.8 tiles from the station.",
+   "shape": "box"
+  },
+  {
+   "tileId": 9810,
+   "x": 3,
+   "y": 15,
+   "w": 2,
+   "h": 1,
+   "layout": [
+    9810,
+    9811
+   ],
+   "blocks": true,
+   "why": "B-PROP-002a the barricade, 2x1 — STANDS ACROSS THE LINE (#207 flip, Rafe 2026-09-13): it closes the gap between the west wall (2,15) and the pillar (5,15), so a seat reads a blockade rather than a heap in open floor. The route stays open east of the pillar. Chest-high and wide (§12.2); an X-frame with a bar lashed behind and rope gripping every joint (§7.1).",
+   "shape": "box"
+  },
+  {
+   "tileId": 9812,
+   "x": 9,
+   "y": 12,
+   "w": 2,
+   "h": 1,
+   "layout": [
+    9812,
+    9813
+   ],
+   "blocks": true,
+   "why": "B-PROP-002b, the bound stack — a DIFFERENT ROW at a DIFFERENT PITCH from A (#210), against the north wall's east end and beside the fire, whose cast shadow it throws (Rafe, 2026-09-13). Moved from (3,12) so A at (3,15) does not seal the pocket at (3,13); at (9,12)-(10,12) so it is inside the 750px frame (at (10,12) its east cell was clipped).",
+   "shape": "box"
+  },
+  {
+   "tileId": 9820,
+   "x": 9,
+   "y": 13,
+   "blocks": true,
+   "why": "B-PROP-003 the orc fire, 1x1 filling its cell — the one prop the gate could already name, now with its ring and fuel at legible size. 3.2 tiles out, which is where it was measured LIT before. The engine EMITS from it now (cast-shadows round, #205): `light` below; `shape: round` gives it the round exception's circular footprint for its occluder.",
+   "shape": "round",
+   "light": {
+    "color": "ff8a3c",
+    "energy": 0.0,
+    "radiusTiles": 4.0,
+    "_what": "B-PROP-003: the sprite receives, the ENGINE emits (#205). Warm, static, its own shadows. RAISED at the shadow walk (Rafe, 2026-09-13): 'the fire glows but doesn't light its surroundings or cast; it needs real radius and energy so the barricade beside it throws a shadow away from it' — 0.9 / 2.5 tiles -> 1.6 / 4.0 tiles, and the rig panel's `fire` row sets energy live. RULED at the props walk (Rafe, 2026-09-13): 'the fire is good' — energy 1.6, reach 4.0 tiles, tint ff8a3c, flicker ON (§9.2's tended exception). All three are required here; the engine supplies no default."
+   }
+  }
+ ]
+}

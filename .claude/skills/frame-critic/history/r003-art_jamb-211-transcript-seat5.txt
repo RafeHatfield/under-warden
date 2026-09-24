@@ -1,0 +1,43 @@
+RANK: 1 > 2 > 4 > 3
+
+BEST: 1
+BEST_WHY: The flagstone floor in 1 is laid in courses of varying stone length — long slabs next to half-stones (e.g. the run at y≈600–650 from x≈400 to x≈700) — with 1px joints that step in depth, so the floor reads as laid ashlar rather than a tiled repeat. The wall's front face (y≈425–455) is a continuous timber beam with driven pins at irregular spacing (x≈300, 390, 455) and the pin shadows respond to the light falloff, which sells the orc-repair fiction without a single decorative flourish. The brazier at (570–625, 525–570) actually lifts the floor around it — the ring of stones is brighter than the stones one course out — so the second light source is coherent with the carried one.
+
+WORST: 3
+WORST_WHY: There is no light model at all: the frame is the same value in every corner, the figure at (218,12) carries nothing, and the brief's one non-negotiable rendering rule is simply absent. The pool at (248–375, 0–190) meets the dirt with a 1px straight cut on its left and bottom edges — no bank, no corner tile — which is the classic missing-transition-tile tell. The moss blobs on the wall tops (15–45/55–80, 350–380/150–170, 15–40/200–230) are soft-alpha airbrush decals sitting on hard-pixel tiles. Two identical chests (65–95/5–30 and 65–95/50–70) and two identical barrels (115–145 and 160–190 at y≈195–215) are stamped side by side. The water fill is a regular hex/fish-scale repeat visible at 1x. It reads as a stock RPG tileset dropped into a map editor.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The crate (190–300/475–520), bound beam (380–500/590–640), brazier and figure are drawn at 3-screen-pixel blocks while the flagstones under them are at 1px; redraw the props at the floor's pixel density so they sit on the floor instead of pasted over it.
+- Standing stone at (260–300, 535–640) is a flat single-value fill with no surface and its lit face is the brightest thing in the frame; give it the floor's hatched-stone treatment, chip the edges, and drop its top face below the value of the stone under the figure.
+- Vertical cool-grey column on the floor at x≈505–565 from the wall (y≈455) down to y≈650, directly under the corridor mouth: the light map is sampling the dark corridor tiles; blend across tile columns or clamp so the room floor under the opening matches its neighbours.
+- 1px crack lines (the arc from ~560,720 to ~750,660; the run from ~230,540 to ~500,530) cross stone joints without deflecting; break them at each joint or route them along the joints.
+- Isolated thick dark dashes on the shadowed lower-right floor (~685,660; ~620,700; ~570,720) read as leftover decal fragments; remove or extend them into full joints.
+- Wall-face beam ends flush at the corridor edge at x≈500 with no end face; add a return/end-grain where the beam meets the opening.
+- The stone under the figure (~380–450, 470–520) clips to near-white; cap the light intensity so texture survives at the centre.
+
+FLIP 2:
+- Everything in FLIP 1 (same scene).
+- The brazier at (570–625, 525–570) is drawn burning but the floor around it is barely lifted (right-floor mean ≈90 vs ≈150 in frame 1); give the fire a light radius so a lit fire lights its own ring.
+
+FLIP 4:
+- Everything in FLIP 1 that isn't prop-specific (stone, corridor column, cracks, dashes, beam end, clipping).
+- A-frame brace at (580–680, 400–450) is a saturated-orange 3px-pixel prop sitting on the wall's top surface, overlapping the beam, uniformly lit with no contact shadow; set it against the wall face with its feet on the floor row and shade it with the local light value, or remove it.
+- Crossed timbers at (215–300, 650–700) sit half on the lower wall's top face and half in black, lit as if in full light; move them onto floor tiles and darken them to match the surrounding value.
+- Dark diagonal wedges at the corridor corner (505–530, 385–455) and the lower opening (380–400, 650–720) are triangular black slabs in a straight top-down frame; replace with a straight wall-side reveal or drop them.
+- Stone strap at (250–320, 620–640) extends past the stone's left edge; align it to the stone's footprint.
+
+FLIP 3:
+- Add the carried-light falloff from the figure at (218,12) so the far corners darken; the frame currently has no light source.
+- Pool at (248–375, 0–190): add bank/shore edge tiles and corner tiles on the left and bottom edges instead of the 1px straight cut.
+- Redraw the moss blobs on the wall tops as hard-edged pixel clusters; they are soft-alpha decals over hard-pixel tiles.
+- Vary the two chests (65–95/5–30, 65–95/50–70) and two barrels (115–145 and 160–190 at y≈195–215): rotation, damage, lid state — not identical stamps.
+- Wall-top slabs are one flat grey with one crack sprite reused (15/30–70, 355/150–170); add at least three crack variants and some course-value variation.
+- Dirt floor is a uniform speckle fill; add wear toward the doorways and a darker band against the wall bases.
+- The orange plank at (25–40, 125–165) hanging over the west doorway on the dark wall face is unidentifiable; draw it as a door, a torch, or a brace — one thing.
+- Replace the regular hex/fish-scale water fill with an irregular ripple; the repeat is visible at 1x.
+
+Model: Claude Opus 5 (1M context)

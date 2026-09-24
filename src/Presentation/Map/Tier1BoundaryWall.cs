@@ -708,6 +708,24 @@ public static class Tier1BoundaryWall
                         // cell, whose overlay children reach +4 and are added after this cell, so
                         // at +1 it drew underneath them and was not in the frame at all.
                         ZIndex = 5,
+                        // ── THE EAST FACE RECEIVES SHADOW — #211 round 1 (Rafe's jamb cull) ──
+                        //
+                        // Measured, not guessed: at the corridor mouth the lamp is SOUTH-WEST of
+                        // the jamb, the corridor floor the face hangs over sits in the jamb's own
+                        // shadow at ratio 0.54, and the face — inheriting the first-surface
+                        // exemption below from its parent — was lit at 1.00: a parallelogram at
+                        // full light pasted over a shadowed floor, its 45° top edge parallel to
+                        // the shadow's 45° boundary 32 px above it. "A hard diagonal edge, not a
+                        // face; a straight edge that looks like the occluder's shadow mask." The
+                        // pillar's face passed on the same mask only because the lamp happened
+                        // to be on its side.
+                        //
+                        // §12.1a: the FIRST surface the lamp meets is exempt; everything behind
+                        // it receives. An east face is the first surface only when the lamp is
+                        // east of the cell. So it takes the GROUND mask, and its own cell's
+                        // occluder does the facing for free — lamp west: in the cell's shadow
+                        // with the floor beside it; lamp east: lit. No rig value moves.
+                        LightMask = 1,
                     };
                     s.AddChild(ef);
                     eastFaces++;
@@ -754,7 +772,8 @@ public static class Tier1BoundaryWall
                 int lmask = adjacentFloor ? ReviewLighting.PropLightMask : 1;
                 s.LightMask = lmask;
                 foreach (var ch in s.GetChildren())
-                    if (ch is CanvasItem cci) cci.LightMask = lmask;
+                    if (ch is CanvasItem cci && ch.Name != EastFaceNode)   // #211: the east face receives (above)
+                        cci.LightMask = lmask;
                 if (adjacentFloor) firstSurface++; else occludedMass++;
             }
         }
@@ -788,7 +807,7 @@ public static class Tier1BoundaryWall
              + $"edge_check={cfg.EdgeCheck.Count}/OK bindings={bound}({kinds}) "
              + $"cap={capLaid}+{capVoid}void "
              + $"lightmask(first_surface={firstSurface},occluded_mass={occludedMass}) "
-             + $"cap_bands_over_props={capBands} east_faces={eastFaces} "
+             + $"cap_bands_over_props={capBands} east_faces={eastFaces}(ground-mask) "
              + $"age0..3={ages} traffic=spine:{tf.SpineLength:F0}/routes:{tf.Routes} "
              + $"manifest={manifestResPath}";
     }

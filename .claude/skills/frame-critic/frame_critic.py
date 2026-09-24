@@ -156,7 +156,45 @@ def history(where=None):
         except Exception:
             continue
     out.sort(key=lambda v: v.get("timestamp", ""))
-    return out
+    return _apply_ruling_voids(out)
+
+
+def _apply_ruling_voids(verdicts):
+    """A round RULED VOID reads as VOID — in memory, never on disk.
+
+    RULED (Rafe, 2026-09-13, JUDGE RULING lane art/jamb-211): "Runner seat count is five, never
+    one; the two one-seat rounds are recorded as VOID and count for nothing." Those rounds sit
+    on disk as INSTALL-LATEST (a single sample, §13.13) and nothing is deleted or rewritten —
+    JUDGE-CLEARED.json names them under `rounds_voided` with his words, and every reader of the
+    history (the guards, the progress series, the stall report) sees them as VOID from here. A
+    marker with no quoted ruling voids nothing."""
+    if not os.path.exists(JUDGE_CLEAR):
+        return verdicts
+    try:
+        m = json.load(open(JUDGE_CLEAR))
+    except Exception:
+        return verdicts
+    for entry in (m if isinstance(m, list) else [m]):
+        if not isinstance(entry, dict) or not (entry.get("ruling") or "").strip():
+            continue
+        voided = {r for r in (entry.get("rounds_voided") or []) if isinstance(r, int)}
+        for v in verdicts:
+            if v.get("lane") == entry.get("lane") and v.get("round") in voided \
+                    and v.get("verdict") != "VOID":
+                v["verdict_on_disk"] = v.get("verdict")
+                v["verdict"] = "VOID"
+                v["voided_by_ruling"] = entry["ruling"]
+                # "count for nothing": not a VOID in the broken-judge streak either. It keeps
+                # its round number (numbering is derived from the count on disk) and drops out
+                # of every guard's and series' view via lane_rounds().
+                v["counts_for_nothing"] = True
+    return verdicts
+
+
+def lane_rounds(hist, lane):
+    """The lane's rounds that COUNT — everything on disk for the lane, less the rounds a ruling
+    said count for nothing (still numbered, still in the diff, never read by a guard)."""
+    return [v for v in hist if lane_of(v) == lane and not v.get("counts_for_nothing")]
 
 
 def lane_of(v):
@@ -304,6 +342,32 @@ def judge_cleared(lane, tail, morgue=None):
         if ok:
             out |= covered
     return out
+
+def redraw_ruled(lane, seat, hist):
+    """Has Rafe named THIS seat of the lane's last round for a re-draw, in JUDGE-CLEARED.json?
+    Read, not trusted: the marker needs a quoted ruling, this lane, `redraw_round` equal to the
+    lane's last round on disk, and the seat in `redraw_seats`."""
+    if not os.path.exists(JUDGE_CLEAR):
+        return False
+    try:
+        m = json.load(open(JUDGE_CLEAR))
+    except Exception:
+        return False
+    last = [v for v in hist if lane_of(v) == lane]
+    if not last:
+        return False
+    last_round = last[-1].get("round")
+    for entry in (m if isinstance(m, list) else [m]):
+        if not isinstance(entry, dict) or entry.get("lane") != lane:
+            continue
+        if not (entry.get("ruling") or "").strip():
+            continue
+        if entry.get("redraw_round") != last_round:
+            continue
+        if seat in {x for x in (entry.get("redraw_seats") or []) if isinstance(x, int)}:
+            return True
+    return False
+
 
 # ================================ the human gate's own verdict =================================
 #
@@ -562,7 +626,7 @@ def guards(hist, lane, park=None, gate_path=None):
                     three above did not see something they should have, and that is worth
                     knowing.
     """
-    lane_hist = [v for v in hist if lane_of(v) == lane]
+    lane_hist = lane_rounds(hist, lane)
 
     # ── THE SERIES IS THE ITEM UNDER WORK — RULED (Rafe, 2026-09-08). ────────────────────────
     #
@@ -723,7 +787,7 @@ def guards(hist, lane, park=None, gate_path=None):
 
 def write_stall(name, why, hist, lane, cfg, out=None):
     out = out or STALL
-    lane_hist = [v for v in hist if lane_of(v) == lane]
+    lane_hist = lane_rounds(hist, lane)
     L = []
     L.append("# STALL REPORT — %s\n" % name)
     L.append("**The line has stopped and is not restarting itself.** LOOP-PROCESS §1.1.4 ruling "
@@ -904,7 +968,17 @@ def pick_plant(surface, morgue, exclude=(), axis=None, subject=None, regime=None
                 "plant cannot control an object deck. Seed a Rafe-culled frame tagged "
                 "subject=%r in\n  %s" % (subject, surface, subject, os.path.join(MORGUE, "MORGUE.json")))
     if axis:
-        on_axis = [e for e in entries if axis in (e.get("axis") or [axis])]
+        # ── A DECK MAY ASK ON MORE THAN ONE AXIS — "plants on both axes" (Rafe, 2026-09-13) ──
+        #
+        # The jamb round is judged on two things at once: the east face's CONSTRUCTION (is it a
+        # face or a flat quad) and the CAST EDGE beside it (is the wedge's boundary a shadow or a
+        # mask). One plant cannot be wrong on both without being wrong on everything, so the
+        # deck names both axes and the draw takes every entry wrong on EITHER. Dealt without
+        # replacement below, a five-seat panel then exercises both controls every round. A
+        # string is one axis, as before; an entry with no `axis` still answers any question.
+        axes = [axis] if isinstance(axis, str) else [a for a in axis if a]
+        on_axis = [e for e in entries
+                   if not e.get("axis") or any(a in e["axis"] for a in axes)]
         if on_axis:
             entries = on_axis
     if not entries:
@@ -1356,10 +1430,15 @@ def main():
                          "because its plant was mis-tagged. RULED (Rafe, 2026-09-08): a seat "
                          "voided by a mis-tagged plant is re-drawn, not the round; a correct "
                          "plant missed still voids.")
-    ap.add_argument("--seats", type=int, default=1,
+    # DEFAULT FIVE, NOT ONE. LAW (bible §13.13): a gate's binding term must never be a single
+    # sample; RULED five seats (Rafe, 2026-09-09). The default was 1 and it bit: lane
+    # art/jamb-211 r001 ran one seat by omission and wrote an INSTALL-LATEST nobody may install
+    # on. A default that contradicts the law is a trap for the next builder, so the law is the
+    # default; `--seats 1` is still available for a self-test that says so.
+    ap.add_argument("--seats", type=int, default=5,
                     help="how many INDEPENDENT blind seats judge this round. Ruled at 3 for a "
-                         "PASS-INSTALL vote (Rafe, 2026-09-08); higher values measure the "
-                         "comparator's own noise floor on unchanged bytes.")
+                         "PASS-INSTALL vote (Rafe, 2026-09-08), five since 2026-09-09; higher "
+                         "values measure the comparator's own noise floor on unchanged bytes.")
     ap.add_argument("--timeout", type=int, default=2400)
     # ── SHOWING THE GUARDS THEY CAN FIRE, WITHOUT REIMPLEMENTING THEM ────────────────────────
     # LOOP-PROCESS §4 / bible §13.5: no check's pass counts until it has demonstrated it can
@@ -1399,6 +1478,23 @@ def main():
     # round. Worse, "never run additional rounds past a broken judge" cannot be honoured by a
     # check that happens at the end of the additional round.
     name, why = guards(hist, lane, a.park, a.gate_ruling)
+    if name == "broken-judge" and a.redraw_seat is not None \
+            and redraw_ruled(lane, a.redraw_seat, hist):
+        # ── A RULED RE-DRAW RUNS UNDER THE GUARD IT IS THE ANSWER TO ─────────────────────────
+        #
+        # RULED (Rafe, 2026-09-13, lane art/jamb-211): "Judge cleared. ... Re-draw seats 1 and 4,
+        # run the five-seat round again on the same frozen bar and the same deck. If a second
+        # round trips the guard, stop and bring me the plants, not the seats."
+        #
+        # `judge_cleared()` excuses a round only once its re-drawn seats have CAUGHT — which is
+        # right, and which means the re-draw itself could never start while the guard it repairs
+        # is firing. So the marker may also name the seats to re-draw, in his words, and exactly
+        # that invocation passes: the same round, the same frozen frame (checked below), one of
+        # the named seats. Nothing else does. A re-draw that misses raises the seat-level term
+        # on the spot, and the guard stands.
+        print("\n== broken-judge is live, and this is the RULED re-draw of seat %d — proceeding "
+              "under JUDGE-CLEARED.json" % a.redraw_seat)
+        name = None
     if name:
         p = write_stall(name, why, hist, lane, cfg, a.stall_out)
         print("\n*** STOP — %s ***\n%s\n\nwritten: %s\n"
@@ -1979,7 +2075,7 @@ def main():
         print("         carries no discrimination this round.")
 
     # ── the progress signal, and the whole series it belongs to ───────────────────────────────
-    lane_hist = [v for v in hist if lane_of(v) == lane]
+    lane_hist = lane_rounds(hist, lane)
     prior = [prog(v).get("rank_score") for v in readable(lane_hist)]
     prior = [s for s in prior if s is not None]
     best_before = max(prior) if prior else None

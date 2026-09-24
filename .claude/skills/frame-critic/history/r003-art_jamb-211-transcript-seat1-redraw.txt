@@ -1,0 +1,46 @@
+RANK: 3 > 2 > 4 > 1
+
+BEST: 3
+BEST_WHY: The lit floor in 3 reads as a cut and worn surface, not a stamp. Slab sizes vary along a single row (the row at y≈560–600 has a wide slab at x≈420–520 next to narrow ones at x≈560–600), and cracks cross joints — the long crack that starts near the crate at (300,500) runs down through (380,560) to (450,620) across three slabs, which is what a real fracture does. The wall band at y≈420–460 is a dark stone face with a horizontal timber run and driven pins at roughly x=300, 390, 460, 590, 680, and the timber sits in front of the stone with its own shadow, so the "repaired with rope and pins" fiction is drawn, not implied. The unlit rock mass (upper-left 200–440 × 80–380, lower-left 60–200 × 700–900) is crisp at full resolution with fracture lines at two scales — long faults and small chips — so darkness reads as darkness over rock rather than as a blur. The figure's light falls off smoothly and the brazier at (595,545) casts its own warm pool that merges with the main one without a seam.
+
+WORST: 1
+WORST_WHY: There is no light falloff anywhere — the frame is one flat exposure edge to edge, so the carried-light premise isn't drawn at all. The grey wall at left (x 0–50, y 0–190) and the whole bottom band (y 195–288) are the same stamped brick pattern, every brick the same rectangle at the same value, with no top-surface/face distinction; the bottom band consequently reads as both wall and floor at once (moss blobs are placed on it at (30,215) as if it were floor, but it uses the wall texture). The dirt floor is a single repeating speckle tile with the tile grid faintly visible through it. The water at right (x 250–340) is a flat green fill with soft round blobs that meets the dirt on a hard straight vertical line with no bank, edge or depth. The "bones" at (215–235, 115–125) are a handful of loose white pixels. Crates, barrels and the figure carry heavy black outlines while the terrain has none. Taken together it reads as a free tileset assembled in an editor.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Add distance falloff from the figure at (225,10); the frame is currently uniformly lit corner to corner.
+- Give the walls a top cap and a face with a distinct value step; currently the left wall (0–50 × 0–190) and the bottom band (y 195–288) are the same flat brick texture, so the bottom band is unreadable as wall or floor.
+- Vary the brick tile: every brick at left and bottom is the same rectangle at the same value; introduce joint-depth and size variation along a run.
+- Break the dirt repeat: the speckle tile repeats visibly and the tile grid shows through it; add 3–4 variant tiles and kill the grid seam.
+- Draw a bank where water meets dirt at x≈250; it is currently a hard vertical line. Give the water depth (darker toward centre, lighter at the edge) instead of a flat green fill with round blobs.
+- Draw the bone pile at (215–235, 115–125) as an object with form and shadow, or remove it; it is loose white pixels now.
+- Unify outline treatment: the crates (60–100 × 5–70) and barrels (115–190 × 190–215) have hard black outlines; the terrain has none. Pick one.
+- Ground the props: crates and barrels have no contact shadow, so they float on the dirt.
+
+FLIP 2:
+- Replace the unlit rock texture: the upper-left mass (200–440 × 80–380), the right mass (570–750 × 70–390) and the lower-left (60–200 × 700–900) are a blurred noise field with faint smeared cracks — it reads as a Gaussian filter over a texture. Render at the same pixel resolution as the lit slabs (compare the crisp fracture lines in the same regions of 3).
+- The stone-block pattern under the darkness at the bottom (200–750 × 720–900) is soft-edged; the joints should stay crisp and only the value should drop with distance.
+- The standing stone at (265–295 × 540–630) is a flat pale gradient with no surface; give it chips and joints consistent with the floor slabs.
+- The corridor floor at (440–500 × 70–390) uses the same mottled fill as the wall tops beside it, differing only in value; give it the slab texture so floor and wall-top are distinguishable by surface, not just brightness.
+- Cap the highlight under the figure: the ~60px bloom at (400,490) whites out the slab joints beneath it.
+
+FLIP 4:
+- Move the A-frame trestle at (580–680 × 400–450) off the wall: it is drawn on top of the wall band and its timber lintel. Place it on floor tiles and let the wall occlude it if it sits against the wall.
+- Move the X-frame sawhorse at (215–300 × 650–700): it straddles the room's lower wall edge, half on floor, half on the wall face.
+- Match the chamfered corner piece at (505–560 × 385–460) to its neighbours; it sits a step lighter than the wall on either side and reads as a stray tile.
+- The alcove at (310–400 × 650–710) is now empty and reads as a hole; either fill it with the prop that was moved or close it.
+- The standing stone at (265–295 × 540–630) is a flat gradient with no surface; texture it.
+- The corridor floor at (440–500 × 70–390) shares the wall-top fill; give it the slab texture.
+- Cap the highlight under the figure at (400,490) so the slab joints under the bloom stay visible.
+
+FLIP 3:
+- Texture the standing stone at (265–295 × 540–630); it is a smooth pale gradient rectangle with a dark base and reads as a placeholder capsule in the brightest part of the frame.
+- Distinguish the corridor floor at (440–500 × 70–390) from the wall tops flanking it; both use the same mottled rock fill, differing only in value.
+- Cap the highlight under the figure: the soft white disc around (400,490) erases the slab joints directly beneath it, so the floor goes blank at the point of maximum attention.
+- Break the long straight facet lines in the dark rock (e.g. the diagonal running from about (330,85) to (500,65), and the one at (180,690)); straight-edged cells read as procedural Voronoi rather than fractured stone.
+- Add a cast shadow from the wall band onto the floor along y≈460; the face meets the lit floor on a hard line with no contact shadow, so the wall doesn't sit on the floor.
+
+Model: Claude Opus 5 (1M context)

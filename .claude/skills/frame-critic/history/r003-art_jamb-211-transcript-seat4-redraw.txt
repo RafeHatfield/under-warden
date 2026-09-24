@@ -1,0 +1,40 @@
+RANK: 4 > 1 > 2 > 3
+
+BEST: 4
+BEST_WHY: The north wall band (x 130–750, y 395–455) is built, not stamped: the stone courses above the rail change block width along the run, the timber rail at y≈432 carries a plank patch and driven pins at uneven spacing, and the band's lower edge is a clean one-tone lip against the floor. The floor blocks under the light vary per block (flat faces, speckled faces, hatched faces) and the joint lines break in length, so the hotspot around the figure keeps its texture instead of blowing out (measured: tile texture survives at the brightest point). The two timber props take the scene light correctly — the A-brace's left leg (x 612–628) reads at the same value as the wall band beside it, and the X-brace at (225–290, 655–695) is dimmed to the dark corner it sits in — and they are the fiction's repairs rather than generic crates. Everything is at a consistent 2-px pixel scale, sprite, props and tiles alike.
+
+WORST: 3
+WORST_WHY: The pool (x 248–343, y 0–192) is a rectangle of hex-pattern water pasted onto dirt and stone with no bank, no edge tile, no shadow on any of its three visible sides — the water simply stops in a straight line. The "door" at (x 28–35, y 112–170) is a vertical strip of orange planks on a brick face with a solid flat brown rectangle continuing below it into the dirt; it reads as an unfinished sprite. There is no light falloff anywhere — the whole frame sits at one even midday value, so the one thing the scene is supposed to do (darken away from the figure) does not happen. The bottom wall face has one brick at (160–190, 268–282) with a lighter rim than its neighbours, which reads as a tile-variant mismatch. Chests are drawn front-on with drawers (they read as cabinets) while the barrels beside them are pure top-down. Net: looks like an asset-pack demo, not a paid game.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Remove or complete the orphan wall-face tile at (310–375, 645–705): it is a wall face with lit floor directly above it and floor on both sides; either give it a wall-top above and end-caps, or delete it.
+- Texture the standing pillar at (262–300, 540–630): it is a flat cream slab with no stone grain, the brightest object in the frame, and it casts no shadow despite being the tallest thing beside the light; add surface texture, a tone step between top and face, and a cast shadow toward lower-left.
+- Stop the crack overlay crossing mortar joints and surface boundaries: the crack from (245,455) to (330,600) runs across three blocks and their joints as one continuous 2-px bezier, and the arc at (560–700, 640–730) does the same; re-author cracks per block, terminating at joints.
+- Replace the straight anti-aliased diagonal on the wall-top shadow at (560–640, 340–390) with a pixel-stepped edge or a soft falloff; it is the only straight diagonal in the frame and reads as vector geometry over pixel art.
+- Desaturate the crate at (190–300, 480–515) toward the wall-band wood (saturation 0.81 vs 0.66 for the rail) so it reads as old timber rather than fresh paint.
+
+FLIP 2:
+- Everything in FLIP 1 (the scene is identical apart from lighting).
+- Cut the brazier's light radius/intensity by roughly half: the floor at (640–740, 560–660), ~300 px from the figure, is brighter (mean 80) than the floor 120 px to the figure's left; the picture is supposed to darken away from the figure and the brazier currently overrides that.
+- Remove the visible circular halo edge around the brazier at radius ~60 px from (600,545); ease it into the floor gradient.
+
+FLIP 3:
+- Add bank/edge tiles on all sides of the pool (x 248 and 343, y 192): an inner shadow line, a lip tile, and a wet-earth transition on the dirt side.
+- Rebuild the door at (28–35, 112–170): remove the flat brown rectangle below it, draw the door as a top-down object (leaf plus frame) sitting in the wall gap, and give it a real cast shadow.
+- Add the light falloff: a radial darkening from the figure at (218,5) so the far corners read as dark, with wall faces and floor both taking it.
+- Fix the mismatched brick at (160–190, 268–282) in the bottom wall face so its outline matches the neighbouring bricks.
+- Redraw the two chests at (60–100, 0–45) and (60–100, 48–90) top-down to match the barrels, or redraw the barrels front-on to match the chests; pick one perspective for props.
+- Vary the moss stamp: the same blob is reused at (13–45, 155–200), (15–40, 205–230) and (350–380, 150–175); add at least two more variants and rotate/flip them.
+
+FLIP 4:
+- Remove or complete the orphan wall-face tile at (310–375, 645–705) (same fault as frame 1).
+- Texture the pillar at (262–300, 540–630) and give it a cast shadow (same fault as frame 1).
+- Re-author the crack overlay per block; the (245,455)→(330,600) crack and the (560–700, 640–730) arc still cross joints.
+- Cut the brazier light by roughly half so falloff from the figure is monotonic (same fault as frame 2).
+- Pixel-step or soften the straight diagonal shadow edges at (560–640, 340–390) and on the chamfered dark blocks at (40–200, 660–720) and (400–420, 640–720); they are vector polygons over pixel tiles.
+
+Model used: Claude Opus 5 (1M context).

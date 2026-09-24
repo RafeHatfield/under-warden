@@ -1,431 +1,471 @@
 {
-  "_what": [
-    "THE PICTURE-PLANT MORGUE — known-bad delivered frames, kept as pictures.",
+ "_what": [
+  "THE PICTURE-PLANT MORGUE — known-bad delivered frames, kept as pictures.",
+  "",
+  "LOOP-PROCESS §4 requires a plant: one deliberately wrong candidate seeded into the set, and",
+  "if the critic does not catch it the round is VOID and its findings are not read.",
+  "",
+  "Every plant this project has built before now was GENERATED — plant_ashlar.py, plant_walls.py,",
+  "plant_family.py — a ruined family composed by the same composer from the same material. That",
+  "shape has failed four times in the recorded ledger, and each failure has the same root: the",
+  "plant is downstream of the engine, so an engine change can neutralise it silently.",
+  "",
+  "  wall round 9   VOID — plant missed. The plant was not in the picture.",
+  "  wall round 10  VOID — plant missed. Since the cap pass the cell's base is a cap window and",
+  "                 the wall family's top tiles are never drawn, so a plant that ruined only the",
+  "                 wall tiles differed from the family in 0.54% of pixels, in 21 cells.",
+  "  wall rounds 3, 6  VOID — the plant was culled for something the family shared.",
+  "",
+  "A PICTURE CANNOT BE NEUTRALISED BY AN ENGINE CHANGE. These bytes are fixed. The defect in them",
+  "is fixed. The only way to stop a morgue entry carrying its defect is to delete the file, which",
+  "is a visible diff.",
+  "",
+  "WHAT QUALIFIES FOR ENTRY. A frame Rafe personally culled at the device gate (§1's landing",
+  "gate), with his verbatim words and the commit whose build produced it. Not a frame an",
+  "instrument disliked; not a frame I thought was weak. The morgue is a record of human culls.",
+  "",
+  "SURFACE TAGS ARE LOAD-BEARING. The deck draws a plant of the SAME surface as the round. A",
+  "floor plant in a wall round is caught for its magenta wall mocks — the critic flags the right",
+  "image for the wrong reason, and a control that greens for the wrong reason is not a control",
+  "(LOOP-PROCESS §4.2). run_frame_critic.sh refuses to build a deck if the surface has no entry.",
+  "",
+  "KNOWN LIMIT, stated rather than discovered later: the `wall` lane holds ONE entry. Wall rounds",
+  "therefore draw the same plant every time. That is safe against the seat, which is fresh each",
+  "round and cannot remember, and it is NOT safe against a builder who learns to compose around",
+  "one picture. Add wall entries as wall culls happen.",
+  "",
+  "SURFACE IS A STRING OR A LIST, added for the combined round (2026-09-03). That round judges a whole room and the morgue was tagged when every round judged one surface at a time. Which entries can serve it was settled by READING THE PICTURES rather than the tags: the three floor culls each carry 3904 magenta pixels and would be caught for the debug colour instead of for their defect (§4.2); the two wall culls carry none and already have the real floor under them. Every entry now records that finding in `combined_eligibility`, so the next reader does not have to re-measure it.",
+  "AND THE `combined` LANE THEREFORE HOLDS TWO ENTRIES, which is the same known limit the wall lane is recorded with above and one entry better. Add combined entries as combined culls happen."
+ ],
+ "entries": [
+  {
+   "file": "keyline-floor.png",
+   "surface": "floor",
+   "sha256": "352461c6b0917d3892679efb16f895d939ca039c010cce6c249829d9e3aac224",
+   "source": "tools/tier1_floors/evidence/r24_onroute.png @ c611c59a",
+   "culled_by": "Rafe, device walk, 2026-08-31",
+   "verbatim": "outlined chips",
+   "defect": "every stone carries a dark outline. 92.7% of joint pixels landed on the bottom two rungs and the floor reads as a wireframe rather than as masonry.",
+   "provenance": "docs/KEYLINE-REGRESSION.md; the ruling is quoted in tools/tier1_floors/compose_ashlar.py (THE SHELTERED JOINT'S DEPTH IS A DISTRIBUTION). Fixed by c76dbd9d.",
+   "axis": [
+    "construction"
+   ],
+   "combined_eligibility": "NOT ELIGIBLE FOR A `combined` DECK: this frame carries 3904 magenta pixels (0.39% of it) because the wall family did not exist when it was captured. In a deck whose build has real walls a seat catches it for the debug colour — the right image flagged for the wrong reason, which LOOP-PROCESS §4.2 says is not a control at all.",
+   "subject": [
+    "floor"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "washed-slab-lane.png",
+   "surface": "floor",
+   "sha256": "538aaac2b97c1ede4f8b2454e6879aae30c91da024ada74317a92b6844dfe0d9",
+   "source": "tools/tier1_floors/evidence/r24_onroute.png @ 8640780f",
+   "culled_by": "Rafe, device walk, 2026-09-02",
+   "verbatim": "it looks like all the tiles on the walked path have been replaced.",
+   "defect": "the walked lane washes out into one bright slab. The masonry inside it stops reading, so the path is a decal laid over the floor rather than the same stones worn.",
+   "provenance": "quoted in tools/tier1_floors/measure_lane_window.py; docs/GATE-CONDITIONS.json records this exact capture as 'the keyline fix holds — the lane was the cull, not the masonry'. Fixed by 8b5640d7 and b36fe61c.",
+   "axis": [
+    "value"
+   ],
+   "combined_eligibility": "NOT ELIGIBLE FOR A `combined` DECK: this frame carries 3904 magenta pixels (0.39% of it) because the wall family did not exist when it was captured. In a deck whose build has real walls a seat catches it for the debug colour — the right image flagged for the wrong reason, which LOOP-PROCESS §4.2 says is not a control at all.",
+   "subject": [
+    "floor"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "tile-quantized-wear.png",
+   "surface": "floor",
+   "sha256": "2c097a288e54de45704834cedb319201278f83cd9e83bf2083ac317f502c169a",
+   "source": "tools/tier1_floors/evidence/r24_onroute.png @ 8b5640d7",
+   "culled_by": "Rafe, device walk, 2026-09-02",
+   "verbatim": "one tile worn, the one next to it not — that's not how it works.",
+   "defect": "the wear knows where the tiles are. Wear boundaries land on tile edges, so worn cells sit beside unworn ones with a square edge between them.",
+   "provenance": "quoted in tools/tier1_floors/measure_wear_grid_lock.py. Fixed by b36fe61c (per-pixel keying).",
+   "axis": [
+    "construction"
+   ],
+   "combined_eligibility": "NOT ELIGIBLE FOR A `combined` DECK: this frame carries 3904 magenta pixels (0.39% of it) because the wall family did not exist when it was captured. In a deck whose build has real walls a seat catches it for the debug colour — the right image flagged for the wrong reason, which LOOP-PROCESS §4.2 says is not a control at all.",
+   "subject": [
+    "floor"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "grey-walls.png",
+   "surface": [
+    "wall",
+    "combined"
+   ],
+   "sha256": "ec007b1adc6cc585f0c9c09216c44388839844d22245373873917191b915422c",
+   "source": "tools/tier1_walls/evidence/r24_standing.png @ 65a512a0",
+   "culled_by": "Rafe, device gate, 2026-09-02",
+   "verbatim": "Grey walls and ceiling; it looked better a few versions ago.",
+   "defect": "the wall family and the cap were never given the floor's chroma — a grey multiplier that looks like colour. Delivered: cap +27.6° of hue off the floor at 55% of its saturation, face +12.8° at 60%.",
+   "provenance": "tools/tier1_walls/BISECT-GREY.md names the approved build (0c60bc50) and bisects the three commits since it. Fixed by ab40dfaf (derive_quarry_tint.py).",
+   "axis": [
+    "chroma"
+   ],
+   "combined_eligibility": "Serves `combined` too: no magenta anywhere in it, and it was captured with the real tier-one floor laid under the walls, so it is already a whole-scene frame.",
+   "subject": [
+    "walls"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "cement-cap.png",
+   "surface": [
+    "wall",
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "sha256": "3fd8223295d2f92e59f8c24f9d84163ed3223381939a554d1f6398130c3a4f0a",
+   "source": "tools/tier1_walls/evidence/r22_standing.png @ 431c140f",
+   "culled_by": "Rafe, device walk, 2026-09-03",
+   "verbatim": "caps are still grey and read as cement, not stone",
+   "defect": "the found-rock cap with no architecture in it. The cap is one smooth field: no slabs, no fractures, no tooling, so the largest surface in frame is a value with noise on it. Measured, its wall cells carry a 4.6% hard-edge share against the 10.7% of the last approved build - the cap pass more than halved the wall's drawn edges. This is the CONSTRUCTION plant: it is wrong about whether a mass is made of anything, and it is deliberately RIGHT about chroma, so a round judged on construction cannot pass by fixing colour.",
+   "provenance": "tools/tier1_walls/CRITIC-STOP.md and STALL-REPORT.md; the frame the critic itself ranked below the grey plant in rounds r001 and r002.",
+   "combined_eligibility": "Serves `combined` too: no magenta anywhere in it, and it was captured with the real tier-one floor laid under the walls, so it is already a whole-scene frame.",
+   "subject": [
+    "walls"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "blown-highlight.png",
+   "surface": [
+    "combined"
+   ],
+   "sha256": "753f9c3f9584dcc69a919036ef6e16d7f227dd20a8b7e8e93ec0aded2fdb2ccc",
+   "source": "tools/tier1_floors/evidence/rerat_r1.png @ ea0668a6 — byte-identical to round 3's judged build frame (753f9c3f…)",
+   "culled_by": "TWO INDEPENDENT EYES. Rafe, device walk, 2026-09-06; and round 30's blind seat, 2026-09-06.",
+   "verbatim": "flat pale block, no interior texture (seat) / too shiny on worn areas, character washed out (Rafe)",
+   "defect": "The lamp's top end clips instead of rolling off. The Boundary's ffb066 has red 1.0, so RED pins first: 16,839 red-clipped pixels in the frame, 11.0% of the block the seat named, against blue peaking at 176 — and 2,044 pixels with red pinned while green is not, so the stone loses texture IN ITS DOMINANT CHANNEL and slides toward the light's own colour at the same time. The figure stops reading with it: the sprite's lightest pixels sit +1.0 levels above the floor's p95, where §13.8 puts the AMBIGUOUS point at 8.",
+   "provenance": "docs/ROUND-30-COMBINE-UNPARKED.md §3b; bible §6.2 'THE BOUNDARY'S LAMP PINS RED FIRST'. Fixed by the highlight shoulder (RULED Rafe 2026-09-07), src/Presentation/assets/shaders/tier1_polish.gdshader — red pins 16,839 -> 1,967.",
+   "axis": [
+    "tonal"
+   ],
+   "_why_this_is_a_plant_and_not_a_null": [
+    "§13.6 — a candidate never contributes to its own acceptance bar — and RULED SATISFIED",
+    "(Rafe, 2026-09-07) on a distinction worth keeping straight:",
     "",
-    "LOOP-PROCESS §4 requires a plant: one deliberately wrong candidate seeded into the set, and",
-    "if the critic does not catch it the round is VOID and its findings are not read.",
+    "  A NULL is the same build with one lever switched off. It is a CONTROL: it says what the",
+    "  lever contributed. It is not a plant, because nobody ever culled it.",
     "",
-    "Every plant this project has built before now was GENERATED — plant_ashlar.py, plant_walls.py,",
-    "plant_family.py — a ruined family composed by the same composer from the same material. That",
-    "shape has failed four times in the recorded ledger, and each failure has the same root: the",
-    "plant is downstream of the engine, so an engine change can neutralise it silently.",
+    "  THIS is a SUPERSEDED BUILD that two independent eyes culled on the axis now under test.",
+    "  It earned its place in the morgue the way every other entry did — by being rejected —",
+    "  and it is here because it is WRONG ON TONE, which is the question round 5 asks.",
     "",
-    "  wall round 9   VOID — plant missed. The plant was not in the picture.",
-    "  wall round 10  VOID — plant missed. Since the cap pass the cell's base is a cap window and",
-    "                 the wall family's top tiles are never drawn, so a plant that ruined only the",
-    "                 wall tiles differed from the family in 0.54% of pixels, in 21 cells.",
-    "  wall rounds 3, 6  VOID — the plant was culled for something the family shared.",
+    "The hazard §13.6 guards against is choosing a plant that flatters the build. This one does",
+    "the opposite: it is the build's own immediate predecessor, identical in scene, station,",
+    "geometry and rig, differing ONLY on the axis being judged. A seat that cannot separate",
+    "them has told us something real about the shoulder, not about the deck."
+   ],
+   "combined_eligibility": "ELIGIBLE, and it is the first entry captured AS a combined frame. Zero magenta: it was taken with the real floor, wall, binding and cap families laid and the void ring on, at the ratified rig. The three FLOOR culls are ineligible for carrying 3904 debug-magenta pixels; this one carries none.",
+   "subject": [
+    "room",
+    "figure"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "replaced-tiles-lane.png",
+   "surface": [
+    "combined",
+    "floor"
+   ],
+   "axis": [
+    "value"
+   ],
+   "sha256": "df46a8f76936d90a2b316d2745368e3aff9e13aad15df041a830dbc8d6e18c9a",
+   "source": "tools/tier1_floors/evidence/plant_lane19.png — the combined scene at the ratified rig with POLISH_LANE_GAIN restored to 1.9, REPRODUCING the culled condition rather than recovering the original frame. Labelled as a reproduction on purpose: the 1.9 build predates this scene and no capture of it survives, so what is preserved is the DEFECT, measured, not a recovered artefact.",
+   "culled_by": "Rafe, at the gate that stepped the lane gain down from 1.9.",
+   "verbatim": "it looks like all the tiles on the walked path have been replaced",
+   "defect": "THE LANE STOPS BEING THE SAME MASONRY. At 1.9 the specular washes the stones inside the trodden channel until the path reads as re-laid rather than worn. Measured on this frame with measure_lane_window.py: on-lane masonry 0.1003 — 0.70x §13.8's 0.1440 floor, so the joints and dressing inside the lane fall BELOW what a viewer can resolve — and identity_ratio 0.943, i.e. THE LANE IS LESS LEGIBLE THAN ITS OWN FLANK. That inversion is the defect stated as a number: wear is modulating the same stones everywhere except where it is strongest, and there it replaces them. The shipped build reads 0.1513 (1.05x) and identity 1.150 on the same measure.",
+   "seeded": "RULED (Rafe, 2026-09-08): 'Seed a second tonal plant: the lane-gain-1.9 replaced tiles build (Rafe's cull quoted; on-lane identity < flank measured). Two tonal plants; seats draw one at random.' It exists because the combined/tonal set had exactly ONE member, so every seat of a panel drew the same plant and their catches were CORRELATED — the panel multiplied rank samples but not the plant's evidence.",
+   "axis_retagged": {
+    "date": "2026-09-08",
+    "by": "builder, under LOOP-PROCESS §1.1.5.2 (plant axis mismatch is engineering)",
+    "was": [
+     "tonal"
+    ],
+    "now": [
+     "value"
+    ],
+    "why": "SEEDED AS TONAL BY RULING (Rafe, 2026-09-08) and re-tagged on the evidence of its own outings. The CULL'S PERCEPT is material identity — 'it looks like all the tiles on the walked path have been replaced' — not tone. Its MECHANISM is specular, which is what I tagged it on, and §1.2.1 is explicit that a plant controls on the axis its cull was made on rather than the axis of whatever produced it. The morgue's own precedent settles it: washed-slab-lane.png carries the same percept — washed slabs on the walked path — and is tagged VALUE.",
+    "operational_evidence": "caught 3 of 5 across this lane, against blown-highlight's 7 of 7, and it voided two of four rounds on polish-abc-install. ⚠ n=5 is thin — the 95% interval on 3/5 spans roughly 15-95% — so the catch rate is SUGGESTIVE and the AXIS ARGUMENT is what decides this, not the count.",
+    "cost_restored": "the combined/tonal set returns to one member, so every seat of a tonal panel draws the same plant and their catches are correlated again. That is the limitation this entry was seeded to remove and it is NOT solved; a genuinely tonal second cull is still wanted.",
+    "kept": "nothing is deleted — the entry, its bytes, its quote and its provenance all stand."
+   },
+   "subject": [
+    "floor"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "lamp-clip-figure.png",
+   "surface": [
+    "combined"
+   ],
+   "sha256": "18860e753365b6c6ba69ba6a9623eefbb1e2594ee2e6d9c3a9745b0e37149fa0",
+   "source": "tools/tier1_floors/evidence/h_null.png @ 805a39d2 — the hero light-response term absent, which IS the pre-#183 state.",
+   "culled_by": "Rafe, rig walk, 2026-09-06 — the walk that routed #183, and seeded here by ruling 2026-09-11.",
+   "verbatim": "lamp clip on the standing figure (placeholder sprite)",
+   "defect": "The lighting blows out its subject. In the figure's own 40x44 px the lamp drives 594 pixels to 250 or above, peaking at 251.8 luminance: the shield is a flat pale disc and the tunic loses its interior entirely. #183's text names the same thing from the other side — 'the sprite takes the full top end of the lamp the way the floor does, and near the lamp, where the player always is, that flattens her against a floor delivering 168.73'. Fixed by the hero shoulder: 594 clipped -> 8 at the swept cap.",
+   "provenance": "Issue #183; src/Presentation/assets/shaders/hero_light.gdshader. The cap was later OVERTURNED at the human gate (Rafe, 2026-09-09) — 'warmest never brightest' meant NEVER BLOWN, not darker than the ground — and this frame is the blown end that both the original ruling and the overturn agree is wrong.",
+   "axis": [
+    "tonal"
+   ],
+   "sub_axis": "bright",
+   "_the_cull_is_the_lighting_not_the_sprite": [
+    "RULED (Rafe, 2026-09-11), and it decides how this entry must be read:",
     "",
-    "A PICTURE CANNOT BE NEUTRALISED BY AN ENGINE CHANGE. These bytes are fixed. The defect in them",
-    "is fixed. The only way to stop a morgue entry carrying its defect is to delete the file, which",
-    "is a visible diff.",
+    "  'the cull was the lighting blowing out its subject, not the hero's design.'",
     "",
-    "WHAT QUALIFIES FOR ENTRY. A frame Rafe personally culled at the device gate (§1's landing",
-    "gate), with his verbatim words and the commit whose build produced it. Not a frame an",
-    "instrument disliked; not a frame I thought was weak. The morgue is a record of human culls.",
+    "The figure here is the ORYX PLACEHOLDER. It is not Sasha, it is not being worked, and",
+    "a seat flagging its ART rather than its EXPOSURE has caught this frame for the wrong",
+    "reason — which LOOP-PROCESS §4.2 says is not a control at all. What makes it a plant is",
+    "that the lamp destroys whatever is standing there."
+   ],
+   "_why_this_is_admissible_when_a_null_normally_is_not": [
+    "⚠ THIS FILE IS THE NULL ARM OF #183'S OWN SWEEP, and `blown-highlight.png`'s entry",
+    "states the general law against exactly that: 'A NULL is the same build with one lever",
+    "switched off ... It is not a plant, because nobody ever culled it.'",
     "",
-    "SURFACE TAGS ARE LOAD-BEARING. The deck draws a plant of the SAME surface as the round. A",
-    "floor plant in a wall round is caught for its magenta wall mocks — the critic flags the right",
-    "image for the wrong reason, and a control that greens for the wrong reason is not a control",
-    "(LOOP-PROCESS §4.2). run_frame_critic.sh refuses to build a deck if the surface has no entry.",
+    "The reason that law gives is the reason it does not bite here. THIS STATE WAS CULLED:",
+    "Rafe walked it on 2026-09-06 and #183 exists because of it. The null is not a",
+    "manufactured picture nobody judged — it is the faithful capture of a shipped state that",
+    "was judged and rejected, with the lever that fixed it not yet written.",
     "",
-    "KNOWN LIMIT, stated rather than discovered later: the `wall` lane holds ONE entry. Wall rounds",
-    "therefore draw the same plant every time. That is safe against the seat, which is fresh each",
-    "round and cannot remember, and it is NOT safe against a builder who learns to compose around",
-    "one picture. Add wall entries as wall culls happen.",
+    "THE ALTERNATIVES WERE CHECKED AND REJECTED, by measurement rather than by preference:",
+    "  * rerat_r1.png, the actual walked frame, IS ALREADY IN THIS MORGUE — it is",
+    "    blown-highlight.png, byte for byte. Planting it twice under two labels would put the",
+    "    same picture in two seats' decks and call it decorrelation.",
+    "  * swB_e1.6.png is the same build in the probe room, with an identical 784-pixel figure",
+    "    clip — but it differs from the planted frame by only 1.61% of pixels. Two plants",
+    "    that look the same defeat the thing the second plant is for.",
+    "  * h_null differs from the planted frame by 10.55%, in the same scene, at the ratified",
+    "    rig, with the real wall and cap families laid and zero magenta."
+   ],
+   "combined_eligibility": "ELIGIBLE. Same scene as the deck (tier1_combined_review), ratified rig (energy 1.6 / radius 6.0 / ambient 1.5), real wall and cap families, ZERO magenta pixels. It predates the tier-two props, as does the approved reference and the existing tonal plant.",
+   "subject": [
+    "room",
+    "figure"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "crushed-midband.png",
+   "surface": [
+    "combined"
+   ],
+   "sha256": "ef30617baed6d660c194d81adf5006247687a508be201c513980108851b34108",
+   "source": "tools/tier1_walls/evidence/r12_family.png — LEDGER.md: 'the build offered to the gate, round 4'.",
+   "culled_by": "Rafe, device gate, 2026-08-27 — the FAIL recorded verbatim in bible §3's status trail. Seeded here by ruling 2026-09-11.",
+   "verbatim": "looks like crap",
+   "defect": "THE MID-BAND IS CRUSHED. Of the frame's lit pixels the middle third of its own range holds 15.1% where a flat distribution would hold 33.3% — a 55% shortfall — with p10 9.2, MEDIAN 19.1 and p90 77.0. The weight sits at the bottom and a thin tail reaches the top, and the mid-tones where masonry actually reads are hollowed out. The walls come back as one murky brown mass with no parts in it.",
+   "provenance": "bible §3 status trail, 2026-08-27: 'Gate verdict: FAIL — the phone overrules the stills' / 'two seats ranked this above the bar; the device says otherwise; §13.2 vindicated again.' Two laws came out of that gate: §8.3's motif trap extended to wall material, and §6.2's readability-tuning pass before any asset is judged through the rig.",
+   "axis": [],
+   "sub_axis": "dark",
+   "_the_morgue_had_no_dark_side": [
+    "THIS IS THE FIRST DARK-SIDE PLANT. Every tonal entry before it fails BRIGHT — the lamp",
+    "clipping, the highlight blowing. A panel whose only tonal controls are blown frames",
+    "teaches a seat one direction of the axis, and a build that errs the other way meets a",
+    "judge that has never been asked about it.",
     "",
-    "SURFACE IS A STRING OR A LIST, added for the combined round (2026-09-03). That round judges a whole room and the morgue was tagged when every round judged one surface at a time. Which entries can serve it was settled by READING THE PICTURES rather than the tags: the three floor culls each carry 3904 magenta pixels and would be caught for the debug colour instead of for their defect (§4.2); the two wall culls carry none and already have the real floor under them. Every entry now records that finding in `combined_eligibility`, so the next reader does not have to re-measure it.",
-    "AND THE `combined` LANE THEREFORE HOLDS TWO ENTRIES, which is the same known limit the wall lane is recorded with above and one entry better. Add combined entries as combined culls happen."
-  ],
-  "entries": [
-    {
-      "file": "keyline-floor.png",
-      "surface": "floor",
-      "sha256": "352461c6b0917d3892679efb16f895d939ca039c010cce6c249829d9e3aac224",
-      "source": "tools/tier1_floors/evidence/r24_onroute.png @ c611c59a",
-      "culled_by": "Rafe, device walk, 2026-08-31",
-      "verbatim": "outlined chips",
-      "defect": "every stone carries a dark outline. 92.7% of joint pixels landed on the bottom two rungs and the floor reads as a wireframe rather than as masonry.",
-      "provenance": "docs/KEYLINE-REGRESSION.md; the ruling is quoted in tools/tier1_floors/compose_ashlar.py (THE SHELTERED JOINT'S DEPTH IS A DISTRIBUTION). Fixed by c76dbd9d.",
-      "axis": [
-        "construction"
-      ],
-      "combined_eligibility": "NOT ELIGIBLE FOR A `combined` DECK: this frame carries 3904 magenta pixels (0.39% of it) because the wall family did not exist when it was captured. In a deck whose build has real walls a seat catches it for the debug colour — the right image flagged for the wrong reason, which LOOP-PROCESS §4.2 says is not a control at all.",
-      "subject": [
-        "floor"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "washed-slab-lane.png",
-      "surface": "floor",
-      "sha256": "538aaac2b97c1ede4f8b2454e6879aae30c91da024ada74317a92b6844dfe0d9",
-      "source": "tools/tier1_floors/evidence/r24_onroute.png @ 8640780f",
-      "culled_by": "Rafe, device walk, 2026-09-02",
-      "verbatim": "it looks like all the tiles on the walked path have been replaced.",
-      "defect": "the walked lane washes out into one bright slab. The masonry inside it stops reading, so the path is a decal laid over the floor rather than the same stones worn.",
-      "provenance": "quoted in tools/tier1_floors/measure_lane_window.py; docs/GATE-CONDITIONS.json records this exact capture as 'the keyline fix holds — the lane was the cull, not the masonry'. Fixed by 8b5640d7 and b36fe61c.",
-      "axis": [
-        "value"
-      ],
-      "combined_eligibility": "NOT ELIGIBLE FOR A `combined` DECK: this frame carries 3904 magenta pixels (0.39% of it) because the wall family did not exist when it was captured. In a deck whose build has real walls a seat catches it for the debug colour — the right image flagged for the wrong reason, which LOOP-PROCESS §4.2 says is not a control at all.",
-      "subject": [
-        "floor"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "tile-quantized-wear.png",
-      "surface": "floor",
-      "sha256": "2c097a288e54de45704834cedb319201278f83cd9e83bf2083ac317f502c169a",
-      "source": "tools/tier1_floors/evidence/r24_onroute.png @ 8b5640d7",
-      "culled_by": "Rafe, device walk, 2026-09-02",
-      "verbatim": "one tile worn, the one next to it not — that's not how it works.",
-      "defect": "the wear knows where the tiles are. Wear boundaries land on tile edges, so worn cells sit beside unworn ones with a square edge between them.",
-      "provenance": "quoted in tools/tier1_floors/measure_wear_grid_lock.py. Fixed by b36fe61c (per-pixel keying).",
-      "axis": [
-        "construction"
-      ],
-      "combined_eligibility": "NOT ELIGIBLE FOR A `combined` DECK: this frame carries 3904 magenta pixels (0.39% of it) because the wall family did not exist when it was captured. In a deck whose build has real walls a seat catches it for the debug colour — the right image flagged for the wrong reason, which LOOP-PROCESS §4.2 says is not a control at all.",
-      "subject": [
-        "floor"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "grey-walls.png",
-      "surface": [
-        "wall",
-        "combined"
-      ],
-      "sha256": "ec007b1adc6cc585f0c9c09216c44388839844d22245373873917191b915422c",
-      "source": "tools/tier1_walls/evidence/r24_standing.png @ 65a512a0",
-      "culled_by": "Rafe, device gate, 2026-09-02",
-      "verbatim": "Grey walls and ceiling; it looked better a few versions ago.",
-      "defect": "the wall family and the cap were never given the floor's chroma — a grey multiplier that looks like colour. Delivered: cap +27.6° of hue off the floor at 55% of its saturation, face +12.8° at 60%.",
-      "provenance": "tools/tier1_walls/BISECT-GREY.md names the approved build (0c60bc50) and bisects the three commits since it. Fixed by ab40dfaf (derive_quarry_tint.py).",
-      "axis": [
-        "chroma"
-      ],
-      "combined_eligibility": "Serves `combined` too: no magenta anywhere in it, and it was captured with the real tier-one floor laid under the walls, so it is already a whole-scene frame.",
-      "subject": [
-        "walls"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "cement-cap.png",
-      "surface": [
-        "wall",
-        "combined"
-      ],
-      "axis": [
-        "construction"
-      ],
-      "sha256": "3fd8223295d2f92e59f8c24f9d84163ed3223381939a554d1f6398130c3a4f0a",
-      "source": "tools/tier1_walls/evidence/r22_standing.png @ 431c140f",
-      "culled_by": "Rafe, device walk, 2026-09-03",
-      "verbatim": "caps are still grey and read as cement, not stone",
-      "defect": "the found-rock cap with no architecture in it. The cap is one smooth field: no slabs, no fractures, no tooling, so the largest surface in frame is a value with noise on it. Measured, its wall cells carry a 4.6% hard-edge share against the 10.7% of the last approved build - the cap pass more than halved the wall's drawn edges. This is the CONSTRUCTION plant: it is wrong about whether a mass is made of anything, and it is deliberately RIGHT about chroma, so a round judged on construction cannot pass by fixing colour.",
-      "provenance": "tools/tier1_walls/CRITIC-STOP.md and STALL-REPORT.md; the frame the critic itself ranked below the grey plant in rounds r001 and r002.",
-      "combined_eligibility": "Serves `combined` too: no magenta anywhere in it, and it was captured with the real tier-one floor laid under the walls, so it is already a whole-scene frame.",
-      "subject": [
-        "walls"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "blown-highlight.png",
-      "surface": [
-        "combined"
-      ],
-      "sha256": "753f9c3f9584dcc69a919036ef6e16d7f227dd20a8b7e8e93ec0aded2fdb2ccc",
-      "source": "tools/tier1_floors/evidence/rerat_r1.png @ ea0668a6 — byte-identical to round 3's judged build frame (753f9c3f…)",
-      "culled_by": "TWO INDEPENDENT EYES. Rafe, device walk, 2026-09-06; and round 30's blind seat, 2026-09-06.",
-      "verbatim": "flat pale block, no interior texture (seat) / too shiny on worn areas, character washed out (Rafe)",
-      "defect": "The lamp's top end clips instead of rolling off. The Boundary's ffb066 has red 1.0, so RED pins first: 16,839 red-clipped pixels in the frame, 11.0% of the block the seat named, against blue peaking at 176 — and 2,044 pixels with red pinned while green is not, so the stone loses texture IN ITS DOMINANT CHANNEL and slides toward the light's own colour at the same time. The figure stops reading with it: the sprite's lightest pixels sit +1.0 levels above the floor's p95, where §13.8 puts the AMBIGUOUS point at 8.",
-      "provenance": "docs/ROUND-30-COMBINE-UNPARKED.md §3b; bible §6.2 'THE BOUNDARY'S LAMP PINS RED FIRST'. Fixed by the highlight shoulder (RULED Rafe 2026-09-07), src/Presentation/assets/shaders/tier1_polish.gdshader — red pins 16,839 -> 1,967.",
-      "axis": [
-        "tonal"
-      ],
-      "_why_this_is_a_plant_and_not_a_null": [
-        "§13.6 — a candidate never contributes to its own acceptance bar — and RULED SATISFIED",
-        "(Rafe, 2026-09-07) on a distinction worth keeping straight:",
-        "",
-        "  A NULL is the same build with one lever switched off. It is a CONTROL: it says what the",
-        "  lever contributed. It is not a plant, because nobody ever culled it.",
-        "",
-        "  THIS is a SUPERSEDED BUILD that two independent eyes culled on the axis now under test.",
-        "  It earned its place in the morgue the way every other entry did — by being rejected —",
-        "  and it is here because it is WRONG ON TONE, which is the question round 5 asks.",
-        "",
-        "The hazard §13.6 guards against is choosing a plant that flatters the build. This one does",
-        "the opposite: it is the build's own immediate predecessor, identical in scene, station,",
-        "geometry and rig, differing ONLY on the axis being judged. A seat that cannot separate",
-        "them has told us something real about the shoulder, not about the deck."
-      ],
-      "combined_eligibility": "ELIGIBLE, and it is the first entry captured AS a combined frame. Zero magenta: it was taken with the real floor, wall, binding and cap families laid and the void ring on, at the ratified rig. The three FLOOR culls are ineligible for carrying 3904 debug-magenta pixels; this one carries none.",
-      "subject": [
-        "room",
-        "figure"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "replaced-tiles-lane.png",
-      "surface": [
-        "combined",
-        "floor"
-      ],
-      "axis": [
-        "value"
-      ],
-      "sha256": "df46a8f76936d90a2b316d2745368e3aff9e13aad15df041a830dbc8d6e18c9a",
-      "source": "tools/tier1_floors/evidence/plant_lane19.png — the combined scene at the ratified rig with POLISH_LANE_GAIN restored to 1.9, REPRODUCING the culled condition rather than recovering the original frame. Labelled as a reproduction on purpose: the 1.9 build predates this scene and no capture of it survives, so what is preserved is the DEFECT, measured, not a recovered artefact.",
-      "culled_by": "Rafe, at the gate that stepped the lane gain down from 1.9.",
-      "verbatim": "it looks like all the tiles on the walked path have been replaced",
-      "defect": "THE LANE STOPS BEING THE SAME MASONRY. At 1.9 the specular washes the stones inside the trodden channel until the path reads as re-laid rather than worn. Measured on this frame with measure_lane_window.py: on-lane masonry 0.1003 — 0.70x §13.8's 0.1440 floor, so the joints and dressing inside the lane fall BELOW what a viewer can resolve — and identity_ratio 0.943, i.e. THE LANE IS LESS LEGIBLE THAN ITS OWN FLANK. That inversion is the defect stated as a number: wear is modulating the same stones everywhere except where it is strongest, and there it replaces them. The shipped build reads 0.1513 (1.05x) and identity 1.150 on the same measure.",
-      "seeded": "RULED (Rafe, 2026-09-08): 'Seed a second tonal plant: the lane-gain-1.9 replaced tiles build (Rafe's cull quoted; on-lane identity < flank measured). Two tonal plants; seats draw one at random.' It exists because the combined/tonal set had exactly ONE member, so every seat of a panel drew the same plant and their catches were CORRELATED — the panel multiplied rank samples but not the plant's evidence.",
-      "axis_retagged": {
-        "date": "2026-09-08",
-        "by": "builder, under LOOP-PROCESS §1.1.5.2 (plant axis mismatch is engineering)",
-        "was": [
-          "tonal"
-        ],
-        "now": [
-          "value"
-        ],
-        "why": "SEEDED AS TONAL BY RULING (Rafe, 2026-09-08) and re-tagged on the evidence of its own outings. The CULL'S PERCEPT is material identity — 'it looks like all the tiles on the walked path have been replaced' — not tone. Its MECHANISM is specular, which is what I tagged it on, and §1.2.1 is explicit that a plant controls on the axis its cull was made on rather than the axis of whatever produced it. The morgue's own precedent settles it: washed-slab-lane.png carries the same percept — washed slabs on the walked path — and is tagged VALUE.",
-        "operational_evidence": "caught 3 of 5 across this lane, against blown-highlight's 7 of 7, and it voided two of four rounds on polish-abc-install. ⚠ n=5 is thin — the 95% interval on 3/5 spans roughly 15-95% — so the catch rate is SUGGESTIVE and the AXIS ARGUMENT is what decides this, not the count.",
-        "cost_restored": "the combined/tonal set returns to one member, so every seat of a tonal panel draws the same plant and their catches are correlated again. That is the limitation this entry was seeded to remove and it is NOT solved; a genuinely tonal second cull is still wanted.",
-        "kept": "nothing is deleted — the entry, its bytes, its quote and its provenance all stand."
-      },
-      "subject": [
-        "floor"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "lamp-clip-figure.png",
-      "surface": [
-        "combined"
-      ],
-      "sha256": "18860e753365b6c6ba69ba6a9623eefbb1e2594ee2e6d9c3a9745b0e37149fa0",
-      "source": "tools/tier1_floors/evidence/h_null.png @ 805a39d2 — the hero light-response term absent, which IS the pre-#183 state.",
-      "culled_by": "Rafe, rig walk, 2026-09-06 — the walk that routed #183, and seeded here by ruling 2026-09-11.",
-      "verbatim": "lamp clip on the standing figure (placeholder sprite)",
-      "defect": "The lighting blows out its subject. In the figure's own 40x44 px the lamp drives 594 pixels to 250 or above, peaking at 251.8 luminance: the shield is a flat pale disc and the tunic loses its interior entirely. #183's text names the same thing from the other side — 'the sprite takes the full top end of the lamp the way the floor does, and near the lamp, where the player always is, that flattens her against a floor delivering 168.73'. Fixed by the hero shoulder: 594 clipped -> 8 at the swept cap.",
-      "provenance": "Issue #183; src/Presentation/assets/shaders/hero_light.gdshader. The cap was later OVERTURNED at the human gate (Rafe, 2026-09-09) — 'warmest never brightest' meant NEVER BLOWN, not darker than the ground — and this frame is the blown end that both the original ruling and the overturn agree is wrong.",
-      "axis": [
-        "tonal"
-      ],
-      "sub_axis": "bright",
-      "_the_cull_is_the_lighting_not_the_sprite": [
-        "RULED (Rafe, 2026-09-11), and it decides how this entry must be read:",
-        "",
-        "  'the cull was the lighting blowing out its subject, not the hero's design.'",
-        "",
-        "The figure here is the ORYX PLACEHOLDER. It is not Sasha, it is not being worked, and",
-        "a seat flagging its ART rather than its EXPOSURE has caught this frame for the wrong",
-        "reason — which LOOP-PROCESS §4.2 says is not a control at all. What makes it a plant is",
-        "that the lamp destroys whatever is standing there."
-      ],
-      "_why_this_is_admissible_when_a_null_normally_is_not": [
-        "⚠ THIS FILE IS THE NULL ARM OF #183'S OWN SWEEP, and `blown-highlight.png`'s entry",
-        "states the general law against exactly that: 'A NULL is the same build with one lever",
-        "switched off ... It is not a plant, because nobody ever culled it.'",
-        "",
-        "The reason that law gives is the reason it does not bite here. THIS STATE WAS CULLED:",
-        "Rafe walked it on 2026-09-06 and #183 exists because of it. The null is not a",
-        "manufactured picture nobody judged — it is the faithful capture of a shipped state that",
-        "was judged and rejected, with the lever that fixed it not yet written.",
-        "",
-        "THE ALTERNATIVES WERE CHECKED AND REJECTED, by measurement rather than by preference:",
-        "  * rerat_r1.png, the actual walked frame, IS ALREADY IN THIS MORGUE — it is",
-        "    blown-highlight.png, byte for byte. Planting it twice under two labels would put the",
-        "    same picture in two seats' decks and call it decorrelation.",
-        "  * swB_e1.6.png is the same build in the probe room, with an identical 784-pixel figure",
-        "    clip — but it differs from the planted frame by only 1.61% of pixels. Two plants",
-        "    that look the same defeat the thing the second plant is for.",
-        "  * h_null differs from the planted frame by 10.55%, in the same scene, at the ratified",
-        "    rig, with the real wall and cap families laid and zero magenta."
-      ],
-      "combined_eligibility": "ELIGIBLE. Same scene as the deck (tier1_combined_review), ratified rig (energy 1.6 / radius 6.0 / ambient 1.5), real wall and cap families, ZERO magenta pixels. It predates the tier-two props, as does the approved reference and the existing tonal plant.",
-      "subject": [
-        "room",
-        "figure"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "crushed-midband.png",
-      "surface": [
-        "combined"
-      ],
-      "sha256": "ef30617baed6d660c194d81adf5006247687a508be201c513980108851b34108",
-      "source": "tools/tier1_walls/evidence/r12_family.png — LEDGER.md: 'the build offered to the gate, round 4'.",
-      "culled_by": "Rafe, device gate, 2026-08-27 — the FAIL recorded verbatim in bible §3's status trail. Seeded here by ruling 2026-09-11.",
-      "verbatim": "looks like crap",
-      "defect": "THE MID-BAND IS CRUSHED. Of the frame's lit pixels the middle third of its own range holds 15.1% where a flat distribution would hold 33.3% — a 55% shortfall — with p10 9.2, MEDIAN 19.1 and p90 77.0. The weight sits at the bottom and a thin tail reaches the top, and the mid-tones where masonry actually reads are hollowed out. The walls come back as one murky brown mass with no parts in it.",
-      "provenance": "bible §3 status trail, 2026-08-27: 'Gate verdict: FAIL — the phone overrules the stills' / 'two seats ranked this above the bar; the device says otherwise; §13.2 vindicated again.' Two laws came out of that gate: §8.3's motif trap extended to wall material, and §6.2's readability-tuning pass before any asset is judged through the rig.",
-      "axis": [],
-      "sub_axis": "dark",
-      "_the_morgue_had_no_dark_side": [
-        "THIS IS THE FIRST DARK-SIDE PLANT. Every tonal entry before it fails BRIGHT — the lamp",
-        "clipping, the highlight blowing. A panel whose only tonal controls are blown frames",
-        "teaches a seat one direction of the axis, and a build that errs the other way meets a",
-        "judge that has never been asked about it.",
-        "",
-        "It is also the oldest cull in the morgue and the only one from a DEVICE GATE rather",
-        "than a walk — the round where every instrument was green and the phone still said no."
-      ],
-      "combined_eligibility": "NOT ELIGIBLE — see `retired_as_control`. The original assessment, wrong and kept: ELIGIBLE. ZERO magenta: it was captured with the real floor, wall and binding families laid. ⚠ It is at the PRE-RE-RATIFICATION rig (radius 5.0 / ambient 0.70), because that is the rig it was culled at — the crush is partly what the re-ratification fixed. That is the defect, not a confound: a seat is being asked which frame is tonally wrong, and this one is, for the reason recorded.",
-      "retired_as_control": {
-        "when": "2026-09-11, the round it was seeded",
-        "verdict": "NOT A BLIND-SEAT CONTROL. Kept in the morgue as the record of a cull; removed from every axis so `pick_plant` can never deal it again.",
-        "measured_in_a_deck": "dealt to seats 1 and 4 of r004 — MISSED BY BOTH. The other two tonal plants were caught by all three seats that drew them (blown-highlight 2 of 2, lamp-clip-figure 1 of 1).",
-        "measured_as_the_build": "put in the BUILD slot by the plant self-test and shown to three fresh seats: ranked 1st, 1st and 2nd OF FOUR, above the approved reference, flagged by NOBODY. The round returned INSTALL-LATEST with 'rank 1 of 4, score 1.00, NEW BEST'.",
-        "why": [
-          "THIS IS NOT A WEAK PLANT. It is a frame blind seats PREFER.",
-          "",
-          "And the reason is the law the frame itself created. It is the 2026-08-27 DEVICE",
-          "gate FAIL, and the bible's own status trail records what happened that day:",
-          "'two seats ranked this above the bar; the device says otherwise; §13.2 vindicated",
-          "again.' Five more seats have now agreed with those two.",
-          "",
-          "SO: A CULL MADE BY THE DEVICE GATE IS NOT AUTOMATICALLY USABLE AS A SEAT CONTROL.",
-          "What the phone caught is, by construction, the class of thing a still and a seat do",
-          "not catch — that is why the phone was needed. Planting it asks a judge to catch the",
-          "one defect it was proven blind to, and a control nobody can catch does not measure",
-          "the judge, it just voids rounds.",
-          "",
-          "A SECOND, SMALLER CONFOUND, and it was foreseeable: the two plants that work are the",
-          "deck's OWN scene (tier1_combined_review) at the ratified rig (radius 6.0 / ambient",
-          "1.5). This one is tier1_wall_review at the old rig (5.0 / 0.70), so it differs from",
-          "the deck on scene AND rig AND tone at once, and a seat cannot tell which of the",
-          "three it is meant to be wrong about. §4.2's law generalises: a control must differ",
-          "on the axis under test and as little else as possible.",
-          "",
-          "⚠ I FLAGGED THAT RISK IN THIS ENTRY'S OWN ELIGIBILITY FIELD WHEN I SEEDED IT and",
-          "wrote 'that is the defect, not a confound'. The measurement says it is a confound.",
-          "The original text is left below rather than edited, because a prediction that was",
-          "wrong is worth more on the record than a tidy entry."
-        ]
-      },
-      "subject": [
-        "walls",
-        "room"
-      ],
-      "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "props-unrecognizable.png",
-      "surface": [
-        "combined"
-      ],
-      "axis": [
-        "construction"
-      ],
-      "subject": [
-        "objects"
-      ],
-      "sha256": "ced98da2ea92ec0496edb1a2989c3f9d28fa6555ab979843d232187bd61d615b",
-      "source": "tools/tier1_floors/evidence/props_pre_1212.png — the props build walked 2026-09-10, saved at cb344578 as cold_naming.py's calibration frame",
-      "culled_by": "Rafe, device walk, 2026-09-10 (the §12.2 ruling)",
-      "verbatim": "small, unrecognizable except the fire; colouring quite good",
-      "defect": "THE OBJECTS CANNOT BE NAMED. Marker content 10x15 px in a 32 px cell — a fifth of the cell, twenty device pixels across; three cold seats offered 'a bottle or vial', 'a lantern or candle', 'an orange chest or crate' for the marker and 'sticks' for the barricade. Craft is not the defect (the colouring was approved in kind); SIZE is, and a seat that would ship it is soft on the one clause §12 has — names itself at 1x. This is the OBJECT construction plant: it is deliberately fine on value and chroma so a round judged on object craft cannot pass by fixing colour.",
-      "provenance": "bible §12.2 (RULED 2026-09-10); cold_naming.py --prove calibrates against this frame and must MISS the marker and barricade on it.",
-      "seeded": "Rafe, ruling 2026-09-12: 'Seed two object plants from Rafe's culls'",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "objects-isometric.png",
-      "surface": [
-        "combined"
-      ],
-      "axis": [
-        "construction"
-      ],
-      "subject": [
-        "objects"
-      ],
-      "sha256": "a5fbe2d625a8002596c1bb30478183786f8ecb8e22f0b0935be53f7bd746a7be",
-      "source": "tools/tier1_floors/evidence/projection_A.png @ f60ddb30 — object-projection round one, candidate A (three-plane, dimetric-ish), the projA build walked on device",
-      "culled_by": "Rafe, device walk, 2026-09-11 (object-projection round one)",
-      "verbatim": "iso is clearly not a fit",
-      "defect": "THE OBJECTS ARE AT THE WRONG PROJECTION FOR THE FLOOR. Five archetypes drawn three-plane/dimetric on an orthogonal ground: they read as objects but do not sit on the floor; the diamond top fights the square grid the room is built on (§3). Materials and lighting are competent — the frame is wrong about how things stand in space, which is the object-construction question exactly, and a seat that would ship it over a §3.2-conformant build is soft on that question.",
-      "provenance": "docs/OBJECT-PROJECTION-RULING.md round one and Rafe's round-one verdict; the ruled projection is §3.2 (cabinet oblique, right, ½).",
-      "seeded": "Rafe, ruling 2026-09-12: 'Seed two object plants from Rafe's culls'",
-      "regime": "unshadowed"
-    },
-    {
-      "file": "objects-isometric-shadowed.png",
-      "surface": [
-        "combined"
-      ],
-      "axis": [
-        "construction"
-      ],
-      "subject": [
-        "objects"
-      ],
-      "regime": "shadowed",
-      "sha256": "0d8a922f00499b98a7d67cf3120e90b6af4c3998396b0a400c891737100302d0",
-      "source": "RE-CAPTURED under the shadowed regime (Rafe's law, 2026-09-12) from the culled asset state at f60ddb30 (7 files overlaid) through the engine at c13c584fec54, with the ratified shadow flags (occluders all, softness 12, darkness 0.8, fire lit, flicker on, void ring 0)",
-      "culled_by": "Rafe, device walk, 2026-09-11 (object-projection round one)",
-      "verbatim": "iso is clearly not a fit",
-      "defect": "THE OBJECTS ARE AT THE WRONG PROJECTION FOR THE FLOOR. Five archetypes drawn three-plane/dimetric on an orthogonal ground: they read as objects but do not sit on the floor; the diamond top fights the square grid the room is built on (§3). Materials and lighting are competent — the frame is wrong about how things stand in space, which is the object-construction question exactly, and a seat that would ship it over a §3.2-conformant build is soft on that question.",
-      "provenance": "the unshadowed entry objects-isometric.png is this cull's original frame; this is the same asset state under the deck's light"
-    },
-    {
-      "file": "cement-cap-shadowed.png",
-      "surface": [
-        "combined"
-      ],
-      "axis": [
-        "construction"
-      ],
-      "subject": [
-        "walls"
-      ],
-      "regime": "shadowed",
-      "sha256": "8dceb883cc015fd58201906af7f344295cfd978c79184e66f64399a83e3cd2ff",
-      "source": "RE-CAPTURED under the shadowed regime (Rafe's law, 2026-09-12) from the culled asset state at 431c140f (1191 files overlaid) through the engine at c13c584fec54, with the ratified shadow flags (occluders all, softness 12, darkness 0.8, fire lit, flicker on, void ring 0)",
-      "culled_by": "Rafe, device walk, 2026-09-03",
-      "verbatim": "caps are still grey and read as cement, not stone",
-      "defect": "the found-rock cap with no architecture in it. The cap is one smooth field: no slabs, no fractures, no tooling, so the largest surface in frame is a value with noise on it. Measured, its wall cells carry a 4.6% hard-edge share against the 10.7% of the last approved build - the cap pass more than halved the wall's drawn edges. This is the CONSTRUCTION plant: it is wrong about whether a mass is made of anything, and it is deliberately RIGHT about chroma, so a round judged on construction cannot pass by fixing colour.",
-      "provenance": "the unshadowed entry cement-cap.png is this cull's original frame; this is the same asset state under the deck's light"
-    },
-    {
-      "file": "props-unrecognizable-shadowed.png",
-      "surface": [
-        "combined"
-      ],
-      "axis": [
-        "construction"
-      ],
-      "subject": [
-        "objects"
-      ],
-      "regime": "shadowed",
-      "sha256": "92058239edf8ac4c57571556e95ebe333dc903f80761494a7d9cc2a788ae7371",
-      "source": "RE-CAPTURED under the shadowed regime (Rafe's law, 2026-09-12) from the culled asset state at cb344578~1 (6 files overlaid) through the engine at c13c584fec54, with the ratified shadow flags (occluders all, softness 12, darkness 0.8, fire lit, flicker on, void ring 0)",
-      "culled_by": "Rafe, device walk, 2026-09-10 (the §12.2 ruling)",
-      "verbatim": "small, unrecognizable except the fire; colouring quite good",
-      "defect": "THE OBJECTS CANNOT BE NAMED. Marker content 10x15 px in a 32 px cell — a fifth of the cell, twenty device pixels across; three cold seats offered 'a bottle or vial', 'a lantern or candle', 'an orange chest or crate' for the marker and 'sticks' for the barricade. Craft is not the defect (the colouring was approved in kind); SIZE is, and a seat that would ship it is soft on the one clause §12 has — names itself at 1x. This is the OBJECT construction plant: it is deliberately fine on value and chroma so a round judged on object craft cannot pass by fixing colour.",
-      "provenance": "the unshadowed entry props-unrecognizable.png is this cull's original frame; this is the same asset state under the deck's light"
-    }
-  ],
-  "_regime": [
-    "LAW (Rafe, 2026-09-12): a plant is captured under the deck's LIGHTING REGIME — scene, rig, AND shadow state. Every entry here was captured before the cast-shadows round: `unshadowed`. A shadowed deck refuses them and needs plants re-captured with occluders live. A control lit differently from the build measures exposure, not craft (round 1 of art/cast-shadows: three seats ranked unshadowed culls above a shadowed room)."
-  ]
+    "It is also the oldest cull in the morgue and the only one from a DEVICE GATE rather",
+    "than a walk — the round where every instrument was green and the phone still said no."
+   ],
+   "combined_eligibility": "NOT ELIGIBLE — see `retired_as_control`. The original assessment, wrong and kept: ELIGIBLE. ZERO magenta: it was captured with the real floor, wall and binding families laid. ⚠ It is at the PRE-RE-RATIFICATION rig (radius 5.0 / ambient 0.70), because that is the rig it was culled at — the crush is partly what the re-ratification fixed. That is the defect, not a confound: a seat is being asked which frame is tonally wrong, and this one is, for the reason recorded.",
+   "retired_as_control": {
+    "when": "2026-09-11, the round it was seeded",
+    "verdict": "NOT A BLIND-SEAT CONTROL. Kept in the morgue as the record of a cull; removed from every axis so `pick_plant` can never deal it again.",
+    "measured_in_a_deck": "dealt to seats 1 and 4 of r004 — MISSED BY BOTH. The other two tonal plants were caught by all three seats that drew them (blown-highlight 2 of 2, lamp-clip-figure 1 of 1).",
+    "measured_as_the_build": "put in the BUILD slot by the plant self-test and shown to three fresh seats: ranked 1st, 1st and 2nd OF FOUR, above the approved reference, flagged by NOBODY. The round returned INSTALL-LATEST with 'rank 1 of 4, score 1.00, NEW BEST'.",
+    "why": [
+     "THIS IS NOT A WEAK PLANT. It is a frame blind seats PREFER.",
+     "",
+     "And the reason is the law the frame itself created. It is the 2026-08-27 DEVICE",
+     "gate FAIL, and the bible's own status trail records what happened that day:",
+     "'two seats ranked this above the bar; the device says otherwise; §13.2 vindicated",
+     "again.' Five more seats have now agreed with those two.",
+     "",
+     "SO: A CULL MADE BY THE DEVICE GATE IS NOT AUTOMATICALLY USABLE AS A SEAT CONTROL.",
+     "What the phone caught is, by construction, the class of thing a still and a seat do",
+     "not catch — that is why the phone was needed. Planting it asks a judge to catch the",
+     "one defect it was proven blind to, and a control nobody can catch does not measure",
+     "the judge, it just voids rounds.",
+     "",
+     "A SECOND, SMALLER CONFOUND, and it was foreseeable: the two plants that work are the",
+     "deck's OWN scene (tier1_combined_review) at the ratified rig (radius 6.0 / ambient",
+     "1.5). This one is tier1_wall_review at the old rig (5.0 / 0.70), so it differs from",
+     "the deck on scene AND rig AND tone at once, and a seat cannot tell which of the",
+     "three it is meant to be wrong about. §4.2's law generalises: a control must differ",
+     "on the axis under test and as little else as possible.",
+     "",
+     "⚠ I FLAGGED THAT RISK IN THIS ENTRY'S OWN ELIGIBILITY FIELD WHEN I SEEDED IT and",
+     "wrote 'that is the defect, not a confound'. The measurement says it is a confound.",
+     "The original text is left below rather than edited, because a prediction that was",
+     "wrong is worth more on the record than a tidy entry."
+    ]
+   },
+   "subject": [
+    "walls",
+    "room"
+   ],
+   "_subject_note": "tagged 2026-09-12 under the axis-AND-subject law; the subject is what the cull was ABOUT, read from Rafe's words",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "props-unrecognizable.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "sha256": "ced98da2ea92ec0496edb1a2989c3f9d28fa6555ab979843d232187bd61d615b",
+   "source": "tools/tier1_floors/evidence/props_pre_1212.png — the props build walked 2026-09-10, saved at cb344578 as cold_naming.py's calibration frame",
+   "culled_by": "Rafe, device walk, 2026-09-10 (the §12.2 ruling)",
+   "verbatim": "small, unrecognizable except the fire; colouring quite good",
+   "defect": "THE OBJECTS CANNOT BE NAMED. Marker content 10x15 px in a 32 px cell — a fifth of the cell, twenty device pixels across; three cold seats offered 'a bottle or vial', 'a lantern or candle', 'an orange chest or crate' for the marker and 'sticks' for the barricade. Craft is not the defect (the colouring was approved in kind); SIZE is, and a seat that would ship it is soft on the one clause §12 has — names itself at 1x. This is the OBJECT construction plant: it is deliberately fine on value and chroma so a round judged on object craft cannot pass by fixing colour.",
+   "provenance": "bible §12.2 (RULED 2026-09-10); cold_naming.py --prove calibrates against this frame and must MISS the marker and barricade on it.",
+   "seeded": "Rafe, ruling 2026-09-12: 'Seed two object plants from Rafe's culls'",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "objects-isometric.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "sha256": "a5fbe2d625a8002596c1bb30478183786f8ecb8e22f0b0935be53f7bd746a7be",
+   "source": "tools/tier1_floors/evidence/projection_A.png @ f60ddb30 — object-projection round one, candidate A (three-plane, dimetric-ish), the projA build walked on device",
+   "culled_by": "Rafe, device walk, 2026-09-11 (object-projection round one)",
+   "verbatim": "iso is clearly not a fit",
+   "defect": "THE OBJECTS ARE AT THE WRONG PROJECTION FOR THE FLOOR. Five archetypes drawn three-plane/dimetric on an orthogonal ground: they read as objects but do not sit on the floor; the diamond top fights the square grid the room is built on (§3). Materials and lighting are competent — the frame is wrong about how things stand in space, which is the object-construction question exactly, and a seat that would ship it over a §3.2-conformant build is soft on that question.",
+   "provenance": "docs/OBJECT-PROJECTION-RULING.md round one and Rafe's round-one verdict; the ruled projection is §3.2 (cabinet oblique, right, ½).",
+   "seeded": "Rafe, ruling 2026-09-12: 'Seed two object plants from Rafe's culls'",
+   "regime": "unshadowed"
+  },
+  {
+   "file": "objects-isometric-shadowed.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "0d8a922f00499b98a7d67cf3120e90b6af4c3998396b0a400c891737100302d0",
+   "source": "RE-CAPTURED under the shadowed regime (Rafe's law, 2026-09-12) from the culled asset state at f60ddb30 (7 files overlaid) through the engine at c13c584fec54, with the ratified shadow flags (occluders all, softness 12, darkness 0.8, fire lit, flicker on, void ring 0)",
+   "culled_by": "Rafe, device walk, 2026-09-11 (object-projection round one)",
+   "verbatim": "iso is clearly not a fit",
+   "defect": "THE OBJECTS ARE AT THE WRONG PROJECTION FOR THE FLOOR. Five archetypes drawn three-plane/dimetric on an orthogonal ground: they read as objects but do not sit on the floor; the diamond top fights the square grid the room is built on (§3). Materials and lighting are competent — the frame is wrong about how things stand in space, which is the object-construction question exactly, and a seat that would ship it over a §3.2-conformant build is soft on that question.",
+   "provenance": "the unshadowed entry objects-isometric.png is this cull's original frame; this is the same asset state under the deck's light"
+  },
+  {
+   "file": "cement-cap-shadowed.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "subject": [
+    "walls"
+   ],
+   "regime": "shadowed",
+   "sha256": "8dceb883cc015fd58201906af7f344295cfd978c79184e66f64399a83e3cd2ff",
+   "source": "RE-CAPTURED under the shadowed regime (Rafe's law, 2026-09-12) from the culled asset state at 431c140f (1191 files overlaid) through the engine at c13c584fec54, with the ratified shadow flags (occluders all, softness 12, darkness 0.8, fire lit, flicker on, void ring 0)",
+   "culled_by": "Rafe, device walk, 2026-09-03",
+   "verbatim": "caps are still grey and read as cement, not stone",
+   "defect": "the found-rock cap with no architecture in it. The cap is one smooth field: no slabs, no fractures, no tooling, so the largest surface in frame is a value with noise on it. Measured, its wall cells carry a 4.6% hard-edge share against the 10.7% of the last approved build - the cap pass more than halved the wall's drawn edges. This is the CONSTRUCTION plant: it is wrong about whether a mass is made of anything, and it is deliberately RIGHT about chroma, so a round judged on construction cannot pass by fixing colour.",
+   "provenance": "the unshadowed entry cement-cap.png is this cull's original frame; this is the same asset state under the deck's light"
+  },
+  {
+   "file": "props-unrecognizable-shadowed.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "92058239edf8ac4c57571556e95ebe333dc903f80761494a7d9cc2a788ae7371",
+   "source": "RE-CAPTURED under the shadowed regime (Rafe's law, 2026-09-12) from the culled asset state at cb344578~1 (6 files overlaid) through the engine at c13c584fec54, with the ratified shadow flags (occluders all, softness 12, darkness 0.8, fire lit, flicker on, void ring 0)",
+   "culled_by": "Rafe, device walk, 2026-09-10 (the §12.2 ruling)",
+   "verbatim": "small, unrecognizable except the fire; colouring quite good",
+   "defect": "THE OBJECTS CANNOT BE NAMED. Marker content 10x15 px in a 32 px cell — a fifth of the cell, twenty device pixels across; three cold seats offered 'a bottle or vial', 'a lantern or candle', 'an orange chest or crate' for the marker and 'sticks' for the barricade. Craft is not the defect (the colouring was approved in kind); SIZE is, and a seat that would ship it is soft on the one clause §12 has — names itself at 1x. This is the OBJECT construction plant: it is deliberately fine on value and chroma so a round judged on object craft cannot pass by fixing colour.",
+   "provenance": "the unshadowed entry props-unrecognizable.png is this cull's original frame; this is the same asset state under the deck's light"
+  },
+  {
+   "file": "searchlight-edges.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "cast-edge"
+   ],
+   "subject": [
+    "walls",
+    "room",
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "702a845e839f2bbf2213c3248c3714b6b7f6d3431b0139c5604de856286e3947",
+   "source": "the shadow walk's PROVISIONAL reference — captured from the walked commit 4404b2c2 at Rafe's marks (occluders all, softness 8.0 = the knob's ceiling then, darkness 0.8, fire 1.6 at 2.5 tiles, flicker on, void ring 0); .claude/skills/frame-critic/approved/shadowed-2026-09-13-provisional.png, sha 702a845e",
+   "culled_by": "Rafe, shadow walk on the handset, 2026-09-13 (flip 1 of the walk; the frame was superseded by the re-mark at softness 12.0)",
+   "verbatim": "8.0 is the knob's ceiling and shadow edges are still traceable lines ... a lantern doesn't throw searchlights (§1: nothing is staged)",
+   "defect": "THE CAST EDGES ARE LINES. Every shadow boundary in the room — the pillar's, the marker's, the barricades', the corridor mouth's — is a traceable edge at PCF softness 8.0, and the fire at 2.5 tiles lights nothing. Craft, colour and construction are the approved frame's own (it seeded the shadowed reference), so a round judged on cast-edge softness cannot pass by fixing anything else. This is the CAST-EDGE plant: wrong on exactly one axis, visible at deck scale.",
+   "provenance": "the same walk that seeded .claude/skills/frame-critic/approved/shadowed-2026-09-13.png (softness 12.0); the two differ in softness and fire reach only"
+  },
+  {
+   "file": "jamb-hard-edge.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "form"
+   ],
+   "subject": [
+    "walls"
+   ],
+   "regime": "shadowed",
+   "sha256": "6234e1107d6f730cc62c6b09cb155b433072dbb476b17d23153a06d1ccdeecb3",
+   "source": "the overnight queue's gated capture (build 334727fdfd7c, commit 00596c72; the walked build d764757e+dirty carries the same pixels) — tools/tier1_floors/evidence/combined.png at sha 6234e110",
+   "culled_by": "Rafe, props walk on the handset, 2026-09-13",
+   "verbatim": "reads as a hard diagonal edge, not a face; the lit wedge in the corridor above it has a straight edge that looks like the occluder's shadow mask, not a surface",
+   "defect": "THE CORRIDOR JAMB'S EAST FACE IS LIT WHATEVER THE LAMP DOES. The east face inherited the first-surface light-mask exemption, so with the lamp south-west of the jamb it sat at full light (59.7, r/b 2.89, unchanged with or without occluders) over a corridor floor in the jamb's own shadow (141 -> 85): a parallelogram pasted over a dark floor with a 45-degree top edge parallel to the shadow's boundary. Measured in tools/cast_shadows/evidence/jamb/. ⚠ RECORDED, NOT DEALT BY DEFAULT: the defect is ~30 px in a 750 px deck. A control a seat cannot see at deck scale voids the judge, not the art (the wall lane's round 5, LOOP-PROCESS §1.2.1), so this entry carries the axis 'form' and is drawn only by a deck that asks for it. Rafe may re-tag.",
+   "provenance": "the frame the pillar end and run ends PASSED on ('a wall turning a corner'); only the corridor jamb was culled"
+  }
+ ],
+ "_regime": [
+  "LAW (Rafe, 2026-09-12): a plant is captured under the deck's LIGHTING REGIME — scene, rig, AND shadow state. Every entry here was captured before the cast-shadows round: `unshadowed`. A shadowed deck refuses them and needs plants re-captured with occluders live. A control lit differently from the build measures exposure, not craft (round 1 of art/cast-shadows: three seats ranked unshadowed culls above a shadowed room)."
+ ]
 }

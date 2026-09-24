@@ -1,0 +1,50 @@
+RANK: 3 > 4 > 2 > 1
+
+BEST: 3
+BEST_WHY: The floor masonry in 3 is cut, not stamped: courses change height (the row at y≈600 is ~65px stones, the row at y≈520 is 40–50px) and joints stagger, and every joint line survives from the cream core under the figure through the orange zone by the fire to the blue-grey bottom rows — the falloff is a colour shift, not a black vignette, and it never blows the detail out. The wall course at y≈430–455 has individually varied bricks with dark mortar and a lit top edge, and above it the wall mass is a large fractured-rock surface with warm light bleeding up from the course, so the mass reads as solid stone with a real top edge rather than fog. The light reads as coming from the figure: brightest stone is at its feet, and the wall course directly north of it is the only part of the course lit cream.
+
+WORST: 1
+WORST_WHY: There is no light source in the frame at all — every tile from corner to corner sits at the same value, so the one thing the fiction requires is absent. The pool at x≈250–330 is a flat green rectangle with a hard 1px edge against the dirt, no bank, no transition tile. The dirt floor is uniform high-frequency speckle with no larger structure across ~30 tiles, and it carries stray 2px cyan pixels (e.g. ~(183,153), ~(172,7), ~(112,13)) that read as errors, not objects. Wall tops are flat grey squares with a 1px grid seam and the same moss decal stamped at (15–45, 55–80) and (15–40, 205–230). The two chests at (65–95, 0–40) and (65–95, 48–85) are the identical stamp stacked. Walls cast no shadow onto the floor.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Add the carried light: radial falloff from the figure at (220,15), with everything more than ~5 tiles away dropped to near-black.
+- Replace the pool's hard rectangular boundary (x≈250–330) with edge tiles — a bank, a lip, or a darkened stone rim — so the water sits in the floor instead of on it.
+- Give the wall tops a top edge: a lit highlight along the outer edge and a cast shadow one tile deep on the floor below each south-facing course.
+- Remove the stray cyan pixels from the dirt, or draw them as legible objects at sprite scale.
+- Break the dirt's uniform speckle with lower-frequency variation (wear paths, dark patches, debris) so it does not read as a noise fill.
+- Replace the single moss decal with at least three distinct shapes; never place the same one twice in view.
+- Draw the second chest as a different object or a different state (open, damaged, turned).
+- Vary the bottom wall face (y≈265–288): the brick pattern repeats on a straight ~40px period.
+
+FLIP 2:
+- Give the wall mass (0–750, 70–390) a surface: it is a flat navy fill with soft cloud noise, which reads as fog-of-war, not stone; it needs a stone-top texture that takes the light the way the course below it does.
+- Kill the hard-edged lit rectangle at x≈440–502, y≈155–390: the per-tile visibility step produces a lighter column with a razor vertical seam; fade it with the same radial falloff as the floor or blend across the tile boundary.
+- Light the props from the lamp: the crate at (200–300, 475–515) is full-saturation orange on floor that is at ~40% of the value under the figure; the standing stone at (265–300, 540–640) is the brightest surface in the frame though it is outside the bright core.
+- Replace the fire's flat pale disc (radius ~30px under the sprite at (600,545)) with light actually falling on the stone — brighten the stones around it with their joints intact, no soft circle.
+- Redraw the crack overlay: the 1px anti-aliased curves (e.g. (245,510)→(390,470); the arc at (560–750, 600–680)) cross stones and joints alike without deflecting; cracks in masonry follow the joints and stop at them.
+- Unify pixel scale: crate, timbers, fire and figure are at ~3px blocks while floor hatching and cracks are 1px; pick one.
+- Vary the hatch stamp: the same "\\\" scratch appears at the same angle on multiple stones in the right half (e.g. (620–680, 490–520), (700–740, 530–550)).
+
+FLIP 3:
+- Light the props from the lamp: the crate at (200–300, 475–515) is full-saturation orange on floor at ~40% of the value under the figure; the standing stone at (265–300, 540–640) is the brightest surface in the frame though it is outside the bright core.
+- Replace the fire's flat pale disc (radius ~30px under the sprite at (600,545)) with light on the stone — brighten surrounding stones with joints intact, no soft circle.
+- Redraw the crack overlay: the 1px anti-aliased curves ((245,510)→(390,470); the arc at (560–750, 600–680)) cross stones and joints alike; make them follow and stop at joints.
+- Remove the hard vertical seam at x≈440 from y≈155 to 390 where the lit tile column abuts the fogged wall mass; the rock texture makes it less glaring than in 2 but the step is still a straight tile boundary with no geometry behind it.
+- Unify pixel scale: props and figure at ~3px blocks, floor hatching and cracks at 1px.
+- Vary the hatch stamp on the right-hand stones ((620–680, 490–520), (700–740, 530–550)): same mark, same angle, repeated.
+
+FLIP 4:
+- Move the A-frame trestle at (580–680, 395–450) off the wall: its legs stand on the brick face course and its apex extends into the wall mass; it needs to sit on floor tiles south of the course.
+- Make the side-face bevels consistent or remove them: the diagonal wedges at (505–537, 395–450), on both sides of the interior pillar at (295–400, 640–700), and at (185–215, 720–750) show side faces on some wall ends while the long walls next to them are pure top-down; the matching corner east of the corridor at x≈565 has none.
+- Pull the sawhorse at (215–300, 650–700) clear of the wedge it overlaps at its lower-left leg.
+- Light the props from the lamp: the standing stone at (265–300, 540–640) is the brightest surface in the frame; the A-frame is full-saturation orange at the far edge of the light.
+- Replace the fire's flat pale disc (radius ~30px at (600,545)) with light on the stone, joints intact.
+- Redraw the crack overlay so it follows and stops at joints instead of crossing stones in smooth 1px curves.
+- Remove the hard vertical seam at x≈440, y≈155–390 between lit tile column and fogged wall mass.
+- Unify pixel scale between props/figure (~3px) and floor hatching/cracks (1px).
+
+Model used: Claude Opus 5 (1M context).

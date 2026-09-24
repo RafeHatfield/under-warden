@@ -1,0 +1,56 @@
+RANK: 4 > 2 > 1 > 3
+
+BEST: 4
+BEST_WHY: The lit room floor (roughly x 380–750, y 460–720) is a mixed-ashlar bond — block widths and heights vary course to course, courses are offset, joints are a single dark pixel line with occasional chips at the corners, and the light falloff is a continuous gradient across those joints rather than a per-tile step. The upper wall reads correctly as top surface (khaki flagstone, y ≈ 390–420) over a darker brick face (y ≈ 420–460) and the face carries small driven iron pins (at x ≈ 295, 390, 455) that sit *into* the brickwork rather than on top of it — that is the orc repair fiction done as craft, not as a sticker. The rope-bound timber bundle (x 390–500, y 590–640) has a rope lashing drawn at the correct wrap width, and the standing stone (x 260–300, y 540–640) has a strap and bracket at its foot. The unexplored area is a quiet cold blue-grey with no repeating structure visible at play size, so the warm/cold split does the job the fiction asks for.
+
+WORST: 3
+WORST_WHY: It is a placeholder frame. There is no light source and no falloff at all — the whole 384×288 is evenly lit, so the one thing the brief says every frame must do, it doesn't. The pool (x 248–344, y 0–192) is a mathematically perfect rectangle of a repeating hex-scale pattern with zero bank, lip, or shore tile; it meets brown floor on a hard one-pixel edge. The grey wall tops (left column, bottom band, right column) are 48-px squares with uniform 1-px grey grout lines and no bevel, chip or course variation — bathroom tile, not stone. The brown floor is a repeating dirt tile whose reddish crack network visibly repeats on a 48-px period. Teal moss blobs on the wall tops (e.g. x 16–48, y 48–80 and x 352–384, y 152–176) have a lighter 1-px outline as if rubber-stamped. The two chests (x 64–96, y 0–48 and y 48–96) are saturated gold with a sparkle diamond; the lily pads in the pool are cartoon green discs. None of it is dry, cold or straight.
+
+FLAGGED: 1, 2, 3
+
+SHIP: NONE
+
+FLIP 1:
+- Remove the diagonal side-face shading on the wall block corners at (500–540, 395–440) and (400–440, 650–710); every other wall in the frame is drawn as a flat top with a south-facing face only, so these two corners read as a different projection.
+- The X sawhorse at (220–300, 650–700) is sitting on the top surface of the lower-left wall, not on floor. Move it onto floor or delete it.
+- The A-frame brace at (580–680, 400–450) straddles the wall-top/wall-face boundary and floats over the pin band. Either seat its feet on the floor below the face and let it lean into the face, or drop it.
+- Replace the unexplored-area render (0–440, 70–390 and 570–750, 70–390): it is large flat-shaded polygons with straight edges and thin seam lines — a Voronoi fill. Use the soft dark treatment from the frame with the blue fog.
+- The fog/lit boundary follows tile edges as a hard step (horizontal at y 390 from x 180–440; vertical at x 657 and x 440 up the corridor). Feather it 8–12 px so the reveal reads as light, not as a mask.
+- The brazier at (580–620, 530–565) is burning and casts nothing; give it a small warm radius of its own or make it a cold, dead brazier.
+- The wood props (sawhorse, A-frame) are the same saturated orange in shadow as in light; desaturate and darken them with distance from the figure like everything else.
+- The uniform "///" scratch hatching across the right-hand floor (600–750, 450–700) is at constant density; vary it or cluster it, otherwise it reads as a noise brush.
+
+FLIP 2:
+- Replace the unexplored-area render (0–440, 70–390 and 570–750, 70–390): the flat polygon facets with straight seams are visible at play size and read as generated. Use the soft blue-grey treatment.
+- Feather the fog/lit boundary: hard tile-edge steps at y 390 (x 180–440), at x 657 (corridor right edge) and at x 440 (corridor left edge).
+- The brazier at (580–620, 530–565) casts no light; add a small warm radius or make it dead.
+- The corridor floor (440–500, 200–390) has no joint structure — a soft mottled fill next to a crisp ashlar room. Give it the same joint work at the same pixel density.
+- The dark wall tops right of the corridor (500–570, 70–390) are a smeared low-frequency texture with one crack line; sharpen to the same pixel density as the floor.
+- Desaturate the crate (200–300, 475–515) and log bundle (390–500, 590–640) in step with the light falloff.
+- Reduce the uniform scratch hatching on the right floor (600–750, 450–700).
+- The flat grey rectangle at (310–370, 650–680) above the lattice has no texture or edge treatment and reads as neither wall nor floor; resolve it as a hatch, a step or a wall face.
+
+FLIP 3:
+- Add the carried light: a radial falloff from the orc at (208, 8) to near-black at the frame edges; nothing in this frame is lit from anywhere.
+- Give the pool (248–344, 0–192) an edge: a stone lip or a wet-earth bank at least one tile wide, and break the rectangle with at least one irregular corner.
+- Replace the hex-scale water fill with a flat dark surface plus sparse highlights; remove the lily pads — this is an underworld, not a garden.
+- Rework the wall tops (all grey areas): vary block size, break the 1-px grout grid, add chips and a darker edge line where top meets face.
+- The wall face only exists on the bottom band (y 240–288) and one segment at left (x 0–48, y 120–168); add a face under every wall top that has floor below it.
+- Retile the brown floor so the reddish crack network doesn't repeat every 48 px; add at least three variant tiles.
+- Remove the outlined moss stamps on the wall tops or redraw them without the lighter 1-px halo.
+- Desaturate the chests (64–96, 0–96) and barrels (112–192, 192–216) and drop the sparkle glint on the chest lids.
+- The orange vertical thing at (88–96, 128–160) in the left wall face is unreadable — torch, ladder or door; commit to one.
+- Bones at (208–240, 112–128) are white confetti; give them a value close to the floor and a shadow side.
+
+FLIP 4:
+- Feather the fog/lit boundary: it is a hard tile-edge step at y 390 (x 180–440), x 657 and x 440 up the corridor, which reads as a reveal mask over a smooth light.
+- The vein lines in the blue fog (visible at 250–500, 80–300) are a marble-filter pattern; either drop them or draw them as a few deliberate cracks.
+- The brazier at (580–620, 530–565) is lit and casts no light; add a small warm radius or make it dead.
+- The corridor floor (440–500, 200–390) has no joint structure; match the room floor's ashlar at the same pixel density.
+- Sharpen the smeared wall-top texture right of the corridor (500–570, 70–390).
+- Desaturate the crate (200–300, 475–515) and log bundle (390–500, 590–640) with distance from the figure; they are the same orange in shadow as in light.
+- Vary the density of the scratch hatching on the right floor (600–750, 450–700).
+- Resolve the untextured grey rectangle at (310–370, 650–680) into a readable object.
+- The figure sprite (teal helmet, orange skin, pink shield at 385–425, 465–515) is at a higher saturation than anything else in the frame; pull it into the frame's palette.
+
+Model: Claude Opus 5 (1M context).

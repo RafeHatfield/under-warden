@@ -1,0 +1,49 @@
+RANK: 1 > 3 > 2 > 4
+
+BEST: 1
+BEST_WHY: The floor stonework in the lit pool around the figure (x≈200–560, y≈460–700) is the strongest material in the deck: block widths vary (roughly 30, 45, 60 px runs on the same course), joints are broken and offset course to course, and the dark mortar lines drop out where the light blows across them and return in shadow, so the stone reads as cut and worn rather than tiled. The wall band across y≈420–455 is a distinct front face with driven timber caps at uneven spacing (x≈230, 300, 335, 385, 460), which is the one place the "repaired with pins and salvaged timber" fiction is actually visible. The two light sources are different temperatures — cool white at the figure, orange at the brazier (595,545) — and the crossover zone at x≈480–560 blends without a seam.
+
+WORST: 4
+WORST_WHY: Nothing in it is drawn as a surface. The dirt floor (x≈55–250, y≈0–215) is a single flat brown with a uniform red/dark speckle across the entire area — a noise filter, not ground — with blue-grey 4–5 px blobs dropped at random. The pond (x≈250–345, y≈0–190) is a hard-edged rectangle of one teal with a regular honeycomb pattern visible across its whole surface, meeting the dirt on a straight pixel edge with no bank, no darkening, no shore. The door at (28–35, 127–167) and the two chests at (65–95, 0–90) are drawn in front elevation (visible front faces, drawers) while the walls and floor are straight top-down; the same moss blob is stamped at (20–45, 55–85) and (360–384, 150–175); barrels at (115–140, 195–215) and (165–190, 195–215) are identical stamps. There is no light and no falloff anywhere.
+
+FLAGGED: 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The visibility wedge from the figure through the wall corner at (500,390) draws a hard diagonal edge across the top-right wall top from about (567,350) to (653,253), and a second one along (632,70)–(750,390); a flat top-down wall top with no object above it cannot carry a hard-edged cast shadow while every other light edge in the frame is soft. Either clip the visibility polygon to floor tiles only or feather it to match the radial falloff.
+- The brazier's orange light reaches the right screen edge (x=740) at the same value as x=600; give it the same inverse-square falloff the figure's light has so the far-right floor drops back into the dark.
+- Floor under and immediately right of the figure (x≈400–520, y≈470–560) is blown to near white and the joints vanish; cap the light's peak so the mortar lines survive at the hottest point.
+- The long crack lines (e.g. the curve from (280,660) to (720,690) and (130,500)–(390,560)) are uniform 1 px vector strokes that cross block joints without deflecting; break them at each joint and vary the weight, or replace with per-block cracks.
+- The figure is nearest-neighbour upscaled at ~3× (45×50 px on screen) while the floor hatching and joints are 1–2 px; the sprite is at a different pixel density from the world it stands in. Redraw the figure at native resolution or render the environment at the same integer scale.
+- Crate at (190–305, 475–520) and the bound log bundle at (380–500, 590–640) are saturated flat orange with no contact shadow and no dust/wear; they read as untextured props placed after the fact. Add a 2–3 px ground shadow on the side away from the figure and knock the saturation down to the wall-band timber.
+- The standing stone at (265–295, 540–640) is a plain cream rectangle with a single soft edge and no shadow on the floor; give it a cast shadow and a top face distinct from its side.
+- The big wall tops in the top half (0–500, 0–390 and 565–750, 75–390) are flat dark slabs with only the same faint crack overlay; give them a surface (block courses, a lip at the edge, rubble) so they read as masonry rather than fill.
+
+FLIP 2:
+- The A-frame trestle at (580–680, 400–450) sits on the wall's front face band, not on the floor — it overlaps the golden brick and timber-cap strip. Move it onto floor tiles (y ≥ 460) or remove it.
+- The crossed sticks at (215–300, 650–700) straddle the floor/wall-top boundary at the lower-left junction with no shadow to say which surface they're on; place fully on floor and add a contact shadow.
+- Same visibility-wedge hard diagonals on the top-right wall top as frame 1 ((567,350)–(653,253) and (632,70)–(750,390)); clip or feather.
+- Brazier light has no falloff to the right edge; the floor at x=740 matches x=600.
+- The floor overall has been pushed pink/salmon compared to frames 1 and 3 and lost the cool grey in the shadowed lower-left (x≈180–400, y≈600–700); the cool/warm split is what makes the two-light setup read. Restore it.
+- Same figure pixel-density mismatch, same uniform-width crack strokes crossing joints, same flat wall-top slabs as frame 1.
+- The standing stone at (265–295, 540–640) has no cast shadow.
+
+FLIP 3:
+- The brazier at (595,545) is a lit fire that emits almost no light — a ~30 px disc of slightly lighter stone with a visible edge, then flat grey-tan floor to the right edge. A fire that doesn't light its surroundings is the most noticeable thing in the frame. Give it a proper warm falloff (frame 1's, with the range shortened so it dies before x=740).
+- With the brazier dead, the entire right half (x≈520–750, y≈460–700) is one uniform mid-value grey-tan with no direction to the light; it reads as unlit texture, not a dark room.
+- Same visibility-wedge hard diagonals on the top-right wall top; clip or feather.
+- Floor under the figure (x≈400–520, y≈470–560) blown to white; cap the peak.
+- Same crack strokes crossing joints, same figure pixel-density mismatch, same shadowless crate (190–305, 475–520), bundle (380–500, 590–640) and standing stone (265–295, 540–640), same flat wall-top slabs as frame 1.
+
+FLIP 4:
+- Replace the dirt floor's speckle-noise fill (x≈55–250, y≈0–215) with drawn ground: packed-earth blocks or flagstones with joints, wear paths, and a value gradient away from the figure.
+- Give the pond (x≈250–345, y≈0–190) a bank: a 2–4 px dark wet edge, an irregular shoreline instead of a rectangle, and remove the visible honeycomb tiling — the repeat is readable across the whole surface.
+- Redraw the door (28–35, 127–167) and both chests (65–95, 0–90) in top-down projection to match the walls and floor; a front-elevation door standing in a top-down corridor is a projection break.
+- Break the moss stamp: the same blob shape is at (20–45, 55–85) and (360–384, 150–175); draw three or four variants and rotate them.
+- The two barrels (115–140 and 165–190, y≈195–215) are identical; vary at least one.
+- The wall tops (grey, e.g. x≈0–55 and the bottom band y≈215–265) are single flat grey with a 1 px grid and one hairline crack; give them block courses with varied joint depth and a lip at the edge above the dark face band.
+- The figure at (215–235, 0–25) carries no light and nothing falls off with distance; add the light source and a radial falloff so the frame has a value structure at all.
+- The white pixel scatter at (205–235, 113–127) reads as noise, not bones; draw the bones or remove it.
+
+Model: Claude Opus 5 (1M context).

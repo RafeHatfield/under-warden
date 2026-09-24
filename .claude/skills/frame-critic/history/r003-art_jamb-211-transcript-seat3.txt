@@ -1,0 +1,58 @@
+RANK: 2 > 4 > 1 > 3
+
+BEST: 2
+BEST_WHY: The value hierarchy is the one thing here that is actually under control. In 2 the floor tiles two blocks either side of the brazier (around x 560–700, y 470–620) keep their seams and surface hatching under the light; the same tiles in 1 and 4 wash to a flat peach with the seams gone. The falloff from the figure to the right-hand edge is continuous — readable stone at x 600, near-black by x 740 — with no ring or hard step, and the cool-grey ambient in the lower-left (x 180–330, y 640–720) reads as unlit rather than as a different-coloured floor because it is kept low in chroma. The top wall band (y 395–455) carries three distinct layers — a dark timber rail, a row of driven pins at irregular spacing (x 300, 385, 455, 640), and a lighter block course beneath — and the pins are placed off-grid, so the repair reads as done by hand rather than stamped. The rope-lashed timber cross at (380–500, 590–640) has its lashing drawn as a wrapped band with two visible turns, and its two members overlap with a cast shadow onto the lower one.
+
+WORST: 3
+WORST_WHY: It is a tilemap with no finish pass. There is no light source and no falloff at all — the orc at (215–235, 0–25) is at the same value as the far corner — so the frame contradicts the premise that the figure carries the only light. Every material is a hard-edged rectangle with no edge tile: the green pool (250–345, 0–190) meets the dirt at a straight one-pixel boundary with no bank, shore or wet rim; the dirt (55–345, 0–215) meets the grey flagstones the same way on all sides. The pool is filled with a uniform hexagonal honeycomb pattern that reads as a texture filter, not water, with three lily-pad sprites dropped on top in a green that appears nowhere else in the frame. The grey flagstones are drawn with a full four-sided 1px seam on every tile at identical weight, so the floor reads as graph paper. The two chests (65–95, 0–85) are drawn as a front-facing lid over a slatted front panel, i.e. side-on, on a floor drawn straight from above. The orc is clipped by the top edge of the frame.
+
+FLAGGED: 1, 2, 3
+
+SHIP: NONE
+
+FLIP 1:
+- The crossed-stake obstacle at (220–300, 650–700) is rendered at full saturated orange while the floor under it is the darkest floor in the frame; it must take the same light as the tile it stands on — multiply it by the local light value, or move it into the lit zone.
+- Same for the A-frame timber prop on the top-right wall band (580–680, 400–450): it is the brightest object on that wall while sitting three tiles from the light. Light it or remove it.
+- The crossed-stake prop also straddles the edge of the wall-top band at y 650 — it is half on the black wall-top and half on the floor. Snap it to a floor tile.
+- The floor within roughly two tiles of the brazier (560–700, 470–620) is blown out to a flat peach; the seams and hatching disappear. Cap the light's contribution so tile detail survives at peak intensity (2 already does this — match that curve).
+- The whole lit zone is a single hot orange; separate the brazier's warm colour from the carried light's colour so the two sources read as two.
+- The unlit rock mass at top-left (180–500, 70–390) and top-right (565–750, 70–390) is a soft airbrushed noise texture with a thin diagonal hairline crack, at a completely different resolution from the pixel-art floor. Redraw it at the floor's pixel density, or hide it entirely under the dark.
+- The long crack lines (one from (230, 460) through the pillar base to (600, 500); one curving across (560–750, 640–720)) are drawn as a continuous 1px overlay that ignores every tile seam it crosses. Break them at seams, or confine each to a single block.
+- The dark drop/step at (320–400, 650–700) is a black rectangle with one diagonal shadow wedge and no visible treads, lip or bottom. Draw what it is.
+- The pillar at (265–295, 530–640) is drawn side-on (a tall pale rectangle with a band at its foot) on a straight-down floor. Either draw its top face and a short cast shadow, or commit to a 3/4 projection for every prop and the wall too.
+- The figure sprite has a solid black outline and is one pixel density coarser than the environment; nothing else in the frame has an outline. Remove the outline or outline everything.
+
+FLIP 2:
+- The crate at (190–300, 480–515) is fully bright saturated orange in a corner where the floor beneath it is dim; it is the brightest object on the left half of the frame. Multiply it by the local light value.
+- The lashed-timber cross at (380–500, 590–640) is also brighter than the tiles under it, though less egregiously; light it the same way.
+- The unlit rock mass at top-left and top-right (180–500 and 565–750, y 70–390) is a soft airbrushed noise texture at a different resolution from the pixel floor. Redraw at the floor's pixel density or hide it in the dark.
+- The crack overlays (the run from (230, 460) to (600, 500) and the curve across (560–750, 640–720)) cross tile seams as a continuous line; break them at seams.
+- The dark drop at (320–400, 650–700) is a black rectangle with a diagonal wedge and no readable structure; draw treads or a lip.
+- The pillar (265–295, 530–640) is side-on on a top-down floor; give it a top face and cast shadow, or match its projection to the crate and wall.
+- The corridor mouth at (500–560, 390–455) is closed with a single diagonal dark wedge that reads as an unfinished cut; draw the wall's return face there.
+- The figure sprite has a black outline and coarser pixel density than anything around it; remove the outline or apply the convention to every prop.
+
+FLIP 4:
+- The crate at (190–300, 480–515) and the lashed-timber cross at (380–500, 590–640) are both rendered at full saturated orange regardless of the light on the tile beneath them; multiply them by local light.
+- The floor within two tiles of the brazier (560–700, 470–620) washes to flat peach and loses its seams and hatching; cap peak light so tile detail survives (2's curve does this).
+- The lit zone is one hot orange throughout; give the carried light and the brazier distinguishable colours.
+- The unlit rock at top-left and top-right (180–500 and 565–750, y 70–390) is soft airbrushed noise at a different resolution from the pixel floor; redraw at pixel density or hide it.
+- The crack overlays cross tile seams as one continuous line (230→600 at y ~460–500; the curve at 560–750, 640–720); break them at seams.
+- The dark drop at (320–400, 650–700) has no readable structure; draw treads or a lip.
+- The pillar (265–295, 530–640) is side-on on a top-down floor; give it a top face and a cast shadow.
+- The corridor mouth at (500–560, 390–455) closes with one diagonal wedge; draw the wall's return face.
+- The figure sprite's black outline and coarser pixel density match nothing else in the frame; remove the outline or apply it everywhere.
+
+FLIP 3:
+- Add a light source at the figure and a falloff to dark; at present every pixel in the frame is at the same illumination.
+- Draw edge tiles for the pool: a bank or wet rim where the green rectangle (250–345, 0–190) meets dirt, on all four sides.
+- Draw edge tiles for the dirt: a scuffed or crumbling transition where the dirt (55–345, 0–215) meets the grey flagstones, instead of a straight one-pixel boundary.
+- Replace the honeycomb fill in the pool with a water surface that has value variation (a highlight ripple, a darker centre), and either remove the lily pads or draw them in a green that belongs to the frame's palette.
+- Vary the flagstone seams: not every tile edge should carry a full 1px line at the same weight; drop some seams, thicken others, let a few tiles be one-and-a-half blocks.
+- Redraw the two chests (65–95, 0–85) from above — a lid face with a small drop shadow — rather than as a front-on lid over a slatted front panel.
+- Move the orc down at least one tile so its head is not clipped by the frame edge.
+- The moss blobs on the flagstones (e.g. 20–45, 55–80 and 355–380, 150–175) are a low-alpha teal stamp with a visible soft edge; draw them at pixel density with a hard edge and a darker outline pixel.
+- The dirt's red-brown crack pattern is a single noise fill; break it up with at least two tile variants so the repeat is not visible across the whole region.
+- The lighter brick at (163–187, 280–288) in the bottom wall band is a stray variant that reads as a misplaced tile; either make it deliberate (a repaired block, with a pin) or remove it.
+
+Model: Claude Opus 5 (1M context).
