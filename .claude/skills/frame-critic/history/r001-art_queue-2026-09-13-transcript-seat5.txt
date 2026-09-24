@@ -1,0 +1,55 @@
+RANK: 2 > 4 > 3 > 1
+
+BEST: 2
+BEST_WHY: The lit floor at (300-560, 460-640) has bricks of varying length and slightly staggered courses with hatched wear that clusters differently per brick, so the run reads as laid rather than stamped; the lit wall band at (190-750, 395-455) has a continuous wooden rail with driven pegs at irregular spacing (x≈295, 390, 460, 640, 700) that reads as a repair, not a decoration; the light pooling around the figure at (390-425, 465-510) and the separate warm pool from the fire at (580-620, 530-570) are distinct sources with distinct colour temperatures, and the corridor mouth at (440-500, 80-390) catches spill that decays correctly with distance. It carries none of the single glaring props that 3 and 4 add to the same scene.
+
+WORST: 1
+WORST_WHY: The wall caps at (0-50, 0-115), (0-50, 175-288) and the whole bottom band (0-384, 195-250) are one flat grey fill with a single 1px darker line as the joint — every slab is the same value, so the walls read as a placeholder tile, not stone. The side face (dark brick at y=255-288) appears only on south-facing runs; the vertical runs at x=0-50 and x=335-384 have no face at all, so the walls have no height. The moss decal at (25-45, 55-75), (20-40, 200-230), (350-375, 150-175) and (130, 215) is the same blob cluster placed four times. The water at x=250-335 is a visible hex repeat meeting the dirt on a hard vertical line with no bank. The dirt floor repeats its dark-red blotch on a 32px cadence across the whole room. And the figure at (215, 10) carries no light — the frame is lit evenly corner to corner.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Wall caps: replace the flat grey fill + 1px grid line with per-slab value variation and joint depth that varies along a run (bottom band y=195-250, left columns x=0-50).
+- Give the vertical wall runs (x=0-50, x=335-384) the same side face that the south-facing runs at y=255-288 have, or drop the face convention entirely; right now the walls are flat placards.
+- Replace the four identical moss blobs with 3-4 hand-drawn variants at different scales; never place the same one twice in a frame.
+- Water (x=250-335): break the hex tile repeat with a non-tiling ripple layer and add a shoreline/bank strip where it meets the dirt at x=250 and y=195.
+- Dirt floor: add 2-3 alternate floor variants and scatter them to kill the 32px blotch repeat.
+- The post at the door (x=28-40, y=120-165) — an orange bar with a brown tail running south over the floor — reads as neither torch nor post; make it a square-footprint top-down post or a wall torch with its own light pool.
+- Add the carrier's light: the figure at (215, 10) is the only light per the fiction, so darken by distance from it, quantised to the palette rather than a smooth gradient.
+- The white scatter at (215-235, 110-125) is eight loose white pixels; make it read (bone, salt) or remove.
+- The chest/crate stack at (65-95, 0-70) is clipped by the frame top; either it's a prop with a full footprint or the room starts lower.
+
+FLIP 2:
+- The floor bricks are rendered at a finer, bilinear-smoothed density than the figure — compare the soft brick edges at (300-450, 480-560) against the hard sprite edges at (390-425, 465-510); rebuild the floor at the sprite's pixel size with hard pixels.
+- The crack is a 1px antialiased polyline from (240, 570) to (600, 520) that crosses brick faces and mortar alike without deflecting and runs under the obelisk at (270, 590); route cracks along joints, break them at prop footprints, and draw them at pixel density.
+- The bottom-right crack (560-750, 640-720) is a smooth circular arc; make it jagged.
+- The crate at (195-300, 475-520) and the bound logs at (385-500, 590-640) are side/three-quarter views in a straight-down scene; redraw as top-down footprints (crate = square top, logs = long rectangles with rope crossing them).
+- Those same two props are flat saturated orange with no grain and ignore the scene light — the crate sits in the dim left zone yet is as bright as the fire-lit bricks; light props with the same falloff as the floor.
+- The obelisk at (265-290, 540-640) is a side elevation of a standing stone with a strap at its base; from above it should be a square cap with a short drop shadow.
+- The light falloff is a smooth screen-space gradient with bluish streaked shadow bands behind the obelisk (300-400, 550-650); quantise the light to palette steps and remove or hard-edge the streaks.
+- The unlit walls in the top half carry voronoi-cell outlines at 200-300px scale — e.g. the polygon boundary from (300, 250) to (660, 160) and the diagonal at (570-750, 100-390); replace with the block scale used on the lit wall, or leave them plain.
+- The fire at (580-620, 530-570) sits on a soft dark disc; give it a top-down hearth (ash spread, a few stones) at pixel density.
+
+FLIP 3:
+- Remove or redraw the orange "A" at (580-680, 395-450): two chevron planks and two stub blocks standing on the rail read as a letter; if it's a leaning A-frame it must lie on the floor as a top-down footprint, not stand against the wall band.
+- Remove the diagonal tan plank at (510-540, 390-450) that crosses the corridor/wall corner; it overlaps the rail and the corridor floor with no footprint and no shadow.
+- The X sawhorse at (215-300, 650-700) is correct in projection but is flat orange with no grain and no scene light; texture it and light it with the floor's falloff.
+- The obelisk at (265-290, 540-640) is a side elevation; redraw as a square cap with a drop shadow.
+- Floor bricks: rebuild at the figure's pixel density with hard pixels (same defect as 2).
+- Crack polylines at (240, 570)→(600, 520) and the arc at (560-750, 640-720): route along joints, break at props, draw at pixel density.
+- Bluish streaked shadow bands around the obelisk (300-400, 550-650): quantise or remove.
+- Voronoi-cell outlines on the unlit walls in the top half: replace with the lit wall's block scale.
+
+FLIP 4:
+- Fire ring at (580-620, 530-570): the cream stones form a regular twelve-tooth cog around a black disc and read as a gear icon; vary stone size and spacing, drop the black disc, let ash spread unevenly.
+- Three crossed-plank props at (195-240, 600-630), (390-420, 600-630), (515-550, 605-630) are the same X shape at two scales; keep one, replace the others with different salvage.
+- The chest at (335-355, 535-560) is three-quarter view and roughly half the figure's pixel size; redraw top-down at the figure's density.
+- The blue streaked shadow bands cast from the chest down-right (330-450, 550-650) are visible as diagonal smears; quantise or remove.
+- All props are flat saturated orange-red with no grain and ignore the light falloff; texture and light them with the floor.
+- Floor bricks: rebuild at the figure's pixel density with hard pixels.
+- Crack polylines at (240, 570)→(600, 520) and the arc at (560-750, 640-720): route along joints, break at props, draw at pixel density.
+- Voronoi-cell outlines on the unlit walls in the top half: replace with the lit wall's block scale.
+
+Model: Opus 5 (1M context)

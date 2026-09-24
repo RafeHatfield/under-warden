@@ -135,7 +135,7 @@ light:
   shadow_softness: 12.0    # "melts edges — no beams at 12". PCF13 shadow_filter_smooth, ladder to 64
   shadow_darkness: 0.8     # leak rgb = 0.2 x the ambient's hue ratios: "cool dark, not grey"
   fire_flicker: true       # RULED ON — "the tended fire is §9.2's exception"
-  fire: { energy: 1.6, radius_tiles: 4.0, color: "ff8a3c" }   # B-PROP-003 emits (#205); reach rode with the mark
+  fire: { energy: 1.6, radius_tiles: 4.0, color: "ff8a3c" }   # RULED at the props walk 2026-09-13 — "the fire is good"; a fire's light block states all three, no default
   status: RE-RATIFIED WITH SHADOWS (Boundary only) — Rafe, 2026-09-13, on the handset with the
     occluder pass live. Supersedes the 2026-09-06 table (superseded-by-re-ratification, kept).
     Other regions derive their own at their own gate.

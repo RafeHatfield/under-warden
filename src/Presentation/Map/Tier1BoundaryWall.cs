@@ -190,6 +190,8 @@ public static class Tier1BoundaryWall
 
     private const string BindNode = "Tier1Binding";
     private const string FaceNode = "Tier1Face";
+    private const string CapBandNode = "Tier1CapBand";   // #212: the cap re-laid over an against-wall prop
+    private const string EastFaceNode = "Tier1EastFace"; // #211: the wall end's east face (§3.2)
 
     /// <summary>
     /// Does this overlay child cover EXACTLY its parent cell, and nothing of the cell next door?
@@ -224,7 +226,7 @@ public static class Tier1BoundaryWall
     /// <summary>Drop any overlay this class put on a cell, so a re-lay never stacks two.</summary>
     private static void ClearOverlays(Sprite2D s)
     {
-        foreach (var n in new[] { FaceNode, BindNode })
+        foreach (var n in new[] { FaceNode, BindNode, CapBandNode, EastFaceNode })
         {
             var old = s.GetNodeOrNull<Sprite2D>(n);
             if (old != null) { s.RemoveChild(old); old.QueueFree(); }
@@ -375,6 +377,8 @@ public static class Tier1BoundaryWall
 
         int face = 0, top = 0, voidCells = 0, missing = 0, faceSuppressed = 0;
         int firstSurface = 0, occludedMass = 0;   // the light-mask split, reported
+        int capBands = 0;                          // #212: cap bands re-laid over against-wall props
+        int eastFaces = 0;                         // #211: east faces on wall ends, corners, pillars
         int bound = 0, capLaid = 0, capVoid = 0;
         var ageHist = new int[System.Math.Max(1, 8)];
         var ageMap = new Dictionary<(int X, int Y), int>();
@@ -652,6 +656,83 @@ public static class Tier1BoundaryWall
                     }
                 }
 
+                // ── #211: A WALL END, CORNER OR PILLAR GAINS THE EAST FACE AT ½ DEPTH (§3.2) ──
+                //
+                // RULED with the object projection (Rafe, 2026-09-12): continuous runs stay
+                // two-plane; where a wall ENDS it becomes an object in the room's terms and must
+                // agree with the objects beside it — a right/east face receding at 45° at ½ depth.
+                // The cell qualifies when floor lies to its EAST and it is not a north-south run
+                // (north and south both wall): the east end of an E-W run, a corner, a pillar,
+                // and the corridor mouth's jamb (the first wall end in every room — r002's seat
+                // asked for exactly this: "the wall face band is simply cut where the corridor
+                // passes through it").
+                //
+                // Geometry, in native px on a 32 cell whose face is the lower 16 rows: the block
+                // is one cell deep in plan, so the receding run is ½ x 32 = 16 right and 16 up.
+                // The parallelogram hangs off the reveal's right edge: (32,32)-(32,16)-(48,0)-(48,16)
+                // — its top-right corner meets the cap's back edge, its bottom-left the face's
+                // foot. Each output column samples one column of the cell's OWN face, so the
+                // courses recede diagonally rather than run flat — a side, not a stretched front.
+                // Value 0.75 of the face and a 1px seam at the arris: the side separates from the
+                // front by the seam where they meet (§12.1 form), the ratio matching the ½-depth
+                // sides the landed §3.2 props carry.
+                bool eastOpen = map.InBounds(x + 1, y) && !map.IsWallTile(x + 1, y);
+                bool nsRun = map.InBounds(x, y - 1) && map.IsWallTile(x, y - 1)
+                          && map.InBounds(x, y + 1) && map.IsWallTile(x, y + 1);
+                if (eastOpen && !nsRun && !isVoid && tex != null)
+                {
+                    var src = tex.GetImage();
+                    int tw = src.GetWidth(), th = src.GetHeight();
+                    int half = th / 2, run = tw / 2;
+                    var side = Image.CreateEmpty(run, th, false, Image.Format.Rgba8);
+                    for (int u = 0; u < run; u++)
+                    {
+                        for (int v = 0; v < th; v++)
+                        {
+                            int lo = half - u, hi = th - u;          // the strip slides up 1px per column
+                            if (v < lo || v >= hi) continue;
+                            int sy = half + (v - lo);                // the face's rows, top to bottom
+                            int sx = Mathf.Min(tw - 1, tw - run + u);// the face's right half, one column each
+                            var c = src.GetPixel(sx, Mathf.Clamp(sy, 0, th - 1));
+                            if (c.A <= 0.01f) c = src.GetPixel(sx, th - 1);
+                            float k = u == 0 ? 0.5f : 0.75f;         // the arris seam, then the side
+                            side.SetPixel(u, v, new Color(c.R * k, c.G * k, c.B * k, 1f));
+                        }
+                    }
+                    var ef = new Sprite2D
+                    {
+                        Name = EastFaceNode, Texture = ImageTexture.CreateFromImage(side),
+                        Centered = s.Centered, Position = new Vector2(tw, 0),
+                        TextureFilter = CanvasItem.TextureFilterEnum.Nearest,
+                        // +5, like a wall-top prop: the parallelogram hangs over the EAST floor
+                        // cell, whose overlay children reach +4 and are added after this cell, so
+                        // at +1 it drew underneath them and was not in the frame at all.
+                        ZIndex = 5,
+                    };
+                    s.AddChild(ef);
+                    eastFaces++;
+                }
+
+                // ── #212: THE CAP BAND OVER AN AGAINST-WALL PROP ─────────────────────────────
+                // The prop's base is on this cell's south edge (DungeonRenderer shifted it there)
+                // and it draws over the face. The top surface must stay in front of the prop's
+                // top: the cap's upper half is re-laid as a child at the prop's own z, added after
+                // the prop so it wins the tie. face < prop < cap band.
+                if (capBase && tileLayer.CapBandCells.TryGetValue((x, y), out int bandZ)
+                    && s.Texture != null)
+                {
+                    int th = s.Texture.GetHeight(), tw = s.Texture.GetWidth();
+                    var band = new Sprite2D
+                    {
+                        Name = CapBandNode, Texture = s.Texture, Centered = s.Centered,
+                        RegionEnabled = true, RegionRect = new Rect2(0, 0, tw, th / 2f),
+                        TextureFilter = CanvasItem.TextureFilterEnum.Nearest,
+                        ZAsRelative = false, ZIndex = bandZ,
+                    };
+                    s.AddChild(band);
+                    capBands++;
+                }
+
                 // ── THE LAMP STOPS AT THE FACE — BY MASK (cast-shadows round, §12.1a) ──────
                 //
                 // A 2D occluder cannot say "light this cell's own surface, stop behind it":
@@ -707,6 +788,7 @@ public static class Tier1BoundaryWall
              + $"edge_check={cfg.EdgeCheck.Count}/OK bindings={bound}({kinds}) "
              + $"cap={capLaid}+{capVoid}void "
              + $"lightmask(first_surface={firstSurface},occluded_mass={occludedMass}) "
+             + $"cap_bands_over_props={capBands} east_faces={eastFaces} "
              + $"age0..3={ages} traffic=spine:{tf.SpineLength:F0}/routes:{tf.Routes} "
              + $"manifest={manifestResPath}";
     }

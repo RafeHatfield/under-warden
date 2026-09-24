@@ -42,6 +42,19 @@ public sealed class TileLayer
     public Dictionary<(int PropIndex, int CellOffset), (Node2D Sprite, int GridX, int GridY)> PropSprites { get; } = new();
 
     /// <summary>
+    /// #212 — PROPS SIT AGAINST WALLS UNDER THE TOP BAND (overnight queue, 2026-09-13).
+    /// A prop whose north neighbours are wall stands AGAINST that wall: its sprites are shifted
+    /// north so its base line sits on the shared edge (the reveal's foot), and it draws over the
+    /// face. The shift per prop index, in screen px, so the occluder pass can follow it.
+    /// </summary>
+    public Dictionary<int, float> PropShift { get; } = new();
+
+    /// <summary>The wall cells whose CAP BAND is re-drawn over an against-wall prop's top, with
+    /// the z it must draw at (the prop's own, added later so it wins the tie). Consumed by
+    /// Tier1BoundaryWall when it lays the cap.</summary>
+    public Dictionary<(int X, int Y), int> CapBandCells { get; } = new();
+
+    /// <summary>
     /// Feature overlay sprites keyed by grid position (X, Y).
     /// Covers chests (closed/open), signposts, and murals placed by EntityPlacer.PlaceFloorFeatures.
     /// Tracked separately so UpdateVisibility can apply FOV and SwapFeatureSprite can swap
@@ -439,6 +452,58 @@ public sealed class DungeonRenderer
                         }
                     }
                 }
+            }
+        }
+
+        // ── #212: A PROP AGAINST A WALL SITS AT THE WALL'S FOOT, UNDER THE TOP BAND ──────────
+        //
+        // RULED-SHAPED by the cast-shadows walk (Rafe, 2026-09-13: "props sit against walls under
+        // the top band"). Before this, a prop one cell south of a wall stood a full cell away from
+        // the reveal — its base at its own cell's bottom edge, the wall's face beginning a cell
+        // north — and read as placed in the room rather than against anything. The face's foot
+        // IS the shared edge (§3: the reveal is the wall's south surface, rising from the cell
+        // boundary), so a prop against the wall has its base there. The shift is measured off the
+        // sprite's own bottom transparent rows, not typed. The wall's cap band is re-laid over the
+        // prop's top by Tier1BoundaryWall (CapBandCells) so the top surface stays in front:
+        // face < prop < cap band. Floor props only; a wall-top prop already sorts above its wall.
+        if (props != null)
+        {
+            for (int propIdx = 0; propIdx < props.Count; propIdx++)
+            {
+                var prop = props[propIdx];
+                if (prop.OnWallTop || !prop.BlocksMovement) continue;
+                bool against = true;
+                for (int dx = 0; dx < prop.FootprintW && against; dx++)
+                    against = map.InBounds(prop.X + dx, prop.Y - 1) && map.IsWallTile(prop.X + dx, prop.Y - 1);
+                if (!against) continue;
+
+                // the base margin: the bottom-row cells' lowest opaque row, in screen px
+                int tileH = renderer.TileHeight;
+                float margin = float.MaxValue;
+                for (int dx = 0; dx < prop.FootprintW; dx++)
+                {
+                    int cellIdx = (prop.FootprintH - 1) * prop.FootprintW + dx;
+                    if (!tileLayer.PropSprites.TryGetValue((propIdx, cellIdx), out var c)
+                        && !tileLayer.PropSprites.TryGetValue((propIdx, 0), out c)) continue;
+                    if (c.Sprite is not Sprite2D sp || sp.Texture == null) continue;
+                    var img = sp.Texture.GetImage();
+                    int th = img.GetHeight(), tw = img.GetWidth(), last = -1;
+                    for (int y = th - 1; y >= 0 && last < 0; y--)
+                        for (int x = 0; x < tw; x++)
+                            if (img.GetPixel(x, y).A > 0.01f) { last = y; break; }
+                    if (last >= 0) margin = Mathf.Min(margin, (th - 1 - last) * (tileH / (float)th));
+                }
+                if (margin == float.MaxValue) margin = 0f;
+                float shift = tileH - margin;
+                foreach (var key in tileLayer.PropSprites.Keys)
+                {
+                    if (key.PropIndex != propIdx) continue;
+                    var e = tileLayer.PropSprites[key];
+                    e.Sprite.Position += new Vector2(0, -shift);
+                }
+                tileLayer.PropShift[propIdx] = shift;
+                for (int dx = 0; dx < prop.FootprintW; dx++)
+                    tileLayer.CapBandCells[(prop.X + dx, prop.Y - 1)] = renderer.GetTileSortOrder(prop.X, prop.Y) + 2;
             }
         }
 

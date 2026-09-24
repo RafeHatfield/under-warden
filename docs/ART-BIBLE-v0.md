@@ -423,9 +423,14 @@ judgeable at all, and it is what makes a room read.
 **Walls, and what follows.** Continuous wall runs stay two-plane — §3 walls, ratified 2026-09-09,
 untouched by this ruling. But where a wall *ends* — a run's terminus, a corner, a free-standing
 pillar — it becomes an object in the room's terms and must agree with the objects beside it: a
-**right/east face at ½ depth**. Filed as a bounded wall follow-up rather than done here, because
-the wall family's composer is a different instrument (§13.7) and a wall end is one cell's worth
-of new plane, not a re-projection of the family.
+**right/east face at ½ depth**. **RATIFIED for wall ends and pillars (Rafe, props walk on the
+handset, 2026-09-13): *"a wall turning a corner."*** Built as `Tier1EastFace` (#211): a cell with
+floor to its east that is not a north–south run draws a parallelogram 16×32 native hanging off the
+reveal's right edge, each column sampling one column of the cell's OWN face so the courses recede,
+value 0.75 of the face with a 1-px seam at the arris (§12.1 form). **The corridor jamb is the
+exception and is REOPENED under #211:** at the same walk it *"reads as a hard diagonal edge, not a
+face; the lit wedge in the corridor above it has a straight edge that looks like the occluder's
+shadow mask, not a surface"* — a bounded round with a measured bar, not a re-ruling of the face.
 
 **Filed separately, not projection:** props that do not sit against walls — the depth order
 under the top band (which of prop and wall draws over which, and where a prop's base sits in
@@ -828,7 +833,7 @@ menace with almost no gothic vocabulary.
 > | **void ring** | 1 (interim fallback) | **0** | the void is dark by occlusion; the fallback is retired |
 > | **softness** | — | **12.0** | `shadow_filter_smooth`, PCF13, on a ladder to 64. *"The raised softness range melts edges (no beams at 12)."* |
 > | **darkness** | — | **0.8** | leak `rgb = 0.2 × ambient hue ratios`. *"The ambient-tinted leak reads as cool dark, not grey."* |
-> | **fire** | — | **energy 1.6, reach 4.0 tiles, warm `ff8a3c`** | B-PROP-003 emits (#205). Reach was not a knob; it rides with the mark. |
+> | **fire** | — | **energy 1.6, reach 4.0 tiles, tint `ff8a3c`** | B-PROP-003 emits (#205). **RULED at the props walk (Rafe, 2026-09-13): *"the fire is good."*** Reach and tint were exposed as `fire r` / `fire tint` for that walk and ratified where they stood; PLACEHOLDER stripped. Required by the engine: a fire's `light` block states all three or the scene refuses to build. #204 (props off the value ladder) stays open as-is — warming grey stone toward wood was accepted at the fire; the lamp question is unchanged. |
 > | **flicker** | — | **ON** | *"the tended fire is §9.2's exception."* |
 >
 > **Two-light physics, confirmed on device:** the fire's cast shadow is visible once the
@@ -2339,8 +2344,8 @@ instrument was fine, the travel was a builder's guess:
    toward the ruled ambient hue (§6.2)."* The leak now carries the ambient's channel ratios:
    at darkness 0.5 the shadowed floor reads rgb 72/72/93, not grey.
 3. *"The fire glows but doesn't light its surroundings or cast; it needs real radius and
-   energy."* 0.9 / 2.5 tiles → 1.6 / 4.0 tiles, a `fire` row on the panel, values PLACEHOLDER
-   until marked. A "dark" probe 2.2 tiles from the fire had to move — a real fire lights it.
+   energy."* 0.9 / 2.5 tiles → 1.6 / 4.0 tiles, a `fire` row on the panel — energy marked at
+   the re-mark, reach and tint RULED at the props walk (2026-09-13: *"the fire is good"*). A "dark" probe 2.2 tiles from the fire had to move — a real fire lights it.
 
 **RE-MARKED (Rafe, 2026-09-13), both fixes confirmed on device:** softness 12.0 (*"melts
 edges — no beams at 12"*), darkness 0.8 (*"the ambient-tinted leak reads as cool dark, not

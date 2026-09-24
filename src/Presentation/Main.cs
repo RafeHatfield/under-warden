@@ -2523,23 +2523,53 @@ public partial class Main : Node
     // a before/after on ONE build. Pulled off the device with the boot log. A window past
     // 16.7 ms/frame is a STOP, not a tune (cast-shadows round, ruling triggers).
     private readonly System.Collections.Generic.List<double> _frameMs = new();
+    private readonly System.Collections.Generic.List<double> _gpuMs = new(), _cpuMs = new();
     private const int PerfWindow = 240;
+    private bool _measureArmed;
 
+    // HEADROOM — the renderer's OWN measured time (overnight queue, 2026-09-13). On iOS the
+    // display paces every frame at 16.67 ms whatever vsync is asked for (measured: identical
+    // windows with DisplayServer vsync disabled), so process delta can only ever prove the
+    // frame is MET. RenderingServer's per-viewport measurement reports what the GPU and the
+    // CPU render actually spent inside that frame; the difference to 16.67 is the headroom.
     private void LogFrameTime(double delta)
     {
+        var vp = GetViewport();
+        if (!_measureArmed && vp != null)
+        {
+            RenderingServer.ViewportSetMeasureRenderTime(vp.GetViewportRid(), true);
+            _measureArmed = true;
+        }
         _frameMs.Add(delta * 1000.0);
+        if (vp != null)
+        {
+            _gpuMs.Add(RenderingServer.ViewportGetMeasuredRenderTimeGpu(vp.GetViewportRid()));
+            _cpuMs.Add(RenderingServer.ViewportGetMeasuredRenderTimeCpu(vp.GetViewportRid()));
+        }
         if (_frameMs.Count < PerfWindow) return;
         var sorted = new System.Collections.Generic.List<double>(_frameMs);
         sorted.Sort();
         double mean = 0; foreach (var v in sorted) mean += v; mean /= sorted.Count;
         double p95 = sorted[(int)(sorted.Count * 0.95)];
         double max = sorted[sorted.Count - 1];
+        double gpu = 0, cpu = 0, gpuMax = 0;
+        if (_gpuMs.Count > 0)
+        {
+            foreach (var v in _gpuMs) { gpu += v; gpuMax = System.Math.Max(gpuMax, v); }
+            foreach (var v in _cpuMs) cpu += v;
+            gpu /= _gpuMs.Count; cpu /= _cpuMs.Count;
+        }
         string line = $"[Perf] window={PerfWindow} mean_ms={mean:0.00} p95_ms={p95:0.00} " +
                       $"max_ms={max:0.00} fps={1000.0 / mean:0.0} " +
+                      // gpu reads 0.00 on iOS Forward Mobile/Metal — the timestamp query is
+                      // unsupported there (measured 2026-09-13). Reported raw, and NAMED as no
+                      // instrument rather than as zero cost; headroom is stated on the CPU side.
+                      $"render_cpu_ms={cpu:0.00} cpu_headroom_ms={16.667 - cpu:0.00} " +
+                      $"render_gpu_ms={(gpu > 0 ? gpu.ToString("0.00") : "NO-INSTRUMENT")} " +
                       $"({_reviewLighting?.Settings()})";
         GD.Print(line);
         Diag.Log(line);
-        _frameMs.Clear();
+        _frameMs.Clear(); _gpuMs.Clear(); _cpuMs.Clear();
     }
 
     private static string? ReadStringArg(string flag)
@@ -2884,6 +2914,17 @@ public partial class Main : Node
             // is the one thing in the world that moves. Default on; the panel row can still show
             // the still state for comparison.
             _reviewLighting.FireFlicker = flArg != null ? flArg == "1" : (marker?.FireFlicker ?? true);
+            // GPU HEADROOM: with vsync the [Perf] windows report the display's 16.67 ms, which
+            // proves the frame is MET and says nothing about how much of it the render used.
+            // A measurement build sets `vsync: false` (or --vsync 0) and the windows report cost.
+            string? vsArg = ReadStringArg("--vsync");
+            bool vsync = vsArg != null ? vsArg != "0" : (marker?.Vsync ?? true);
+            if (!vsync)
+            {
+                DisplayServer.WindowSetVsyncMode(DisplayServer.VSyncMode.Disabled);
+                Engine.MaxFps = 0;
+                Report("[Perf] vsync DISABLED for a headroom measurement — frame times below are render cost, not the display's cadence");
+            }
             Report($"[Tier1] shadows: mode={occl} wall_occluders={_reviewLighting.OccluderCount} " +
                    $"prop_occluders={_reviewLighting.PropOccluderCount} fire_lights={fires} " +
                    $"softness={_reviewLighting.ShadowSoftness:0.#} " +

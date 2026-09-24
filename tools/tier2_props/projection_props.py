@@ -52,8 +52,10 @@ PROPS = [
      "a heap of thick rough-hewn timber baulks lying crossed over one another, weathered dark "
      "wood, bark and splinters, a rope lashing at the join, no grass, matte, unlit"),
     ("barricade_b", "barricade_b", (128, 64), [9812, 9813],
-     "a bound stack of thick rough-hewn timber baulks, weathered dark wood, bark and splinters, "
-     "rope lashings holding them, no grass, matte, unlit"),
+     "a standing A-frame barricade: two thick rough-hewn timber baulks stood on end and leaning "
+     "together at the top, a bar lashed across low behind them, thick rope bindings wrapped "
+     "tight at the apex and at every joint, weathered dark wood, bark and splinters, no grass, "
+     "matte, unlit"),
     ("fire", "fire_ring", (64, 64), [9820],
      "a low ring of fire-blackened stones seen from above, soot and ash, dark grey rock, "
      "matte, unlit"),

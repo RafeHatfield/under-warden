@@ -19,37 +19,37 @@
  },
  "barricade_a": {
   "seed": 1338,
-  "hold": 0.9708,
+  "hold": 0.9777,
   "ordered": [
    {
     "seed": 1338,
-    "hold": 0.9708
+    "hold": 0.9777
    },
    {
     "seed": 1337,
-    "hold": 0.9607
+    "hold": 0.9687
    },
    {
     "seed": 1339,
-    "hold": 0.9388
+    "hold": 0.937
    }
   ]
  },
  "barricade_b": {
-  "seed": 1337,
-  "hold": 0.993,
+  "seed": 1339,
+  "hold": 0.9612,
   "ordered": [
    {
-    "seed": 1337,
-    "hold": 0.993
+    "seed": 1339,
+    "hold": 0.9612
    },
    {
     "seed": 1338,
-    "hold": 0.988
+    "hold": 0.9594
    },
    {
-    "seed": 1339,
-    "hold": 0.985
+    "seed": 1337,
+    "hold": 0.9513
    }
   ]
  },

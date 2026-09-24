@@ -1,0 +1,46 @@
+RANK: 1 > 3 > 4 > 2
+
+BEST: 1
+BEST_WHY: The lit floor in 1 reads as one worn surface, not a grid of stamped sprites: the hairline crack starting near (250,500) runs down to about (400,600) across several flagstone boundaries, and the long arc crack at lower right, roughly (560,720) to (750,650), does the same. Joint widths vary tile to tile. The wall has thickness — the cool grey wall top (x≈185–500, y≈390–420) sits at a visibly different value and hue from the warm timber-and-pin face band directly below it (y≈420–455), so you read a cap and a face rather than a single stripe. The rope-lashed timber bundle at (380–500, 590–640) is drawn from above with the rope wraps visible and a proper contact shadow, which is the one prop in the set that is both correctly projected and on-fiction for the orc repairs. The brazier at (575–625, 525–570) throws its own small warm pool onto the adjacent tiles, distinct from the figure's light.
+
+WORST: 2
+WORST_WHY: 2 has no light falloff at all — the frame is one uniform brightness from the figure at top centre (≈225,10) to the bottom-left corner. The floor (x≈50–250) is a single flat brown fill with 1–2 px dark and blue speckles scattered like confetti; no packed-earth or flagstone structure. The water (x≈250–370, y≈0–190) is a flat green with a few circular blobs and meets the floor along a dead-straight vertical edge at x≈250 with no bank, lip or wet edge. The wall tiles (left column x≈0–50, bottom band y≈195–288) are plain grey rectangles with two or three scratch marks each and no cap/face distinction. There is a small dark rectangle at bottom centre (≈160–185, 268–276) that reads as a missing tile. The bone scatter at (≈210–235, 110–125) is drawn at a finer pixel pitch than the tiles around it. It looks like a greybox pass with placeholder art.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Clamp the light hotspot under the figure: the tiles at x≈360–440, y≈480–530 go to near-white and the joint lines vanish into a cream blob; cap the peak brightness so joints stay visible at the brightest point.
+- Redraw the crate (x≈195–305, y≈475–515) and the pale standing slab (x≈265–295, y≈540–630) from above; both are currently front elevations (visible front face, vertical planks) sitting on a top-down floor.
+- Fix the falloff on the tall right-hand wall column (x≈570–750, y≈70–400): it stays warm amber to the top edge of the frame while the left block at the same distance from the light goes to dark grey. Either darken it to match or put the light source that justifies it in frame.
+- Break the repeat in the timber-and-pin face band along y≈420–455: the same beam/pin unit recurs at roughly x≈290, 440 and 640; vary beam length, pin count and spacing per segment.
+- Give the dark corridor between the two wall blocks (x≈440–570, y≈70–390) some readable floor at the near end; it currently drops to featureless grey one tile in while the room floor beside it is still lit.
+
+FLIP 3:
+- Move the orange A-frame brace at (x≈580–680, y≈400–450): it straddles the top edge of the wall face band and sits on the wall cap, so it reads as floating on top of the wall. Lean it against the face below y≈455 with a contact shadow, or put it on the floor.
+- Ground the X-brace at bottom-left (x≈215–300, y≈650–700): it overlaps the dark wall below the lit band with no contact shadow and no change in value where it meets the wall.
+- Same hotspot fix as 1: tiles at x≈360–440, y≈480–530 are blown to near-white.
+- Same standing slab fix as 1 (x≈265–295, y≈540–630): redraw from above.
+- Same right-column falloff fix as 1 (x≈570–750, y≈70–400).
+- Same face-band repeat fix as 1 (y≈420–455).
+
+FLIP 4:
+- Replace the unlit wall-top fill across the top-left block (x≈120–500, y≈70–450), the right column (x≈570–750, y≈70–400) and the bottom-left mass: it is a soft slate-blue mottle with faint crack lines that reads as a noise or fog layer laid over the stone. Restore the hard crack lines, block seams and value steps that the lit stone carries.
+- The lighter mottled rectangle at x≈120–500, y≈390–450 (wall cap nearest the room) reads as a smudge; give it the same masonry seams as the lit cap.
+- Pull the far-field tint back toward the stone's own hue: the unlit region is a uniform blue-grey rather than a darker version of the same material. Darken toward black with at most a slight cool shift.
+- Same hotspot fix as 1 (x≈360–440, y≈480–530).
+- Same crate (x≈195–305, y≈475–515) and standing slab (x≈265–295, y≈540–630) projection fix as 1.
+- Same face-band repeat fix as 1 (y≈420–455).
+
+FLIP 2:
+- Add light falloff from the figure at (≈225,10); the whole frame is currently at one brightness.
+- Redraw the floor (x≈50–250): replace the flat brown with speckles with a legible surface — packed earth with wear paths or flagstone with joints — where marks read as material, not confetti.
+- Give the water (x≈250–370, y≈0–190) an edge: a bank, lip or wet-stone margin along x≈250 and the bottom at y≈190 instead of a hard straight line, and a depth gradient instead of one flat green with circles.
+- Rebuild the wall tiles (left column x≈0–50, bottom band y≈195–288) with a cap face and a front face at different values, mortar depth, and wear that varies per block rather than two or three scratches each.
+- Remove or make deliberate the dark rectangle at bottom centre (≈160–185, 268–276); it reads as a missing tile.
+- Match the pixel pitch of the bone scatter at (≈210–235, 110–125) to the tiles; it is drawn at a finer resolution than everything around it.
+- Shade the crates (x≈60–100, y≈0–75) and barrels (x≈115–190, y≈195–215) with a single consistent light direction and contact shadows; they are flat fills with dark outlines.
+- Give the torch niche on the left wall (≈30–40, 125–160) a local glow on the adjacent wall tiles; it emits nothing.
+
+Model: Opus 5 (1M context).

@@ -287,6 +287,21 @@ PY
   echo "== cast shadows: occluders=$TIER1_OCCLUDERS softness=${TIER1_SHADOW_SOFTNESS:-12.0} darkness=${TIER1_SHADOW_DARKNESS:-0.8} flicker=${TIER1_FIRE_FLICKER:-1}"
 fi
 
+# TIER1_VSYNC=0 — a HEADROOM measurement build: vsync off so [Perf] reports render cost. Never
+# on a gate build; the engine echoes it so the log says which kind of numbers it holds.
+if [ "${TIER1_VSYNC:-1}" = "0" ]; then
+  python3 - "$MARKER" <<'PY'
+import json, sys
+path = sys.argv[1]
+with open(path) as f:
+    d = json.load(f)
+d["vsync"] = False
+with open(path, "w") as f:
+    json.dump(d, f, indent=2)
+PY
+  echo "== vsync: OFF (headroom measurement build)"
+fi
+
 # STAMP THE BUILD'S OWN IDENTITY INTO THE MARKER.
 #
 # LOOP-PROCESS §2.3: every evidence file records the commit hash of the code that produced it,

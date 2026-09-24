@@ -122,8 +122,8 @@
   },
   {
    "tileId": 9810,
-   "x": 6,
-   "y": 14,
+   "x": 3,
+   "y": 15,
    "w": 2,
    "h": 1,
    "layout": [
@@ -131,12 +131,12 @@
     9811
    ],
    "blocks": true,
-   "why": "B-PROP-002a the barricade, 2x1 — chest-high and wide. The generation grammar is the ARRANGEMENT, never the object word: 'a barricade' returns a fence every time, 'a heap of thick beams crossed over one another' returns timber.",
+   "why": "B-PROP-002a the barricade, 2x1 — STANDS ACROSS THE LINE (#207 flip, Rafe 2026-09-13): it closes the gap between the west wall (2,15) and the pillar (5,15), so a seat reads a blockade rather than a heap in open floor. The route stays open east of the pillar. Chest-high and wide (§12.2); an X-frame with a bar lashed behind and rope gripping every joint (§7.1).",
    "shape": "box"
   },
   {
    "tileId": 9812,
-   "x": 3,
+   "x": 9,
    "y": 12,
    "w": 2,
    "h": 1,
@@ -145,7 +145,7 @@
     9813
    ],
    "blocks": true,
-   "why": "B-PROP-002b, a second variant on a DIFFERENT ROW at a DIFFERENT PITCH — #210. Two identical heaps at a constant pitch is §8.3.1's motif trap built by the scene, which is what the last round was culled for.",
+   "why": "B-PROP-002b, the bound stack — a DIFFERENT ROW at a DIFFERENT PITCH from A (#210), against the north wall's east end and beside the fire, whose cast shadow it throws (Rafe, 2026-09-13). Moved from (3,12) so A at (3,15) does not seal the pocket at (3,13); at (9,12)-(10,12) so it is inside the 750px frame (at (10,12) its east cell was clipped).",
    "shape": "box"
   },
   {
@@ -159,7 +159,7 @@
     "color": "ff8a3c",
     "energy": 1.6,
     "radiusTiles": 4.0,
-    "_what": "B-PROP-003: the sprite receives, the ENGINE emits (#205). Warm, static, its own shadows. RAISED at the shadow walk (Rafe, 2026-09-13): 'the fire glows but doesn't light its surroundings or cast; it needs real radius and energy so the barricade beside it throws a shadow away from it' — 0.9 / 2.5 tiles -> 1.6 / 4.0 tiles, and the rig panel's `fire` row sets energy live. Values PLACEHOLDER until Rafe marks them; flicker is a panel toggle, default OFF (§9.2), unruled."
+    "_what": "B-PROP-003: the sprite receives, the ENGINE emits (#205). Warm, static, its own shadows. RAISED at the shadow walk (Rafe, 2026-09-13): 'the fire glows but doesn't light its surroundings or cast; it needs real radius and energy so the barricade beside it throws a shadow away from it' — 0.9 / 2.5 tiles -> 1.6 / 4.0 tiles, and the rig panel's `fire` row sets energy live. RULED at the props walk (Rafe, 2026-09-13): 'the fire is good' — energy 1.6, reach 4.0 tiles, tint ff8a3c, flicker ON (§9.2's tended exception). All three are required here; the engine supplies no default."
    }
   }
  ]

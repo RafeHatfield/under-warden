@@ -1,0 +1,64 @@
+== FRAME CRITIC GATE
+   verdict:  INSTALL-LATEST   lane art/queue-2026-09-13 round 1   2026-09-13T09:56:11
+   build:    d764757e47d0
+
+   INSTALL-LATEST — non-regression against the seeded reference.
+     panel: not below it in 4 of 5 seats (above in 2); flagged by 3.
+     item exit MET: every object and every wall end in the room agrees with §3.2; the barricad
+       measured: COLD NAMING (three blind seats, the bar now the word 'barricade' — timbe
+     Outstanding items, each disposed:
+     PARKED         Move the orange A-frame brace at (x≈580–680, y≈400–450): it straddles 
+                    cites #212
+                    Rafe: Overnight queue, autonomy rules (Rafe, 2026-09-13): '(2) #212 prop
+     ROUTED-ALREADY Ground the X-brace at bottom-left (x≈215–300, y≈650–700): it overlaps 
+                    -> props
+                    cites #207
+                    measured: #207's first word is 'props float'. The X-frame at (3,15) stands a
+     ROUTED-ALREADY Same hotspot fix as 1: tiles at x≈360–440, y≈480–530 are blown to near
+                    -> floor
+                    cites #184
+                    measured: #184 — '#174 polish tuning now the lamp is set: hot on worn lanes'
+     CLOSED         Same standing slab fix as 1 (x≈265–295, y≈540–630): redraw from above.
+                    cites §3.2
+                    Rafe: Object projection RULED (Rafe, on device, round two, 2026-09-12): 
+     ROUTED-ALREADY Same right-column falloff fix as 1 (x≈570–750, y≈70–400).
+                    -> props
+                    cites #205
+                    measured: The right-hand column is the fire's wall: the fire at (9,13) is th
+     ROUTED         Same face-band repeat fix as 1 (y≈420–455).
+                    -> walls
+                    cites #208
+                    measured: The beam-and-pin unit along the face band is the bindings family (
+   plant:    cement-cap-shadowed.png — caught
+   GATE OPEN — a blind seat would ship this exact frame.
+DEVICE GATE PRECONDITIONS — round 33, standing capture r24_onroute
+
+  ~  1. round VALID                 no seat round        (advisory: demoted)
+  ~  2. diagnostic seat's axis      not recorded         (advisory: demoted)
+  ~  3. comparative seat            no approved capture  (advisory: demoted;
+                                       the frame-critic runs a three-frame deck)
+  4. every ruled fix present        ok (11 checked)
+  ~  grid-coincidence               ok                    (advisory)
+  ~  shipped-path                   ok                    (advisory)
+
+PRECONDITIONS OK — every ruled fix is in this build. The frame-critic's PASS is what
+opened the gate; this file only checked that the artefact carries what was ruled.
+== scene override: res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json
+== WALK PRECONDITIONS — marker src/Presentation/assets/tier0_harness/REVIEW_BUILD.json
+   walk: rig-energy — the §6.2.1 / Ruling 56 rig pass
+   requirements present. This says the walk CAN BE PERFORMED, and nothing about
+   whether the picture is any good — that is the frame critic's question.
+== void ring: 0 (marker; the manifest's ruled 0 is what a shadow build runs)
+== cast shadows: occluders=all softness=12.0 darkness=0.8 flicker=1
+== build identity: commit=d764757e47d01d3f9348a0f2caa069e20639e84e+dirty built=2026-09-14T02:12:53Z
+== marker written: REVIEW_BUILD.json
+== grid: tile 32 at x2.0
+== bundle id: com.rafehatfield.catacombsofyarl.tier0   name: YARL Tier0
+== export (--export-debug, preset 'iOS') from /Users/rafehatfield/development/c-yarl/.claude/worktrees/queue
+== xcodebuild (Debug, scheme 'CatacombsOfYarl')
+   built: YARL Tier0  (com.rafehatfield.catacombsofyarl.tier0)  [C#: CatacombsOfYarl.Presentation.framework]
+== devicectl install -> 5DB969FF-269C-5A8A-86EB-99EC9FF22397
+   install attempt 1 failed; retrying...
+   install attempt 2 failed; retrying...
+   installed.
+== marker removed (a leftover would silently make the next build a review build)

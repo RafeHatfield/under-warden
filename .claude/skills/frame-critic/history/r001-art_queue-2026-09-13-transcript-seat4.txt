@@ -1,0 +1,44 @@
+RANK: 1 > 2 > 3 > 4
+
+BEST: 1
+BEST_WHY: The wall band along y≈395–455 is the one place in the deck where the fiction is actually drawn rather than implied. The upper portion is rubble stone at the same pixel pitch as the floor, and the timber rail overlaid on it has two vertical posts (x≈295 and x≈385) that pass *through* the rail with a darker pin-hole at the crossing, plus a broken-off bracket at x≈460 — that is a repair, not a decoration. On the floor, the joint lines vary in weight along a single course (compare the run at y≈540 from x=230 to x=560: some joints are 1px, some 2px, some interrupted by the crack), the scratch marks are oriented differently per block, and the long crack from (240,520) to (560,480) crosses joints rather than following them, so the floor reads as cut stone that has been walked on. The barricade at (225,650) and the A-frame at (620,420) are drawn at the same pitch as the floor with two-tone timber and a distinct end-grain colour on the cut ends.
+
+WORST: 4
+WORST_WHY: It does not do the one thing the fiction requires: there is no light source and no falloff. The whole 384×288 frame is at one flat exposure; the orc at (220,15) is lit identically to the far corner at (370,280). The dirt floor (x=55–345) is a uniform noise field of dark-red speckles with no tile structure, no wear pattern and no direction — it reads as a noise filter, not a floor. The grey walls are flat mid-grey slabs with a single 1px dark joint and no top/side distinction, so the wall at x=0–55 and the floor edge at y=215 are the same value and the same texture. Projection is mixed: the barrels at (125,205) and (175,205) are seen from directly above, but the two chests at (80,10) and (80,60) show a lid *and* a slatted front face, which is a side view. The green pool (x=250–345) is a visibly repeating hex-cell tile with cartoon lily pads — it has nothing to do with a cold administered underworld, but the craft fault is the tile repeat, visible in every row.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The light bloom around the figure (centred ~(405,490), radius ~90px) is a smooth continuous radial gradient laid over pixel art; the floor inside it at x=380–470, y=460–530 is blown to near-white and loses its joints entirely. Quantise the falloff to the palette's value steps (4–5 bands) and cap the brightest band so the joint lines survive.
+- The rock void (e.g. x=0–180, y=80–380 and x=570–750, y=100–380) is a smooth blurred cloud texture at a different resolution from everything drawn. Either re-draw it as pixel rock at the floor's pitch or hold it at a flat near-black — the current soft mottling reads as a Photoshop clouds layer.
+- The A-frame at (580–670, 400–450) sits *on* the wall band, not on the floor. In a straight-from-above view that puts a sawhorse on top of a wall. Move it down one tile onto the floor, or replace it with something that legitimately belongs on a wall top (a driven ring, coiled rope).
+- Every wall end has a 45° bevelled cap (right end of the left wall run at x≈515–540, y≈395–455; the ledge caps at (300–330, 650–680) and (390–410, 665–700)). Those are side faces, which a straight-down camera cannot see. Either square them off or commit to a consistent thin "thickness" strip on all wall edges so it reads as a convention and not perspective drift.
+- The lit floor in the upper-right, x=650–750, y=460–520, has soft blurred pale blotches over the bricks that are not at pixel resolution. Remove the blotch layer or re-draw the wear as pixel scuffs.
+
+FLIP 2:
+- The upper part of the wall band, x=180–500 and x=570–750, y=395–435, is a smooth blurred yellow-brown cloud with no stone in it. It sits between a crisp pixel rail below and a hard-edged void above and looks like a filter pass. Replace it with drawn stone at the floor's pitch (frame 1's band shows the target).
+- Same bloom fault as frame 1: the floor at x=380–470, y=460–530 is blown out and joint-less; quantise the falloff and cap the top band.
+- Same rock-void fault as frame 1: x=0–180, y=80–380 is a blurred cloud at non-pixel resolution.
+- The soft pale patches on the lit floor at x=480–560, y=455–520 and x=650–750, y=460–520 are blurred blotches, not pixel wear. Remove or re-draw.
+- The crate at (190–300, 475–520) casts no contact shadow and its bottom edge sits at the same value as the floor it stands on; it floats. Add a 1–2px dark ground line along its lower edge.
+
+FLIP 3:
+- The entire void (x=0–180, y=80–380; x=570–750, y=100–380; x=0–120, y=620–911) is a flat blue-grey mist with faint contour lines, at no pixel resolution at all. It reads as a fog-of-war shader or a Gaussian blur over nothing. Replace with drawn rock at the floor's pitch, or a flat near-black — the fiction is a dark filing system, not fog.
+- The mist bleeds over the floor at the bottom-left (x=40–120, y=620–720, visible at the lower-left of the barricade tile), so the boundary between "floor" and "nothing" is a soft ramp. Give the void a hard edge against the floor and wall band.
+- Same blurred wall-band fault as frame 2: x=180–500, y=395–435 is a cloud strip with no stone. Draw the stone.
+- Same bloom fault as frames 1–2: x=380–470, y=460–530 is blown out; quantise and cap.
+- Same blurred blotches on the lit floor at x=480–560, y=455–520; remove or re-draw at pixel pitch.
+- Crate at (190–300, 475–520) has no ground contact line; add one.
+
+FLIP 4:
+- There is no light falloff. Add a light source at the figure (220,15) and step the whole frame down in value with distance — at minimum three bands, with the far corners at (0,280) and (370,280) in the darkest band.
+- The dirt floor (x=55–345, y=0–215) is a uniform speckle-noise field with no structure. Re-draw it as trodden earth with a pixel-drawn wear path from the door at (30,130) toward the barrels, and remove the isolated saturated-red speckles, which read as a noise filter.
+- The grey walls (x=0–55 full height; y=215–265 full width; the strip at y=265–288) have no top-surface / face distinction and sit at the same mid-grey as the floor edge. Give the wall top a lighter value and a distinct 2–3px darker face on the floor-facing edge so it reads as raised stone.
+- The chests at (65–95, 5–40) and (65–95, 50–85) are drawn with a slatted front face — a side view — while the barrels at (125,205) and (175,205) are straight top-down. Re-draw the chests from directly above (lid only, hinge line, hasp) to match.
+- The green pool (x=250–345, y=0–190) is a visibly repeating hexagonal tile; the repeat is readable every ~16px. Break the tile with hand-placed variation and drop the lily pads at (325,20), (315,110), (275,165), (260,180), which are bright cartoon greens with no relation to the surrounding palette.
+- The bones at (215–235, 115–125) are a scatter of white 1px dots with no drawn shape; either draw an identifiable object or remove.
+- The orc sprite at (220,15) is saturated green and yellow at full brightness against an unlit scene; bring it into the same value range as the environment.
+
+Model used: Claude Opus 5 (1M context)

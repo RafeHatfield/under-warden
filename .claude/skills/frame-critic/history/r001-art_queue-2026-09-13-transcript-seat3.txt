@@ -1,0 +1,51 @@
+RANK: 2 > 1 > 3 > 4
+
+BEST: 2
+BEST_WHY: The lit floor in the chamber (roughly x 180–750, y 460–720) is the strongest passage in the deck: the brick joints are hand-placed — courses shift, block widths vary from ~40px to ~90px, and the joint lines break and thicken rather than running as a ruled grid — and the 1px diagonal hatching inside each block reads as tool marks on cut stone, with the hatch density thinning as the light falls off toward the right edge. The north wall face (the timber band at y ≈ 420–455) carries driven vertical pins at irregular spacing, and the crack decal running from the pillar's base (≈ 250, 620) up to the figure (≈ 550, 530) crosses joints without respecting them, which is what a real crack does. On top of that shared base, 2's added props are the only ones in the deck that answer the fiction: the A-brace at (≈ 580–680, 400–455) is timber pinned against the wall face, the lean-to plank at (≈ 510–535, 390–460), and the X-trestle at (≈ 215–300, 655–700) are grained wood in muted brown, not saturated orange, and they are where a four-hundred-year repair crew would have left them.
+
+WORST: 4
+WORST_WHY: At (≈ 265–300, 550–620), directly left of the figure and inside the brightest part of the lit floor, there is a plain untextured orange cuboid — one flat top face, two flat side faces, no grain, no edge wear, no contact shadow. It is a placeholder primitive standing where the pale stone pillar stands in 1 and 2. The bench at (≈ 400–490, 595–625) is the same problem: a flat orange slab with two thin dark-red lines for legs. Both are at full saturation regardless of where they sit in the light. Meanwhile the chest (≈ 640–685, 465–500) and shelf (≈ 705–750, 470–505) are drawn front-on in a top-down scene, outlined in black at ~2–3px pixel size, and remain fully bright while the floor under them is in half-shadow — three different rendering vocabularies in one room.
+
+FLAGGED: 4
+
+SHIP: NONE
+
+FLIP 1:
+- The dark masses above and right of the chamber (≈ 180–440 × 70–390 and ≈ 560–750 × 70–390) are large flat polygons with hard straight diagonal edges (the edge from ≈ (640,390) to (750,300); the edge from ≈ (200,180) to (370,110)) filled with soft cloud noise that runs continuously across the polygon boundaries. Replace the cloud fill with the same brick/rubble vocabulary as the corridors, or break the diagonal edges onto the grid — as-is they read as unfinished geometry.
+- The lighting is a smooth continuous gradient over 1px pixel art (see the glow ring around the figure at ≈ 330–500 × 440–560 and the streaks at ≈ 380–450 × 640–670). Quantise the light to the art's pixel grid, or at minimum to a stepped ramp, so it stops reading as a post filter.
+- The figure at (≈ 385–430, 460–515) is drawn at ~3px pixels with a solid black outline; the floor around it is 1px hatching. Redraw the figure at the environment's pixel density, or drop the outline and match the palette so it stops sitting on top of the frame like a sticker.
+- The brazier at (≈ 575–625, 525–570) has the same 3px-pixel mismatch; rebuild it at the floor's pixel density.
+- The crate at (≈ 195–305, 475–520) is two flat saturated-orange slabs with a lid seam and no grain; it has no contact shadow on the floor. Desaturate it toward the timber-band brown, add plank lines and end-grain, and put a 1–2px dark contact edge under it.
+- The roped plank at (≈ 400–500, 590–635) is at full saturation and full brightness though the floor there is already dimming; light it with the same falloff as the floor.
+- The single-tile wall stub at (≈ 310–370, 650–720) has a tan top surface, while the north wall of the same room has no visible top surface at all above its timber face. Pick one wall-top treatment and use it on both.
+
+FLIP 2:
+- Same as 1: the dark polygonal masses with hard diagonal edges and continuous cloud fill above the chamber must be rebuilt on the brick vocabulary or broken onto the grid.
+- Same as 1: quantise the smooth light gradient to the pixel grid.
+- Same as 1: figure and brazier are at ~3px pixel size with black outlines against 1px environment art; redraw at the environment's density.
+- The A-brace at (≈ 580–680, 400–455) and the X-trestle at (≈ 215–300, 655–700) are smoothly shaded along their diagonals (anti-aliased edges, soft gradient on the legs) — they are not pixel art and don't sit in the same image as the bricks. Redraw both with hard-stepped pixel edges and a two- or three-tone ramp.
+- The pin blocks at both ends of the A-brace (≈ 580, 425 and ≈ 665, 425) are bright saturated orange blobs against muted brown timber; bring them to the same value range as the wood, or make them read as iron.
+- The lean-to plank at (≈ 510–535, 390–460) straddles the boundary between the wall face and the void above; it needs a visible top end resting on something, or it should be shortened so it sits entirely on the face.
+- The X-trestle has no contact shadow on the dark corridor floor; it floats. Add a contact edge.
+
+FLIP 3:
+- The pool (≈ 248–330, 0–190) is a flat green rectangle with a hard, single-pixel edge straight onto the mud floor at x = 248 and y = 190 — no bank, no rim, no darkening at the edge. Give it a 2–4px bank/wet-edge tile on all sides.
+- The moss decal is a pixel-exact repeat: the blob at (20, 55) and the one at (356, 151) are identical to the pixel. Author at least three variants and mirror/rotate them so no two visible moss patches match.
+- The two barrels at (110, 195) and (158, 195) are the same sprite to within 2 levels; the two crate-and-shelf stacks at (60, 0) and (60, 48) are identical. Vary lid rotation, wear, or add one alternate sprite per prop.
+- The bottom wall band (y ≈ 215–265) repeats at exactly 48px with a mean pixel difference of 0.5 — every wall block is the same stamp with the same joint. Introduce joint-depth and block-width variation across the run.
+- The grey wall-top tiles (right column x ≈ 345–384, left column x ≈ 8–55, bottom band) are the same value and treatment as a floor would be; the only cue that they are walls is the dark brick face beneath the bottom band. Darken or re-texture wall tops so they read as height without needing the face.
+- The floor (≈ 55–345 × 0–215) is a single uniform noise texture with no tonal variation across the room — no wear path, no dark corners, no debris gradient. Add at least a value drift toward the walls and one or two localized decals.
+- The door at (≈ 28–35, 128–165) runs 20px past the bottom of the wall face it's set in (face ends at y ≈ 142) and onto the mud floor; clip the door to the face height or draw a threshold.
+- The orc's shadow (≈ 210–240, 22–30) is a single soft ellipse; everything else in the frame is hard-edged. Match it to the pixel grid.
+
+FLIP 4:
+- Replace the orange cuboid at (≈ 265–300, 550–620) with a finished prop — the stone pillar from 1/2 or a textured timber post — with a contact shadow.
+- Replace the flat orange bench at (≈ 400–490, 595–625) with a plank-grained, muted-brown bench at the floor's pixel density, lit with the local falloff.
+- The chest at (≈ 640–685, 465–500) and the shelf at (≈ 705–750, 470–505) are drawn front-on; the room is top-down. Redraw both from above (lid visible, shelf top visible) or at the same tilt as the barrel.
+- The chest, shelf and barrel (≈ 585–615, 595–625) are at full brightness while the floor beneath them is in half-shadow; apply the scene's light falloff to props.
+- The chest and barrel carry solid black outlines at ~2–3px; the floor art has no outlines and 1px detail. Drop the outlines and redraw at the environment's density.
+- Same as 1: the dark polygonal masses with hard diagonal edges and continuous cloud fill above the chamber must be rebuilt on the brick vocabulary or broken onto the grid.
+- Same as 1: quantise the smooth light gradient to the pixel grid.
+- Same as 1: the figure is at ~3px pixels with a black outline against 1px environment art; redraw at the environment's density.
+
+Model used: Claude Opus 5 (1M context).

@@ -138,6 +138,10 @@ public sealed class ReviewBuildMarker
     public string? Occluders { get; private init; }
     public float? ShadowSoftness { get; private init; }
     public float? ShadowDarkness { get; private init; }
+    /// <summary>GPU HEADROOM MEASUREMENT (overnight queue, 2026-09-13): `vsync: false` uncaps the
+    /// frame so [Perf] reports real render cost rather than the 16.67 ms the display hands back.
+    /// A measurement build's flag; never set on a gate build.</summary>
+    public bool? Vsync { get; private init; }
     public bool? FireFlicker { get; private init; }
     public int? TileSize { get; private init; }
     public float? TileScale { get; private init; }
@@ -221,6 +225,10 @@ public sealed class ReviewBuildMarker
                 ShadowDarkness = root.TryGetProperty("shadowDarkness", out var sd)
                                  && sd.ValueKind == System.Text.Json.JsonValueKind.Number
                                ? (float)sd.GetDouble() : (float?)null,
+                Vsync = root.TryGetProperty("vsync", out var vs)
+                        && (vs.ValueKind == System.Text.Json.JsonValueKind.True
+                            || vs.ValueKind == System.Text.Json.JsonValueKind.False)
+                      ? vs.GetBoolean() : (bool?)null,
                 FireFlicker = root.TryGetProperty("fireFlicker", out var ff)
                               && (ff.ValueKind == System.Text.Json.JsonValueKind.True
                                   || ff.ValueKind == System.Text.Json.JsonValueKind.False)

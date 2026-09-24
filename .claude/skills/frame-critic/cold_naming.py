@@ -53,12 +53,16 @@ SUBJECTS = [
                  "stone pillar", "stone marker", "monolith", "upright stone", "stone column",
                  "cairn", "post", "pillar", "obelisk", "stele"],
          refuse=["gravestone", "headstone", "tombstone", "statue", "signpost"]),
+    # THE BAR IS THE WORD — RULED at the §3.2 props walk (Rafe, 2026-09-13): the family "reads
+    # as wood but not as a barricade"; A read as "a fallen jumble of wood roped together", B as
+    # "neatly stacked bricks". So "timber", "logs", "planks", "beams", "woodpile" no longer
+    # count: a barricade that a seat can only call wood has not been named. Accept is the
+    # object; refuse is what the walk and the card reject by name.
     dict(key="barricade", card="B-PROP-002 the barricade",
-         accept=["barricade", "barrier", "timber", "beams", "logs", "baulks", "planks",
-                 "blockade", "roadblock", "woodpile", "log pile", "timbers", "lumber",
-                 "crossed beams", "wooden barrier"],
+         accept=["barricade", "barrier", "blockade", "roadblock", "wooden barrier",
+                 "cheval de frise", "chevaux de frise", "obstacle"],
          refuse=["fence", "fencing", "palisade", "railing", "gate", "ladder", "sticks",
-                 "debris", "rubble"]),
+                 "debris", "rubble", "bricks", "brick", "bench", "bed", "jumble", "pile"]),
     dict(key="fire", card="B-PROP-003 the orc fire",
          accept=["fire", "campfire", "firepit", "fire pit", "brazier", "hearth", "bonfire",
                  "fire ring", "cooking fire", "embers", "flame"],

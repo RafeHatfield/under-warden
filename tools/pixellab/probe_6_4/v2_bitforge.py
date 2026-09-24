@@ -47,6 +47,18 @@ def api_token():
         val = os.environ.get(var)
         if val:
             return val
+    # The credential lives in ~/.zshrc, which a tool shell never sources. Read the export line
+    # ourselves rather than require `zsh -ic` around every call; the value is returned, never
+    # printed or logged (the ledger redacts payloads and carries no headers).
+    import re
+    for rc in ("~/.zshenv", "~/.zshrc"):
+        path = os.path.expanduser(rc)
+        if not os.path.exists(path):
+            continue
+        for line in open(path):
+            m = re.match(r"\s*(?:export\s+)?(PIXELLAB_API_TOKEN|PIXELLAB_API_KEY)=[\"']?([^\"'\s]+)", line)
+            if m:
+                return m.group(2)
     raise RuntimeError("No PixelLab credential. Set one of: " + ", ".join(_TOKEN_VARS))
 
 

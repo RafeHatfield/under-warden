@@ -1,0 +1,47 @@
+RANK: 1 > 3 > 4 > 2
+
+BEST: 1
+BEST_WHY: The lighting in 1 does real occlusion, not just a radial gradient: the pillar at (265-300, 540-635) throws a shadow down-left onto (200-265, 600-700), which is the correct direction from the figure at (405,490), and the lashed timber bundle at (380-500, 590-640) throws its own onto (380-520, 640-720). The bundle itself is the best-drawn object in the deck — two crossed logs with lighter end-grain caps, a bevelled top edge, and a rope lashing drawn as a band with a knot rather than a stripe; it reads as cut timber tied by someone who does this for a living, which is the fiction. The flagstone floor has stones of mixed sizes (1×1 and 2×1) with a hatch pattern that changes per stone, so the lit area around the fire pit (520-750, 460-700) reads as laid stone, not a repeated tile. The coal ring of the fire pit (580-620, 540-570) is red-black with a small flame — dark, straight, no cheer.
+
+WORST: 2
+WORST_WHY: 2 has no lighting model at all — the orc at (215-235, 0-25) and the far corner at (340-384, 200-288) sit at identical exposure, so the frame reads as a tilemap-editor view, not a played frame. The wall tops (0-50, 0-215; 0-384, 216-270; 340-384, 0-216) are a single flat mid-grey with a 1px grid and three or four speckles per tile — the cheapest possible stone. The pool (250-340, 0-190) is flat teal (36,76,62) with a visible hex lattice repeating every ~16px, and it meets the dirt on a dead-straight 2px boundary at y=190-192 with no bank, rim, or depth. The dirt floor has fifteen or so isolated teal chips (53,90,97) — e.g. (111,14), (134,7), (160,66), (208,29), (159,158) — with no form; they read as stray pixels. The leftmost 8px column is mis-tiled: dirt at y=0-24 where the neighbouring column is wall, then two face bands (y≈71-95 and 120-144) where the neighbour has one. The chests at (65-95, 0-20) and (65-95, 45-75) have a flat khaki lid with a diamond glyph and no grain, while the barrels at (115-145, 195-217) and (163-193, 195-217) have staves and a bung — two material languages in one frame.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Wall-top surface (0-440, 70-390 and 560-750, 70-390) is a Voronoi cell-noise with 200-400px cells and 1px anti-aliased crack strokes over 40px tiles; it reads as a filter, not stone. Redraw as block-scale stone (1-2 tile blocks) with pixel-stepped joints, and either drop the wavy crack strokes or draw them at the sprite's pixel step.
+- Pixel density is mixed: the figure, crate and bundle are at 2px-per-pixel; the floor hatching, mortar and crack lines are 1px. Pick 2px and re-render the environment textures at that step (or draw sprites at 1px). The 1px crack curving from (250,470) to (420,560) over 2px flagstones is the most visible instance.
+- Wall faces are inconsistent along one room: N wall = khaki face (395-430) + timber sill (430-455); W wall (130-190) = khaki face, no sill; SW wall (60-185, 680-710) = sill only, no khaki face; (185-310, 690+) = no face at all. Give every room-facing wall edge the same face height, and either make the timber sill an explicitly placed prop or run it on every face.
+- Pillar (265-300, 540-635) is a front-view slab 2.3 tiles tall in a straight-down view, with baked shading lit from its LEFT while the only light is to its upper-right. Redraw it top-down (small footprint plus cap), or flip the baked highlight to the light-facing side and let the dynamic light carry the rest. The strap at (265-300, 620-635) is fine; keep it.
+- Floor under the figure at (380-460, 470-540) is clipped: (255,193,119) at (430,520), and the hatch and joints vanish. Cap the light's peak so the brightest tile still shows its joints.
+- Faint half-opacity ring/spiral marks on the floor at (575-600, 480-500): either commit (full-opacity carved glyph at the sprite pixel step) or remove; at this opacity they read as a decal someone forgot to delete.
+- Props attenuate less than the floor: bundle far end (490,630) is (216,143,92) on floor around (150,107,71); crate at (240,495) is (139,72,26) on floor (82,64,53). Run props through the same falloff as the floor so they stop reading as stickers.
+
+FLIP 3:
+- All of FLIP 1's base fixes (wall tops, pixel density, wall faces, pillar, clipped floor, ring decals).
+- A-frame at (580-670, 400-445): the two orange blocks at (575-590, 415-430) and (655-670, 415-430) don't join the A — nothing connects them. Join them via the rail behind the A or delete them.
+- The A-frame stands on the wall face and sill, not on a floor tile: its feet sit at y=445 on the sill and its apex at 400 on the khaki face. Either move it to the floor row (y ≥ 460) with a contact shadow, or draw it explicitly leaning — feet on the sill line, a shadow on the face.
+- X-brace at (215-300, 655-700): at (240,675) it is (76,43,19) on floor that is (19,21,25) at (240,720) — three to four times the value of what it sits on. Apply floor attenuation. The bar and block hanging off its right arm at (300-340, 660-680) read as a detached fragment; connect or remove.
+- Diagonal plank at (515-535, 395-455) straddles the corner where the corridor's wall top meets the N wall's face; snap it wholly to the face or wholly to the floor.
+
+FLIP 4:
+- All of FLIP 1's base fixes (wall tops, pixel density, wall faces, clipped floor, ring decals — the rings are at (580-600, 480-500) and (640,470) in this one).
+- Fire pit at (580-620, 530-570) is a white notched ring around a black centre with a small flame; it reads as a target reticle. Replace with the red-black coal ring used in 1 and 3, no white.
+- Three X props in one row at (200-230, 605-625), (390-425, 600-635), (515-550, 605-625) are three different designs — two thick planks; a bundle with a diamond core; two thin rods with a white pixel at the crossing — at three sizes. Pick one design language, vary by rotation and count, and snap them to the grid so they stop reading as an asset test sheet.
+- The small orange box at (335-355, 535-560) is smaller than the figure's head yet casts a hard-edged black wedge from (340,560) down to (300-400, 650), four times its size, with floor dropping to (41,44,56) at (340,600). Either scale the box up to a full tile or shorten/soften shadows from sub-tile casters.
+- The crack line runs into the box's footprint at (340-355, 545-550). Route placed props off crack lines, or draw the prop over the crack with a contact shadow so it reads as sitting on it.
+
+FLIP 2:
+- Add the carried-light falloff. Right now every pixel is at the same exposure; the far corners (0-50, 216-288 and 340-384, 200-288) should sit at ≤30% of the value at the figure's feet.
+- Wall tops at (0-50, 0-215), (0-384, 216-270), (340-384, 0-216): flat (grey) slab with a 1px grid. Draw stone — joint depth that varies along a run, chipped corners, value variation between blocks.
+- Leftmost 8px column: dirt at y=0-24 beside wall, then two face bands at y≈71-95 and 120-144 where the adjacent column has one. Fix the autotile rules at the map edge or pad the map by one tile.
+- Pool (250-340, 0-190): break the ~16px hex lattice, darken toward the centre, and add a bank/rim tile so the y=190-192 edge isn't a hard cut from (36,76,62) to (92,68,29).
+- Remove the fifteen teal chips (53,90,97) on the dirt — (111,14), (111,37), (121,17), (134,7), (160,66), (181,79), (208,29), (230,15), (111,206), (159,158), (159,181), (169,161), (182,151), (208,162), (229,175) — or make them one legible object.
+- The orc sprite (215-235, 0-25) is at 2px-per-pixel over 1px dirt noise; unify to one pixel step.
+- Chests at (65-95, 0-20) and (65-95, 45-75): flat khaki lid with a diamond glyph, no grain, no shading. Redraw in the same material language as the barrels (staves, bung, end-grain).
+- Face band bottom-right (325-350, 270-282) has one brick at a lighter value than the rest of the run; fix the tile.
+- Green stain at (122-140, 215-228) is on the raised wall top directly beneath the barrel at (115-145, 195-217) — a floor prop dripping onto a wall. Move the stain to the floor row.
+
+Model used: Claude Opus 5 (1M context).

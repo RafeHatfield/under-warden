@@ -122,6 +122,19 @@ def rotbox(cx, cd, z0, length, width, height, angle_deg, part="body"):
     return out
 
 
+def tiltbox(cx, cz, length, width, thick, angle_deg, cd=0.0, part="body"):
+    """A beam TILTED in the x-z plane (standing, leaning), its centre at (cx, cd, cz). angle 0 is
+    lying along x; 90 is upright. Barricades stand ACROSS the line: their members are tilted,
+    not laid flat (Rafe, 2026-09-13: "a fallen jumble" is what lying members read as)."""
+    a = math.radians(angle_deg)
+    ca, sa = math.cos(a), math.sin(a)
+    out = []
+    for pts, kind, prt in box(-length / 2, length / 2, -width / 2, width / 2, -thick / 2, thick / 2, part):
+        rp = [(cx + x * ca - z * sa, cd + d, cz + x * sa + z * ca) for x, d, z in pts]
+        out.append((rp, kind, prt))
+    return out
+
+
 def round_exception(cand):
     """§3.2's round exception (Rafe, 2026-09-12): a cylinder has no front face to keep true and
     oblique makes its ends oblong, so round objects keep a TRUE-CIRCLE top and a VERTICAL body.
@@ -195,21 +208,35 @@ def model(name):
             f += box(px_, px_ + 3, -d / 2 - 2.5, -d / 2, pz - 1, pz + 3, "iron")
         return f
     if name == "barricade_a":
-        # crossed baulks: one lies ON the other (no interpenetration — #207's crossing), rope at
-        # the join. 'A heap of thick timber beams lying crossed over one another.'
-        L, W_, T = 104, 14, 12
-        f = rotbox(0, 0, 0, L, W_, T, 22, "wood")
-        f += rotbox(0, 0, T, L * 0.92, W_, T, -26, "wood_dark")
-        f += rotbox(0, 0, 2 * T, 18, W_ + 4, 3, -26, "rope")     # lashing over the top baulk
+        # STANDS ACROSS THE LINE, HELD — #207's flip (Rafe, 2026-09-13): "should read as standing
+        # across the line, held, not collapsed; the bindings must visibly grip (§7.1)". An
+        # X-frame of two baulks standing on their ends, a bar lashed across behind the crossing,
+        # and rope wrapped where members meet. Nothing lies flat.
+        # chest-high (§12.2: "a barricade is chest-high and wide"): the X is 44 tall in a 64 cell
+        L, W_, T, H = 58, 10, 10, 44
+        cz = H / 2
+        f = tiltbox(0, cz, L, W_, T, 50, cd=0, part="wood")                 # rises to the right
+        f += tiltbox(0, cz, L, W_, T, 130, cd=-2, part="wood_dark")         # rises to the left, in front
+        f += tiltbox(0, cz + 4, 108, W_, T - 2, 1, cd=8, part="wood")       # the bar, lashed behind
+        # BINDINGS THAT GRIP: rope wrapped round the crossing and round each end of the bar
+        for (rx, rz) in ((0, cz), (-44, cz + 4), (44, cz + 4)):
+            f += box(rx - 5, rx + 5, -W_ / 2 - 3.5, -W_ / 2 - 1.5, rz - 4, rz + 4, "rope")    # front wrap
+            f += box(rx - 5, rx + 5, -W_ / 2 - 1.5, W_ / 2 + 8.5, rz + 4, rz + 6, "rope")    # over the top
         return f
     if name == "barricade_b":
-        # a bound stack: two baulks side by side, a third across their top, rope at both ends
-        L, W_, T = 100, 14, 12
-        f = rotbox(0, -9, 0, L, W_, T, 4, "wood")
-        f += rotbox(0, 9, 0, L * 0.95, W_, T, -3, "wood_dark")
-        f += rotbox(0, 0, T, L * 0.9, W_, T, 1, "wood")
-        for x in (-32, 30):                                        # rope over the top baulk
-            f += rotbox(x, 0, 2 * T, 8, W_ + 4, 3, 1, "rope")
+        # THE OTHER CROSSING — after "break the pitch" (#207, Rafe 2026-09-13) the bound stack still
+        # read as "a wooden bench or table" to three of three cold seats: parallel beams at any
+        # pitch are furniture-shaped. So B is a Λ-frame: two baulks stood on end and leaning
+        # together, a bar lashed across low, rope gripping the apex and both bar ends. The
+        # card's grammar (crossed timber, rope at the join) at a different crossing from A's X,
+        # so the family repeats without a motif (§8.3.1). Chest-high (§12.2).
+        L, W_, T, H = 60, 10, 10, 44
+        f = tiltbox(-14, H / 2, L, W_, T, 62, cd=0, part="wood")             # leans up-right to the apex
+        f += tiltbox(14, H / 2, L, W_, T, 118, cd=-2, part="wood_dark")       # leans up-left, in front
+        f += tiltbox(0, 16, 100, W_, T - 2, -2, cd=7, part="wood")            # the bar, lashed behind, low
+        for (rx, rz) in ((0, H - 4), (-40, 16), (40, 16)):
+            f += box(rx - 5, rx + 5, -W_ / 2 - 3.5, -W_ / 2 - 1.5, rz - 4, rz + 4, "rope")
+            f += box(rx - 5, rx + 5, -W_ / 2 - 1.5, W_ / 2 + 7.5, rz + 4, rz + 6, "rope")
         return f
     if name == "fire_ring":
         # the round exception: a ring of stones, true circle in plan, short vertical bodies.

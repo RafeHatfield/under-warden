@@ -1,4 +1,4 @@
-/Applications/Godot_mono.app/Contents/MacOS/Godot --path /Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/combined.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 1
+/Applications/Godot_mono.app/Contents/MacOS/Godot --path /Users/rafehatfield/development/c-yarl/.claude/worktrees/queue --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/combined.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 1
 
 Godot Engine v4.7.stable.mono.official.5b4e0cb0f - https://godotengine.org
 Metal 4.0 - Forward Mobile - Using Device #0: Apple - Apple M1 (Apple7)
@@ -6,7 +6,7 @@ Metal 4.0 - Forward Mobile - Using Device #0: Apple - Apple M1 (Apple7)
 Catacombs of YARL — loading...
 [DIAG] Logging to: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/Catacombs of YARL/diag.log
 [DIAG] Structured log: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/Catacombs of YARL/diag_structured.jsonl
-[DIAG 00000 F0 T0.433] === Session started ===
+[DIAG 00000 F0 T0.707] === Session started ===
 [Main] Persistence loaded — 6 runs ever.
 [Main] Loading tileset: 16bit_fantasy
 [Main] Tileset loaded: Oryx 16-Bit Fantasy (48px, 2 frames)
@@ -112,25 +112,25 @@ empt
 [ReadGodotResource] res://config/under_warden/cause_display_names.yaml: 1936 chars, starts with: # Bureaucratic display phrases for engine cause-of-death strings.
 # Substituted 
 [Main] Memo registry loaded.
-[Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 flicker=off
-[DIAG 00001 F0 T0.897] [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 flicker=off
+[Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
+[DIAG 00001 F0 T1.177] [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
 [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
-[DIAG 00002 F0 T0.899] [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
+[DIAG 00002 F0 T1.180] [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
 [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
-[DIAG 00003 F0 T0.899] [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
+[DIAG 00003 F0 T1.180] [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
 [Tier0] map=17x21 player=(6,12) carve_rects=7
-[DIAG 00004 F0 T0.899] [Tier0] map=17x21 player=(6,12) carve_rects=7
+[DIAG 00004 F0 T1.180] [Tier0] map=17x21 player=(6,12) carve_rects=7
 [Tier0] junction=NO
-[DIAG 00005 F0 T0.899] [Tier0] junction=NO
+[DIAG 00005 F0 T1.180] [Tier0] junction=NO
 [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
-[DIAG 00006 F0 T0.899] [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
+[DIAG 00006 F0 T1.180] [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
 [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
-[DIAG 00007 F0 T0.900] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
+[DIAG 00007 F0 T1.180] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
 [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
-[DIAG 00008 F0 T0.900] [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
-[Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(111/111) col=1.000(107/107) diag=1.000(93/93) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
-[DIAG 00009 F0 T0.903] [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(111/111) col=1.000(107/107) diag=1.000(93/93) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
-[Tier1] floor overlays: cells=134 channel=26 neglected=51 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=56@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=74 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
+[DIAG 00008 F0 T1.181] [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
+[Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
+[DIAG 00009 F0 T1.183] [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
+[Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
 [Tier1] channel map (L/M/R channel, F trodden chokepoint, x neglected, . floor, # solid)
 [Tier1]   #################
 [Tier1]   #################
@@ -144,16 +144,16 @@ empt
 [Tier1]   ########F########
 [Tier1]   ########F########
 [Tier1]   ########F########
-[Tier1]   #####..LMR...x###
+[Tier1]   ###xx..LM##..x###
 [Tier1]   ###x#..LM#...x###
-[Tier1]   ###x#.##MMR..x###
-[Tier1]   ###xx#..LMR..x###
-[Tier1]   #xxxxx..LMR..x###
+[Tier1]   ###x#..LMMR..x###
+[Tier1]   ######..LMR..x###
+[Tier1]   #xxxx...LMR..x###
 [Tier1]   #xxxxx.......x###
 [Tier1]   ###xxx.......x###
 [Tier1]   ###xxxxxxxxxxx###
 [Tier1]   #################
-[DIAG 00010 F0 T0.917] [Tier1] floor overlays: cells=134 channel=26 neglected=51 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=56@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=74 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
+[DIAG 00010 F0 T1.196] [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
 [Tier1] channel map (L/M/R channel, F trodden chokepoint, x neglected, . floor, # solid)
 [Tier1]   #################
 [Tier1]   #################
@@ -167,39 +167,39 @@ empt
 [Tier1]   ########F########
 [Tier1]   ########F########
 [Tier1]   ########F########
-[Tier1]   #####..LMR...x###
+[Tier1]   ###xx..LM##..x###
 [Tier1]   ###x#..LM#...x###
-[Tier1]   ###x#.##MMR..x###
-[Tier1]   ###xx#..LMR..x###
-[Tier1]   #xxxxx..LMR..x###
+[Tier1]   ###x#..LMMR..x###
+[Tier1]   ######..LMR..x###
+[Tier1]   #xxxx...LMR..x###
 [Tier1]   #xxxxx.......x###
 [Tier1]   ###xxx.......x###
 [Tier1]   ###xxxxxxxxxxx###
 [Tier1]   #################
 [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
-[DIAG 00011 F0 T0.917] [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
-[Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:68/check:48/OK lines=1 mouths=17 polished=141 traffic=spine:18/routes:23 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
+[DIAG 00011 F0 T1.196] [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
+[Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
 [Tier1] traffic field (space=unwalked .. @=busiest)
 [Tier1]   #################
 [Tier1]   #################
-[Tier1]   ###=+++=-----:###
-[Tier1]   ###+*#***++=-:###
-[Tier1]   ###=*#####*+-:###
-[Tier1]   ###-=*#%%%*=-:###
-[Tier1]   ########%########
-[Tier1]   #################
-[Tier1]   ########*########
-[Tier1]   ########*########
-[Tier1]   ########*########
-[Tier1]   #################
-[Tier1]   #####+#%#*+-:.###
-[Tier1]   ###-#*####+=-:###
-[Tier1]   ###+####*+==-:###
-[Tier1]   ####%##++==--:###
-[Tier1]   #+*%@%*+===--:###
-[Tier1]   #+*#%%*+===-::###
-[Tier1]   ###*##*+==--:.###
-[Tier1]   ###*##*++==-:.###
+[Tier1]   ###----::::::.###
+[Tier1]   ###-=====---:.###
+[Tier1]   ###-=++++==-:.###
+[Tier1]   ###:-=++++=-:.###
+[Tier1]   ########+########
+[Tier1]   ########+########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ###.:=+++##:..###
+[Tier1]   ###:#****#--:.###
+[Tier1]   ###=#%%#*+--::###
+[Tier1]   ######%%*=--::###
+[Tier1]   #:-+#%%#*=--:.###
+[Tier1]   #:-+###*+--::.###
+[Tier1]   ###=+++=-:::..###
+[Tier1]   ###--==--::...###
 [Tier1]   #################
 [Tier1] travel axis (- E-W  / NE-SW  | N-S  \ NW-SE  . none)
 [Tier1]   #################
@@ -214,13 +214,13 @@ empt
 [Tier1]   ########|########
 [Tier1]   ########|########
 [Tier1]   ########\########
-[Tier1]   #####\\\\.....###
-[Tier1]   ###\#\\\.#....###
-[Tier1]   ###\#\##......###
-[Tier1]   ###\\#........###
-[Tier1]   #||\\.........###
-[Tier1]   #|||..........###
-[Tier1]   ###|..........###
+[Tier1]   ###..\\\\##...###
+[Tier1]   ###.#||\.#....###
+[Tier1]   ###.#\\.......###
+[Tier1]   ######\.......###
+[Tier1]   #----\\.......###
+[Tier1]   #.--..........###
+[Tier1]   ###...........###
 [Tier1]   ###...........###
 [Tier1]   #################
 [Tier1] route strength (space=off-route .. @=on the line)
@@ -236,38 +236,38 @@ empt
 [Tier1]   ########%########
 [Tier1]   ########*########
 [Tier1]   ########=########
-[Tier1]   #####*%=      ###
-[Tier1]   ### #@=. #    ###
-[Tier1]   ###+#*##      ###
-[Tier1]   ###@*#        ###
-[Tier1]   # %*          ###
-[Tier1]   # *#          ###
-[Tier1]   ###-          ###
+[Tier1]   ###  -%= ##   ###
+[Tier1]   ### #*#. #    ###
+[Tier1]   ### ##*       ###
+[Tier1]   ######+       ###
+[Tier1]   #=%%*=        ###
+[Tier1]   #             ###
+[Tier1]   ###           ###
 [Tier1]   ###           ###
 [Tier1]   #################
-[Tier1] axis coherence: 48 of 52 adjacent on-route pairs agree (92%) - round 21 measured 34% on the per-tile field
-[DIAG 00012 F0 T2.428] [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:68/check:48/OK lines=1 mouths=17 polished=141 traffic=spine:18/routes:23 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
+[Tier1] axis coherence: 42 of 50 adjacent on-route pairs agree (84%) - round 21 measured 34% on the per-tile field
+[DIAG 00012 F0 T2.713] [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
 [Tier1] traffic field (space=unwalked .. @=busiest)
 [Tier1]   #################
 [Tier1]   #################
-[Tier1]   ###=+++=-----:###
-[Tier1]   ###+*#***++=-:###
-[Tier1]   ###=*#####*+-:###
-[Tier1]   ###-=*#%%%*=-:###
-[Tier1]   ########%########
-[Tier1]   #################
-[Tier1]   ########*########
-[Tier1]   ########*########
-[Tier1]   ########*########
-[Tier1]   #################
-[Tier1]   #####+#%#*+-:.###
-[Tier1]   ###-#*####+=-:###
-[Tier1]   ###+####*+==-:###
-[Tier1]   ####%##++==--:###
-[Tier1]   #+*%@%*+===--:###
-[Tier1]   #+*#%%*+===-::###
-[Tier1]   ###*##*+==--:.###
-[Tier1]   ###*##*++==-:.###
+[Tier1]   ###----::::::.###
+[Tier1]   ###-=====---:.###
+[Tier1]   ###-=++++==-:.###
+[Tier1]   ###:-=++++=-:.###
+[Tier1]   ########+########
+[Tier1]   ########+########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ###.:=+++##:..###
+[Tier1]   ###:#****#--:.###
+[Tier1]   ###=#%%#*+--::###
+[Tier1]   ######%%*=--::###
+[Tier1]   #:-+#%%#*=--:.###
+[Tier1]   #:-+###*+--::.###
+[Tier1]   ###=+++=-:::..###
+[Tier1]   ###--==--::...###
 [Tier1]   #################
 [Tier1] travel axis (- E-W  / NE-SW  | N-S  \ NW-SE  . none)
 [Tier1]   #################
@@ -282,13 +282,13 @@ empt
 [Tier1]   ########|########
 [Tier1]   ########|########
 [Tier1]   ########\########
-[Tier1]   #####\\\\.....###
-[Tier1]   ###\#\\\.#....###
-[Tier1]   ###\#\##......###
-[Tier1]   ###\\#........###
-[Tier1]   #||\\.........###
-[Tier1]   #|||..........###
-[Tier1]   ###|..........###
+[Tier1]   ###..\\\\##...###
+[Tier1]   ###.#||\.#....###
+[Tier1]   ###.#\\.......###
+[Tier1]   ######\.......###
+[Tier1]   #----\\.......###
+[Tier1]   #.--..........###
+[Tier1]   ###...........###
 [Tier1]   ###...........###
 [Tier1]   #################
 [Tier1] route strength (space=off-route .. @=on the line)
@@ -304,19 +304,19 @@ empt
 [Tier1]   ########%########
 [Tier1]   ########*########
 [Tier1]   ########=########
-[Tier1]   #####*%=      ###
-[Tier1]   ### #@=. #    ###
-[Tier1]   ###+#*##      ###
-[Tier1]   ###@*#        ###
-[Tier1]   # %*          ###
-[Tier1]   # *#          ###
-[Tier1]   ###-          ###
+[Tier1]   ###  -%= ##   ###
+[Tier1]   ### #*#. #    ###
+[Tier1]   ### ##*       ###
+[Tier1]   ######+       ###
+[Tier1]   #=%%*=        ###
+[Tier1]   #             ###
+[Tier1]   ###           ###
 [Tier1]   ###           ###
 [Tier1]   #################
-[Tier1] axis coherence: 48 of 52 adjacent on-route pairs agree (92%) - round 21 measured 34% on the per-tile field
+[Tier1] axis coherence: 42 of 50 adjacent on-route pairs agree (84%) - round 21 measured 34% on the per-tile field
 [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
 [Tier1]   .................
-[Tier1]   ...22221111110...
+[Tier1]   ...11111111100...
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
@@ -326,60 +326,60 @@ empt
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
-[Tier1]   ...01233.22110...
+[Tier1]   ...01122.21100...
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
-[Tier1]   .22..3...........
-[Tier1]   .................
-[Tier1]   .................
-[Tier1]   .................
-[Tier1]   .................
-[Tier1]   .................
-[DIAG 00013 F0 T2.541] [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
-[Tier1]   .................
-[Tier1]   ...22221111110...
+[Tier1]   .11..3...........
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
+[DIAG 00013 F0 T2.798] [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
 [Tier1]   .................
-[Tier1]   .................
-[Tier1]   .................
-[Tier1]   .................
-[Tier1]   ...01233.22110...
-[Tier1]   .................
-[Tier1]   .................
-[Tier1]   .................
-[Tier1]   .22..3...........
+[Tier1]   ...11111111100...
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
-[Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=14(cramp:3,lash:4,patch:1,pin:3,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) age0..3=3/9/9/3 traffic=spine:18/routes:23 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
-[DIAG 00014 F0 T2.543] [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=14(cramp:3,lash:4,patch:1,pin:3,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) age0..3=3/9/9/3 traffic=spine:18/routes:23 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   ...01122.21100...
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .11..3...........
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) cap_bands_over_props=2 east_faces=5 age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
+[DIAG 00014 F0 T2.800] [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) cap_bands_over_props=2 east_faces=5 age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
 [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
-[DIAG 00015 F0 T2.552] [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
+[DIAG 00015 F0 T2.810] [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
 [Tier0] review_build_marker=none (CLI flags)
-[DIAG 00016 F0 T2.553] [Tier0] review_build_marker=none (CLI flags)
+[DIAG 00016 F0 T2.812] [Tier0] review_build_marker=none (CLI flags)
 [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
-[DIAG 00017 F0 T2.554] [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
+[DIAG 00017 F0 T2.813] [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
 [Main] Visible tile rect: (0,4)-(11,19)
 [Main] floor_worn (3001) tiles: 1 rendered in the authored room, 1 in frame: (11,15)
-[Tier1] legibility(5,12) expect=lit  lum=0.7349 at px(343,578) bound=0.1004 OK  (ratio=0.9303, informational)  - floor beside the station, well inside the radius
-[DIAG 00018 F5 T2.666] [Tier1] legibility(5,12) expect=lit  lum=0.7349 at px(343,578) bound=0.1004 OK  (ratio=0.9303, informational)  - floor beside the station, well inside the radius
-[Tier1] legibility(3,14) expect=lit  lum=0.2573 at px(215,706) bound=0.1004 OK  (ratio=0.3257, informational)  - the near corner of the room, still lit — and clear of every prop footprint
-[DIAG 00019 F5 T2.666] [Tier1] legibility(3,14) expect=lit  lum=0.2573 at px(215,706) bound=0.1004 OK  (ratio=0.3257, informational)  - the near corner of the room, still lit — and clear of every prop footprint
-[Tier1] legibility(9,15) expect=lit  lum=0.3708 at px(599,770) bound=0.1004 OK  (ratio=0.4694, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
-[DIAG 00020 F5 T2.666] [Tier1] legibility(9,15) expect=lit  lum=0.3708 at px(599,770) bound=0.1004 OK  (ratio=0.4694, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
-[Tier1] legibility(3,18) expect=dark lum=0.0638 at px(215,962) bound=0.0837 OK  (ratio=0.0808, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
-[DIAG 00021 F5 T2.666] [Tier1] legibility(3,18) expect=dark lum=0.0638 at px(215,962) bound=0.0837 OK  (ratio=0.0808, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
-[Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0901, informational)  - up the corridor, beyond the radius
-[DIAG 00022 F5 T2.666] [Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0901, informational)  - up the corridor, beyond the radius
-[Tier1] floor-legibility probe: 5 declared points, reference lum=0.7900 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
-[DIAG 00023 F5 T2.666] [Tier1] floor-legibility probe: 5 declared points, reference lum=0.7900 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
+[Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7565, informational)  - floor beside the station, well inside the radius
+[DIAG 00018 F5 T2.938] [Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7565, informational)  - floor beside the station, well inside the radius
+[Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2823, informational)  - the near corner of the room, still lit — and clear of every prop footprint
+[DIAG 00019 F5 T2.938] [Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2823, informational)  - the near corner of the room, still lit — and clear of every prop footprint
+[Tier1] legibility(9,15) expect=lit  lum=0.3715 at px(599,770) bound=0.1004 OK  (ratio=0.4342, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
+[DIAG 00020 F5 T2.938] [Tier1] legibility(9,15) expect=lit  lum=0.3715 at px(599,770) bound=0.1004 OK  (ratio=0.4342, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
+[Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0685, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
+[DIAG 00021 F5 T2.938] [Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0685, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
+[Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0832, informational)  - up the corridor, beyond the radius
+[DIAG 00022 F5 T2.938] [Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0832, informational)  - up the corridor, beyond the radius
+[Tier1] floor-legibility probe: 5 declared points, reference lum=0.8557 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
+[DIAG 00023 F5 T2.938] [Tier1] floor-legibility probe: 5 declared points, reference lum=0.8557 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
 [Main] Capture written: tools/tier1_floors/evidence/combined.png
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
@@ -798,6 +798,7 @@ empt
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
 [TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
 WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
 If you want to set size, change the anchors or consider using set_deferred().
      at: _set_size (scene/gui/control.cpp:1519)
@@ -805,32 +806,32 @@ If you want to set size, change the anchors or consider using set_deferred().
          [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
          [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
          [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/PossessionOverlay.cs:144)
-         [4] void CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/PossessionOverlay.cs:94)
-         [5] void CatacombsOfYarl.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/PossessionOverlay.cs:44)
+         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:144)
+         [4] void CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:94)
+         [5] void CatacombsOfYarl.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:44)
          [6] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
          [7] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
          [8] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [9] bool CatacombsOfYarl.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
+         [9] bool CatacombsOfYarl.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
          [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
          [11] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
          [12] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
          [13] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [14] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:144)
-         [15] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:36)
+         [14] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:144)
+         [15] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:36)
          [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
          [17] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
          [18] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [19] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
+         [19] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
          [20] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
          [21] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
          [22] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
          [23] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [24] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:984)
-         [25] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:2609)
-         [26] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:266)
+         [24] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:984)
+         [25] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
+         [26] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
          [27] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [28] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
+         [28] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
          [29] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
 WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
 If you want to set size, change the anchors or consider using set_deferred().
@@ -839,32 +840,32 @@ If you want to set size, change the anchors or consider using set_deferred().
          [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
          [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
          [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/PossessionOverlay.cs:144)
-         [4] void CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/PossessionOverlay.cs:97)
-         [5] void CatacombsOfYarl.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/PossessionOverlay.cs:44)
+         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:144)
+         [4] void CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:97)
+         [5] void CatacombsOfYarl.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:44)
          [6] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
          [7] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
          [8] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [9] bool CatacombsOfYarl.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
+         [9] bool CatacombsOfYarl.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
          [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
          [11] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
          [12] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
          [13] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [14] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:144)
-         [15] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:36)
+         [14] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:144)
+         [15] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:36)
          [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
          [17] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
          [18] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [19] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
+         [19] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
          [20] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
          [21] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
          [22] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
          [23] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [24] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:984)
-         [25] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:2609)
-         [26] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:266)
+         [24] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:984)
+         [25] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
+         [26] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
          [27] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [28] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
+         [28] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
          [29] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
 WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
 If you want to set size, change the anchors or consider using set_deferred().
@@ -873,21 +874,21 @@ If you want to set size, change the anchors or consider using set_deferred().
          [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
          [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
          [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:168)
-         [4] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:36)
+         [3] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:168)
+         [4] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:36)
          [5] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
          [6] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
          [7] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [8] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
+         [8] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
          [9] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
          [10] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
          [11] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
          [12] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [13] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:984)
-         [14] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:2609)
-         [15] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:266)
+         [13] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:984)
+         [14] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
+         [15] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
          [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [17] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
+         [17] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
          [18] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
 WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
 If you want to set size, change the anchors or consider using set_deferred().
@@ -896,12 +897,12 @@ If you want to set size, change the anchors or consider using set_deferred().
          [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
          [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
          [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] void CatacombsOfYarl.Presentation.UI.HUD.Refresh() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:80)
-         [4] void CatacombsOfYarl.Presentation.UI.HUD.SetState(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/UI/HUD.cs:42)
-         [5] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:985)
-         [6] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:2609)
-         [7] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/src/Presentation/Main.cs:266)
+         [3] void CatacombsOfYarl.Presentation.UI.HUD.Refresh() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:80)
+         [4] void CatacombsOfYarl.Presentation.UI.HUD.SetState(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:42)
+         [5] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:985)
+         [6] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
+         [7] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
          [8] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [9] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/cast-shadows/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
+         [9] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
          [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
 [Tier0] ABORT: carved geometry contains no junction — a straight corridor cannot answer 'which way would you walk'. Fix the carve list.
