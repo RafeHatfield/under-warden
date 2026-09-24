@@ -1,0 +1,43 @@
+{
+ "producer": {
+  "script": "tools/cast_shadows/measure_lambda_scale.py",
+  "commit": "1dc5c202d7783ef39a7bd8c9da41beed3949fbb1",
+  "frame": "tools/tier1_floors/evidence/combined.png",
+  "log": "tools/tier1_floors/evidence/combined.log"
+ },
+ "grid": {
+  "centre00": [
+   23.0,
+   -190.5
+  ],
+  "pitch": [
+   64,
+   64
+  ]
+ },
+ "wall": {
+  "reveal_foot_y": 545.5,
+  "arris_y": 513.5,
+  "cap_top_y": 481.5,
+  "face_px": 32.0,
+  "face_tiles": 0.5
+ },
+ "prop": {
+  "apex_y": 494.7,
+  "sprite_bottom_y": 556.7,
+  "sprite_px": 62.0,
+  "base_run_px": 11.2,
+  "standing_px": 50.8,
+  "standing_tiles": 0.794,
+  "shift_px": 50.8
+ },
+ "figure": {
+  "px": null,
+  "note": "not measured by this script \u2014 see the round report (read by eye, placeholder Oryx knight, not Sasha)"
+ },
+ "answers": {
+  "apex_below_cap_top_px": 13.2,
+  "apex_overdraws_cap_band_px": 18.8,
+  "prop_over_wall_height": 1.59
+ }
+}
