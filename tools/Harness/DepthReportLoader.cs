@@ -1,5 +1,5 @@
 using System.Text.Json;
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Loads DepthCurvePoints from a Phase 1 suite output directory or summary.json.

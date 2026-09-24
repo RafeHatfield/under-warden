@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Endgame;
+namespace UnderWarden.Logic.Endgame;
 
 /// <summary>
 /// Guardian combat abilities for the Weighing. Orchestration (TASK-009) calls these; the mechanics

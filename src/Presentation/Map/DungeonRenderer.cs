@@ -1,10 +1,10 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 using Godot;
 
-using CatacombsOfYarl.Presentation;
+using UnderWarden.Presentation;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// Holds references to all tile sprite nodes created by DungeonRenderer.Render.

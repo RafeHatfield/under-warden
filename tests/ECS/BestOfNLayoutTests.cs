@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.ECS;
+namespace UnderWarden.Tests.ECS;
 
 /// <summary>
 /// Tests for PROP-011: best-of-N layout scoring in RoomPropPlacer.

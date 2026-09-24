@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Tests.Persistence;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Tests.Persistence;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 /// <summary>
 /// Phase 3 tests: MemoDeliveryEvaluator incident detection, memo queuing,

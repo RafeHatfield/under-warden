@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using CatacombsOfYarl.Logic.AI;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.AI;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Endgame;
+namespace UnderWarden.Logic.Endgame;
 
 /// <summary>The phase of the Weighing gauntlet.</summary>
 public enum WeighingPhase

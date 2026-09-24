@@ -199,7 +199,7 @@ IDENTICAL.
 
 ## 5. Two things that would have shipped the wrong picture
 
-**There are two files named `CatacombsOfYarl.Presentation.csproj`** — one at the repo root and one
+**There are two files named `UnderWarden.Presentation.csproj`** — one at the repo root and one
 at `src/Presentation/`. **Godot loads the root one.** Building the other succeeds, prints
 `Build succeeded.`, and changes nothing Godot will run. The symptom was a `Report(...)` line that
 plainly exists in `Main.cs` producing no output at all, twice, while the scene rendered happily
@@ -817,12 +817,12 @@ python3 tools/tier1_floors/probe_stone_address.py     # the K ruling
 python3 tools/tier1_floors/verify_atlas_path.py --plants   # tool vs shipped asset
 python3 tools/tier1_floors/measure_overlay_legibility.py   # needs both captures
 
-dotnet build CatacombsOfYarl.Presentation.csproj      # ⚠ THE ROOT ONE
+dotnet build UnderWarden.Presentation.csproj      # ⚠ THE ROOT ONE
 /Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --import   # ⚠ ROOT PATH
 ```
 
 ⚠ **Both of those warnings are load-bearing** — see §5. Building
-`src/Presentation/CatacombsOfYarl.Presentation.csproj` succeeds and changes nothing Godot runs.
+`src/Presentation/UnderWarden.Presentation.csproj` succeeds and changes nothing Godot runs.
 
 **A round's evidence must not move under it.** Round 3 was left running while the family was
 rebuilt and its capture overwritten in place, so the seats still queued would have judged a

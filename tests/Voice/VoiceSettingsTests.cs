@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Voice;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Voice;
+namespace UnderWarden.Tests.Voice;
 
 /// <summary>
 /// Device-settings round-trip (M1.5b). The pure part of the device store (JSON in/out, defaults,

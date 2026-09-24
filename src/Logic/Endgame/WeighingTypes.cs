@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Endgame;
+namespace UnderWarden.Logic.Endgame;
 
 /// <summary>
 /// The Weighing's outcome taxonomy. See tasks/plans/plan_end_game.md.

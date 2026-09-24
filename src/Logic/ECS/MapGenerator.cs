@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Procedural dungeon generator using random room placement + L-corridor connections.

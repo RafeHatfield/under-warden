@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Balance.Transcript;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Balance.Transcript;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Balance.LlmPlayer;
+namespace UnderWarden.Logic.Balance.LlmPlayer;
 
 /// <summary>One turn's decision plus LLM metadata the transcript captures.</summary>
 public sealed record PlayerDecision(

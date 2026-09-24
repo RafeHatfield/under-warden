@@ -1,11 +1,11 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.Persistence.Namespaces;
 using NUnit.Framework;
 using System.IO;
 using System.Reflection;
 
-namespace CatacombsOfYarl.Tests.Possession;
+namespace UnderWarden.Tests.Possession;
 
 /// <summary>
 /// Phase 6 tests: VoiceLineRegistry + CatalogEntryRenderer.

@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 // DTOs for the mid-run entity/component serializer (M1.4 §Component registry).
 // One record per concrete IComponent, capturing STATE only:

@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.AI;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.AI;
 
-namespace CatacombsOfYarl.Logic.Combat.StatusEffects;
+namespace UnderWarden.Logic.Combat.StatusEffects;
 
 /// <summary>
 /// Processes status effects for a single entity each turn.

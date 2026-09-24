@@ -3,7 +3,7 @@ using System.Globalization;
 // Alias to resolve ambiguity with System.IO.FileAccess
 using GodotFileAccess = Godot.FileAccess;
 
-namespace CatacombsOfYarl.Presentation;
+namespace UnderWarden.Presentation;
 
 /// <summary>
 /// Loads tileset configuration from config/tilesets/{id}.yaml.

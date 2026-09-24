@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Knowledge;
+using UnderWarden.Logic.Knowledge;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Floating inspect panel shown on long-press. Displays tier-gated monster info

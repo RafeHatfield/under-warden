@@ -1,6 +1,6 @@
 using System.Text.Json.Nodes;
 
-namespace CatacombsOfYarl.Logic.Persistence;
+namespace UnderWarden.Logic.Persistence;
 
 /// <summary>
 /// Forward migration table and migration runner.

@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Voice;
+namespace UnderWarden.Logic.Voice;
 
 /// <summary>
 /// Derives voice trigger keys from what is observable at a turn commit (M1.5b trigger bus). Pure logic —

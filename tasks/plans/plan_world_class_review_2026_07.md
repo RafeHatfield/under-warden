@@ -1,6 +1,6 @@
 # World-Class Review & Roadmap — 2026-07-06
 
-Full-codebase review of Catacombs of YARL plus a review of the Claude Code setup across both
+Full-codebase review of The Under-Warden plus a review of the Claude Code setup across both
 repos. Goal: identify everything standing between this project and "among the best roguelikes
 built," ordered so each phase unblocks the next. Findings below were **verified empirically on a
 clean Linux machine** (fresh clone, fresh .NET 8 SDK) unless marked otherwise.
@@ -20,11 +20,11 @@ These three fixes are committed on this branch, each verified end-to-end here:
 
 ### FIX-1: CI has been red on every main push since 2026-05-22 (~6 weeks)
 - **Cause:** `balance.yml` runs bare `dotnet restore`; the repo root has TWO solution files
-  (`CatacombsOfYarl.sln` + the Godot editor's `CatacombsOfYarl.Presentation.sln`, added with the
+  (`UnderWarden.sln` + the Godot editor's `UnderWarden.Presentation.sln`, added with the
   bot-personas graphical work) → `MSB1011` on every run. Nothing after restore executes — **no
   tests and no balance gate have run in CI since May 22.** The findings log's "CI gates on the
   full matrix" has been aspirational for six weeks.
-- **Fix:** `dotnet restore CatacombsOfYarl.sln` (comment added explaining why).
+- **Fix:** `dotnet restore UnderWarden.sln` (comment added explaining why).
 - **Lesson for process:** a red CI badge was invisible because nothing surfaces it. See Part 4
   (Claude setup) — this is exactly what a PR-based flow + CI subscription solves.
 
@@ -72,9 +72,9 @@ a real but modest reconciliation, not the feared 10×. **Lethality tuning is unb
    actions break June 16, 2026 — that's **this month**: bump `actions/checkout@v4→v5`,
    `setup-dotnet`, `upload-artifact` or set `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24`).
 
-3. **Duplicate Presentation csproj drift.** `CatacombsOfYarl.Presentation.csproj` exists at repo
+3. **Duplicate Presentation csproj drift.** `UnderWarden.Presentation.csproj` exists at repo
    root (Godot editor project, `<Compile Include="src/Presentation/**">`) AND at
-   `src/Presentation/` (in `CatacombsOfYarl.sln`) — with **already-diverged** trimming/
+   `src/Presentation/` (in `UnderWarden.sln`) — with **already-diverged** trimming/
    globalization settings (root: `TrimMode=partial`; nested: `IsTrimmable=false` +
    `InvariantGlobalization`). One of these is what ships to iOS; the other is what CI compiles.
    Decide which is canonical, delete or thin the other into an import of shared props

@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 public static class SpawnUtils
 {

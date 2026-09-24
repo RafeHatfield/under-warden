@@ -91,7 +91,7 @@ int weight = d!.DepthWeights != null
 **File:** `src/Logic/Balance/SpawnUtils.cs`
 
 ```csharp
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 public static class SpawnUtils
 {

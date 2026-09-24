@@ -154,7 +154,7 @@ def main():
         raise SystemExit("worktree add failed: " + r.stderr)
     try:
         shutil.copy(os.path.join(REPO, "export_presets.cfg"), SCRATCH)
-        subprocess.run(["dotnet", "build", os.path.join(SCRATCH, "CatacombsOfYarl.Presentation.csproj")],
+        subprocess.run(["dotnet", "build", os.path.join(SCRATCH, "UnderWarden.Presentation.csproj")],
                        capture_output=True, text=True, check=True)
         morgue = json.load(open(os.path.join(MORGUE, "MORGUE.json")))
         for plant in PLANTS:

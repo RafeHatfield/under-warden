@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Tests the impact of the momentum/speed system on combat balance.

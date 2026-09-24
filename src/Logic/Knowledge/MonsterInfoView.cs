@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Knowledge;
+namespace UnderWarden.Logic.Knowledge;
 
 /// <summary>
 /// Pure data record for the monster inspect UI. All fields except Name and Tier may be null,

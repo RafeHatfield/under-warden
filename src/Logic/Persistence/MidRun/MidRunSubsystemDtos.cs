@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 // DTOs for the dungeon-mode subsystems (M1.4 §GameState field classification). Every collection is
 // serialized in a canonical order by the saver so S1 stays byte-identical.

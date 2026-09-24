@@ -1,6 +1,6 @@
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Input;
+namespace UnderWarden.Presentation.Input;
 
 /// <summary>
 /// Detects long-press (mobile) and stationary hover (desktop) gestures.

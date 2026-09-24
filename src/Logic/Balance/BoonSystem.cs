@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Applies depth boons to the player. Stateless utility class.

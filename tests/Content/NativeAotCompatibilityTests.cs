@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 /// <summary>
 /// Guards against the "grey screen of death" on iOS caused by types missing from

@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Presentation.Map;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Presentation.Map;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Entities;
+namespace UnderWarden.Presentation.Entities;
 
 /// <summary>
 /// Manages Sprite2D nodes for corpses — dead monsters that leave visible remains.

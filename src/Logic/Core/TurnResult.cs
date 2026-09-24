@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// The complete result of processing one turn. Contains all events in order.

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Knowledge;
+namespace UnderWarden.Logic.Knowledge;
 
 /// <summary>
 /// Knowledge tier the player has reached for a given monster species.

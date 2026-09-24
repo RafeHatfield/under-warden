@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Tests for BotPersonaConfig, BotPersonaRegistry, and BotPersonaLoader (TASK-001/002).

@@ -108,7 +108,7 @@ public List<int>? SplitWeights { get; set; }
 **File:** `src/Logic/ECS/SplitTracker.cs`
 
 ```csharp
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Tracks split-under-pressure config and one-time-split guard.

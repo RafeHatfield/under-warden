@@ -1,9 +1,9 @@
 using System.Text;
 using System.Text.Json;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Balance.Transcript;
+namespace UnderWarden.Logic.Balance.Transcript;
 
 /// <summary>
 /// Accumulates an enriched run transcript while a dungeon run executes, then

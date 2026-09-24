@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Tracks state for the Orc Chieftain's Rally Cry and Sonic Bellow abilities.

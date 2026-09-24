@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Analyst;
+namespace UnderWarden.Analyst;
 
 /// <summary>A single detected bug candidate. `Turn` is null for run-level checks.</summary>
 public sealed class BugCandidate

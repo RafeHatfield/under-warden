@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Logic.Persistence.Namespaces;
 
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Evaluates post-run and mid-run events to decide which Under-Warden memos should be

@@ -1,8 +1,8 @@
 using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>
 /// Per-type serialization codec for one concrete <see cref="IComponent"/>. Holds the type-erased

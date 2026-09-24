@@ -1,8 +1,8 @@
 using System;
-using CatacombsOfYarl.Logic.Voice;
+using UnderWarden.Logic.Voice;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Options panel shown from the main menu.

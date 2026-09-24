@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Balance.Etp;
+namespace UnderWarden.Logic.Balance.Etp;
 
 /// <summary>
 /// ETP sanity analysis tool.
@@ -113,7 +113,7 @@ public static class EtpSanityHarness
         Room room,
         int roomIdx,
         int depth,
-        IReadOnlyList<CatacombsOfYarl.Logic.ECS.Entity> monsters,
+        IReadOnlyList<UnderWarden.Logic.ECS.Entity> monsters,
         MonsterRegistry? monsterRegistry)
     {
         // Find monsters whose position is inside this room's bounds
@@ -195,15 +195,15 @@ public static class EtpSanityHarness
         return "normal";
     }
 
-    private static string GetMonsterTypeId(CatacombsOfYarl.Logic.ECS.Entity m)
+    private static string GetMonsterTypeId(UnderWarden.Logic.ECS.Entity m)
     {
         // SpeciesTag stores the canonical monster type ID from entity definitions
-        var tag = m.Get<CatacombsOfYarl.Logic.ECS.SpeciesTag>();
+        var tag = m.Get<UnderWarden.Logic.ECS.SpeciesTag>();
         return tag?.TypeId ?? m.Name;
     }
 
     private static double GetMonsterEtp(
-        CatacombsOfYarl.Logic.ECS.Entity m,
+        UnderWarden.Logic.ECS.Entity m,
         EtpConfig cfg,
         int depth,
         MonsterRegistry? registry)
@@ -211,7 +211,7 @@ public static class EtpSanityHarness
         if (registry == null)
         {
             // Fallback: use the legacy GetEtp which reads EtpBase directly from entity
-            var fighter = m.Get<CatacombsOfYarl.Logic.Combat.Fighter>();
+            var fighter = m.Get<UnderWarden.Logic.Combat.Fighter>();
             // We don't have MonsterDefinition here without the registry
             // Use a default ETP of 20 (PoC fallback)
             return EtpCalculator.DefaultEtp;

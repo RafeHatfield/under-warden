@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Resolves a TrapPayloadComponent against a target entity.

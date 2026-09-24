@@ -1,6 +1,6 @@
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// THE RIG LADDER — the §6.2.1 readability-tuning pass, on the device, in Rafe's hands.

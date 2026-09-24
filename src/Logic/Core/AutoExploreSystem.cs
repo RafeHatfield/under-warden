@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Drives auto-explore behaviour. Stateless — all state lives in AutoExploreState on the player.

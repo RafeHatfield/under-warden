@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.Voice;
+namespace UnderWarden.Logic.Voice;
 
 /// <summary>
 /// Presentation-agnostic voice delivery scheduler (docs/systems/voice_delivery.md §Scheduler). Given

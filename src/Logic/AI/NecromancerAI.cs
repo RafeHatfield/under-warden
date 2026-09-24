@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 
-namespace CatacombsOfYarl.Logic.AI;
+namespace UnderWarden.Logic.AI;
 
 /// <summary>
 /// Necromancer AI: raise fresh corpses, hang back from player, fall through to BasicMonsterAI.

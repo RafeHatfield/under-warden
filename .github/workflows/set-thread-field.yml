@@ -32,7 +32,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
       OWNER: RafeHatfield
-      REPO: catacombs-of-yarl
+      REPO: under-warden
       PROJECT_TITLE: "Catacombs of Yarl — Release"
       ISSUE_NUMBER: ${{ github.event.issue.number }}
     steps:

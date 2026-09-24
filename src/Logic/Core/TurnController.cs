@@ -1,12 +1,12 @@
-using CatacombsOfYarl.Logic.AI;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Combat.StatusEffects;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Knowledge;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.AI;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Combat.StatusEffects;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Knowledge;
+using UnderWarden.Logic.Persistence.Namespaces;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Processes one game turn. Stateless — all state lives in GameState.

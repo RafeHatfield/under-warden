@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Logic.Persistence.Namespaces;
 
-namespace CatacombsOfYarl.Logic.Endgame;
+namespace UnderWarden.Logic.Endgame;
 
 /// <summary>
 /// The audit. Deterministic scoring of Sasha's whole record into per-Guardian dispositions

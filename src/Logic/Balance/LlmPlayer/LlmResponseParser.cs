@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Logic.Balance.LlmPlayer;
+namespace UnderWarden.Logic.Balance.LlmPlayer;
 
 /// <summary>Deserialized response from the LLM player API call.</summary>
 public sealed class StructuredOutput

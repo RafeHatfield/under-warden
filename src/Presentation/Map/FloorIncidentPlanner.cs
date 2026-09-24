@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>Which part of the trodden channel a cell carries. ART-BIBLE-v0 §8.2.1.</summary>
 public enum ChannelKind

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Registry of named bot personas. Provides hardcoded defaults (matching the PoC verbatim)

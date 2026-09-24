@@ -233,7 +233,7 @@ Grinding a round against those would be re-opening a gate ruling on a seat's say
 ## 5. Reproducing
 
 ```bash
-dotnet build CatacombsOfYarl.Presentation.csproj
+dotnet build UnderWarden.Presentation.csproj
 /Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --import
 
 tools/tier1_floors/capture_combined.sh rerat_r1 1        # refuses if a declared point is wrong

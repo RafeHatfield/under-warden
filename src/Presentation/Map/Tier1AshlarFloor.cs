@@ -1,9 +1,9 @@
 using System.Text.Json;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Map;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// Lays the COURSE-ALIGNED ASHLAR floor and paints its stones.

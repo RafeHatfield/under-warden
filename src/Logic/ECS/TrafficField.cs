@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.Map;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// WHERE PEOPLE ACTUALLY WALK, derived from the level graph and never painted.

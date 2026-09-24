@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Creates GameState instances from scenario definitions. Single source of truth

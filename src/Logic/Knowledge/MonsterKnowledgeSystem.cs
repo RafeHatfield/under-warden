@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Knowledge;
+namespace UnderWarden.Logic.Knowledge;
 
 /// <summary>
 /// Tracks and exposes player knowledge about monster species for the inspect system.

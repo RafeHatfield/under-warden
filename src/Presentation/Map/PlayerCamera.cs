@@ -1,8 +1,8 @@
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Presentation.UI;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Presentation.UI;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// Controls how the camera follows the player.

@@ -1,12 +1,12 @@
 using System.IO;
 using System.Text.RegularExpressions;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Tests.Possession;
+namespace UnderWarden.Tests.Possession;
 
 /// <summary>
 /// Hollowmark voice batches 1a (revised) + 1b + 1c + 1d: hp_threshold, region_first_entry,

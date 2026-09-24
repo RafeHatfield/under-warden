@@ -1,4 +1,4 @@
-# Headless iOS build & install — Catacombs of YARL
+# Headless iOS build & install — The Under-Warden
 
 **Status:** working and verified end-to-end 2026-08-21. Debug build exported, signed, and
 installed onto Rafe's iPhone SE 3 with no GUI, no Xcode window, and no manual step.
@@ -20,7 +20,7 @@ The pipeline, in full:
 Godot mono --headless --export-debug  ->  xcodebuild  ->  verify the artefact  ->  xcrun devicectl install
 ```
 
-No `open CatacombsOfYarl.xcodeproj`. No clicking Run. No provisioning dialog. It is scriptable,
+No `open UnderWarden.xcodeproj`. No clicking Run. No provisioning dialog. It is scriptable,
 so it can run inside an agent task or a fix-and-verify loop without a human in the loop.
 
 ---
@@ -39,7 +39,7 @@ Side-by-side variants — installs **alongside** the main app instead of replaci
 you put two builds on the phone to compare them:
 
 ```bash
-tools/ios_build.sh --bundle-id com.rafehatfield.catacombsofyarl.probe --name "YARL Probe"
+tools/ios_build.sh --bundle-id com.rafehatfield.underwarden.probe --name "YARL Probe"
 ```
 
 Env overrides: `GODOT`, `DEVICE_ID`, `TEAM_ID`, `OUT`, `PRESET`.
@@ -67,7 +67,7 @@ Find the device id with `xcrun devicectl list devices`.
 
 ## The four steps, and why each is there
 
-**1. Export.** `Godot --headless --path TREE --export-debug "iOS" OUT/CatacombsOfYarl.xcodeproj`
+**1. Export.** `Godot --headless --path TREE --export-debug "iOS" OUT/UnderWarden.xcodeproj`
 Godot's iOS exporter emits an Xcode *project*, not an `.ipa` — that is the whole reason this is
 scriptable. The preset sets `application/export_project_only=true`, so Godot stops at the project
 and leaves the build to `xcodebuild`. For a C# project this step also shells out to
@@ -100,13 +100,13 @@ simulator, which does not exercise touch input, real screen size, or device perf
 installable app — that contains no C# code whatsoever. It installs. It launches. It shows nothing.
 
 Nothing in the console output tells you. The only signals are `ERROR: Export .NET Project` buried
-in `export.log`, and the absence of `CatacombsOfYarl.Presentation.framework` from the bundle's
+in `export.log`, and the absence of `UnderWarden.Presentation.framework` from the bundle's
 `Frameworks/` directory. The script now checks both and refuses to report success.
 
 **The cause, when it happened here:** `project.godot`'s `project/assembly_name` must be the
 **basename of the csproj**, because Godot resolves the C# project file as
-`<project_dir>/<assembly_name>.csproj`. Commit `3994acd` set it to `CatacombsOfYarl` while the
-project file is `CatacombsOfYarl.Presentation.csproj`. Godot looked for a file that does not exist,
+`<project_dir>/<assembly_name>.csproj`. Commit `3994acd` set it to `UnderWarden` while the
+project file is `UnderWarden.Presentation.csproj`. Godot looked for a file that does not exist,
 its publish failed, and every iOS export from that commit onward produced a C#-less app. The script
 preflights this before spending a build on it.
 

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Catacombs of YARL"
+config/name="The Under-Warden"
 run/main_scene="res://src/Presentation/Main.tscn"
 config/features=PackedStringArray("4.7", "C#", "Mobile")
 config/icon="res://icon.svg"
@@ -26,7 +26,7 @@ window/handheld/orientation=1
 
 [dotnet]
 
-project/assembly_name="CatacombsOfYarl.Presentation"
+project/assembly_name="UnderWarden.Presentation"
 
 [importer_defaults]
 
@@ -47,6 +47,6 @@ texture={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true

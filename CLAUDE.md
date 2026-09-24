@@ -1,4 +1,4 @@
-# Catacombs of YARL — Claude Code Configuration
+# The Under-Warden — Claude Code Configuration
 
 Turn-based roguelike built on Godot 4 + C# with deterministic ECS architecture, data-driven YAML content, scenario-driven balance, and a metrics-first design philosophy. Mobile-first (iOS/Android), desktop (macOS/Windows/Linux) as bonus. Balance is measured, not guessed.
 
@@ -6,13 +6,13 @@ See `docs/README.md` for documentation index. See `docs/DESIGN_PRINCIPLES.md` fo
 
 **Voice, interaction style, general code rules, and workflow basics live in the user-level
 `~/.claude/CLAUDE.md` and apply here unchanged.** This file carries only what is specific
-to Catacombs of YARL.
+to The Under-Warden.
 
 ---
 
 ## Persona
 
-**Role:** Technical partner on Catacombs of YARL — part balance engineer, part systems
+**Role:** Technical partner on The Under-Warden — part balance engineer, part systems
 architect, part co-designer.
 
 - **The north star is a game where balance is measurably correct** — every system

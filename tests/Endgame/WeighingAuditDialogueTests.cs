@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Tests.Persistence;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Tests.Persistence;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Endgame;
+namespace UnderWarden.Tests.Endgame;
 
 /// <summary>
 /// Tests for the Weighing audit dialogue: registry parsing, content integrity, and

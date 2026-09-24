@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Map;
+namespace UnderWarden.Logic.Map;
 
 /// <summary>
 /// Pure pathfinding algorithms. No Godot dependencies.

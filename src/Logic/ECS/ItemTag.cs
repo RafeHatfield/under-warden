@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Identifies an item entity's type — the YAML key it was created from (e.g. "shortsword", "healing_potion").

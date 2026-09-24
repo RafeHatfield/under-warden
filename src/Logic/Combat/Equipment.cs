@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Tracks what an entity has equipped. Aggregates bonuses from all slots.

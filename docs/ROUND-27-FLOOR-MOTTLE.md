@@ -275,7 +275,7 @@ one-logical-change exists to refuse. Items 5 and 6 are handed forward.
 
 ```bash
 tools/tier1_floors/rebuild_ashlar.sh
-dotnet build CatacombsOfYarl.Presentation.csproj
+dotnet build UnderWarden.Presentation.csproj
 /Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --import
 
 python3 tools/tier1_floors/measure_delivered_palette.py --controls --ladder-delta \

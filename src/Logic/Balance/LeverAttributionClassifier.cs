@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// The actionable tuning levers a too-hard death can implicate. One signal disambiguates one lever

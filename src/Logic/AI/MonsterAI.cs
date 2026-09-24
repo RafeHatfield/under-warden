@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.AI;
+namespace UnderWarden.Logic.AI;
 
 /// <summary>
 /// Dispatches monster AI decisions based on the monster's AiComponent.AiType.

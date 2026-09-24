@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Balance;
+using UnderWarden.Logic.Balance;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// OUTCOME-LEVEL tests for FloorHealthClassifier — the operational definition of "balanced".

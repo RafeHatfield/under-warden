@@ -232,7 +232,7 @@ Changes:
 - `SetState()` and `Refresh()` signatures unchanged — GameController not affected
 
 Notes:
-- `EquipmentSlot` is in `CatacombsOfYarl.Logic.Combat` — already imported, no new using needed
+- `EquipmentSlot` is in `UnderWarden.Logic.Combat` — already imported, no new using needed
 - The two pre-existing nullable warnings in `Main.cs` / `GameController.cs` are unchanged
 
 ---

@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Per-run identification state. Tracks which item types the player has identified this run.

@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Tracks momentum for bonus attacks. Each attack increments a counter.

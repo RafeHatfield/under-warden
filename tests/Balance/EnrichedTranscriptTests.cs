@@ -1,13 +1,13 @@
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Balance.Transcript;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Balance.Transcript;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Tests for the enriched LLM-testing transcript (Analyst/Player shared format).

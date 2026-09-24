@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.ECS;
+namespace UnderWarden.Tests.ECS;
 
 /// <summary>
 /// Tests for TileKind enum and GameMap extensions added in Phase 1 of the dungeon generation milestone.

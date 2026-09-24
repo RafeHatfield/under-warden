@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Combat;
+namespace UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Pure math for hit chance calculation. No state, no dependencies.

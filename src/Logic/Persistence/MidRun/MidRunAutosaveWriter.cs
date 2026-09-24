@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>
 /// Off-critical-path autosave for the mid-run file (M1.4 §File + write discipline). The caller

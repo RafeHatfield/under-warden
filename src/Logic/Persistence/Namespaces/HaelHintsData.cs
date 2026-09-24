@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace CatacombsOfYarl.Logic.Persistence.Namespaces;
+namespace UnderWarden.Logic.Persistence.Namespaces;
 
 public sealed class HaelHintsData
 {

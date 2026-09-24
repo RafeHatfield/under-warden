@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Combat;
+using UnderWarden.Logic.Combat;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Holds items an entity is carrying. Items are Entity instances with Consumable/Equippable components.

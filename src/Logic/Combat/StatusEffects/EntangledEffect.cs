@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat.StatusEffects;
+namespace UnderWarden.Logic.Combat.StatusEffects;
 
 /// <summary>
 /// Entity is entangled by roots — cannot move, but can still attack adjacent targets.

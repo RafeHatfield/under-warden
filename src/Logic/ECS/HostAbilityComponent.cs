@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Attached to monster entities that have species-specific abilities usable during possession.

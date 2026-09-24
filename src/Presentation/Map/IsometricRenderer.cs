@@ -1,6 +1,6 @@
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.Map;
+namespace UnderWarden.Presentation.Map;
 
 /// <summary>
 /// Isometric coordinate renderer. Wraps the math from IsometricMapper exactly —

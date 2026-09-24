@@ -1,7 +1,7 @@
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Logic.Balance.Etp;
+namespace UnderWarden.Logic.Balance.Etp;
 
 /// <summary>
 /// Loads etp_config.yaml into an EtpConfig instance.

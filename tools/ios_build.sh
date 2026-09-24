@@ -1,5 +1,5 @@
 #!/bin/bash
-# Catacombs of YARL — headless iOS build + install. No manual Xcode step, ever.
+# The Under-Warden — headless iOS build + install. No manual Xcode step, ever.
 #
 # Ported from Gemfall's tools/ios_build.sh (~/development/deathmatch, commit f2a15bc),
 # which proved the export -> xcodebuild -> devicectl chain runs fully unattended.
@@ -35,7 +35,7 @@ DEVICE_ID="${DEVICE_ID:-5DB969FF-269C-5A8A-86EB-99EC9FF22397}"   # Rafe's iPhone
 TEAM_ID="${TEAM_ID:-S2WHBSKV97}"
 PRESET="${PRESET:-iOS}"
 OUT="${OUT:-$ROOT/.ios-build}"
-XCPROJ_NAME="CatacombsOfYarl"
+XCPROJ_NAME="UnderWarden"
 
 while [ $# -gt 0 ]; do
 	case "$1" in
@@ -60,7 +60,7 @@ warn() { echo "WARN: $*" >&2; }
 
 [ -x "$GODOT" ] || fail "Godot not at $GODOT (override with GODOT=...)"
 
-# C#-SPECIFIC. Catacombs of YARL is a .NET project; the standard Godot build has no
+# C#-SPECIFIC. The Under-Warden is a .NET project; the standard Godot build has no
 # C# support and fails on it in ways that do not name the cause. /Applications holds
 # both Godot.app and Godot_mono.app here, so picking the wrong one is one typo away.
 GODOT_VERSION="$("$GODOT" --version 2>/dev/null | tail -1)"

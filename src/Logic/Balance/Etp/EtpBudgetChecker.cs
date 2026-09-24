@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance.Etp;
+namespace UnderWarden.Logic.Balance.Etp;
 
 /// <summary>
 /// Room and floor ETP budget validation.

@@ -2,14 +2,14 @@ using GdUnit4;
 using Godot;
 using static GdUnit4.Assertions;
 
-namespace CatacombsOfYarl.Integration;
+namespace UnderWarden.Integration;
 
-using CatacombsOfYarl.Presentation.Animation;
-using CatacombsOfYarl.Presentation.Entities;
-using CatacombsOfYarl.Presentation.UI;
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Combat;
+using UnderWarden.Presentation.Animation;
+using UnderWarden.Presentation.Entities;
+using UnderWarden.Presentation.UI;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Combat;
 
 /// <summary>
 /// Integration tests for TurnAnimator tween lifecycle.
@@ -31,7 +31,7 @@ public class TweenCompletionTests
         var runner = ISceneRunner.Load(root, true);
         await runner.SimulateFrames(2);
 
-        var entitySprites = new EntitySpriteManager(entityLayer, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var entitySprites = new EntitySpriteManager(entityLayer, new UnderWarden.Presentation.Map.IsometricRenderer());
         var animator = new TurnAnimator(root, entitySprites);
 
         bool animComplete = false;
@@ -64,7 +64,7 @@ public class TweenCompletionTests
         var runner = ISceneRunner.Load(root, true);
         await runner.SimulateFrames(2);
 
-        var entitySprites = new EntitySpriteManager(entityLayer, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var entitySprites = new EntitySpriteManager(entityLayer, new UnderWarden.Presentation.Map.IsometricRenderer());
         var animator = new TurnAnimator(root, entitySprites);
 
         bool animComplete = false;
@@ -111,7 +111,7 @@ public class TweenCompletionTests
         var runner = ISceneRunner.Load(root, true);
         await runner.SimulateFrames(2);
 
-        var entitySprites = new EntitySpriteManager(entityLayer, new CatacombsOfYarl.Presentation.Map.IsometricRenderer());
+        var entitySprites = new EntitySpriteManager(entityLayer, new UnderWarden.Presentation.Map.IsometricRenderer());
         var animator = new TurnAnimator(root, entitySprites);
 
         int startCount = TweenTracker.ActiveCount;

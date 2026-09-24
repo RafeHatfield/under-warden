@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Content;
+namespace UnderWarden.Tests.Content;
 
 [TestFixture]
 public class ContentLoaderTests
@@ -253,16 +253,16 @@ public class ConsumableFactoryPotionTests
             color: [255, 80, 0]
         """;
 
-    private Dictionary<string, CatacombsOfYarl.Logic.Content.ConsumableDefinition> _defs = null!;
-    private CatacombsOfYarl.Logic.Content.ConsumableFactory _factory = null!;
+    private Dictionary<string, UnderWarden.Logic.Content.ConsumableDefinition> _defs = null!;
+    private UnderWarden.Logic.Content.ConsumableFactory _factory = null!;
 
     [OneTimeSetUp]
     public void Setup()
     {
-        var loader = new CatacombsOfYarl.Logic.Content.ContentLoader();
+        var loader = new UnderWarden.Logic.Content.ContentLoader();
         _defs = loader.LoadConsumables(PotionYaml);
-        _factory = new CatacombsOfYarl.Logic.Content.ConsumableFactory(
-            _defs, new CatacombsOfYarl.Logic.ECS.EntityFactory());
+        _factory = new UnderWarden.Logic.Content.ConsumableFactory(
+            _defs, new UnderWarden.Logic.ECS.EntityFactory());
     }
 
     [Test]
@@ -291,7 +291,7 @@ public class ConsumableFactoryPotionTests
     public void ConsumableFactory_CreatesSpellEffect_WhenSpellIdPresent()
     {
         var entity = _factory.Create("potion_of_speed")!;
-        var spell = entity.Get<CatacombsOfYarl.Logic.Combat.SpellEffect>();
+        var spell = entity.Get<UnderWarden.Logic.Combat.SpellEffect>();
         Assert.That(spell, Is.Not.Null, "SpellEffect should be created when spell_id is present.");
         Assert.That(spell!.SpellId, Is.EqualTo("haste"));
     }
@@ -300,7 +300,7 @@ public class ConsumableFactoryPotionTests
     public void ConsumableFactory_SetsIsPotion_FromDefinition()
     {
         var entity = _factory.Create("potion_of_speed")!;
-        var consumable = entity.Get<CatacombsOfYarl.Logic.Combat.Consumable>();
+        var consumable = entity.Get<UnderWarden.Logic.Combat.Consumable>();
         Assert.That(consumable, Is.Not.Null);
         Assert.That(consumable!.IsPotion, Is.True, "Consumable.IsPotion should be true for potions.");
     }
@@ -309,7 +309,7 @@ public class ConsumableFactoryPotionTests
     public void ConsumableFactory_SetsThrowSpellId_WhenPresent()
     {
         var entity = _factory.Create("potion_of_weakness")!;
-        var spell = entity.Get<CatacombsOfYarl.Logic.Combat.SpellEffect>();
+        var spell = entity.Get<UnderWarden.Logic.Combat.SpellEffect>();
         Assert.That(spell, Is.Not.Null);
         Assert.That(spell!.ThrowSpellId, Is.EqualTo("throw_weakness"),
             "SpellEffect.ThrowSpellId should be set from throw_spell_id YAML field.");
@@ -320,7 +320,7 @@ public class ConsumableFactoryPotionTests
     {
         // healing_potion has no spell_id — no SpellEffect should be created.
         var entity = _factory.Create("healing_potion")!;
-        Assert.That(entity.Get<CatacombsOfYarl.Logic.Combat.SpellEffect>(), Is.Null,
+        Assert.That(entity.Get<UnderWarden.Logic.Combat.SpellEffect>(), Is.Null,
             "healing_potion should NOT have SpellEffect — it uses the legacy heal path.");
     }
 
@@ -328,9 +328,9 @@ public class ConsumableFactoryPotionTests
     public void ConsumableFactory_FirePotion_HasSingleTargetMode()
     {
         var entity = _factory.Create("fire_potion")!;
-        var spell = entity.Get<CatacombsOfYarl.Logic.Combat.SpellEffect>();
+        var spell = entity.Get<UnderWarden.Logic.Combat.SpellEffect>();
         Assert.That(spell, Is.Not.Null);
-        Assert.That(spell!.Targeting, Is.EqualTo(CatacombsOfYarl.Logic.Combat.TargetingMode.SingleTarget),
+        Assert.That(spell!.Targeting, Is.EqualTo(UnderWarden.Logic.Combat.TargetingMode.SingleTarget),
             "Fire potion is throw-only and should have SingleTarget targeting.");
         Assert.That(spell.ThrowSpellId, Is.Null,
             "Fire potion is a direct single_target spell, not a throw_spell_id bifurcation.");
@@ -349,7 +349,7 @@ public class ConsumableFactoryPotionTests
             entitiesPath = System.IO.Path.GetFullPath(
                 System.IO.Path.Combine(testDir, "config", "entities.yaml"));
 
-        var loader = new CatacombsOfYarl.Logic.Content.ContentLoader();
+        var loader = new UnderWarden.Logic.Content.ContentLoader();
         var bundle = loader.LoadAllFromFile(entitiesPath);
         var defs = bundle.Consumables;
 

@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Combat;
+using UnderWarden.Logic.Combat;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Combat;
+namespace UnderWarden.Tests.Combat;
 
 [TestFixture]
 public class HitModelTests

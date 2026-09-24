@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Pure delta + verdict logic for soak-vs-baseline comparison. Soak analogue of BalanceSuiteEvaluator:

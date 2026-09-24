@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat.StatusEffects;
+namespace UnderWarden.Logic.Combat.StatusEffects;
 
 /// <summary>
 /// Entity is on fire — takes 3 damage per turn for 5 turns.

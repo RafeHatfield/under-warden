@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Content;
+namespace UnderWarden.Logic.Content;
 
 /// <summary>
 /// Whether the memo is addressed directly to Sasha ("direct") or is an internal note

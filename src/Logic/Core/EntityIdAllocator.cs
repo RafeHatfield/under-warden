@@ -1,4 +1,4 @@
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Simple auto-incrementing ID source for dungeon generation.

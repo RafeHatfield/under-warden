@@ -14,7 +14,7 @@
 
 - [x] **NativeAOT trimming preservation** — created `src/Logic/NativeAOT.rd.xml` preserving all 20 YAML-mapped types. Referenced from Logic.csproj via `<TrimmerRootDescriptor>`. This tells the NativeAOT trimmer to keep reflection metadata for all YAML deserialization targets.
 - [x] **Fix Dictionary<string, object> stubs** — replaced with `Dictionary<string, string>` in LevelOverride.cs and SpecialRoomDef.cs. `object` type is incompatible with NativeAOT (trimmer can't determine concrete types).
-- [x] **Create iOS export preset** — `export_presets.cfg` with bundle ID `com.rafehatfield.catacombsofyarl`, arm64 architecture. Team ID is PLACEHOLDER — will update when Rafe provides it.
+- [x] **Create iOS export preset** — `export_presets.cfg` with bundle ID `com.rafehatfield.underwarden`, arm64 architecture. Team ID is PLACEHOLDER — will update when Rafe provides it.
 - [x] **Audit [Export] + Resource usage** — zero `[Export]` attributes in the codebase. Clean.
 - [x] **Export path** — recommended path `~/Desktop/yarl-ios/` has no spaces. Project internal paths are fine.
 

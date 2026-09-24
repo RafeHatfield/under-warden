@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Generates a multi-section human-readable text report from a DungeonSoakSummary.

@@ -1,9 +1,9 @@
-using CatacombsOfYarl.Logic.Core;
-using CatacombsOfYarl.Logic.Map;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.Core;
+using UnderWarden.Logic.Map;
+using UnderWarden.Logic.ECS;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Logic;
+namespace UnderWarden.Tests.Logic;
 
 /// <summary>
 /// A REVIEW SCENE THAT CANNOT EXERCISE THE SYSTEM IT IS USED TO REVIEW.

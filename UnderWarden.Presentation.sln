@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatacombsOfYarl.Presentation", "CatacombsOfYarl.Presentation.csproj", "{409CE8FD-1312-4F6F-91B2-322A10C62C6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderWarden.Presentation", "UnderWarden.Presentation.csproj", "{409CE8FD-1312-4F6F-91B2-322A10C62C6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{071D85AD-2C17-4764-9A7E-86E79432B61E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatacombsOfYarl.Logic", "src\Logic\CatacombsOfYarl.Logic.csproj", "{F426389D-B80B-47B4-A433-4E9590186925}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderWarden.Logic", "src\Logic\UnderWarden.Logic.csproj", "{F426389D-B80B-47B4-A433-4E9590186925}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

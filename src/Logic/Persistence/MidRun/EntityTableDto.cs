@@ -1,7 +1,7 @@
 using System.Text.Json;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>
 /// Flat, reference-resolved serialization of an entity graph (mid-run save, M1.4 §Entity-table).

@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Combat.StatusEffects;
+namespace UnderWarden.Logic.Combat.StatusEffects;
 
 /// <summary>
 /// Entity has been rallied by an Orc Chieftain — gains a bonus to attack accuracy and damage.

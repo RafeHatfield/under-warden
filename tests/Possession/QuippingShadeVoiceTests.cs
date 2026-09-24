@@ -1,11 +1,11 @@
 using System.IO;
 using System.Text.RegularExpressions;
-using CatacombsOfYarl.Logic.Content;
+using UnderWarden.Logic.Content;
 using NUnit.Framework;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace CatacombsOfYarl.Tests.Possession;
+namespace UnderWarden.Tests.Possession;
 
 /// <summary>
 /// Quipping shade voice deepening: the dead past-Sasha that narrates its own self-inflicted

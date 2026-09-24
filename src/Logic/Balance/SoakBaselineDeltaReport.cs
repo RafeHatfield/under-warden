@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace CatacombsOfYarl.Logic.Balance;
+namespace UnderWarden.Logic.Balance;
 
 /// <summary>
 /// Renders the "Soak Delta vs Baseline" section: per-depth death-rate / turns / kills drift of the

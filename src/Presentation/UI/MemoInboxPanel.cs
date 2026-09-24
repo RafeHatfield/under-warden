@@ -1,10 +1,10 @@
 using System.Text.RegularExpressions;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.Persistence;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.Persistence;
+using UnderWarden.Logic.Persistence.Namespaces;
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Full-screen overlay that presents Under-Warden pending memos to the player.

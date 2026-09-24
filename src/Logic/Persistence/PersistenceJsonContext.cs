@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
-using CatacombsOfYarl.Logic.Persistence.Namespaces;
+using UnderWarden.Logic.Persistence.Namespaces;
 
-namespace CatacombsOfYarl.Logic.Persistence;
+namespace UnderWarden.Logic.Persistence;
 
 /// <summary>
 /// Source-generated JSON serialization context. Required for iOS NativeAOT with

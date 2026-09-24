@@ -1,8 +1,8 @@
 using System.Text.Json.Nodes;
-using CatacombsOfYarl.Analyst;
+using UnderWarden.Analyst;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Balance;
+namespace UnderWarden.Tests.Balance;
 
 /// <summary>
 /// Acceptance-gate tests for the Analyst BugDetector (Phase 2, predicate mechanism).

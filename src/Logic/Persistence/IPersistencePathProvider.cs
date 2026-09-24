@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace CatacombsOfYarl.Logic.Persistence;
+namespace UnderWarden.Logic.Persistence;
 
 public interface IPersistencePathProvider
 {

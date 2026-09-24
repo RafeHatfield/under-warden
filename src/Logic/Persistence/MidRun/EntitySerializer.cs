@@ -1,7 +1,7 @@
 using System.Text.Json;
-using CatacombsOfYarl.Logic.ECS;
+using UnderWarden.Logic.ECS;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>
 /// Serializes an entity graph to a flat, reference-resolved <see cref="EntityTableDto"/> and back

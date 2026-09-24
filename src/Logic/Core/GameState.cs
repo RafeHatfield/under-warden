@@ -1,13 +1,13 @@
-using CatacombsOfYarl.Logic.Balance;
-using CatacombsOfYarl.Logic.Combat;
-using CatacombsOfYarl.Logic.Content;
-using CatacombsOfYarl.Logic.ECS;
-using CatacombsOfYarl.Logic.Endgame;
-using CatacombsOfYarl.Logic.Knowledge;
-using CatacombsOfYarl.Logic.Map;
-using CatacombsOfYarl.Logic.Persistence;
+using UnderWarden.Logic.Balance;
+using UnderWarden.Logic.Combat;
+using UnderWarden.Logic.Content;
+using UnderWarden.Logic.ECS;
+using UnderWarden.Logic.Endgame;
+using UnderWarden.Logic.Knowledge;
+using UnderWarden.Logic.Map;
+using UnderWarden.Logic.Persistence;
 
-namespace CatacombsOfYarl.Logic.Core;
+namespace UnderWarden.Logic.Core;
 
 /// <summary>
 /// Mutable game state. Holds everything needed to process a turn.
@@ -168,7 +168,7 @@ public sealed class GameState
     /// Null in scenario/harness mode. Used by ETP sanity analysis to correlate
     /// monster positions to rooms.
     /// </summary>
-    public IReadOnlyList<CatacombsOfYarl.Logic.ECS.Room>? Rooms { get; init; }
+    public IReadOnlyList<UnderWarden.Logic.ECS.Room>? Rooms { get; init; }
 
     // ── Cross-run persistence ────────────────────────────────────────────────
 

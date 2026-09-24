@@ -2,7 +2,7 @@
 
 _Last verified: 2026-07-12 against commit 86b6f10_
 
-**Status:** Primary visual and UX reference for Catacombs of YARL. The closest existing game to the vision.
+**Status:** Primary visual and UX reference for The Under-Warden. The closest existing game to the vision.
 
 Screenshots: `docs/IMG_1444.PNG`, `docs/IMG_1445.PNG`
 
@@ -105,7 +105,7 @@ Isometric turn-based roguelike dungeon crawler. Built by **Colin Day** (Spellbin
 
 ---
 
-## Relevance to Catacombs of YARL
+## Relevance to The Under-Warden
 
 This game validates that isometric turn-based roguelikes work on mobile. It also demonstrates the primary risk: touch targeting in iso view. The loot system philosophy aligns directly with our gear-over-boons design. The dual-mode structure (story + permadeath) is worth considering.
 

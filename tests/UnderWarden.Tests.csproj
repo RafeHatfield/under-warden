@@ -7,7 +7,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-    <RootNamespace>CatacombsOfYarl.Tests</RootNamespace>
+    <RootNamespace>UnderWarden.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Logic\CatacombsOfYarl.Logic.csproj" />
+    <ProjectReference Include="..\src\Logic\UnderWarden.Logic.csproj" />
     <ProjectReference Include="..\tools\Analyst\Analyst.csproj" />
   </ItemGroup>
 

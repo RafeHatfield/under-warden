@@ -1,7 +1,7 @@
 using System.Text;
 using System.Text.Json;
 
-namespace CatacombsOfYarl.Logic.Persistence.MidRun;
+namespace UnderWarden.Logic.Persistence.MidRun;
 
 /// <summary>Outcome of loading a mid-run save file. A truncated/garbage/version-mismatched file
 /// fails to a defined status — never a silent new-game, never an unhandled crash. The caller (4b)

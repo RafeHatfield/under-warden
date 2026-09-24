@@ -1,6 +1,6 @@
 using Godot;
 
-namespace CatacombsOfYarl.Presentation.UI;
+namespace UnderWarden.Presentation.UI;
 
 /// <summary>
 /// Debug-only sprite browser for index-based tilesets (e.g. Oryx 16-bit Fantasy).

@@ -1,6 +1,6 @@
-using CatacombsOfYarl.Logic.Core;
+using UnderWarden.Logic.Core;
 
-namespace CatacombsOfYarl.Logic.ECS;
+namespace UnderWarden.Logic.ECS;
 
 /// <summary>
 /// Selects and carves non-rectangular room shapes into a GameMap.

@@ -1,7 +1,7 @@
-using CatacombsOfYarl.Logic.Map;
+using UnderWarden.Logic.Map;
 using NUnit.Framework;
 
-namespace CatacombsOfYarl.Tests.Logic;
+namespace UnderWarden.Tests.Logic;
 
 /// <summary>
 /// ART-BIBLE-v0 §3, asserted as arithmetic: a wall tile shows a front face exactly where floor

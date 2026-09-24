@@ -42,5 +42,5 @@ python3 tools/tier1_floors/probe_stone_address.py | grep -E "UNADDRESSABLE|VERDI
 
 echo
 echo "Next, from the repo root and NOT from src/Presentation:"
-echo "  dotnet build CatacombsOfYarl.Presentation.csproj"
+echo "  dotnet build UnderWarden.Presentation.csproj"
 echo "  /Applications/Godot_mono.app/Contents/MacOS/Godot --headless --path . --import"
