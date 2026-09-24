@@ -135,6 +135,38 @@ def tiltbox(cx, cz, length, width, thick, angle_deg, cd=0.0, part="body"):
     return out
 
 
+def stake(foot, tip, width, point=0.0, part="body"):
+    """A square-section member from `foot` to `tip` (world points), for members that lean in
+    DEPTH as well as in x-z, which tiltbox cannot. Built exactly as tiltbox is — the canonical
+    box mapped through an orthonormal frame with e_x along the member, e_d the world depth axis
+    made perpendicular to it, and e_z = e_x × e_d — so the winding, and with it the back-face
+    cull, is the one every other primitive has. `point` > 0 sharpens the tip: the last `point`
+    units taper in two steps (0.6, then 0.3 of the width), a stepped point a template can carry
+    at native 32 px where a true pyramid would round to one pixel."""
+    f = np.array(foot, float)
+    t = np.array(tip, float)
+    ax = t - f
+    length = float(np.linalg.norm(ax))
+    ex = ax / length
+    dv = np.array([0.0, 1.0, 0.0])
+    ed = dv - np.dot(dv, ex) * ex
+    ed = ed / np.linalg.norm(ed)
+    ez = np.cross(ex, ed)
+
+    def seg(s0, s1, w, prt):
+        out = []
+        for pts, kind, p in box(s0, s1, -w / 2, w / 2, -w / 2, w / 2, prt):
+            out.append(([tuple(f + x * ex + d * ed + z * ez) for x, d, z in pts], kind, p))
+        return out
+
+    if point <= 0:
+        return seg(0, length, width, part)
+    body = length - point
+    return (seg(0, body, width, part)
+            + seg(body, body + point * 0.55, width * 0.6, part)
+            + seg(body + point * 0.55, length, width * 0.3, part))
+
+
 def round_exception(cand):
     """§3.2's round exception (Rafe, 2026-09-12): a cylinder has no front face to keep true and
     oblique makes its ends oblong, so round objects keep a TRUE-CIRCLE top and a VERTICAL body.
@@ -268,6 +300,44 @@ def model(name):
             f += tiltbox(0, 10, 108, W_ - 1, T - 2, 1, cd=7, part="wood")
             for rx in (-48, 48):
                 f += box(rx - 5, rx + 5, -W_ / 2 - 3.5, -W_ / 2 - 1.5, 6, 14, "wood_dark")
+        return f
+    if name == "barricade_c3":
+        # #207 R2 — FUNCTION (Claude under delegation, Rafe to overturn, 2026-09-23). The walk
+        # passed c2 as wood and as built and failed it as a barrier: "looks good but I'm not sure
+        # what it is meant to be doing." Every c2 seat said "sawhorse / trestle": the horizontal
+        # bar between the feet is the sawhorse read. RULED: remove it. Keep c2's standing crossed
+        # stakes with planted feet, each crossing taller than wide; span the gap edge to edge
+        # (wall end at the west, pillar at the east); sharpen the tips and lean them toward the
+        # deeper side of the gap — SOUTH, the unlit outside past both lights, away from the orcs'
+        # fire in the north half of the room. South is -d (toward the viewer).
+        #
+        # Without the bar, one crossing that is taller than wide cannot span two cells, so the
+        # span is carried by THREE crossings in a row — the same stake, the same lashing, three
+        # times — which is what a line of stakes across a gap is.
+        L, W_ = 60, 9                          # c2's stake, a little shorter to leave room for the point
+        ang = 70                               # in x-z from the floor: each crossing clearly taller than wide
+        lean = 14                              # degrees toward -d (south): the tips point away from the fire
+        point = 14
+        import math as _m
+        rise = L * _m.sin(_m.radians(ang))
+        dx = L * _m.cos(_m.radians(ang))       # foot-to-tip run in x
+        z_top = rise * _m.cos(_m.radians(lean))
+        d_top = -rise * _m.sin(_m.radians(lean))
+        d_foot = 4.0                           # feet planted a little north of the front, so the lean reads
+        f = []
+        for ux in (-46, 0, 46):
+            fa, fb = (ux - dx / 2, d_foot, 0.0), (ux + dx / 2, d_foot, 0.0)
+            ta, tb = (ux + dx / 2, d_foot + d_top, z_top), (ux - dx / 2, d_foot + d_top, z_top)
+            f += stake(fa, ta, W_, point, "wood")                      # rises right
+            f += stake(fb, tb, W_, point, "wood_dark")                 # rises left, the front member
+            # PLANTED FEET: the ground contact a lying member never has (c2's stub, kept)
+            for fx in (fa[0], fb[0]):
+                f += box(fx - 5, fx + 5, d_foot - W_ / 2 - 1, d_foot + W_ / 2 + 1, 0, 4, "wood_dark")
+            # the crossing, lashed — wood-dark (the binding slot is #208-blocked, palette lock fenced)
+            cz = z_top / 2
+            cd = d_foot + d_top / 2
+            f += box(ux - 4, ux + 4, cd - W_ / 2 - 3.0, cd - W_ / 2 - 1.5, cz - 4, cz + 4, "wood_dark")
+            f += box(ux - 4, ux + 4, cd - W_ / 2 - 1.5, cd + W_ / 2 + 5.0, cz + 4, cz + 5.5, "wood_dark")
         return f
     if name == "fire_ring":
         # the round exception: a ring of stones, true circle in plan, short vertical bodies.

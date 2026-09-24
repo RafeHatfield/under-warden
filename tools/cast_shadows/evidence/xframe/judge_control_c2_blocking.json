@@ -1,0 +1,47 @@
+{
+ "subject": "barricade_blocking",
+ "box": [
+  170.0,
+  720.0,
+  330.0,
+  820.0
+ ],
+ "seats": 5,
+ "named": 0,
+ "verdict": "FAIL",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "REFUSED",
+   "phrase": "wooden x-shaped trestle or sawhorse"
+  },
+  {
+   "seat": 2,
+   "verdict": "REFUSED",
+   "phrase": "wooden x-frame, probably a sawhorse or trestle"
+  },
+  {
+   "seat": 3,
+   "verdict": "REFUSED",
+   "phrase": "wooden x-frame sawhorse"
+  },
+  {
+   "seat": 4,
+   "verdict": "REFUSED",
+   "phrase": "wooden sawhorse (crossed legs holding a plank)"
+  },
+  {
+   "seat": 5,
+   "verdict": "REFUSED",
+   "phrase": "wooden x-shaped trestle or barricade with a plank across it"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: wooden A-frame structure, maybe a sawhorse or small tent frame\nWHERE: 625,525\nSURE: GUESSING\n\nOBJECT: round red-and-orange glowing object, possibly a fire pit or brazier\nWHERE: 600,635\nSURE: GUESSING\n\nOBJECT: stone post or pillar\nWHERE: 278,675\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped trestle or sawhorse\nWHERE: 250,770\nSURE: PROBABLY\n\nOBJECT: an object I cannot identify (small dark box-like shape, possibly a crate or chest)\nWHERE: 340,775\nSURE: GUESSING\n\nCOUNT: 5\n",
+  "OBJECT: wooden A-frame, possibly a sawhorse or trestle\nWHERE: 628,525\nSURE: PROBABLY\n\nOBJECT: round red-and-orange glowing object, possibly a brazier or fire pit\nWHERE: 600,635\nSURE: GUESSING\n\nOBJECT: short stone pillar or post\nWHERE: 278,675\nSURE: PROBABLY\n\nOBJECT: wooden X-frame, probably a sawhorse or trestle\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: an object I cannot identify (a dark box-shaped block)\nWHERE: 345,770\nSURE: GUESSING\n\nCOUNT: 5\n",
+  "OBJECT: wooden A-frame, maybe a sawhorse or a trestle\nWHERE: 630,525\nSURE: PROBABLY\n\nOBJECT: fire in a round pit or brazier\nWHERE: 600,635\nSURE: PROBABLY\n\nOBJECT: tall pale stone post or pillar\nWHERE: 278,672\nSURE: PROBABLY\n\nOBJECT: wooden X-frame sawhorse\nWHERE: 245,765\nSURE: PROBABLY\n\nOBJECT: small item that may be a key\nWHERE: 367,567\nSURE: GUESSING\n\nOBJECT: dark square block, possibly a crate\nWHERE: 345,770\nSURE: GUESSING\n\nCOUNT: 6\n",
+  "OBJECT: wooden A-frame stand, maybe a sawhorse or small tent frame\nWHERE: 630,525\nSURE: PROBABLY\n\nOBJECT: wooden sawhorse (crossed legs holding a plank)\nWHERE: 245,765\nSURE: PROBABLY\n\nOBJECT: stone post or short pillar\nWHERE: 278,670\nSURE: PROBABLY\n\nOBJECT: small fire, maybe a campfire or fire pit\nWHERE: 600,635\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: wooden A-frame, maybe a sawhorse or a broken wooden trestle\nWHERE: 630,525\nSURE: GUESSING\n\nOBJECT: small fire, like a brazier or campfire, glowing orange-red\nWHERE: 600,635\nSURE: PROBABLY\n\nOBJECT: short stone pillar or post standing on a small wooden base\nWHERE: 278,675\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped trestle or barricade with a plank across it\nWHERE: 250,770\nSURE: PROBABLY\n\nCOUNT: 4\n"
+ ]
+}
