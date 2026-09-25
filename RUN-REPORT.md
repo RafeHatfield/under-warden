@@ -493,5 +493,8 @@ window, and the brief's own under-scale plant is the only Λ in it. Four options
   dark parallelogram.**
 - Verdict committed before the build (`443b4a39`); build identity `commit=443b4a39` — **clean, no
   +dirty**; GATE OPEN; installed to the SE as `com.rafehatfield.underwarden.tier0`.
+- **VERIFIED ON DEVICE** — handset: `commit=443b4a39 review=GATED app=The Under-Warden`, booted
+  `tier1_props_review`, rig live, occluders 216+3, fire 1, softness 12, flicker on, `east_faces=5`,
+  first window 56.7 fps at render_cpu 1.46 ms. Logs: `tools/cast_shadows/evidence/deliverable-r2/`.
 
 **Walk order: X-frame (the Λ is unchanged — R1 awaits the ruling).**

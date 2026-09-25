@@ -1,0 +1,129 @@
+[DIAG 00000 F0 T4.333] === Session started ===
+[DIAG 00001 F0 T5.330] [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
+[DIAG 00002 F0 T5.334] [Tier1] BUILD IDENTITY: commit=443b4a390d1c5a48c2e42e88af5fdc5ece07c6fe built=2026-09-25T19:02:11Z review=GATED app=The Under-Warden
+[DIAG 00003 F0 T5.334] [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
+[DIAG 00004 F0 T5.334] [Tier0] map=17x21 player=(6,12) carve_rects=7
+[DIAG 00005 F0 T5.334] [Tier0] junction=NO
+[DIAG 00006 F0 T5.334] [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
+[DIAG 00007 F0 T5.334] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
+[DIAG 00008 F0 T5.334] [Tier0] grid map: centre00=(8,-217.5) pitch=(64,64) view=(0,90)...(720,947)
+[DIAG 00009 F0 T5.335] [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
+[DIAG 00010 F0 T5.343] [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
+[Tier1] channel map (L/M/R channel, F trodden chokepoint, x neglected, . floor, # solid)
+[Tier1]   #################
+[Tier1]   #################
+[Tier1]   ###xx.......xx###
+[Tier1]   ###xx.......xx###
+[Tier1]   ###xx..LMR..xx###
+[Tier1]   ###xx..LMR..xx###
+[Tier1]   ########F########
+[Tier1]   ########F########
+[Tier1]   ########F########
+[Tier1]   ########F########
+[Tier1]   ########F########
+[Tier1]   ########F########
+[Tier1]   ###xx..LM##..x###
+[Tier1]   ###x#..LM#...x###
+[Tier1]   ###x#..LMMR..x###
+[Tier1]   ######..LMR..x###
+[Tier1]   #xxxx...LMR..x###
+[Tier1]   #xxxxx.......x###
+[Tier1]   ###xxx.......x###
+[Tier1]   ###xxxxxxxxxxx###
+[Tier1]   #################
+[DIAG 00011 F0 T5.343] [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
+[DIAG 00012 F0 T7.656] [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
+[Tier1] traffic field (space=unwalked .. @=busiest)
+[Tier1]   #################
+[Tier1]   #################
+[Tier1]   ###----::::::.###
+[Tier1]   ###-=====---:.###
+[Tier1]   ###-=++++==-:.###
+[Tier1]   ###:-=++++=-:.###
+[Tier1]   ########+########
+[Tier1]   ########+########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ########=########
+[Tier1]   ###.:=+++##:..###
+[Tier1]   ###:#****#--:.###
+[Tier1]   ###=#%%#*+--::###
+[Tier1]   ######%%*=--::###
+[Tier1]   #:-+#%%#*=--:.###
+[Tier1]   #:-+###*+--::.###
+[Tier1]   ###=+++=-:::..###
+[Tier1]   ###--==--::...###
+[Tier1]   #################
+[Tier1] travel axis (- E-W  / NE-SW  | N-S  \ NW-SE  . none)
+[Tier1]   #################
+[Tier1]   #################
+[Tier1]   ###////.......###
+[Tier1]   ###/////......###
+[Tier1]   ###.////......###
+[Tier1]   ###...//|.....###
+[Tier1]   ########|########
+[Tier1]   ########|########
+[Tier1]   ########|########
+[Tier1]   ########|########
+[Tier1]   ########|########
+[Tier1]   ########\########
+[Tier1]   ###..\\\\##...###
+[Tier1]   ###.#||\.#....###
+[Tier1]   ###.#\\.......###
+[Tier1]   ######\.......###
+[Tier1]   #----\\.......###
+[Tier1]   #.--..........###
+[Tier1]   ###...........###
+[Tier1]   ###...........###
+[Tier1]   #################
+[Tier1] route strength (space=off-route .. @=on the line)
+[Tier1]   #################
+[Tier1]   #################
+[Tier1]   ###*@=        ###
+[Tier1]   ###.*@-       ###
+[Tier1]   ###  *@-      ###
+[Tier1]   ###   +@-     ###
+[Tier1]   #################
+[Tier1]   #################
+[Tier1]   ########*########
+[Tier1]   ########%########
+[Tier1]   ########*########
+[Tier1]   ########=########
+[Tier1]   ###  -%= ##   ###
+[Tier1]   ### #*#. #    ###
+[Tier1]   ### ##*       ###
+[Tier1]   ######+       ###
+[Tier1]   #=%%*=        ###
+[Tier1]   #             ###
+[Tier1]   ###           ###
+[Tier1]   ###           ###
+[Tier1]   #################
+[Tier1] axis coherence: 42 of 50 adjacent on-route pairs agree (84%) - round 21 measured 34% on the per-tile field
+[DIAG 00013 F0 T7.724] [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
+[Tier1]   .................
+[Tier1]   ...11111111100...
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   ...01122.21100...
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .11..3...........
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[Tier1]   .................
+[DIAG 00014 F0 T7.725] [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) east_faces=5(ground-mask) age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
+[DIAG 00015 F0 T7.732] [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
+[DIAG 00016 F0 T7.733] [Tier0] review_build_marker=res://src/Presentation/assets/tier0_harness/REVIEW_BUILD.json
+[DIAG 00017 F0 T7.734] [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
+[DIAG 00018 F239 T13.321] [Perf] window=240 mean_ms=17.64 p95_ms=16.67 max_ms=150.00 fps=56.7 render_cpu_ms=1.46 cpu_headroom_ms=15.21 render_gpu_ms=NO-INSTRUMENT (radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(all) softness=12 darkness=0.8 fire_lights=1 fire_energy=1.6 fire_radius=4 fire_tint=ff8a3c flicker=on)
