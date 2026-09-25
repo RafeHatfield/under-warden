@@ -505,6 +505,25 @@
    "verbatim": "The morgue lacks a grounding cull the seats can see. Draw one: lambda-in-the-face — the same Λ with its feet 16 px up the face, no foot line between the legs. That is the failure at a scale a seat catches.",
    "defect": "THE Λ-FRAME HANGS IN THE WALL. Its feet are up the face with no floor under them and no foot line between the legs — the coarse version of the 12-px failure Rafe caught by eye on the walked build. This is the GROUNDING plant: everything else in the frame is the built law's, so a round judged on grounding cannot pass by fixing anything else. Ruling 47: proves it can be caught before its round counts (self-test lane).",
    "provenance": "the built law's own frame with one placement wrong; lambda-on-the-cap (retired) is the fine version of the same cull"
+  },
+  {
+   "file": "lambda-against-wall.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "scale"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "03814ae46e9921da938afabb0633b36b7d6100d5af17970ace939ddd45ccb15a",
+   "source": "The walked frame itself: build 443b4a39 (lane art/xframe-function-207 r001, review=GATED, verified on the SE 2026-09-25), captured by that round at the ratified regime (occluders all, softness 12.0, darkness 0.8, fire lit, flicker on, void ring 0). Byte-identical to tools/tier1_floors/evidence/combined.png at 443b4a39. No edit.",
+   "culled_by": "Rafe, walk on the handset, 2026-09-23 (flip), upheld at the R1 ruling 2026-09-25",
+   "verbatim": "it seems taller than the wall. — and at the ruling: Rafe's eye holds over the met bar: it reads taller than the wall. Plant: the Λ against the north wall (the walked frame) as the miss control.",
+   "defect": "THE Λ-FRAME STANDS AGAINST A WALL IT IS TALLER THAN. At (9-10,12) against the north wall it stands 50.8 px before a 32-px face (1.59x) and crosses the arris by 18.8 px (tools/cast_shadows/evidence/lambda_scale/R1-STOP.md). This is the SCALE/PLACEMENT plant: a round that moves the Λ to an opening is judged against the frame where it stood before a wall.",
+   "provenance": "Eligibility (LOOP-PROCESS §4.0a): visible in the still — seat 1 of xframe-function r001 flagged it unprompted ('straddles the wall top and the floor, with half of it on the wall surface'). Ruling 47: self-tested in the BUILD slot before any round counts it."
   }
  ],
  "_regime": [

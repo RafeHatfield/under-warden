@@ -136,16 +136,10 @@
   },
   {
    "tileId": 9812,
-   "x": 9,
-   "y": 12,
-   "w": 2,
-   "h": 1,
-   "layout": [
-    9812,
-    9813
-   ],
+   "x": 8,
+   "y": 11,
    "blocks": true,
-   "why": "B-PROP-002b, the bound stack — a DIFFERENT ROW at a DIFFERENT PITCH from A (#210), against the north wall's east end and beside the fire, whose cast shadow it throws (Rafe, 2026-09-13). Moved from (3,12) so A at (3,15) does not seal the pocket at (3,13); at (9,12)-(10,12) so it is inside the 750px frame (at (10,12) its east cell was clipped).",
+   "why": "B-PROP-002b, the Λ-frame — ACROSS AN OPENING, NOT AGAINST A WALL (#212 R1, RULED Rafe 2026-09-25, option d): 'The Λ-frame is a barricade; its placement is an opening, not a wall face. Move it to a gap or corridor mouth where it spans edge to edge (same placement rule as the X-frame).' The only two-cell gap, (3-4,15), holds the X, so B stands across the one-cell corridor mouth at (8,11), re-authored one cell wide to span it wall to wall with its standing height kept (§12.2 does not give way). Floor to its north: not a wall prop. Law: a prop that must be taller than the face it stands against is not a wall prop.",
    "shape": "box"
   },
   {

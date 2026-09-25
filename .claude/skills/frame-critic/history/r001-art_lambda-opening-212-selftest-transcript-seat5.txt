@@ -1,0 +1,43 @@
+RANK: 4 > 1 > 2 > 3
+
+BEST: 4
+BEST_WHY: The room floor. The stones are laid in a running bond with widths that vary along each course (compare the row under the figure, where a wide block sits between two narrow ones), each stone carries its own hatching direction and density, and the joints are drawn at two different weights. The long crack starts under the crate at the top-left of the room, runs under the figure and out under the timber bundle, crossing joints without respecting them, and the second arc in the lower right does the same. That reads as one cut, damaged floor rather than a stamped tile. The north wall band (the brown timber course across the top of the room, roughly y 395 to 450) is shored with driven pins at irregular spacing, including the stacked staple at x≈355 and the bent bracket at x≈460, which is exactly the orc repair language: rope, pins, timber, no care for looks. The lighting is coherent: the figure's lamp and the brazier at (598,545) both throw warm light with falloff, and the timber band above the brazier picks up its colour.
+
+WORST: 3
+WORST_WHY: It is a placeholder tileset. The pool at x 245-380, y 0-190 is a hard-edged rectangle filled with one repeating hexagon-scale pattern, with no bank, no edge darkening and no depth. The dirt floor is a single stamped texture whose lattice of dark seams repeats visibly across the whole room, sprinkled with cyan single-pixel flecks (e.g. around (325,10), (293,15), (160,150), (190,168)) that read as noise, not water or ore. Two identical crates are stacked at (62-92, 0-30) and (62-92, 45-90) and two identical barrels sit side by side at (115-145, 195-235) and (160-190, 195-235), all at the same orientation. Projections are mixed: barrels are 3/4 side view with a top ellipse, crates are top-down with a drawer face, the orc is side-on with a soft blurred drop shadow under a hard-pixel sprite. There is no light falloff anywhere.
+
+FLAGGED: 1, 2, 3
+
+SHIP: NONE
+
+FLIP 1:
+- The brazier at (598,545) burns but casts no light: the stones one tile away from it are the same blue-grey as the far corner of the room. Give it a warm point light with its own falloff, as the other frames of the same room have.
+- The rock masses above the room (x 180-440, y 70-390 and x 570-750, y 70-390) are a smooth cloud-noise fill with anti-aliased 1px polygon edges, while the floor is hard 2px pixel art. Redraw the rock surface at the same 2px pixel scale with hard-edged facets and hatching matching the floor.
+- The standing stone at (265-300, 540-635) and the crate at (190-300, 480-515) sit under a point light with no cast shadow on the side away from the figure. Add one.
+- The crate is drawn oblique (front face plus a lit top slab with two end lugs) on a straight-top-down floor. Redraw it top-down.
+- The north corridor at x 500-560, y 70-395 has no stone courses, only the noise fill and two crack lines. Lay floor courses into it, or give it the same pixel-scale rock treatment as the walls.
+
+FLIP 2:
+- Three identical chevaux-de-frise at (190-310, 650-710): the same sprite stamped three times at identical rotation and identical highlight. Vary each one (flip, different pin positions, one with a broken spar).
+- The two dark wedges flanking that row at (185-215, 650-700) and (415-460, 640-690) are flat charcoal polygons with a single light diagonal edge and no texture. They read as unfinished geometry. Give them the timber or rock treatment or remove them.
+- The A-frame trestle at (600-680, 405-465) is drawn side-on and sits on top of the wall band, so it floats on the wall. Move it onto the floor or redraw it as a top-down brace.
+- The barriers themselves are side-view Xs placed on a top-down floor. Redraw them as crossed timbers seen from above.
+- Same rock-wall, missing-shadow and untextured-corridor items as FLIP 1.
+
+FLIP 3:
+- No light falloff: the whole frame is evenly lit. Add the lamp falloff from the figure.
+- Pool at (245-380, 0-190): hard rectangular edge, uniformly tiled hex pattern. Add a bank or edge tile, darken toward the edges, and break the repeat.
+- Dirt floor: remove the cyan pixel flecks or make them read as something. Add two or three variant dirt tiles so the seam lattice stops repeating.
+- Replace one of the two identical crates and one of the two identical barrels with a different sprite or a different orientation.
+- Pick one projection for props and the figure. Either the barrels go top-down (a circle of staves) or the crates get the same 3/4 view.
+- Replace the orc's blurred drop shadow with a hard-pixel shadow at the sprite's scale.
+- Grey floor tiles are a flat fill with 1px grid lines that show through the moss blobs. Add per-tile value variation and joints of varied weight, and paint moss over the joints.
+- Dirt meets grey stone on a hard straight line (the x=55 column and the y=215 row) with nothing between them. Add a curb, threshold or wall.
+- The wall faces at the bottom (y 265-288) are one repeated dark brick tile with identical rows. Vary the courses.
+
+FLIP 4:
+- The rock masses above the room (x 180-440, y 70-390 and x 570-750, y 70-390) are a smooth cloud-noise fill with anti-aliased 1px polygon edges, while the floor is hard 2px pixel art. Redraw the rock at the floor's pixel scale with hard facets and hatching.
+- The standing stone at (265-300, 540-635) and the crate at (190-300, 480-515) cast no shadow away from the lamp. Add cast shadows.
+- The crate is drawn oblique (front face visible, lit top slab, two end lugs) on a straight-top-down floor. Redraw it top-down.
+- The north corridor at x 500-560, y 70-395 has no stone courses. Lay floor into it or give it the same rock treatment.
+- The lamp halo goes near-white on the stones at (400-470, 470-560) and blows out the hatching. Cap the lit value so the joints stay visible under the figure.

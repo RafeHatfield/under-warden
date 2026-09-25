@@ -270,6 +270,24 @@ def model(name):
             f += box(rx - 5, rx + 5, -W_ / 2 - 3.5, -W_ / 2 - 1.5, rz - 4, rz + 4, "rope")
             f += box(rx - 5, rx + 5, -W_ / 2 - 1.5, W_ / 2 + 7.5, rz + 4, rz + 6, "rope")
         return f
+    if name == "barricade_b1":
+        # #212 R1 RULED (Rafe, 2026-09-25): option (d). "The Λ-frame is a barricade; its placement
+        # is an opening, not a wall face. Move it to a gap or corridor mouth where it spans edge to
+        # edge (same placement rule as the X-frame)." The review scene's only two-cell gap holds the
+        # X, so B goes to the ONE-CELL corridor mouth at (8,11) and is re-authored one cell wide to
+        # span it: the same Λ grammar (two baulks leaning to a lashed apex, a low bar, rope at the
+        # apex and both bar ends), feet at the cell's edges so it touches the corridor's side walls,
+        # and the STANDING HEIGHT KEPT (~50 in a 64 cell — §12.2 does not give way). It is not a
+        # wall prop (law part 2): a prop taller than the face beside it stands across an opening.
+        H, W_ = 50, 9
+        fx = 26.0                                           # feet at the cell's edges (±32 with the member)
+        f = stake((-fx, 0.0, 0.0), (5.0, 0.0, H), W_, 0, "wood")           # leans up-right past the apex
+        f += stake((fx, -2.0, 0.0), (-5.0, -2.0, H), W_, 0, "wood_dark")   # leans up-left, in front
+        f += box(-fx - 2, fx + 2, 3, 3 + W_ - 2, 12, 12 + W_ - 2, "wood")  # the bar, lashed behind, low
+        for (rx, rz) in ((0, H - 7), (-fx + 5, 15), (fx - 5, 15)):
+            f += box(rx - 3, rx + 3, -W_ / 2 - 3.5, -W_ / 2 - 2.0, rz - 3, rz + 3, "rope")
+            f += box(rx - 3, rx + 3, -W_ / 2 - 2.0, W_ / 2 + 5.0, rz + 3, rz + 4.5, "rope")
+        return f
     if name in ("barricade_c1", "barricade_c2"):
         # #207 ROUND 3 (Rafe, 2026-09-13) — the walked X-frame cold-named "crossed planks". The
         # hypothesis under test, not assumed: the X has NO HEIGHT — it lies in the gap instead of
@@ -308,8 +326,11 @@ def model(name):
         # bar between the feet is the sawhorse read. RULED: remove it. Keep c2's standing crossed
         # stakes with planted feet, each crossing taller than wide; span the gap edge to edge
         # (wall end at the west, pillar at the east); sharpen the tips and lean them toward the
-        # deeper side of the gap — SOUTH, the unlit outside past both lights, away from the orcs'
-        # fire in the north half of the room. South is -d (toward the viewer).
+        # deeper side of the gap. THE RULE, NOT THE COMPASS (Rafe, 2026-09-25): tips lean away from
+        # the side the orcs hold, operationalised as AWAY FROM THE NEAREST ORC FIRE. Measured: the
+        # fire is at (9,13), the gap at (3-4,15) — the fire is NORTH of the gap (row 13 < 15; it is
+        # also 6 columns east, but a row across an east-west gap can only lean north or south), so
+        # the tips lean SOUTH, which is -d (toward the viewer). Move the fire or the gap and re-derive.
         #
         # Without the bar, one crossing that is taller than wide cannot span two cells, so the
         # span is carried by THREE crossings in a row — the same stake, the same lashing, three
