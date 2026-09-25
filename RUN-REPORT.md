@@ -438,3 +438,60 @@ guards unchanged; fast suite 2564 green.
 - Rulings in this build: 0c fire RULED; 0d east face RATIFIED for ends and pillars; #211 jamb
   receives the shadow; #212 the against-wall law; #207 the X stands across the line (c2).
 - **Walk order: Λ-frame → X-frame.** Jamb whenever.
+
+---
+
+## ▶ RESUME ON A NEW MACHINE + WALK VERDICTS (Rafe, walk 2026-09-23; run 2026-09-23 → 25)
+
+### Part A — resume
+- Head of main at start: `429d3ff3` (#217); since then #219 (rename to The Under-Warden), #220 (Godot
+  SDK 4.7.2), #221 (untrack a committed `.pyc` that dirtied every fresh checkout and moved the build id).
+- Guards: `--check-guards` clear on xframe-207, lambda-212, jamb-211, queue-2026-09-13. The root
+  `STALL-REPORT.md` is lambda r001's, cleared by `JUDGE-CLEARED.json` — a record, not a gate.
+- Smoke: main built and installed (`SKIPPED-REVIEW` by design — main's verdict was for `e0b4ce1a`;
+  §1.2.2a, a toolchain gate), VERIFIED ON DEVICE with the last delivery's fingerprint (occluders 216+3,
+  fire 1, softness 12, darkness 0.8, flicker on, east_faces=5). One self-test seat ran and caught.
+- New machine: Pillow/numpy/scipy/requests installed; PixelLab credential added by Rafe.
+- Frame 2's left grey block: the uncarved columns 0–2 drawn as the unlit cap field (map starts at
+  x −9, so not the edge or clear colour). Not filed.
+- ⚠ **Work machine (Rafe, 2026-09-25): Godot runs muted, never takes focus; sound only on request.**
+  `--audio-driver Dummy` always; headless runs are focus-free. **Windowed captures cannot be kept from
+  taking focus on macOS** (tested: `open -g`, `open -g -j`, `display/window/size/no_focus`, an
+  `LSUIElement`/`LSBackgroundOnly` app clone — Godot sets itself foreground at startup). Captures
+  therefore run only on Rafe's OK. `capture_corridor.py` now honours `GODOT` so a muted wrapper
+  reaches every capture, the critic's included.
+
+### R1 — #212 Λ-frame, scale: ⛔ STOP §1.1.4(b), measured, not built (PR #222)
+Apex 494.7 vs cap top 481.5 — **13.2 px below**, so `apex ≤ cap top` already holds. But the Λ
+stands **50.8 px (0.79 tile) against a 32-px (0.50 tile) face — 1.59× the wall** — and crosses the
+arris by 18.8 px: the read is real height, not projection. The world-height law (≤ 32 px) and §12.2's
+*chest-high, larger than true scale* (> ~31 px beside the ~48-px placeholder figure) leave a ~1-px
+window, and the brief's own under-scale plant is the only Λ in it. Four options for Rafe in
+`tools/cast_shadows/evidence/lambda_scale/R1-STOP.md`. No seat spent.
+
+### R2 — #207 X-frame, function: landed, INSTALL-LATEST (this branch)
+- **Judge proven first (Ruling 47):** new subject `barricade_blocking` (accept the brief's blocking
+  words; refuse sawhorse/trestle/planks) on the landed c2 frame — **FAIL 0/5**, every seat
+  *"sawhorse / trestle"*, one *"crossed legs holding a plank"*: the bar was the sawhorse read.
+- **c3** (`projection_mesh.barricade_c3`, new `stake()` primitive): c2's planted crossed stakes, bar
+  removed; three crossings, each taller than wide, spanning wall end to pillar; tips sharpened and
+  leaning south (the unlit outside, away from the orcs' fire). Lashing wood-dark (#208). Two builder
+  readings Rafe may overturn: *three crossings* is how "taller than wide" and "edge to edge" are both
+  met without a bar; *south* is "the deeper side".
+- Generated 3 seeds (pool 5000 → 4998), landed 1339 (hold 0.980).
+- **Cold naming: PASS 5/5 on blocking words** — *"wooden spiked barricade (a row of crossed
+  stakes)"*, *"crossed wooden stakes forming a barricade"*, *"row of wooden x-shaped spike
+  barricades"*. No sawhorse, no trestle.
+- **Frame critic r001, five seats: INSTALL-LATEST.** Five distinct plants, all caught; not below the
+  shadowed reference in 3/5, above it in 1/5. Six flips, `check_dispositions: none`:
+  Λ → #212 (R1); east face / jamb → #211; marker → #204; floor/cap → #194; figure → §10.5;
+  **and one real defect, ROUTED to #211 with the measurement: the west wall end's east face (z +5)
+  draws OVER the X's left crossing (floor prop +2).** Under §3.2 the view runs toward −x, so a prop
+  east of that face is nearer and must draw over it. The same +5 overdraws the next rows' floor and
+  characters in rows 15–17. Exposed by the ruled edge-to-edge span; a depth-order change is #211's
+  node under #212's placement law. **Look for it on the walk: the leftmost crossing is half under a
+  dark parallelogram.**
+- Verdict committed before the build (`443b4a39`); build identity `commit=443b4a39` — **clean, no
+  +dirty**; GATE OPEN; installed to the SE as `com.rafehatfield.underwarden.tier0`.
+
+**Walk order: X-frame (the Λ is unchanged — R1 awaits the ruling).**
