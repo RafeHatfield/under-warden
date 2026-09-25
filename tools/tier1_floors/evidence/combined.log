@@ -1,13 +1,13 @@
-/Applications/Godot_mono.app/Contents/MacOS/Godot --path /Users/rafehatfield/development/c-yarl/.claude/worktrees/queue --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/combined.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 1
+/Users/rafehatfield/.local/bin/godot-quiet --path /Users/rafehatfield/development/ff/under-warden-wt/r2 --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/combined.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 1
 
-Godot Engine v4.7.stable.mono.official.5b4e0cb0f - https://godotengine.org
-Metal 4.0 - Forward Mobile - Using Device #0: Apple - Apple M1 (Apple7)
+Godot Engine v4.7.2.stable.mono.official.ed1daf0bf - https://godotengine.org
+Metal 4.0 - Forward Mobile - Using Device #0: Apple - Apple M5 (Apple9)
 
-Catacombs of YARL — loading...
-[DIAG] Logging to: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/Catacombs of YARL/diag.log
-[DIAG] Structured log: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/Catacombs of YARL/diag_structured.jsonl
-[DIAG 00000 F0 T0.643] === Session started ===
-[Main] Persistence loaded — 6 runs ever.
+The Under-Warden — loading...
+[DIAG] Logging to: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/The Under-Warden/diag.log
+[DIAG] Structured log: /Users/rafehatfield/Library/Application Support/Godot/app_userdata/The Under-Warden/diag_structured.jsonl
+[DIAG 00000 F0 T1.327] === Session started ===
+[Main] Persistence loaded — 0 runs ever.
 [Main] Loading tileset: 16bit_fantasy
 [Main] Tileset loaded: Oryx 16-Bit Fantasy (48px, 2 frames)
 [TileThemeLoader] Loaded 1 theme(s): boundary
@@ -71,8 +71,8 @@ Depth boons loaded: 5 entries
 # Each prop has:
 #   tile_ids:        Array of tile ID
 Props loaded: 63 prop definitions
-[ReadGodotResource] res://config/interactive_props.yaml: 2307 chars, starts with: # Interactive prop definitions for Catacombs of YARL
-# Barrels, bookshelves, bon
+[ReadGodotResource] res://config/interactive_props.yaml: 2306 chars, starts with: # Interactive prop definitions for The Under-Warden
+# Barrels, bookshelves, bone
 [Main] PropDescriptionRegistry loaded
 [ReadGodotResource] res://config/signpost_messages.yaml: 5842 chars, starts with: # Signpost Messages Configuration
 #
@@ -112,24 +112,549 @@ empt
 [ReadGodotResource] res://config/under_warden/cause_display_names.yaml: 1936 chars, starts with: # Bureaucratic display phrases for engine cause-of-death strings.
 # Substituted 
 [Main] Memo registry loaded.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
+WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+     at: _set_size (scene/gui/control.cpp:1519)
+     C# backtrace (most recent call first):
+         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
+         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
+         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
+         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] UnderWarden.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/PossessionOverlay.cs:144)
+         [4] void UnderWarden.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/PossessionOverlay.cs:94)
+         [5] void UnderWarden.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/PossessionOverlay.cs:44)
+         [6] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [7] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
+         [8] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
+         [9] bool UnderWarden.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
+         [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+         [11] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
+         [12] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
+         [13] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
+         [14] void UnderWarden.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:144)
+         [15] void UnderWarden.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:36)
+         [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [17] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
+         [18] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
+         [19] bool UnderWarden.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
+         [20] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+         [21] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
+         [22] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
+         [23] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
+         [24] void UnderWarden.Presentation.Main.SetupPresentation(UnderWarden.Logic.Core.GameState) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:984)
+         [25] void UnderWarden.Presentation.Main.LaunchCorridorScene(string, UnderWarden.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:2639)
+         [26] void UnderWarden.Presentation.Main._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:266)
+         [27] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [28] bool UnderWarden.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.Main_ScriptMethods.generated.cs:590)
+         [29] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+     at: _set_size (scene/gui/control.cpp:1519)
+     C# backtrace (most recent call first):
+         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
+         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
+         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
+         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] UnderWarden.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/PossessionOverlay.cs:144)
+         [4] void UnderWarden.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/PossessionOverlay.cs:97)
+         [5] void UnderWarden.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/PossessionOverlay.cs:44)
+         [6] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [7] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
+         [8] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
+         [9] bool UnderWarden.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
+         [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+         [11] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
+         [12] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
+         [13] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
+         [14] void UnderWarden.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:144)
+         [15] void UnderWarden.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:36)
+         [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [17] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
+         [18] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
+         [19] bool UnderWarden.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
+         [20] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+         [21] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
+         [22] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
+         [23] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
+         [24] void UnderWarden.Presentation.Main.SetupPresentation(UnderWarden.Logic.Core.GameState) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:984)
+         [25] void UnderWarden.Presentation.Main.LaunchCorridorScene(string, UnderWarden.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:2639)
+         [26] void UnderWarden.Presentation.Main._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:266)
+         [27] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [28] bool UnderWarden.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.Main_ScriptMethods.generated.cs:590)
+         [29] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+     at: _set_size (scene/gui/control.cpp:1519)
+     C# backtrace (most recent call first):
+         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
+         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
+         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
+         [3] void UnderWarden.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:168)
+         [4] void UnderWarden.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:36)
+         [5] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [6] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
+         [7] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
+         [8] bool UnderWarden.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
+         [9] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+         [10] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
+         [11] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
+         [12] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
+         [13] void UnderWarden.Presentation.Main.SetupPresentation(UnderWarden.Logic.Core.GameState) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:984)
+         [14] void UnderWarden.Presentation.Main.LaunchCorridorScene(string, UnderWarden.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:2639)
+         [15] void UnderWarden.Presentation.Main._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:266)
+         [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [17] bool UnderWarden.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.Main_ScriptMethods.generated.cs:590)
+         [18] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+     at: _set_size (scene/gui/control.cpp:1519)
+     C# backtrace (most recent call first):
+         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
+         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
+         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
+         [3] void UnderWarden.Presentation.UI.HUD.Refresh() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:80)
+         [4] void UnderWarden.Presentation.UI.HUD.SetState(UnderWarden.Logic.Core.GameState) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/UI/HUD.cs:42)
+         [5] void UnderWarden.Presentation.Main.SetupPresentation(UnderWarden.Logic.Core.GameState) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:985)
+         [6] void UnderWarden.Presentation.Main.LaunchCorridorScene(string, UnderWarden.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:2639)
+         [7] void UnderWarden.Presentation.Main._Ready() (/Users/rafehatfield/development/ff/under-warden-wt/r2/src/Presentation/Main.cs:266)
+         [8] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
+         [9] bool UnderWarden.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/ff/under-warden-wt/r2/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/UnderWarden.Presentation.Main_ScriptMethods.generated.cs:590)
+         [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
+[Tier0] ABORT: carved geometry contains no junction — a straight corridor cannot answer 'which way would you walk'. Fix the carve list.
 [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
-[DIAG 00001 F0 T1.208] [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
-[Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
-[DIAG 00002 F0 T1.211] [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=Catacombs of YARL
+[DIAG 00001 F0 T2.433] [Tier1] rig:start: radius=6 falloff=1 ambient=1.5 (272733) energy=1.6 shadows=on(none) softness=0 darkness=1 fire_lights=0 fire_energy=0 fire_radius=0 fire_tint=- flicker=off
+[Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=The Under-Warden
+[DIAG 00002 F0 T2.446] [Tier1] BUILD IDENTITY: commit=UNSTAMPED built=UNSTAMPED review=GATED app=The Under-Warden
 [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
-[DIAG 00003 F0 T1.211] [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
+[DIAG 00003 F0 T2.446] [Tier0] corridor scene: tier1_props_review (res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json)
 [Tier0] map=17x21 player=(6,12) carve_rects=7
-[DIAG 00004 F0 T1.211] [Tier0] map=17x21 player=(6,12) carve_rects=7
+[DIAG 00004 F0 T2.446] [Tier0] map=17x21 player=(6,12) carve_rects=7
 [Tier0] junction=NO
-[DIAG 00005 F0 T1.211] [Tier0] junction=NO
+[DIAG 00005 F0 T2.446] [Tier0] junction=NO
 [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
-[DIAG 00006 F0 T1.211] [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
+[DIAG 00006 F0 T2.446] [Tier0] tile_theme_config=res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml
 [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
-[DIAG 00007 F0 T1.211] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
+[DIAG 00007 F0 T2.446] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
 [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
-[DIAG 00008 F0 T1.211] [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
+[DIAG 00008 F0 T2.446] [Tier0] grid map: centre00=(23,-190.5) pitch=(64,64) view=(0,90)...(750,1001)
 [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
-[DIAG 00009 F0 T1.214] [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
+[DIAG 00009 F0 T2.448] [Tier1] variant census: cells=134 distinct=1 max_multiplicity=134  step_top2: row=1.000(112/112) col=1.000(108/108) diag=1.000(92/92) anti=1.000(93/93)  worst_top2=1.000  chance_mode~1.000  pool_implied>=1
 [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
 [Tier1] channel map (L/M/R channel, F trodden chokepoint, x neglected, . floor, # solid)
 [Tier1]   #################
@@ -153,7 +678,7 @@ empt
 [Tier1]   ###xxx.......x###
 [Tier1]   ###xxxxxxxxxxx###
 [Tier1]   #################
-[DIAG 00010 F0 T1.230] [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
+[DIAG 00010 F0 T2.486] [Tier1] floor overlays: cells=134 channel=26 neglected=50 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=54@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=73 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
 [Tier1] channel map (L/M/R channel, F trodden chokepoint, x neglected, . floor, # solid)
 [Tier1]   #################
 [Tier1]   #################
@@ -177,7 +702,7 @@ empt
 [Tier1]   ###xxxxxxxxxxx###
 [Tier1]   #################
 [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
-[DIAG 00011 F0 T1.230] [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
+[DIAG 00011 F0 T2.486] [Tier1] wang floor: none declared (no --wang-floor, no marker wangFloor)
 [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
 [Tier1] traffic field (space=unwalked .. @=busiest)
 [Tier1]   #################
@@ -246,7 +771,7 @@ empt
 [Tier1]   ###           ###
 [Tier1]   #################
 [Tier1] axis coherence: 42 of 50 adjacent on-route pairs agree (84%) - round 21 measured 34% on the per-tile field
-[DIAG 00012 F0 T2.901] [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
+[DIAG 00012 F0 T4.558] [Tier1] ashlar floor: laid=141 channel_cells=25 missing=0 families=5 seed=1337 atlases=146 edge_check=128/OK stone_check=144/OK paint_check=96/OK occlusion=baked:66/check:48/OK lines=1 mouths=16 polished=141 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_ashlar/MANIFEST.json
 [Tier1] traffic field (space=unwalked .. @=busiest)
 [Tier1]   #################
 [Tier1]   #################
@@ -336,7 +861,7 @@ empt
 [Tier1]   .................
 [Tier1]   .................
 [Tier1]   .................
-[DIAG 00013 F0 T3.026] [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
+[DIAG 00013 F0 T6.026] [Tier1] wall age map (. not a reveal, 0=sharp/sealed .. 3=on the spine)
 [Tier1]   .................
 [Tier1]   ...11111111100...
 [Tier1]   .................
@@ -359,550 +884,25 @@ empt
 [Tier1]   .................
 [Tier1]   .................
 [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) east_faces=5(ground-mask) age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
-[DIAG 00014 F0 T3.029] [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) east_faces=5(ground-mask) age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
+[DIAG 00014 F0 T6.030] [Tier1] boundary wall: family=boundary_wall_material_v1 face=24 top=192 void=0(choice=0,ring>0,OVERRIDE manifest=1) missing=0 face_suppressed=192 planes(top=114.7 face=61.79) edge_check=46/OK bindings=12(cramp:3,lash:3,patch:1,pin:2,strap:3) cap=216+0void lightmask(first_surface=87,occluded_mass=129) east_faces=5(ground-mask) age0..3=5/15/3/1 traffic=spine:19/routes:26 manifest=res://src/Presentation/assets/tier1_walls/MANIFEST.json
 [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
-[DIAG 00015 F0 T3.039] [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
+[DIAG 00015 F0 T6.045] [Tier1] shadows: mode=all wall_occluders=216 prop_occluders=3 fire_lights=1 softness=12 flicker=on (§12.1a occlusion; §3.2 footprints; #205 the fire emits; flicker RULED ON — Rafe, 2026-09-13)
 [Tier0] review_build_marker=none (CLI flags)
-[DIAG 00016 F0 T3.041] [Tier0] review_build_marker=none (CLI flags)
+[DIAG 00016 F0 T6.049] [Tier0] review_build_marker=none (CLI flags)
 [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
-[DIAG 00017 F0 T3.042] [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
+[DIAG 00017 F0 T6.050] [Tier0] losable-state check: turn_limit=2147483647 monsters=0 ending=None alive=True game_over=False
 [Main] Visible tile rect: (0,4)-(11,19)
 [Main] floor_worn (3001) tiles: 1 rendered in the authored room, 1 in frame: (11,15)
-[Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7565, informational)  - floor beside the station, well inside the radius
-[DIAG 00018 F5 T3.171] [Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7565, informational)  - floor beside the station, well inside the radius
-[Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2823, informational)  - the near corner of the room, still lit — and clear of every prop footprint
-[DIAG 00019 F5 T3.171] [Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2823, informational)  - the near corner of the room, still lit — and clear of every prop footprint
-[Tier1] legibility(9,15) expect=lit  lum=0.3716 at px(599,770) bound=0.1004 OK  (ratio=0.4342, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
-[DIAG 00020 F5 T3.171] [Tier1] legibility(9,15) expect=lit  lum=0.3716 at px(599,770) bound=0.1004 OK  (ratio=0.4342, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
+[Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7561, informational)  - floor beside the station, well inside the radius
+[DIAG 00018 F5 T6.203] [Tier1] legibility(5,12) expect=lit  lum=0.6474 at px(343,578) bound=0.1004 OK  (ratio=0.7561, informational)  - floor beside the station, well inside the radius
+[Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2822, informational)  - the near corner of the room, still lit — and clear of every prop footprint
+[DIAG 00019 F5 T6.203] [Tier1] legibility(3,14) expect=lit  lum=0.2416 at px(215,706) bound=0.1004 OK  (ratio=0.2822, informational)  - the near corner of the room, still lit — and clear of every prop footprint
+[Tier1] legibility(9,15) expect=lit  lum=0.3727 at px(599,770) bound=0.1004 OK  (ratio=0.4353, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
+[DIAG 00020 F5 T6.203] [Tier1] legibility(9,15) expect=lit  lum=0.3727 at px(599,770) bound=0.1004 OK  (ratio=0.4353, informational)  - the route ahead, where the floor's traffic systems show. ⚠ MOVED from (6,15) in the cast-shadows round, bound UNTOUCHED: (6,15) sits directly south of the crossed barricade at (6,14)-(7,14) with the lamp north of it, and with cast shadows live it is in that barricade's shadow — delivered 0.0686 against the 0.1004 bound, at every shadow darkness. A legibility point standing in a prop's shadow measures the shadow, not the floor, exactly as the (4,14) point once measured a sprite. The bound is a property of the rig, not of the cell; whether a barricade may shadow the route is Rafe's at the walk, not this probe's.
 [Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0685, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
-[DIAG 00021 F5 T3.172] [Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0685, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
-[Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0832, informational)  - up the corridor, beyond the radius
-[DIAG 00022 F5 T3.172] [Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0832, informational)  - up the corridor, beyond the radius
-[Tier1] floor-legibility probe: 5 declared points, reference lum=0.8558 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
-[DIAG 00023 F5 T3.172] [Tier1] floor-legibility probe: 5 declared points, reference lum=0.8558 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
-[Main] Capture written: tools/tier1_floors/evidence/combined.png
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-[TileThemeConfig] Theme 'sandstone' not found — falling back to 'boundary'.
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-     at: _set_size (scene/gui/control.cpp:1519)
-     C# backtrace (most recent call first):
-         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
-         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
-         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:144)
-         [4] void CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:94)
-         [5] void CatacombsOfYarl.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:44)
-         [6] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [7] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
-         [8] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [9] bool CatacombsOfYarl.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
-         [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-         [11] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
-         [12] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
-         [13] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [14] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:144)
-         [15] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:36)
-         [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [17] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
-         [18] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [19] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
-         [20] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-         [21] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
-         [22] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
-         [23] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [24] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:984)
-         [25] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
-         [26] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
-         [27] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [28] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
-         [29] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-     at: _set_size (scene/gui/control.cpp:1519)
-     C# backtrace (most recent call first):
-         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
-         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
-         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] System.ValueTuple`4[Godot.ColorRect,Godot.ColorRect,Godot.Label,Godot.Label] CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildBarRow(Godot.VBoxContainer, string, Godot.Color, Godot.FontFile, Godot.FontFile) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:144)
-         [4] void CatacombsOfYarl.Presentation.UI.PossessionOverlay.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:97)
-         [5] void CatacombsOfYarl.Presentation.UI.PossessionOverlay._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/PossessionOverlay.cs:44)
-         [6] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [7] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
-         [8] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [9] bool CatacombsOfYarl.Presentation.UI.PossessionOverlay.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.PossessionOverlay_ScriptMethods.generated.cs:80)
-         [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-         [11] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
-         [12] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
-         [13] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [14] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:144)
-         [15] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:36)
-         [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [17] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
-         [18] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [19] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
-         [20] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-         [21] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
-         [22] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
-         [23] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [24] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:984)
-         [25] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
-         [26] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
-         [27] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [28] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
-         [29] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-     at: _set_size (scene/gui/control.cpp:1519)
-     C# backtrace (most recent call first):
-         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
-         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
-         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] void CatacombsOfYarl.Presentation.UI.HUD.BuildLayout() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:168)
-         [4] void CatacombsOfYarl.Presentation.UI.HUD._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:36)
-         [5] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [6] bool Godot.CanvasItem.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/CanvasItem.cs:1845)
-         [7] bool Godot.Control.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:4029)
-         [8] bool CatacombsOfYarl.Presentation.UI.HUD.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.UI.HUD_ScriptMethods.generated.cs:80)
-         [9] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-         [10] void Godot.NativeInterop.NativeFuncs.godotsharp_method_bind_ptrcall(nint, nint, System.Void**, System.Void*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Godot.SourceGenerators.Internal/Godot.SourceGenerators.Internal.UnmanagedCallbacksGenerator/Godot.NativeInterop.NativeFuncs.generated.cs:380)
-         [11] void Godot.NativeCalls.godot_icall_3_912(nint, nint, nint, Godot.NativeInterop.godot_bool, int) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:8061)
-         [12] void Godot.Node.AddChild(Godot.Node, bool, Godot.Node+InternalMode) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:848)
-         [13] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:984)
-         [14] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
-         [15] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
-         [16] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [17] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
-         [18] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
-If you want to set size, change the anchors or consider using set_deferred().
-     at: _set_size (scene/gui/control.cpp:1519)
-     C# backtrace (most recent call first):
-         [0] void Godot.NativeCalls.godot_icall_1_36(nint, nint, Godot.Vector2*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/NativeCalls.cs:322)
-         [1] void Godot.Control._SetSize(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:1941)
-         [2] void Godot.Control.set_Size(Godot.Vector2) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Control.cs:691)
-         [3] void CatacombsOfYarl.Presentation.UI.HUD.Refresh() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:80)
-         [4] void CatacombsOfYarl.Presentation.UI.HUD.SetState(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/UI/HUD.cs:42)
-         [5] void CatacombsOfYarl.Presentation.Main.SetupPresentation(CatacombsOfYarl.Logic.Core.GameState) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:985)
-         [6] void CatacombsOfYarl.Presentation.Main.LaunchCorridorScene(string, CatacombsOfYarl.Presentation.Map.ReviewBuildMarker) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:2639)
-         [7] void CatacombsOfYarl.Presentation.Main._Ready() (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/src/Presentation/Main.cs:266)
-         [8] bool Godot.Node.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Generated/GodotObjects/Node.cs:2660)
-         [9] bool CatacombsOfYarl.Presentation.Main.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name&, Godot.NativeInterop.NativeVariantPtrArgs, Godot.NativeInterop.godot_variant&) (/Users/rafehatfield/development/c-yarl/.claude/worktrees/queue/.godot/mono/temp/obj/Debug/Godot.SourceGenerators/Godot.SourceGenerators.ScriptMethodsGenerator/CatacombsOfYarl.Presentation.Main_ScriptMethods.generated.cs:590)
-         [10] Godot.NativeInterop.godot_bool Godot.Bridge.CSharpInstanceBridge.Call(nint, Godot.NativeInterop.godot_string_name*, Godot.NativeInterop.godot_variant**, int, Godot.NativeInterop.godot_variant_call_error*, Godot.NativeInterop.godot_variant*) (/root/godot/modules/mono/glue/GodotSharp/GodotSharp/Core/Bridge/CSharpInstanceBridge.cs:24)
-[Tier0] ABORT: carved geometry contains no junction — a straight corridor cannot answer 'which way would you walk'. Fix the carve list.
+[DIAG 00021 F5 T6.203] [Tier1] legibility(3,18) expect=dark lum=0.0586 at px(215,962) bound=0.0837 OK  (ratio=0.0685, informational)  - past BOTH lights' reach; the room must have an outside. ⚠ MOVED from (11,14) at the shadow walk's flip 3 (Rafe, 2026-09-13: the fire needs real radius and energy), bound UNTOUCHED: (11,14) is 2.2 tiles from the orc fire at (9,13), and a fire with reach lights it — 0.2016 delivered. A 'dark' point written for a one-lamp room measures the second lamp once there is one. (3,18) is 6.7 tiles from the carried lamp and 7.8 from the fire, and inside the view (12,19 was not).
+[Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0831, informational)  - up the corridor, beyond the radius
+[DIAG 00022 F5 T6.204] [Tier1] legibility(8,7) expect=dark lum=0.0712 at px(535,258) bound=0.0837 OK  (ratio=0.0831, informational)  - up the corridor, beyond the radius
+[Tier1] floor-legibility probe: 5 declared points, reference lum=0.8561 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
+[DIAG 00023 F5 T6.204] [Tier1] floor-legibility probe: 5 declared points, reference lum=0.8561 (informational — bounds are ABSOLUTE since 2026-09-07), verdict=PASS
+[Main] Capture written: /Users/rafehatfield/development/ff/under-warden-wt/r2/tools/tier1_floors/evidence/combined.png

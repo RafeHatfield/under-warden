@@ -1,0 +1,41 @@
+RANK: 3 > 2 > 4 > 1
+
+BEST: 3
+BEST_WHY: It is the only frame where every element is drawn at the same pixel density and follows the same rules. The dirt floor, the two barrels at the bottom centre, the two crates at top left and the lily pads in the pool all use the same pixel size and the same dark outline. None of them is stretched or filtered. The barrels have a top-lit lid and a darker band at the base, so they sit on the floor instead of floating on it. The pool's surface has a faint cell pattern under the pads, so it doesn't read as a flat fill. The dark brick band along the very bottom edge gives that wall a distinct face below the grey top surface. That is the only place in the deck where a wall's top and its face are clearly two separate planes.
+
+WORST: 1
+WORST_WHY: The upright block left of centre and the long plank below the figure are untextured orange boxes. Each has one flat front colour, one flat side colour, and a single dark tick for a strap or pin. They look like engine placeholder cubes. Right beside them, the chest and bookshelf at right and the barrel at bottom right are fully rendered sprites in a more saturated brown, so two unrelated asset standards share one room. The floor under all of it mixes crisp pixel-art slabs with soft, low-resolution streaky grime ("////" scratch marks across the slabs right of the figure). The thin crack lines run straight across slab joints at a finer resolution than the tiles. Together that reads as a filter pass laid over a tileset. The wall tops along the top of the frame are the same smeared, blotchy cloud texture. The light is also stepped: there is a hard-edged bright rectangle around the figure, with a straight edge at the left of the upright block and along the bottom of the plank. It reads as tile-quantised lighting, not a light falloff.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 3:
+- The grey wall tops (left column, right column, bottom band) are one flat mid-grey square repeated on a plain grid. Give the slabs varied sizes and uneven joint depths, and add edge wear, so the run doesn't read as a stamped grid.
+- The pool is a perfect axis-aligned rectangle, and dirt meets water along a straight line with no bank, lip or wet edge. Add a transition tile and break up the outline.
+- No light falls off from the figure. The whole frame is evenly lit, contradicting the one-light-source premise. Add a light radius so value drops with distance from the figure.
+- The orange-and-brown post in the left wall gap (a door or torch) is a two-colour vertical stripe with no shading or outline. Redraw it to the same standard as the barrels.
+- The green, cheerful goblin sprite at top centre is brighter and more saturated than anything else in the frame. Pull its saturation down to the environment's range.
+- The lily pads and teal wall moss are generic decoration with nothing to do with the setting. Replace them with repair evidence: rope, pins, hide patches, salvaged timber.
+
+FLIP 2:
+- The floor has soft, low-res streak and grime overlays (the "////" hatching on slabs right of the figure and around the fire). Remove them, or redraw the wear at the tiles' native pixel size.
+- The crack lines (the long diagonal from the figure's feet to lower left, and the arc at bottom right) are 1-px vector-like strokes crossing slab joints. Delete them, or make them follow and break at the joints at tile resolution.
+- The wall-top texture along the top edge and in the two vertical wall arms is a smeared cloud-noise fill. Replace it with a drawn surface at tile resolution.
+- The pale upright block left of centre is lit as if in full light while standing in the shadowed zone. Its value ignores the falloff, so it pops out as a flat cream box. Shade it by the light it actually gets and give it surface texture.
+- The fire at right is a round glowing sprite in a saturated red-orange cartoon style that matches no other asset. Redraw it in the props' palette and outline weight, and seat it in a hearth or ring on the floor.
+- The lighting has a hard step: a rectangular bright zone around the figure, with a visible straight edge left of the upright block and below the log. Smooth it into a continuous falloff.
+- The figure (cyan helmet, big eyes, cheerful proportions) doesn't fit the frame's tone. Use a muted, weighted sprite.
+
+FLIP 4:
+- Remove the black slanted wedge shards on the right edge of the upper doorway (the vertical gap at top centre) and at the right end of the lower wall stub (bottom centre). They are the glaring rendering or sorting artefact in this frame.
+- The A-frame at top right sits on top of the wall top with no contact shadow, and its legs run past the wall edge onto the floor. Anchor it to one plane and give it a shadow.
+- The three X-stakes along the bottom-left wall edge are cut off by the tile boundary, and their lower halves disappear into the dark. Seat them fully inside a tile, or draw the wall they pass through over them.
+- Every floor, crack, wall-top and lighting fix listed under FLIP 2 applies here unchanged.
+- The pale upright block left of centre has the same problem as in 2: flat cream, ignoring the light. Shade and texture it.
+
+FLIP 1:
+- Replace the two flat orange boxes (the upright block left of centre and the plank under the figure) with drawn props: wood grain, lashings, a pin head, and an outline to match the other sprites.
+- The chest, shelf and barrel at right use a different saturation and outline style from the boxes and the environment. Bring all props to one standard.
+- Every floor, crack, wall-top, lighting-step and figure fix listed under FLIP 2 applies here unchanged.
+- The frame's props (chest, bookshelf, barrel) are generic dungeon-kit furniture that says nothing about the setting. Swap at least one for a visible field repair: roped timber, a driven pin, a hide patch.

@@ -1,0 +1,61 @@
+RANK: 3 > 4 > 1 > 2
+
+BEST: 3
+BEST_WHY: It's the only frame drawn at one pixel scale all the way through, and it's the only one where no filter was run over anything. The two crates on the left edge have a lit top panel with a flat highlight and a darker slatted front face, with a soft shadow line under each. The two barrels at the bottom have a proper banded lid that reads round. The south wall has a light grey top band sitting on a darker brick course, so the top, the face and the floor are three separate values. The dirt floor has fine dark red speckle in the same pixel size as the goblin sprite at top centre. Nothing in it is blurred, faceted or drawn with smooth vector lines. It is still generic, and that's why it is not in SHIP.
+
+WORST: 2
+WORST_WHY: It has every problem 1 and 4 have, plus geometry that looks broken:
+- **Corridor mouth (about x505–540, y390–460):** a dark diagonal wedge, stepped like a staircase, juts out of the wall's side as if an extrusion's side face was left on.
+- **South wall stub (about x375–405, y645–710):** the same slanted dark wedge appears again.
+- **A-frame trestle (upper right, about x580–680, y405–465):** it's drawn straight across the wall's face and the edge of the floor. It sits on neither, and its legs end mid-wall.
+- **Three X-braces (bottom left, x185–310, y650–705):** they overlap the dark wall band and the floor edge, so they read as pasted on top rather than standing anywhere.
+- **Wall tops (lit column above the corridor, x440–500, y70–390):** they're mottled ochre noise with large straight-edged polygon facets over it. It looks like a Voronoi shatter on a dither.
+- **Void (left and upper left):** the same polygon shards, laid over a flat dark grey.
+
+FLAGGED: 1, 2, 4
+
+These faults are shared by 1, 2 and 4:
+- **Long curved cracks:** thin, smooth, anti-aliased black lines run across the floor with no regard for the stone joints. One goes from about (300,610) up to (445,515). A big arc runs from (570,720) to (750,650). These are vector strokes, not pixels.
+- **Scribble hatching:** the same scribbled hatch mark is stamped on stone after stone, e.g. around (620–720, 470–540).
+- **Ghost disc:** a half-transparent circular emblem sits in the floor to the right of the figure (about 575–640, 460–520). It looks like a leftover layer.
+- **Mixed pixel sizes:** the figure is crisp small-pixel art, while the pillar, crate and log bundle are chunky, gradient-shaded blocks at roughly twice the pixel size. The pillar at (262–295, 540–640) is a plain untextured box with a strap.
+- **Frame 1:** the void is flat navy with thin topographic-style contour lines drawn over it (e.g. from (230,130) down to (345,215)). The lit wall tops (x440–500, y150–390) are a soft blotchy "clouds" texture that looks like a filter.
+- **Frame 4:** the void and wall tops use the same faceted-polygon shatter as 2. On the right-hand wall top (x570–630, y200–400) the facet edges cut straight through the ochre dither.
+
+SHIP: NONE
+
+FLIP 3:
+- The water pool (right, x248–345, y0–192) has straight, hard edges against the dirt and the grey wall, with no bank, lip or wet-dirt transition. Add edge tiles: a darker wet-dirt border and a one-pixel highlight on the waterline.
+- The moss blobs on the grey wall tops (e.g. left column around y55–75 and y205–230) are semi-transparent soft-alpha overlays. That's a different technique from everything else. Redraw them as opaque pixel clusters from the tile palette.
+- The grey wall-top tiles are one tile repeated on a perfect grid with identical one-pixel joints. Add three or four variants with chips, joints that don't line up, and value shifts, so the band reads as cut stone rather than a stamp.
+- The frame is fully lit at every distance, but the brief says the figure carries the only light. Add falloff from the figure so the far corners (the barrels, the bottom-left wall) drop into darkness.
+- The skeleton bones at centre (about x205–240, y110–130) are a scatter of loose white pixels that reads as noise. Draw them as a readable ribcage, skull and long-bone group.
+- The blue pebbles are spread evenly at random across the dirt. Cluster them along the wall bases and in the corners, where debris would actually collect, and clear them from the middle of the room.
+
+FLIP 4:
+- Replace the faceted-polygon texture on the void and wall tops (left half, the upper-right block, and the lit wall-top column at x440–500) with hand-placed pixel stone at the same pixel size as the floor. Remove every straight facet edge.
+- Remove the smooth anti-aliased crack strokes (the arc from (570,720) to (750,650), and the crack from (300,610) up to (445,515)). Redraw the cracks as one-pixel, aliased breaks that follow and jump the stone joints.
+- Delete the half-transparent circular emblem on the floor at about (575–640, 460–520), or commit to it as a fully opaque, drawn carving.
+- Swap the repeated scribble-hatch stamp on the floor stones for varied wear marks, with no two neighbouring stones sharing a pattern.
+- Redraw the crate (190–300, 475–515), the pillar (262–295, 540–640) and the log bundle (380–500, 595–640) at the figure's pixel size. Give them real material texture: wood grain, rope strands, pin heads. Right now they're flat gradient-shaded blocks.
+- The lit wall top at x440–500, y150–390 sits in the same ochre range as the darker lit floor. Separate the two in value and hue so the top of the wall doesn't read as more floor.
+- Give the wall tops an edge treatment (a lip or highlight line) where they meet the dark wall band, instead of a bare rectangular step.
+
+FLIP 1:
+- Remove the topographic contour lines drawn over the navy void (e.g. from (230,130) to (345,215)). Replace the flat navy with solid, textured rock, or true black.
+- Replace the blotchy "clouds" texture on the lit wall tops (x440–500, y150–390, and x565–630) with pixel-drawn stone at the floor's pixel size.
+- Remove the smooth anti-aliased crack strokes across the floor (the arc from (570,720) to (750,650), and from (300,610) to (445,515)). Redraw them aliased and following the joints.
+- Delete the ghost circular emblem at (575–640, 460–520), or draw it opaque and on purpose.
+- Replace the repeated scribble-hatch stamp on the floor stones with varied, non-repeating wear.
+- Redraw the crate, the untextured box pillar and the log bundle at the figure's pixel size, with grain, rope and pin detail.
+- The south stub's top (310–375, 645–680) is flat light grey. Give it the same stone treatment as the other wall tops so it doesn't read as a cut-out.
+
+FLIP 2:
+- Delete the stepped dark diagonal wedges at the corridor mouth (x505–540, y390–460) and on the south stub's right side (x375–405, y645–710). No wall face in the frame should show a side face.
+- Move the A-frame trestle (x580–680, y405–465) fully onto the floor, below the wall face. Put its feet on the stones and add a contact shadow under each leg.
+- Move the three X-braces (x185–310, y650–705) fully onto floor tiles, clear of the dark wall band, with contact shadows. Or anchor them into the wall with visible pins or lashing.
+- Replace the faceted-polygon shatter on the void and wall tops (left half, the upper-right block, and the lit column at x440–500) with pixel stone at the floor's pixel size.
+- Remove the smooth anti-aliased crack strokes (the arc from (570,720) to (750,650), and from (300,610) to (445,515)). Redraw them aliased and following the joints.
+- Delete the ghost circular emblem at (575–640, 460–520).
+- Replace the repeated scribble-hatch stamp on the floor stones with varied wear.
+- Redraw the pillar (262–295, 540–640), the trestle and the X-braces at the figure's pixel size, with wood grain, rope strands and driven pins.

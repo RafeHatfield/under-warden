@@ -1,0 +1,52 @@
+RANK: 3 > 4 > 2 > 1
+
+BEST: 3
+
+BEST_WHY: 3 is the only frame where every element uses the same pixel size. The crates on the upper left, the two barrels on the bottom edge, the orc figure at the top and the lily pads are all drawn on one grid, and none of them is smoothed or vector-drawn. The crates stand properly: each lid is a lighter panel with a darker planked front below it and a soft drop shadow underneath. The barrels are cut off cleanly by the wall edge at the bottom rather than sitting on top of it. The water surface has a faint repeating cell pattern that is quieter than the pads floating on it. The wall faces are simple too: a two-tone dark-brick band along the bottom and a dark brick face under the left wall block. This is the only frame that looks like it came from one artist working at one resolution.
+
+WORST: 1
+
+WORST_WHY: 1 has everything wrong with 2 and 4, plus broken geometry of its own:
+- **Shadow slabs:** flat black parallelograms are pasted at the doorway (about x505–535, y395–455) and at the lower wall end (about x375–405, y650–705). They are hard-edged polygons with no texture, and they do not line up with either the wall or the floor.
+- **A-frame prop:** the orange A-frame at about x580–680, y405–465 sits across the wall-top/floor seam. Its left leg is over the floor and its crossbar is over the wall band, so it belongs to neither surface.
+- **Cut-off stakes:** the three X-braced stakes at the bottom left (x185–310, y650–705) are chopped off by the wall edge partway through. Two of them are cut half-width.
+- **Mixed drawing styles (all three lit frames):** the props are smooth flat-shaded shapes with bevels, drawn with no pixel grid. The figure is a crisp low-res sprite. The floor is a noisy mid-res texture. Thin smooth black crack lines (from about x300,y630 up to x445,y515, and along the lower right from x570,y720 to x750,y650) run straight across tile joints, ignoring the stones.
+- **Darkness overlay (all three lit frames):** the dark areas are covered in large faceted polygon shards, clearly visible at the top left (x0–440, y0–390) and the top right (x570–750, y60–390). They look like a Voronoi filter laid over the art, not like stone.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Delete the black parallelogram slabs at the doorway (x505–535, y395–455) and at the lower wall end (x375–405, y650–705). If a shadow is needed there, draw it as a textured, softened falloff that follows the wall edge.
+- Move the A-frame fully onto the floor or fully onto the wall top, and give it a contact shadow so it sits on one surface.
+- Redraw the three X-braced stakes at the bottom left so each one is whole. Place them on the floor side of the wall edge, or clip them along a drawn wall face rather than slicing through them.
+- Redraw every prop (A-frame, stakes, pillar) as pixel art at the same pixel size as the figure: hard-edged clusters, a 3–4 value ramp, no smooth gradients and no vector bevels.
+- Replace the smooth crack lines with pixel cracks that start and end at tile joints and chip the stone edges, and cut their number by at least two-thirds.
+- Remove the faceted polygon overlay from the dark areas. Let the unlit wall and floor fade into flat near-black, with the stone still faintly readable underneath.
+- Replace the square block of bright tiles around the figure (x350–450, y460–580) with a smooth radial falloff, so the light no longer steps tile by tile.
+
+FLIP 2:
+- Remove the faceted polygon overlay in the darkness at the top left (x0–440, y0–390) and the top right (x570–750, y60–390).
+- Redraw the crate at the left (x190–300, y475–515) and the roped log at the bottom middle (x380–500, y590–640) as pixel art at the figure's pixel size. They are currently smooth orange shapes with bevels and gradient shading.
+- Redraw the pillar at x260–295, y540–640 the same way. It is currently a flat extruded rectangle with no stone texture and no pixel grid.
+- Replace the long smooth black crack curves (x300,y630 to x445,y515; x570,y720 to x750,y650) with pixel cracks that follow the tile joints.
+- Brighten and sharpen the floor texture on the right half (x470–750, y460–640). In 2 it is a muddy, low-contrast smear, and the lit stones there lose their joints.
+- Remove the hard-edged dark rectangle at the left of the corridor (x120–185, y390–710), which reads as a mask edge rather than a wall.
+- Replace the square cluster of bright tiles around the figure with a smooth radial light falloff.
+
+FLIP 3:
+- Texture the grey wall tops (the left column at x0–55, the right column at x345–384, and the bottom band at y215–265). Right now they are flat grey with a perfectly regular grid of thin lines, which reads as a placeholder fill. Vary the stone sizes, give the joints uneven depth, and add wear on the top faces.
+- Replace the translucent moss blobs on the wall tops (for example x20–60, y45–70 and x355–384, y145–170). They are low-alpha stamps pasted straight over the grid lines. Paint moss that fills the joints and stays opaque.
+- Add the carried light the fiction calls for: a radial falloff from the figure, with the frame edges going dark. Right now everything is evenly lit, like a daylight debug view.
+- Replace the lily pads on the pool with something cold: still black water, scum at the edges, or submerged debris. The pads make the frame feel cheerful, which works against the cold, administered tone.
+- Redraw the orange strip on the left wall face (x28–35, y128–165) as a clear object with a readable silhouette, such as a lashed timber prop or a driven pin with rope. At the moment it is just an ambiguous bar.
+- Break up the dirt floor noise with worn paths, drag marks and repair litter (rope ends, pins, hide scraps). At the moment it is uniform procedural speckle across the whole floor.
+
+FLIP 4:
+- Remove the faceted polygon overlay in the darkness at the top left and top right.
+- Redraw the crate (x190–300, y475–515), the roped log (x380–500, y590–640) and the pillar (x260–295, y540–640) as pixel art at the figure's pixel size, with no smooth bevels or gradients.
+- Replace the smooth crack curves with pixel cracks that start and end at tile joints, and cut down how many there are.
+- Cut the busy hatch marks on the lit floor at the right (x560–750, y470–600). They sit at the same contrast as the stone joints, so the floor turns into noise. Knock them down to one value step above the stone.
+- Remove the hard-edged dark rectangle at the left of the corridor (x120–185, y390–710).
+- Replace the square cluster of bright tiles around the figure with a smooth radial falloff.
