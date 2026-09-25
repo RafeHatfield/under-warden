@@ -63,6 +63,21 @@ SUBJECTS = [
                  "cheval de frise", "chevaux de frise", "obstacle"],
          refuse=["fence", "fencing", "palisade", "railing", "gate", "ladder", "sticks",
                  "debris", "rubble", "bricks", "brick", "bench", "bed", "jumble", "pile"]),
+    # THE BAR IS A BLOCKING WORD — #207 R2 (Claude under delegation, Rafe to overturn, 2026-09-23).
+    # The walk passed c2 as wood and as built and failed it as a barrier: "looks good but I'm not
+    # sure what it is meant to be doing." Every c2 seat reached for "sawhorse / trestle", which the
+    # `barricade` subject above does not refuse, so it cannot judge this question. Accept is the
+    # brief's blocking vocabulary (barricade, spikes, stakes, cheval-de-frise, fence, obstacle) plus
+    # the three blocking nouns the subject above already accepts; refuse adds the sawhorse read and
+    # keeps every refusal above that is not a blocking word. Substrings: "stake" and "spike" also
+    # match their plurals and "spiked".
+    dict(key="barricade_blocking", card="B-PROP-002a the X-frame, judged on function (#207 R2)",
+         accept=["barricade", "spike", "stake", "cheval de frise", "cheval-de-frise",
+                 "chevaux de frise", "chevaux-de-frise", "fence", "obstacle", "barrier",
+                 "blockade", "roadblock"],
+         refuse=["sawhorse", "saw horse", "saw-horse", "trestle", "plank", "railing", "gate",
+                 "ladder", "sticks", "debris", "rubble", "bricks", "brick", "bench", "bed",
+                 "jumble", "pile", "table"]),
     dict(key="fire", card="B-PROP-003 the orc fire",
          accept=["fire", "campfire", "firepit", "fire pit", "brazier", "hearth", "bonfire",
                  "fire ring", "cooking fire", "embers", "flame"],

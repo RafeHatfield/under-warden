@@ -1,0 +1,53 @@
+RANK: 3 > 2 > 1 > 4
+
+BEST: 3
+BEST_WHY: It is the only frame drawn at one pixel density with one palette, so everything reads as one piece of art. The wall tops (the grey slabs across the bottom and down both sides) have a light top edge and a dark brick face under them at the very bottom, so they read as raised mass rather than painted floor. The two crates top-left are drawn as a pale lid over a darker plank front with a soft contact shadow under each. The two barrels at the bottom are overlapped by the south wall, as they would be from this camera angle. The dirt floor carries small scattered blue-grey pebbles at an even, sparse density, and none are clumped or tiled. The lily pads come in three or four sizes with small single-pixel buds, so they don't look stamped.
+
+WORST: 4
+WORST_WHY: Three objects are rendered in a different medium from everything else:
+- The crate top-left (about x190–300, y475–515).
+- The lashed log bundle lower-centre (about x380–500, y590–640).
+- The upright post left of centre (about x260–295, y540–640).
+
+All three are smooth, gradient-shaded, untextured orange/pink solids with no pixel detail, like grey-box placeholder geometry dropped onto a pixel-art floor. The log bundle's lower plank runs flat across the floor with no shadow and no contact. Underneath the props is the base shared by 1, 2 and 4:
+- **Floor:** coarse stone rectangles with fine 1px scratch hatching and thin smooth crack curves laid over them. The long arc lower-right and the diagonal from the figure down-left both ignore the stone joints entirely. It reads as a texture filter over a tile map.
+- **Dark wall mass:** top-left (x0–200, y0–380) and top-right (x570–750, y100–380) are broken into huge flat polygon facets, a visible procedural noise pattern.
+- **Wall tops:** the lit wall tops (x440–500, y70–390; x120–180, y390–700) are blotchy upscaled noise, not drawn stone.
+- **Pixel scale:** the figure's chunky sprite pixels don't match the fine scratch pixels of the floor it stands on.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 3:
+- There is no light falloff anywhere. The frame is lit flat to every edge, yet the premise is that the figure carries the only light. Add a radial falloff from the figure (the green figure top-centre) so the bottom-left corner and the pool's far edge fall toward black.
+- The pool (x245–345, y0–190) is a hard axis-aligned rectangle cut into the dirt, with no bank, lip, wet margin or depth change. Add an edge tile row: a darker wet-dirt band on the dirt side and a darker, deeper tone just inside the water edge.
+- The teal moss blobs on the grey wall tops are one semi-transparent stamp repeated. It appears at left (x20–45, y55–75), at right (x355–380, y150–170) and at bottom-left (x15–40, y205–225), always the same clover shape at the same opacity. Replace them with at least three hand-drawn variants, drawn opaque with their own darker edge pixels.
+- The grey wall tops are one flat value with only a regular grid line. Vary the slab sizes and add chipping and edge wear, especially on the north-facing edge where the floor meets the wall.
+- The bone scatter mid-right (x205–240, y110–130) is a single white decal with no shadow and no neighbours. Give it a contact shadow and a second, smaller scatter so it reads as placed rather than dropped.
+- The dirt floor is a single uniform noise fill across the whole room. Break it with worn paths: lighter compacted dirt between the door (left, orange post), the crates and the barrels.
+
+FLIP 2:
+- A hard-edged cold-blue shadow wedge runs from the small lantern/keg (about x330–355, y535–565) down-left to the floor edge (about x230–380, y570–700). It is a clean geometric triangle with no penumbra. It is also far too large for an object that small, and the wrong hue against warm torch light. Soften it and shorten it to a few tiles, and pull its hue toward the dark warm floor colour.
+- The brazier right of centre (x580–620, y530–570) is ringed by a pale yellow-white halo that reads as a selection or targeting ring. Remove the ring and let its glow fall off into the floor.
+- The three floor props (the X at x200–235, y600–625; the burning X at x390–425, y600–630; the pair of glowing orange sticks at x515–555, y600–625) are icon-sized and have no contact shadows. They float. Scale them up to at least one full tile, add ground shadows, and stop the sticks glowing as if they were light sources.
+- The floor is fine 1px hatching and smooth crack curves laid over coarse stone blocks (the long arc lower-right, the diagonal from the figure down-left). Redraw the cracks at the stones' pixel scale, following or stopping at joints.
+- Redraw the large translucent overlapping rectangles in the floor (for example the paler block right of the figure, about x520–600, y455–520) as discrete stones. Right now they are lighter panels laid over the joints beneath.
+- The dark wall mass top-left (x0–200, y0–380) and top-right (x570–750, y100–380) shows large flat polygon facets. Replace them with drawn rock or masonry, or a uniform dark.
+- The lit wall tops (x440–500, y70–390; x120–180, y390–700) are blotchy noise. Redraw them as stone at the same pixel scale as the floor.
+- The figure is drawn at a much coarser pixel density than the floor detail around it. Bring the floor detail up to the figure's pixel size, or the reverse, so there is one density on screen.
+
+FLIP 1:
+- The A-frame sawhorse top-right (x580–680, y405–465) straddles the wall top and the floor, with half of it on the wall surface. Move it fully onto the floor and give it a contact shadow.
+- Remove the black skewed parallelogram on the right edge of the dark block lower-left (x375–405, y645–710), and the matching dark diagonal wedge in the corridor mouth (x505–540, y390–430). Both are slanted perspective shading that contradicts the straight-down camera.
+- The upright post left of centre (x260–295, y540–640) is a smooth pink gradient block with no pixel texture, like grey-box geometry. Redraw it as a pixel sprite: timber or stone grain, the rope binding done in pixels, and a proper shadow.
+- The three X-braces bottom-left (x185–310, y650–705) sit across the wall edge and the dark void below it, overlapping the wall face. Seat them on the floor inside the room.
+- Apply the base-floor fixes: redraw the cracks at the stones' pixel scale, stopping at joints; remove the translucent overlapping panels; replace the polygon facets in the dark wall mass; redraw the noise wall tops as drawn stone.
+- Bring the figure and the environment to one pixel density.
+
+FLIP 4:
+- Replace the three smooth-shaded solids with pixel-art sprites at the same density as the figure: the crate top-left (x190–300, y475–515), the lashed log bundle (x380–500, y590–640) and the post (x260–295, y540–640). They need drawn wood grain, rope in pixels and hard-stepped shading, not gradients.
+- Give the log bundle and the crate contact shadows. The bundle's lower plank currently lies on the floor with no shadow at all.
+- The log bundle's right end runs toward the dark block below it (x310–375, y645–710). Pull it clear so the prop doesn't press into the wall mass.
+- Apply the base-floor fixes: redraw the cracks at the stones' pixel scale, stopping at joints; remove the translucent overlapping panels (for example right of the figure, x520–600, y455–520); replace the polygon facets in the dark wall mass (x0–200, y0–380 and x570–750, y100–380); redraw the noise wall tops (x440–500, y70–390; x120–180, y390–700) as drawn stone.
+- Bring the figure and the environment to one pixel density.

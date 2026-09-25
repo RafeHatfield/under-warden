@@ -1,0 +1,55 @@
+RANK: 2 > 3 > 1 > 4
+
+BEST: 2
+BEST_WHY: In 2, every element is drawn at the same pixel density and in the same way. The crates (top-left, x≈63–97), the barrels (x≈113–192, y≈193–215), the bones (x≈208–237, y≈112–130), the green figure and the floor are all hand-placed pixel art with a single outline and shading logic. None of them looks pasted in from a different renderer. The dirt floor has small dark red-brown flecks and a few scattered blue-grey pebbles, and they don't fall into an obvious repeating tile. The bottom wall band (y≈270–288) has a lit top edge over a darker brick face, so it reads clearly as a wall and not as floor. It is the only frame where nothing looks generated or placeholder. It does not clear the bar, though (see FLIP 2).
+
+WORST: 4
+WORST_WHY: The timber A-frame is at x≈580–680, y≈360–420. That puts it on top of the solid wall mass, above the rail band at y≈420–450, so it is floating on rock no one could stand on. It is also drawn as a smooth, flat-shaded 3D extrusion with no pixel detail, which looks nothing like the crisp pixel sprite of the figure at (410, 488). The single X-barricade at x≈215–300, y≈650–705 has a plank sticking out sideways and straddles the wall line. On top of that, 4 has every fault it shares with 1 and 3:
+- The pillar at x≈262–296, y≈537–640 is a plain beige rectangle with no texture. It looks like an untextured placeholder.
+- The unlit rock in the top-left quadrant (x≈0–440, y≈0–390) is broken into large flat Voronoi-style polygons with visible straight edges. That looks procedurally generated.
+- The upper wall mass (x≈440–500, y≈70–390) is filled with blotchy camouflage-style noise. It reads as a filter, not as stone.
+- The floor stones carry scribbled hatching at varying scales. Long thin crack curves (from ≈240,460 to 440,520, and an arc from ≈570,720 to 750,650) run straight across tile joints, ignoring the stones they cross.
+- A slanted dark parallelogram "side face" at x≈505–535, y≈395–450 and another at x≈375–405, y≈650–710 bring in an oblique view that breaks the straight-down camera.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Remove two of the three identical X-barricades at x≈190–310, y≈650–705. They are the same asset stamped three times in a row. The leftmost one is also clipped by the wall edge at x≈183.
+- Move the A-frame at x≈580–680, y≈405–465 fully onto the floor or fully off it. Right now it straddles the wall's rail band and the first floor row.
+- Redraw every timber prop (X-barricades, A-frame) as pixel art at the figure's pixel scale, with an outline and 2–3 value shading. At the moment they are smooth vector/3D extrusions with flat gradients.
+- Texture the beige pillar at x≈262–296, y≈537–640 (stone grain, chipped edges, the rope or pin repairs the fiction implies), and give it a top and a lit side that match the light falloff.
+- Replace the Voronoi polygons in the unlit rock (x≈0–440, y≈0–390, and the right side x≈570–750, y≈70–390) with a hand-built rock or fill tile that has no straight polygon seams.
+- Replace the camouflage noise on the wall tops (x≈440–500, y≈70–390) with a deliberate stone-top tile that reads as cut rock, darker than the lit floor.
+- Redraw the floor cracks as pixel cracks that follow or break at the stone joints, instead of thin smooth curves running across several tiles.
+- Delete the slanted parallelogram faces at x≈505–535, y≈395–450 and x≈375–405, y≈650–710, or redraw them as straight-down wall ends.
+- Unify the hatching texture inside the floor stones to one pixel scale. Right now there are fine scribbles next to coarse blocks inside the same stone.
+
+FLIP 3:
+- Redraw the crate at x≈190–300, y≈475–515 and the lashed log bundle at x≈380–500, y≈590–640 as pixel art at the figure's pixel density. They are currently smooth, flat-shaded orange extrusions with no wood grain. The rope on the bundle is a smooth tan band, not pixel rope.
+- Darken and desaturate both props where they fall away from the light. The log bundle at y≈620–640 sits in the shadowed lower band but is nearly as saturated orange as the lit floor.
+- Texture the beige pillar at x≈262–296, y≈537–640, as in FLIP 1.
+- Replace the Voronoi polygon fill in the unlit rock (x≈0–440, y≈0–390) with a hand-built fill tile.
+- Replace the camouflage noise on the wall tops (x≈440–500, y≈70–390) with a stone-top tile.
+- Redraw the floor cracks so they respect the stone joints, as in FLIP 1.
+- Either remove or finish the faint circular glyph on the floor at x≈570–620, y≈470–520. It is a half-visible ghost stamp.
+- Unify the scale of the floor hatching.
+
+FLIP 4:
+- Move the A-frame at x≈580–680, y≈360–420 off the top of the solid wall mass and onto walkable floor, or remove it.
+- Redraw the A-frame and the X-barricade (x≈215–300, y≈650–705) as pixel art at the figure's scale, instead of smooth 3D extrusions.
+- Trim or re-seat the X-barricade's sideways plank so that it sits on one side of the wall line and doesn't straddle it.
+- Texture the beige pillar at x≈262–296, y≈537–640.
+- Replace the Voronoi polygon fill in the unlit rock (x≈0–440, y≈0–390, and x≈570–750, y≈70–360).
+- Replace the camouflage noise on the wall tops (x≈440–500, y≈70–390) with a stone-top tile.
+- Delete or redraw the slanted wall-end parallelograms at x≈505–535, y≈395–450 and x≈375–405, y≈650–710 as straight-down.
+- Redraw the floor cracks so they respect the stone joints, and unify the scale of the hatching inside the floor stones.
+
+FLIP 2:
+- Apply light falloff centred on the carried light: full value within about 2 tiles of the figure, dropping to near-black by the frame edges. At the moment every tile, including the corners at (0,288) and (384,0), is at full brightness.
+- Break up the grey wall tops (x≈0–55, y≈0–216, and x≈344–384, y≈0–216). They are a flat mid-grey with an even grid of square outlines, which reads as a placeholder tile. Vary the value per block, chip the edges, and stop every block sitting at the same exact size.
+- Replace the repeated moss stamp. The same pale-green blob appears at about (20–45, 53–77), (13–40, 207–230) and (353–380, 147–173). Remove it or use at least three distinct variants.
+- Give the pool (x≈248–344, y≈0–192) an edge. It is a perfect rectangle butted straight against the dirt and the wall, with no bank, lip or wet margin. Add a 1–2 px shoreline with a darker wet dirt band.
+- Redraw the door at x≈27–35, y≈128–167. It is a thin orange strip with no frame or hardware, so it reads as a marker, not a door.
+- Remove or explain the loose blue-grey pebbles scattered evenly across the dirt (for example at 125,15 / 172,152 / 185,158). Their even spacing reads as random scatter, not wear.

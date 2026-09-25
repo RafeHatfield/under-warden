@@ -29,6 +29,16 @@ CANDS = {
                            "and lashed where they cross with dark bindings, their feet planted on the "
                            "ground, a low bar lashed between the feet, weathered dark wood, bark and "
                            "splinters, no grass, matte, unlit"),
+    # #207 R2 (2026-09-23): the bar is the sawhorse read — removed. Three crossings of sharpened
+    # stakes span the gap; the prompt never names a bar, a rail or a beam, and refuses them.
+    "c3": ("barricade_c3", "a barricade of sharpened stakes: three pairs of thick rough-hewn timber "
+                           "stakes crossed and lashed where they cross with dark bindings, feet "
+                           "planted on the ground, the stakes cut to sharp points, weathered dark "
+                           "wood, bark and splinters, no grass, matte, unlit"),
+}
+NEGATIVE = {
+    "c3": "sawhorse, trestle, horizontal bar, rail, beam, plank, planks, boards, lumber pile, "
+          "fence rail, ladder, bench, table",
 }
 IDS = [9810, 9811]
 CANVAS = (128, 64)
@@ -46,7 +56,7 @@ def generate(c):
         out = "%s_s%d" % (c, seed)
         if os.path.exists(os.path.join(RAW, out + ".png")):
             continue
-        payload = {"description": mat + pp.SUFFIX, "negative_description": "planks, boards, lumber pile, fence, ladder, bench",
+        payload = {"description": mat + pp.SUFFIX, "negative_description": NEGATIVE.get(c, "planks, boards, lumber pile, fence, ladder, bench"),
                    "image_size": {"width": CANVAS[0], "height": CANVAS[1]},
                    "init_image": v2.enc(init), "init_image_strength": pp.STRENGTH,
                    "no_background": True, "text_guidance_scale": 8, "seed": seed}

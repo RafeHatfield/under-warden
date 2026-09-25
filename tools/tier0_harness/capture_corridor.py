@@ -27,7 +27,11 @@ sys.path.insert(
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CONFIG = os.path.join(REPO, "tools/tier0_harness/harness_config.yaml")
-DEFAULT_GODOT = "/Applications/Godot_mono.app/Contents/MacOS/Godot"
+# GODOT overrides the binary — the same env knob the iOS build scripts already honour — so a
+# machine that must run Godot muted and in the background (a work Mac, during meetings) can point
+# every capture, the frame critic's fixed capture command included, at a wrapper without editing
+# docs/FRAME-CRITIC.json.
+DEFAULT_GODOT = os.environ.get("GODOT", "/Applications/Godot_mono.app/Contents/MacOS/Godot")
 
 
 def read_config(path=CONFIG):

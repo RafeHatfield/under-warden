@@ -1,0 +1,47 @@
+{
+ "subject": "barricade_blocking",
+ "box": [
+  170.0,
+  720.0,
+  330.0,
+  820.0
+ ],
+ "seats": 5,
+ "named": 5,
+ "verdict": "PASS",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "NAMED",
+   "phrase": "wooden spiked barricade (a row of crossed stakes)"
+  },
+  {
+   "seat": 2,
+   "verdict": "NAMED",
+   "phrase": "wooden x-shaped barricade"
+  },
+  {
+   "seat": 3,
+   "verdict": "NAMED",
+   "phrase": "row of wooden x-shaped spike barricades"
+  },
+  {
+   "seat": 4,
+   "verdict": "NAMED",
+   "phrase": "crossed wooden stakes forming a barricade"
+  },
+  {
+   "seat": 5,
+   "verdict": "NAMED",
+   "phrase": "row of wooden x-shaped barricades"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: an object I cannot identify (a wooden A-frame shape against the back wall)\nWHERE: 628,522\nSURE: GUESSING\n\nOBJECT: an object I cannot identify (a glowing red and orange round thing, maybe a small fire or a trap)\nWHERE: 600,634\nSURE: GUESSING\n\nOBJECT: stone pillar or post on a wooden base\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: wooden spiked barricade (a row of crossed stakes)\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: an object I cannot identify (a dark box-shaped block, maybe a crate)\nWHERE: 345,770\nSURE: GUESSING\n\nCOUNT: 5\n",
+  "OBJECT: wooden A-frame structure, possibly a sawhorse or small tent frame\nWHERE: 625,525\nSURE: PROBABLY\n\nOBJECT: an object I cannot identify (round red and orange thing with a dark centre, maybe a trap or glowing rune)\nWHERE: 600,633\nSURE: GUESSING\n\nOBJECT: stone pillar or post\nWHERE: 277,680\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped barricade\nWHERE: 200,770\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped barricade\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped barricade\nWHERE: 290,770\nSURE: PROBABLY\n\nOBJECT: wooden crate or small table\nWHERE: 343,768\nSURE: GUESSING\n\nCOUNT: 7\n",
+  "OBJECT: wooden A-frame, possibly a sawhorse or barricade\nWHERE: 625,525\nSURE: GUESSING\n\nOBJECT: an object I cannot identify (round, red and black, on the floor; maybe a trap or rune)\nWHERE: 600,633\nSURE: GUESSING\n\nOBJECT: stone pillar or post\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: row of wooden X-shaped spike barricades\nWHERE: 250,770\nSURE: PROBABLY\n\nOBJECT: wooden crate or low table\nWHERE: 345,770\nSURE: GUESSING\n\nCOUNT: 5\n",
+  "OBJECT: wooden A-frame structure, possibly a sawhorse or a trestle with planks\nWHERE: 628,525\nSURE: GUESSING\n\nOBJECT: small fire burning in a bowl or pit, like a brazier or campfire\nWHERE: 600,635\nSURE: PROBABLY\n\nOBJECT: short stone pillar or post\nWHERE: 278,675\nSURE: PROBABLY\n\nOBJECT: crossed wooden stakes forming a barricade\nWHERE: 200,770\nSURE: PROBABLY\n\nOBJECT: crossed wooden stakes forming a barricade\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: crossed wooden stakes forming a barricade\nWHERE: 292,770\nSURE: PROBABLY\n\nCOUNT: 6\n",
+  "OBJECT: wooden A-frame structure, possibly a sawhorse or small tent\nWHERE: 625,525\nSURE: PROBABLY\n\nOBJECT: glowing round fiery object, possibly a brazier or fire trap\nWHERE: 600,633\nSURE: PROBABLY\n\nOBJECT: stone pillar or post\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: row of wooden X-shaped barricades\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: small key\nWHERE: 366,567\nSURE: GUESSING\n\nCOUNT: 5\n"
+ ]
+}

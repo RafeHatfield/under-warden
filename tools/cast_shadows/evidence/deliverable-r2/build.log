@@ -1,0 +1,65 @@
+== FRAME CRITIC GATE
+   verdict:  INSTALL-LATEST   lane art/xframe-function-207 round 1   2026-09-25T11:09:37
+   build:    443b4a390d1c
+
+   INSTALL-LATEST — non-regression against the seeded reference.
+     panel: not below it in 3 of 5 seats (above in 1); flagged by 5.
+     item exit MET: every ruling from Rafe's walk is built and measured: the jamb's face takes
+       measured: JAMB: pre-fix the east face sat at (59.7, r/b 2.89) with and without occ
+     Outstanding items, each disposed:
+     ROUTED-ALREADY The A-frame sawhorse top-right (x580–680, y405–465) straddles the wall
+                    -> props
+                    cites #212
+                    measured: The Λ at (9,12) is untouched by this round. Its scale is #212 R1, 
+     ROUTED-ALREADY Remove the black skewed parallelogram on the right edge of the dark bl
+                    -> walls
+                    cites #211
+                    measured: The 'skewed parallelogram' at a wall end is Tier1EastFace, RATIFIE
+     ROUTED-ALREADY The upright post left of centre (x260–295, y540–640) is a smooth pink 
+                    -> props
+                    cites #204
+                    measured: The upright post is B-PROP-001 the marker stone at (4,13); its tex
+     ROUTED         The three X-braces bottom-left (x185–310, y650–705) sit across the wal
+                    -> walls
+                    cites #211
+                    measured: MEASURED IN THE FRAME, and part of it is a real defect. The X's fe
+     ROUTED-ALREADY Apply the base-floor fixes: redraw the cracks at the stones' pixel sca
+                    -> floors
+                    cites #194
+                    measured: Cracks at the stones' scale and stopping at joints, and the cap/wa
+     ROUTED-ALREADY Bring the figure and the environment to one pixel density.
+                    -> character
+                    cites §10.5
+                    measured: The figure is the placeholder Oryx knight (tileset 16bit_fantasy),
+   plant:    props-unrecognizable-shadowed.png — caught
+   GATE OPEN — a blind seat would ship this exact frame.
+DEVICE GATE PRECONDITIONS — round 33, standing capture r24_onroute
+
+  ~  1. round VALID                 no seat round        (advisory: demoted)
+  ~  2. diagnostic seat's axis      not recorded         (advisory: demoted)
+  ~  3. comparative seat            no approved capture  (advisory: demoted;
+                                       the frame-critic runs a three-frame deck)
+  4. every ruled fix present        ok (11 checked)
+  ~  grid-coincidence               ok                    (advisory)
+  ~  shipped-path                   ok                    (advisory)
+
+PRECONDITIONS OK — every ruled fix is in this build. The frame-critic's PASS is what
+opened the gate; this file only checked that the artefact carries what was ruled.
+== scene override: res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json
+== WALK PRECONDITIONS — marker src/Presentation/assets/tier0_harness/REVIEW_BUILD.json
+   walk: rig-energy — the §6.2.1 / Ruling 56 rig pass
+   requirements present. This says the walk CAN BE PERFORMED, and nothing about
+   whether the picture is any good — that is the frame critic's question.
+== void ring: 0 (marker; the manifest's ruled 0 is what a shadow build runs)
+== cast shadows: occluders=all softness=12.0 darkness=0.8 flicker=1
+== build identity: commit=443b4a390d1c5a48c2e42e88af5fdc5ece07c6fe built=2026-09-25T19:02:11Z
+== marker written: REVIEW_BUILD.json
+== grid: tile 32 at x2.0
+== bundle id: com.rafehatfield.underwarden.tier0   name: YARL Tier0
+== export (--export-debug, preset 'iOS') from /Users/rafehatfield/development/ff/under-warden-wt/r2
+== xcodebuild (Debug, scheme 'UnderWarden')
+   built: YARL Tier0  (com.rafehatfield.underwarden.tier0)  [C#: UnderWarden.Presentation.framework]
+== devicectl install -> 5DB969FF-269C-5A8A-86EB-99EC9FF22397
+   installed.
+== marker removed (a leftover would silently make the next build a review build)
+exit 0
