@@ -1,0 +1,43 @@
+I've viewed all four frames and zoomed into the lit rooms of 2 and 3 and the whole of 1. My verdict:
+
+RANK: 1 > 2 > 3 > 4
+
+BEST: 1
+BEST_WHY: It is the only frame drawn at one consistent pixel size. The barrels at bottom centre, the two crates at top left, the goblin at top centre and the lily pads in the pool on the right are all on the same pixel grid as the floor and walls. None of them is smoother or chunkier than what surrounds it. The barrel lids have a proper rim highlight and a dark band, and the crates cast a short soft shadow onto the dirt beneath them. It is simple, but nothing in it looks like a different process made it. Being ranked first does not make it shippable.
+
+WORST: 4
+WORST_WHY: There is no picture. The whole 750×911 frame is a single flat grey, RGB(78,78,78) or close to it: one colour, no tiles, no figure, no light and no interface. It is a failed render or an empty capture.
+
+FLAGGED: 4, 2, 3
+
+- 4: blank frame.
+- 2 and 3: the unlit wall mass at top left, top right and left side is covered in huge faceted polygon shards. They look like a Voronoi or shatter overlay of flat grey-brown panels with straight seams, and they cut right across the tile grid. You can see them from across the room, and they read as a filter left switched on.
+
+SHIP: NONE
+
+FLIP 1:
+- Add the figure's light. The frame is evenly lit from edge to edge, so the grey wall at bottom right is exactly as bright as the dirt beside the goblin. Darken everything with distance from the figure so the far corners (bottom left and bottom right) fall to near black.
+- Reframe the camera. The goblin is clipped by the top edge of the frame at about y=0–20, so the player character is half off screen.
+- Replace the dirt fill. At the moment it is a uniform scatter of red-brown single pixels plus a few identical teal pebbles repeating at regular intervals. Give it variation you can see at tile scale: worn tracks, compacted patches, and debris gathered against the wall bases.
+- Replace the moss stamps. The translucent green blobs on the left wall (about x=20–40, y=60–80 and y=200–230) and the right wall (about x=355–375, y=150–170) are the same shape at the same opacity. Draw them as several distinct variants, or remove them.
+- Give the pool an edge. It is a perfect rectangle that meets the dirt along a single hard pixel line on its left and bottom sides. Add a bank or lip tile, wet darkening on the dirt next to it, and a lighter band where the water meets the edge.
+- Give the grey wall tops some material. Right now they are flat mid-grey squares separated only by one-pixel grid lines, with a few stray crack lines. Add chipped edges, a top-edge highlight and a variation of 2–3 values between blocks, so they read as stone rather than a debug fill.
+- Show the orc repairs the fiction promises. There is no rope, pin, hide patch or lashed timber anywhere in the frame. The orange post in the left wall slot (about x=27, y=128–165) is the only repair-like object and it reads as a flat orange bar. Make it a lashed timber prop and add at least one more.
+
+FLIP 2:
+- Remove the polygon-shard overlay from every unlit wall mass (top left block about x=0–440, y=70–390; top right block x=570–750, y=70–390; left strip). Replace it with real wall-top tiles on the same grid as the floor.
+- Retexture the floor stones. At the moment they are blurry, smeared blotches with scratch lines laid over them, like a noise pass at a different resolution from the sprites. Redraw them as pixel-art slabs with deliberate joints at the same texel size as the character.
+- Redraw the crate (x≈190–300, y≈475–515), the pillar (x≈260–295, y≈540–640) and the log (x≈380–500, y≈595–640) at the same pixel density as everything else, with real texture. Right now they are flat-shaded orange and tan blocks with almost no internal detail, and they look like placeholder primitives. Give the lashing on the log real rope strands.
+- Retexture the vertical corridor at top centre (x≈505–565, y≈70–450). It is a smooth blue-grey smear with no tiles in it.
+- Redraw the wall-face strip along y≈420–450 as one consistent brick course. At the moment the brick pattern breaks and changes scale where it meets the corridor.
+- Replace the long single-pixel black crack lines that run across the whole floor and on into the dark area (for example the arc at bottom right, x≈560–750, y≈640–720). They ignore tile boundaries and lighting, and read as a vector overlay. Either confine cracks to individual stones, or delete them.
+- Tone the figure down. Its bright saturated cyan and orange chibi palette is far brighter than anything else in the frame, and it clashes with a dry, cold setting. Bring its palette in line with the environment.
+
+FLIP 3:
+- Every item in FLIP 2 applies here unchanged, because this frame has the same geometry, props and overlays.
+- Reduce the brazier's light (x≈600, y≈545). Its orange spill blows out the whole right half of the room, pushing the floor to around RGB(189,117,67) at x=650. That flattens the stone joints there into a single orange wash, which is worse than frame 2. Cap how far it reaches, and keep the joint shadows visible inside the lit area.
+- Stop the brazier light leaking into the dark lower-right area (at x=700, y=650 it lifts a near-black area to RGB(80,51,34)). Make it respect walls and fall off before the edge of the room.
+
+FLIP 4:
+- Fix the renderer or the capture so the frame actually contains the scene. Right now it is one flat grey colour and there is nothing to judge.
+- Once it renders, send it back through review from the start.

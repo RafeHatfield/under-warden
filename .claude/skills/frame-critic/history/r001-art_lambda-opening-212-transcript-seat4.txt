@@ -1,0 +1,48 @@
+RANK: 3 > 4 > 1 > 2
+
+BEST: 3
+BEST_WHY: 3 is the only frame drawn at one pixel scale throughout. The grey flagstones, the dirt floor, the two crates at top-left, the barrels at bottom-centre and the green figure at top all use the same pixel size and the same dark outline, so nothing looks pasted in from somewhere else. The stone has a lit top edge and a dark brick face along the bottom band (y≈265–288), so the wall reads as having height. It is the only frame that looks like one person drew all of it in one pass. That is why it ranks first. It is still not shippable (see FLIP 3).
+
+WORST: 2
+WORST_WHY: 2 is not a frame. Every pixel in the 750×911 image is the same grey (RGB 77,77,77), with no floor, walls, figure or light. Either the render failed or the capture was taken before anything drew.
+
+FLAGGED: 2, 1, 4
+
+- 2: blank, for the reason above.
+- 1 and 4: the props are smooth-shaded, untextured blocks sitting on a pixel-art floor.
+  - In both frames, the pillar left of centre (x≈262–295, y≈537–640) is a flat tan box with a soft gradient and no pixel detail.
+  - In 4, the plank crate at left (x≈190–300, y≈475–515) and the log at lower centre (x≈380–500, y≈595–640) are plain orange shapes that look extruded.
+  - In 1, the A-frame at top-right (x≈580–680, y≈405–465) and the three X-braces at bottom-left (x≈185–310, y≈650–705) are the same kind of plain orange shape.
+  - The figure is chunky pixel art, while the floor carries fine noise and scribbled hatching at a much smaller scale. Three resolutions are on screen at once, and anyone would notice at a glance.
+
+SHIP: NONE
+
+FLIP 1:
+- Redraw the pillar, the A-frame and the X-braces as pixel art at the figure's scale. Give them a dark outline, 3–4 shade steps and wood grain. Remove the smooth gradient shading.
+- The A-frame at top-right is drawn on top of the wall's top surface and sticks out past the wall edge into the room. Either put its feet on the floor or treat it as a wall fixture and clip it to the wall face.
+- The X-braces at bottom-left sit across the lower wall edge with nothing holding them up. Show how they're attached (driven pins, rope lashings at the crossings) and ground them with a contact shadow on the floor.
+- Remove the grey-blue diagonal wedge at the end of the top corridor wall (x≈505–540, y≈395–450). It is the only surface in that colour, and it reads as a stray bevel.
+- The long 1px black crack lines run across many stones and ignore every joint, for example from (300,640) to (445,515) and the arc at lower right (570–750, 640–720). Either break the cracks at the joints and vary their thickness, or remove them. Right now they read as a vector overlay.
+- The scribbled hatching inside every floor stone is the same texture at different opacities, which reads as a filter. Replace it with hand-placed wear (worn centres, chipped corners) and make fewer stones textured, not all of them.
+- The wall tops (x≈120–500, y≈60–420) are a blotchy cloud-noise fill with no stone structure. Give the tops readable blocks or rubble at the same pixel scale as the floor.
+- Make the floor stones' pixel size match the figure's. At the moment the floor detail is about half the size of the figure's pixels.
+
+FLIP 4:
+- Redraw the crate, the lashed log and the pillar as pixel art at the figure's scale, with outlines, stepped shading and grain. Keep the rope wrap on the log, which is the one prop detail that suits the fiction. Draw the rope as pixel coils instead of a smooth orange band.
+- The log's lower plank (x≈380–500, y≈610–640) has no shadow and seems to float over the stones. Add a contact shadow under the log and under the crate.
+- In the lit area right of the figure (x≈565–620, y≈470–520) there is a faint circular carving. Either commit to it with defined edges and depth, or remove it. As it is, it reads as a leftover texture layer.
+- Apply the same crack, hatching, wall-top and pixel-scale fixes listed under FLIP 1. The floor and walls in 4 are the same as in 1.
+- The short wall segment at bottom-centre (x≈310–375, y≈645–710) has lit top pixels but no face or shadow on the room side, so it reads as a flat tile, not a wall. Give it a front face and shadow like the upper wall band has.
+
+FLIP 3:
+- The pond is a perfect axis-aligned rectangle with hard straight edges against the dirt (vertical at x≈248, horizontal at y≈192) and no bank. Add an edge transition (lip, mud, wet stones) and break the outline.
+- The two crates at top-left are the same sprite stacked (x≈62–97, y≈0–90), and the two barrels at bottom are the same sprite side by side (x≈115–190, y≈195–215). Vary them: rotate, open one lid, damage one, or use different props.
+- Both barrels are cut off at the dirt/stone boundary (y≈215), so they look like they're sinking into the wall. Move them fully onto the floor, or draw them standing against the wall face.
+- The orange post at left (x≈28–35, y≈128–165) is a flat orange bar with a banded gradient. It looks like a placeholder. Draw it as a real object (a pole, a lever or a torch bracket) with an outline and shading.
+- The moss blobs on the grey stone (e.g. x≈20–50, y≈55–75 and x≈15–40, y≈205–225) are flat semi-transparent stamps that cross tile joints without being affected by them. Paint the moss into the joints and cracks, and don't reuse the same blob shape.
+- All the grey flagstones are identical, with the same 1px joint on a uniform grid. Vary the stone sizes, joint depth and wear so the surface looks laid and heavily used, not tiled.
+- The whole frame is evenly lit, with no falloff from the figure. The brief says the figure carries the only light. Add a light radius that darkens with distance so the frame does what the brief describes.
+- The dirt is a uniform noise fill with evenly sprinkled red and blue specks. Cluster the debris where traffic and walls would push it (along edges and in corners), and leave a worn path across the open floor.
+
+FLIP 2:
+- Nothing was rendered, so fix the capture or render first: the frame is a single grey value. Then judge it again against the list above.
