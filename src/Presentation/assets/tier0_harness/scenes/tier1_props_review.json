@@ -61,6 +61,20 @@
    "y0": 16,
    "x1": 2,
    "y1": 17
+  },
+  {
+   "x0": 11,
+   "y0": 7,
+   "x1": 13,
+   "y1": 11,
+   "why": "#212 R1b (RULED Rafe, 2026-09-30): a second way into the north room, so the Λ across the corridor mouth (8,11) seals nothing. A three-wide BAY off the main room's east end — open along its whole south side, so it is neither a one-cell mouth nor a two-cell gap: nothing new invites a barricade."
+  },
+  {
+   "x0": 13,
+   "y0": 6,
+   "x1": 13,
+   "y1": 6,
+   "why": "#212 R1b: the DOORWAY — one cell wide, through a one-cell-thick wall, at the room's far east end (away from the corridor and the fire). 'A plain doorway on the far side' — not a barricade site. The floor plan is a fixture and may change; the wall art is untouched."
   }
  ],
  "legibility": [
