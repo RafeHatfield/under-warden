@@ -661,7 +661,10 @@ def guards(hist, lane, park=None, gate_path=None):
     # A ruling may excuse specific rounds, but only by re-proving the judge on them — see
     # `judge_cleared`. The rounds themselves stay on disk and in the diff; nothing is deleted.
     excused = judge_cleared(lane, lane_hist, morgue=_morgue_for_clear())
-    tail = [v for v in lane_hist if v.get("round") not in excused][-JUDGE_MISSES:]
+    # A CAPTURE-FAILURE VOID IS NOT A MISSED PLANT (Rafe, 2026-09-30): nothing was judged, so it
+    # neither extends nor breaks the streak — it is simply not a judging round.
+    tail = [v for v in lane_hist if v.get("round") not in excused
+            and v.get("void_reason") != CAPTURE_FAILURE][-JUDGE_MISSES:]
     if len(tail) >= JUDGE_MISSES and all(v.get("verdict") == "VOID" for v in tail):
         return ("broken-judge",
                 "the picture-plant was missed %d rounds running. The judging layer is broken; "
@@ -1363,6 +1366,115 @@ def plant_caught(r, plant_slot, build_slot):
 
 
 # ================================ the round ===================================================
+# ══════════════════════════════════════════════════════════════════════════════════════════════
+# A CAPTURE FAILURE VOIDS THE ROUND — RULED (Rafe, 2026-09-30)
+#
+#   "When the scene builder throws, the capture fails hard: no PNG, the round is VOID (capture
+#    failure), nothing is delivered to the panel. A blank/single-colour frame is never a
+#    deliverable. A seat reporting 'no picture' / blank frame voids the round as a capture
+#    failure, not the seat. The panel's regression rule stays as is; this is a new void condition
+#    beside it, not a change to the vote."
+#
+# The occasion (lane art/lambda-opening-212 r001): the scene builder refused the scene, the engine
+# saved the empty viewport anyway — one colour, RGB 77,77,77 — and five seats were spent on it. All
+# five said "there is no picture", and the panel still returned INSTALL-LATEST because the vote only
+# blocks on a strong regression. Only the install gate's undisposed-flags term held.
+#
+# A capture-failure VOID is NOT a judge failure: the plant was never the question. So it is
+# excluded from the broken-judge streak (`guards`), and like every VOID it is out of the progress
+# series and still counts toward the ceiling.
+# ══════════════════════════════════════════════════════════════════════════════════════════════
+CAPTURE_FAILURE = "capture-failure"
+CAPTURE_FAILED_MARKER = "[Main] CAPTURE FAILED"        # Main.CaptureFailedMarker
+
+
+class CaptureFailure(Exception):
+    """The capture produced no frame that shows anything. Carries the reason for the record."""
+
+
+def blank_frame(path, crop=None):
+    """(True, why) when the frame — under the deck's own crop, the part a seat is shown — is one
+    flat colour. Measured on the pixels, so it catches an empty viewport however it got empty."""
+    import numpy as np
+    im = Image.open(path).convert("RGB")
+    if crop:
+        im = im.crop(tuple(crop))
+    a = np.asarray(im).reshape(-1, 3)
+    uniq = np.unique(a, axis=0)
+    spread = float(a.max(axis=0).astype(int).max() - a.min(axis=0).astype(int).min()) if len(a) else 0.0
+    if len(uniq) <= 2 or float(a.std()) < 1.0:
+        return True, ("the frame is one flat colour (%d unique colour%s, value std %.2f) — nothing "
+                      "was drawn" % (len(uniq), "" if len(uniq) == 1 else "s", float(a.std())))
+    return False, "%d colours, spread %.0f" % (len(uniq), spread)
+
+
+# What a seat says when the picture it was shown has nothing in it. Matched only where the seat is
+# talking about the BUILD's slot — a seat calling the plant or the bar blank is a different fault.
+_BLANK_RE = re.compile(
+    r"(no picture|there is no (?:scene|image|frame)|nothing (?:was |is )?drawn|nothing to judge"
+    r"|one (?:flat|unique|single) colou?r|single (?:flat )?colou?r|exactly one (?:unique )?colou?r"
+    r"|one colou?r in every pixel|failed render|empty (?:capture|buffer|frame|canvas|render)"
+    r"|blank (?:frame|capture|image|render|canvas|screen)|not a frame)", re.IGNORECASE)
+
+
+def seat_reports_blank(text, build_slot):
+    """True when the seat describes the build's slot as a picture with nothing in it."""
+    b = int(build_slot)
+    ref = re.compile(r"(?:\b%d\.png\b|\b(?:frame|image|picture|slot|number|#)\s*%d\b|^\W*%d\b"
+                     r"|\b%d\s+(?:is|has|shows|contains)\b)" % (b, b, b, b), re.IGNORECASE | re.M)
+    # WORST: <build> with a WHY that says blank
+    m = re.search(r"WORST\**\s*:\**\s*%d\b(.{0,900})" % b, text, re.IGNORECASE | re.S)
+    if m and _BLANK_RE.search(m.group(1)[:900]):
+        return True
+    for line in text.splitlines():
+        if _BLANK_RE.search(line) and ref.search(line):
+            return True
+    return False
+
+
+def void_capture_record(lane, rnd, reason, frame=None, fsha=None, detail=None):
+    """The history record of a round that ended as a capture failure. No seat, no deck, no rank —
+    nothing was judged, so nothing is recorded as if it had been."""
+    bid, bdetail = BID.build_id()
+    return dict(
+        schema=1, verdict="VOID", void_reason=CAPTURE_FAILURE, capture_failure=reason,
+        lane=lane, round=rnd, commit=BID.head(), dirty=bdetail["dirty"], build_id=bid,
+        timestamp=datetime.datetime.now().isoformat(timespec="seconds"),
+        build_frame=(dict(path=os.path.relpath(frame, REPO) if frame and frame.startswith(REPO)
+                          else frame, sha256=fsha) if frame else None),
+        detail=detail,
+        law=("RULED (Rafe, 2026-09-30): a capture failure voids the round. A blank or single-colour "
+             "frame is never a deliverable; nothing is delivered to the panel. Not a judge failure: "
+             "excluded from broken-judge, out of the progress series, counted toward the ceiling."),
+    )
+
+
+def void_capture(a, lane, rnd, reason, frame=None, fsha=None, detail=None, record=None):
+    """Write a capture-failure VOID and end the round. Returns the VOID exit code (2).
+
+    The record goes where every round's record goes — history, and CRITIC-VERDICT.json unless this
+    is a self-test — so the round is on disk and in the diff, and a later reader finds a round that
+    produced nothing rather than a gap."""
+    out = record or void_capture_record(lane, rnd, reason, frame, fsha, detail)
+    if a.build_frame:
+        out["self_test"] = True
+    os.makedirs(HISTORY, exist_ok=True)
+    hpath = os.path.join(HISTORY, "r%03d-%s.json" % (rnd, lane.replace("/", "_")))
+    with open(hpath, "w") as f:
+        json.dump(out, f, indent=1)
+    if not a.build_frame:
+        with open(VERDICT, "w") as f:
+            json.dump(out, f, indent=1)
+    print("\n*** VOID — CAPTURE FAILURE ***")
+    print("   %s" % reason)
+    print("RULED (Rafe, 2026-09-30): a capture failure voids the round; nothing is delivered to the "
+          "panel. Not a judge failure — the broken-judge streak does not count it.")
+    print("\nwritten: %s" % os.path.relpath(hpath, REPO))
+    if not a.build_frame:
+        print("         %s" % os.path.relpath(VERDICT, REPO))
+    return 2
+
+
 def capture(cfg, echo=True):
     ok, msg = _headroom("write")
     if not ok:
@@ -1388,18 +1500,26 @@ def capture(cfg, echo=True):
     env = dict(os.environ)
     env.update(cfg["capture"].get("env") or {})
     r = subprocess.run(cmd, cwd=REPO, env=env, capture_output=True, text=True)
-    if r.returncode != 0:
+    # ── EVERY WAY A CAPTURE CAN FAIL IS NOW A CAPTURE FAILURE, NOT A REFUSAL (Rafe, 2026-09-30) ──
+    # It used to raise SystemExit, which left no record: the round simply did not happen. A
+    # capture failure is a round that happened and produced nothing, and the record says so.
+    log_text = r.stdout + r.stderr
+    _cl = cfg["capture"].get("log")
+    if _cl and os.path.exists(os.path.join(REPO, _cl)):
+        log_text += open(os.path.join(REPO, _cl), errors="ignore").read()
+    failed = [l.strip() for l in log_text.splitlines() if CAPTURE_FAILED_MARKER in l]
+    if r.returncode != 0 or failed:
         sys.stderr.write(r.stdout[-2000:] + r.stderr[-2000:])
-        raise SystemExit("REFUSING: the capture command exited %d. There is no frame to judge."
-                         % r.returncode)
+        raise CaptureFailure("the capture command exited %d%s" % (
+            r.returncode, (": " + failed[0][:400]) if failed else ""))
     if not os.path.exists(frame):
-        raise SystemExit("REFUSING: the capture ran and %s does not exist." % frame)
+        raise CaptureFailure("the capture ran and %s does not exist" % cfg["capture"]["frame"])
     after = (os.path.getmtime(frame), hashlib.sha256(open(frame, "rb").read()).hexdigest())
     if before is not None and after[0] <= before[0]:
-        raise SystemExit(
-            "REFUSING: %s was not rewritten by the capture command.\n"
-            "A frame left over from an earlier build judged as this one is exactly the evidence\n"
-            "failure LOOP-PROCESS §2.3 forbids." % cfg["capture"]["frame"])
+        raise CaptureFailure(
+            "%s was not rewritten by the capture command — a frame left over from an earlier "
+            "build judged as this one is exactly the evidence failure LOOP-PROCESS §2.3 forbids"
+            % cfg["capture"]["frame"])
     print("   frame: %s  sha256 %s" % (cfg["capture"]["frame"], after[1][:16]))
     # EVERY FLAG THE FRAME WAS TAKEN WITH, in the round's own output. The wrapper command above
     # names a script; the flags are what decide whether the floor is magenta, whether the walls
@@ -1528,7 +1648,17 @@ def main():
         print("== capture skipped; judging %s as it sits (sha256 %s)"
               % (cfg["capture"]["frame"], fsha[:16]))
     else:
-        frame, fsha = capture(cfg)
+        try:
+            frame, fsha = capture(cfg)
+        except CaptureFailure as e:
+            return void_capture(a, lane, rnd, str(e))
+
+    # ── A BLANK FRAME NEVER REACHES THE PANEL (Rafe, 2026-09-30) ──────────────────────────────
+    # Checked on EVERY build frame, captured or supplied — a self-test's --build-frame included —
+    # and before a single seat is spent.
+    _blank, _why = blank_frame(frame, cfg.get("crop"))
+    if _blank:
+        return void_capture(a, lane, rnd, _why, frame=frame, fsha=fsha)
 
     # ── THE BUILD ID IS TAKEN AFTER THE CAPTURE, NOT BEFORE ───────────────────────────────────
     # The capture writes a PNG and a log into the tree, so an id taken beforehand is stale by the
@@ -2053,6 +2183,18 @@ def main():
     if seat_plant_stop:
         verdict = "VOID"
 
+    # ── A SEAT SAYING THE BUILD HAS NO PICTURE VOIDS THE ROUND AS A CAPTURE FAILURE ──────────
+    # RULED (Rafe, 2026-09-30): "voids the round as a capture failure, not the seat. The panel's
+    # regression rule stays as is; this is a new void condition beside it." The pixel check before
+    # the panel is the first line; this is the second, for an empty frame the pixels did not catch
+    # (a lone UI layer, a scene that drew nothing but a clear colour and a border). It overrides a
+    # plant stop: with no picture in the build slot, a missed plant is not evidence about the judge.
+    blank_seats = [s["seat"] for s in seats
+                   if seat_reports_blank(s.get("text") or "", s["slots"]["build"])]
+    if blank_seats:
+        verdict = "VOID"
+        seat_plant_stop = None
+
 
     print("\n== the seat said")
     print("   RANK    %s" % (r["RANK"] or "(unparsed)")[:120])
@@ -2239,6 +2381,11 @@ def main():
     if a.build_frame:
         out["self_test"] = True
         out["verdict"] = verdict
+    if blank_seats:
+        out["void_reason"] = CAPTURE_FAILURE
+        out["capture_failure"] = ("seat%s %s described the build's slot as a picture with nothing "
+                                  "in it" % ("s" if len(blank_seats) > 1 else "",
+                                             ", ".join(map(str, blank_seats))))
     hpath = os.path.join(HISTORY, "r%03d-%s.json" % (rnd, lane.replace("/", "_")))
     with open(hpath, "w") as f:
         json.dump(out, f, indent=1)
@@ -2252,7 +2399,11 @@ def main():
             json.dump(out, f, indent=1)
 
     print("\n*** %s ***" % verdict)
-    if verdict == "VOID":
+    if blank_seats:
+        print("CAPTURE FAILURE — %s." % out["capture_failure"])
+        print("RULED (Rafe, 2026-09-30): the round is void as a capture failure, not the seat; the "
+              "broken-judge streak does not count it.")
+    elif verdict == "VOID":
         print("The seat would ship, or did not flag, a frame Rafe personally culled:")
         print("   %s — \"%s\"" % (plant["file"], plant["verbatim"]))
         print("LOOP-PROCESS §4: the round is void and its findings are NOT READ.")

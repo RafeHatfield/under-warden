@@ -1,0 +1,38 @@
+RANK: 1 > 3 > 4 > 2
+
+BEST: 1
+BEST_WHY: It is the only frame drawn at one pixel density. Floor, walls, props and figure all sit on the same pixel grid, with no mixed resolutions and no smoothed shapes. The two crates on the upper left have a lid, a dark front face with plank lines, and a one-tile drop shadow below them, so they read as boxes standing on the floor rather than flat stickers. The barrels at the bottom are overlapped by the front edge of the wall's top surface, so the layering is correct. The pool on the right has a separate faint cell pattern on its surface that isn't the floor texture recoloured. The dark doorway on the left wall has a lit timber post and brick sides, so it reads as an opening. The dirt floor carries dark-red speckle and a few scattered blue-grey stones at irregular spacing, not a visible tiling repeat.
+
+WORST: 2
+WORST_WHY: Nothing was drawn. The whole 750×911 canvas is one flat grey: I counted the colours and there is exactly one. There is no floor, wall, figure or light, and not even the interface that frames 3 and 4 have. This is a failed render or capture, not a frame.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- There is no light falloff at all. The dirt at the bottom-left corner is as bright as the dirt at the figure's feet, but the premise says the figure's light is the only light. Add a radial darkening from the figure so that the wall tops at the frame edges drop to near-black.
+- The figure is cut off at the top edge of the frame (its head is at y≈0). Centre the camera on the figure it follows.
+- The same moss blob is stamped identically at least three times on the grey wall tops: at the top left, the bottom left, and the right wall around x≈360, y≈160. Vary the shapes, or rotate and flip them per tile.
+- The wall tops are one flat mid-grey slab with an even grid of lines, at the same value everywhere. Add wear, chips and value variation along each run, and darken the tops next to the pool and the dirt so they don't read as a UI panel.
+- The figure is saturated bright green and the lily pads are saturated green, which sits outside a cold, dry palette. Cut the saturation and brightness of both.
+- Nothing shows the fiction's repair language (rope, driven pins, hide, salvaged timber). Replace at least one generic prop (the barrels or the crates) with a lashed or pinned repair.
+
+FLIP 2:
+- Fix the render or capture. The frame contains only one colour (a grey around #4D4D4D). Confirm the scene loaded, the camera is placed, and the capture happens after the first real draw.
+- Re-capture and re-submit. It can't be judged on craft until something is on screen.
+
+FLIP 3:
+- The props are untextured flat-shaded blocks that sit next to a detailed pixel-art figure: the crate top-left of the figure, the pale pillar at the lower left, and the rope-lashed log below the figure. Redraw them as pixel art at the figure's pixel density, with grain, pin heads and rope strands drawn per pixel instead of smooth colour fills.
+- The floor is built from overlapping rectangular texture patches with hard seams where they meet. The plainest example is the band right of the figure (x≈500–750, y≈460–560), where lighter and darker rectangles cut across each other. Use a single floor tile set with joints drawn in, not layered decal patches.
+- The long thin black curves across the floor look like vector strokes laid over the art, not cracks in the stone. They run from the lower left up past the figure, and there is another arc at the bottom right. Either remove them, or redraw them as pixel cracks with varying width that follow and break at the stone joints.
+- The wall tops (x≈180–500, y≈70–420 and the right-hand block) are blotchy brown noise with a soft, filtered look and no structure. Replace it with a drawn top surface such as coursed stone, rubble or packed earth, at the same pixel scale as the floor.
+- The lit floor's value is too close to the wall's front face around y≈430. Darken the front face and give it a clear top-edge highlight so the step from wall top to wall face to floor reads at a glance.
+- The glowing brazier or orb object right of the figure has a much finer pixel density and higher saturation than the floor under it. Match its pixel size to everything else.
+
+FLIP 4:
+- Every change listed under FLIP 3 applies here too: the floor patch seams, the overlaid black stroke cracks, the noise-textured wall tops, and the flat-shaded pillar.
+- The A-frame timber brace at the upper right (x≈580–680, y≈360–420) sits on top of the wall's top surface, not on any floor. Move it to a floor tile or anchor it into a wall face, and give it a contact shadow.
+- The X-brace at the lower left (x≈215–300, y≈650–705) hangs over the wall edge and the dark void below it. Move it onto a floor tile, or clearly fix it to the wall face.
+- The dark bevelled wedge shapes at the wall ends (x≈505–535, y≈395–450, and to the right of the lower wall stub at x≈375–405, y≈650–710) look like extruded 3D geometry in a flat top-down frame. Remove them, or redraw them as a proper wall-end cap.
+- Both timber props are smooth flat colour with no grain or fixings. Redraw them as pixel art with visible pins and lashings, at the figure's pixel density.

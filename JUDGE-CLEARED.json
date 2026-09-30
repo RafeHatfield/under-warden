@@ -44,5 +44,24 @@
   "ruling_new_plant": "The morgue lacks a grounding cull the seats can see. Draw one: lambda-in-the-face — the same Λ with its feet 16 px up the face, no foot line between the legs. That is the failure at a scale a seat catches. It is the round's grounding plant alongside the construction plants. Ruling 47 applies: the plant proves it can be caught before its round counts.",
   "standing": "a plant whose distance from the build is below what a seat can resolve at deck scale is not a control. When a failure is caught by eye at a scale the seats can't see, the deck gets a coarse version of the same failure, and the fine fact becomes a derived assertion.",
   "written": "2026-09-13"
+ },
+ {
+  "_what": [
+   "The blank-frame round, labelled as it is: a CAPTURE FAILURE, not a verdict on the Λ. It sits",
+   "on disk as INSTALL-LATEST and is not rewritten; this added marker voids it for every",
+   "reader (guards, series, stall report). Evidence of the hole the capture fix closes."
+  ],
+  "lane": "art/lambda-opening-212",
+  "guard": "capture-failure",
+  "rounds_covered": [
+   1
+  ],
+  "rounds_voided": [
+   1
+  ],
+  "ruled_by": "Rafe, R1b RULING + PIPELINE FIX (2026-09-30)",
+  "ruling": "When the scene builder throws, the capture fails hard: no PNG, the round is VOID (capture failure), nothing is delivered to the panel. A blank/single-colour frame is never a deliverable. File the blank-frame round as evidence of the hole, labelled as it is.",
+  "what_happened": "CorridorReviewSceneBuilder refused the scene (the Λ at (8,11) sealed the corridor); the engine saved the empty viewport anyway (RGB 77,77,77, one unique colour); five seats judged it, all five said 'no picture', and the panel returned INSTALL-LATEST on the strong-regression rule. The install gate held on undisposed flags. Frame: tools/cast_shadows/evidence/lambda_opening/blank_capture.png; refusal: capture_refusal.log.",
+  "written": "2026-09-30"
  }
 ]

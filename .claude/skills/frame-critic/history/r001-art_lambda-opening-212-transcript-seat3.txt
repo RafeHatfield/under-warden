@@ -1,0 +1,43 @@
+RANK: 2 > 3 > 1 > 4
+
+BEST: 2
+BEST_WHY: The props in the lit room are the best-made thing in this set, and they fit the fiction. The long timber at about (380–500, 595–640) is lashed at its middle with a visibly wrapped binding. The crate at about (190–300, 475–515) has a raised rim and a separate lid plank, so it reads as built, not as a flat box. The warm falloff comes from the brazier at about (600, 545) and fades along the floor toward the lower right. It also correctly leaves the wall face above the room (y≈425–450, the brick band with small dark notches) half-lit, so you can see the wall has a face and a top. In the upper voids (x 190–440, y 70–390 and x 630–750, y 70–390), the dark mass is one quiet navy fill with faint thin vein lines. That lets the room own the frame. It is still not shippable; see FLIP 2.
+
+WORST: 4
+WORST_WHY: The whole image is one flat colour, RGB (77,77,77), in every pixel: 750×911 with exactly one unique colour. There is no floor, no wall, no figure, no light and no interface. This is a failed render or a blank capture, not a frame.
+
+FLAGGED: 4, 3, 2, 1
+
+- 4: the entire frame is blank grey.
+- 3: the dark areas are covered in large hard-edged polygons. Examples are the big dark wedge at about (200–440, 150–350) and the diagonal slabs at the upper left (0–180, 0–300) and upper right (570–750, 90–390). Their edges don't follow any wall, tile or grid line, so they read at a glance as a Voronoi or shard filter laid over the map. The wall tops at (440–500, 70–390) and (120–185, 390–700) are coarse brown mottled noise with a visible checker, which looks like procedural noise and not drawn stone.
+- 2: the wall-top band over the lit room (x 120–500, y 390–425, and the column at x 440–500 up to y≈70) is a soft, blurry, pale beige cloud smear. It has no pixel structure, sitting right against crisp pixel-art bricks and a crisp sprite, and it reads as an unfinished placeholder gradient.
+- 1: the only figure, the green character at about (210–240, 0–18), is cut off by the top edge of the frame. The orange bar at about (25–37, 128–165) on the left wall is a flat untextured rectangle that looks like a placeholder marker.
+
+SHIP: NONE
+
+FLIP 2:
+- Replace the blurry pale wall-top smear (x 120–500, y 390–425; column x 440–500, y 70–425) with a hand-drawn stone top surface at the same pixel density as the bricks below it. Put its value clearly between the lit floor and the unlit void so the wall top and floor separate.
+- The floor stones (x 185–750, y 455–700) are stamped rectangles in about three repeated sizes, and some are just flat patches of colour, for example the bright blocks at about (480–560, 460–500) and (620–700, 510–550). Redraw them so the joints vary in width and depth and neighbouring stones don't share identical fills.
+- The crack lines (for example the long line from (300, 640) to (440, 520), and the arc at (570–750, 640–720)) are thin, even, anti-aliased vector strokes that cut straight across tiles and ignore joints. Redraw them as pixel cracks that start at or follow the stone joints, with varying width and a lit/shadow edge.
+- The pillar at (260–295, 540–640) is a flat tan rectangle with a smooth gradient and no stone detail. Give it cut-stone courses, a chipped top and the same shading as the other props, or replace it with a repaired post held with rope and pins.
+- Make the pixel scale match. The character sprite and props use big pixels (about 3 screen px), while the floor texture is finer and noisier. Resample the floor texture to the sprite's pixel grid.
+- The lit floor at the lower right (x 480–750, y 500–620) turns into flat saturated orange with no detail. Cap the light's brightness so the stone texture stays readable at the brightest point.
+- Add at least one worn or repaired detail where people walk, such as scuffs along the doorway at (500–570, 455), to back up the "four hundred years of heavy use" brief. The floor is currently evenly patterned from edge to edge.
+
+FLIP 3:
+- Remove the polygon/shard overlay from all the dark regions, for example (200–440, 150–350), (0–180, 0–300) and (570–750, 90–390). Fill them with a single dark wall-top value, or a hand-drawn low-contrast stone pattern that follows the grid.
+- Replace the brown mottled noise on the wall tops (x 440–500, y 70–390; x 120–185, y 390–700; x 310–375, y 645–700) with a drawn stone top at the same pixel scale as the bricks. Remove the checker pattern.
+- Apply every item in FLIP 2 as well; the lit room is the same art and has the same floor, crack, pillar, pixel-scale and overexposure problems.
+
+FLIP 1:
+- Re-centre the camera on the player. The figure at (210–240, 0–18) is cut off by the top edge.
+- Replace the flat orange rectangle at (25–37, 128–165) with a finished prop sprite (a door, bracket or lashed repair), or remove it.
+- The wall tiles (all the grey areas: x 0–55, y 0–200 and so on; the right column x 345–384; the bottom band y 215–260) are flat single-value squares separated only by faint 1-px grid lines. Draw real stone courses with varied joints, chips and a separate top face and front face. Right now wall top and wall face are the same grey.
+- The green stain decals at (15–50, 55–85), (355–384, 150–175) and (15–40, 205–230) are the same blob repeated. Draw several different ones and place them where water would actually run: at the base of walls and along joints.
+- The dirt floor (x 55–345, y 0–215) is one brown fill with a few scattered identical grey pebble specks. Add variation in value and in trampled paths, and make the speckle density change instead of being uniform.
+- The water (x 250–345, y 0–190) is a flat green rectangle with a hard straight edge against the dirt, and the same lily-pad sprite is repeated. Add an edge treatment where the water meets the dirt and reduce the identical repeated sprites.
+- Add the figure-carried light falloff that the brief says is intended. The frame is currently lit evenly edge to edge, so nothing is sitting in shadow.
+- The two barrels at (115–145, 190–215) and (160–190, 190–215) are the same sprite placed twice with identical shading. Vary one (rotate it, damage it, add a rope wrap) or swap it for a different prop.
+
+FLIP 4:
+- Fix the render or capture so the frame actually contains the scene. It is currently a single flat colour, RGB (77,77,77), across all 750×911 pixels. Nothing in it can be judged until that happens.

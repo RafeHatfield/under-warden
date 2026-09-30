@@ -1,0 +1,2 @@
+ERROR: System.InvalidOperationException: Corridor spec 'tier1_props_review': the props seal the corridor — (8,10) is floor the player could reach before they were seated and cannot reach after. Move a prop, or make it non-blocking.
+[Main] Capture written: /Users/rafehatfield/development/ff/under-warden-wt/r2/tools/tier1_floors/evidence/combined.png
