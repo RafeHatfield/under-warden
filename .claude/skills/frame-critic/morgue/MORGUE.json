@@ -403,7 +403,12 @@
    "culled_by": "Rafe, device walk, 2026-09-03",
    "verbatim": "caps are still grey and read as cement, not stone",
    "defect": "the found-rock cap with no architecture in it. The cap is one smooth field: no slabs, no fractures, no tooling, so the largest surface in frame is a value with noise on it. Measured, its wall cells carry a 4.6% hard-edge share against the 10.7% of the last approved build - the cap pass more than halved the wall's drawn edges. This is the CONSTRUCTION plant: it is wrong about whether a mass is made of anything, and it is deliberately RIGHT about chroma, so a round judged on construction cannot pass by fixing colour.",
-   "provenance": "the unshadowed entry cement-cap.png is this cull's original frame; this is the same asset state under the deck's light"
+   "provenance": "the unshadowed entry cement-cap.png is this cull's original frame; this is the same asset state under the deck's light",
+   "retired_as_control": {
+    "when": "2026-09-30",
+    "ruling": "Because the floor plan changes, re-seed the deck's captures against the changed scene and say so in the run report; the reference (Rafe's shadowed frame) is unchanged. — Rafe, R1b ruling, 2026-09-30",
+    "replaced_by": "cement-cap-r1b.png"
+   }
   },
   {
    "file": "props-unrecognizable-shadowed.png",
@@ -422,7 +427,12 @@
    "culled_by": "Rafe, device walk, 2026-09-10 (the §12.2 ruling)",
    "verbatim": "small, unrecognizable except the fire; colouring quite good",
    "defect": "THE OBJECTS CANNOT BE NAMED. Marker content 10x15 px in a 32 px cell — a fifth of the cell, twenty device pixels across; three cold seats offered 'a bottle or vial', 'a lantern or candle', 'an orange chest or crate' for the marker and 'sticks' for the barricade. Craft is not the defect (the colouring was approved in kind); SIZE is, and a seat that would ship it is soft on the one clause §12 has — names itself at 1x. This is the OBJECT construction plant: it is deliberately fine on value and chroma so a round judged on object craft cannot pass by fixing colour.",
-   "provenance": "the unshadowed entry props-unrecognizable.png is this cull's original frame; this is the same asset state under the deck's light"
+   "provenance": "the unshadowed entry props-unrecognizable.png is this cull's original frame; this is the same asset state under the deck's light",
+   "retired_as_control": {
+    "when": "2026-09-30",
+    "ruling": "Because the floor plan changes, re-seed the deck's captures against the changed scene and say so in the run report; the reference (Rafe's shadowed frame) is unchanged. — Rafe, R1b ruling, 2026-09-30",
+    "replaced_by": "props-unrecognizable-r1b.png"
+   }
   },
   {
    "file": "searchlight-edges.png",
@@ -443,7 +453,12 @@
    "culled_by": "Rafe, shadow walk on the handset, 2026-09-13 (flip 1 of the walk; the frame was superseded by the re-mark at softness 12.0)",
    "verbatim": "8.0 is the knob's ceiling and shadow edges are still traceable lines ... a lantern doesn't throw searchlights (§1: nothing is staged)",
    "defect": "THE CAST EDGES ARE LINES. Every shadow boundary in the room — the pillar's, the marker's, the barricades', the corridor mouth's — is a traceable edge at PCF softness 8.0, and the fire at 2.5 tiles lights nothing. Craft, colour and construction are the approved frame's own (it seeded the shadowed reference), so a round judged on cast-edge softness cannot pass by fixing anything else. This is the CAST-EDGE plant: wrong on exactly one axis, visible at deck scale.",
-   "provenance": "the same walk that seeded .claude/skills/frame-critic/approved/shadowed-2026-09-13.png (softness 12.0); the two differ in softness and fire reach only"
+   "provenance": "the same walk that seeded .claude/skills/frame-critic/approved/shadowed-2026-09-13.png (softness 12.0); the two differ in softness and fire reach only",
+   "retired_as_control": {
+    "when": "2026-09-30",
+    "ruling": "Because the floor plan changes, re-seed the deck's captures against the changed scene and say so in the run report; the reference (Rafe's shadowed frame) is unchanged. — Rafe, R1b ruling, 2026-09-30",
+    "replaced_by": "searchlight-edges-r1b.png"
+   }
   },
   {
    "file": "jamb-hard-edge.png",
@@ -523,7 +538,90 @@
    "culled_by": "Rafe, walk on the handset, 2026-09-23 (flip), upheld at the R1 ruling 2026-09-25",
    "verbatim": "it seems taller than the wall. — and at the ruling: Rafe's eye holds over the met bar: it reads taller than the wall. Plant: the Λ against the north wall (the walked frame) as the miss control.",
    "defect": "THE Λ-FRAME STANDS AGAINST A WALL IT IS TALLER THAN. At (9-10,12) against the north wall it stands 50.8 px before a 32-px face (1.59x) and crosses the arris by 18.8 px (tools/cast_shadows/evidence/lambda_scale/R1-STOP.md). This is the SCALE/PLACEMENT plant: a round that moves the Λ to an opening is judged against the frame where it stood before a wall.",
-   "provenance": "Eligibility (LOOP-PROCESS §4.0a): visible in the still — seat 1 of xframe-function r001 flagged it unprompted ('straddles the wall top and the floor, with half of it on the wall surface'). Ruling 47: self-tested in the BUILD slot before any round counts it."
+   "provenance": "Eligibility (LOOP-PROCESS §4.0a): visible in the still — seat 1 of xframe-function r001 flagged it unprompted ('straddles the wall top and the floor, with half of it on the wall surface'). Ruling 47: self-tested in the BUILD slot before any round counts it.",
+   "retired_as_control": {
+    "when": "2026-09-30",
+    "ruling": "Because the floor plan changes, re-seed the deck's captures against the changed scene and say so in the run report; the reference (Rafe's shadowed frame) is unchanged. — Rafe, R1b ruling, 2026-09-30",
+    "replaced_by": "lambda-against-wall-r1b.png"
+   }
+  },
+  {
+   "file": "cement-cap-r1b.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "subject": [
+    "walls"
+   ],
+   "regime": "shadowed",
+   "sha256": "c408279a87b6bb7d270ec45129ab5f8c6a1725205a2715724de2349437f479b9",
+   "source": "RE-SEEDED against the R1b floor plan (doorway (13,6), bay (11-13,7-11), the Λ at the corridor mouth) by ruling (Rafe, 2026-09-30) — the defect of cement-cap-shadowed.png reproduced in today's room through the engine at 99745c479cd7 with 1191 culled files overlaid from 431c140f. Muted, background capture; log tools/cast_shadows/evidence/plants_r1b/cement-cap-r1b.log",
+   "culled_by": "Rafe, device walk, 2026-09-03",
+   "verbatim": "caps are still grey and read as cement, not stone",
+   "defect": "the found-rock cap with no architecture in it. The cap is one smooth field: no slabs, no fractures, no tooling, so the largest surface in frame is a value with noise on it. Measured, its wall cells carry a 4.6% hard-edge share against the 10.7% of the last approved build - the cap pass more than halved the wall's drawn edges. This is the CONSTRUCTION plant: it is wrong about whether a mass is made of anything, and it is deliberately RIGHT about chroma, so a round judged on construction cannot pass by fixing colour.",
+   "provenance": "re-seed of cement-cap-shadowed.png, which stays in the morgue as retired_as_control"
+  },
+  {
+   "file": "props-unrecognizable-r1b.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "construction"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "22648431ad23b6b8cdcc36da52597a0afd3524c7843c1d3dc7198604ecda6f22",
+   "source": "RE-SEEDED against the R1b floor plan (doorway (13,6), bay (11-13,7-11), the Λ at the corridor mouth) by ruling (Rafe, 2026-09-30) — the defect of props-unrecognizable-shadowed.png reproduced in today's room through the engine at 99745c479cd7 with 6 culled files overlaid from cb344578~1. Muted, background capture; log tools/cast_shadows/evidence/plants_r1b/props-unrecognizable-r1b.log",
+   "culled_by": "Rafe, device walk, 2026-09-10 (the §12.2 ruling)",
+   "verbatim": "small, unrecognizable except the fire; colouring quite good",
+   "defect": "THE OBJECTS CANNOT BE NAMED. Marker content 10x15 px in a 32 px cell — a fifth of the cell, twenty device pixels across; three cold seats offered 'a bottle or vial', 'a lantern or candle', 'an orange chest or crate' for the marker and 'sticks' for the barricade. Craft is not the defect (the colouring was approved in kind); SIZE is, and a seat that would ship it is soft on the one clause §12 has — names itself at 1x. This is the OBJECT construction plant: it is deliberately fine on value and chroma so a round judged on object craft cannot pass by fixing colour.",
+   "provenance": "re-seed of props-unrecognizable-shadowed.png, which stays in the morgue as retired_as_control"
+  },
+  {
+   "file": "searchlight-edges-r1b.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "cast-edge"
+   ],
+   "subject": [
+    "walls",
+    "room",
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "d4fb05c4b4c6a91d3dd960134482213b5b7d34f7cea4e6a862efac920db4cc04",
+   "source": "RE-SEEDED against the R1b floor plan (doorway (13,6), bay (11-13,7-11), the Λ at the corridor mouth) by ruling (Rafe, 2026-09-30) — the defect of searchlight-edges.png reproduced in today's room through the engine at 99745c479cd7. Muted, background capture; log tools/cast_shadows/evidence/plants_r1b/searchlight-edges-r1b.log",
+   "culled_by": "Rafe, shadow walk on the handset, 2026-09-13 (flip 1 of the walk; the frame was superseded by the re-mark at softness 12.0)",
+   "verbatim": "8.0 is the knob's ceiling and shadow edges are still traceable lines ... a lantern doesn't throw searchlights (§1: nothing is staged)",
+   "defect": "THE CAST EDGES ARE LINES. Every shadow boundary in the room — the pillar's, the marker's, the barricades', the corridor mouth's — is a traceable edge at PCF softness 8.0, and the fire at 2.5 tiles lights nothing. Craft, colour and construction are the approved frame's own (it seeded the shadowed reference), so a round judged on cast-edge softness cannot pass by fixing anything else. This is the CAST-EDGE plant: wrong on exactly one axis, visible at deck scale.",
+   "provenance": "re-seed of searchlight-edges.png, which stays in the morgue as retired_as_control"
+  },
+  {
+   "file": "lambda-against-wall-r1b.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "scale"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "b673be7c102090ee4bc7f40ca9b8c8b11e60e29d51adbed66c5f685b8ec80515",
+   "source": "RE-SEEDED against the R1b floor plan (doorway (13,6), bay (11-13,7-11), the Λ at the corridor mouth) by ruling (Rafe, 2026-09-30) — the defect of lambda-against-wall.png reproduced in today's room through the engine at 99745c479cd7 with 2 culled files overlaid from 443b4a39. Muted, background capture; log tools/cast_shadows/evidence/plants_r1b/lambda-against-wall-r1b.log",
+   "culled_by": "Rafe, walk on the handset, 2026-09-23 (flip), upheld at the R1 ruling 2026-09-25",
+   "verbatim": "it seems taller than the wall. — and at the ruling: Rafe's eye holds over the met bar: it reads taller than the wall. Plant: the Λ against the north wall (the walked frame) as the miss control.",
+   "defect": "THE Λ-FRAME STANDS AGAINST A WALL IT IS TALLER THAN. At (9-10,12) against the north wall it stands 50.8 px before a 32-px face (1.59x) and crosses the arris by 18.8 px (tools/cast_shadows/evidence/lambda_scale/R1-STOP.md). This is the SCALE/PLACEMENT plant: a round that moves the Λ to an opening is judged against the frame where it stood before a wall.",
+   "provenance": "re-seed of lambda-against-wall.png, which stays in the morgue as retired_as_control"
   }
  ],
  "_regime": [
