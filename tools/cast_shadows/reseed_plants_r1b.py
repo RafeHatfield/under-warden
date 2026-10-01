@@ -192,6 +192,11 @@ def main():
                     print("   FAILED — the edited engine does not build"); continue
             subprocess.run([BIN, "--headless", "--audio-driver", "Dummy", "--path", SCRATCH, "--import"],
                            capture_output=True, timeout=1800)
+            # THE SAME HEADROOM FLOOR EVERY CAPTURE HONOURS (tools/tier0_harness/headroom.py, 'write').
+            ok, msg = fc._headroom("write")
+            if not ok:
+                print("   STOPPED — %s" % msg)
+                break
             out = os.path.join(ev, "%s-r1b.png" % plant["name"])
             log = out[:-4] + ".log"
             if os.path.exists(out):
