@@ -111,21 +111,47 @@ case("…and the capture exits non-zero", bool(marker) and r.returncode != 0, "r
 case("no PNG was written", not os.path.exists(out_png))
 
 # ── 5. …and the critic reads that as a capture failure, not a refusal ─────────────────────────
-print("\n== 5. frame_critic.capture on the same command raises CaptureFailure")
-cfg = dict(CFG, capture=dict(cmd=cmd, frame=os.path.relpath(out_png, REPO),
-                             log=os.path.relpath(out_log, REPO), env={"GODOT": env["GODOT"]}))
-try:
-    fc.capture(cfg, echo=False)
-    case("capture() raised CaptureFailure", False, "it returned a frame")
-except fc.CaptureFailure as e:
-    case("capture() raised CaptureFailure", "CAPTURE FAILED" in str(e) or "exited" in str(e),
-         str(e)[:220])
-except SystemExit as e:
-    case("capture() raised CaptureFailure", False,
-         "it stopped before capturing (SystemExit %s) — a refusal, not the case under test" % e.code)
+# Case 4 proved the ENGINE's side on the real thing. This case proves the CRITIC's side: that
+# capture() turns each engine outcome into a CaptureFailure. It drives capture() with stub commands
+# that reproduce those outcomes exactly — a second real Godot run only re-collides with the memory
+# guard (the first run of this proof took free memory from 41% to 34%), and the guard is not what is
+# under test here. So, INSIDE THIS CASE ONLY, _headroom is stubbed to "ok"; it is restored after.
+print("\n== 5. frame_critic.capture reads each engine outcome as a CaptureFailure (stubbed commands)")
 for p in (out_png, out_log):
     if os.path.exists(p):
         os.remove(p)
+stub_frame = os.path.join(tmp, "stub_frame.png")
+shutil.copy(REAL, stub_frame)
+old_head = fc._headroom
+fc._headroom = lambda kind="seat": (True, "stubbed for case 5")
+marker_line = fc.CAPTURE_FAILED_MARKER + " — the scene did not build: (stub)"
+stubs = [
+    ("the marker and a non-zero exit", [sys.executable, "-c", "print(%r); raise SystemExit(1)" % marker_line]),
+    ("the marker with the exit code LOST (exit 0)", [sys.executable, "-c", "print(%r)" % marker_line]),
+    ("exit 0, no marker, the frame NOT rewritten", [sys.executable, "-c", "pass"]),
+]
+try:
+    for label, scmd in stubs:
+        scfg = dict(CFG, capture=dict(cmd=scmd, frame=stub_frame, log=None, env={}))
+        try:
+            fc.capture(scfg, echo=False)
+            case("capture() raises CaptureFailure on %s" % label, False, "it returned a frame")
+        except fc.CaptureFailure as e:
+            case("capture() raises CaptureFailure on %s" % label, True, str(e)[:200])
+        except SystemExit as e:
+            case("capture() raises CaptureFailure on %s" % label, False,
+                 "SystemExit %s — a refusal, not a recorded failure" % e.code)
+    # and the negative: a command that really rewrites the frame is NOT a failure
+    ok_cmd = [sys.executable, "-c", "import shutil; shutil.copy(%r, %r)" % (REAL, stub_frame)]
+    import time
+    time.sleep(1.1)                                                 # mtime must move
+    try:
+        fc.capture(dict(CFG, capture=dict(cmd=ok_cmd, frame=stub_frame, log=None, env={})), echo=False)
+        case("a command that rewrites a real frame is NOT a CaptureFailure (it can say no)", True)
+    except (fc.CaptureFailure, SystemExit) as e:
+        case("a command that rewrites a real frame is NOT a CaptureFailure (it can say no)", False, str(e)[:200])
+finally:
+    fc._headroom = old_head
 
 # ── 6. the guards: a capture-failure VOID is not a missed plant ──────────────────────────────
 print("\n== 6. broken-judge ignores capture-failure VOIDs, and still fires on real ones")

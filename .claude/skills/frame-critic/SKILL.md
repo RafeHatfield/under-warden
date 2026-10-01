@@ -325,6 +325,32 @@ flip citing a resolvable clause disposed with no human anywhere in it — and **
 the guard that makes J1 safe: an unresolvable citation, a bare assertion, a missing destination,
 and a `CLOSED` attempted by citation all still refuse.
 
+## 4c. A capture failure voids the round — RULED (Rafe, 2026-09-30)
+
+> *"When the scene builder throws, the capture fails hard: no PNG, the round is VOID (capture
+> failure), nothing is delivered to the panel. A blank/single-colour frame is never a deliverable. A
+> seat reporting 'no picture' / blank frame voids the round as a capture failure, not the seat. The
+> panel's regression rule stays as is; this is a new void condition beside it, not a change to the
+> vote."*
+
+**The occasion:** lane `art/lambda-opening-212` r001. The scene builder refused the scene, the engine
+saved the empty viewport anyway (one colour, RGB 77,77,77), five seats judged it and all five said
+*"there is no picture"*, and the panel returned INSTALL-LATEST on the strong-regression rule. Only the
+install gate's undisposed-flags term held. The record is kept, voided by `JUDGE-CLEARED.json`.
+
+| layer | what fails the capture |
+|---|---|
+| engine (`Main.cs`) | the scene does not build, or the frame is one flat colour → no PNG, `[Main] CAPTURE FAILED`, non-zero exit |
+| `capture_corridor.py` | the marker in the log counts even when the exit code is lost |
+| `frame_critic.capture` | a non-zero exit, the marker, no frame, or a frame not rewritten → `CaptureFailure` |
+| before the panel | the build frame (captured or `--build-frame`) is flat under the deck's crop |
+| after the panel | any seat describes the BUILD's slot as a picture with nothing in it |
+
+Each writes a VOID with `void_reason: capture-failure`. **No seat is spent** where the failure is known
+before the panel. It is **not a judge failure**: it is excluded from the broken-judge streak, out of
+the progress series like every VOID, and counted toward the ceiling. The gate names it as a capture
+failure. Proved: `prove_capture_void.py` (29 cases, both ways), transcript `evidence/proofs/CAPTURE-VOID.txt`.
+
 ## 5. The loop guards — they measure progress, not rounds
 
 The line stops rather than grinding, **and it does not stop a lane that is working.** Every stop
