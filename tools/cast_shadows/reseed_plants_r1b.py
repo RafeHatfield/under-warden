@@ -186,6 +186,10 @@ def main():
                     print("   FAILED — the drawn edit's anchor is not in %s" % DUNGEON)
                     continue
                 open(p, "w").write(src.replace(old, new))
+                # A CLEAN BUILD: the clone's obj/ carries intermediates generated for the original
+                # tree's path, and the script-path attributes built from them do not match the clone —
+                # Godot then cannot find Main and the capture hangs (seen 2026-10-01).
+                shutil.rmtree(os.path.join(SCRATCH, ".godot/mono/temp/obj"), ignore_errors=True)
                 b = subprocess.run(["dotnet", "build", os.path.join(SCRATCH, "UnderWarden.Presentation.csproj"),
                                     "-v", "q", "-nologo"], capture_output=True, text=True)
                 if b.returncode != 0:
@@ -216,7 +220,13 @@ def main():
             with open(log, "w") as f:
                 f.write(" ".join(cmd) + "\n\n")
                 f.flush()
-                subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, timeout=900)
+                try:
+                    subprocess.run(cmd, stdout=f, stderr=subprocess.STDOUT, timeout=180)
+                except subprocess.TimeoutExpired:
+                    # A capture that never ends is a capture failure: stop the engine and record it.
+                    subprocess.run(["pkill", "-f", "--", "--path %s " % SCRATCH], capture_output=True)
+                    f.write("\n%s — timed out after 180 s; the engine was stopped.\n"
+                            % fc.CAPTURE_FAILED_MARKER)
             text = open(log, errors="ignore").read()
             # A FRAME WRITTEN AFTER AN ERROR, OR A FLAT ONE, IS NOT A CAPTURE (2026-09-30).
             if "ERROR:" in text or fc.CAPTURE_FAILED_MARKER in text or not os.path.exists(out):
