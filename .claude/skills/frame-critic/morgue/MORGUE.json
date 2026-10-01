@@ -519,7 +519,12 @@
    "culled_by": "Rafe, JUDGE RULING lane art/lambda-212 r001 (2026-09-13) — a named cull, drawn to his words",
    "verbatim": "The morgue lacks a grounding cull the seats can see. Draw one: lambda-in-the-face — the same Λ with its feet 16 px up the face, no foot line between the legs. That is the failure at a scale a seat catches.",
    "defect": "THE Λ-FRAME HANGS IN THE WALL. Its feet are up the face with no floor under them and no foot line between the legs — the coarse version of the 12-px failure Rafe caught by eye on the walked build. This is the GROUNDING plant: everything else in the frame is the built law's, so a round judged on grounding cannot pass by fixing anything else. Ruling 47: proves it can be caught before its round counts (self-test lane).",
-   "provenance": "the built law's own frame with one placement wrong; lambda-on-the-cap (retired) is the fine version of the same cull"
+   "provenance": "the built law's own frame with one placement wrong; lambda-on-the-cap (retired) is the fine version of the same cull",
+   "retired_as_control": {
+    "when": "2026-09-30",
+    "ruling": "Because the floor plan changes, re-seed the deck's captures against the changed scene and say so in the run report; the reference (Rafe's shadowed frame) is unchanged. — Rafe, R1b ruling, 2026-09-30",
+    "replaced_by": "lambda-in-the-face-r1b.png"
+   }
   },
   {
    "file": "lambda-against-wall.png",
@@ -622,6 +627,25 @@
    "verbatim": "it seems taller than the wall. — and at the ruling: Rafe's eye holds over the met bar: it reads taller than the wall. Plant: the Λ against the north wall (the walked frame) as the miss control.",
    "defect": "THE Λ-FRAME STANDS AGAINST A WALL IT IS TALLER THAN. At (9-10,12) against the north wall it stands 50.8 px before a 32-px face (1.59x) and crosses the arris by 18.8 px (tools/cast_shadows/evidence/lambda_scale/R1-STOP.md). This is the SCALE/PLACEMENT plant: a round that moves the Λ to an opening is judged against the frame where it stood before a wall.",
    "provenance": "re-seed of lambda-against-wall.png, which stays in the morgue as retired_as_control"
+  },
+  {
+   "file": "lambda-in-the-face-r1b.png",
+   "surface": [
+    "combined"
+   ],
+   "axis": [
+    "grounding"
+   ],
+   "subject": [
+    "objects"
+   ],
+   "regime": "shadowed",
+   "sha256": "3b17ae438f327c7c56ca8cba990e1ddff83c3887e8592fe80a05312c7164669d",
+   "source": "RE-SEEDED against the R1b floor plan (doorway (13,6), bay (11-13,7-11), the Λ at the corridor mouth) by ruling (Rafe, 2026-09-30) — the defect of lambda-in-the-face.png reproduced in today's room through the engine at 55064f7ab95f with 2 culled files overlaid from 443b4a39. Muted, background capture; log tools/cast_shadows/evidence/plants_r1b/lambda-in-the-face-r1b.log",
+   "culled_by": "Rafe, JUDGE RULING lane art/lambda-212 r001 (2026-09-13) — a named cull, drawn to his words",
+   "verbatim": "The morgue lacks a grounding cull the seats can see. Draw one: lambda-in-the-face — the same Λ with its feet 16 px up the face, no foot line between the legs. That is the failure at a scale a seat catches.",
+   "defect": "THE Λ-FRAME HANGS IN THE WALL. Its feet are up the face with no floor under them and no foot line between the legs — the coarse version of the 12-px failure Rafe caught by eye on the walked build. This is the GROUNDING plant: everything else in the frame is the built law's, so a round judged on grounding cannot pass by fixing anything else. Ruling 47: proves it can be caught before its round counts (self-test lane).",
+   "provenance": "re-seed of lambda-in-the-face.png, which stays in the morgue as retired_as_control"
   }
  ],
  "_regime": [

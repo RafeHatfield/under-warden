@@ -40,7 +40,10 @@ sys.path.insert(0, os.path.join(REPO, ".claude/skills/frame-critic"))
 import frame_critic as fc                                           # noqa: E402
 
 MORGUE = os.path.join(REPO, ".claude/skills/frame-critic/morgue")
-SCRATCH = os.environ.get("PLANT_SCRATCH", "/tmp/yarl-plant-reseed")
+# REALPATH, not /tmp: on macOS /tmp is a symlink to /private/tmp, and a C# build in a tree reached
+# through the link computes its scripts' res:// paths against the wrong root — Godot then cannot
+# find Main and the capture hangs. Found 2026-10-01 on the one plant that rebuilds the engine.
+SCRATCH = os.path.realpath(os.environ.get("PLANT_SCRATCH", "/tmp/yarl-plant-reseed"))
 BIN = "/Applications/Godot_mono.app/Contents/MacOS/Godot"
 GODOT = os.environ.get("GODOT", BIN)                                # the windowed capture
 SCENE = "src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json"
