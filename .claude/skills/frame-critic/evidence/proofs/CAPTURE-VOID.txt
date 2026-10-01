@@ -1,0 +1,74 @@
+[Main] CAPTURE FAILED — the scene did not build: (stub)
+[Main] CAPTURE FAILED — the scene did not build: (stub)
+==============================================================================
+CAPTURE-FAILURE VOID — the proof
+==============================================================================
+
+== 1. the pixel check
+  PASS  the filed blank frame (lane art/lambda-opening-212 r001) is BLANK
+        the frame is one flat colour (1 unique colour, value std 0.00) — nothing was drawn
+  PASS  Rafe's shadowed reference is NOT blank (the check can say no)
+        23848 colours, spread 255
+
+== 2. the round on a blank frame — VOID (capture failure), no seat spent
+==============================================================================
+FRAME CRITIC — lane proof-capture-void-selftest, round 1
+  commit   485b2df1bafd919e273a11dbaa09471692db199f
+==============================================================================
+== BUILD FRAME OVERRIDDEN: tools/cast_shadows/evidence/lambda_opening/blank_capture.png  sha256 8f405dbe176b4477
+   This round is a SELF-TEST of the judge, not a verdict on a build.
+
+*** VOID — CAPTURE FAILURE ***
+   the frame is one flat colour (1 unique colour, value std 0.00) — nothing was drawn
+RULED (Rafe, 2026-09-30): a capture failure voids the round; nothing is delivered to the panel. Not a judge failure — the broken-judge streak does not count it.
+
+written: ../../../../../../var/folders/q1/twfk51l97_5dg1wczhc5lzs40000gn/T/prove-capture-void-lb49icr6/history/r001-proof-capture-void-selftest.json
+  PASS  exit code is VOID's (2)
+        rc=2
+  PASS  the record says VOID, void_reason capture-failure
+        {"verdict": "VOID", "void_reason": "capture-failure", "capture_failure": "the frame is one flat colour (1 unique colour, value std 0.00) \u2014 nothing was drawn"}
+  PASS  no seat was spent
+        seats run: 0
+
+== 3. the seat check, on the filed round's own five transcripts
+  PASS  seat 1 (build in slot 4) reports the build blank
+  PASS  seat 1 does NOT report the other slots [1, 2, 3] blank
+  PASS  seat 2 (build in slot 1) reports the build blank
+  PASS  seat 2 does NOT report the other slots [2, 3, 4] blank
+  PASS  seat 3 (build in slot 4) reports the build blank
+  PASS  seat 3 does NOT report the other slots [1, 2, 3] blank
+  PASS  seat 4 (build in slot 2) reports the build blank
+  PASS  seat 4 does NOT report the other slots [1, 3, 4] blank
+  PASS  seat 5 (build in slot 2) reports the build blank
+  PASS  seat 5 does NOT report the other slots [1, 3, 4] blank
+  PASS  a real round's seat 1 reports NO slot blank
+  PASS  a real round's seat 2 reports NO slot blank
+  PASS  a real round's seat 3 reports NO slot blank
+  PASS  a real round's seat 4 reports NO slot blank
+  PASS  a real round's seat 5 reports NO slot blank
+
+== 4. the engine: a scene that seals a corridor (headless — no window, no focus)
+  PASS  the engine ran and printed the CAPTURE FAILED marker
+        [Main] CAPTURE FAILED — the scene did not build: Corridor spec 'fixture_sealed_corridor': the props seal the corridor — (8,10) is floor the player could reach before they were seated and cannot reach after. Move a prop, 
+  PASS  …and the capture exits non-zero
+        rc=1
+  PASS  no PNG was written
+
+== 5. frame_critic.capture reads each engine outcome as a CaptureFailure (stubbed commands)
+  PASS  capture() raises CaptureFailure on the marker and a non-zero exit
+        the capture command exited 1: [Main] CAPTURE FAILED — the scene did not build: (stub)
+  PASS  capture() raises CaptureFailure on the marker with the exit code LOST (exit 0)
+        the capture command exited 0: [Main] CAPTURE FAILED — the scene did not build: (stub)
+  PASS  capture() raises CaptureFailure on exit 0, no marker, the frame NOT rewritten
+        /var/folders/q1/twfk51l97_5dg1wczhc5lzs40000gn/T/prove-capture-void-lb49icr6/stub_frame.png was not rewritten by the capture command — a frame left over from an earlier build judged as this one is exa
+   frame: /var/folders/q1/twfk51l97_5dg1wczhc5lzs40000gn/T/prove-capture-void-lb49icr6/stub_frame.png  sha256 baaefba3a0e9e1e1
+  PASS  a command that rewrites a real frame is NOT a CaptureFailure (it can say no)
+
+== 6. broken-judge ignores capture-failure VOIDs, and still fires on real ones
+  PASS  two capture-failure VOIDs: broken-judge does NOT fire
+        guard=None
+  PASS  two plant-miss VOIDs: broken-judge DOES fire (the guard still bites)
+        guard='broken-judge'
+
+==============================================================================
+ALL 29 CASES HOLD.

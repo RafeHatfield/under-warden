@@ -31,6 +31,7 @@ CONFIG = os.path.join(REPO, "tools/tier0_harness/harness_config.yaml")
 # machine that must run Godot muted and in the background (a work Mac, during meetings) can point
 # every capture, the frame critic's fixed capture command included, at a wrapper without editing
 # docs/FRAME-CRITIC.json.
+CAPTURE_FAILED = "[Main] CAPTURE FAILED"     # Main.CaptureFailedMarker — keep the two in step
 DEFAULT_GODOT = os.environ.get("GODOT", "/Applications/Godot_mono.app/Contents/MacOS/Godot")
 
 
@@ -173,7 +174,14 @@ def capture(out_png, theme_config, cfg, godot=DEFAULT_GODOT,
         os.makedirs(os.path.dirname(log_out) or ".", exist_ok=True)
         with open(log_out, "w") as f:
             f.write(" ".join(cmd) + "\n\n" + log)
-    return proc.returncode, log, cmd
+    rc = proc.returncode
+    # A CAPTURE FAILURE IS READ FROM THE LOG AS WELL AS THE EXIT CODE (Rafe, 2026-09-30). The
+    # engine prints CAPTURE_FAILED when the scene does not build or the frame is one flat colour,
+    # and writes no PNG. A launcher that keeps Godot in the background can lose the exit code on the
+    # way, and a failure that exits 0 is how a blank frame reached five seats.
+    if rc == 0 and CAPTURE_FAILED in log:
+        rc = 3
+    return rc, log, cmd
 
 
 def echo_evidence(out_png, log):

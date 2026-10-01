@@ -516,6 +516,13 @@ def check():
                "VOID": "The seat did not catch the picture-plant. The judging layer is not "
                        "trustworthy and the round's findings are not read (LOOP-PROCESS §4). "
                        "STOP AND FIX — never ship past a void round."}
+        if v.get("void_reason") == "capture-failure":
+            # RULED (Rafe, 2026-09-30): a capture failure voids the round and delivers nothing.
+            # It is not the judge, so the judge advice below would send the reader the wrong way.
+            return False, L + ["", "VERDICT IS VOID — CAPTURE FAILURE. %s" % (
+                v.get("capture_failure") or "the capture produced no frame that shows anything"),
+                "  Nothing was judged. Fix the capture or the scene, not the judge or the art.",
+                "", "Fix, then re-run the round:   %s" % RUN]
         out = L + ["", "VERDICT IS %s. %s" % (v.get("verdict"),
                                               why.get(v.get("verdict"), ""))]
         # ⚠ ONLY A FAIL HAS FINDINGS TO SHOW. This printed the flip list for every non-PASS
