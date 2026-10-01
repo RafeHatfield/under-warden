@@ -193,7 +193,14 @@ def main():
             subprocess.run([BIN, "--headless", "--audio-driver", "Dummy", "--path", SCRATCH, "--import"],
                            capture_output=True, timeout=1800)
             # THE SAME HEADROOM FLOOR EVERY CAPTURE HONOURS (tools/tier0_harness/headroom.py, 'write').
-            ok, msg = fc._headroom("write")
+            # The import just before is a transient spike; wait for it to settle (up to 5 min) rather
+            # than give the plant up — the floor itself does not move.
+            import time
+            for _ in range(60):
+                ok, msg = fc._headroom("write")
+                if ok:
+                    break
+                time.sleep(5)
             if not ok:
                 print("   STOPPED — %s" % msg)
                 break
