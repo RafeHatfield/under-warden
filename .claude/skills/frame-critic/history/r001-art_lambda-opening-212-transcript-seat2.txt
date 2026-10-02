@@ -1,0 +1,46 @@
+RANK: 3 > 4 > 2 > 1
+
+BEST: 3
+
+BEST_WHY: In 3, everything is drawn at one pixel scale and in one palette, which the other working frames can't say. The two crates top-left (x≈63–97, y≈0–90) have a lit lid, a darker slatted front face and a soft drop shadow underneath, so they sit on the floor instead of floating over it. The south wall (y≈215–288) is split properly into a pale grey top surface with a light edge along its upper line and a darker brick face below. That gives the room a clear edge at a glance. The two barrels (x≈115–190, y≈193–215) are cut off by that wall top in the right order, so the wall correctly passes in front of them. The bone scatter at x≈210–240, y≈113–130 is small, off-white and sparse, and reads as debris rather than a stamped decal. Being best still doesn't make it shippable (see FLIP 3).
+
+WORST: 1
+
+WORST_WHY: 1 has no picture in it. All 683,250 pixels of the 750×911 frame are one flat colour, RGB (77,77,77). There is no floor, wall, figure, light or interface. It is a failed render or an empty buffer, not a frame.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Render the scene. The frame is one solid grey (77,77,77) with no content, so nothing in it can be judged or fixed.
+- Add a check to the capture step that rejects any frame with fewer than a few hundred unique colours, so a blank buffer can't reach review again.
+
+FLIP 2:
+- The props are rendered in a different medium from everything around them. The crate at x≈190–300, y≈475–515, the upright post at x≈260–295, y≈537–645 and the rope-lashed log at x≈380–500, y≈592–640 are smooth, extruded blocks with gradient shading and no visible pixels. They sit on a pixel-art floor next to a pixel-art figure. Redraw them as pixel sprites at the figure's pixel scale, with a hand-set palette.
+- The log's rope lashing is the one prop that shows the fiction's rope repairs. Keep that idea, but draw it as a few deliberate pixel wraps, not a smooth orange band.
+- The dark areas are filled with large, flat, faceted polygons: top-left (x≈0–370, y≈0–390) and the right-hand area (x≈565–750, y≈100–390). They look like a generated Voronoi pattern. Replace them with real rock or void, or make them solid black.
+- The wall tops (x≈440–500, y≈200–390 and the band across y≈390–420) use a blotchy noise texture with no structure, so they read as a filter. Replace it with deliberate masonry or rubble, with edges and joints.
+- The floor tiles carry faint hatching scribbles and ghost circle marks (x≈570–700, y≈470–560) that look like an overlay texture. Remove them, or make them specific marks that follow the stone.
+- Long 1-px black crack lines cross several tiles and ignore the joints (from x≈230, y≈580 up to x≈440, y≈515; and the arc at x≈570–750, y≈640–720). Break the cracks at the joints, vary their width, and chip the stone along them.
+- The wall face strip at y≈420–450 repeats the same small "E" and "⌐" glyph stamps at regular intervals. Vary them or remove them.
+- A hard-edged, blue-tinted shadow wedge runs down-left from the post (x≈290–400, y≈580–650). Soften its edge where it falls away from the object, and match its tint to the surrounding unlit floor.
+
+FLIP 4:
+- The props look like map markers, not objects. The crossed sticks at x≈200–230, y≈600–625 and x≈390–425, y≈598–630 are X glyphs, and the orange planks at x≈515–550, y≈600–625 glow like a UI highlight. Draw each one as a readable physical thing (a tied stake, a pinned plank, a coil of rope) with a top face, a side face and a contact shadow.
+- The brazier at x≈580–620, y≈530–565 is drawn as a flat ring of yellow pixels around a red dot, which reads as a target icon. Give it a rim, a bowl and an ember bed, and have its light spill onto the floor next to it.
+- The small barrel at x≈333–355, y≈537–565 is noticeably smaller and more saturated than the figure's pixel scale implies. Resize it to the tile grid and bring its palette in line with the lit floor.
+- The dark areas have the same faceted-polygon fill as 2 (x≈0–370, y≈0–390; x≈565–750, y≈100–390). Replace it with real rock or void, or make it solid black.
+- Replace the blotchy noise texture on the wall tops with structured masonry or rubble.
+- Remove the hatching and ghost-circle overlay on the floor tiles (x≈560–700, y≈470–560).
+- Break the 1-px crack lines at tile joints and vary their width (for example the line from x≈230, y≈580 to x≈440, y≈515).
+- The same hard blue shadow wedge appears below the small barrel (x≈320–400, y≈565–650). Soften and retint it.
+
+FLIP 3:
+- The pond (x≈248–344, y≈0–192) is a hard-edged rectangle of flat green with no bank. Its bottom edge at y≈192 is a straight line cut into the dirt. Add a shoreline: a darker wet edge on the dirt, a lip of stone or mud, and some break-up so the water doesn't end on a ruler line.
+- The moss clusters on the grey wall tops look stamped. The one at x≈20–45, y≈55–80, the one at x≈355–380, y≈150–175 and the one at x≈15–40, y≈200–230 share a shape and tint. Draw several different shapes and vary their placement and scale.
+- The dirt floor (x≈55–345, y≈0–215) is one noise texture with evenly spaced red flecks and scattered blue chips. It has no wear pattern, and nothing shows where feet actually go. Add tracks where people walk and variation between tiles so no tile repeats.
+- The frame is lit evenly across its whole width, with no falloff from the figure. The figure at top (x≈210–240, y≈0–25) carries the only light, so darken the scene with distance from it.
+- The figure is cut off by the top edge of the frame. Centre the camera on the carried light source.
+- The orange post in the dark brick segment at left (x≈25–35, y≈128–168) doesn't read as a door, a torch or a support. Make it clearly one of those, with a sprite and a shadow that match.
+- The saturated lime-green figure and the cartoon lily pads (x≈260–335, y≈5–180) pull the frame towards cheerful adventure. Desaturate the figure's green and replace the lily pads with scum, debris or nothing. Also add at least one visible repair: a rope lashing, a driven pin or a hide patch on the crates or barrels.

@@ -1,0 +1,263 @@
+{
+ "schema": "frame-critic/1",
+ "verdict": "INSTALL-LATEST",
+ "lane": "art/lambda-opening-212",
+ "round": 1,
+ "surface": "combined",
+ "axis": [
+  "construction",
+  "grounding",
+  "cast-edge",
+  "scale"
+ ],
+ "commit": "befdc1198d1f88a6709b1a82f65ca836eb18cee4",
+ "dirty": true,
+ "build_id": "5efeed748c9244dd58aee3375ea45629d411e4f526ecac7817a1b4186b85226c",
+ "timestamp": "2026-09-29T16:27:54",
+ "build_frame": {
+  "path": "tools/tier1_floors/evidence/combined.png",
+  "sha256": "8f405dbe176b44772246473e3c86f9d40b377e6093016eb5a98bd7e0da1d53fb",
+  "log": "tools/tier1_floors/evidence/combined.log",
+  "flags": "/Users/rafehatfield/.local/bin/godot-quiet --path /Users/rafehatfield/development/ff/under-warden-wt/r2 --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/combined.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 1"
+ },
+ "deck": {
+  "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-f8989c21dbea4fda",
+  "slots": {
+   "1": {
+    "what": "bar",
+    "source": "/Users/rafehatfield/development/assets/oryx/oryx_ultimate_fantasy_1.2/uf_examples/uf_example_1.png",
+    "sha256": "ce29a33e0fd6e6e3ea9f278c28918f9d5f0210e1cbd701e894446ded9a050c49",
+    "crop": [
+     304,
+     192,
+     688,
+     480
+    ],
+    "delivered": [
+     384,
+     288
+    ]
+   },
+   "2": {
+    "what": "plant",
+    "source": ".claude/skills/frame-critic/morgue/searchlight-edges.png",
+    "sha256": "702a845e839f2bbf2213c3248c3714b6b7f6d3431b0139c5604de856286e3947",
+    "crop": [
+     0,
+     90,
+     750,
+     1001
+    ],
+    "delivered": [
+     750,
+     911
+    ]
+   },
+   "3": {
+    "what": "approved",
+    "source": ".claude/skills/frame-critic/approved/shadowed-2026-09-13.png",
+    "sha256": "baaefba3a0e9e1e162188a74d9fa806ee5c51af3579be84627e0f93177f0d5ab",
+    "crop": [
+     0,
+     90,
+     750,
+     1001
+    ],
+    "delivered": [
+     750,
+     911
+    ]
+   },
+   "4": {
+    "what": "build",
+    "source": "tools/tier1_floors/evidence/combined.png",
+    "sha256": "8f405dbe176b44772246473e3c86f9d40b377e6093016eb5a98bd7e0da1d53fb",
+    "crop": [
+     0,
+     90,
+     750,
+     1001
+    ],
+    "delivered": [
+     750,
+     911
+    ]
+   }
+  },
+  "build": "tools/tier1_floors/evidence/combined.png"
+ },
+ "plant": {
+  "slot": 2,
+  "file": "searchlight-edges.png",
+  "sha256": "702a845e839f2bbf2213c3248c3714b6b7f6d3431b0139c5604de856286e3947",
+  "culled_by": "Rafe, shadow walk on the handset, 2026-09-13 (flip 1 of the walk; the frame was superseded by the re-mark at softness 12.0)",
+  "verbatim": "8.0 is the knob's ceiling and shadow edges are still traceable lines ... a lantern doesn't throw searchlights (\u00a71: nothing is staged)",
+  "caught": true,
+  "how": {
+   "ranked_last": false,
+   "named_worst": false,
+   "flagged": true,
+   "shipped": false,
+   "outranked_build": true,
+   "every_frame_flagged": false
+  }
+ },
+ "seat": {
+  "BEST_WHY": "It is the only frame drawn at one consistent pixel size. The barrels at bottom centre, the two crates at top left, the goblin at top centre and the lily pads in the pool on the right are all on the same pixel grid as the floor and walls. None of them is smoother or chunkier than what surrounds it. The barrel lids have a proper rim highlight and a dark band, and the crates cast a short soft shadow onto the dirt beneath them. It is simple, but nothing in it looks like a different process made it. Being ranked first does not make it shippable.",
+  "WORST_WHY": "There is no picture. The whole 750\u00d7911 frame is a single flat grey, RGB(78,78,78) or close to it: one colour, no tiles, no figure, no light and no interface. It is a failed render or an empty capture.",
+  "FLAGGED": "4, 2, 3\n\n- 4: blank frame.\n- 2 and 3: the unlit wall mass at top left, top right and left side is covered in huge faceted polygon shards. They look like a Voronoi or shatter overlay of flat grey-brown panels with straight seams, and they cut right across the tile grid. You can see them from across the room, and they read as a filter left switched on.",
+  "RANK": "1 > 2 > 3 > 4",
+  "BEST": "1",
+  "WORST": "4",
+  "SHIP": "NONE"
+ },
+ "flip_list": [
+  "Fix the renderer or the capture so the frame actually contains the scene. Right now it is one flat grey colour and there is nothing to judge.",
+  "Once it renders, send it back through review from the start."
+ ],
+ "flip_list_withheld": null,
+ "withheld_because": null,
+ "panel": {
+  "seats": 5,
+  "ruling": "five seats; block only on strong-majority regression (>=4 of 5 rank below the reference); else install if exit met and plant caught. Rank-in-deck cannot resolve polish-sized deltas at a 40% flip rate. \u2014 Rafe, 2026-09-09",
+  "law": "a gate's binding term must have a measured noise floor and must never be a single sample. \u2014 Rafe, 2026-09-08",
+  "verdict_at_round": "INSTALL-LATEST",
+  "above_reference": 0,
+  "not_below_reference": 2,
+  "below_reference": 3,
+  "strong_regression": false,
+  "ref_slack": 1,
+  "flagged_by": 5,
+  "shipped_by": 0,
+  "majority_above": false,
+  "majority_not_below": false,
+  "all_caught": true,
+  "seat_redraws": [],
+  "seat_plant_stop": null,
+  "dissent": 0,
+  "plants_distinct": 5,
+  "per_seat": [
+   {
+    "seat": 1,
+    "rank": 4,
+    "reference_rank": 3,
+    "above_reference": false,
+    "not_below": true,
+    "build_flagged": true,
+    "shipped": false,
+    "plant": "searchlight-edges.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r001-art_lambda-opening-212-transcript-seat1.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-f8989c21dbea4fda"
+   },
+   {
+    "seat": 2,
+    "rank": 4,
+    "reference_rank": 3,
+    "above_reference": false,
+    "not_below": true,
+    "build_flagged": true,
+    "shipped": false,
+    "plant": "props-unrecognizable-shadowed.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r001-art_lambda-opening-212-transcript-seat2.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-c737bcfa646ed09e"
+   },
+   {
+    "seat": 3,
+    "rank": 4,
+    "reference_rank": 2,
+    "above_reference": false,
+    "not_below": false,
+    "build_flagged": true,
+    "shipped": false,
+    "plant": "cement-cap-shadowed.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r001-art_lambda-opening-212-transcript-seat3.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-62665fc16f13f7dd"
+   },
+   {
+    "seat": 4,
+    "rank": 4,
+    "reference_rank": 2,
+    "above_reference": false,
+    "not_below": false,
+    "build_flagged": true,
+    "shipped": false,
+    "plant": "lambda-against-wall.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r001-art_lambda-opening-212-transcript-seat4.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-36c0dc9ded62bff7"
+   },
+   {
+    "seat": 5,
+    "rank": 4,
+    "reference_rank": 2,
+    "above_reference": false,
+    "not_below": false,
+    "build_flagged": true,
+    "shipped": false,
+    "plant": "lambda-in-the-face.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r001-art_lambda-opening-212-transcript-seat5.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-e60f17b77ab7ccc6"
+   }
+  ]
+ },
+ "seat_redraw": null,
+ "item_exit": {
+  "_what": [
+   "THE ITEM'S OWN MEASURED EXIT \u2014 required by INSTALL-LATEST (Rafe, 2026-09-08).",
+   "",
+   "A build installs because it DID THE THING IT SET OUT TO DO. The rank test only says",
+   "the doing cost nothing against the seeded reference; this says what was done. Without",
+   "it, 'not worse than the reference' would mean 'not different from it', and a round",
+   "that changed nothing would install as readily as one that fixed something.",
+   "",
+   "Declared here per item, recorded into the verdict, re-checked at the gate. The gate",
+   "refuses a `met` with no measurement behind it."
+  ],
+  "item": "The walk's three rounds, one build (2026-09-13): #211 the corridor jamb's east face receives the shadow; #212 a prop against a wall stands on the floor at the reveal's foot, never overdrawn by the cap; #207 the X-frame stands across the line as crossed stakes with a spanning bar",
+  "claim": "every ruling from Rafe's walk is built and measured: the jamb's face takes the cell's own shadow (lamp west) and the fire's light (fire east); the \u039b's base far edge is on the foot with the sprite 12 px onto the floor and nothing laid over it; the X-frame is named a barricade by a strong majority of cold seats, where the walked one was refused as debris.",
+  "measured": "JAMB: pre-fix the east face sat at (59.7, r/b 2.89) with and without occluders over a floor going 141 -> 85; post-fix, lamp-only, (33,33,42) beside (40,41,53), hue 2.41 -> 0.80 as the floor's 1.96 -> 0.82; penumbrae 28-30 px vs 33-40 px; pillar's face 0.93. LAMBDA: bottom wood row 544 -> 556 (+12 = the 11.2-px run on the grid); no Tier1CapBand node; albedo (84,62,42) vs (91,66,44) \u2014 one wood; the lit difference is the fire at 1.4 vs 6.3 tiles. X-FRAME: cold_name_object.py, proven to FAIL on the walked frame (2/5, three refusals); c1 4/5, c2 5/5 named \u2014 c2 landed. Judge rounds: jamb r003 INSTALL-LATEST (five caught after the ruled re-draws), lambda r002 INSTALL-LATEST (ruled plant set, one re-draw). Fast suite 2564 green.",
+  "instrument": "tools/cast_shadows/evidence/{jamb,lambda,xframe}/ \u2014 with/without-occluder pairs, flat-lit captures, wood-pixel rows, cold_name_object.py; builder's measurements, none a gate",
+  "met": true
+ },
+ "progress": {
+  "rank_position": 4,
+  "deck_size": 4,
+  "rank_score": 0.0,
+  "bar_position": 1,
+  "approved_position": 3,
+  "approved_frame_in_deck": true,
+  "beats_approved": false,
+  "near_bar": false,
+  "near_bar_slack": 1,
+  "new_best": true,
+  "best_before": null,
+  "capture_signature": "4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d",
+  "moved": null,
+  "two_strikes_advisory": null,
+  "series": [
+   {
+    "round": 1,
+    "verdict": "INSTALL-LATEST",
+    "rank_position": 4,
+    "deck_size": 4,
+    "rank_score": 0.0,
+    "capture_signature": "4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d4d"
+   }
+  ],
+  "guards": {
+   "stall_rounds": 3,
+   "round_ceiling": 15,
+   "no_change_mad": 0.25,
+   "no_change_max": 4,
+   "sig_grid": 32,
+   "judge_misses": 2,
+   "flip_same": 0.6
+  }
+ },
+ "transcript": ".claude/skills/frame-critic/history/r001-art_lambda-opening-212-transcript-seat1.txt",
+ "law": "LOOP-PROCESS: an art round is judged by eyes on delivered frames. The plant must land worst-or-flagged; a passed plant voids the round and its findings are not read. The guards measure progress \u2014 rank in the deck \u2014 never rounds elapsed."
+}

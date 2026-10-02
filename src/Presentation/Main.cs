@@ -262,12 +262,28 @@ public partial class Main : Node
             // instead of the fixed acceptance scene, on the same capture path. See ReviewSceneBuilder.
             // --corridor-scene <json>: boot the Tier 0 review corridor (lit corridor with a
             // junction) on the same capture path. See CorridorReviewSceneBuilder.
-            if (ReadCorridorSceneFlag(out var corridorJson))
-                LaunchCorridorScene(corridorJson!);
-            else if (ReadReviewSceneFlag(out var reviewJson))
-                LaunchReviewScene(reviewJson!);
-            else
-                LaunchArtAcceptanceScene();
+            //
+            // ── A SCENE THAT DOES NOT BUILD FAILS THE CAPTURE HARD — RULED (Rafe, 2026-09-30) ──
+            // A builder throw used to abort _Ready and leave _pendingCapture armed, so _Process
+            // saved the empty viewport a few frames later and the round judged a blank PNG. Now
+            // the throw is the capture's result: no PNG, the marker line, a failure exit.
+            try
+            {
+                if (ReadCorridorSceneFlag(out var corridorJson))
+                    LaunchCorridorScene(corridorJson!);
+                else if (ReadReviewSceneFlag(out var reviewJson))
+                    LaunchReviewScene(reviewJson!);
+                else
+                    LaunchArtAcceptanceScene();
+            }
+            catch (Exception ex)
+            {
+                _pendingCapture = false;
+                GD.PrintErr($"{CaptureFailedMarker} — the scene did not build: {ex.Message} "
+                            + $"No PNG written to {_captureOutputPath}.");
+                GetTree().Quit(3);
+                return;
+            }
         }
         else if (ReadArtSceneFlag())
         {
@@ -3181,6 +3197,30 @@ public partial class Main : Node
         return false;
     }
 
+    /// <summary>The line every capture failure starts with. tools/tier0_harness/capture_corridor.py
+    /// and the frame critic read it: a failed capture must go red even when the process's exit code
+    /// is lost on the way (a launcher wrapper, a pipe).</summary>
+    private const string CaptureFailedMarker = "[Main] CAPTURE FAILED";
+
+    /// <summary>True when every sampled pixel is within one level of the first — a viewport
+    /// nothing drew into. Sampled on an 8-px grid: an empty viewport is uniform everywhere, and a
+    /// drawn scene is never uniform on a grid that fine.</summary>
+    private static bool IsSingleFlatColour(Image image)
+    {
+        int w = image.GetWidth(), h = image.GetHeight();
+        if (w == 0 || h == 0) return true;
+        var c0 = image.GetPixel(0, 0);
+        const float tol = 1.5f / 255f;
+        for (int y = 0; y < h; y += 8)
+            for (int x = 0; x < w; x += 8)
+            {
+                var c = image.GetPixel(x, y);
+                if (Mathf.Abs(c.R - c0.R) > tol || Mathf.Abs(c.G - c0.G) > tol || Mathf.Abs(c.B - c0.B) > tol)
+                    return false;
+            }
+        return true;
+    }
+
     private void CaptureAndQuit()
     {
         _pendingCapture = false;
@@ -3195,6 +3235,20 @@ public partial class Main : Node
         LogWornTilePositions();
 
         var image = GetViewport().GetTexture().GetImage();
+
+        // ── A FRAME THAT IS ONE FLAT COLOUR IS NEVER A DELIVERABLE — RULED (Rafe, 2026-09-30) ──
+        //
+        // The occasion: the scene builder threw (a prop sealed the corridor), the viewport stayed
+        // empty, and this method saved it anyway — RGB 77,77,77 in every pixel — and five blind
+        // seats were spent judging a picture that was never drawn. Whatever emptied the viewport,
+        // an empty viewport is not evidence about art, so it produces no PNG and a failure exit.
+        if (IsSingleFlatColour(image))
+        {
+            GD.PrintErr($"{CaptureFailedMarker} — the frame is one flat colour; nothing was drawn. "
+                        + $"No PNG written to {_captureOutputPath}.");
+            GetTree().Quit(4);
+            return;
+        }
 
         // ── The junction must be VERIFIABLY LIT, not merely present ─────────────────────────
         //
