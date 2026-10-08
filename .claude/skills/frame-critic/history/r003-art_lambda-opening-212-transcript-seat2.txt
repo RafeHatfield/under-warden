@@ -1,0 +1,50 @@
+RANK: 3 > 1 > 4 > 2
+
+BEST: 3
+
+BEST_WHY: In 3 the lantern hotspot between the figure and the fire pit (roughly x 450–560, y 470–560) keeps its joint lines and per-stone value shifts, so the brightest stones still read as individual cut blocks with pitting rather than a bleached patch. In 1, the same scene at a hotter exposure, that patch collapses to near-flat cream and the joints vanish. The fall-off from the hotspot to the lower-right dark (x 500–750, y 650–900) is continuous with no visible banding, and the stone pattern survives into the dark at low contrast instead of being clipped to black. The wall band across the room top (y 420–465) has irregular dark upright ticks and varying brick depth along one run, so it reads as a rail someone nailed up rather than a stamped strip. The fire pit (x 575–625, y 525–570) sits in a recessed ring with the surrounding stones broken around it, and the two light sources sum correctly on the floor between them.
+
+WORST: 2
+
+WORST_WHY: The grey tiles (left column x 0–55, right column x 340–384, bottom run y 215–258) are a single flat value with a one-pixel dark grid line and a few speckles. No bevel, no edge, no corner piece, no per-tile variation. That is placeholder flooring. The pool (x 245–345, y 0–190) is a hexagonal tessellation texture laid under a flat green, with a hard rectangular boundary and no bank or edge tile where water meets dirt. There is no light source or fall-off anywhere; every pixel is at ambient. Props are stamped duplicates: the chest-on-crate stack appears identically twice at x 65–95 (y 0–40 and y 45–85), the barrels at y 195–215 are the same sprite twice, and the teal moss blotch is the same decal at three spots (x 20–50 y 55–80, x 15–50 y 205–230, x 365–384 y 150–175). Tile logic is broken at the left: the dark wall face with the orange door (x 10–55, y 120–165) sits directly on another grey wall-top (x 8–55, y 165–215) with no floor between, and the orange door extends below the face into the grey.
+
+FLAGGED: 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The hotspot (x 450–560, y 470–560) clips to near-flat cream; pull the lantern peak intensity down roughly a stop so joint lines and stone values survive under the light, as they do in 3.
+- Shadow edges are hard, straight, aliased polygon lines (the diagonal from about (430,70) to (500,150) on the big dark mass, and the wedge edge from (567,300) to (600,380) beside the doorway) while the light itself is a soft radial gradient. Soften or pixel-step the shadow boundaries so they match the falloff, or make the falloff hard to match them. Pick one.
+- The dark wall mass (x 200–450, y 100–380) carries a blotchy cloud mottle that reads as a Perlin-noise filter. Replace it with the actual masonry texture at low contrast, or kill the mottle.
+- Floor cracks are one-pixel smooth anti-aliased arcs at uniform darkness that run across tile joints and through lit and dark zones alike (the long arc from (560,700) sweeping to (750,640); the arc from (245,520) up to (440,455)). Redraw them as pixel-stepped lines that follow and break at joints, and let them take the lighting.
+- Debris decals on the lit floor read as glyphs: a "T" shape near (610,475) and a "Z" shape near (560,540). Replace letter-like stamps with rubble shapes.
+- The three X-frame barriers (x 190–310, y 650–710) are the same sprite three times at equal spacing. Vary at least one.
+- The wall band stops at x 183 with a vertical hard cut and no corner piece against the lighter block to its left (x 130–183). Add a corner or end-cap tile.
+- The upright post (x 260–300, y 530–640) is drawn as a tall side-on monolith with a rope band, in a scene whose floor and walls are straight overhead. Either redraw it as an overhead cap with a short cast shadow or commit to the mixed projection across all props.
+
+FLIP 3:
+- Same hard shadow-polygon edges as in 1: the diagonal from (430,70) to (500,150) and the wedge edge from (567,300) to (600,380). Soften or pixel-step them to match the soft falloff.
+- Same cloud-mottle noise over the dark wall mass (x 200–450, y 100–380). Replace with low-contrast masonry.
+- Same smooth vector-looking crack arcs (from (560,700) to (750,640); from (245,520) to (440,455)). Pixel-step them, break at joints, and let them take the light.
+- Same glyph-like debris stamps at about (610,475) and (560,540). Replace with rubble shapes.
+- Same triple-stamped X-frame barriers at x 190–310, y 650–710. Vary at least one.
+- Same missing corner where the wall band ends at x 183. Add an end-cap tile.
+- The lit floor's wall-top surface above the band (y 390–430) sits at nearly the same tan hue and value as the lit floor below the band; cool or darken the wall-top so the two planes separate without relying on the brick strip alone.
+
+FLIP 4:
+- The crate (x 190–300, y 478–520) and the roped log bundle (x 380–500, y 590–640) are not run through the lighting pass. Both are fully saturated orange, the crate's left end sits over floor that is already dim, and the bundle is brighter than the fire pit. Multiply prop sprites by the same light map as the floor.
+- A grey vertical stripe hangs down from the doorway (x 500–567) onto the lit floor to about y 600, as if the opening were casting a shadow toward the light. Remove the occluder or decal on the door tile; a doorway should read as floor, not as a smear.
+- The log bundle is drawn at a larger scale with soft shading and a thick outline, unlike the pixel-stepped stones under it. Redraw it at the floor's pixel density with a hard cast shadow.
+- Same hard shadow-polygon edges as 1 and 3 (diagonal from (430,70) to (500,150); the right wedge edge). Soften or pixel-step.
+- Same cloud mottle over the dark mass, same smooth crack arcs, same glyph-like debris stamps near (610,475) and (560,540). Fix as in 3.
+- Same missing corner at the wall band's left end at x 183.
+
+FLIP 2:
+- Give the grey wall-top tiles (x 0–55, x 340–384, y 215–258) real surface: per-tile value variation, a bevel or lip on the edge facing the floor, and corner pieces where runs meet.
+- Fix the tile logic at the left: the wall face with the orange door (x 10–55, y 120–165) sits directly on another wall-top (y 165–215). Put floor beneath a face, and clip the door so it does not extend below the face.
+- Add a light source with fall-off. The frame is at flat ambient everywhere.
+- Rebuild the pool (x 245–345, y 0–190): remove the hexagonal tessellation, add a bank or edge tile around the rectangle, and draw the lily pads at the same pixel density as the water.
+- De-duplicate props: the chest-on-crate stack at x 65–95 appears twice identically; the two barrels at y 195–215 are one sprite; the teal moss decal repeats identically at three spots. Make variants or remove copies.
+- The dirt floor's rust-red crack pattern repeats on a visible period; add two or three variant tiles and scatter them.
+- The small bright blue blobs on the dirt (near (60,95), (180,150), (230,10)) read as stray pixels. Remove or ground them as a specific prop.
+- The bottom wall face (y 258–288) is a side-on brick elevation under an overhead floor; either commit to one consistent 3/4 projection with faces under every wall-top, or drop the faces entirely.

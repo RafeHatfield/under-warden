@@ -1,0 +1,49 @@
+RANK: 2 > 1 > 4 > 3
+
+BEST: 2
+BEST_WHY: The lashed log bundle at about x=385-500, y=590-640 is properly built: the rope has four distinct turns, the upper log drops a darker band onto the lower one, the cut ends are lighter discs of end grain, and the whole prop warms on its brazier side. The floor under it is laid, not stamped: bricks differ in length within a course, courses are offset, joints vary in width, and the single long crack runs continuously across several bricks and behind the post. The two light sources are distinct in colour: the figure's light is near-white, the brazier's is orange, and the floor between them actually mixes from cream to orange rather than just getting brighter. The wall cap shows real thickness, and the posts along its inner edge are unevenly spaced and of uneven height, which reads as driven pins rather than a repeated tile.
+
+WORST: 3
+WORST_WHY: There is no light falloff anywhere; the frame is evenly lit edge to edge. The moss on the grey floor is one decal stamped three times: at about x=40-60, y=10-30; mirrored at x=200-230, y=10-30; and again at x=350-380, y=150-180, the same large blob with the same diamond-shaped hole each time. The pool at x=248-344, y=0-192 is a hard-edged rectangle of a repeating hex pattern with no bank, lip, or shading where it meets the dirt. The dirt floor's red-brown splotches repeat on a visible 32px cycle down the left half. The grey floor is one tile repeated under a perfect one-pixel grid. The two chest-on-crate stacks at x=60-96 are pixel-identical. The door post at x=27-35, y=112-150 has a brown "shadow" painted as a vertical bar running down into the dirt below the wall.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The crossed stakes at about x=190-310, y=650-710 sit in near-black floor at full orange saturation; run props through the same falloff as the floor so they darken with distance from the figure.
+- The trestle at x=575-660, y=405-460 straddles the wall cap and rail line at full brightness; either sit it fully on the floor below the wall base or dim it to the wall cap's value.
+- The post at x=262-300, y=530-640 is a flat cream block with a speckle fill, no texture, no top-edge wear, and no cast shadow or contact shade on the floor; texture it and ground it.
+- The dark rock mass top-left is a Voronoi-style fill of 100-200px polygons with hairline edges; replace with cells at a scale that matches the 36px bricks or remove the edge lines.
+- The wall cap band at y=390-450 is a soft, blurred mottled fill out of register with the crisp two-pixel bricks beneath it; redraw it on the same pixel grid.
+- The dark scribbles on the lit bricks around x=430-560, y=500-560 are random blobs and T-shapes; replace with directional wear that follows brick edges and foot traffic.
+- The brazier's halo is a smooth radial blur over hard pixel art; quantise it to a few steps or dither it on the pixel grid.
+
+FLIP 2:
+- A faint circle about 40px across is outlined on the floor up-left of the brazier at about x=565-610, y=465-510; find what draws it and remove it.
+- The crate at x=195-300, y=475-520 keeps full orange saturation in dim floor; dim props with the same falloff as the floor.
+- The post at x=262-300, y=530-640 is a flat cream block with no texture, wear, or contact shade; texture it and ground it.
+- The dark rock mass top-left is a large-scale Voronoi fill with hairline polygon edges; rescale the cells or remove the lines.
+- The wall cap band at y=390-450 is a soft mottled fill that does not sit on the pixel grid the bricks use; redraw it on that grid.
+- The random dark scribbles on the lit bricks read as noise; replace with directional wear tied to brick edges.
+- Quantise or dither the brazier halo so it sits on the same pixel grid as the fire sprite.
+
+FLIP 4:
+- The trestle at x=500-580, y=385-455 sits on the wall face strip and dark wall top; move it onto floor tiles.
+- The floor between the figure and the brazier, roughly x=430-700, y=460-600, is blown out to pale yellow-white with the joints nearly gone; cap the summed light so the brightest floor stays below the figure sprite's lightest value.
+- The wall cap at upper right, x=560-750, y=400-450, is pushed to the same yellow as the floor; keep the cap a step darker than the lit floor so the wall edge survives.
+- The sparse dark marks on the blown-out floor around x=560-620, y=460-520 read as stray garbage once the brick detail is gone; fix the exposure first, then redraw them as wear.
+- The post at x=262-300, y=530-640 is an untextured block with no contact shade; texture it and ground it.
+- The stakes at x=190-310, y=650-710 glow at full saturation in black floor; dim props with the floor falloff.
+- Replace the large-scale Voronoi rock fill top-left and the soft wall cap band as in the other two frames.
+
+FLIP 3:
+- Add a light source and falloff; the figure must carry the only light and everything beyond it must darken.
+- Replace the single moss decal at the three stamped positions with at least three distinct shapes, and never mirror the same one into view twice.
+- Give the pool at x=248-344 an edge: a stone lip or dirt bank tile on all four sides, and a darker band inside the edge so the water reads as below the floor.
+- Break the dirt floor's 32px repeat by adding two or more alternate dirt tiles and scattering them.
+- Give the grey floor two or more tile variants and vary the joint darkness so the one-pixel grid stops reading as a lattice.
+- Draw a wall where the dirt room meets the grey floor at the top and right; floors currently abut with no edge.
+- Vary the two chest-on-crate stacks at x=60-96 so they are not pixel-identical, and drop the sparkle on the lids.
+- Replace the vertical brown bar under the door post at x=27-35, y=112-150 with a shadow that lies on the floor.
+- Remove the stray lighter-outlined brick in the bottom wall at about x=164-186, y=271-279, or make the variation deliberate across the course.

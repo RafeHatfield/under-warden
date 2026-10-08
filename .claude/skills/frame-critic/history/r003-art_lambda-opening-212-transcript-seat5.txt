@@ -1,0 +1,42 @@
+RANK: 3 > 1 > 4 > 2
+
+BEST: 3
+BEST_WHY: The lit floor around the figure (roughly x 200–700, y 460–720) is cut stone, not stamped: joint widths vary along a single course, two long cracks cross several stones and their joints (one from x≈230,y≈470 down to x≈330,y≈560; one arc at x≈580–700,y≈650–690), and dark debris marks sit on individual stones rather than repeating. The wall band at y≈430–455 has driven pins at irregular spacing (x≈300, 360, 460, 600) and the timber's grain runs continuously under them, which is exactly the orc repair described. The figure's light falls off through warm, then grey, then near-black, and the wall-top masses above (y 70–400) keep faint crack lines so they read as surface, not void. Its props are small and low in the frame, so its faults are the least loud of the three shared-base frames.
+
+WORST: 2
+WORST_WHY: It does not implement the lighting at all: the orc at x≈220,y≈0–25 is as lit as the far corner at x≈380,y≈280, and the wall sconce at x≈25,y≈125 emits nothing. The pool (x 245–345, y 0–190) meets the dirt floor on a dead-straight rectangular edge with no bank, no shadow and no transition; its surface is a visible hexagonal scale tile and the lily pads are bright saturated green, which is cheerful, not cold. The wall tiles are flat grey with one-pixel grid lines and the same moss blob stamped three times (x≈25,y≈55; x≈135,y≈215; x≈350,y≈155). Chest-over-crate at x≈60–95 is repeated identically at y≈0–40 and y≈50–90, barrels at y≈195 are two copies, and only the orc has a drop shadow. In the bottom wall band one brick at x≈125–160,y≈265 is lighter than every other brick and reads as a hole. This is a tileset, not a place.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Remove or redraw the leaning plank at x≈510–560,y≈390–460: it is drawn side-on with a blue-grey flat triangle beside it, pasted over the wall cap in a straight-down scene. A braced timber seen from above is a foreshortened bar on the wall top with a cast shadow, not an A-frame.
+- The three X-stakes at x≈180–310,y≈650–720 are side-view silhouettes and identical copies; redraw as a top-down row of crossed timber (two bars crossing, seen from above) with at least two variants and one broken.
+- The leftmost stake is bisected by a hard straight diagonal darkness edge at x≈200; soften that edge to the art's pixel grid so it does not cut a sprite in half.
+- The pillar at x≈265–300,y≈535–640 shows a front face and a lit top; in a straight-down view it should be its cap plus a short drop shadow. Also its cream value is brighter than the lit floor at the figure's feet; bring it below.
+- The diagonal shadow edge across the floor at x≈300–420,y≈560–700 is anti-aliased at screen resolution and tints blue-grey; render it at the art's pixel size and keep it neutral.
+- The brazier glow at x≈600,y≈545 is a smooth screen-resolution gradient disc; quantise it to the pixel grid and let it actually light the stones on its far side.
+
+FLIP 3:
+- The three crossed-timber props at x≈200–230,y≈600–625; x≈390–420,y≈595–630; x≈510–545,y≈600–630 are three different styles and scales of the same object; pick one drawing and reuse it.
+- The left-hand X at x≈200–230 keeps full red saturation while the floor under it is blue-dark; props must take the scene light and darken with it.
+- The middle bundle at x≈390–420 is striped red with yellow highlights and reads as a loot icon; desaturate to the timber tone used in the wall band.
+- The small orange item at x≈330–360,y≈530–560 has a bright internal flame-like highlight, no contact shadow and sits half over a joint; ground it with a shadow and kill the highlight.
+- The doorway rectangle at x≈310–370,y≈645–715 is a flat inset of wall texture with hard edges; add a threshold and a lintel shadow so it reads as an opening, not a missing tile.
+- Same diagonal shadow edge and brazier glow fixes as 1 (x≈300–420,y≈560–700 and x≈600,y≈545).
+
+FLIP 4:
+- The crate at x≈190–305,y≈475–520 is drawn three-quarter view with a top face and a front face, in a straight-down scene; redraw as a top-down lid with cast shadow. It is also fully saturated orange at the edge of the light where the floor beside it is already grey.
+- The log bundle at x≈380–500,y≈590–640 shows round log ends, so it is oblique; redraw from above. Its lower log stays bright orange across the blue-dark shadow region at y≈620–640; it must darken with the floor.
+- Neither prop has a contact shadow; both float.
+- The pillar at x≈265–300,y≈535–640: same side-view and over-bright fault as in 1.
+- Same diagonal shadow edge, brazier glow and doorway-rectangle fixes as 1 and 3.
+
+FLIP 2:
+- Implement the carried light: the frame must fall off from the orc at x≈220,y≈10 to near-black at the corners. Nothing in this picture is dark.
+- Give the pool at x 245–345,y 0–190 a bank: broken edge tiles, a darker rim, and shadow on the near side. Replace the hexagonal scale texture with a still, dark surface and remove or desaturate the lily pads.
+- Break the wall tile at least three ways (chipped corner, missing mortar, longer crack) and stop repeating one moss blob; the copies at x≈25,y≈55 and x≈135,y≈215 are pixel-identical.
+- Fix the odd lighter brick at x≈125–160,y≈265 in the bottom band to match its neighbours, or make it a deliberate repair with a visible pin.
+- Vary the stacked chest-over-crate pairs at x≈60–95 and the two barrels at y≈195, and give every prop the same drop shadow the orc has.
+- Make the sconce at x≈25,y≈125 either emit light or be unlit; right now it is a prop with a flame and no effect.

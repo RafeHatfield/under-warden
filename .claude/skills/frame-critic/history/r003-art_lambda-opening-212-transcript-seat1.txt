@@ -1,0 +1,50 @@
+RANK: 1 > 2 > 4 > 3
+
+BEST: 1
+BEST_WHY: The floor in 1 is the most convincingly cut stone of the deck. In the lit band around the figure (x 200–500, y 460–620) the stones vary in width, the joints vary in darkness and thickness along a single course, and individual blocks carry different amounts of chip and stain, so the run reads as laid masonry rather than a stamped tile. The wall cap at y 395–450 has a drawn beam-and-pin band with a darker underside, and the lighting falloff is held in check: the figure's halo is bright but the stones beside the brazier at (575–625, 525–565) keep their joints instead of blowing to white. The brazier itself is a tight sprite with a dark ring and red-black embers, scaled to the floor's pixel grid. It is also the frame with the fewest objects that ignore the light.
+
+WORST: 3
+WORST_WHY: 3 is a flat, stamped tileset with no lighting at all. The grey wall mass at top-right (x 256–384, y 0–110) is the same featureless grey plate repeated with 1px joints and no value variation between tiles; the same plate forms the bottom band (y 200–260). The dirt floor (x 50–250, y 0–200) is a red-brown noise texture with no drawn features, repeating visibly. The water (x 250–330, y 0–190) is one scale-pattern tile repeated with a hard straight edge against the dirt and no bank. The moss blobs at (330–384, 20–60) and (40–60, 100–120) are soft-edged, semi-transparent circles smoother than the pixel grid, i.e. a brush dabbed over the tiles. The chests at (65–95, 5–25) and (65–95, 50–70) are plain beige rectangles with a dark base. The figure at (215–235, 0–25) casts no light and nothing darkens with distance, so the "carried light" premise is simply absent. There is also no consistent wall convention: the north walls are bare grey tops with no face, while the south wall at y 260–288 shows a dark brick face.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The crate at (195–300, 475–520) is a flat saturated-orange slab with no outline, no side faces, no cast shadow, and it sits at full brightness in a zone where the floor is already falling to dark; redraw it at the floor's pixel scale with top and side faces, desaturate it toward the wall cap's timber colour, and darken it with the same falloff as the floor under it.
+- The timber bundle at (380–500, 585–640) is the same flat orange, ignores the light, and has a stair-stepped bottom edge; give it a contact shadow, shade the undersides of both logs, and pull its saturation down to match the wall-cap beams.
+- The standing stone at (265–300, 535–635) is a front-view beige rectangle in a top-down scene with no shadow; either draw it as a top-down block (visible top face, short side faces, shadow on the floor to its lower-right) or remove it.
+- The floor cracks are single-pixel curves (e.g. (330,540) to (410,560), and the smooth arc at (560–700, 640–700)) drawn at a finer resolution than the stones; redraw them in the stone's pixel size and break them at the joints rather than letting one line cross three blocks.
+- The wall cap at y 420–440 repeats the identical pin/tick cluster at x≈230, x≈300 and x≈460; vary or offset the repeats.
+- The upper wall mass (0–500, 0–390) is a single dark field with a soft blurred lighter patch around (280,150) and one diagonal crack; replace the blur with drawn rock seams at the floor's pixel scale so the top reads as surface, not as a smudged gradient.
+- The hero sprite at (390–430, 465–515) is a black-outlined cartoon at a coarser pixel scale than the environment and shows no response to the lighting; either re-render the figure in the same outline-free, lit pipeline as the floor, or add a shadow and matching falloff so it belongs to the scene.
+
+FLIP 2:
+- The tall orange block at (265–300, 550–620) is a two-tone rectangle with nothing drawn on it; it reads as a placeholder. Replace it with a real prop drawn at the floor's pixel scale, with top/side faces, a cast shadow and falloff.
+- The plank at (395–490, 595–625) is a flat orange bar with a thin dark underside; shade the end grain, add a contact shadow, and darken it with the floor.
+- The barrel at (585–615, 590–630) is fully lit in a zone where the floor around it is near-black; apply the light falloff to it and its contact shadow.
+- The chest at (640–685, 465–505) and shelf at (705–750, 470–505) are at a finer pixel scale than the floor and sit at full brightness in the dark corner; redraw them at the floor's pixel size and apply the same falloff as the stones under them.
+- Same crack-line fix as 1: the 1px curves at (240–400, 530–580) and (560–700, 640–700) are a resolution mismatch; redraw at stone pixel size and stop them at joints.
+- Same wall-cap repeat fix as 1: the identical tick cluster at x≈230, 300 and 460 on y 420–440.
+- Same hero sprite fix as 1: outlined cartoon at a different pixel scale, no lighting response, no shadow.
+
+FLIP 4:
+- The broken plank at (505–560, 390–450) sits on top of the wall cap and extends up into the dark wall mass; a floor prop cannot overlap the wall top. Move it onto the floor below the cap, give it a shadow, or remove it.
+- The three X-shaped barricades at (185–310, 650–710) are drawn at full orange brightness inside a zone where the floor has fallen to near-black; apply the light falloff to them and add contact shadows.
+- The floor around the brazier (480–660, 460–600) is blown out to near-white so the joints vanish, and dark scribble blotches at (520–560, 470–520), (430–500, 560–600) and (690–740, 600–640) sit on top of the white like sprinkled noise; cap the brazier glow below the stone's light value and replace the scribble with drawn chips and stains that follow the stone edges.
+- The standing stone at (265–300, 535–635) is a front-view beige rectangle with no shadow; same fix as 1.
+- Same crack-line fix as 1 and 2: 1px curves crossing stone joints at (240–400, 530–580) and (560–700, 640–700).
+- Same wall-cap repeat fix: identical tick clusters at x≈230, 300 and 460.
+- Same hero sprite fix as 1.
+
+FLIP 3:
+- Add the carried light: darken every tile by distance from the figure at (215–235, 0–25) so the far corners (0–50, 200–288) and (330–384, 200–288) go to near-black; right now the frame is uniformly lit.
+- The grey wall plates at (256–384, 0–110) and (0–50, 0–110) are identical tiles with no value variation; draw at least four stone variants with chipped corners and differing joint depth, and scatter them.
+- Give every north-facing wall a visible face band: the walls at (0–50, 0–110) and (256–384, 0–110) meet the floor with no face, while the south wall at y 260–288 has a brick face. Pick one convention and apply it everywhere.
+- The dirt floor (50–250, 0–200) is a noise texture; replace with drawn flagstone or packed-earth detail at the tile scale, with visible repeats broken by at least three unique tiles.
+- The water (250–330, 0–190) is one scale tile repeated with a hard straight edge against dirt; add a bank tile, break the pattern, and darken the water with the same falloff as the floor.
+- The moss blobs at (330–384, 20–60) and (40–60, 100–120) are soft-edged and smoother than the pixel grid; redraw them as hard-edged pixel clusters.
+- The chests at (65–95, 5–25) and (65–95, 50–70) are plain beige rectangles; draw lid, hinge and side faces at the tile's pixel scale.
+- The post at (30–45, 125–160) in the left doorway is an unreadable brown stem with an orange top; either draw it as a legible torch bracket with a glow on the surrounding tiles or remove it.
+
+All four frames were read in full. None ships as it stands. Frames 1, 2 and 4 share a base environment that is competently made but carry flat, unlit, placeholder-grade props and resolution mismatches that a player would notice at a glance. Frame 3 has nothing floating or broken, but it is a flat, stamped tileset with no lighting, which is why it ranks last without being flagged.
