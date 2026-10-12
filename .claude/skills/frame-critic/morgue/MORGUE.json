@@ -567,7 +567,13 @@
    "culled_by": "Rafe, device walk, 2026-09-03",
    "verbatim": "caps are still grey and read as cement, not stone",
    "defect": "the found-rock cap with no architecture in it. The cap is one smooth field: no slabs, no fractures, no tooling, so the largest surface in frame is a value with noise on it. Measured, its wall cells carry a 4.6% hard-edge share against the 10.7% of the last approved build - the cap pass more than halved the wall's drawn edges. This is the CONSTRUCTION plant: it is wrong about whether a mass is made of anything, and it is deliberately RIGHT about chroma, so a round judged on construction cannot pass by fixing colour.",
-   "provenance": "re-seed of cement-cap-shadowed.png, which stays in the morgue as retired_as_control"
+   "provenance": "re-seed of cement-cap-shadowed.png, which stays in the morgue as retired_as_control",
+   "retired_as_control": {
+    "when": "2026-10-11",
+    "ruling": "Option 1. Deal only plants proven against the new scene: lambda-against-wall-r1b and objects-isometric-shadowed. The four unproven r1b plants, cement-cap-r1b included, are out of the deal until each is caught by at least 4 of 5 seats in self-test. r003 is cleared on that basis: its misses were on plants that should not have been dealt. Record this in JUDGE-CLEARED.json quoting these words. — Rafe, ruling on lambda-opening r003 (2026-10-11), in his words",
+    "why": "UNPROVEN, not culled as a control. Re-seeded 2026-09-30 into the R1b floor plan and dealt before being shown catchable. In lambda-opening r003 three of them were each ranked FIRST of four by the seat that drew them (seats 2, 3, 5): a near-twin of the build with one fine defect, judged on floor and light, wins about as often as a coin. cement-cap-r1b was not dealt but is equally unproven.",
+    "restore": "Return to the deal by clearing this field only after a self-test shows the plant caught by at least 4 of 5 seats against the R1b scene."
+   }
   },
   {
    "file": "props-unrecognizable-r1b.png",
@@ -586,7 +592,13 @@
    "culled_by": "Rafe, device walk, 2026-09-10 (the §12.2 ruling)",
    "verbatim": "small, unrecognizable except the fire; colouring quite good",
    "defect": "THE OBJECTS CANNOT BE NAMED. Marker content 10x15 px in a 32 px cell — a fifth of the cell, twenty device pixels across; three cold seats offered 'a bottle or vial', 'a lantern or candle', 'an orange chest or crate' for the marker and 'sticks' for the barricade. Craft is not the defect (the colouring was approved in kind); SIZE is, and a seat that would ship it is soft on the one clause §12 has — names itself at 1x. This is the OBJECT construction plant: it is deliberately fine on value and chroma so a round judged on object craft cannot pass by fixing colour.",
-   "provenance": "re-seed of props-unrecognizable-shadowed.png, which stays in the morgue as retired_as_control"
+   "provenance": "re-seed of props-unrecognizable-shadowed.png, which stays in the morgue as retired_as_control",
+   "retired_as_control": {
+    "when": "2026-10-11",
+    "ruling": "Option 1. Deal only plants proven against the new scene: lambda-against-wall-r1b and objects-isometric-shadowed. The four unproven r1b plants, cement-cap-r1b included, are out of the deal until each is caught by at least 4 of 5 seats in self-test. r003 is cleared on that basis: its misses were on plants that should not have been dealt. Record this in JUDGE-CLEARED.json quoting these words. — Rafe, ruling on lambda-opening r003 (2026-10-11), in his words",
+    "why": "UNPROVEN, not culled as a control. Re-seeded 2026-09-30 into the R1b floor plan and dealt before being shown catchable. In lambda-opening r003 three of them were each ranked FIRST of four by the seat that drew them (seats 2, 3, 5): a near-twin of the build with one fine defect, judged on floor and light, wins about as often as a coin. cement-cap-r1b was not dealt but is equally unproven.",
+    "restore": "Return to the deal by clearing this field only after a self-test shows the plant caught by at least 4 of 5 seats against the R1b scene."
+   }
   },
   {
    "file": "searchlight-edges-r1b.png",
@@ -607,7 +619,13 @@
    "culled_by": "Rafe, shadow walk on the handset, 2026-09-13 (flip 1 of the walk; the frame was superseded by the re-mark at softness 12.0)",
    "verbatim": "8.0 is the knob's ceiling and shadow edges are still traceable lines ... a lantern doesn't throw searchlights (§1: nothing is staged)",
    "defect": "THE CAST EDGES ARE LINES. Every shadow boundary in the room — the pillar's, the marker's, the barricades', the corridor mouth's — is a traceable edge at PCF softness 8.0, and the fire at 2.5 tiles lights nothing. Craft, colour and construction are the approved frame's own (it seeded the shadowed reference), so a round judged on cast-edge softness cannot pass by fixing anything else. This is the CAST-EDGE plant: wrong on exactly one axis, visible at deck scale.",
-   "provenance": "re-seed of searchlight-edges.png, which stays in the morgue as retired_as_control"
+   "provenance": "re-seed of searchlight-edges.png, which stays in the morgue as retired_as_control",
+   "retired_as_control": {
+    "when": "2026-10-11",
+    "ruling": "Option 1. Deal only plants proven against the new scene: lambda-against-wall-r1b and objects-isometric-shadowed. The four unproven r1b plants, cement-cap-r1b included, are out of the deal until each is caught by at least 4 of 5 seats in self-test. r003 is cleared on that basis: its misses were on plants that should not have been dealt. Record this in JUDGE-CLEARED.json quoting these words. — Rafe, ruling on lambda-opening r003 (2026-10-11), in his words",
+    "why": "UNPROVEN, not culled as a control. Re-seeded 2026-09-30 into the R1b floor plan and dealt before being shown catchable. In lambda-opening r003 three of them were each ranked FIRST of four by the seat that drew them (seats 2, 3, 5): a near-twin of the build with one fine defect, judged on floor and light, wins about as often as a coin. cement-cap-r1b was not dealt but is equally unproven.",
+    "restore": "Return to the deal by clearing this field only after a self-test shows the plant caught by at least 4 of 5 seats against the R1b scene."
+   }
   },
   {
    "file": "lambda-against-wall-r1b.png",
@@ -645,7 +663,13 @@
    "culled_by": "Rafe, JUDGE RULING lane art/lambda-212 r001 (2026-09-13) — a named cull, drawn to his words",
    "verbatim": "The morgue lacks a grounding cull the seats can see. Draw one: lambda-in-the-face — the same Λ with its feet 16 px up the face, no foot line between the legs. That is the failure at a scale a seat catches.",
    "defect": "THE Λ-FRAME HANGS IN THE WALL. Its feet are up the face with no floor under them and no foot line between the legs — the coarse version of the 12-px failure Rafe caught by eye on the walked build. This is the GROUNDING plant: everything else in the frame is the built law's, so a round judged on grounding cannot pass by fixing anything else. Ruling 47: proves it can be caught before its round counts (self-test lane).",
-   "provenance": "re-seed of lambda-in-the-face.png, which stays in the morgue as retired_as_control"
+   "provenance": "re-seed of lambda-in-the-face.png, which stays in the morgue as retired_as_control",
+   "retired_as_control": {
+    "when": "2026-10-11",
+    "ruling": "Option 1. Deal only plants proven against the new scene: lambda-against-wall-r1b and objects-isometric-shadowed. The four unproven r1b plants, cement-cap-r1b included, are out of the deal until each is caught by at least 4 of 5 seats in self-test. r003 is cleared on that basis: its misses were on plants that should not have been dealt. Record this in JUDGE-CLEARED.json quoting these words. — Rafe, ruling on lambda-opening r003 (2026-10-11), in his words",
+    "why": "UNPROVEN, not culled as a control. Re-seeded 2026-09-30 into the R1b floor plan and dealt before being shown catchable. In lambda-opening r003 three of them were each ranked FIRST of four by the seat that drew them (seats 2, 3, 5): a near-twin of the build with one fine defect, judged on floor and light, wins about as often as a coin. cement-cap-r1b was not dealt but is equally unproven.",
+    "restore": "Return to the deal by clearing this field only after a self-test shows the plant caught by at least 4 of 5 seats against the R1b scene."
+   }
   }
  ],
  "_regime": [
