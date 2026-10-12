@@ -1,0 +1,47 @@
+{
+ "subject": "barricade",
+ "box": [
+  495.0,
+  440.0,
+  575.0,
+  550.0
+ ],
+ "seats": 5,
+ "named": 1,
+ "verdict": "FAIL",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "MISS",
+   "phrase": "wooden plank or broken door propped at an angle in the wall gap"
+  },
+  {
+   "seat": 2,
+   "verdict": "MISS",
+   "phrase": "an object i cannot identify (a leaning wooden post with a reddish top, possibly a broken signpost or stake)"
+  },
+  {
+   "seat": 3,
+   "verdict": "NAMED",
+   "phrase": "a wooden crossed-stake piece at the wall edge, possibly another barricade fragment"
+  },
+  {
+   "seat": 4,
+   "verdict": "MISS",
+   "phrase": "a broken wooden object in the wall gap, possibly a smashed sign or door frame — an object i cannot identify"
+  },
+  {
+   "seat": 5,
+   "verdict": "MISS",
+   "phrase": "an object i cannot identify (an angled orange wooden plank with a block, at the doorway edge)"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: campfire burning on the floor\nWHERE: 598,636\nSURE: CERTAIN\n\nOBJECT: tall pale stone pillar or standing stone with a wooden band around its base\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: row of three wooden crossed-stake barricades\nWHERE: 250,770\nSURE: CERTAIN\n\nOBJECT: wooden plank or broken door propped at an angle in the wall gap\nWHERE: 540,510\nSURE: PROBABLY\n\nCOUNT: 4\nSessionEnd hook [node \"${CLAUDE_PLUGIN_ROOT}/hooks/session-end-cleanup.mjs\"] failed: Hook cancelled\n",
+  "OBJECT: a burning fire (lit brazier or campfire on the floor)\nWHERE: 598,636\nSURE: PROBABLY\n\nOBJECT: a wooden spiked barricade (row of crossed wooden stakes)\nWHERE: 250,770\nSURE: PROBABLY\n\nOBJECT: a tall pale stone pillar or standing slab\nWHERE: 280,680\nSURE: PROBABLY\n\nOBJECT: an object I cannot identify (a leaning wooden post with a reddish top, possibly a broken signpost or stake)\nWHERE: 540,510\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: a lit fire / burning brazier\nWHERE: 598,636\nSURE: PROBABLY\n\nOBJECT: a tall pale standing stone slab or pillar\nWHERE: 280,680\nSURE: PROBABLY\n\nOBJECT: a row of crossed wooden spike stakes (barricade)\nWHERE: 250,770\nSURE: PROBABLY\n\nOBJECT: a wooden crossed-stake piece at the wall edge, possibly another barricade fragment\nWHERE: 540,510\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: a lit fire pit / brazier (burning flames in a round stone ring)\nWHERE: 598,635\nSURE: PROBABLY\n\nOBJECT: a row of wooden spiked stake barricades (cheval-de-frise, three X-shaped stakes)\nWHERE: 250,770\nSURE: CERTAIN\n\nOBJECT: a tall pale stone pillar or obelisk\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a broken wooden object in the wall gap, possibly a smashed sign or door frame — an object I cannot identify\nWHERE: 540,510\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: a burning campfire or fire pit\nWHERE: 597,635\nSURE: PROBABLY\n\nOBJECT: a tall pale stone pillar or column\nWHERE: 280,675\nSURE: PROBABLY\n\nOBJECT: a row of crossed wooden spike barricades\nWHERE: 250,770\nSURE: PROBABLY\n\nOBJECT: an object I cannot identify (an angled orange wooden plank with a block, at the doorway edge)\nWHERE: 540,505\nSURE: GUESSING\n\nCOUNT: 4\n"
+ ]
+}

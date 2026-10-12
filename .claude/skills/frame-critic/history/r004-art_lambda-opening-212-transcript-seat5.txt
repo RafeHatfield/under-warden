@@ -1,0 +1,50 @@
+All crops are read. Writing the assessment now.
+
+RANK: 1 > 2 > 4 > 3
+
+BEST: 1
+BEST_WHY: The floor flagstones in the lit area around the figure, roughly x 180 to 750 and y 455 to 720, are cut rather than stamped. Joint depth varies along a single course, individual stones have chipped corners, and the long thin crack that starts under the top wall band near x 300 runs diagonally across six stones and keeps its path across every joint. The repaired wall band along y 420 to 455 reads as the orcs' work: a timber batten with driven pins at irregular spacing, dark pin heads at x 290, 410, 460 and again at 600 and 680, with no two pins at the same height. The light falls off smoothly from the figure and the brazier without banding, and the dark lower-right floor at y 720 and below still keeps its joint lines legible at low value instead of going to a flat black.
+
+WORST: 3
+WORST_WHY: The grey wall tops at the left column and bottom rows are flat mid-grey squares with a 1px darker grid and a few speckles. That is a placeholder stone tile. There is no light falloff anywhere in the frame, so the carried light that defines every other frame is absent. The dirt floor is one tile repeated, and the repeat shows: the dark red mottle forms a faint seam every 32px, visible as a grid across the whole brown area. The torch at the left edge, x 20 to 33 and y 128 to 168, is drawn in side elevation as an orange bar on a brown stem, overlaps the dark brick wall face above it, and bleeds two tiles down onto the dirt. The bone scatter at x 210 to 230, y 110 to 130 is pure white pixels with no shading. The pool is a flat hexagonal scale pattern with no edge treatment where it meets dirt or grey stone.
+
+FLAGGED: 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The figure at x 385 to 430, y 455 to 510 is a 2x-scaled outlined sprite in saturated cyan, orange and white, while the floor is 1x painterly grain. Re-render the figure at the environment's pixel density and desaturate its palette toward the scene, or re-render the floor at the sprite's density. Pick one scale for the whole frame.
+- The figure casts no shadow and has no ground contact. Add a soft contact shadow under the boots.
+- The pale post at x 260 to 300, y 530 to 640 is drawn in side elevation with a strap and buckle. In a straight-down view it should be a small cap with a shadow, or it should be redrawn as a top-down object with its height shown only by its shadow length.
+- The three crossed-stake barricades at x 180 to 310, y 650 to 710 are also side elevation. Redraw them in plan view, or treat the whole prop set as consistent oblique and redraw the brazier and crate to match.
+- The wall-face band segment at x 310 to 400, y 650 to 720 has lit floor above it at y 600 to 645 and floor to its left and right. A wall face needs a wall top behind it. Either extend a wall-top mass north of it or delete the segment.
+- The lit bevel wedge at x 400 to 440, y 650 to 720 is brighter than the floor beside it at the same distance from the light. Drop its value to match or below its neighbours.
+- The V-shaped timber brace at x 520 to 560, y 390 to 455 sits on top of the wall-corner wedge in the saturated orange prop palette. Push it into the same value range as the wall it is attached to and give it a shadow where it touches the wall.
+- The upper-left wall top, x 180 to 440 and y 70 to 390, is a flat dark polygon fill with three straight diagonal seams and a noise overlay. It reads as a generated fracture fill. Give it coursing, or at least joint lines that connect to the wall face band below it.
+
+FLIP 2:
+- Same figure fixes as frame 1: match pixel density to the environment, desaturate the palette, add a contact shadow.
+- The crate at x 190 to 300, y 480 to 520 is a saturated orange oblique drawing with a visible front face. The brazier beside it is true plan view. Redraw the crate as plan view with its height shown by a shadow, and bring its colour down to the floor's warmth.
+- The bound log bundle at x 380 to 500, y 590 to 640 is the brightest and most saturated object in the frame, brighter than the floor right under the figure. Lower its value and saturation to sit under the light, not above it.
+- The pale post at x 260 to 300, y 530 to 640 has the same side-elevation problem as frame 1.
+- The orphan wall-face band segment at x 310 to 400, y 650 to 720 is fully exposed in this frame with floor on three sides. Remove it or give it a wall top.
+- The blue-grey floor tile to the left of that segment at x 180 to 310, y 650 to 720 has no joint lines or grain, only the crack passing through it. Give it the same flagstone treatment as the floor above it.
+- The same upper-left wall-top polygon fill as frame 1 needs coursing or connected joints.
+
+FLIP 3:
+- Add the light falloff. Nothing in this frame is darker than anything else, and the figure at the top is carrying nothing.
+- Replace the grey wall-top tile, left column and bottom rows, with a drawn stone surface. It is currently a flat grey square with a 1px grid and three speckles. Vary joint depth and stone size and give the tops a value distinct from the dark brick face below them.
+- Break the floor repeat. The red mottle seams every 32px across the brown area are visible at play size. Add two or three variant dirt tiles and scatter them.
+- Redraw the torch at x 20 to 33, y 128 to 168 in plan view, or at least stop it bleeding two tiles down onto the dirt below the wall face it is mounted on.
+- Shade the bone scatter at x 210 to 230, y 110 to 130. Pure white pixels on a mid-brown floor read as a debug marker.
+- Give the pool at x 250 to 345, y 0 to 190 an edge. Right now its hexagonal pattern stops in a hard straight line against both dirt and grey stone with no bank, no wet rim, no shadow.
+- The two chests at x 65 to 95, y 0 to 70 are identical, same diamond glyph, same banding. Vary one.
+- The barrels at x 115 to 190, y 190 to 215 are drawn with a front face and a top ellipse while the walls are strict plan view. Decide on one projection for props and redraw the other.
+
+FLIP 4:
+- Same figure fixes as frame 1: match pixel density, desaturate the palette, add a contact shadow.
+- The A-frame timber at x 580 to 680, y 400 to 460 sits directly on top of the wall-face band and overlaps it, with its feet on the wall and its peak on the floor. It is floating on a wall. Move it fully onto the floor and give it a shadow, or redraw it as a brace driven into the wall at the band's value.
+- The pale post at x 260 to 300, y 530 to 640 and the crossed stakes at x 180 to 310, y 650 to 710 have the same side-elevation problem as frame 1.
+- The orphan wall-face band segment at x 310 to 400, y 650 to 720 needs a wall top or deletion, as in frame 1.
+- The lit bevel wedge at x 400 to 440, y 650 to 720 is brighter than its neighbouring floor. Lower it.
+- The upper-left wall-top polygon fill needs coursing or connected joints, as in frame 1.

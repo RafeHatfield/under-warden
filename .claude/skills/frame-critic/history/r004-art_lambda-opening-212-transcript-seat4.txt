@@ -1,0 +1,45 @@
+RANK: 2 > 4 > 3 > 1
+
+BEST: 2
+BEST_WHY: The floor in 2 is the best-made surface in the deck. Stones vary in width along a single course (the run under the figure at y≈470–520 mixes stones roughly 40, 60 and 90 px wide), the joint lines break and thin rather than run continuous, and each stone carries its own short hatching so adjacent stones read as different cuts, not one stamp. The long diagonal crack from the pillar at (280,590) up to (440,500) crosses joints without stopping, which is how real cracks go. The wall cap at y≈400–450 is a plank beam with driven pins and strap brackets (the dark fittings at x≈300, 440, 590), which lands the "repaired, not maintained" fiction without a single decorative flourish. The light is balanced: the brightest stones around the figure keep their joint lines, and the fall toward the bottom-right stays continuous, so the brazier at (600,545) reads as a second, weaker source rather than a hole. The brazier itself is well drawn, with a rim, a coal bed and an ember glow that stays inside the bowl.
+
+WORST: 1
+WORST_WHY: 1 has no light model at all. The brief says the figure carries the only light, but the floor at the frame corners is the same value as the floor beside the orc at (215,10), so nothing in the scene is placed in space. The pool at x≈250–345, y 0–190 is a flat teal rectangle of one repeated scale tile with a one-pixel straight edge against the mud, no bank, no rim, and three saturated lime lily pads sitting on it like stickers. The torch at (28,128) has a solid darker-brown 6-px column running straight down from it across the floor to the next wall slab at y≈165, which reads as a draw error, not a shadow. The grey wall slabs are one identical tile with a thin dark grid line and teal moss blobs stamped on at random, including one straddling the slab edge at (20–45, 210–230). The two crates at (60–95, 0–90) are identical copies stacked, the two barrels at (115–190, 190–215) are identical copies side by side, and the cyan puddle flecks on the mud at (40,10), (60,40), (175,155) are full-saturation hard-edged shapes with nothing else in the frame that colour. The orc stands with its head 2 px from the top border, so the camera is not on the figure.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Add distance falloff from the orc: everything more than ~6 tiles from (215,10) should drop at least three value steps, and the frame corners should be near-black.
+- Replace the pool rectangle with a drawn bank: a 1–2 tile rim of darker mud or stone around the water, a shadowed inner edge, and break the straight left edge at x≈250.
+- Replace the repeated scale tile in the pool with at least three water variants and kill the lime lily pads or desaturate them to the pool's value range.
+- Remove the brown column under the torch at (28–34, 135–165); if it is a cast shadow, it must fall away from the torch, not straight down a wall face.
+- Draw at least four wall-slab variants with different joint depths and chip positions, and stop stamping the same moss blob; moss must sit in joints, not across them.
+- Remove the hard cyan floor flecks or paint them as puddles with a dark edge and a reflection value matching the floor.
+- Vary the two crates and the two barrels so no two props are pixel-identical neighbours.
+- Scroll the camera so the orc is not on the frame edge.
+
+FLIP 3:
+- The pillar at (265–300, 550–620) is a flat two-tone orange box with no texture, no top edge treatment and no shadow; replace it with the pale strapped stone pillar used in 2 and 4, or texture and shade it.
+- The bench at (395–490, 595–630) is a flat orange slab with a thin maroon line along its base; give it plank joints, end grain, a lit top versus darker side, and a cast shadow falling away from the figure.
+- The chest and shelf at (640–750, 460–510) are drawn with 1-px outlines and a lattice that is far finer-grained than any floor stone; redraw them at the floor's pixel grain or replace them with props from the same set as the beam fittings.
+- The lower-left dark region ends on a hard horizontal line at y≈647 from x≈150 to 377 and a hard vertical line at x≈377, cutting floor stones in half; either draw a wall there to justify the cut or soften the light polygon to the falloff used elsewhere.
+- The wall masses at (60–190, 390–700) and (500–750, 80–400) are smooth blurred blotches with straight polygon facet edges, at a different texture frequency to the pixel floor; redraw the wall tops as pixel stone with joints, or at minimum remove the blur and the straight diagonal facet at (570,80)–(640,390).
+- The figure is a thick-outlined saturated sprite while the environment has no outlines; match outline weight and palette saturation to the floor.
+
+FLIP 4:
+- The timber brace at (505–560, 390–450) sits over the wall cap and beam with a flat navy triangle on its left side; the figure's light comes from below-left, so the shadow is on the wrong side, and it is a hard flat polygon. Rebuild it as a prop set into the wall with the shadow on the up-right side and integrated with the beam row.
+- The leftmost cheval-de-frise at (185–215, 650–700) is cut by a hard-edged dark triangle; remove that visibility wedge or feather it.
+- The floor between the figure and the brazier at (480–560, 470–600) is near-white yellow with joint lines barely surviving; reduce the brazier's additive contribution by about a third so the two sources do not stack to clipping.
+- Same wall-mass fix as 3: replace the blurred, straight-faceted wall tops at (60–190, 390–700) and (500–750, 80–400) with drawn pixel stone.
+- The hard vertical lit/dark boundary at x≈375 from y≈650 to the frame bottom cuts floor stones; justify it with a drawn wall or soften it.
+- Match the figure's outline weight and saturation to the environment.
+
+FLIP 2:
+- The crate at (190–305, 475–520) and the bound logs at (380–500, 590–640) are full-saturation flat orange with no response to the light; both sit at the edge of the lit zone yet are as bright as the figure's own tile. Shade their far faces down by two value steps and give each a cast shadow falling away from the figure.
+- The pillar at (265–300, 540–640) has no cast shadow at all; add one up-left of it on the floor.
+- The lower-left dark region ends on a hard horizontal line at y≈647 from x≈150 to 377 and a hard vertical line at x≈377; draw the south wall there or soften the polygon.
+- The wall masses at (60–190, 390–700), (500–750, 80–400) and (180–500, 0–70) are smooth blurred blotches with straight facet edges, which reads as a filtered texture next to the pixel floor; redraw as pixel stone with joints.
+- The figure is a thick-outlined saturated sprite with a cyan turban against an environment with no outlines; match outline weight and desaturate to the floor palette.
+- The corridor floor at x≈440–500 above the room is a flat cold blue-grey with faint cracks and no stone joints, unlike the room floor it connects to; give it the same stonework at lower value.

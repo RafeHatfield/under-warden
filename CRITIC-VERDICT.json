@@ -1,8 +1,8 @@
 {
  "schema": "frame-critic/1",
- "verdict": "VOID",
+ "verdict": "INSTALL-LATEST",
  "lane": "art/lambda-opening-212",
- "round": 3,
+ "round": 4,
  "surface": "combined",
  "axis": [
   "construction",
@@ -10,18 +10,18 @@
   "cast-edge",
   "scale"
  ],
- "commit": "f74053b836695a648c1f05afaa245de9c085a9e0",
+ "commit": "e1cba1150a5c5ae840ce66d804954b3bb40c1fbc",
  "dirty": true,
- "build_id": "9bd609f6ce0098d4ceb86e80598d3338b47bbc54b1b4fa8b5a1ba0071d0d101d",
- "timestamp": "2026-10-08T13:22:55",
+ "build_id": "af632942ec2543d595c5a96ee53a185eb49209f22a17cdd3e737c88502079176",
+ "timestamp": "2026-10-11T22:25:36",
  "build_frame": {
   "path": "tools/tier1_floors/evidence/combined.png",
-  "sha256": "62279722ae726c58dbd85dbd0ff57ea56b7cce4de1bb465c75c36509b02a6eb6",
+  "sha256": "63d7ffd938dd932b2946d0d0fe3c7569f33d32968448a9f2142d84f8635c06b3",
   "log": "tools/tier1_floors/evidence/combined.log",
   "flags": "/Users/rafehatfield/.local/bin/godot-quiet --path /Users/rafehatfield/development/ff/under-warden-wt/r2 --resolution 750x1334 --art-scene-capture --capture-out tools/tier1_floors/evidence/combined.png --capture-width 750 --capture-height 1334 --corridor-scene res://src/Presentation/assets/tier0_harness/scenes/tier1_props_review.json --tile-theme-config res://src/Presentation/assets/tier1_ashlar/tile_themes_tier1_ashlar.yaml --tile-size 32 --tile-scale 2.0 --light-ambient 1a1a22 --light-color ffb066 --light-energy 1.6 --light-radius-tiles 6.0 --light-falloff 1.0 --light-ambient-level 1.5 --floor-overlays res://src/Presentation/assets/tier1_floors/MANIFEST.json --ashlar-floor res://src/Presentation/assets/tier1_ashlar/MANIFEST.json --boundary-wall res://src/Presentation/assets/tier1_walls/MANIFEST.json --void-ring 0 --wall-bindings res://src/Presentation/assets/tier1_bindings/MANIFEST.json --wall-cap res://src/Presentation/assets/tier1_cap/MANIFEST.json --occluders all --shadow-softness 12.0 --shadow-darkness 0.8 --fire-flicker 1"
  },
  "deck": {
-  "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-7ba0e5ce585b016f",
+  "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-013afd847b57d622",
   "slots": {
    "1": {
     "what": "approved",
@@ -39,9 +39,9 @@
     ]
    },
    "2": {
-    "what": "plant",
-    "source": ".claude/skills/frame-critic/morgue/objects-isometric-shadowed.png",
-    "sha256": "0d8a922f00499b98a7d67cf3120e90b6af4c3998396b0a400c891737100302d0",
+    "what": "build",
+    "source": "tools/tier1_floors/evidence/combined.png",
+    "sha256": "63d7ffd938dd932b2946d0d0fe3c7569f33d32968448a9f2142d84f8635c06b3",
     "crop": [
      0,
      90,
@@ -69,9 +69,9 @@
     ]
    },
    "4": {
-    "what": "build",
-    "source": "tools/tier1_floors/evidence/combined.png",
-    "sha256": "62279722ae726c58dbd85dbd0ff57ea56b7cce4de1bb465c75c36509b02a6eb6",
+    "what": "plant",
+    "source": ".claude/skills/frame-critic/morgue/lambda-against-wall-r1b.png",
+    "sha256": "b673be7c102090ee4bc7f40ca9b8c8b11e60e29d51adbed66c5f685b8ec80515",
     "crop": [
      0,
      90,
@@ -87,86 +87,86 @@
   "build": "tools/tier1_floors/evidence/combined.png"
  },
  "plant": {
-  "slot": 2,
-  "file": "objects-isometric-shadowed.png",
-  "sha256": "0d8a922f00499b98a7d67cf3120e90b6af4c3998396b0a400c891737100302d0",
-  "culled_by": "Rafe, device walk, 2026-09-11 (object-projection round one)",
-  "verbatim": "iso is clearly not a fit",
+  "slot": 4,
+  "file": "lambda-against-wall-r1b.png",
+  "sha256": "b673be7c102090ee4bc7f40ca9b8c8b11e60e29d51adbed66c5f685b8ec80515",
+  "culled_by": "Rafe, walk on the handset, 2026-09-23 (flip), upheld at the R1 ruling 2026-09-25",
+  "verbatim": "it seems taller than the wall. \u2014 and at the ruling: Rafe's eye holds over the met bar: it reads taller than the wall. Plant: the \u039b against the north wall (the walked frame) as the miss control.",
   "caught": true,
   "how": {
    "ranked_last": false,
    "named_worst": false,
    "flagged": true,
    "shipped": false,
-   "outranked_build": true,
+   "outranked_build": false,
    "every_frame_flagged": false
   }
  },
  "seat": {
-  "BEST_WHY": "The floor in 1 is the most convincingly cut stone of the deck. In the lit band around the figure (x 200\u2013500, y 460\u2013620) the stones vary in width, the joints vary in darkness and thickness along a single course, and individual blocks carry different amounts of chip and stain, so the run reads as laid masonry rather than a stamped tile. The wall cap at y 395\u2013450 has a drawn beam-and-pin band with a darker underside, and the lighting falloff is held in check: the figure's halo is bright but the stones beside the brazier at (575\u2013625, 525\u2013565) keep their joints instead of blowing to white. The brazier itself is a tight sprite with a dark ring and red-black embers, scaled to the floor's pixel grid. It is also the frame with the fewest objects that ignore the light.",
-  "WORST_WHY": "3 is a flat, stamped tileset with no lighting at all. The grey wall mass at top-right (x 256\u2013384, y 0\u2013110) is the same featureless grey plate repeated with 1px joints and no value variation between tiles; the same plate forms the bottom band (y 200\u2013260). The dirt floor (x 50\u2013250, y 0\u2013200) is a red-brown noise texture with no drawn features, repeating visibly. The water (x 250\u2013330, y 0\u2013190) is one scale-pattern tile repeated with a hard straight edge against the dirt and no bank. The moss blobs at (330\u2013384, 20\u201360) and (40\u201360, 100\u2013120) are soft-edged, semi-transparent circles smoother than the pixel grid, i.e. a brush dabbed over the tiles. The chests at (65\u201395, 5\u201325) and (65\u201395, 50\u201370) are plain beige rectangles with a dark base. The figure at (215\u2013235, 0\u201325) casts no light and nothing darkens with distance, so the \"carried light\" premise is simply absent. There is also no consistent wall convention: the north walls are bare grey tops with no face, while the south wall at y 260\u2013288 shows a dark brick face.",
-  "FLAGGED": "1, 2, 4",
-  "RANK": "1 > 2 > 4 > 3",
-  "BEST": "1",
+  "BEST_WHY": "The lit flagstone floor in the centre of 2 (the area around the figure and the stela, roughly x 200 to 560, y 460 to 720) is the best-made surface in the deck. The flags are different widths within a single course, the joints are not a uniform one-pixel grid but open and close along their length, and the dark chipping is clustered at block corners rather than sprinkled evenly, so the floor reads as cut and worn stone rather than a stamped tile. The wall face band at y 420 to 455 has its timber rail broken by posts at irregular spacing with a small pinned splice at x 440, which is exactly the \"repaired with driven pins and salvaged timber\" fiction without announcing it. Of the three prop sets, 2's is the quietest: the three cheval-de-frise stakes at the bottom left sit in shadow at a value close to the wall, and the leaning plank in the top-right notch (x 505 to 560, y 390 to 460) is small and tucked into a wall corner where a plank would actually be left. The light falloff from the figure into the dark rock at top left is smooth, with the wall-top slab cracks still faintly legible in the dark instead of crushed to black.",
+  "WORST_WHY": "3 is a flat, evenly lit tileset with no falloff from the figure at all, and every surface in it is visibly stamped. The grey wall tops (left column, x 0 to 55, and the bottom band, y 215 to 265) carry a perfectly uniform one-pixel grid with identical speckle in every cell. The teal moss blobs on the left wall at about (35, 60) and (25, 220) are the same shape pasted twice. The two crates at (60, 10) and (60, 50) are identical copies, as are the two barrels at (130, 200) and (175, 200). The pool at right is a repeating hex texture at full tile edges with hard square corners and no bank, shore, or wetness on the adjacent floor. The brown floor is a single noise texture with red speckle repeated across the whole room. The orc stands on a flat oval shadow puddle while nothing else in the frame casts one. It looks like the free asset pack, not a paid game.",
+  "FLAGGED": "3, 4",
+  "RANK": "2 > 1 > 4 > 3",
+  "BEST": "2",
   "WORST": "3",
   "SHIP": "NONE"
  },
- "flip_list": [],
- "flip_list_withheld": [
-  "The broken plank at (505\u2013560, 390\u2013450) sits on top of the wall cap and extends up into the dark wall mass; a floor prop cannot overlap the wall top. Move it onto the floor below the cap, give it a shadow, or remove it.",
-  "The three X-shaped barricades at (185\u2013310, 650\u2013710) are drawn at full orange brightness inside a zone where the floor has fallen to near-black; apply the light falloff to them and add contact shadows.",
-  "The floor around the brazier (480\u2013660, 460\u2013600) is blown out to near-white so the joints vanish, and dark scribble blotches at (520\u2013560, 470\u2013520), (430\u2013500, 560\u2013600) and (690\u2013740, 600\u2013640) sit on top of the white like sprinkled noise; cap the brazier glow below the stone's light value and replace the scribble with drawn chips and stains that follow the stone edges.",
-  "The standing stone at (265\u2013300, 535\u2013635) is a front-view beige rectangle with no shadow; same fix as 1.",
-  "Same crack-line fix as 1 and 2: 1px curves crossing stone joints at (240\u2013400, 530\u2013580) and (560\u2013700, 640\u2013700).",
-  "Same wall-cap repeat fix: identical tick clusters at x\u2248230, 300 and 460.",
-  "Same hero sprite fix as 1."
+ "flip_list": [
+  "The three stakes at (180 to 310, 650 to 710) are the same sprite stamped three times, with the same highlight pixel on each crossbar. Draw at least two variants with different lean and rope wrap, and offset one by a few pixels vertically.",
+  "The leaning plank at (505 to 560, 390 to 460) is the same fully saturated orange as the props in 1 and 4. Bring it to the timber rail's value and let the figure's light tint it.",
+  "The stela's baked shading faces away from the light; same fix as in 1.",
+  "The long crack crossing flagstones without deflecting at joints; same fix as in 1.",
+  "The brazier's hard-edged pale disc; same fix as in 1.",
+  "The hard diagonal shadow edge in the top-right rock; same fix as in 1.",
+  "The hero sprite's saturation and missing contact shadow; same fix as in 1."
  ],
- "withheld_because": "LOOP-PROCESS \u00a74: the plant was missed, so this round's findings are not read. Nothing here may be cited, quoted, or acted on.",
+ "flip_list_withheld": null,
+ "withheld_because": null,
  "panel": {
   "seats": 5,
   "ruling": "five seats; block only on strong-majority regression (>=4 of 5 rank below the reference); else install if exit met and plant caught. Rank-in-deck cannot resolve polish-sized deltas at a 40% flip rate. \u2014 Rafe, 2026-09-09",
   "law": "a gate's binding term must have a measured noise floor and must never be a single sample. \u2014 Rafe, 2026-09-08",
-  "verdict_at_round": "VOID",
+  "verdict_at_round": "INSTALL-LATEST",
   "above_reference": 2,
-  "not_below_reference": 3,
-  "below_reference": 2,
+  "not_below_reference": 5,
+  "below_reference": 0,
   "strong_regression": false,
   "ref_slack": 1,
-  "flagged_by": 4,
+  "flagged_by": 3,
   "shipped_by": 0,
   "majority_above": false,
   "majority_not_below": true,
-  "all_caught": false,
+  "all_caught": true,
   "seat_redraws": [],
-  "seat_plant_stop": "3 seats missed a live plant in one round (seats 2, 3, 5). That is not one seat having a bad day.",
+  "seat_plant_stop": null,
   "dissent": 2,
-  "plants_distinct": 5,
+  "plants_distinct": 2,
   "per_seat": [
    {
     "seat": 1,
-    "rank": 3,
-    "reference_rank": 1,
-    "above_reference": false,
-    "not_below": false,
-    "build_flagged": true,
-    "shipped": false,
-    "plant": "objects-isometric-shadowed.png",
-    "caught": true,
-    "transcript": ".claude/skills/frame-critic/history/r003-art_lambda-opening-212-transcript-seat1.txt",
-    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-7ba0e5ce585b016f"
-   },
-   {
-    "seat": 2,
-    "rank": 2,
-    "reference_rank": 3,
+    "rank": 1,
+    "reference_rank": 2,
     "above_reference": true,
     "not_below": true,
     "build_flagged": false,
     "shipped": false,
-    "plant": "searchlight-edges-r1b.png",
-    "caught": false,
-    "transcript": ".claude/skills/frame-critic/history/r003-art_lambda-opening-212-transcript-seat2.txt",
-    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-0a8c794b9beb80a3"
+    "plant": "lambda-against-wall-r1b.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r004-art_lambda-opening-212-transcript-seat1.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-013afd847b57d622"
+   },
+   {
+    "seat": 2,
+    "rank": 2,
+    "reference_rank": 1,
+    "above_reference": false,
+    "not_below": true,
+    "build_flagged": true,
+    "shipped": false,
+    "plant": "objects-isometric-shadowed.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r004-art_lambda-opening-212-transcript-seat2.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-756ba7b525d6d0ed"
    },
    {
     "seat": 3,
@@ -176,36 +176,36 @@
     "not_below": true,
     "build_flagged": true,
     "shipped": false,
-    "plant": "lambda-in-the-face-r1b.png",
-    "caught": false,
-    "transcript": ".claude/skills/frame-critic/history/r003-art_lambda-opening-212-transcript-seat3.txt",
-    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-eb8eb6d818583258"
+    "plant": "lambda-against-wall-r1b.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r004-art_lambda-opening-212-transcript-seat3.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-e4d8693daef71bbe"
    },
    {
     "seat": 4,
-    "rank": 3,
+    "rank": 2,
     "reference_rank": 1,
     "above_reference": false,
-    "not_below": false,
-    "build_flagged": true,
-    "shipped": false,
-    "plant": "lambda-against-wall-r1b.png",
-    "caught": true,
-    "transcript": ".claude/skills/frame-critic/history/r003-art_lambda-opening-212-transcript-seat4.txt",
-    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-4f260465beb8f802"
-   },
-   {
-    "seat": 5,
-    "rank": 2,
-    "reference_rank": 3,
-    "above_reference": true,
     "not_below": true,
     "build_flagged": true,
     "shipped": false,
-    "plant": "props-unrecognizable-r1b.png",
-    "caught": false,
-    "transcript": ".claude/skills/frame-critic/history/r003-art_lambda-opening-212-transcript-seat5.txt",
-    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-e743e72677c461ce"
+    "plant": "objects-isometric-shadowed.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r004-art_lambda-opening-212-transcript-seat4.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-0060978d2bd6a156"
+   },
+   {
+    "seat": 5,
+    "rank": 1,
+    "reference_rank": 2,
+    "above_reference": true,
+    "not_below": true,
+    "build_flagged": false,
+    "shipped": false,
+    "plant": "lambda-against-wall-r1b.png",
+    "caught": true,
+    "transcript": ".claude/skills/frame-critic/history/r004-art_lambda-opening-212-transcript-seat5.txt",
+    "work_dir": "/Users/rafehatfield/.claude/frame-critic/deck-7ac24d2aaba2a543"
    }
   ]
  },
@@ -229,18 +229,18 @@
   "met": true
  },
  "progress": {
-  "rank_position": 3,
+  "rank_position": 1,
   "deck_size": 4,
-  "rank_score": 0.3333333333333333,
+  "rank_score": 1.0,
   "bar_position": 4,
-  "approved_position": 1,
+  "approved_position": 2,
   "approved_frame_in_deck": true,
-  "beats_approved": false,
+  "beats_approved": true,
   "near_bar": true,
   "near_bar_slack": 1,
-  "new_best": false,
+  "new_best": true,
   "best_before": null,
-  "capture_signature": "0c0e0c0d0b0e101012120e131315110e0e110f10110e100f0d0e0f0e0d122e2b0c0d0e0e0d0c111010100e1313120f0c0d100e0e0f0d0d0e0c0e0e0e0d1041350e0e0e0d0d0e11110d0b0f0e0c0d0e0c0b0a0a0a09090d0f0d0e0d0c0c0b0a0a0d0d0e0e0c10111111111212111314100a0a0b0c0b0d100d0e1012100f0c0b0b0b0c0c0c0e101012121111111111100c0c0c0f111b10110d0e0f10100b0806060e100f0f0f101010100f0e0e0c0d0d0c0d101416160f110d0e100f0d08060d0f0f0f11100f0f0f100d0c0c0c0d0f0f0e0e0f13191f11120f0f100f0a08071010100f0f11100f1012100e0f0d11141210121118252516151216150e0a090911120f100f100f0f1010111013121315141417171f332f1f17131c190b0c0a070e110f100f1010101213131112141619191b1b1a1e3b3c281a182415110d0c0a13110e0f1010101113141515171a1a1f1d1e1e202848492c1e1a221a15120d0a13120f0e0e0e111213161716181b1c20212223232e44452f231f1e1c1814100c12120f0d0c0f0f12121517191c1d21242526282b365552392929372a201c171214130f0e0d1012181a1c192021262a2c2c343c3c456e634734345847403e372518160d0f12101321252a212a2a3935354855576f676e8454374369605f4c412d141e0f100f121223252a262b2b313e374455535b4852644f625f38453c3137212c2d1011121614222c293739444a4b526e62747b7585a4b8dad6a59a908c6959483711100f121325312c42606c7a81828e8a8993becff0dad8dddac7b5b4926b4e430f0f111215232d283d4d4e5d6969768da6b6bac6ebeaf0e7d59b93908867594911131415302f1d1f2b2e59857371787d9ad9cbd4dee4e8cea675898981685b490f0f0f111217171f353f5a7a68607478a9d6bfcfceb4a49ea29e92837b6858450e0b0c0d0f12131d33424c6c5d54767b8a92a4a9c2917796a297907a665a513c0f0d0d0c0d12161b2b36374747444b4a6572898c9c7d828587837660554a3d350e0f0e0c0b0f1218132324282a252a2c32547d71666572766f6865574c332b2e0c0d09080b0a0a0d0f191c1e221e2220295059624d5f606255564a463b312724100f0a0d0e0d0d11141314171b1c2125262a313a314346433c3a34302a211f1314120f101012141211111216181b1e2226292b2b26282723292628211a14141313140d100e0f1110100e1011171518191b1b1b1e1c1a181518181514130f0f0d12120d0f0e0e0f10100d0e101312131413141517151513101211100f100e0f0d13120f0d0d0e0b0c0f0f0f0f11101111100f111313101213100f0e0d0d0e0f0f241f15111312120f0c10121314131111110f1214121212121011100d0f0f0e0f192214121111110e0e10111213121010120f10120f13121111100f0d100f1110",
+  "capture_signature": "0c0e0c0d0b0e101012120e131315110e0e110f10110e100f0d0e0f0e0d122e2b0c0d0e0e0d0c111010100e1313120f0c0d100e0e0f0d0d0e0c0e0e0e0d1041350e0e0e0d0d0e11110d0b0f0e0c0d0e0c0b0a0a0a09090d0f0d0e0d0c0c0b0a0a0d0d0e0e0c10111111111212111314100a0a0b0c0b0d100d0e1012100f0c0b0b0b0c0c0c0e101012121111111111100c0c0c0f111b10110d0e0f10100b0806060e100f0f0f101010100f0e0e0c0d0d0c0d101416160f110d0e100f0d08060d0f0f0f11100f0f0f100d0c0c0c0d0f0f0e0e0f13191f11120f0f100f0a08071010100f0f11100f1012100e0f0d11141210121118252516151216150e0a090911120f100f100f0f1010111013121315141417171f332f1f17131c190b0c0a070e110f100f1010101213131112141619191b1b1a1e3b3c281a182415110d0c0a13110e0f1010101113141515171a1a1f1d1e1e202848492c1e1a221a15120d0a13120f0e0e0e111213161716181b1c20212223232e44452f231f1e1c1814100c12120f0d0c0f0f12121517191c1d21242526282b365552392929372a201c171214130f0e0d1012181a1c192021262a2c2c343c3c456e634734345847403e372518160d0f12101321252a212a2a3935354855576f676e8454374369605f4c412d141e0f100f121223252a262b2b313e374455535b4852644f625f38453c3137212c2d1011121614222c293739444a4b526e62747b7585a5b9dad6a59b908c6959483811100f121325312c42606c7a81828e8a8993bed0f0dbd8dddbc8b5b4926c4e430f0f111215232d283d4d4e5d6969768da6b6bac7ebeaf0e8d59c949089675a4911131415302f1d1f2b2e59857371787d9ad9cbd5dee4e8cea6758a8a82695b490f0f0f111217171f353f5a7a68607478a9d7c0cfceb5a49fa39e93847b6858460e0b0c0d0f12131d33424c6c5d54767b8a92a4a9c2927796a398917a665a513c0f0d0d0c0d12161b2b36374747444b4a6573898c9c7d828587837760554a3e350e0f0e0c0b0f1218132324282a252a2c32547d71666573766f6865574c342b2e0c0d09080b0a0a0d0f191c1e221e2220295059624d60606255564b463b312724100f0a0d0e0d0d11141314171b1c2125262a313a324346433c3a35302a211f1314120f101012141211111216181b1e2226292b2b26282723292628211a14141313140d100e0f1110100e1011171518191b1b1b1e1c1a181518181514130f0f0d12120d0f0e0e0f10100d0e101312131413141517151513101211100f100e0f0d13120f0d0d0e0b0c0f0f0f0f11101111100f111313101213100f0e0d0d0e0f0f241f15111312120f0c10121314131111110f1214121212121011100d0f0f0e0f192214121111110e0e10111213121010120f10120f13121111100f0d100f1110",
   "moved": null,
   "two_strikes_advisory": null,
   "series": [
@@ -259,6 +259,14 @@
     "deck_size": 4,
     "rank_score": 0.3333333333333333,
     "capture_signature": "0c0e0c0d0b0e101012120e131315110e0e110f10110e100f0d0e0f0e0d122e2b0c0d0e0e0d0c111010100e1313120f0c0d100e0e0f0d0d0e0c0e0e0e0d1041350e0e0e0d0d0e11110d0b0f0e0c0d0e0c0b0a0a0a09090d0f0d0e0d0c0c0b0a0a0d0d0e0e0c10111111111212111314100a0a0b0c0b0d100d0e1012100f0c0b0b0b0c0c0c0e101012121111111111100c0c0c0f111b10110d0e0f10100b0806060e100f0f0f101010100f0e0e0c0d0d0c0d101416160f110d0e100f0d08060d0f0f0f11100f0f0f100d0c0c0c0d0f0f0e0e0f13191f11120f0f100f0a08071010100f0f11100f1012100e0f0d11141210121118252516151216150e0a090911120f100f100f0f1010111013121315141417171f332f1f17131c190b0c0a070e110f100f1010101213131112141619191b1b1a1e3b3c281a182415110d0c0a13110e0f1010101113141515171a1a1f1d1e1e202848492c1e1a221a15120d0a13120f0e0e0e111213161716181b1c20212223232e44452f231f1e1c1814100c12120f0d0c0f0f12121517191c1d21242526282b365552392929372a201c171214130f0e0d1012181a1c192021262a2c2c343c3c456e634734345847403e372518160d0f12101321252a212a2a3935354855576f676e8454374369605f4c412d141e0f100f121223252a262b2b313e374455535b4852644f625f38453c3137212c2d1011121614222c293739444a4b526e62747b7585a4b8dad6a59a908c6959483711100f121325312c42606c7a81828e8a8993becff0dad8dddac7b5b4926b4e430f0f111215232d283d4d4e5d6969768da6b6bac6ebeaf0e7d59b93908867594911131415302f1d1f2b2e59857371787d9ad9cbd4dee4e8cea675898981685b490f0f0f111217171f353f5a7a68607478a9d6bfcfceb4a49ea29e92837b6858450e0b0c0d0f12131d33424c6c5d54767b8a92a4a9c2917796a297907a665a513c0f0d0d0c0d12161b2b36374747444b4a6572898c9c7d828587837660554a3d350e0f0e0c0b0f1218132324282a252a2c32547d71666572766f6865574c332b2e0c0d09080b0a0a0d0f191c1e221e2220295059624d5f606255564a463b312724100f0a0d0e0d0d11141314171b1c2125262a313a314346433c3a34302a211f1314120f101012141211111216181b1e2226292b2b26282723292628211a14141313140d100e0f1110100e1011171518191b1b1b1e1c1a181518181514130f0f0d12120d0f0e0e0f10100d0e101312131413141517151513101211100f100e0f0d13120f0d0d0e0b0c0f0f0f0f11101111100f111313101213100f0e0d0d0e0f0f241f15111312120f0c10121314131111110f1214121212121011100d0f0f0e0f192214121111110e0e10111213121010120f10120f13121111100f0d100f1110"
+   },
+   {
+    "round": 4,
+    "verdict": "INSTALL-LATEST",
+    "rank_position": 1,
+    "deck_size": 4,
+    "rank_score": 1.0,
+    "capture_signature": "0c0e0c0d0b0e101012120e131315110e0e110f10110e100f0d0e0f0e0d122e2b0c0d0e0e0d0c111010100e1313120f0c0d100e0e0f0d0d0e0c0e0e0e0d1041350e0e0e0d0d0e11110d0b0f0e0c0d0e0c0b0a0a0a09090d0f0d0e0d0c0c0b0a0a0d0d0e0e0c10111111111212111314100a0a0b0c0b0d100d0e1012100f0c0b0b0b0c0c0c0e101012121111111111100c0c0c0f111b10110d0e0f10100b0806060e100f0f0f101010100f0e0e0c0d0d0c0d101416160f110d0e100f0d08060d0f0f0f11100f0f0f100d0c0c0c0d0f0f0e0e0f13191f11120f0f100f0a08071010100f0f11100f1012100e0f0d11141210121118252516151216150e0a090911120f100f100f0f1010111013121315141417171f332f1f17131c190b0c0a070e110f100f1010101213131112141619191b1b1a1e3b3c281a182415110d0c0a13110e0f1010101113141515171a1a1f1d1e1e202848492c1e1a221a15120d0a13120f0e0e0e111213161716181b1c20212223232e44452f231f1e1c1814100c12120f0d0c0f0f12121517191c1d21242526282b365552392929372a201c171214130f0e0d1012181a1c192021262a2c2c343c3c456e634734345847403e372518160d0f12101321252a212a2a3935354855576f676e8454374369605f4c412d141e0f100f121223252a262b2b313e374455535b4852644f625f38453c3137212c2d1011121614222c293739444a4b526e62747b7585a5b9dad6a59b908c6959483811100f121325312c42606c7a81828e8a8993bed0f0dbd8dddbc8b5b4926c4e430f0f111215232d283d4d4e5d6969768da6b6bac7ebeaf0e8d59c949089675a4911131415302f1d1f2b2e59857371787d9ad9cbd5dee4e8cea6758a8a82695b490f0f0f111217171f353f5a7a68607478a9d7c0cfceb5a49fa39e93847b6858460e0b0c0d0f12131d33424c6c5d54767b8a92a4a9c2927796a398917a665a513c0f0d0d0c0d12161b2b36374747444b4a6573898c9c7d828587837760554a3e350e0f0e0c0b0f1218132324282a252a2c32547d71666573766f6865574c342b2e0c0d09080b0a0a0d0f191c1e221e2220295059624d60606255564b463b312724100f0a0d0e0d0d11141314171b1c2125262a313a324346433c3a35302a211f1314120f101012141211111216181b1e2226292b2b26282723292628211a14141313140d100e0f1110100e1011171518191b1b1b1e1c1a181518181514130f0f0d12120d0f0e0e0f10100d0e101312131413141517151513101211100f100e0f0d13120f0d0d0e0b0c0f0f0f0f11101111100f111313101213100f0e0d0d0e0f0f241f15111312120f0c10121314131111110f1214121212121011100d0f0f0e0f192214121111110e0e10111213121010120f10120f13121111100f0d100f1110"
    }
   ],
   "guards": {
@@ -271,6 +279,57 @@
    "flip_same": 0.6
   }
  },
- "transcript": ".claude/skills/frame-critic/history/r003-art_lambda-opening-212-transcript-seat1.txt",
- "law": "LOOP-PROCESS: an art round is judged by eyes on delivered frames. The plant must land worst-or-flagged; a passed plant voids the round and its findings are not read. The guards measure progress \u2014 rank in the deck \u2014 never rounds elapsed."
+ "transcript": ".claude/skills/frame-critic/history/r004-art_lambda-opening-212-transcript-seat1.txt",
+ "law": "LOOP-PROCESS: an art round is judged by eyes on delivered frames. The plant must land worst-or-flagged; a passed plant voids the round and its findings are not read. The guards measure progress \u2014 rank in the deck \u2014 never rounds elapsed.",
+ "dispositions": [
+  {
+   "item": "The three stakes at (180 to 310, 650 to 710) are the same sprite stamped three times, with the same highlight pixel on each crossbar. Draw at least two variants with different lean and rope wrap, and offset one by a few pixels vertically.",
+   "state": "ROUTED-ALREADY",
+   "cites": "#210",
+   "lane": "props",
+   "measured": "The three X-frames at (3-4,15),(5-6,15),(7-8,15) are one sprite (9811, the R2 c3) placed three times in one row at constant pitch by tier1_props_review.json. Identical instances in a row reading as pattern is #210's finding verbatim ('three instances of one object, same row, same gap, is a fence'); variants and breaking the row are its two halves. Untouched by this round."
+  },
+  {
+   "item": "The leaning plank at (505 to 560, 390 to 460) is the same fully saturated orange as the props in 1 and 4. Bring it to the timber rail's value and let the figure's light tint it.",
+   "state": "ROUTED-ALREADY",
+   "cites": "#204",
+   "lane": "props",
+   "measured": "MEASURED, AND THE SEAT IS RIGHT. The flagged plank is the \u039b (9812) at the corridor mouth (8,11): frame px 505-560 x 480-550 (the seat's coords are deck-cropped, +90 in y). Its most saturated timber quartile is (146,71,23), HSV sat 0.84; the north-wall timber rail beside it is (113-121, 77-80, 40-41), sat 0.64-0.66. The \u039b carries the generator's value, not the family's \u2014 #204's defect ('props landed... but not in the family's value world'), which lists the barricade planks and the barricade centre by name. This round moved the \u039b; it did not snap its values."
+  },
+  {
+   "item": "The stela's baked shading faces away from the light; same fix as in 1.",
+   "state": "ROUTED-ALREADY",
+   "cites": "#204",
+   "lane": "props",
+   "measured": "The stela is B-PROP-001 the marker stone at (4,13); its baked shading and value are #204's (the queue round routed 'marker texture -> #204'; the R2 round routed the same post there). Untouched by this round."
+  },
+  {
+   "item": "The long crack crossing flagstones without deflecting at joints; same fix as in 1.",
+   "state": "ROUTED-ALREADY",
+   "cites": "#194",
+   "lane": "floors",
+   "measured": "Cracks at the stones' scale stopping at joints are #194's (the jamb round routed 'cracks across joints -> #194'; R2 routed the same). Untouched by this round."
+  },
+  {
+   "item": "The brazier's hard-edged pale disc; same fix as in 1.",
+   "state": "ROUTED-ALREADY",
+   "cites": "#205",
+   "lane": "props",
+   "measured": "The brazier is the orc fire pit (9820). Its emission \u2014 the two-source rig, the pool's falloff and edge \u2014 is #205's owed work ('the rig's first two-source scene'). The build runs the flicker placeholder only. Untouched by this round."
+  },
+  {
+   "item": "The hard diagonal shadow edge in the top-right rock; same fix as in 1.",
+   "state": "ROUTED-ALREADY",
+   "cites": "#194",
+   "lane": "floors",
+   "measured": "The top-right 'rock' is the dark mass beyond the room: polygon facets with hard diagonal edges. R2 routed 'replace the polygon facets in the dark wall mass' to #194, which owns the caps' and mass's field-scale structure. Untouched by this round."
+  },
+  {
+   "item": "The hero sprite's saturation and missing contact shadow; same fix as in 1.",
+   "state": "ROUTED-ALREADY",
+   "cites": "\u00a710.5",
+   "lane": "character",
+   "measured": "The figure is the placeholder Oryx knight, not Sasha. The character is tier four and last by sequence (bible \u00a710.5, LOOP-PROCESS \u00a710 step 7); nothing in an environment round moves it. Its light response is #183's."
+  }
+ ]
 }
