@@ -1,0 +1,45 @@
+RANK: 4 > 1 > 2 > 3
+
+BEST: 4
+BEST_WHY: The tie-beam strip along the top wall (y≈430, x≈180–500 and 560–750) is one continuous dark timber with iron staples driven in at uneven spacing, and the bracket at x≈300 is a different shape from the one at x≈440, so the repair reads as done by hand, not stamped. The floor stones are mixed one-wide and two-wide blocks with staggered joints, and a single crack runs unbroken across roughly six stones from the pillar base (x≈280, y≈640) up to the figure's feet, with hatch wear marks that stop at stone edges. The light falls off through at least four distinguishable steps across the floor rather than a two-tone mask, and the northern corridor (x≈440–500) catches it as a column that fades upward. The A-frame barricade sits in the corridor mouth at (530, 420), blocking a real opening rather than decorating a wall.
+
+WORST: 3
+WORST_WHY: The two barrels at (110–190, 190–220) are the same sprite twice and their lower edges are cut off by the grey wall-top row beneath them. The grey wall tops (bottom band y≈215–270, left column x≈10–60) are the same tile and value as the walkable grey stone at the far left, so walls and floor read as one surface. The dirt floor's red-brown crack network repeats on a visible period and is dusted with random cyan flecks. The pool (x≈250–345) is a hard rectangle laid straight onto dirt with no bank, with flat lily-pad blobs stamped on top. There is no light carrier falloff anywhere; the frame is lit evenly edge to edge. The tan bunks at top-left (x≈60–100, y≈0–90) are a rectangle with a diamond on it, a placeholder read.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Upper-right dark mass (x≈570–750, y≈80–390): a straight diagonal seam from about (640,300) to (700,100) and a hard vertical edge at x≈630 divide slabs of the same rock texture at different values; these are overlaid polygons, not geometry. Make the lit and unlit rock meet along drawn wall edges or a soft falloff.
+- Crate/bench at (190–300, 475–515) and the bound logs at (380–500, 590–640) are full-saturation orange at the dim edge of the light; pass them through the same light mask as the stones under them.
+- Pillar (262–300, 535–640) is a smooth flat-shaded cuboid with no pixel texture; give its faces the stones' tooling-mark language and a cast shadow thrown away from the figure.
+- Brazier (575–625, 525–570) has no light radius of its own; the floor one tile from it is no brighter than the floor two tiles from it, and the pillar casts nothing. Give it a falloff and a shadow.
+- Wall stub below the pillar (310–370, 650–720): the beam strip runs through it and is cut by hard vertical edges where it meets floor on both sides. End-cap the beam or stop it before the stub.
+- The lower log's end at x≈500 is cut square with no end grain; add it, and bring the wood's saturation down to match the tie-beam above.
+
+FLIP 2:
+- Bench (400–490, 595–625) is a flat untextured orange slab with no grain, no edge highlight and no shadow, while the barrel beside it at (585–615, 590–630) is correctly darkened. Draw the bench in the tie-beam's wood language and darken it to the floor under it.
+- Standing crate (265–300, 550–620): its right face is the darkest while the figure, the only light, is up and to the right. Shade the face toward the figure as the lit one and cast a shadow down-left.
+- Chest and shelf (640–750, 465–510) keep full saturation at the far edge of the light; desaturate and darken with distance like the stones around them.
+- Dim stones right of x≈520 drop to a flat grey fill; carry the hatch wear marks from the lit stones into them so they still read as cut.
+- Upper-right polygon seam: same fix as frame 1.
+- Wall stub below the pillar position (310–370, 650–720): same fix as frame 1.
+
+FLIP 3:
+- Add the light carrier's falloff; nothing in the frame is dark.
+- Separate wall tops from floor: the grey wall band and the walkable grey stone at far left share one tile and one value. Give the wall top a distinct darker value and a wall face of more than one dark row.
+- Barrels (110–190, 190–220): move them up one tile or draw them in front of the wall row that currently clips their bottoms, and draw a second barrel variant.
+- Dirt floor: break the repeating crack network with at least two alternate tiles and remove the cyan flecks.
+- Pool (250–345, 0–195): add a bank or dark edge row where water meets dirt, and replace the stamped lily-pad blobs with marks that share the water's scale pattern.
+- Moss splotches on the grey stone are flat teal blobs with no edge value; outline them a step darker or remove them.
+- Bunks at top-left (60–100, 0–90): draw the frame and bedding; the tan rectangle with a diamond is a placeholder.
+- Orange post at left (27–35, 125–165) overlaps the dark doorway strip; decide whether it is a door or a post and draw it on the correct layer.
+
+FLIP 4:
+- Upper-right polygon seam (x≈570–750, y≈80–390): same fix as frame 1.
+- Stakes (180–310, 650–710) are three identical copies at equal spacing with the pin dot in the same place on each. Vary the lean and pin position, and let one overlap its neighbour.
+- A-frame barricade (500–570, 390–460) is full-bright orange while its upper half sits in the shaded corridor mouth; darken that half to the wall face behind it.
+- Pillar (262–300, 535–640): same fix as frame 1.
+- Brazier (575–625, 525–570): the right side is brighter here, but the pillar still casts nothing; add the shadow.
+- Wall stub below the pillar (310–370, 650–720): same fix as frame 1.

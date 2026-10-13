@@ -1,0 +1,62 @@
+RANK: 3 > 2 > 1 > 4
+
+BEST: 3
+
+BEST_WHY: The wall face along the top of the room (y 405-450) is the best-made surface in the deck: a brick course with a timber rail pinned at intervals, the pins drawn as dark square heads with a stub, the rail interrupted by a post at about x 390 with a bracket, so it reads as something repaired by people who had rope and iron and no interest in how it looked. The A-frame at (580-680, 405-460) is placed against that face span, not across the open column, so it reads as leaned timber. The three stake barricades at (185-305, 655-710) sit in the gap where the bottom wall's rail ends, and they are darkened to the same value as the shadowed floor they stand on, so they belong to the room rather than being pasted on. The rail's brown and the barricades' brown are the same timber, which 1 does not manage.
+
+WORST: 4
+
+WORST_WHY: The frame has no carried light at all. The orc at (210-245, 0-25) stands in a uniformly lit room; the torch at (85-100, 128-160) is an orange post with no flame and no pool of light, and its post continues 20px below the wall face onto the dirt floor. The dirt floor (x 55-245) is one tile repeated: faint vertical seams show at every 32px boundary and the rust-red speckle recurs on the grid. The pool (245-345, 0-193) is a flat teal rectangle with a faint scale pattern, hard straight edges, no bank and no depth change, with bright cartoon lily pads on it. Grey wall tops meet the dirt with a single 1px line and no shadow or lip. In the bottom wall face (y 265-288) one brick at (160-205, 268-278) is lighter than its course, which reads as a mis-set tile. Moss is translucent green blobs laid over the joint lines of the wall tops at (15-45, 55-85) and (355-384, 150-175). It looks like the free tileset.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The crate at (190-300, 475-515) sits in the falloff but is rendered at full value with a highlight on its top-left edge, while the only light is to its right; darken it to the value of the floor under it and move its highlight to the right-hand faces.
+- The crate and the rope-bound timber bundle at (380-500, 590-640) are a saturated orange that appears nowhere else but the brazier; bring both to the rail's brown in the wall face at y 420.
+- The timber bundle is drawn in 4-5px blocks while the floor's cracks and hatch dashes are 1px and the figure is 3px; redraw the bundle at the figure's unit, give the log ends end grain and the rope a knot.
+- The right wall mass (565-750, 70-400) carries a hard-edged shadow polygon whose diagonal runs from about (570, 350) up to (650, 60); that edge radiates from neither the figure at (405, 490) nor the brazier at (598, 545). Remove it or compute it from the carried light.
+- The wall-top column at x 500-565 reaches the floor at y 450 with no brick face or rail, while the walls either side of it show both; give it a face or pull it back to the wall line.
+- One unbroken 1px crack runs from the pillar base at (300, 630) to (560, 440) across seven flagstones without stepping at a single joint; break and offset it at each joint so it reads as damage in stone rather than a line drawn over it.
+- Inside the halo under the figure (350-480, 440-530) the floor joints wash out to near-white; cap the lit value so the joints survive, and quantise the gradient to the palette instead of a smooth blur.
+- The pillar at (262-300, 535-640) has its shaded face on the right, toward the light, and its highlight on the left; mirror the shading.
+- Flagstones right of the brazier (560-750, 590-700): some carry a 2px dark bottom edge and others none; apply one joint-depth treatment to every stone.
+- The bottom-left wall face with rail (55-185, 680-710) stops hard at x 185 where the gap begins, with no end post or jamb; add one.
+
+FLIP 2:
+- The A-frame at (500-560, 390-450) is drawn across the open column between the two wall masses; its back beam spans the dark column at y 405-420 where nothing supports it. Move it onto a wall-face span, or ground it with its legs on the floor and a shadow beneath.
+- The A-frame's planks are flat fills with one lighter top plank; add end grain and the lashing or pins that hold it.
+- The A-frame and the barricades are 4px-block pixel art over a floor whose cracks and hatch dashes are 1px; unify the unit.
+- Remove or recompute the hard-edged shadow polygon on the right wall mass (diagonal from about (570, 350) to (650, 60)); it does not radiate from either light.
+- Give the wall-top column at x 500-565 a brick face and rail at y 405-450 to match the walls either side.
+- Break the long crack from (300, 630) to (560, 440) at each flagstone joint.
+- Cap the halo core under the figure (350-480, 440-530) so floor joints remain visible, and quantise the gradient.
+- Mirror the pillar's shading at (262-300, 535-640) so its lit face is toward the figure.
+- Apply one joint-depth treatment to all flagstones; currently only some have a 2px dark bottom edge.
+- Add an end post where the bottom-left rail (55-185, 680-710) terminates at the barricaded gap.
+
+FLIP 3:
+- The two end-caps flanking the A-frame's beam at about (585-600, 420-445) and (660-680, 420-445) are unresolved orange blocks with a dark hole in each; draw them as rope lashings around the beam or delete them.
+- The A-frame's legs overlap the lit floor at y 450-460 but cast no shadow; add a shadow on the side away from the figure.
+- The A-frame and barricades are 4px-block art over a 1px-detail floor; unify the unit.
+- Remove or recompute the hard-edged shadow polygon on the right wall mass (diagonal from about (570, 350) to (650, 60)).
+- Give the wall-top column at x 500-565 a brick face and rail at y 405-450 to match the walls either side.
+- Break the long crack from (300, 630) to (560, 440) at each flagstone joint.
+- Cap the halo core under the figure (350-480, 440-530) so the joints remain visible, and quantise the gradient to the palette.
+- Mirror the pillar's shading at (262-300, 535-640) so its lit face is toward the figure.
+- Apply one joint-depth treatment to all flagstones.
+- Add an end post where the bottom-left rail (55-185, 680-710) terminates at the gap.
+
+FLIP 4:
+- Add light falloff from the figure at (210-245, 0-25); the frame is currently evenly lit edge to edge.
+- Make the torch at (85-100, 128-160) emit a pool of light or remove it, and clip its post so it stops at the wall face instead of running onto the dirt at y 150-170.
+- Fix the dirt tile so its edges wrap; vertical seams show at every 32px boundary across (55-245, 0-193).
+- Draw a bank where the pool at (245-345, 0-193) meets dirt and wall; currently it is a hard straight rectangle with no edge treatment.
+- Replace the bright green lily pads with scum or debris in the frame's palette; they are saturated and cartoon-cut in a room that is meant to be cold and straight.
+- Remove the saturated teal flecks on the dirt at about (170, 160), (185, 150) and (115, 160), or make them puddles with a rim.
+- The bone pile at (205-235, 115-130) is a scatter of 2px white dots with no bone shapes; draw bones or remove it.
+- Fix the lighter brick at (160-205, 268-278) in the bottom wall face so it matches its course.
+- Add a 2-3px shadow on the floor along every wall-top edge; the joint is currently a single 1px line.
+- Redraw the moss at (15-45, 55-85) and (355-384, 150-175) as opaque pixels that respect the joint lines instead of translucent blobs laid over them.
+- The chests at (60-95, 0-25) and (60-95, 48-70) are flat gold with one sparkle; shade them with the same key as the barrels at (110-190, 193-215) and drop the sparkle.

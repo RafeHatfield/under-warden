@@ -1,0 +1,42 @@
+RANK: 1 > 2 > 3 > 4
+
+BEST: 1
+BEST_WHY: The lit floor around the figure (centre, roughly x 380–560, y 460–640) is the strongest thing in the deck. Stones vary in width across each course, the courses are offset, and the mortar joints are drawn as a darker line with a lighter chip edge on the lit side, so the paving reads as laid rather than stamped. The warm light from the figure falls off into the blue-grey left side in a believable gradient, and the fire pit at right (x≈600, y≈545) casts its own small warm disc that overlaps the figure's light correctly. The row of three cheval-de-frise at bottom-left (x 180–310, y 650–710) sit in the dim zone and are rendered dimmer than the one near the light, so the prop layer here mostly respects the lighting. The wall face band (y≈420–455) has driven pins at irregular spacing and a slightly lighter top lip, which matches the "repaired with pins and timber" fiction without being decorative.
+
+WORST: 4
+WORST_WHY: There is no light source at all. The whole frame is one flat value from edge to edge, which fails the stated premise and reads as an unlit tilemap preview. The dirt floor (x 55–250 across the full height) is a single 32px texture repeated with the seam visible in a regular grid of darker cracks. The water (x 250–345, y 0–190) is a flat hex-pattern fill that ends on a hard straight edge against the dirt with no bank or shoreline. The grey walls (left column, right column, bottom band) are plain squares with the same value on top and face except for one dark brick row at the very bottom, so they read as a floor, not a wall. The green moss splats on the walls (x≈30 y≈60, x≈370 y≈160, x≈30 y≈220) are soft-alpha blobs with no pixel edge laid over hard pixel tiles. The orc at top centre (x≈220, y≈10) has no shadow and is cut by the frame edge. The two barrels at bottom (x≈120 and x≈175, y≈200) and the two chest-over-crate stacks at top-left (x≈65–95, y 0–90) are identical copies of each other.
+
+FLAGGED: 2, 3, 4
+SHIP: NONE
+
+FLIP 1:
+- The pillar at x≈265–300, y 540–640 is a plain two-tone rectangle with a strap at the base. Give it the same stone grain and joint treatment as the floor, or at least a chipped edge and a cast contact shadow on its right side.
+- The long hairline crack running from x≈200,y≈580 through x≈480,y≈470 crosses eight stones without deviating at a single joint. Break it so it jogs along mortar lines, or confine each crack segment to one stone.
+- Same for the arc at bottom-right (x 560–750, y 640–700): it is a smooth vector curve over the paving. Pixel it stepwise and let it follow joints.
+- The 1px dark speckle inside each stone in the lit zone (around x 450–650, y 480–650) reads as grain noise, not surface. Replace with 2–3px chips and pits that sit at the sprite's pixel size.
+- The A-frame at x≈505–560, y 390–450 straddles the wall face band and the wall top. Pull it fully onto the floor side of the wall base and drop its saturation to match the light level at that point.
+- The wall tops (top-left wedge, x 180–500, y 70–390, and the right block x 570–750, y 70–390) are flat polygon fills with a faint texture. Give them a visible stone-top pattern, and remove the diagonal chamfer at x≈440–500, y 380–450, which reads as a geometry cut rather than masonry.
+- No prop in the frame has a contact shadow. Add a one-tile-wide darker footprint under the pillar, the fire pit and the stake row.
+
+FLIP 2:
+- The A-frame at x≈585–670, y 410–460 has two small orange blocks sticking out at its left and right feet (x≈585 and x≈660, y≈430–445). They read as clipped sprite fragments. Redraw the sprite so the crossbar terminates inside the legs, or remove the blocks.
+- That A-frame is pure saturated orange while the wall and floor around it are already in the falloff. Multiply it by the local light value like the floor.
+- The A-frame overlaps the wall face band (y 420–455) and the wall top above it. Move it onto the floor side of the wall base.
+- Everything listed for frame 1: textured pillar, cracks following joints, replace the 1px grain, texture the wall tops, remove the chamfered corner, add contact shadows.
+
+FLIP 3:
+- The crate at x≈190–300, y 480–520 is in the blue-grey dim zone but is painted at full orange saturation and brightness. It must be darkened and desaturated to the same light value as the stones under it.
+- The log bundle at x≈380–500, y 590–640 is a rotated sprite. The log ends show stair-step aliasing on their diagonal edges that does not match the pixel grid of the figure. Draw the rotation by hand or use an axis-aligned pose.
+- The log bundle is also at full saturation and overlaps the dark stain under it with no shadow. Add a contact shadow and light-match it.
+- The crate's top face and side face are the same value. Separate them so the box reads as a box from above.
+- Everything listed for frame 1: textured pillar, cracks following joints, replace the 1px grain, texture the wall tops, remove the chamfered corner, add contact shadows.
+
+FLIP 4:
+- Add the figure-carried light. Everything beyond about three tiles from the orc at (220, 10) must fall to near black; currently the bottom-right corner is as bright as the tile under the figure.
+- The dirt floor texture repeats every 32px with a visible crack seam. Make at least four floor variants and scatter them, or hand-break the seam cracks.
+- The wall tops and wall faces are the same grey square. Give every wall a distinct face row below its top, not only the bottom band at y≈260–288.
+- The water edge at x≈250 and y≈190 is a hard straight line. Add a one-tile bank transition and remove the uniform hex pattern in favour of a drawn surface.
+- The moss blobs on the walls are soft-alpha splats. Redraw them as hard-edged pixel clusters at the tile pixel size.
+- Remove the duplicated chest-crate stacks at top-left and the two identical barrels, or vary each one.
+- Give the orc a shadow at its feet, and keep the figure clear of the frame edge.
+- The white scatter at x≈215, y≈120 is a handful of 1px dots. Either draw it as a legible bone pile or remove it.
