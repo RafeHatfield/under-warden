@@ -702,10 +702,27 @@ public static class Tier1BoundaryWall
                         Name = EastFaceNode, Texture = ImageTexture.CreateFromImage(side),
                         Centered = s.Centered, Position = new Vector2(tw, 0),
                         TextureFilter = CanvasItem.TextureFilterEnum.Nearest,
-                        // +5, like a wall-top prop: the parallelogram hangs over the EAST floor
-                        // cell, whose overlay children reach +4 and are added after this cell, so
-                        // at +1 it drew underneath them and was not in the frame at all.
-                        ZIndex = 5,
+                        // ── DEPTH BY FOOT ROW, NOT BY LAYER KIND — #211 first slice ─────────────
+                        //
+                        // LAW (Rafe, R1b-r004 ruling, 2026-10-12): "a floor prop standing in an
+                        // opening is in front of the wall it stands between; it draws over the
+                        // jamb's east face (the wedge), never under it. Depth order is by foot
+                        // row, not by layer kind (walls over props)."
+                        //
+                        // This was +5, set when the EAST floor cell's overlay children reached +4
+                        // and drew over a face at +1. Two things changed: the floor overlays no
+                        // longer draw (BAKED-BY-FLOOR — the incident is in the floor's own
+                        // pixels), and +5 on a row-r wall is 2r+5, which is ABOVE a prop at rows r
+                        // and r+1 (2r+2, 2r+4) and an entity at rows r..r+2. The Λ at the corridor
+                        // mouth (8,11) lost its west half under the face of (7,11) that way.
+                        //
+                        // +1 keeps the face over the floor tile it hangs across (2r) and puts it
+                        // under every prop (+2) and entity (2r+1, later in the tree) standing at
+                        // its foot row or nearer. ⚠ If the floor overlays are ever drawn again,
+                        // the occlusion/event/grit children (+2..+4) will draw over this face —
+                        // the problem the +5 solved; that is #211's to settle, not a reason to
+                        // put walls back over props.
+                        ZIndex = 1,
                         // ── THE EAST FACE RECEIVES SHADOW — #211 round 1 (Rafe's jamb cull) ──
                         //
                         // Measured, not guessed: at the corridor mouth the lamp is SOUTH-WEST of

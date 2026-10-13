@@ -1,0 +1,47 @@
+{
+ "subject": "barricade",
+ "box": [
+  495.0,
+  440.0,
+  575.0,
+  550.0
+ ],
+ "seats": 5,
+ "named": 4,
+ "verdict": "PASS",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "NAMED",
+   "phrase": "a wooden x-shaped barricade (crossed stakes / sawhorse)"
+  },
+  {
+   "seat": 2,
+   "verdict": "NAMED",
+   "phrase": "a wooden a-frame sawhorse or crossed-plank barricade"
+  },
+  {
+   "seat": 3,
+   "verdict": "NAMED",
+   "phrase": "a wooden x-shaped barricade (sawhorse-style spiked barrier)"
+  },
+  {
+   "seat": 4,
+   "verdict": "MISS",
+   "phrase": "two crossed wooden beams leaning against the wall, like an a-frame brace or sawhorse"
+  },
+  {
+   "seat": 5,
+   "verdict": "NAMED",
+   "phrase": "wooden a-frame barricade (crossed timber beams)"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: a wooden X-shaped barricade (crossed stakes / sawhorse)\nWHERE: 535,515\nSURE: PROBABLY\n\nOBJECT: a wooden X-shaped barricade (crossed stakes)\nWHERE: 200,770\nSURE: PROBABLY\n\nOBJECT: a wooden X-shaped barricade (crossed stakes)\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: a wooden X-shaped barricade (crossed stakes)\nWHERE: 290,770\nSURE: PROBABLY\n\nOBJECT: a tall pale stone slab or pillar standing upright (possibly a sign or statue base) — an object I cannot identify with confidence\nWHERE: 277,680\nSURE: GUESSING\n\nOBJECT: a small round campfire or fire pit (red disc with yellow flames)\nWHERE: 598,635\nSURE: PROBABLY\n\nCOUNT: 6\n",
+  "OBJECT: a wooden A-frame sawhorse or crossed-plank barricade\nWHERE: 535,510\nSURE: PROBABLY\n\nOBJECT: a burning fire or brazier on the floor\nWHERE: 598,635\nSURE: PROBABLY\n\nOBJECT: a tall pale stone pillar or post with a strap around its base\nWHERE: 277,680\nSURE: PROBABLY\n\nOBJECT: a crossed wooden stake barricade\nWHERE: 205,770\nSURE: PROBABLY\n\nOBJECT: a crossed wooden stake barricade\nWHERE: 248,770\nSURE: PROBABLY\n\nOBJECT: a crossed wooden stake barricade\nWHERE: 290,770\nSURE: PROBABLY\n\nCOUNT: 6\n",
+  "OBJECT: a wooden X-shaped barricade (sawhorse-style spiked barrier)\nWHERE: 535,510\nSURE: PROBABLY\n\nOBJECT: a lit fire bowl or brazier with flames\nWHERE: 598,636\nSURE: PROBABLY\n\nOBJECT: a pale standing stone pillar or slab\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a wooden X-shaped barricade\nWHERE: 200,770\nSURE: PROBABLY\n\nOBJECT: a wooden X-shaped barricade\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: a wooden X-shaped barricade\nWHERE: 290,770\nSURE: PROBABLY\n\nCOUNT: 6\n",
+  "OBJECT: a lit fire pit or brazier with flames\nWHERE: 598,635\nSURE: CERTAIN\n\nOBJECT: a tall pale stone pillar or post with a wooden bar fixed at its base\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a row of crossed wooden stakes forming a spiked barricade\nWHERE: 245,770\nSURE: PROBABLY\n\nOBJECT: two crossed wooden beams leaning against the wall, like an A-frame brace or sawhorse\nWHERE: 535,510\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: wooden A-frame barricade (crossed timber beams)\nWHERE: 535,510\nSURE: PROBABLY\n\nOBJECT: campfire / fire pit burning on the floor\nWHERE: 598,635\nSURE: PROBABLY\n\nOBJECT: pale stone pillar or standing stone\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped stake barricade\nWHERE: 205,770\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped stake barricade\nWHERE: 248,770\nSURE: PROBABLY\n\nOBJECT: wooden X-shaped stake barricade\nWHERE: 290,770\nSURE: PROBABLY\n\nCOUNT: 6\n"
+ ]
+}
