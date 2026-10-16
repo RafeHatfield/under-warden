@@ -1,0 +1,53 @@
+RANK: 1 > 4 > 3 > 2
+
+BEST: 1
+BEST_WHY: The timber rail along the north wall (y≈420–450) is built from blocks of unequal length and value, with a driven pin at x≈340 that has three washer marks down its shaft and a smaller bracket at x≈460, so the rail reads as repaired rather than tiled. The three crossed-timber obstacles at lower left (x 180–300, y 650–720) sit correctly in the falloff: their upper timbers keep a highlight edge, the lower timbers go to near-black, and they are in the same dark brown as the rail, so the props and the architecture belong to the same people. The A-frame brace straddling the rail at (510–560, 395–450) is a straight piece of shoring with no decoration, which is exactly what the fiction asks for. The crack beside the figure (from ≈(240,470) to ≈(430,600)) has kinks and changes width, and the floor hatching inside each tile differs tile to tile.
+
+WORST: 2
+WORST_WHY: There is no light falloff anywhere: the orc at (215–235, 0–25) is supposed to be the only light, yet the bottom-left grey floor and the far right edge are as bright as the ground at the figure's feet. The pond at (250–335, 0–190) is a hard-edged rectangle meeting dirt with no bank, wet rim or broken edge tile. The dirt texture's rust veins repeat on a 32px period (visible at (100–230, 20–120)). The same moss stamp appears at (20–45, 50–85) on the left floor and again at (345–375, 5–30) right of the pond. The crates at (62–97, 0–90) are drawn in 3/4 view with a slatted front while the barrels at (115–190, 190–215) are pure top-down circles, so the props do not share a projection.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The floor between the figure (≈400,490) and the brazier (≈600,545) clips to near-white and the mortar joints vanish; cap the summed light so the brightest floor stays below the pillar's top value and joints stay readable.
+- The brazier's glow is a stamped pale disc about 60px across with a visible rim and no joint detail inside it; replace with additive light that keeps tile joints and hatching visible and feathers past the rim.
+- The three crossed-timber obstacles at (180–300, 650–720) are one sprite stamped three times at identical spacing; draw two variants (one snapped timber, one rope-lashed) and offset them 2–6px vertically.
+- The crack at lower right (≈(560,720) up to ≈(750,640)) is a smooth geometric arc; redraw it with kinks and width changes, and let it follow the mortar joints where it crosses them, like the crack beside the figure.
+- The pillar at (260–300, 540–640) is two flat tones with no grain, chip or bevel; add a lit top edge, two or three chips on the shadow side, and a contact shadow on the floor at its base.
+- The floor's west edge at x≈180 meets dark rock with no wall face or ledge while the north edge gets a wall-top and rail; give the west and south boundaries the same face/rail treatment or a cut ledge line.
+- The figure is drawn at ~3px per art pixel, the fire at ~2px and the floor texture at 1px; pick one sprite density and redraw the brazier and the A-frame brace to match the figure.
+- The A-frame brace at (510–560, 395–450) is saturated orange while the obstacles and rail are dark brown; bring it to the rail's palette and add a pin mark where it meets the rail.
+- The alcove at (310–370, 650–720) contains a miniature stepped object drawn at a smaller pixel scale than anything else; redraw those stairs at the figure's pixel scale.
+
+FLIP 3:
+- The crate at (265–300, 550–620) and the plank bench at (395–490, 595–635) are untextured saturated-orange blocks with no outline, grain or hardware, sitting beside a black-outlined chest and barrel; redraw both in the chest/barrel's language (outline, plank lines, iron strap) and in the rail's brown.
+- The bench's only ground contact is a 1px dark-red line under its front edge; replace it with a cast contact shadow that darkens the tile beneath.
+- The empty shelf at (705–750, 465–505) is half off-frame, pressed against the rail and unlit; move it onto the floor or give it a lit face.
+- The chest and barrel are drawn at ~2px per art pixel, the figure at ~3px, the orange props at 1px edges; choose one density for everything that stands on the floor.
+- Same lower-right arc crack as frame 1; redraw with kinks and follow the joints.
+- The floor's west edge at x≈180 has no wall face while the north has a wall-top and rail; apply the same boundary treatment.
+- The miniature stairs in the alcove at (310–370, 650–720) are at the wrong pixel scale; redraw at the figure's scale.
+
+FLIP 4:
+- The box at (190–305, 475–520) is a flat two-tier orange block with no grain, outline or hardware; redraw it as a timber crate in the rail's brown with plank lines and a driven pin.
+- The lashed logs at (380–500, 590–640) are the same flat saturated orange; keep the rope lashing, drop the colour to the rail's brown, and add end-grain rings on the cut ends.
+- The floor between the figure and the brazier bleaches to near-white and loses its joints; cap the summed light.
+- The brazier's glow is a stamped disc with a rim; replace with light that keeps joints visible.
+- The pillar at (260–300, 540–640) is two flat tones; add a bevel, chips, and a floor contact shadow.
+- Same lower-right arc crack; redraw with kinks and follow the joints.
+- The floor's west edge at x≈180 has no wall face; apply the north edge's treatment.
+- Unify sprite pixel density across figure, fire and props.
+
+FLIP 2:
+- Add a radial light falloff from the orc at (215–235, 0–25) so the far corners (bottom-left grey floor, right edge) go to near-black; right now the frame is evenly lit.
+- The pond at (250–335, 0–190) ends in a hard rectangle; add shoreline edge tiles on all three exposed sides (dark wet dirt rim, broken edge) and round at least one corner.
+- The bright green lily pads are the only saturated element and read as cheerful; replace them with scum in the pond's own teal, or remove them.
+- The dirt's rust veins repeat every 32px; make at least three variant tiles and rotate them.
+- The grey floor tiles are identical with a 1px grid; add three or four variants with chipped corners and varied joint darkness.
+- The moss stamp at (20–45, 50–85) is reused at (345–375, 5–30); draw a second variant and flip the reuse.
+- The crates at (62–97, 0–90) are in 3/4 view while the barrels at (115–190, 190–215) are top-down; pick one projection for all props.
+- The bottom brick wall at y 265–288 has a face, the top-left dark slab at (0–55, 0–30) and the left alcove at (0–55, 120–150) do not; use one wall vocabulary with the same face height everywhere.
+- The torch at (33–40, 128–150) throws no light on the brick behind it or the floor in front; add a warm pool that falls off within two tiles.
+- The grey floor column at (30–55, 0–120) runs into the dark region at the top edge with no wall or ledge; cap it with the same wall face used at the bottom.

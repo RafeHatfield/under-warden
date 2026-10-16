@@ -1,0 +1,45 @@
+RANK: 3 > 2 > 4 > 1
+
+BEST: 3
+BEST_WHY: The sandstone floor in the lit zone around the figure (roughly x 200-700, y 460-720) is laid as a running bond with block lengths that vary along each course, and the two long cracks (one from x 240,y 470 curving down to x 560,y 540; one arcing through x 560-700,y 640-700) cross block joints instead of following them, so the floor reads as one cut, aged surface rather than a stamped tile. The timber rail along the top of the room (y 420-455) has posts at irregular spacing with pinned joints, which sells "repaired, not built." The three X-frame obstacles at lower left (x 185-310, y 650-710) sit fully on floor, clear of the wall edge, and are darkened to the local light level, so they belong to the room instead of being pasted onto it.
+
+WORST: 1
+WORST_WHY: There is no light falloff anywhere in the frame; the orc at top centre (x 210-235, y 0-25) is the same brightness as the far bottom-left corner, so the one thing the fiction says this image should do, it does not do. The brown floor (x 60-250, y 0-200) is a rectangular brick-and-mortar pattern with red speckle, which reads as a wall texture laid flat, not as ground. The grey floor (left column and bottom band) is a uniform grid of identical squares with identical grout lines and three or four stray speckles, visibly stamped. The pond at right (x 250-345, y 0-195) is a hex-scale texture with lily pads and a hard brown stripe for a shoreline; the water meets the dirt with no transition at all. The two gold-framed crates at top left (x 65-100, y 0-80) are pixel-identical copies stacked vertically. The whole frame reads as a free tileset.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Add a radial light falloff centred on the orc at (220, 12); the bottom-left corner and the far right should be at least two to three values darker than the tile under the figure.
+- Replace the brown floor texture; its rectangular brick pattern with mortar lines reads as a wall. Use an irregular trodden-earth pattern with no straight joints.
+- Break the grey floor grid: vary block lengths along a course, let one or two joints wander, and offset alternate courses so no four corners meet at a point.
+- Give the pond a shoreline: a one-tile transition band of wet, darker earth instead of the hard brown stripe at x 250.
+- Delete the lily pads or replace them with debris; a plant growing in an unlit administered underworld is a content error, not just a tone one.
+- The two gold crates at (65-100, 0-20) and (65-100, 55-80) are identical copies; vary one, or rotate it.
+- The wall torch at (25-40, 125-165) stands as a flat orange bar over the wall stripe with no glow on the surrounding stone; either give it a local light pool or remove it.
+- Make the bottom wall face (y 255-288) darker than the floor above it by a clear step; at present the wall face and the dark floor grout are close enough in value that the wall reads as a shadow band.
+
+FLIP 2:
+- The orange crate at (190-300, 475-515) sits in the dim left zone at full saturation and full brightness; multiply it by the local light so it is as dark as the floor beneath it.
+- Desaturate the crate and the log bundle at (380-500, 590-645); they are the two most saturated things in the frame after the fire and currently read as placeholder props.
+- Remove or re-tile the orphan wall-top block at (310-400, 650-720); a single wall tile with its own one-tile rail segment stands alone in the floor below the pillar with floor on three sides.
+- Bring the hero sprite and the environment to one pixel density; the hero's pixels are roughly three screen pixels wide while the floor hatch strokes are one, and the sprite carries a hard black outline the environment never uses.
+- The large wall-top slabs at top left (x 180-500, y 70-400) are a smooth noise fill with crisp straight facet lines; either pixel-render the noise or soften the facets so the two do not look like separate techniques.
+- Reduce the pencil-scribble hatch marks on the lit blocks right of the fire (x 600-740, y 480-700); at present they read as a scratch filter, not as wear.
+
+FLIP 3:
+- Move the orange A-frame at (500-565, 390-450) fully onto floor; it currently straddles the rail at y 420-455 and the corridor mouth, with its right leg lying on the timber.
+- Darken the same A-frame to the local light level; the corridor behind it is dark blue-grey and the frame is at full orange.
+- Desaturate the A-frame to match the X-frames at lower left, which already sit at the right value.
+- Remove or re-tile the orphan wall-top block at (310-400, 650-720), as in frame 2.
+- Bring the hero sprite and the environment to one pixel density, as in frame 2.
+- Reconcile the smooth-noise slab fills with their crisp facet lines, as in frame 2.
+
+FLIP 4:
+- The orange object at (580-680, 400-460) reads as the letter A with two small orange bricks either side, sitting on top of the rail and wall-top; move it onto floor, give it a readable silhouette (a sawhorse with a plank, or a tripod), and drop the two side blocks.
+- The dark bevelled wall-edge line at lower left cuts straight through the leftmost X-frame (around x 185-215, y 655-700); shift the X-frames right by half a tile so all three are clear of the edge, as they are in frame 3.
+- Darken and desaturate the orange object to the local light, as for the props in frames 2 and 3.
+- Remove or re-tile the orphan wall-top block at (310-400, 650-720).
+- Bring the hero sprite and the environment to one pixel density.
+- Reconcile the smooth-noise slab fills with their crisp facet lines.
