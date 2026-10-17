@@ -498,3 +498,65 @@ window, and the brief's own under-scale plant is the only Λ in it. Four options
   first window 56.7 fps at render_cpu 1.46 ms. Logs: `tools/cast_shadows/evidence/deliverable-r2/`.
 
 **Walk order: X-frame (the Λ is unchanged — R1 awaits the ruling).**
+
+---
+
+## R1b — #212 the Λ at the corridor mouth, with a plain doorway north (lane `art/lambda-opening-212`)
+
+### The brief and the rulings, in order
+- **R1b (2026-09-30):** carve a plain one-cell doorway into the north room. The Λ stays at the corridor
+  mouth (8,11). Re-seed the plants; the reference is unchanged. Bar: cold naming ≥ 4/5 on a
+  barricade-family word.
+- **r003 (judge):** three seats missed newly seeded plants nobody had proved. Rafe: deal only plants
+  proven against the new scene (`lambda-against-wall-r1b`, `objects-isometric-shadowed`). The four
+  unproven r1b plants are out until each is caught by ≥ 4/5 seats in self-test. Recorded in
+  `JUDGE-CLEARED.json` (e1cba115).
+- **r004:** the critic passed, but **cold naming FAILED 1/5**. The jamb's east face (z +5) drew over
+  the Λ's west leg, so seats named a lean-to or a plank. Rafe ruled **#211 slice 1**: *"a floor prop
+  standing in an opening is in front of the wall it stands between; it draws over the jamb's east
+  face (the wedge), never under it. Depth order is by foot row, not by layer kind."* Confirmed by
+  render before committing (`tools/tier1_floors/evidence/depth_confirm.png`). `Tier1EastFace`
+  z +5 → +1 (06caea7b). #211's open edge is recorded on the issue (issuecomment-6138166202): if the
+  floor overlays (+2..+4) are ever drawn again, they will cover the face.
+- **r005:** **naming PASS 4/5**. Rafe: *the head noun decides.* "Sawhorse" as the head noun is a
+  miss; as a descriptor it is not. `cold_naming.head_verdict` was proved on every saved run
+  before use (`prove_head_noun.py`, 15/15, b8dfdae7): r005 comes out seat for seat [1,1,1,0,1], and
+  both X-frame controls still fail. One older result moves: c1 drops from 4/5 to 0/5, because its
+  head noun was "planks". Critic r005 **INSTALL-LATEST**, eight flips disposed (c8932ed3).
+- **Device gate STOP:** `lane-window-held` refused, on-lane 0.1051 against §13.8's floor of 0.144.
+  The cause is the R1b carve, not the depth fix: with the Λ blocking the corridor, the worn lane goes
+  round through the bay and crosses the frame's two hottest tiles, between the lamp and the fire
+  ((8,12) at median 228, (7,13) at 221). R2 measured 0.3136. Evidence:
+  `tools/cast_shadows/evidence/lambda_opening/R1b-r005-GATE-STOP.md`.
+- **Gate exception (Rafe, 2026-10-16):** *"One-build exception for the lane-window-held check on the
+  R1 build (c8932ed3) … This exception covers this build and no other; #184 owns the fix and the check
+  runs un-excepted from the next build on."* Quoted in full in `docs/GATE-CONDITIONS.json`.
+  #184 now records the case the fix has to handle: a blocked corridor reroutes wear onto the
+  brightest tiles (issuecomment-6218594345).
+
+### How the exception is enforced
+The precheck had no exception path, so it gained one (185462fd). An exception applies only when
+**the build id and the delivered frame's sha both match** the ruled ones, and only with Rafe's words
+recorded. Otherwise it stops applying on its own; nobody has to remember to delete it. The check still
+runs and prints its measurement as a `!` row. `prove_gate_exception.py`: no exception, another build,
+another frame and no ruling all refuse; only the ruled build passes (5/5).
+
+That code moved the build id, so **critic r006** re-ran on the frame on disk (`--no-capture`,
+byte-identical to c8932ed3's; no window, no focus taken): **INSTALL-LATEST**, not below the reference
+in 5/5 seats, above it in 2, both plants caught. Nine flips, all ROUTED-ALREADY: #184 (the hot lane),
+#205, #210, #194, #211 ×2 (the pillar; the "alcove", which is the south wall end's face), #204, §10.5,
+and **#178, new to this lane:** the west edge is the uncarved columns drawn as flat out-of-map
+ground. Verdict committed before the build (50d07f16).
+
+### The deliverable — one build, on the SE
+- Build identity `commit=50d07f16`, **clean, no +dirty**. Critic gate OPEN. Precheck OK, with
+  `!  lane-window-held  EXCEPTED for this build only (#184 owns the fix)`.
+- Two install attempts failed on the handset (unavailable, then locked); the third installed.
+- **VERIFIED ON DEVICE:** `commit=50d07f16 review=GATED`, booted `tier1_props_review`, rig live,
+  58–60 fps at render_cpu 1.4–1.6 ms. App name on the home screen: **UW R1 c8932ed3**. Logs:
+  `tools/cast_shadows/evidence/deliverable-r1b/`.
+
+**Walk order: Λ at the corridor mouth (first word; does the west leg show?) → any wall corner (does
+the wedge still hang?) → the plain doorway east past the fire. Fourth, for #184: the floor path
+between the lamp and the fire.** The two-A-frames design round has not been started; it runs only on
+Rafe's walk verdict.

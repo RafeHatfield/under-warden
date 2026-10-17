@@ -1,0 +1,25 @@
+== device: 5DB969FF-269C-5A8A-86EB-99EC9FF22397
+== installed apps, as the DEVICE reports them
+
+== FOUND ON DEVICE: UW R1 c8932ed3          com.rafehatfield.underwarden.tier0   1.0.0     1.0.0         
+== launching com.rafehatfield.underwarden.tier0
+== pulling Documents/diag.log
+
+== the three identifiers, from the handset
+[DIAG 00002 F0 T0.995] [Tier1] BUILD IDENTITY: commit=50d07f16b253bd4053335583e1c0a233c4c30072 built=2026-10-16T23:59:11Z review=GATED app=The Under-Warden
+  bundle (device): com.rafehatfield.underwarden.tier0
+
+== did it boot into the right scene, with the rig live?
+  OK    booted the review scene
+  OK    the build on the handset is this working copy's HEAD
+  OK    incident overlays attached
+  OK    rig panel constructed
+  OK    no losable state
+  OK    floor family laid, every cross-check green
+  OK    theme and floor family agree   (tier1_ashlar)
+
+  [DIAG 00010 F0 T1.004] [Tier1] floor overlays: cells=151 channel=34 neglected=51 drawn(grit=0 event=0 channel=0 occlusion=0/stacked=65@anchor2 BAKED-BY-FLOOR) cell_shadow_suppressed=85 missing_texture=0 seed=1337 manifest=res://src/Presentation/assets/tier1_floors/MANIFEST.json
+  [DIAG 00007 F0 T0.995] [Tier0] light rig: ambient=1a1a22@1.5 (effective 272733) light=ffb066 energy=1.6 radius_tiles=6 falloff=1 tile=32x32 tex=384px (light: RULED for the Boundary — §6.2.1 Ruling 56; other regions PLACEHOLDER. tile: RULED value, §4.3 derivation outstanding)
+
+VERIFIED ON DEVICE — installed, launched, booted into tier1_props_review, rig live.
+log: tools/tier1_floors/evidence/DEVICE-tier1-boot.log
