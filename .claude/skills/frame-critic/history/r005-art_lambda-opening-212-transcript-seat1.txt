@@ -1,0 +1,53 @@
+RANK: 2 > 1 > 4 > 3
+
+BEST: 2
+BEST_WHY: The timber band along the top wall (y≈420–455, x≈185–500 and x≈565–720) is built from planks of unequal width with driven pins at irregular spacing (x≈300, 395, 455), so it reads as repaired by hand rather than tiled. Floor stones vary in length within a course (the course at y≈560–600 runs roughly 55px, 90px, 40px) and joints are offset course to course. The pale pillar at x≈262–298 carries a hide strap near its base (y≈615–625), which is the fiction's repair language made physical. The crate (x≈190–300, y≈475–515) and the bound log pair (x≈380–500, y≈590–640) sit wholly on floor tiles and do not cross a wall boundary. The lantern falloff has no banding, and the brazier's glow is warmer and weaker than the lantern, so the two sources are distinguishable.
+
+WORST: 3
+WORST_WHY: The pool at x≈250–343, y≈0–190 is a flat teal fill with a repeating hexagonal scale pattern, and its border with the dirt is a straight one‑pixel edge with no bank, lip or shadow. The grey wall caps are identical tiles with uniform one‑pixel light joints on a perfect grid (left column x≈0–55, bottom band y≈205–265). The same teal moss decal is stamped at three places (x≈20–45, y≈55–80; x≈15–40, y≈215–235; x≈360–380, y≈150–175). The two barrels at y≈195–225 are pixel‑identical. The dirt floor is uniform speckle noise with stray saturated blue pixels (around x≈150–200, y≈150–170 and x≈190, y≈115). There is no light falloff anywhere; every tile is at full value, so the "only light" conceit is absent.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The wall top surfaces (olive plane above the timber band x≈185–500, y≈380–420; the vertical run x≈440–505, y≈85–400; the right wedge x≈565–750, y≈330–420) are soft cloud‑noise fills with no masonry; draw them as coursed cap stones at the same pixel density as the floor.
+- The floor crack is one continuous 1px curve (x≈210,y≈625 to x≈470,y≈530, with a second arc x≈560–690, y≈640–700) that crosses stone joints without deflecting or changing width; redraw cracks so they follow joints, vary in width, and have a lit edge on the lantern side.
+- The three barricades at x≈185–305, y≈655–710 are the same sprite stamped three times at equal spacing; make each one different (stake length, lean, a missing member, a rope wrap on one only).
+- The hero sprite is at 2x pixel size with a black outline while the floor is at 1x and the props are smooth‑shaded; put all three on one pixel grid.
+- The pillar at x≈262–298 has a top‑left highlight and the barricades keep saturated orange four tiles into the dark; light props from the figure's lantern and apply the same falloff to them as to the floor.
+- No prop has a contact shadow (pillar base, barricades, brazier); add a short dark contact shadow on the side away from the figure.
+- The brazier glow (centre x≈598, y≈548) is a soft disc with a visible circular boundary about 40px out; lengthen the falloff or break the disc with the stone pattern.
+- The dark scribble marks on the lit stones near x≈400–470, y≈500–560 read as glyph‑like noise ("2", "T" shapes); replace with chips, pits and wear that follow the stone edges.
+
+FLIP 2:
+- The wall top surfaces (olive plane above the timber band x≈185–500, y≈380–420; vertical run x≈440–505, y≈85–400; right wedge x≈565–750, y≈330–420) are cloud‑noise fills with no masonry; draw them as coursed cap stones at the floor's pixel density.
+- The floor crack is one continuous 1px curve (x≈210,y≈625 to x≈470,y≈530, second arc x≈560–690, y≈640–700) overlaid on the stones; redraw so it follows joints and varies in width.
+- The crate (x≈190–300, y≈475–515) and log pair (x≈380–500, y≈590–640) are smooth‑gradient shaded with top highlights that ignore the lantern; re‑pixel them and shade them from the figure's position.
+- The pillar at x≈262–298 is lit from the top‑left while the only light is to its right; flip its shading so the lantern side is the bright side.
+- No contact shadows under the crate, logs or pillar; add them on the side away from the figure.
+- Hero sprite is at 2x pixel size with black outline against a 1x floor; put both on one grid.
+- Brazier glow (centre x≈598, y≈548) is a soft disc with a visible edge; lengthen the falloff or break it with the stone texture.
+- The scribble marks on the lit floor near x≈400–470, y≈500–560 read as glyph noise; replace with edge‑following wear.
+
+FLIP 3:
+- Add the lantern falloff from the orc at x≈220, y≈0–20; every tile currently sits at full value.
+- Give the pool at x≈250–343, y≈0–190 a bank: edge and corner tiles with a lip, a shadow line on the dirt side, and remove the repeating hexagonal scale pattern from the surface.
+- The grey wall caps (x≈0–55 column; y≈205–265 band; x≈345–384 column) are identical tiles on a perfect grid; vary stone length per course, offset the joints, and chip some corners.
+- The moss decal repeated at x≈20–45,y≈55–80, x≈15–40,y≈215–235 and x≈360–380,y≈150–175 is one stamp; draw at least three variants and vary their scale.
+- The two barrels at x≈115–195, y≈195–225 are pixel‑identical; vary one (a split stave, a different hoop position, a lid off).
+- The two crates at x≈60–100, y≈0–85 are pixel‑identical; vary them.
+- The dirt floor is uniform speckle noise with stray saturated blue pixels (around x≈150–200, y≈150–170); replace with a trodden‑path texture that shows direction of wear and remove the blue specks.
+- The door at x≈22–40, y≈125–150 is a bright saturated orange rectangle; desaturate it to the salvaged‑timber range and give it a frame and hinge pins.
+- The dark brick front face at y≈265–288 is a uniform repeat; add damage and vary brick length.
+
+FLIP 4:
+- The A‑frame at x≈585–670, y≈405–460 sits across the timber band and overlaps the wall top; move it fully onto the floor, or place it in the corridor mouth at x≈505–565 where it would block a passage.
+- The wall top surfaces (olive plane above the timber band x≈185–500, y≈380–420; vertical run x≈440–505, y≈85–400; right wedge x≈565–750, y≈330–420) are cloud‑noise fills; draw them as coursed cap stones at the floor's pixel density.
+- The three barricades at x≈185–305, y≈655–710 are one sprite stamped three times at equal spacing; make each different.
+- The floor crack is one continuous 1px curve (x≈210,y≈625 to x≈470,y≈530, second arc x≈560–690, y≈640–700) overlaid on the stones; redraw it joint‑following with width variation.
+- The A‑frame and its flanking orange blocks are smooth‑gradient shaded with a fixed top highlight; re‑pixel and shade from the lantern.
+- The pillar at x≈262–298 is highlighted from the top‑left while the light is to its right; flip the shading.
+- No contact shadows under pillar, barricades or A‑frame; add them on the side away from the figure.
+- Hero sprite at 2x pixel size against a 1x floor; put both on one grid.
+- Brazier glow (centre x≈598, y≈548) is a soft disc with a visible edge; lengthen the falloff.

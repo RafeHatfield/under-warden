@@ -45,11 +45,13 @@ def seat_names(text, subject, box):
     inside = [o for o, x, y in objects_with_where(text) if x0 <= x <= x1 and y0 <= y <= y1]
     if not inside:
         return "MISS", None
-    for phrase in inside:
-        if any(bad in phrase for bad in subject["refuse"]):
+    # The head noun decides (Rafe, R1b-r005, 2026-10-13) — cn.head_verdict.
+    verdicts = [(p, cn.head_verdict(p, subject)[0]) for p in inside]
+    for phrase, v in verdicts:
+        if v == "REFUSED":
             return "REFUSED", phrase
-    for phrase in inside:
-        if any(good in phrase for good in subject["accept"]):
+    for phrase, v in verdicts:
+        if v == "NAMED":
             return "NAMED", phrase
     return "MISS", inside[0]
 
@@ -72,7 +74,7 @@ def judge(frame, subject_key, box, seats, work_root, timeout=300):
     strong = named * 5 >= seats * 4
     return dict(subject=subject_key, box=box, seats=seats, named=named,
                 verdict="PASS" if strong else "FAIL",
-                rule=">= 4 of 5 seats name it with an accept word and no refuse word",
+                rule=">= 4 of 5 seats name it: an accept term as the head noun of the main clause (a hedge counts); a refuse term as the head is a miss, as a descriptor it is not (Rafe, R1b-r005, 2026-10-13)",
                 per_seat=[{k: v for k, v in s.items() if k != "transcript"} for s in per_seat],
                 transcripts=[s["transcript"] for s in per_seat])
 

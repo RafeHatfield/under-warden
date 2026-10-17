@@ -1,0 +1,41 @@
+Analysis is done. Writing the verdict now.
+
+RANK: 1 > 4 > 2 > 3
+
+BEST: 1
+BEST_WHY: The floor in 1 is cut, not stamped. Stones vary in width along a single course (the course under the figure runs a wide slab, then two narrow ones, then a half), joint lines vary in thickness and break at corners, and the chisel marks on the stones right of the fire pit differ from stone to stone. The wall band above the room reads as the orcs' repair work: a horizontal timber with driven pins at uneven spacing, a doubled pin near the middle, a bracket hanging below the beam at right. The fire pit is embers with a soft warm halo that falls off into the floor value, and the barriers at bottom left take the darkness of the corner they sit in instead of staying full-chroma. The wall base meets the floor with a thin dark contact line so the wall stands on the floor rather than floating over it.
+
+WORST: 3
+WORST_WHY: The water is a rectangle. Its left edge is a straight vertical line where dirt meets water with no bank, lip, or shadow, and its bottom edge is the same. The water fill is a repeating hexagonal scale tile you can count across the pool. The moss on the walls is one stamp reused: the cluster with a diamond-shaped hole at the top of the left wall is the same silhouette, flipped, on the right wall beside the pool. The two chests at top left are drawn in side elevation with a lid above a slatted front, sitting on a floor drawn from straight above, and they are exact duplicates. The floor is one seamless noise fill with no lighting at all, even though a figure is present. The whole frame reads as an asset pack laid down in an editor.
+
+FLAGGED: 2, 3, 4
+SHIP: NONE
+
+FLIP 1:
+- The crack lines across the floor are drawn at roughly one native pixel with anti-aliased edges, while the stones are drawn at a two-pixel block. Redraw the cracks on the same two-pixel grid with hard edges.
+- The unlit region above the wall is a soft blurred smear with fuzzy polygon shapes; it is at a different fidelity from the tiles below. Rebuild it from pixel-crisp dark rock tiles at the same block size and let the light layer darken them.
+- A straight-edged band of cool light runs from the figure's tile diagonally down-left past the pillar to the frame edge, with no source. Remove the seam or give it a source.
+- The pillar at left is drawn in side elevation with a lit top cap and a flat front face, on a floor drawn from straight above. Redraw it top-down as a square cap with a short shadow, or shorten it to a knee-high block.
+- The figure has no ground contact; add a small dark ellipse under it so it stands on the floor.
+
+FLIP 2:
+- The fire pit is a ring of full-white stones around a black centre; it is the brightest thing in the frame and reads as a map icon. Replace it with the ember pit used in the same position in the other two frames of this room.
+- The three debris props on the row below the figure are three different styles: a two-stick cross at left, a bundle with bright one-pixel highlights in the middle, two parallel planks with one-pixel highlights at right. Pick one drawing style at the two-pixel block and redraw all three.
+- The left cross sits in the darkened corner but stays full-chroma red; multiply the props by the floor light so they take the darkness around them.
+- The straight-edged diagonal band of cool light from the chest down to the bottom-left corner is at its most visible here. Remove it.
+- The crack lines and blurred upper rock zone carry over from frame 1; apply the same fixes.
+
+FLIP 3:
+- Give the pool an edge: a bank tile or a one-tile dark lip on every side, and a shadow under the wall where the water meets it.
+- Replace the hexagonal scale water fill with a fill whose repeat is not visible across a six-tile pool.
+- Draw at least three moss variants and stop reusing the diamond-hole cluster on both walls.
+- Redraw the two chests from straight above so they sit on the same plane as the barrels, and make the second one differ from the first.
+- Add the carried light: darken the floor and walls with distance from the figure so the frame has a value range at all.
+- Break the seamless dirt fill with authored variation, such as worn paths, edge dirt against the walls, and larger stones, so the floor is not one texture.
+- The door at left is an orange plank standing in a dark wall face that sits in the middle of a top-face column; resolve which plane that wall is on.
+
+FLIP 4:
+- The crate at upper left is a full-chroma orange block in the dim zone left of the figure; it is brighter than the lit floor beside it. Light it with the floor.
+- The log bundle at lower centre lies across the light boundary and stays uniformly bright on both sides; it also has no cast shadow. Light it and shadow it.
+- The crate and the logs are both drawn in side elevation with visible front faces on a straight-down floor. Redraw them top-down.
+- The pillar, crack lines, diagonal light seam and blurred upper rock zone carry over from frame 1; apply the same fixes.

@@ -1,0 +1,56 @@
+RANK: 3 > 4 > 1 > 2
+
+BEST: 3
+BEST_WHY: The barricade at lower left (x 190–300, y 650–700) is three crossed dark timbers with lighter cut ends and a driven pin at each crossing, and it sits at the same dim value as the wall it stands on, so it takes the scene's light instead of being pasted over it. The wall rail along y 425–460 has driven pins with visible heads and a shadow line under the rail, which reads as a repair, not decoration. The standing stone at (265–295, 540–640) carries a rope strap with a pin near its foot. Floor blocks vary in width and joint width along a row. The brightest floor cell measures at x 404–420, y 552–568, at the figure's feet, so the light is where the carrier is.
+
+WORST: 2
+WORST_WHY: The wall tops (band y 200–260 across the full width, and the column x 0–50) are one flat grey rectangle repeated with 1 px joints and three dots per tile. The wall face bricks at y 260–288 are a uniform repeat. Teal puddle decals sit on wall-top tiles at (120–145, 215–230), (10–20, 80–85), (37–50, 80–85) and (0–20, 215–240). The pool (250–385, 0–195) is a flat teal fill with a visibly tiling hex-scale pattern and a hard straight edge against dirt with no shore. The dirt floor is noise with isolated cyan pixels, e.g. near (180,180) and (95,185). There is no light falloff anywhere. Only the orc sprite at (215–235, 0–25) has a cast shadow; barrels and crates have none.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Re-centre the light: the brightest floor cell measures at x 516–532, y 520–536, while the figure stands at x 390–425, y 465–515. Move the light origin to the figure's feet, as it is in 3 and 4.
+- The broken beam at the corner (520–565, 390–450) has two detached orange splinters floating above its upper end near (530–545, 395–410). Attach them to the beam or delete them.
+- The grey wedge under that beam (500–560, 400–450) has a straight anti-aliased diagonal edge and lies down-left of the beam, toward the light. Either delete it or redraw it as a shadow falling up-right, away from the figure.
+- The beam is one flat orange value along its whole length although its lower end is in the light pool and its upper end in the dark wall. Darken the upper half to the wall band's value.
+- The straight value boundary on the top-right wall top from about (660,70) to (570,350) does not run along a ray from the figure, so it reads as a polygon seam rather than a shadow. Align it to the light or remove it.
+- The dark wedge at (375–430, 650–720) sits on the light side of the lit wall stub beside it. Move it to the far side or remove it.
+- Floor cracks (e.g. the one running from (430,520) down-left to (300,620)) cross mortar joints without deflecting and are smooth sub-pixel curves while everything else is hard-pixel. Redraw them at pixel resolution and step them along joints.
+- The scratch marks on the floor are repeated glyph shapes: a "+" at (360–375, 470–483), "¥"-like marks near (520,470) and (560,490). Replace them with wear that follows block edges.
+- The figure has no contact shadow and floats on the floor. Add one.
+
+FLIP 3:
+- The brace at (580–680, 400–460) is two equal straight orange legs with a centred crossbar, a symmetric capital-A silhouette that reads as a letter. Make one leg longer, set the legs at different angles, and move the crossbar off-centre.
+- Both legs are the same flat orange although the right leg is deep in the dark wall. Apply the floor's falloff to it, and match the barricade's dark timber with orange only at cut ends.
+- The legs meet the rail and floor with no pins and no contact shadow. Add driven pins at the feet like the barricade has.
+- The straight value boundary on the top-right wall top from about (660,70) to (570,350) does not run along a ray from the figure. Align it to the light or remove it.
+- The dark wedge at (375–430, 650–720) sits on the light side of the lit wall stub beside it. Move it to the far side or remove it.
+- Floor cracks cross mortar joints without deflecting and are smooth sub-pixel curves. Redraw at pixel resolution, stepping along joints.
+- Replace the repeated scratch glyphs ("+" at (360–375, 470–483), "¥"-like marks near (520,470) and (560,490)) with wear that follows block edges.
+- Add a contact shadow under the figure.
+
+FLIP 4:
+- Remove the faint ring: a thin near-perfect circle about 55 px across centred near (595,485) on the floor above the brazier. Nothing else in the frame is a circle and it reads as a leftover placement gizmo.
+- The timber stack at (195–305, 475–515) is one flat orange value across its full width while the floor under its left end is roughly half the value of the floor under its right end. Shade it with the same falloff.
+- The stack is brighter than any floor pixel around it. Drop it to the barricade's dark timber colour, orange only on cut ends.
+- The stack has no cast shadow; the floor hatch runs right up to its outline. Add a shadow on its left, away from the figure.
+- The log bundle at (385–500, 590–640) has its lower end exactly on the floor/wall boundary. Move it about 10 px up so it is unambiguously on the floor.
+- The straight value boundary on the top-right wall top from about (660,70) to (570,350) does not run along a ray from the figure. Align it to the light or remove it.
+- The dark wedge at (375–430, 650–720) sits on the light side of the lit wall stub beside it. Move it to the far side or remove it.
+- Floor cracks cross mortar joints without deflecting and are smooth sub-pixel curves. Redraw at pixel resolution, stepping along joints.
+- Replace the repeated scratch glyphs with wear that follows block edges.
+- Add a contact shadow under the figure.
+
+FLIP 2:
+- Wall-top tiles (band y 200–260, column x 0–50) are a single flat grey rectangle repeated. Draw at least four variants with chipped edges and value variation.
+- Wall-face bricks at y 260–288 are a uniform repeat. Vary brick lengths and add mortar loss.
+- Teal puddle decals at (120–145, 215–230), (10–20, 80–85), (37–50, 80–85) and (0–20, 215–240) sit on wall tops. Constrain puddle placement to floor tiles.
+- The pool (250–385, 0–195) is a flat teal fill with a visibly repeating hex-scale pattern and a hard straight edge against the dirt. Add a shore row and break the pattern repeat.
+- Lily pads are plain green discs with radial lines; the one at (305–320, 105–120) is clipped by the pool edge. Keep pads inside the water and give them an edge highlight.
+- The dirt floor is noise with red speckles and stray cyan pixels (near (180,180), (95,185)). Remove the cyan dots or draw them as readable pebbles.
+- The white dot cluster at (210–235, 115–130) has no shape. Draw it as a readable object or remove it.
+- Barrels at (115–145, 195–215) and (160–190, 195–215) and crates at (65–95, 5–20) and (65–95, 48–70) have no cast shadows while the orc sprite does. Give props the same drop shadow.
+- There is no light falloff; the frame is uniformly lit. Add radial falloff from the figure.
+- The orange brick column at (27–35, 128–150) with a brown stem down to (27–35, 150–170) is unreadable as an object. Redraw it as a legible stove, door or torch.

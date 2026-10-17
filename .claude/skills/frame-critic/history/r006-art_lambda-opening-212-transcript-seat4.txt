@@ -1,0 +1,44 @@
+RANK: 3 > 1 > 2 > 4
+
+BEST: 3
+BEST_WHY: The lashed timber at (380-500, 590-645) is the one prop in the whole deck that is actually built rather than stamped. It has a cut end drawn as a darker disc on the left, a rope wrap of three turns with a knot and a loose tail, and its body is darker than the lit floor beside it (sampled 178/88/28 against floor 239/165/99), so it sits on the floor instead of glowing over it. The lower-left wall stub at (310-375, 640-710) terminates cleanly in 3: the floor bricks run straight past its east end with no artifact, where 1 and 2 both carry a hard-edged dark wedge there. The light also behaves in 3: the corridor mouth at (500-570, 300-455) shows the brick floor fading from lit at the bottom to unlit at the top in a continuous ramp, and the wall-face band on the right at (570-720, 420-455) is lit a step brighter than in 1 (82/51/26 vs 68/43/22), which matches its distance from the figure.
+
+WORST: 4
+WORST_WHY: It is flat-lit everywhere. The figure at (215-245, 0-25) carries nothing and the whole room is at one exposure, so the single premise of the place is absent. The torch at (55-70, 120-160) has an orange flame and casts no light onto the dirt or the brick face directly behind it. The wall tops at (0-50, 0-288), (50-384, 215-250) and (345-384, 0-215) are a flat mid-grey with a one-pixel ruled grid at every tile seam, so they read as graph paper rather than stone. The water at (250-345, 0-190) is a tiled honeycomb-scale pattern with sticker lily pads laid on top. The moss at (10-40, 100-140) and (350-384, 20-70) is a teal blob with a lighter outline sitting on the grey like a decal. Both barrels at (110-190, 190-215) are the same sprite with the same highlight. The south wall face at (0-384, 250-288) is a rote brick course with no variation across sixteen tiles.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- Remove the solid dark trapezoid at (375-410, 650-710) at the east end of the lower-left wall stub. It has ruler-straight diagonal and vertical edges in a scene where nothing else does, and it is painted over floor bricks. Terminate the stub the way 3 does, with the floor running past it.
+- Desaturate the A-frame barricade at (500-565, 390-470). Sampled wood in this scene is 190+ red against ~30 blue; the wall-face timber band beside it is 68/43/22. Match salvaged timber to the band and keep only the lit top edge brighter.
+- Delete the short stub at the apex of the A-frame at (545-560, 390-405). It reads as a stray fragment, not a joint.
+- Break the three cheval-de-frise at (185-310, 650-715). They are one sprite stamped three times at a 52-pixel pitch with the same pin highlight at the same crossing. Offset one, rotate one, change the pin position on each.
+- Replace the mottled brown lit wall-top at (440-500, 240-400) and (570-680, 340-440). It is a cloud-noise fill with no stone edges; give the wall top a quantized two-tone slab texture that matches the seamed slabs of the unlit area.
+- Quantize the light gradient and the brazier halo at (560-640, 510-580). The halo is a smooth pale disc with a feathered edge laid over one-pixel hatching. Step it in bands at the pixel scale of the sprites.
+
+FLIP 2:
+- Remove the solid dark wedge at (375-410, 650-710). Same artifact as in 1.
+- Move or remove the leftmost cheval-de-frise at (170-205, 650-715). Its left half is overdrawn by the dark block of the west stub with a hard straight edge, so the prop is half eaten.
+- Remove the four small orange blocks either side of the A-frame at (585-600, 425-450) and (650-680, 425-450). They sit on the wall-face band with no beam joining them and read as detached sprite pieces.
+- Desaturate the A-frame at (590-665, 405-470) to the timber band's value range, as in flip 1.
+- Break the identical spacing and pin highlight of the three barriers, as in flip 1.
+- Replace the cloud-noise lit wall-top and quantize the light gradient and brazier halo, as in flip 1.
+
+FLIP 3:
+- Desaturate the crate at (195-305, 475-520). Sampled 151/78/27 against a floor of 89/68/55 beside it; it is the most saturated object in the frame and the only thing that reads as new lumber. Pull it toward the timber band's hue and let the falloff darken it.
+- Remove or redraw the two small tabs on the crate's top edge at (225-240, 475-485) and (365-385, 475-485). They do not read as hinges, handles or pins.
+- Give the crate a contact edge. It has a flat bottom row against the floor with no darker seam, so it floats.
+- Replace the cloud-noise lit wall-top at (440-500, 240-400) and (570-680, 340-440) with a stone texture that carries the same seams as the unlit slabs.
+- Quantize the light gradient and the brazier halo at (560-640, 510-580) to the pixel scale of the sprites.
+- Resolve the band at the top edge (180-750, 0-70). It is a brick wall face sitting above a wall top, so a face appears north of the top it should sit south of. Either make it a floor strip or remove it.
+
+FLIP 4:
+- Add the carried light. Render a falloff from the figure at (215-245, 0-25) so the far corners of the dirt floor and the wall tops drop to near black.
+- Make the torch at (55-70, 120-160) emit. Put a warm pool on the dirt below it and on the brick face behind it, or remove the flame.
+- Replace the wall-top fill at (0-50, 0-288), (50-384, 215-250) and (345-384, 0-215). Drop the ruled one-pixel tile grid and draw cut stone with joints that vary in depth along a run.
+- Replace the water at (250-345, 0-190). The honeycomb-scale tile is visible as a repeat within three tiles. Draw a surface with a darker edge where it meets the dirt and no hard pattern.
+- Redraw the moss at (10-40, 100-140) and (350-384, 20-70) without the lighter outline so it sits in the stone rather than on it.
+- Vary the two barrels at (110-190, 190-215). Same sprite, same highlight, same band positions. Rotate the highlight on one and change the hoop count.
+- Vary the south wall face at (0-384, 250-288). Sixteen tiles of the same brick course with no broken or repaired brick anywhere, in a place that has been patched for four hundred years.

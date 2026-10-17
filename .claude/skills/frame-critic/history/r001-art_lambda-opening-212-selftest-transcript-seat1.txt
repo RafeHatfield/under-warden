@@ -1,0 +1,45 @@
+RANK: 1 > 4 > 2 > 3
+
+BEST: 1
+
+BEST_WHY: The room floor is the strongest surface in the deck and 1 is the frame that puts nothing wrong on top of it. The blocks run in a broken bond with widths that vary along a row (the row right of the figure at y≈480 has one block about 1.5x the width of its neighbours), each block carries its own scratch-hatch that differs from the next, and a few blocks sit a step darker than the run (the block at roughly (575-665, 455-490)), so the floor reads as laid stone rather than a stamp. Each block has a short dark tick on one side of its joint only, so the blocks read as standing proud of the mortar under a single light direction. The brazier at (580-620, 523-567) throws its own warm pool that overlaps the figure's colder light, and the hatching stays legible through both, so the two sources read as light on stone and not as two overlays. The wall band across the top of the room carries dark driven pins at irregular spacing (around x≈295, 388, 478) which sells the repair fiction without a caption. All four props (crate, pillar, log bundle, brazier) sit on the floor plane and none touches the wall band. The log bundle at (380-513, 593-647) has rope that passes over and under the logs.
+
+WORST: 3
+
+WORST_WHY: The pool at (248-343, 0-190) is a hard-edged rectangle of flat teal with a visibly repeating hex-scale pattern, no bank, no shadow, and no transition into the dirt on any side. The grey walkway is a perfectly regular grid: every slab the same size with a single 1px joint, which is a stamp. The moss decal at (12-46, 52-86) is the same shape as the one at (13-43, 207-233). The door at (27-34, 128-149) is taller than the wall face it sits in, so its lower half continues down over the dirt floor as a brown column to y≈167. There is no light falloff anywhere; the tile at the screen corner is the same value as the tile under the figure, which is the one thing the brief says every frame should do. Overall it reads as an asset-pack tileset with a room drawn in it.
+
+FLAGGED: 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The pillar at (262-297, 537-643) is drawn side-on, a tall rectangle with a strap band at its foot, on a straight-down grid; redraw it as a square cap with a cast shadow, or commit the whole prop set to one projection.
+- The crate at (188-298, 473-513) shows a lit top plank face and a front face; same projection problem, same fix.
+- Crate, logs and pillar strap all use one flat saturated orange with no grain; desaturate toward the wall band's brown, add a grain pass and a contact shadow under each prop.
+- The crack from (300,530) to (500,560) is one continuous 1px curve laid across blocks and mortar at a constant weight; break it at every joint and vary its weight, or bake it into a block variant instead of overlaying it.
+- The figure's hotspot is a soft blurred disc about 40px in radius, softer than any pixel in the tiles; quantise the falloff into steps so it reads as painted rather than a gradient layer.
+- The figure at (390-428, 463-512) has a 2px black outline and a saturated cyan and orange palette; nothing else in the frame is outlined or that saturated. Thin the outline and recolour to the scene palette.
+- The wall-top mass at (150-450, 40-400) is large straight-edged polygons filled with smooth noise and has no pixel structure at all; give it the floor's pixel scale with block joints or a cut edge along the band.
+- The corridor floor at (503-567, 70-400) has no block joints while the room floor does; tile it with the same floor set.
+
+FLIP 2:
+- Replace the pillar at (265-297, 548-627): it is an orange box with a lit top face and a dark side face, an isometric projection on a straight-down grid, and reads as untextured placeholder geometry.
+- Replace the bench at (390-490, 590-633) for the same reason; it is an orange slab with a front face and a single dark seam.
+- The barrel at (585-615, 590-630) is about 35px tall against a 50px figure and the chest at (640-685, 465-505) is smaller again; bring the props to one scale.
+- The chest and shelf at (640-750, 460-510) sit hard against the wall band with no shadow from it; add a contact shadow along their top edge.
+- Apply the crack, hotspot, sprite, wall-top mass and corridor items from FLIP 1; the floor, walls and lighting are pixel-identical across 1, 2 and 4.
+
+FLIP 4:
+- Move the A-frame at (592-660, 404-466) down one row; it currently straddles the wall band and its apex overlaps the wall mass above the band.
+- The A-frame's beam and feet are flat orange with no grain; match the brown grained wood of the spike barricades below.
+- The spike barricade row at (182-310, 650-707): the leftmost X is half-covered by a dark diagonal rail and jammed into the wall corner, and the rail continues into the wall block. Shift the row right one tile or cut it at the tile boundary.
+- Apply the crack, hotspot, sprite, wall-top mass and corridor items from FLIP 1.
+
+FLIP 3:
+- Give the pool at (248-343, 0-190) a bank: a rim tile where water meets dirt, a shadow along its north and west edges, and enough variation in the hex pattern that its repeat is not visible.
+- Draw at least three walkway slab variants with different sizes and chipped edges so the 1px grid stops reading as a stamp.
+- Fix the door at (27-34, 128-167) to the height of the wall face; the lower half currently hangs over the dirt floor.
+- Draw at least three moss decals; the ones at (12-46, 52-86) and (13-43, 207-233) are the same shape.
+- Add the light falloff from the figure at (210-235, 0-25); the frame is evenly lit corner to corner.
+- The wall face at (0-384, 262-288) has one lighter brick at (165-185, 268-278) that reads as a tiling seam; remove it or repeat it irregularly.
+- The bright cyan specks on the dirt (for example at (185,160) and (230,50)) read as stray pixels; remove them or make them recognisable objects.

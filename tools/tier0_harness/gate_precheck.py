@@ -97,6 +97,36 @@ def check_ruled_fix(spec):
     return False, "unknown check kind %r" % kind
 
 
+# ── A RULED ONE-BUILD EXCEPTION — added under the R1b-r005 gate ruling (Rafe, 2026-10-16). ──────
+#
+# A ruled fix may carry `exception`: Rafe's words, the build_id it covers and the sha of the frame
+# he ruled on. It waives THAT fix's failure on THAT build and nothing else. The check still RUNS and
+# still prints its measurement, so the walk announcement shows what was excepted, not a green row.
+#
+# ⚠ IT LAPSES ON ITS OWN. Both the build id and the delivered frame must match, so any tracked
+# change, any re-capture with different pixels, or the next build at all makes the fix bind again
+# without anyone having to remember to delete the entry. An exception that needed removing by hand
+# would be a standing waiver.
+def exception_applies(f):
+    ex = f.get("exception")
+    if not ex:
+        return False, None
+    if not ex.get("ruled"):
+        return False, "exception has no ruling recorded — an exception needs Rafe's words"
+    sys.path.insert(0, os.path.join(REPO, ".claude", "skills", "frame-critic"))
+    import build_id as BID
+    import hashlib
+    bid = BID.build_id()[0]
+    frame = os.path.join(EVID, (f["check"].partition(":")[2].strip() or "combined") + ".png")
+    sha = hashlib.sha256(open(frame, "rb").read()).hexdigest() if os.path.exists(frame) else None
+    if bid != ex.get("build_id"):
+        return False, "exception lapsed: it covers build %s, this is %s" % (
+            (ex.get("build_id") or "?")[:16], bid[:16])
+    if sha != ex.get("frame_sha256"):
+        return False, "exception lapsed: the delivered frame is not the one ruled on"
+    return True, "EXCEPTED for this build only (%s owns the fix)" % ex.get("owner", "?")
+
+
 def main():
     c = load(COND)
     if c is None:
@@ -144,7 +174,12 @@ def main():
     for f in c.get("ruled_fixes", []):
         ok, detail = check_ruled_fix(f["check"])
         if not ok:
-            missing.append("%s (%s)" % (f["id"], detail))
+            excepted, why = exception_applies(f)
+            if excepted:
+                print("  !  4. %-28s %s\n        measured: %s\n        ruled: %s"
+                      % (f["id"], why, detail, f["exception"]["ruled"]))
+                continue
+            missing.append("%s (%s%s)" % (f["id"], detail, "; " + why if why else ""))
     if missing:
         fails.append("4. ruled fixes absent from this build: " + ", ".join(missing))
         print("  4. every ruled fix present        MISSING %d" % len(missing))

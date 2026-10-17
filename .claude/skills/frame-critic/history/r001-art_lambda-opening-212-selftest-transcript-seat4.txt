@@ -1,0 +1,43 @@
+RANK: 3 > 4 > 1 > 2
+
+BEST: 3
+BEST_WHY: The floor is the best-made thing in the deck and 3 carries it with the least damage. The blocks along the row under the figure run from roughly one tile wide to nearly three, and the long crack that starts at the pale post's base runs up-right across five joints without breaking at any of them, so the floor reads as one cut surface rather than a stamped tile. The top wall face is a plank band with dark driven posts at uneven intervals, which is exactly the "rope, pins, salvaged timber" repair the fiction describes, and it is muted olive-tan under the light rather than shouting. The wall tops cast a hard-edged shadow, and the light leaking through the door gap into the corridor above at x≈505–575 is occluded correctly by both corridor walls. The rope-bound plank bundle below the figure has a visible wrap, a lighter tied band, and a dark underside, and the pale post beside it has a rope tie and a contact shadow on its left. Nothing in 3 sits on a surface it could not sit on.
+
+WORST: 2
+WORST_WHY: Every surface in 2 looks generated or stamped rather than drawn. The green moss splotches on the gray tiles (top-left at x≈20–45, y≈55–80, and bottom-left, and on the pool) are soft, anti-aliased blobs at a higher resolution than the 16 px tiles they sit on; they read as a brush run over the frame in post. The brown dirt floor is a uniform noise fill with red speckle and no tile edges, wear, or structure anywhere across its whole width. The pool is a hard-edged rectangle meeting the dirt along a one-pixel line with no bank, and its interior shows a repeating hexagonal tile pattern. The two chests with the two crates top-left are exact duplicates stacked vertically, and the two barrels at the bottom are exact duplicates side by side. The bottom brick band has a lighter rectangle at its centre (x≈160–190, y≈275–288) that reads as a seam or placeholder tile. The white speck cluster mid-floor (x≈215–235, y≈115–125) reads as a frozen particle. There is no light falloff from the figure at all; the frame is flat-lit.
+
+FLAGGED: 1, 2, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The A-frame at top-right (x≈580–690, y≈380–450) sits on the wall top, above the timber rail, on a surface that is a solid wall; move it onto the floor, or if it is meant to lean on the wall, drop its feet below the rail onto the floor.
+- The A-frame is fully saturated orange while the wall top it sits on is rendered near-black; multiply prop sprites by the same light map as the floor.
+- The crossbuck at bottom-left (x≈215–305, y≈650–710) is a mid-brown against a floor that is near-black blue; same fix, run the falloff over it.
+- Desaturate all prop timber to the olive-tan of the wall-face shoring, which is the only other wood in the scene and the reference for what this light does to wood.
+- The small raised stub on the crossbar's right end (x≈290, y≈665) reads as a stray block; remove it or draw it as a driven pin.
+- Give floor props a contact shadow; the pale post has one and the props next to it do not.
+
+FLIP 4:
+- The A-frame at top-right spans three surfaces: apex on the wall top, body over the wall face, feet on the floor (x≈595–680, y≈405–465). Put it entirely on the floor, or reduce it so only the apex touches the wall face.
+- It is full-saturation orange over a wall face in shadow; run the light falloff over it.
+- The three X-stakes at bottom-left (x≈190–305, y≈650–710) are identical copies at equal spacing; vary rotation and size per stake, or draw one continuous barricade sprite.
+- The leftmost stake is half under the wall top's diagonal edge at x≈190–230; move the row one tile right or clip it cleanly on the tile boundary.
+- Desaturate prop timber to the shoring timber's olive-tan.
+- Add contact shadows under the stakes, matching the post.
+
+FLIP 2:
+- Redraw the moss splotches on the tile grid with hard pixel edges and a two-to-three tone ramp; they are currently soft anti-aliased shapes at a different resolution from the tiles.
+- Replace the dirt floor's uniform noise with drawn tiles: edges, a worn path, clustered debris, so it has structure at the tile size.
+- Draw a bank tile set for the pool (a lip of stone or mud) and break the rectangle; it currently meets the dirt on a one-pixel line.
+- Break the pool's visible hexagonal repeat with a larger set of interior variants.
+- Add variants for the chest, crate and barrel, or rotate and offset them; both pairs are exact duplicates.
+- Fix the lighter rectangle in the bottom brick band at x≈160–190, y≈275–288; it reads as a seam.
+- Remove the white speck cluster at x≈215–235, y≈115–125 or draw it as legible debris.
+- Either give the props the same flat ellipse shadow the figure has, or remove the figure's; currently only the figure casts one.
+- Add the carried-light falloff from the figure; the frame is flat-lit and the stated rendering model is absent.
+
+FLIP 3:
+- Desaturate the stacked crate left of the figure (x≈190–300, y≈475–515) and the plank bundle below (x≈380–500, y≈590–640) to the olive-tan of the shoring timber on the top wall face; they are the most saturated things in the frame apart from the brazier.
+- Apply the light falloff to the crate: it sits in the cooler left zone where the floor is gray-tan, but it is rendered at the same brightness as the bundle in the brightest zone.
+- Add contact shadows under both props, matching the pale post beside them which already has one.

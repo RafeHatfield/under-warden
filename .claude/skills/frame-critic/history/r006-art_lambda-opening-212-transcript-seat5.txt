@@ -1,0 +1,44 @@
+RANK: 2 > 3 > 4 > 1
+
+BEST: 2
+BEST_WHY: The room in 2 is the only frame where the lighting and the surfaces agree. The flagstone courses across the floor vary in width and the joints are offset from course to course, so they read as laid, not stamped. The wall band along the top of the room (y≈420–450) has driven pins at irregular spacing, and its value drops smoothly to the right and left of the figure instead of being a flat strip. The figure's warm pool and the brazier's pool at right overlap in the middle of the floor and the mixed tint is visible there, which is what two real lights do. The unlit rock mass above the room is graded, not flat black, so the dark still has surface. The rope-tied timber bundle at centre-bottom and the rope band on the standing slab are the only props in the deck that actually show the orcs' repair fiction.
+
+WORST: 1
+WORST_WHY: The pond at top right (x≈250–345, y≈0–190) is a razor-straight rectangle meeting the floor with no bank, edge tile or shadow, and lily pads sit right against the cut line. The entire frame is evenly lit from corner to corner, so there is no carried light at all. Where wall top meets floor (left wall at x≈55, bottom wall at y≈195) the two surfaces sit at near the same value with no edge or cast shadow, so the walls read as flat paint rather than height. The teal moss stamp on the wall tops is the same shape repeated at top-left, bottom-left, far right and in the bottom row. Barrels and chests are drawn in three-quarter side view with visible lids while the walls are strictly straight-down. It looks like a tileset that came free with the engine.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The pond is a hard rectangle; add shore/edge tiles on all four sides and break the straight boundary so water meets stone instead of being masked over it.
+- Add the carried-light falloff from the figure; currently the far corners are as bright as the tile under the figure.
+- Wall-top inner edges (left wall x≈55, bottom wall y≈195) sit at the same value as the floor; add a cast shadow or dark edge line along the floor side so the walls have height.
+- The moss stamp on the wall tops repeats identically in at least four places; draw two or three variants and rotate them.
+- Barrels (bottom centre) and chests (top left) are three-quarter view with lids showing; redraw them straight-down to match the walls, or commit the walls to three-quarter.
+- The bottom wall face has a lighter rectangle at x≈160–190, y≈270 that reads as a stray tile; remove or make it a deliberate feature.
+- The brown floor speckle is uniform across every tile; add larger-scale variation (wear paths, patches) so it does not read as one stamp.
+
+FLIP 2:
+- Floor and wall-top textures are soft, blurred high-resolution noise while the figure, crate, bundle and brazier are hard-edged 2x pixel art; re-render the environment on the same pixel grid as the props so the frame has one pixel size.
+- The crate (top left of room) and the tied timber bundle (centre bottom) are flat saturated orange at full brightness; run them through the same light falloff as the floor and pull their saturation down to the floor's palette.
+- The black crack lines run unbroken across several flagstones, through the wall band and into the unlit rock mass at top right; break them at joints and remove them from the dark mass.
+- The brazier at right shows a circular halo with a defined edge; replace it with a falloff curve matching the figure's light.
+- The standing slab left of centre is paler than any lit floor near it despite sitting at the edge of the light; bring its value down to the local falloff and point its shadow away from the figure.
+- The upper-right dark mass has straight diagonal polygon edges around x≈640–700, y≈340–390 that read as a mask; break them with surface.
+- The figure's cyan helmet and orange tunic are the only fully saturated colours in the frame and sit outside the environment palette; mute them toward the room.
+
+FLIP 3:
+- The row of crossed-timber obstacles at bottom left (x≈185–310, y≈650–710) is rendered at full brightness inside the unlit zone; apply the light falloff.
+- The A-frame timber in the top corridor opening (x≈505–560, y≈390–450) is unlit-bright over the dark corridor; same fix.
+- The floor between the figure and the brazier is overexposed; the two lights add until joints wash out. Clamp the summed light or drop the brazier's intensity.
+- Dark speckle debris scattered around x≈560–700, y≈500–560 reads as noise; make it specific objects or remove it.
+- Same environment-versus-prop pixel-size mismatch as 2; re-render the floor and walls on the prop grid.
+- Same unbroken crack lines as 2; break them at joints and remove them from the dark mass.
+
+FLIP 4:
+- The chest and shelf at the right edge (x≈640–750, y≈460–510) are rendered at full brightness inside the unlit zone, and the shelf is clipped by the frame; apply the falloff and keep the prop inside the lit region or let it vanish into the dark.
+- The barrel (x≈590–615, y≈595–625) and the bench (x≈395–490, y≈590–625) are also at full brightness well outside the figure's pool; apply the falloff.
+- The standing wooden post left of centre is a flat orange box with no lit and shadow side; shade it from the figure's direction.
+- With no brazier, the right half of the room is a uniform dim grey with no surface; let the flagstone joints read faintly there instead of going flat.
+- Same environment-versus-prop pixel-size mismatch and unbroken crack lines as 2; same fixes.

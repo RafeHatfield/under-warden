@@ -42,7 +42,14 @@
    "_ruled": "RULED (Rafe, 2026-09-08): 'Re-express the POLISH_LANE_GAIN pin as the law it stood for: the precheck asserts the window — on-lane identity >= perceptual floor AND lane-vs-flank >= floor — measured on the build; 0.3 ratified as the current value meeting it, with the polish_by_age floor recorded as the lower bound's reason. Assertions derive, never copy.'",
    "_current_value": "POLISH_LANE_GAIN = 0.3, RATIFIED 2026-09-08 as the current value meeting the window: on-lane 0.1602 (1.11x the floor) and lane-vs-flank 0.3732 (2.59x). It replaces 0.6, which by then read on-lane 0.1338 — BELOW the floor — because the window moved when #174 corrected the lamp and Ruling 56 was re-ratified (§6.2's re-derivation rule).",
    "_lower_bound_reason": "THE polish_by_age FLOOR. The mask is max(polish_by_age, LanePolish) and polish_by_age reaches 0.45, so below about 0.3 the age layer takes over and the lane gain stops biting: 0.6->0.3 buys 5.4 points of the specular's share (28.8% -> 23.4% at the standing case, shoulder nulled) while 0.3->0.2 buys 1.3 and costs 0.03 of lane-vs-flank. 0.3 sits at that knee. This is the REASON for the lower bound, recorded per the ruling — it is not itself an assertion, because the assertion is the window.",
-   "_superseded": "was const:POLISH_LANE_GAIN==0.6 — a copied value that went on asserting after its premises moved. Bible §13.12."
+   "_superseded": "was const:POLISH_LANE_GAIN==0.6 — a copied value that went on asserting after its premises moved. Bible §13.12.",
+   "exception": {
+    "ruled": "RULED (Rafe, 2026-10-16): 'One-build exception for the lane-window-held check on the R1 build (c8932ed3). The worn path crossing the hot tiles between lamp and fire is #184's problem and was exposed, not caused, by the Λ rerouting traffic through the new bay. The walk doesn't depend on the floor. This exception covers this build and no other; #184 owns the fix and the check runs un-excepted from the next build on. Record on #184 that a blocked corridor reroutes wear onto the brightest tiles; that's the case the fix has to handle.'",
+    "owner": "#184",
+    "build_id": "4bfed5eedc397a8302d1fd634e7639103faf845df63de0f6d35cf14a128bf1ad",
+    "frame_sha256": "00a5be5788b15bd1131e553598ecf15f01699662754bec52b12bd78413fbf3ca",
+    "_binding": "The frame is c8932ed3's combined.png, byte-identical (on-lane 0.1051). The build id is c8932ed3's tree plus only the R1b-r005-GATE-STOP.md note and the precheck's exception code (185462fd) — no pixel input moved. Both must match or the exception lapses on its own; from the next build the check binds un-excepted."
+   }
   },
   {
    "id": "wear-ignores-grid-axis",

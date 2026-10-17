@@ -2404,8 +2404,13 @@ def main():
         print("RULED (Rafe, 2026-09-30): the round is void as a capture failure, not the seat; the "
               "broken-judge streak does not count it.")
     elif verdict == "VOID":
+        # Name the seats that MISSED, not the descriptor seat's plant: r003 on art/lambda-opening-212
+        # printed seat 1's plant here — one seat 1 had caught — while seats 2, 3 and 5 had missed.
+        missed = [sd for sd in seats if not sd.get("caught") and not sd.get("carried")]
         print("The seat would ship, or did not flag, a frame Rafe personally culled:")
-        print("   %s — \"%s\"" % (plant["file"], plant["verbatim"]))
+        for sd in (missed or [desc]):
+            print("   seat %s: %s — \"%s\"" % (sd["seat"], sd["plant"]["file"],
+                                             sd["plant"]["verbatim"]))
         print("LOOP-PROCESS §4: the round is void and its findings are NOT READ.")
     elif verdict == "FAIL":
         for fx in flips:

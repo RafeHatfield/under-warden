@@ -204,7 +204,8 @@
   "axis": [
     "construction",
     "grounding",
-    "cast-edge"
+    "cast-edge",
+    "scale"
   ],
   "_axis": [
     "WHICH QUESTION THIS ROUND ASKS, and therefore which plant the deck draws.",

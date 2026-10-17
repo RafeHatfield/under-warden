@@ -1,0 +1,47 @@
+{
+ "subject": "barricade",
+ "box": [
+  570.0,
+  480.0,
+  700.0,
+  565.0
+ ],
+ "seats": 5,
+ "named": 3,
+ "verdict": "FAIL",
+ "rule": ">= 4 of 5 seats name it with an accept word and no refuse word",
+ "per_seat": [
+  {
+   "seat": 1,
+   "verdict": "NAMED",
+   "phrase": "wooden a-frame barricade or stake frame"
+  },
+  {
+   "seat": 2,
+   "verdict": "NAMED",
+   "phrase": "a wooden a-frame barricade (sawhorse-style spiked barrier)"
+  },
+  {
+   "seat": 3,
+   "verdict": "MISS",
+   "phrase": "a wooden a-frame sawhorse or trestle"
+  },
+  {
+   "seat": 4,
+   "verdict": "MISS",
+   "phrase": "wooden a-frame trestle or brace leaning against the wall, with small orange crate-like pieces behind it"
+  },
+  {
+   "seat": 5,
+   "verdict": "NAMED",
+   "phrase": "a wooden a-frame barricade or sawhorse"
+  }
+ ],
+ "transcripts": [
+  "OBJECT: tall pale stone pillar or standing stone\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: wooden barricade of crossed spiked stakes\nWHERE: 250,770\nSURE: CERTAIN\n\nOBJECT: wooden A-frame barricade or stake frame\nWHERE: 630,520\nSURE: PROBABLY\n\nOBJECT: round red and yellow floor trap or fire trap\nWHERE: 598,635\nSURE: GUESSING\n\nCOUNT: 4\n",
+  "OBJECT: a wooden A-frame barricade (sawhorse-style spiked barrier)\nWHERE: 632,520\nSURE: PROBABLY\n\nOBJECT: a burning fire / brazier on the floor\nWHERE: 598,635\nSURE: CERTAIN\n\nOBJECT: a pale standing stone slab, likely a pillar or gravestone\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a row of crossed wooden stakes (spiked barricade)\nWHERE: 245,770\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: a lit fire pit / brazier burning on the floor\nWHERE: 598,635\nSURE: CERTAIN\n\nOBJECT: a pale stone pillar or standing post with a strap around its base\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a row of wooden X-shaped stakes (cheval-de-frise barricade)\nWHERE: 245,770\nSURE: CERTAIN\n\nOBJECT: a wooden A-frame sawhorse or trestle\nWHERE: 630,520\nSURE: PROBABLY\n\nCOUNT: 4\n",
+  "OBJECT: wooden A-frame trestle or brace leaning against the wall, with small orange crate-like pieces behind it\nWHERE: 630,525\nSURE: PROBABLY\n\nOBJECT: glowing fire orb or burning brazier seen from above\nWHERE: 598,635\nSURE: PROBABLY\n\nOBJECT: tall pale block with a leather strap around it; an object I cannot identify (possibly a bound stone slab or bundle)\nWHERE: 278,680\nSURE: GUESSING\n\nOBJECT: wooden spiked barricade (three crossed-stake sections)\nWHERE: 245,770\nSURE: CERTAIN\n\nCOUNT: 4\n",
+  "OBJECT: a wooden A-frame barricade or sawhorse\nWHERE: 630,520\nSURE: PROBABLY\n\nOBJECT: a glowing red trap or brazier on the floor\nWHERE: 598,635\nSURE: GUESSING\n\nOBJECT: a pale stone pillar or standing stone block\nWHERE: 278,680\nSURE: PROBABLY\n\nOBJECT: a row of crossed wooden spike stakes (spiked barricade)\nWHERE: 250,770\nSURE: PROBABLY\n\nCOUNT: 4\n"
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "schema": 1,
+ "verdict": "VOID",
+ "void_reason": "capture-failure",
+ "capture_failure": "the capture command exited 1: [Main] CAPTURE FAILED \u2014 the frame is one flat colour; nothing was drawn. No PNG written to /Users/rafehatfield/development/ff/under-warden-wt/r2/tools/tier1_floors/evidence/combined.png.",
+ "lane": "art/lambda-opening-212",
+ "round": 2,
+ "commit": "40618720c53489b7abc3b78a8969836d39ca959e",
+ "dirty": false,
+ "build_id": "9929d647c13e8af130a16ee95410099d721dca069aa645c060f2790526bd993b",
+ "timestamp": "2026-10-08T08:10:21",
+ "build_frame": null,
+ "detail": null,
+ "law": "RULED (Rafe, 2026-09-30): a capture failure voids the round. A blank or single-colour frame is never a deliverable; nothing is delivered to the panel. Not a judge failure: excluded from broken-judge, out of the progress series, counted toward the ceiling."
+}

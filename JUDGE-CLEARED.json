@@ -63,5 +63,21 @@
   "ruling": "When the scene builder throws, the capture fails hard: no PNG, the round is VOID (capture failure), nothing is delivered to the panel. A blank/single-colour frame is never a deliverable. File the blank-frame round as evidence of the hole, labelled as it is.",
   "what_happened": "CorridorReviewSceneBuilder refused the scene (the Λ at (8,11) sealed the corridor); the engine saved the empty viewport anyway (RGB 77,77,77, one unique colour); five seats judged it, all five said 'no picture', and the panel returned INSTALL-LATEST on the strong-regression rule. The install gate held on undisposed flags. Frame: tools/cast_shadows/evidence/lambda_opening/blank_capture.png; refusal: capture_refusal.log.",
   "written": "2026-09-30"
+ },
+ {
+  "_what": [
+   "The r003 broken-judge STOP, cleared by ruling. Three seats each missed an UNPROVEN r1b plant",
+   "(ranked it first). Those plants are now retired from the deal until proven, so judge_cleared()",
+   "re-derives the premise from the history: every miss in r003 is on a retired plant."
+  ],
+  "lane": "art/lambda-opening-212",
+  "guard": "broken-judge",
+  "rounds_covered": [
+   3
+  ],
+  "ruled_by": "Rafe, ruling on lambda-opening r003 (2026-10-11), in his words",
+  "ruling": "Option 1. Deal only plants proven against the new scene: lambda-against-wall-r1b and objects-isometric-shadowed. The four unproven r1b plants, cement-cap-r1b included, are out of the deal until each is caught by at least 4 of 5 seats in self-test. r003 is cleared on that basis: its misses were on plants that should not have been dealt. Record this in JUDGE-CLEARED.json quoting these words.",
+  "what_happened": "r003: seats 1 and 4 caught objects-isometric-shadowed and lambda-against-wall-r1b; seats 2, 3, 5 ranked searchlight-edges-r1b, lambda-in-the-face-r1b and props-unrecognizable-r1b first of four. Capture clean. STALL-REPORT.md @ 303aebdd.",
+  "written": "2026-10-11"
  }
 ]

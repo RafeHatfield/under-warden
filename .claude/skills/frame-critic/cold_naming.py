@@ -62,7 +62,11 @@ SUBJECTS = [
          accept=["barricade", "barrier", "blockade", "roadblock", "wooden barrier",
                  "cheval de frise", "chevaux de frise", "obstacle"],
          refuse=["fence", "fencing", "palisade", "railing", "gate", "ladder", "sticks",
-                 "debris", "rubble", "bricks", "brick", "bench", "bed", "jumble", "pile"]),
+                 "debris", "rubble", "bricks", "brick", "bench", "bed", "jumble", "pile",
+                 # R1b-r004 ruling (Rafe, 2026-10-12): "'A-frame', 'sawhorse', 'trestle',
+                 # 'plank', 'sign', 'door' are misses" — as the HEAD NOUN (R1b-r005, below).
+                 "sawhorse", "saw horse", "saw-horse", "trestle", "a-frame", "a frame",
+                 "plank", "sign", "door"]),
     # THE BAR IS A BLOCKING WORD — #207 R2 (Claude under delegation, Rafe to overturn, 2026-09-23).
     # The walk passed c2 as wood and as built and failed it as a barrier: "looks good but I'm not
     # sure what it is meant to be doing." Every c2 seat reached for "sawhorse / trestle", which the
@@ -122,16 +126,77 @@ def objects_named(text):
     return [m.group(1).strip().lower() for m in _OBJ.finditer(text)]
 
 
+# ── THE HEAD NOUN DECIDES — RULED (Rafe, R1b-r005, 2026-10-13) ───────────────────────────────
+#
+#     "The bar is what the seat says the object IS (its head noun), not what it says the object
+#      looks like. 'an x-shaped barricade (sawhorse-style)' is a barricade; 'a sawhorse or
+#      crossed-plank barricade' is hedged and counts; 'crossed beams ... like an a-frame brace or
+#      sawhorse' names no barricade and is a miss. ... head noun decides; 'sawhorse' as the head
+#      noun is a miss, as a descriptor it is not."
+#
+# Matching any word anywhere in the phrase (the rule before this) scored descriptors as names:
+# "sawhorse-style" refused a barricade, and a parenthetical "(an x-shaped barricade)" named a
+# pile of planks. Now: the MAIN CLAUSE is the phrase up to its first parenthetical, dash aside,
+# comma or trailing clause ("leaning…", "like…", "at…", "possibly…"); it is split into the
+# alternatives a hedge offers ("or", "/", "and"); each alternative's head is its last word(s),
+# except "a row of X", where X is. An accept term as ANY alternative's head names it (a hedge
+# counts); otherwise a refuse term as a head refuses it; otherwise it names nothing.
+#
+# Proved on every saved naming run before it was used (prove_head_noun.py): Rafe's r005 calls
+# reproduce exactly, and both X-frame controls still FAIL.
+_ASIDE = re.compile(r"\([^)]*\)|\[[^\]]*\]")
+_CLAUSE = re.compile(r"\s[—–-]\s|[,;:—–]|\b(?:like|leaning|propped|standing|resting|lying|"
+                     r"forming|with|at|in|on|against|across|near|beside|under|over|that|which|"
+                     r"possibly|probably|perhaps|maybe|likely)\b")
+_ALT = re.compile(r"\s+or\s+|\s*/\s*|\s+and\s+")
+_WORD = re.compile(r"[a-z][a-z'-]*")
+_QUANTITY = {"row", "line", "pair", "set", "group", "couple", "cluster", "series"}
+
+
+def head_nouns(phrase):
+    """The head of each alternative in the phrase's main clause, as a list of word lists."""
+    main = _CLAUSE.split(_ASIDE.sub(" ", phrase.lower()), maxsplit=1)[0]
+    heads = []
+    for alt in _ALT.split(main):
+        words = _WORD.findall(alt)
+        if "of" in words:                       # "a row of barricades" is barricades;
+            i = words.index("of")               # "a pile of sticks" is a pile
+            words = words[i + 1:] if i and words[i - 1] in _QUANTITY else words[:i]
+        if words:
+            heads.append(words)
+    return heads
+
+
+def _ends_with(words, term):
+    tw = _WORD.findall(term) or [term]
+    n = len(tw)
+    if len(words) < n:
+        return False
+    tail = words[-n:]
+    return tail[:-1] == tw[:-1] and tail[-1] in (tw[-1], tw[-1] + "s", tw[-1] + "es")
+
+
+def head_verdict(phrase, subject):
+    """(NAMED | REFUSED | MISS, the term) for one phrase, by its head noun."""
+    heads = head_nouns(phrase)
+    for good in subject["accept"]:
+        if any(_ends_with(h, good) for h in heads):
+            return "NAMED", good
+    for bad in subject["refuse"]:
+        if any(_ends_with(h, bad) for h in heads):
+            return "REFUSED", bad
+    return "MISS", None
+
+
 def score(named, subject):
     """Did any named object name THIS subject? Returns (verdict, the phrase, why)."""
-    for phrase in named:
-        for bad in subject["refuse"]:
-            if bad in phrase:
-                return "MISS", phrase, "named as '%s' — the card rejects that by name" % bad
-    for phrase in named:
-        for good in subject["accept"]:
-            if good in phrase:
-                return "NAMED", phrase, "'%s'" % good
+    verdicts = [(p,) + head_verdict(p, subject) for p in named]
+    for phrase, v, term in verdicts:
+        if v == "REFUSED":
+            return "MISS", phrase, "named as '%s' — the card rejects that by name" % term
+    for phrase, v, term in verdicts:
+        if v == "NAMED":
+            return "NAMED", phrase, "'%s'" % term
     return "MISS", None, "no seat named it at all"
 
 

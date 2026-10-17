@@ -1,0 +1,53 @@
+{
+ "rule": "R1b-r004 ruling (Rafe, 2026-10-12): '\"A-frame\", \"sawhorse\", \"trestle\", \"plank\", \"sign\", \"door\" are misses.' Same five answers re-scored; no seat re-run.",
+ "miss_words": [
+  "a-frame",
+  "a frame",
+  "sawhorse",
+  "saw horse",
+  "saw-horse",
+  "trestle",
+  "plank",
+  "sign",
+  "door"
+ ],
+ "per_seat": [
+  {
+   "seat": 1,
+   "phrase": "a wooden x-shaped barricade (crossed stakes / sawhorse)",
+   "tool_barricade": "NAMED",
+   "barricade_blocking": "MISS",
+   "ruling_2026_10_12": "MISS"
+  },
+  {
+   "seat": 2,
+   "phrase": "a wooden a-frame sawhorse or crossed-plank barricade",
+   "tool_barricade": "NAMED",
+   "barricade_blocking": "MISS",
+   "ruling_2026_10_12": "MISS"
+  },
+  {
+   "seat": 3,
+   "phrase": "a wooden x-shaped barricade (sawhorse-style spiked barrier)",
+   "tool_barricade": "NAMED",
+   "barricade_blocking": "MISS",
+   "ruling_2026_10_12": "MISS"
+  },
+  {
+   "seat": 4,
+   "phrase": "two crossed wooden beams leaning against the wall, like an a-frame brace or sawhorse",
+   "tool_barricade": "MISS",
+   "barricade_blocking": "MISS",
+   "ruling_2026_10_12": "MISS"
+  },
+  {
+   "seat": 5,
+   "phrase": "wooden a-frame barricade (crossed timber beams)",
+   "tool_barricade": "NAMED",
+   "barricade_blocking": "NAMED",
+   "ruling_2026_10_12": "MISS"
+  }
+ ],
+ "named": 0,
+ "verdict": "FAIL"
+}

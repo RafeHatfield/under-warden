@@ -1,0 +1,48 @@
+RANK: 1 > 3 > 2 > 4
+
+BEST: 1
+BEST_WHY: The floor in 1 is cut stone, not a stamp. Flag sizes vary along each course (the row under the hero runs a wide flag, a half, then a tall one), the joints are drawn at two weights, and a single black crack runs from the pillar's base at (270, 620) under the hero's tile and up to the wall face at (480, 455), crossing five tiles without breaking. The wall face along the top of the room (y 420 to 455) has driven pins at irregular spacing (x 300, 390, 465), so the orc repairs read as placed rather than tiled. The lashed timbers at (380 to 500, 590 to 640) show a rope binding with its own shading. The hero's light keeps the joint lines readable all the way to the brazier, so the stone stays stone under the warm light.
+
+WORST: 4
+WORST_WHY: No light falloff at all. The brief says a figure carries the only light, and 4 is lit evenly edge to edge; the figure at (220, 15) is no brighter than the far corner. The pool at (250 to 345, 0 to 190) is a hard-edged rectangle of one repeating hex pattern with no bank or lip. The chest-and-crate pair at (60 to 95, 0 to 45) is stamped again at (60 to 95, 50 to 90), pixel-identical. The two barrels at (115 to 145, 195 to 215) and (160 to 190, 195 to 215) are the same sprite. The dirt floor repeats its blue-fleck noise on a 32 px period. The grey floor is a flat fill with a thin grid and no joint depth. The bottom wall (y 265 to 288) is a dark brick band with no top surface and no face, so it has no height. This is an asset-pack assembly, not a finished frame.
+
+FLAGGED: 1, 2, 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The light is computed per tile, not per pixel: a hard vertical edge runs down x≈560 from the wall face to y≈585, and a hard horizontal edge runs along y≈585 from x≈450 to the right frame edge. Interpolate the light map per pixel so the gradient is continuous.
+- The brazier at (598, 545) sits inside a pale disc about two tiles wide with a visible rim. Remove the disc sprite and let the point light do the work, or dither the disc edge into the floor.
+- The crate at (190 to 300, 480 to 515) is a flat orange box with two lighter bars and no outline weight, grain, lid seam or shadow. Redraw it at the hero's pixel scale to the standard of the brazier.
+- The tile layers (floor, wall face, wall top) are soft-edged while the hero and brazier are hard-edged; the environment reads as bilinear-upscaled. Render the tile layer nearest-neighbour at the sprite's pixel scale.
+- The wall tops (the whole upper half of the frame) are blurred brown noise with three thin crack lines. Draw a stone top surface with edges that match the cut-stone floor.
+- The crate and lashed timbers are not multiplied by the light map; apply the same light to props as to the floor.
+
+FLIP 2:
+- The chest and bookshelf at (640 to 750, 465 to 510) are at full brightness while the floor around them sits at roughly one fifth value. Multiply props by the light map.
+- The barrel at (585 to 615, 590 to 630) has the same fault; same fix.
+- The post at (265 to 300, 550 to 625) and the bench at (395 to 490, 595 to 625) are flat orange slabs with one lighter top edge. Redraw them as finished props with grain, outline weight and a contact shadow, at the sprite scale.
+- A flat lighter-grey column of floor runs from x≈500 to x≈580 between the wall face and y≈640, with hard edges on both sides; it reads as a lighting block. Interpolate the light map per pixel.
+- A hard horizontal seam at y≈640 flips the floor to cool grey below it; same fix.
+- The tile layers are soft-edged against hard-edged sprites; render the environment nearest-neighbour at the sprite's pixel scale.
+- With no brazier in this frame the hero is the only light, yet the right third of the room (x 500 to 750) holds a steady mid value. Let it fall off to the same dark as the corridor.
+
+FLIP 3:
+- The floor from x≈450 to 740, y≈450 to 640 is blown to near-white yellow and the joint lines vanish. Cap the combined hero-plus-brazier light so the lightest floor value still shows the joints, or cut the brazier radius by half.
+- A hard vertical seam at x≈575 separates the hero's pale light from the brazier's orange light, and a horizontal seam runs along y≈640. Interpolate the light map per pixel.
+- The brazier at (598, 545) sits in a pale disc with a visible rim; remove the disc sprite.
+- The A-frame brace at (500 to 560, 390 to 450) has its feet on the wall-face band rather than on the floor, so it floats on the wall. Move it down one tile so the feet land on floor, and add a contact shadow.
+- The three stakes at (185 to 305, 650 to 710) are at full mid-brown in a corridor that is dim blue-grey. Multiply them by the light map.
+- The tile layers are soft-edged against hard-edged sprites; render the environment nearest-neighbour at the sprite's pixel scale.
+
+FLIP 4:
+- Add a radial light map centred on the figure at (220, 15) and darken everything else toward black with distance. Nothing should be at full value more than a few tiles from the figure.
+- The pool at (250 to 345, 0 to 190) is a hard-edged rectangle. Add an edge tile set (stone lip or mud bank), break the single hex pattern with at least three variant tiles, and drop its value so it reads as standing water in the dark.
+- Remove or redraw the bright green lily pads at (325, 10), (310, 115), (275, 165); they are the only saturated green in the frame and read as cheerful.
+- The chest-and-crate pair at (60 to 95, 0 to 45) is stamped identically at (60 to 95, 50 to 90). Vary one or remove it.
+- The barrels at (115 to 145, 195 to 215) and (160 to 190, 195 to 215) are the same sprite with the same highlight. Vary one.
+- The dirt floor repeats one noise tile with blue flecks on a 32 px period (visible at x 180, 212, 244). Cut the blue flecks and add at least four variant tiles.
+- The grey floor is a flat fill with a thin grid. Give each flag a dark joint plus a one-pixel highlight on the opposite edge, and vary flag value by a few percent.
+- The slime decals at (20 to 45, 55 to 70), (20 to 45, 210 to 225) and (355 to 380, 150 to 170) are one stamp repeated. Vary or cut them.
+- The bottom wall (y 265 to 288) is a dark brick band with no top surface and no face. Give walls a top surface and a face so they have height, consistent with the top-down view.
+- The door segment at (5 to 55, 120 to 170) sits in a wall band that has grey floor above it and dirt below it with no wall return on either side, so the door floats. Close the wall on both sides of the door.

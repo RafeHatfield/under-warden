@@ -1,0 +1,43 @@
+RANK: 2 > 4 > 3 > 1
+
+BEST: 2
+BEST_WHY: The lit floor in 2 is actually built, not stamped. Between x 180 and 750, y 455 to 700 the stones vary in width (some 60 px, some 100 px), the courses are offset but not on a fixed half-bond, and each stone carries its own 1 px stipple and chip marks, so the lit floor reads as cut masonry. The long crack running from the pillar's foot at (270, 630) up to (560, 490) is drawn as a single 1 px polyline that bends where it crosses joints, and it is dimmed by the same falloff as the stone under it. The pillar at (265 to 300, 535 to 640) has a visibly lighter top cap, a half-tone left flank away from the light, and a rope band with a pin at y 625 to 635, which is the one object in the deck that reads as "repaired by someone who didn't care how it looked." The light itself is correct in 2: the brightest stone at (430 to 520, 470 to 560) still shows its joints and stipple, nothing is clipped to white, and the falloff into the lower right at (600 to 750, 700 to 860) is gradual. The chevaux-de-frise at (190 to 300, 650 to 710) is correctly darkened to a dull brown by its distance from the figure, so at least one prop obeys the lighting.
+
+WORST: 1
+WORST_WHY: The pool at (248 to 330, 0 to 192) is a flat teal rectangle with a uniform scale pattern and a hard straight edge where it meets the dirt at y 192 and x 248, with no bank, no shoreline, no transition tile. The dirt floor (112 to 248, 0 to 200) is one 16 px tile repeated; the crackle network lines up into a visible grid of seams every 16 px, plainly seen between x 112 and 248. The grey wall tops are 32 px blank squares with a single cracked-tile variant that reappears at (115 to 145, 90 to 115) and (1040 to 1070, 480 to 510) in the 3x view. Projection is mixed: the barrels at (110 to 190, 195 to 215) are drawn three-quarter with an elliptical top and a body below, the chests at (62 to 96, 0 to 70) are side-on lid over slats, the walls are pure top-down with a face band only along y 265 to 288. There is no light falloff anywhere; the whole frame sits at one flat exposure, so the "only light is carried by the figure" premise is absent. Every element reads as an off-the-shelf tile set placed on a grid.
+
+FLAGGED: 1, 3, 4
+
+SHIP: NONE
+
+FLIP 2:
+- The figure at (385 to 430, 465 to 515) and the brazier at (585 to 625, 525 to 565) are drawn at 3 source pixels per sprite pixel while the floor stipple is 1 px; redraw both at the floor's resolution or downsample the environment to theirs. One density across the frame.
+- The wall masses at (0 to 180, 400 to 700), (440 to 500, 70 to 420) and (560 to 750, 70 to 390) are smooth noise gradients with no masonry, while the floor is crisp 1 px stone; give the wall tops the same block structure and joint lines as the floor so they stop reading as a smeared texture next to it.
+- The 1 px crack drawn over the blurry wall at (360 to 500, 10 to 50) and (90 to 200, 490 to 560) makes the mismatch worse; remove the cracks from the walls until the wall surface is built, then re-add them following joints.
+- The square at (310 to 410, 643 to 710) is a flat olive panel with a soft inset and three horizontal bars; it reads as a placeholder. Draw it as whatever it is (stair, grate, hatch) in the floor's pixel language with crisp edges, and let the radial light dim it like the surrounding stone.
+- The sawhorse at (580 to 690, 365 to 420) is a saturated orange at a distance where the stakes at (190 to 300, 650 to 710) have correctly gone to dull brown; run the same falloff over the sawhorse.
+- The floor directly around the figure sits inside a paler disc whose rim is perceptible along the pillar's right edge at x 300 and across the crack at (330 to 400, 560 to 600); blend the inner disc into the main falloff so there is one continuous gradient.
+- The wall bevels at (310 to 440, 70 to 110) and (440 to 500, 640 to 720) are 45-degree wedges on a straight-down view; either commit to the bevel on every wall end or remove it, the mix reads as inconsistent wall height.
+
+FLIP 4:
+- The stacked timber at (190 to 300, 475 to 520) is lit from its own top-left with a bright top face while the scene light is to its right at (405, 490); re-light its faces from the figure's position and desaturate it to the orange-brown the stakes use.
+- The bound bundle at (380 to 500, 590 to 640) is the most saturated object in the frame and has no cast shadow on the floor; dim it to the local floor value, add a soft shadow on its side away from the figure.
+- A faint circular ring sits on the floor at (572 to 628, 476 to 518) above the brazier with nothing in it; it reads as a leftover sprite or scorch mask. Remove it or put the thing it belongs to in it.
+- Both new props are drawn in oblique three-quarter with visible top and front faces, while the stone floor is straight-down; pick the pillar's convention (tall, side-on, lighter cap) and redraw the two timber props to match it.
+- Everything in FLIP 2 also applies, since the base frame is the same.
+
+FLIP 3:
+- The sawhorse at (500 to 560, 390 to 440) is drawn under the wall bevel: the dark diagonal of the wall edge at (505 to 545, 390 to 440) cuts across its left leg, leaving a detached orange fragment at (522 to 532, 394 to 401) and a loose block at (545 to 560, 425 to 435). Move it fully onto the floor or the ledge, not straddling the corner, and fix the draw order so props sit above walls.
+- The floor right of the figure at (430 to 600, 460 to 600) is driven to near-white; the joints and stipple that are legible in the same stones in frame 2 are gone. Pull the light intensity back until the brightest stone keeps its joint lines.
+- The halo around the brazier at (560 to 650, 500 to 590) merges with the overdriven main light into one blown pool; after reducing the main light, keep the brazier's glow small and local.
+- Everything in FLIP 2 also applies, since the base frame is the same.
+
+FLIP 1:
+- Give the pool at (248 to 330, 0 to 192) a bank: an edge tile set for its straight sides and corners, with the dirt darkening into wet earth over at least one tile before the water starts.
+- Break the dirt floor tile repeat: author at least four variant tiles and scatter them so the 16 px seam grid between x 112 and 248 disappears.
+- Add light falloff from the figure at (218 to 232, 0 to 20); at present the far bottom-left corner is as bright as the figure's own tile.
+- Replace the single grey wall-top square with a set of three to four variants whose cracks and moss differ, so the same cracked tile does not reappear at (38 to 48, 30 to 38) and (347 to 357, 160 to 170).
+- Give the wall tops a value separation from the wall face band at y 265 to 288; at present both are grey and the only cue to height is the brick pattern.
+- Pick one projection: redraw the barrels at (110 to 190, 195 to 215) and the chests at (62 to 96, 0 to 70) straight-down to match the walls, or give the walls a consistent face on all four sides to match the props.
+- The post at (28 to 36, 128 to 160) stands in a notch in the wall with a solid brown stem continuing three tiles down onto the dirt; either make that a cast shadow with a soft edge or end the post at the wall face.
+- The two barrels at (110 to 140) and (160 to 190) are identical copies with the bung in the same position; flip one and vary the lid.

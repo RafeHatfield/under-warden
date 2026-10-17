@@ -1,0 +1,52 @@
+Reading done; writing up the judgement now.
+
+RANK: 2 > 1 > 4 > 3
+
+BEST: 2
+BEST_WHY: The lit flagstone floor in the centre of 2 (the area around the figure and the stela, roughly x 200 to 560, y 460 to 720) is the best-made surface in the deck. The flags are different widths within a single course, the joints are not a uniform one-pixel grid but open and close along their length, and the dark chipping is clustered at block corners rather than sprinkled evenly, so the floor reads as cut and worn stone rather than a stamped tile. The wall face band at y 420 to 455 has its timber rail broken by posts at irregular spacing with a small pinned splice at x 440, which is exactly the "repaired with driven pins and salvaged timber" fiction without announcing it. Of the three prop sets, 2's is the quietest: the three cheval-de-frise stakes at the bottom left sit in shadow at a value close to the wall, and the leaning plank in the top-right notch (x 505 to 560, y 390 to 460) is small and tucked into a wall corner where a plank would actually be left. The light falloff from the figure into the dark rock at top left is smooth, with the wall-top slab cracks still faintly legible in the dark instead of crushed to black.
+
+WORST: 3
+WORST_WHY: 3 is a flat, evenly lit tileset with no falloff from the figure at all, and every surface in it is visibly stamped. The grey wall tops (left column, x 0 to 55, and the bottom band, y 215 to 265) carry a perfectly uniform one-pixel grid with identical speckle in every cell. The teal moss blobs on the left wall at about (35, 60) and (25, 220) are the same shape pasted twice. The two crates at (60, 10) and (60, 50) are identical copies, as are the two barrels at (130, 200) and (175, 200). The pool at right is a repeating hex texture at full tile edges with hard square corners and no bank, shore, or wetness on the adjacent floor. The brown floor is a single noise texture with red speckle repeated across the whole room. The orc stands on a flat oval shadow puddle while nothing else in the frame casts one. It looks like the free asset pack, not a paid game.
+
+FLAGGED: 3, 4
+
+SHIP: NONE
+
+FLIP 1:
+- The crate at (190 to 300, 475 to 520) and the bound logs at (380 to 500, 590 to 640) are the only fully saturated orange objects in the frame; the stone is tan and grey-blue. Pull both props' palette toward the floor's warm tans and let the figure's light tint them, so they stop reading as placeholder orange.
+- The crate shows a tall front face below its top plank, as if seen from the side, while the floor is seen from straight above. Reduce the front face to a thin edge consistent with the stela's cap-to-body ratio, or drop it to a top-face-only sprite with a cast shadow.
+- The stela at (265 to 300, 540 to 640) has its shaded face on the right, but the figure carrying the light stands to its upper right. Flip the baked shading so the lit face is toward the figure, or remove the baked side shading and let the dynamic light do it.
+- The long single-pixel crack running from about (300, 650) up to (600, 560) crosses a dozen flagstones and their mortar joints without deflecting at any joint. Break it at each joint it crosses, or step it along a joint for a block or two.
+- The brazier at (595, 545) sits inside a hard-edged pale disc. Either soften that into a glow with no visible rim, or draw it as an ash ring with a ragged, scattered edge.
+- The shadow across the top-right rock (x 565 to 750, y 70 to 400) is a hard straight diagonal edge; nothing else in the frame has a hard edge. Feather that occluder edge by a few pixels so it matches the rest of the falloff.
+- The hero sprite is the most saturated thing on screen (cyan, orange, white) with no contact shadow. Add a small contact shadow and desaturate its palette one step so it sits in the scene.
+
+FLIP 2:
+- The three stakes at (180 to 310, 650 to 710) are the same sprite stamped three times, with the same highlight pixel on each crossbar. Draw at least two variants with different lean and rope wrap, and offset one by a few pixels vertically.
+- The leaning plank at (505 to 560, 390 to 460) is the same fully saturated orange as the props in 1 and 4. Bring it to the timber rail's value and let the figure's light tint it.
+- The stela's baked shading faces away from the light; same fix as in 1.
+- The long crack crossing flagstones without deflecting at joints; same fix as in 1.
+- The brazier's hard-edged pale disc; same fix as in 1.
+- The hard diagonal shadow edge in the top-right rock; same fix as in 1.
+- The hero sprite's saturation and missing contact shadow; same fix as in 1.
+
+FLIP 3:
+- The frame has no light falloff. Add a radial falloff from the orc so the room edges drop to near-black, consistent with the rest of the deck.
+- The wall tops (left column and bottom band) have a perfectly uniform one-pixel grid. Vary joint width and break joints at corners, and add at least three distinct damage variants per wall tile.
+- The teal moss blob is pasted twice on the left wall at the same shape. Draw two or three variants and rotate or flip them.
+- The two crates at (60, 10) and (60, 50) and the two barrels at (130, 200) and (175, 200) are identical copies; vary at least one of each pair (lid open, stave missing, different rotation).
+- The pool at right has square hard-tile corners and no bank. Add a shoreline tile with a dark wet margin on the adjacent floor and a soft edge on the water.
+- The pool's hex pattern is a repeating texture at tile scale. Replace it with a flat dark water colour and a few sparse ripple highlights.
+- The floor is one repeating noise texture. Add a second floor variant tile and scatter it so the repeat is broken within a six-tile run.
+- The orc stands on a flat oval shadow while no prop casts one. Either give crates and barrels matching contact shadows or remove the oval.
+- The bone scatter at (215, 115) is a single white sprite with no shadow and no dirt interaction; add a dark halo so it sits on the floor.
+
+FLIP 4:
+- The A-frame brace at (575 to 680, 400 to 460) is fully saturated orange, sits on top of the wall rail with no contact shadow, and its legs hang over the floor below. Move it onto a floor cell against the wall, draw a contact shadow, and bring the orange down to the rail's value.
+- The two drilled blocks hanging off the A-frame at (585, 420) and (660, 425) read as plastic bricks. Replace them with pinned timber ends matching the rail's splice at x 440.
+- The three stakes are identical stamps; same fix as in 2.
+- The stela's baked shading faces away from the light; same fix as in 1.
+- The long crack crossing joints without deflecting; same fix as in 1.
+- The brazier's hard-edged pale disc; same fix as in 1.
+- The hard diagonal shadow edge in the top-right rock; same fix as in 1.
+- The hero sprite's saturation and missing contact shadow; same fix as in 1.

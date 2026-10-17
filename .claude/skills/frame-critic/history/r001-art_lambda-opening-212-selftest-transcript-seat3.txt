@@ -1,0 +1,47 @@
+Analysis done. Writing the verdict now.
+
+RANK: 4 > 3 > 1 > 2
+
+BEST: 4
+BEST_WHY: The lit floor in the room (centre and right of the figure) is irregular ashlar: block widths vary along a single course, the courses do not align vertically, and the fine hatching inside each block differs block to block, so the floor reads as laid stone rather than a stamped tile. Two long dark cracks run continuously across many blocks (one from the base of the pale standing stone up to the north wall behind the figure, another curving in from the right edge below the brazier), which proves the crack is a decal layer and not baked into a tile. The north wall is drawn as a true face: a course of lighter capstones over darker brick, with the timber bundle and the crate given their own short hard shadows on the floor. The light falloff is centred on the figure and the brazier adds a second warm source at right, with a believable overlap between them.
+
+WORST: 2
+WORST_WHY: Every wall top in the frame (the left column, the bottom band, the right column) is a flat mid-grey square with a one-pixel darker grid line and no top edge, no bevel, and no value change against the floor; the only thing that says "wall" is the dark brick face along the bottom edge. The same green stain sprite is stamped three times at the same size and rotation (top-left column, bottom-left column, right column). The two chests at top-left are identical stamps with an identical dark strip beneath each. The water at right is a single repeating hexagonal scale tile with pasted lily-pad sprites and no shoreline transition to the dirt or the stone. The door in the left wall column (orange planks, dark brick surround) faces south inside a north-south wall run, and a brown strip below it falls onto the dirt as if it were a path. There is no light falloff at all: the frame is uniformly lit edge to edge.
+
+FLAGGED: 1, 2, 3
+
+SHIP: NONE
+
+FLIP 1:
+- The unrevealed area (top-left 40% of the frame, and the band down the left edge) is a blurred, blue-tinted cloud texture; replace it with the neutral near-black used in 4 and remove the blue cast so the dark reads as absence of light, not as a tint.
+- The corridor column above the room (x≈440–500, y≈70–400) is a warm gradient over soft blotchy noise with no floor or wall detail; give it the same ashlar floor texture as the room so it reads as walkable stone.
+- The strips either side of that corridor (x≈500–570 dark with a jagged vertical crack, x≈570–640 mid-grey) share the same value and texture, so the player cannot tell corridor from wall top; darken wall tops one step below floor and give them a hard capstone edge.
+- The crate at top-left of the room (x≈190–305, y≈475–515) is fully saturated orange while the floor under it is mid-dim; multiply props by the same light falloff as the floor.
+- Sprites (figure, brazier, standing stone, crate, timber bundle) are drawn at 2-pixel blocks while the floor hatching and the crack lines are 1-pixel; pick one pixel size and redraw the other set to match.
+- The light gradient is a smooth per-pixel ramp over pixel art; quantise it to a handful of steps so it belongs to the same drawing as the tiles.
+
+FLIP 3:
+- The orange A-frame at top-right (x≈600–680, y≈405–465) is drawn across the north wall face and over its capstone course; move it onto the floor below the wall or onto the wall top, not straddling the face.
+- The A-frame and the three spiked barricades at bottom-left (x≈185–305, y≈650–705) are at full saturation and brighter than the floor around them; apply the light falloff to props.
+- Hard-edged dark diagonal wedges sit at both ends of the barricade row (left of the first barricade at x≈185–215 and right of the brick wall patch at x≈375–410, y≈650–700); they follow no light direction in the frame. Remove them or replace with a wall-end drawn in plan.
+- Corridor column above the room (x≈440–500) has no floor detail, only blotchy noise; apply the ashlar floor texture.
+- Wall tops and corridor floors above the room share the same value; darken wall tops and add a capstone edge so walkable space reads.
+- Sprites at 2-pixel blocks over 1-pixel textures and crack lines; unify pixel size.
+- Quantise the smooth light gradient to steps.
+
+FLIP 4:
+- The corridor column above the room (x≈440–500, y≈70–400) is a warm gradient over blotchy noise with no floor detail; give it the room's ashlar floor.
+- The dark strip and mid-grey strip either side of that corridor (x≈500–640) are indistinguishable as wall versus floor; darken wall tops below floor value and draw a capstone edge.
+- The unrevealed area carries a large-scale angular polygon overlay (visible as faint straight-edged facets across the top-left quarter); remove it. Unlit should be flat dark, not a texture.
+- The crate at top-left (x≈190–305, y≈475–515) and the timber bundle (x≈380–500, y≈590–640) are at full saturation regardless of the falloff; multiply props by the same light as the floor.
+- Sprites are 2-pixel blocks while floor hatching and cracks are 1-pixel; unify to one pixel size.
+- The smooth per-pixel light ramp does not match the pixel art; quantise it to a few steps.
+
+FLIP 2:
+- Wall tops are flat grey squares with a grid line; draw a top surface with a visible edge, a darker value than the floor, and stone texture that differs from the floor tile.
+- Add light falloff from the figure. The frame is uniformly lit, so nothing is further from the light than anything else.
+- The green stain sprite is stamped three times identically; draw at least three variants or rotate and scale them.
+- The chests at top-left and the barrels at bottom are duplicated stamps with identical shadows; vary or offset them.
+- The water at right is a bare repeating hex tile with no shoreline; add an edge transition where it meets dirt and stone.
+- The door in the left wall column faces south inside a north-south wall and has a brown strip spilling onto the dirt below it; re-cut the doorway to face east-west or remove the strip.
+- The dirt floor shows its tile repeat (the red-brown speckle pattern recurs at fixed intervals); add a second variant tile or a decal layer to break the repeat.
